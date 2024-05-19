@@ -1,3 +1,12 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": "next/core-web-vitals",
+  "rules": {
+    "indent": ["error", 4],
+    "quotes": ["error", "single"]
+  },
+  "ignorePatterns": [
+    "tailwind.config.ts",
+    "postcss.config.mjs",
+    "next.config.mjs"
+  ]
 }
