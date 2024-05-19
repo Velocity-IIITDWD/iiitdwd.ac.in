@@ -10,32 +10,7 @@ export default function Home() {
             <div>A</div>
             <div>A</div>
             <div>A</div>
-            <div>A</div>
-            <div>A</div>
-            <div>A</div>
-            <div>A</div>
-            <div>A</div>
-            <div>A</div>
-            <div>A</div>
-            <div>A</div>
-            <div>A</div>
-            <div>A</div>
-            <div>A</div>
-            <div>A</div>
-            <div>A</div>
-            <div>A</div>
-            <div>A</div>
-            <div>A</div>
-            <div>A</div>
-            <div>A</div>
-            <div>A</div>
-            <div>A</div>
-            <div>A</div>
-            <div>A</div>
-            <div>A</div>
-            <div>A</div>
-            <div>A</div>
-            <div>A</div>
+
         </div>
     );
 }

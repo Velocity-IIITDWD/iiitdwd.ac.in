@@ -16,8 +16,8 @@ const config: Config = {
             colors: {
                 "dwd-primary": "#041E3F",
                 "dwd-accent": "#CCE70B",
-                "dwd-secondary1": "7A8B99",
-                "dwd-secondary2": "99ADC0"
+                "dwd-secondary1": "#7A8B99",
+                "dwd-secondary2": "#99ADC0"
             }
         },
     },

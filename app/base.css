@@ -8,6 +8,21 @@
     }
 
     body {
-        @apply min-h-screen h-full w-full
+        @apply min-h-screen h-full w-full flex flex-col
+    }
+}
+
+@layer utilities {
+    @keyframes scroll {
+        from {
+            transform: translateX(100%);
+        }
+        to {
+            transform: translateX(-100%);
+        }
+    }
+    
+    .animate-marquee {
+        animation: scroll 10s linear infinite;
     }
 }
