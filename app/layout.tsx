@@ -5,6 +5,7 @@ import Link from 'next/link';
 
 import { announcements } from '@/mockData/announcements';
 import Image from 'next/image';
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -75,7 +76,7 @@ function Header() {
         <header className='flex flex-col w-full h-fit'>
             <div className='flex flex-col lg:flex-row lg:items-center bg-dwd-secondary1 px-2'>
                 {latestAnnouncement && <div className='lg:w-1/2 overflow-hidden'>
-                    <div className='animate-marquee'>
+                    <div className='animate-marquee whitespace-nowrap'>
                         <Link href={latestAnnouncement.href} className='flex gap-2 items-center'>
                             <span className='text-xs px-1 text-white bg-red-500 animate-pulse'>NEW</span>
                             {latestAnnouncement.text}
@@ -87,7 +88,8 @@ function Header() {
                     NIRF | SBI Collect | what other links | go here
                 </div>
             </div>
-            <div className='flex flex-col lg:flex-row items-center justify-start border border-dwd-secondary1 relative md:h-18 lg:h-24'>
+            <div className='flex flex-row lg:flex-row items-center justify-start border border-dwd-secondary1 relative h-16 lg:h-24'>
+                {/* Big screen image */}
                 <Image
                     src='/brand/logo-medium-light.png'
                     width={0}
@@ -95,10 +97,87 @@ function Header() {
                     sizes='100%'
                     style={{ height: '100%', width: 'auto' }}
                     alt='IIIT Dharwad Logo'
-                    className='lg:mr-auto'
+                    className='block lg:hidden xl:block mr-auto'
+                />
+                {/* Medium screen logo */}
+                <Image
+                    src='/brand/logo-square-light.png'
+                    width={0}
+                    height={0}
+                    sizes='100%'
+                    style={{ height: '100%', width: 'auto' }}
+                    alt='IIIT Dharwad Logo'
+                    className='hidden lg:block xl:hidden mr-auto'
                 />
 
-                <div className='hidden lg:flex items-center justify-center mr-4 gap-8'>
+                {/* Mobile navbar */}
+                <Sheet>
+                    <SheetTrigger asChild>
+                        <div className='ml-auto mr-4 lg:hidden'><MenuIcon size='2rem' /></div>
+                    </SheetTrigger>
+                    <SheetContent side='left'>
+                        <div className='flex flex-col gap-2 mt-4 -mr-2'>
+                            <Link href='/' className='hover:underline'>Home</Link>
+
+                            <details className='group'>
+                                <summary className='flex items-center justify-between focus:outline-none'>
+                                    <div>About</div>
+                                    <ChevronDownIcon size='1rem' className='rotate-0 group-open:rotate-180 transition-transform duration-300' />
+                                </summary>
+                                <div className='mt-2 ml-8 flex flex-col gap-2'>
+                                    <Link className='hover:underline' href='/about/introduction' key='introduction'>Introduction</Link>
+                                    <Link className='hover:underline' href='/about/vision' key='vision'>Vision and Message</Link>
+                                    <Link className='hover:underline' href='/about/message' key='message'>Director&apos;s Message</Link>
+                                    <Link className='hover:underline' href='/about/organization' key='organization'>Organization</Link>
+                                </div>
+                            </details>
+
+                            <details className='group'>
+                                <summary className='flex items-center justify-between focus:outline-none'>
+                                    <div>Campus</div>
+                                    <ChevronDownIcon size='1rem' className='rotate-0 group-open:rotate-180 transition-transform duration-300' />
+                                </summary>
+                                <div className='mt-2 ml-8 flex flex-col gap-2'>
+                                    <Link className='hover:underline' href='/campus/facilities' key='facilities'>Facilities</Link>
+                                    <Link className='hover:underline' href='/campus/clubs' key='clubs'>Clubs</Link>
+                                    <Link className='hover:underline' href='/campus/events' key='events'>Events</Link>
+                                    <Link className='hover:underline' href='/campus/magazine' key='magazine'>Magazine</Link>
+                                </div>
+                            </details>
+
+                            <details className='group'>
+                                <summary className='flex items-center justify-between focus:outline-none'>
+                                    <div>Admissions</div>
+                                    <ChevronDownIcon size='1rem' className='rotate-0 group-open:rotate-180 transition-transform duration-300' />
+                                </summary>
+                                <div className='mt-2 ml-8 flex flex-col gap-2'>
+                                    <Link className='hover:underline' href='/admissions/btech' key='btech'>BTech</Link>
+                                    <Link className='hover:underline' href='/admissions/phd' key='phd'>PhD</Link>
+                                </div>
+                            </details>
+
+                            <details className='group'>
+                                <summary className='flex items-center justify-between focus:outline-none'>
+                                    <div>Academics</div>
+                                    <ChevronDownIcon size='1rem' className='rotate-0 group-open:rotate-180 transition-transform duration-300' />
+                                </summary>
+                                <div className='mt-2 ml-8 flex flex-col gap-2'>
+                                    <Link className='hover:underline' href='/academics/faculty' key='faculty'>Facilities</Link>
+                                    <Link className='hover:underline' href='/academics/research' key='research'>Research</Link>
+                                    <Link className='hover:underline' href='/academics/departments' key='departments'>Departments</Link>
+                                </div>
+                            </details>
+
+                            <Link href='/placements' className='hover:underline'>Placements</Link>
+                            <Link href='/tenders' className='hover:underline'>Tenders</Link>
+                            <Link href='/jobs' className='hover:underline'>Jobs</Link>
+                            <Link href='/contact' className='hover:underline'>Contact Us</Link>
+                        </div>
+                    </SheetContent>
+                </Sheet>
+
+                {/* Desktop navbar */}
+                <div className='ml-auto hidden lg:flex items-center justify-center mr-4 gap-8'>
                     <Link href='/' className='hover:underline'>Home</Link>
                     {AboutMenu}
                     {CampusMenu}
@@ -159,7 +238,7 @@ function Footer() {
                 </div>
             </div>
             <div className='flex flex-col lg:flex-row justify-between gap-4'>
-                <div className='flex flex-row flex-wrap gap-2 text-sm [&>*]:odd:font-bold'>
+                <div className='flex flex-row flex-wrap gap-2 text-sm *:odd:font-bold'>
                     <a href='https://iiitdwd.ac.in/docs/iiit_ppp_2017.pdf'>IIIT PPP Act</a> |
                     <a href='https://iiitdwd.ac.in/docs/ARIIA.pdf'>ARIIA</a> |
                     <a href='https://iiitdwd.ac.in/docs/RTI.pdf'>RTI</a> |
