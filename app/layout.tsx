@@ -1,4 +1,4 @@
-import './base.css';
+import './globals.css';
 import { ChevronDownIcon, CopyrightIcon, FacebookIcon, HomeIcon, LinkedinIcon, MailIcon, MenuIcon, PhoneIcon, YoutubeIcon } from 'lucide-react';
 import { Inter } from 'next/font/google';
 import Link from 'next/link';
