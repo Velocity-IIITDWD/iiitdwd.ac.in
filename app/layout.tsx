@@ -46,7 +46,7 @@ function HeaderDropdown({ trigger, subItems }: HeaderDropdownProps, direction?: 
 }
 
 function Header() {
-    const latestAnnouncement = announcements.length ? announcements.toSorted((a, b) => b.timestamp - a.timestamp)[0] : undefined;
+    const latestAnnouncement = announcements.length ? announcements[0] : undefined;
 
     const AboutMenu = HeaderDropdown({
         trigger: <>About</>,

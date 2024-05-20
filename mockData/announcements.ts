@@ -4,9 +4,7 @@ export type Announcement = {
     timestamp: number
 };
 
-// export const announcements: Announcement[] = [];
-
-export const announcements: Announcement[] = [
+let announcements: Announcement[] = [
     {
         href: '/docs/announcement4.pdf',
         text: 'IIIT Dharwad announces its latest announcement',
@@ -28,3 +26,7 @@ export const announcements: Announcement[] = [
         timestamp: 1716140473349
     },
 ];
+
+announcements.sort();
+
+export { announcements };
