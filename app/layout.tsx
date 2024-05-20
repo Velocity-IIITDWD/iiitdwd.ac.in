@@ -13,32 +13,18 @@ type HeaderDropdownProps = {
     subItems: React.ReactNode[]
 };
 
-function HeaderDropdown({ trigger, subItems }: HeaderDropdownProps, direction?: 'col' | 'row', isRight = false) {
-    if (!direction) direction = 'col';
-    const dirClass = direction === 'col' ? 'flex-col' : 'flex-row';
-    const dividerClass = direction === 'col' ? 'w-full' : 'h-full';
-
-    const separatedSubItems: React.ReactNode[] = [];
-    for (let i = 0; i < subItems.length; i++) {
-        separatedSubItems.push(subItems[i]);
-        if (i !== subItems.length - 1) separatedSubItems.push(<div className={'self-center border-b border-dwd-secondary1 ' + dividerClass}></div>)
-    }
-
-
-    // Another atrocity, ill fix it later
-    const shiftToLeft = isRight ? '-translate-x-7' : ''
-
+function HeaderDropdown({ trigger, subItems }: HeaderDropdownProps) {
     return (
         <div className='relative flex items-center group cursor-pointer'>
             {trigger} <ChevronDownIcon className='rotate-0 transition-transform duration-500 group-hover:rotate-180' size='1rem' />
 
-            <div className={'hidden group-focus-within:block group-hover:block absolute top-0 z-10 ' + shiftToLeft}>
-                <div className='invisible h-10'></div>
+            <div className='invisible group-hover:visible group-hover:opacity-100 transition-opacity duration-200 absolute top-full z-10 '>
+                <div className='invisible h-2'></div>
                 <div
-                    className={'flex gap-4 border border-dwd-secondary1 opacity-0 ' +
-                        'group-hover:opacity-100 transition-opacity duration-200 bg-white p-4 ' + dirClass}
+                    className='w-max flex flex-col gap-4 border border-dwd-secondary1 opacity-0 
+                    group-hover:opacity-100 transition-opacity duration-200 bg-white p-4'
                 >
-                    {separatedSubItems}
+                    {subItems}
                 </div>
             </div>
         </div>
@@ -66,7 +52,7 @@ function Header() {
             <Link className='hover:underline' href='/campus/events' key='events'>Events</Link>,
             <Link className='hover:underline' href='/campus/magazine' key='magazine'>Magazine</Link>
         ]
-    }, 'col', true);
+    });
 
     const AdmissionsMenu = HeaderDropdown({
         trigger: <>Admissions</>,
@@ -87,7 +73,7 @@ function Header() {
 
     return (
         <header className='flex flex-col w-full h-fit'>
-            <div className='flex flex-col lg:flex-row bg-dwd-secondary1 px-2'>
+            <div className='flex flex-col lg:flex-row lg:items-center bg-dwd-secondary1 px-2'>
                 {latestAnnouncement && <div className='lg:w-1/2 overflow-hidden'>
                     <div className='animate-marquee'>
                         <Link href={latestAnnouncement.href} className='flex gap-2 items-center'>
@@ -97,14 +83,13 @@ function Header() {
                         </Link>
                     </div>
                 </div>}
-                <div className='lg:w-1/2 text-center lg:text-right'>
+                <div className='lg:w-1/2 text-center lg:text-right text-xs'>
                     NIRF | SBI Collect | what other links | go here
                 </div>
             </div>
             <div className='flex flex-col lg:flex-row items-center justify-start border border-dwd-secondary1 relative md:h-18 lg:h-24'>
-                {/* <div className='hidden lg:block'> */}
                 <Image
-                    src='/brand/logo-square-light.png'
+                    src='/brand/logo-medium-light.png'
                     width={0}
                     height={0}
                     sizes='100%'
@@ -112,21 +97,8 @@ function Header() {
                     alt='IIIT Dharwad Logo'
                     className='lg:mr-auto'
                 />
-                {/* </div> */}
-                {/* <div className='lg:hidden'>
-                    <Image
-                        src='/brand/logo-long-light.png'
-                        width={0}
-                        height={0}
-                        sizes='100%'
-                        style={{ height: '100%', width: 'auto' }}
-                        alt='IIIT Dharwad Logo'
-                        className='lg:mr-auto'
-                    />
-                </div> */}
 
-                {/* Atrocity */}
-                <div className='hidden lg:flex items-center justify-center w-full gap-8'>
+                <div className='hidden lg:flex items-center justify-center mr-4 gap-8'>
                     <Link href='/' className='hover:underline'>Home</Link>
                     {AboutMenu}
                     {CampusMenu}
@@ -137,25 +109,6 @@ function Header() {
                     <Link href='/jobs' className='hover:underline'>Jobs</Link>
                     <Link href='/contact' className='hover:underline'>Contact Us</Link>
                 </div>
-
-                {/* {HeaderDropdown({
-                    trigger: (<div className='w-full px-2 flex lg:hidden items-end justify-end'>
-                        <MenuIcon size='2rem' />
-                    </div>),
-                    subItems: [(
-                        <div key='1' className='grid grid-cols-3 md:grid-cols-5 place-items-center w-full gap-8'>
-                            <Link href='/' className='hover:underline'>Home</Link>
-                            {AboutMenu}
-                            {CampusMenu}
-                            {AdmissionsMenu}
-                            {AcademicsMenu}
-                            <Link href='/placements' className='hover:underline'>Placements</Link>
-                            <Link href='/tenders' className='hover:underline'>Tenders</Link>
-                            <Link href='/jobs' className='hover:underline'>Jobs</Link>
-                            <Link href='/contact' className='hover:underline'>Contact Us</Link>
-                        </div>
-                    )]
-                }, 'row')} */}
             </div>
         </header>
     );
