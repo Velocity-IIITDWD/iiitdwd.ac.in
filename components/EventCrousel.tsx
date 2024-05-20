@@ -69,12 +69,10 @@ const EventCarousel: React.FC = () => {
                                     key={index}
                                 >
                                     <div className="flex justify-center h-128">
-                                        <Image
+                                        <img
                                             src={event.url}
                                             className="d-block w-2/3 h-full object-cover"
                                             alt={event.name}
-                                            layout="fill"
-                                            objectFit="cover"
                                         />
                                     </div>
 
