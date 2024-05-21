@@ -3,7 +3,7 @@ import { ChevronDownIcon, CopyrightIcon, FacebookIcon, HomeIcon, LinkedinIcon, M
 import { Inter } from 'next/font/google';
 import Link from 'next/link';
 
-import { announcements } from '@/mockData/announcements';
+import { announcements } from '@/data/announcements';
 import Image from 'next/image';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 
