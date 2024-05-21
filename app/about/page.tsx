@@ -15,7 +15,7 @@ const aboutPage = () => {
 
   return (
     <div className="w-full flex flex-col items-center">
-      <div className="w-full min-h-40 sm:min-h-72 lg:min-h-96 relative">
+      <div className="w-full min-h-40 sm:min-h-72 lg:min-h-96 xl:min-h-112 relative">
         <Image
           src={main_gate}
           alt={'Image of Main Gate'}
