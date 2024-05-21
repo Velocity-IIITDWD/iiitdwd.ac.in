@@ -74,18 +74,22 @@ function Header() {
 
     return (
         <header className='flex flex-col w-full h-fit'>
-            <div className='flex flex-col lg:flex-row lg:items-center bg-dwd-secondary1 px-2'>
-                {latestAnnouncement && <div className='lg:w-1/2 overflow-hidden'>
-                    <div className='animate-marquee whitespace-nowrap'>
-                        <Link href={latestAnnouncement.href} className='flex gap-2 items-center'>
-                            <span className='text-xs px-1 text-white bg-red-500 animate-pulse'>NEW</span>
-                            {latestAnnouncement.text}
-                            <span className='text-xs px-1 text-white bg-red-500 animate-pulse'>NEW</span>
-                        </Link>
+            <div className='flex flex-col lg:flex-row lg:items-center bg-dwd-secondary1 px-2 gap-4'>
+                {latestAnnouncement && <div className='flex justify-end lg:w-1/2 overflow-hidden'>
+                    <div className='w-1/2 overflow-clip'>
+                        <div className='animate-marquee whitespace-nowrap'>
+                            <Link href={latestAnnouncement.href} className='flex gap-2 items-center'>
+                                <span className='text-xs px-1 text-white bg-red-500 animate-pulse'>NEW</span>
+                                {latestAnnouncement.text}
+                                <span className='text-xs px-1 text-white bg-red-500 animate-pulse'>NEW</span>
+                            </Link>
+                        </div>
                     </div>
                 </div>}
-                <div className='lg:w-1/2 text-center lg:text-right text-xs'>
-                    NIRF | SBI Collect | what other links | go here
+                <div className='flex gap-2 lg:w-1/2 text-center lg:text-left text-xs *:odd:font-bold'>
+                    <div>Tenders</div><div>|</div>
+                    <div>AIMS</div><div>|</div>
+                    <div>Students Fee Portal</div>
                 </div>
             </div>
             <div className='flex flex-row lg:flex-row items-center justify-start border border-dwd-secondary1 relative h-16 lg:h-24'>
@@ -204,7 +208,7 @@ function XIcon({ size } = { size: '2rem' }) {
 function Footer() {
     return (
         <footer className='mt-auto flex flex-col bg-dwd-primary text-white text-xs w-full h-fit px-8 py-4 gap-8'>
-            <div className='flex flex-col lg:flex-row gap-8 items-start justify-start'>
+            <div className='flex flex-col lg:flex-row gap-8 items-start justify-start lg:justify-between'>
                 <div className='flex flex-col w-fit gap-4'>
                     <h2 className='font-bold text-lg lg:text-2xl'>Address</h2>
                     <div className='flex flex-col gap-2'>
@@ -232,7 +236,7 @@ function Footer() {
                         <a href='https://twitter.com/dharwad_iiit' className='flex gap-2'><YoutubeIcon size='1rem' /> YouTube</a>
                     </div>
                 </div>
-                <div className='w-fit lg:mt-12 lg:ml-auto'>
+                <div className='w-fit lg:mt-12'>
                     Copyright <CopyrightIcon className='inline' size='1rem' /> 2024
                     IIIT Dharwad, All rights reserved
                 </div>
