@@ -1,8 +1,8 @@
 {
   "extends": "next/core-web-vitals",
   "rules": {
-    "indent": "off",
-    "quotes": "off"
+    "indent": ["error", 2],
+    "quotes": ["error", "single"]
   },
   "ignorePatterns": [
     "tailwind.config.ts",
