@@ -1,7 +1,9 @@
 // components/EmblaCarousel.tsx
 "use client";
 import React from 'react';
-import useEmblaCarousel, { EmblaOptionsType } from 'embla-carousel-react';
+import useEmblaCarousel from 'embla-carousel-react';
+import { EmblaOptionsType } from 'embla-carousel';
+
 
 type SlideType = {
   content: JSX.Element;

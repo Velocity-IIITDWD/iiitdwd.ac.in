@@ -30,6 +30,8 @@ interface BarGraphProps {
     borderColor: string[];
     borderWidth: number;
   }[];
+  width: number; // Add width property
+  height: number; // Add height property
 }
 
 const BarGraph: React.FC<BarGraphProps> = ({ labels, datasets }) => {
@@ -57,13 +59,15 @@ const BarGraph: React.FC<BarGraphProps> = ({ labels, datasets }) => {
   };
 
   const options = {
-    indexAxis: 'y', // This makes the bar chart horizontal
+    indexAxis: 'y' as 'y', // Change 'string' to 'y' or 'x' if needed
     scales: {
       x: {
         beginAtZero: true
       }
     }
   };
+  
+  
 
   return (
     <div style={{ width: width, height: height }}>
