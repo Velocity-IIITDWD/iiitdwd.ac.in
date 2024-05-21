@@ -71,3 +71,158 @@
         animation: scroll 10s linear infinite;
     }
 }
+
+.break-last-words {
+  white-space: nowrap;
+}
+
+.container{
+  width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.procedure:hover
+{
+scale: 1.4;
+transition-duration: 0.2s;
+}
+
+
+.embla {
+  position: relative;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.embla__viewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+.embla__container {
+  display: flex;
+}
+
+.embla__slide {
+  flex: 0 0 33.3333%;
+  position: relative;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.slide-content {
+  background-color: #eee;
+  height: 200px;
+  width:350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  padding: 15px;
+}
+
+.embla__button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 25px;
+  color: #013365;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  padding: 0.5rem;
+  
+}
+.embla__button:hover
+{
+  transition-duration: 0.2s;
+  scale:1.1
+}
+.embla__button--prev {
+  left: 10px;
+
+
+}
+
+.embla__button--next {
+  right: 10px;
+}
+
+.embla__button__svg {
+  width: 2rem;
+  height: 2rem;
+  
+}
+
+.embla__dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.embla__dot {
+  background-color: #50A5CA;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  margin: 0 0.25rem;
+  cursor: pointer;
+}
+
+.embla__dot--selected {
+  background-color: #013365;
+  width: 0.8rem;
+  height: 0.8rem;
+
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+@media (max-width: 767px) {
+  .bar {
+    width: 50%; /* Set width to 100% for full width */
+  }
+  .procedure:hover
+{
+scale: 1;
+transition-duration: 0.2s;
+}
+  .container{
+    margin: 0;
+    padding: 0;
+    width:100%
+  }
+  .shortbox{
+  
+    margin-left: 5%;
+  }
+  .uj
+  {
+    margin-left: 25%;
+  }
+.whatsapp
+{
+  margin-left: 5%;
+  margin-right: 2%;
+}
+.buttons{
+  flex-direction: column;
+  white-space: nowrap;
+  gap: 25px;
+  margin-left:12%;
+width:220%;
+  
+}
+/*.buttonss
+{
+  white-space: nowrap;
+  margin-left: 0;
+}*/
+}
+
