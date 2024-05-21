@@ -22,7 +22,7 @@ export default function Card({
         <h5 className="text-cardText font-bold text-[28px] mt-[28px] underline hover:text-white">
           <a href="#">{title}</a>
         </h5>
-        <p className="text-cardText text-center text-secondary font-medium text-[18px] mt-2 mb-8">
+        <p className="text-cardText text-center font-medium text-[18px] mt-2 mb-8">
           {desc}
         </p>
         <div className="mt-4">

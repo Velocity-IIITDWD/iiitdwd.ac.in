@@ -1,8 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import eventData from '../data/HomePage.json';
+import eventData from '../mockData/homePageData.json';
 import RightArrow from '@/components/ui/RightArrow';
 import LeftArrow from '@/components/ui/LeftArrow';
-import Image from 'next/image';
 
 const EventCarousel: React.FC = () => {
     const [events, setEvents] = useState<any[]>([]);

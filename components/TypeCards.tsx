@@ -1,4 +1,4 @@
-import data from "../data/HomePage.json";
+import data from '../mockData/homePageData.json';
 import Card from "@/components/ui/Card";
 
 const TypeCard = () => {

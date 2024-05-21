@@ -1,5 +1,5 @@
 import React from 'react';
-import data from '../data/HomePage.json';
+import data from '../mockData/homePageData.json';
 
 interface AnnouncementsProps {}
 
