@@ -37,7 +37,7 @@ function HeaderDropdownRight({ trigger, subItems }: HeaderDropdownProps) {
         <div className='relative flex items-center group/right cursor-pointer'>
             {trigger} <ChevronDownIcon className='-rotate-90 transition-transform duration-500' size='1rem' />
 
-            <div 
+            <div
                 className='flex invisible group-hover/right:visible group-hover/right:opacity-100 
                 transition-opacity duration-200 absolute left-[calc(100%+1rem)] -top-1/2 z-10 -ml-6 -translate-y-[0.3rem]'
             >
@@ -102,9 +102,11 @@ function Header() {
 
     return (
         <header className='flex flex-col w-full h-fit'>
-            <div className='flex flex-col lg:flex-row lg:items-center bg-dwd-secondary1 px-2 gap-4'>
-                {latestAnnouncement && <div className='flex justify-end lg:w-1/2 overflow-hidden'>
-                    <div className='w-1/2 overflow-clip'>
+            <div className='flex flex-col lg:flex-row lg:items-center justify-center bg-dwd-secondary1 px-2 gap-4'>
+                {/* Pushes announcement to center */}
+                <div className='w-1/5'></div>
+                {latestAnnouncement && <div className='flex justify-end lg:w-2/5 overflow-hidden'>
+                    <div className='w-full overflow-clip'>
                         <div className='animate-marquee whitespace-nowrap'>
                             <Link href={latestAnnouncement.href} className='flex gap-2 items-center'>
                                 <span className='text-xs px-1 text-white bg-red-500 animate-pulse'>NEW</span>
@@ -114,11 +116,13 @@ function Header() {
                         </div>
                     </div>
                 </div>}
-                <div className='flex gap-2 lg:w-1/2 text-center lg:text-left text-xs *:odd:font-bold'>
-                    <div>Tenders</div><div>|</div>
-                    <div>AIMS</div><div>|</div>
-                    <div>Students Fee Portal</div>
+                <div className='flex gap-2 w-1/5 text-center lg:text-left text-xs *:odd:font-bold'>
+                    {/* :TODO */}
+                    <Link href='/idk'>Tenders</Link>              <div>|</div>
+                    <Link href='/idk'>AIMS</Link>                 <div>|</div>
+                    <Link href='/idk'>Students Fee Portal</Link>
                 </div>
+                <div className='w-1/5'></div>
             </div>
             <div className='flex flex-row lg:flex-row items-center justify-start border border-dwd-secondary1 relative h-16 lg:h-24'>
                 {/* Big screen image */}
@@ -130,6 +134,7 @@ function Header() {
                     style={{ height: '100%', width: 'auto' }}
                     alt='IIIT Dharwad Logo'
                     className='block lg:hidden xl:block mr-auto'
+                    priority
                 />
                 {/* Medium screen logo */}
                 <Image
@@ -140,6 +145,7 @@ function Header() {
                     style={{ height: '100%', width: 'auto' }}
                     alt='IIIT Dharwad Logo'
                     className='hidden lg:block xl:hidden mr-auto'
+                    priority
                 />
 
                 {/* Mobile navbar */}
@@ -170,10 +176,10 @@ function Header() {
                                     <ChevronDownIcon size='1rem' className='rotate-0 group-open:rotate-180 transition-transform duration-300' />
                                 </summary>
                                 <div className='mt-2 ml-8 flex flex-col gap-2'>
-                                    <Link className='hover:underline' href='/campus/facilities' key='facilities'>Facilities</Link>
-                                    <Link className='hover:underline' href='/campus/clubs' key='clubs'>Clubs</Link>
-                                    <Link className='hover:underline' href='/campus/events' key='events'>Events</Link>
-                                    <Link className='hover:underline' href='/campus/magazine' key='magazine'>Magazine</Link>
+                                    <Link className='hover:underline' href='/campus/facilities'>Facilities</Link>
+                                    <Link className='hover:underline' href='/campus/clubs'>Clubs</Link>
+                                    <Link className='hover:underline' href='/campus/events'>Events</Link>
+                                    <Link className='hover:underline' href='/campus/magazine'>Magazine</Link>
                                 </div>
                             </details>
 
@@ -183,8 +189,8 @@ function Header() {
                                     <ChevronDownIcon size='1rem' className='rotate-0 group-open:rotate-180 transition-transform duration-300' />
                                 </summary>
                                 <div className='mt-2 ml-8 flex flex-col gap-2'>
-                                    <Link className='hover:underline' href='/admissions/btech' key='btech'>BTech</Link>
-                                    <Link className='hover:underline' href='/admissions/phd' key='phd'>PhD</Link>
+                                    <Link className='hover:underline' href='/admissions/btech'>BTech</Link>
+                                    <Link className='hover:underline' href='/admissions/phd'>PhD</Link>
                                 </div>
                             </details>
 
@@ -194,9 +200,20 @@ function Header() {
                                     <ChevronDownIcon size='1rem' className='rotate-0 group-open:rotate-180 transition-transform duration-300' />
                                 </summary>
                                 <div className='mt-2 ml-8 flex flex-col gap-2'>
-                                    <Link className='hover:underline' href='/academics/faculty' key='faculty'>Facilities</Link>
-                                    <Link className='hover:underline' href='/academics/research' key='research'>Research</Link>
-                                    <Link className='hover:underline' href='/academics/departments' key='departments'>Departments</Link>
+                                    <Link className='hover:underline' href='/academics/faculty'>Faculty</Link>
+                                    <Link className='hover:underline' href='/academics/research'>Research</Link>
+                                    <details className='group/sub'>
+                                        <summary className='flex items-center justify-between focus:outline-none'>
+                                            <div>Departments</div>
+                                            <ChevronDownIcon size='1rem' className='rotate-0 group-open/sub:rotate-180 transition-transform duration-300' />
+                                        </summary>
+                                        <div className='mt-2 ml-8 flex flex-col gap-2'>
+                                            <Link className='hover:underline' href='/academics/departments/cse'>CSE</Link>
+                                            <Link className='hover:underline' href='/academics/departments/dsai'>DSAI</Link>
+                                            <Link className='hover:underline' href='/academics/departments/ece'>ECE</Link>
+                                        </div>
+                                    </details>
+                                    {/* <Link className='hover:underline' href='/academics/departments'>Departments</Link> */}
                                 </div>
                             </details>
 
