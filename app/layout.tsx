@@ -1,3 +1,5 @@
+'use client';
+
 import './globals.css';
 import { ChevronDownIcon, CopyrightIcon, FacebookIcon, HomeIcon, LinkedinIcon, MailIcon, MenuIcon, PhoneIcon, YoutubeIcon } from 'lucide-react';
 import { Inter } from 'next/font/google';
@@ -6,17 +8,19 @@ import Link from 'next/link';
 import { announcements } from '@/data/announcements';
 import Image from 'next/image';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger, NavigationMenuContent, navigationMenuTriggerStyle } from '@/components/ui/navigation-menu';
 
 const inter = Inter({ subsets: ['latin'] });
 
 type HeaderDropdownProps = {
     trigger: React.ReactNode
-    subItems: React.ReactNode[]
+    subItems: React.ReactNode[],
+    key?: string
 };
 
-function HeaderDropdown({ trigger, subItems }: HeaderDropdownProps) {
+function HeaderDropdown({ trigger, subItems, key }: HeaderDropdownProps) {
     return (
-        <div className='relative flex items-center group cursor-pointer'>
+        <div className='relative flex items-center group cursor-pointer' key={key}>
             {trigger} <ChevronDownIcon className='rotate-0 transition-transform duration-500 group-hover:rotate-180' size='1rem' />
 
             <div className='invisible group-hover:visible group-hover:opacity-100 transition-opacity duration-200 absolute top-full z-10'>
@@ -32,9 +36,9 @@ function HeaderDropdown({ trigger, subItems }: HeaderDropdownProps) {
     );
 }
 
-function HeaderDropdownRight({ trigger, subItems }: HeaderDropdownProps) {
+function HeaderDropdownRight({ trigger, subItems, key }: HeaderDropdownProps) {
     return (
-        <div className='relative flex items-center group/right cursor-pointer'>
+        <div className='relative flex items-center group/right cursor-pointer' key={key}>
             {trigger} <ChevronDownIcon className='-rotate-90 transition-transform duration-500' size='1rem' />
 
             <div
@@ -93,7 +97,8 @@ function Header() {
                     <Link className='hover:underline' href='/academics/departments/cse' key='cse'>CSE</Link>,
                     <Link className='hover:underline' href='/academics/departments/dsai' key='dsai'>DSAI</Link>,
                     <Link className='hover:underline' href='/academics/departments/ece' key='ece'>ECE</Link>,
-                ]
+                ],
+                key: 'department'
             }),
             <Link className='hover:underline' href='/academics/faculty' key='faculty'>Facilities</Link>,
             <Link className='hover:underline' href='/academics/research' key='research'>Research</Link>,
@@ -102,10 +107,10 @@ function Header() {
 
     return (
         <header className='flex flex-col w-full h-fit'>
-            <div className='flex flex-col lg:flex-row lg:items-center justify-center bg-dwd-secondary1 px-2 gap-4'>
+            <div className='flex flex-col lg:flex-row items-center justify-center bg-dwd-secondary1 px-2 lg:gap-4'>
                 {/* Pushes announcement to center */}
-                <div className='w-1/5'></div>
-                {latestAnnouncement && <div className='flex justify-end lg:w-2/5 overflow-hidden'>
+                <div className='hidden lg:block w-1/5'></div>
+                {latestAnnouncement && <div className='flex justify-end w-full lg:w-2/5 overflow-hidden'>
                     <div className='w-full overflow-clip'>
                         <div className='animate-marquee whitespace-nowrap'>
                             <Link href={latestAnnouncement.href} className='flex gap-2 items-center'>
@@ -116,13 +121,13 @@ function Header() {
                         </div>
                     </div>
                 </div>}
-                <div className='flex gap-2 w-1/5 text-center lg:text-left text-xs *:odd:font-bold'>
+                <div className='flex gap-2 lg:w-1/5 text-center lg:text-left text-xs *:odd:font-bold'>
                     {/* :TODO */}
                     <Link href='/idk'>Tenders</Link>              <div>|</div>
                     <Link href='/idk'>AIMS</Link>                 <div>|</div>
                     <Link href='/idk'>Students Fee Portal</Link>
                 </div>
-                <div className='w-1/5'></div>
+                <div className='hidden lg:block w-1/5'></div>
             </div>
             <div className='flex flex-row lg:flex-row items-center justify-start border border-dwd-secondary1 relative h-16 lg:h-24'>
                 {/* Big screen image */}
@@ -237,6 +242,31 @@ function Header() {
                     <Link href='/jobs' className='hover:underline'>Jobs</Link>
                     <Link href='/contact' className='hover:underline'>Contact Us</Link>
                 </div>
+
+                {/* Desktop navbar shadcn */}
+                {/* <NavigationMenu className='ml-auto hidden lg:flex items-center justify-center mr-4 gap-8'>
+                    <NavigationMenuList>
+                        <NavigationMenuItem>
+                            <Link href='/' legacyBehavior passHref>
+                                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                                    Home
+                                </NavigationMenuLink>
+                            </Link>
+                        </NavigationMenuItem>
+                        <NavigationMenuItem>
+                            <NavigationMenuTrigger>About</NavigationMenuTrigger>
+                            <NavigationMenuContent>
+                                <ul>
+                                    <li>
+                                        <NavigationMenuLink>
+                                            Introduction
+                                        </NavigationMenuLink>
+                                    </li>
+                                </ul>
+                            </NavigationMenuContent>
+                        </NavigationMenuItem>
+                    </NavigationMenuList>
+                </NavigationMenu> */}
             </div>
         </header>
     );
