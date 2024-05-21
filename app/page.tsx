@@ -1,5 +1,6 @@
 export default function Home() {
     return (
-        <div></div>
+        <div className='flex flex-col h-full w-full'>
+        </div>
     );
 }
