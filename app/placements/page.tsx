@@ -137,7 +137,7 @@ export default function Home() {
     <div className="text-[2rem] text-[rgb(1,51,101)] font-extrabold">students in 2023.</div>
   </div>
   <div className=" whatsapp inline-block mt-20">
-    <div className="text-8xl font-bold text-[#50A5CA] inline-block">11</div>
+    <div className="text-8xl font-bold text-[#50A5CA] inline-block">19.5</div>
     <div className="text-5xl font-bold text-[#013365] inline-block"> LPA</div>
   </div>
 </div>
