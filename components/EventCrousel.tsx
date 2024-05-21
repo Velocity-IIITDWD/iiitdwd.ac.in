@@ -54,7 +54,7 @@ const EventCarousel: React.FC = () => {
   };
 
   return (
-    <div className='Events mt-4 w-full sm:w-1/2 lg:w-40% lg:mr-5%'>
+    <div className='Events mt-4 w-full sm:w-1/2 lg:w-40% lg:mr-5% mb-4'>
       <div className='block rounded-lg shadow-secondary-1 border border-gray-400'>
         <div className='border-b-2 border-neutral-100 px-6 py-3 font-bold text-2xl bg-customBlue text-cardText'>
           Events
