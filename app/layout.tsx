@@ -19,11 +19,32 @@ function HeaderDropdown({ trigger, subItems }: HeaderDropdownProps) {
         <div className='relative flex items-center group cursor-pointer'>
             {trigger} <ChevronDownIcon className='rotate-0 transition-transform duration-500 group-hover:rotate-180' size='1rem' />
 
-            <div className='invisible group-hover:visible group-hover:opacity-100 transition-opacity duration-200 absolute top-full z-10 '>
+            <div className='invisible group-hover:visible group-hover:opacity-100 transition-opacity duration-200 absolute top-full z-10'>
                 <div className='invisible h-2'></div>
                 <div
                     className='w-max flex flex-col gap-4 border border-dwd-secondary1 opacity-0 
                     group-hover:opacity-100 transition-opacity duration-200 bg-white p-4'
+                >
+                    {subItems}
+                </div>
+            </div>
+        </div>
+    );
+}
+
+function HeaderDropdownRight({ trigger, subItems }: HeaderDropdownProps) {
+    return (
+        <div className='relative flex items-center group/right cursor-pointer'>
+            {trigger} <ChevronDownIcon className='-rotate-90 transition-transform duration-500' size='1rem' />
+
+            <div 
+                className='flex invisible group-hover/right:visible group-hover/right:opacity-100 
+                transition-opacity duration-200 absolute left-[calc(100%+1rem)] -top-1/2 z-10 -ml-6 -translate-y-[0.3rem]'
+            >
+                <div className='invisible w-6'></div>
+                <div
+                    className='w-max flex flex-col gap-4 border border-dwd-secondary1 opacity-0 
+                    group-hover/right:opacity-100 transition-opacity duration-200 bg-white p-4'
                 >
                     {subItems}
                 </div>
@@ -66,9 +87,16 @@ function Header() {
     const AcademicsMenu = HeaderDropdown({
         trigger: <>Academics</>,
         subItems: [
+            HeaderDropdownRight({
+                trigger: <>Departments</>,
+                subItems: [
+                    <Link className='hover:underline' href='/academics/departments/cse' key='cse'>CSE</Link>,
+                    <Link className='hover:underline' href='/academics/departments/dsai' key='dsai'>DSAI</Link>,
+                    <Link className='hover:underline' href='/academics/departments/ece' key='ece'>ECE</Link>,
+                ]
+            }),
             <Link className='hover:underline' href='/academics/faculty' key='faculty'>Facilities</Link>,
             <Link className='hover:underline' href='/academics/research' key='research'>Research</Link>,
-            <Link className='hover:underline' href='/academics/departments' key='departments'>Departments</Link>,
         ]
     })
 
