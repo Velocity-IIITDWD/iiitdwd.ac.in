@@ -14,7 +14,7 @@ import {
 import { useRef } from 'react';
 
 export default function Home() {
-  const plugin = useRef(Autoplay({ delay: 2000, stopOnInteraction: false }));
+  const plugin = useRef(Autoplay({ delay: 5000, stopOnInteraction: false }));
 
   return (
     <div className="flex flex-col h-full w-full">
@@ -130,7 +130,7 @@ export default function Home() {
           opts={{
             align: 'start',
           }}
-          className="w-full"
+          className="w-full relative overflow-hidden"
         >
           <CarouselContent>
             {Array.from({ length: 10 }).map((_, index) => (
@@ -147,8 +147,8 @@ export default function Home() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
+          <CarouselPrevious className="absolute left-3 top-1/2 -translate-y-1/2" />
+          <CarouselNext className="absolute right-3 top-1/2 -translate-y-1/2" />
         </Carousel>
       </div>
 
@@ -160,14 +160,14 @@ export default function Home() {
           opts={{
             align: 'start',
           }}
-          className="w-full"
+          className="w-full relative overflow-hidden"
         >
           <CarouselContent>
             {Array.from({ length: 10 }).map((_, index) => (
               <CarouselItem key={index} className="">
                 <div className="p-1">
                   <Card>
-                    <CardContent className="flex justify-center items-center gap-6 p-6">
+                    <CardContent className="flex justify-center flex-col-reverse md:flex-row items-center gap-6 p-6">
                       <div className="flex flex-1 flex-col h-full text-dwd-primary gap-6">
                         <p className="text-xl font-semibold mb-4">
                           Event Heading - Drone Sessions
@@ -206,26 +206,26 @@ export default function Home() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
+          <CarouselPrevious className="absolute left-3 top-1/2 -translate-y-1/2" />
+          <CarouselNext className="absolute right-3 top-1/2 -translate-y-1/2" />
         </Carousel>
       </div>
 
       <div className="w-full py-10 px-6 flex flex-col text-dwd-primary md:flex-row items-center justify-evenly gap-10 md:px-44">
         <div className="grid grid-cols-2 w-fit grid-rows-2 gap-3">
-          <div className="rounded-md bg-gray-200 aspect-square w-[200px] transition duration-300 shadow hover:bg-dwd-primary hover:text-white cursor-pointer flex flex-col items-center justify-center">
+          <div className="rounded-md bg-gray-200 aspect-square w-[150px] lg:w-[200px] transition duration-300 shadow hover:bg-dwd-primary hover:text-white cursor-pointer flex flex-col items-center justify-center">
             <p className="text-3xl font-bold">1000+</p>
             <p className="font-semibold">Alumini</p>
           </div>
-          <div className="rounded-md bg-gray-200 aspect-square w-[200px] transition duration-300 shadow hover:bg-dwd-primary hover:text-white cursor-pointer flex flex-col items-center justify-center">
+          <div className="rounded-md bg-gray-200 aspect-square w-[150px] lg:w-[200px] transition duration-300 shadow hover:bg-dwd-primary hover:text-white cursor-pointer flex flex-col items-center justify-center">
             <p className="text-3xl font-bold">100+</p>
             <p className="font-semibold">Faculty</p>
           </div>
-          <div className="rounded-md bg-gray-200 aspect-square w-[200px] transition duration-300 shadow hover:bg-dwd-primary hover:text-white cursor-pointer flex flex-col items-center justify-center">
+          <div className="rounded-md bg-gray-200 aspect-square w-[150px] lg:w-[200px] transition duration-300 shadow hover:bg-dwd-primary hover:text-white cursor-pointer flex flex-col items-center justify-center">
             <p className="text-3xl font-bold">150+</p>
             <p className="font-semibold">Publications</p>
           </div>
-          <div className="rounded-md bg-gray-200 aspect-square w-[200px] transition duration-300 shadow hover:bg-dwd-primary hover:text-white cursor-pointer flex flex-col items-center justify-center">
+          <div className="rounded-md bg-gray-200 aspect-square w-[150px] lg:w-[200px] transition duration-300 shadow hover:bg-dwd-primary hover:text-white cursor-pointer flex flex-col items-center justify-center">
             <p className="text-3xl font-bold">750+</p>
             <p className="font-semibold">Placements</p>
           </div>
@@ -244,7 +244,7 @@ export default function Home() {
           opts={{
             align: 'start',
           }}
-          className="w-full"
+          className="w-full relative overflow-hidden"
         >
           <CarouselContent>
             {Array.from({ length: 10 }).map((_, index) => (
@@ -261,8 +261,8 @@ export default function Home() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
+          <CarouselPrevious className="absolute left-3 top-1/2 -translate-y-1/2" />
+          <CarouselNext className="absolute right-3 top-1/2 -translate-y-1/2" />
         </Carousel>
       </div>
     </div>
