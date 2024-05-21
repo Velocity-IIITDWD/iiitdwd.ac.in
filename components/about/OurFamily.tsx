@@ -7,44 +7,44 @@ const OurFamily = () => {
         Our Family
       </span>
       <Link
-        className="bg-dwd-primary hover:bg-dwd-accent border p-3 border-dwd-primary hover:text-dwd-primary text-white text-center rounded-full text-lg md:text-xl"
+        className="bg-dwd-primary hover:bg-dwd-secondary2/40 border-2 p-3 border-dwd-primary hover:text-dwd-primary text-white text-center rounded-full text-lg md:text-xl"
         href={"/visitors"}
       >
         Visitor
       </Link>
       <Link
-        className="bg-dwd-primary hover:bg-dwd-accent border p-3 border-dwd-primary hover:text-dwd-primary text-white text-center rounded-full text-lg md:text-xl"
+        className="bg-dwd-primary hover:bg-dwd-secondary2/40 border-2 p-3 border-dwd-primary hover:text-dwd-primary text-white text-center rounded-full text-lg md:text-xl"
         href={"/boardOfGoverners"}
       >
         Board of Governers
       </Link>
       <Link
-        className="bg-dwd-primary hover:bg-dwd-accent border p-3 border-dwd-primary hover:text-dwd-primary text-white text-center rounded-full text-lg md:text-xl"
+        className="bg-dwd-primary hover:bg-dwd-secondary2/40 border-2 p-3 border-dwd-primary hover:text-dwd-primary text-white text-center rounded-full text-lg md:text-xl"
         href={"/senate"}
       >
         Senate
       </Link>
       <Link
-        className="bg-dwd-primary hover:bg-dwd-accent border p-3 border-dwd-primary hover:text-dwd-primary text-white text-center rounded-full text-lg md:text-xl"
+        className="bg-dwd-primary hover:bg-dwd-secondary2/40 border-2 p-3 border-dwd-primary hover:text-dwd-primary text-white text-center rounded-full text-lg md:text-xl"
         href={"/financeCommittee"}
       >
         Finance Committee
       </Link>
       <Link
-        className="bg-dwd-primary hover:bg-dwd-accent border p-3 border-dwd-primary hover:text-dwd-primary text-white text-center rounded-full text-lg md:text-xl"
+        className="bg-dwd-primary hover:bg-dwd-secondary2/40 border-2 p-3 border-dwd-primary hover:text-dwd-primary text-white text-center rounded-full text-lg md:text-xl"
         href={"/faculty"}
       >
         Faculty
       </Link>
       <Link
-        className="bg-dwd-primary hover:bg-dwd-accent border p-3 border-dwd-primary hover:text-dwd-primary text-white text-center rounded-full text-lg md:text-xl"
+        className="bg-dwd-primary hover:bg-dwd-secondary2/40 border-2 p-3 border-dwd-primary hover:text-dwd-primary text-white text-center rounded-full text-lg md:text-xl"
         href={"/staff"}
       >
         Staff
       </Link>
       <div className="hidden md:flex"></div>
       <Link
-        className="bg-dwd-primary hover:bg-dwd-accent border p-3 border-dwd-primary hover:text-dwd-primary text-white text-center rounded-full text-lg md:text-xl"
+        className="bg-dwd-primary hover:bg-dwd-secondary2/40 border-2 p-3 border-dwd-primary hover:text-dwd-primary text-white text-center rounded-full text-lg md:text-xl"
         href={"/buildingAndWorksCommittee"}
       >
         Building and Works Committee
