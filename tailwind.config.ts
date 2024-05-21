@@ -25,6 +25,7 @@ const config = {
         "dwd-secondary2": "#99ADC0",
         "customBlue": '#99ADBF',
         "cardText": "#041E3F",
+        "light-grey": "#eeeeee",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

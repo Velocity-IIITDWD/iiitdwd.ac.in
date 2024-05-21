@@ -4,7 +4,7 @@ import Card from '@/components/ui/Card';
 const TypeCard = () => {
   return (
     <>
-      <div className='flex flex-wrap justify-evenly gap-2'>
+      <div className='flex flex-wrap justify-evenly gap-2 mt-5 bg-light-grey'>
         {data.type.map((item, index) => (
           <Card
             key={index}
