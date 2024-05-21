@@ -64,9 +64,9 @@ export default function Home() {
     practically, preparing them for real-world scenarios.</div></div></div> },
     { content: <div className="slide-content relative p-2"><div className='absolute top-5 w-full text-center text-[#013365] font-bold Heading'>Institute Autonomy<div className='subheading mt-5 text-black font-normal'>An academic Senate with industry professionals ensures that the
     curriculum remains relevant and responsive to industry trends.</div></div></div> },
-    { content: <div className="slide-content relative p-2"><div className='absolute top-5 w-full text-center text-[#013365] font-bold Heading'>IT-Focused Curriculum<div className='subheading mt-5 text-black font-normal'>Specializing in IT-related fields from the start shows candidates'
+    { content: <div className="slide-content relative p-2"><div className='absolute top-5 w-full text-center text-[#013365] font-bold Heading'>IT-Focused Curriculum<div className='subheading mt-5 text-black font-normal'>Specializing in IT-related fields from the start shows candidates
     alignment with technology-driven industries, meeting modern job demands.</div></div></div> },
-    { content: <div className="slide-content relative p-2"><div className='absolute top-5 w-full text-center text-[#013365] font-bold Heading'>Practical Learning Opportunities<div className='subheading mt-5 text-black font-normal'>Involvement in projects and hackathons showcases candidates' practical
+    { content: <div className="slide-content relative p-2"><div className='absolute top-5 w-full text-center text-[#013365] font-bold Heading'>Practical Learning Opportunities<div className='subheading mt-5 text-black font-normal'>Involvement in projects and hackathons showcases candidates practical
     skills and problem-solving abilities.</div></div></div> },
     { content: <div className="slide-content relative p-2"><div className='absolute top-5 w-full text-center text-[#013365] font-bold Heading'>Outcome-Based Education Emphasis<div className='subheading mt-5 text-black font-normal'>Demonstrates that students are trained to meet specific objectives,
     indicating their skills are parallel to industry needs.</div></div></div> },
