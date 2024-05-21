@@ -23,7 +23,7 @@ const EventCarousel: React.FC = () => {
             });
         };
 
-        const intervalId = setInterval(goToNextSlide, 3000);
+        const intervalId = setInterval(goToNextSlide, 2000);
 
         return () => clearInterval(intervalId);
     }, [events, length]);
@@ -52,7 +52,7 @@ const EventCarousel: React.FC = () => {
         <div className="Events mt-4 w-full sm:w-1/2 lg:w-40% lg:mr-5%">
             <div className="block rounded-lg shadow-secondary-1 border border-gray-400">
                 <div className="border-b-2 border-neutral-100 px-6 py-3 font-bold text-3xl bg-customBlue text-cardText">
-          Events
+                    Events
                 </div>
                 <div className="relative">
                     <div
@@ -68,10 +68,12 @@ const EventCarousel: React.FC = () => {
                                     }`}
                                     key={index}
                                 >
-                                    <div className="flex justify-center h-128">
+                                    <div className="flex justify-center">
                                         <img
                                             src={event.url}
-                                            className="d-block w-2/3 h-full object-cover"
+                                            style={{ maxHeight: '100%', maxWidth: '100%', objectFit: 'contain' }}
+                                            className="d-block w-2/3"
+                                            id = "crousel-image-size"
                                             alt={event.name}
                                         />
                                     </div>

@@ -3,9 +3,19 @@
 @tailwind utilities;
 
 .carousel-item {
-    display: none;
-  }
-  
-  .carousel-item.active {
-    display: block;
-  }
+  display: none;
+}
+
+.carousel-item.active {
+  display: block;
+}
+
+#eventsCarousel {
+  height: 70vh;
+  /* Set your desired height here */
+}
+
+#crousel-image-size {
+  height: 60vh;
+  width: 100%;
+}
