@@ -12,7 +12,7 @@ const Button = (props: IProps) => {
             onClick={handleClick}
         >
             <span className="absolute top-1/2 rounded-[5%] inset-x-0 bottom-0 bg-purple blur-[25px]"></span>
-            <span className="relative">{children}</span>
+            <span className="relative hover:text-white">{children}</span>
         </button>
     );
 };

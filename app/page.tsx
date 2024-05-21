@@ -1,9 +1,9 @@
 "use client";
 import EventCarousel from "@/components/EventCrousel";
-import "./globals.css";
 import Announcements from "@/components/Announcements";
 import TypeCard from "@/components/TypeCards";
 import Departments from "@/components/Departments";
+import "./globals.css";
 
 export default function Home() {
   return (
