@@ -23,7 +23,7 @@ const EventCarousel: React.FC = () => {
             });
         };
 
-        const intervalId = setInterval(goToNextSlide, 2000);
+        const intervalId = setInterval(goToNextSlide, 5000);
 
         return () => clearInterval(intervalId);
     }, [events, length]);
