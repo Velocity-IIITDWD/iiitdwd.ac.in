@@ -154,7 +154,7 @@ function Header() {
 
               <Link href='/placements' className='hover:underline'>Placements</Link>
               <Link href='/tenders' className='hover:underline'>Tenders</Link>
-              <Link href='/jobs' className='hover:underline'>Jobs</Link>
+              <Link href='/careers' className='hover:underline'>Jobs</Link>
               <Link href='/contact' className='hover:underline'>Contact Us</Link>
             </div>
           </SheetContent>
@@ -305,7 +305,7 @@ function Header() {
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Link href='/jobs' legacyBehavior passHref>
+              <Link href='/careers' legacyBehavior passHref>
                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                   Jobs
                 </NavigationMenuLink>
