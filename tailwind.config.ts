@@ -18,6 +18,9 @@ const config = {
       },
     },
     extend: {
+        minHeight: {
+            '112': '28rem',
+          },
       colors: {
         "dwd-primary": "#041E3F",
         "dwd-accent": "#CCE70B",
