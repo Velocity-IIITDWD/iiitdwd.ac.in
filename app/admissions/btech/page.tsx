@@ -20,26 +20,10 @@ export default function Page() {
             <Link className='pl-2 text-dwd-primary w-fit block text-sm hover:underline underline-offset-2 after:-translate-y-1/4 after:absolute relative after:content-[url("/icons/linkIcon.svg")]' href=''>Undertaking to be signed by students and their parents&nbsp;</Link>
             <Link className='pl-2 text-dwd-primary w-fit block text-sm hover:underline underline-offset-2 after:-translate-y-1/4 after:absolute relative after:content-[url("/icons/linkIcon.svg")]' href=''>JEE Main cutoff ranks&nbsp;</Link>
             <Link className='pl-2 text-dwd-primary w-fit block text-sm hover:underline underline-offset-2 after:-translate-y-1/4 after:absolute relative after:content-[url("/icons/linkIcon.svg")]' href=''>Seat matrix&nbsp;</Link>
-            <div>
-                <p className='mt-2 text-lg font-bold text-dwd-primary'>Programs Offered</p>
-                <div className='pl-2 mt-2 flex flex-col gap-4'>
-                    <button className='block grow sm:w-fit rounded bg-dwd-primary text-white text-sm p-0'>
-                        <Link className='block py-2 px-4' href=''>
-                            <span>Computer Science and Engineering<br />(Institute Code 316 and Program Code 4110)</span>
-                        </Link>
-                    </button>
-                    <button className='block grow sm:w-fit rounded bg-dwd-primary text-white text-sm p-0'>
-                        <Link className='block py-2 px-4' href=''>
-                            <span>Electronics and Communication Engineering<br />(Institute Code 316 and Program Code 4114)</span>
-                        </Link>
-                    </button>
-                    <button className='block grow sm:w-fit rounded bg-dwd-primary text-white text-sm p-0'>
-                        <Link className='block py-2 px-4' href=''>
-                            <span>Data Science and Artificial Intelligence<br />(Institute Code 316 and Program Code 4181)</span>
-                        </Link>
-                    </button>
-                </div>
-            </div>
+            <p className='mt-2 text-lg font-bold text-dwd-primary'>Programs Offered</p>
+            <Link className='pl-2 text-dwd-primary w-fit block text-sm hover:underline underline-offset-2 after:-translate-y-1/4 after:absolute relative after:content-[url("/icons/linkIcon.svg")]' href=''>Computer Science and Engineering (Institute Code 316 and Program Code 4110)</Link>
+            <Link className='pl-2 text-dwd-primary w-fit block text-sm hover:underline underline-offset-2 after:-translate-y-1/4 after:absolute relative after:content-[url("/icons/linkIcon.svg")]' href=''>Electronics and Communication Engineering (Institute Code 316 and Program Code 4114)</Link>
+            <Link className='pl-2 text-dwd-primary w-fit block text-sm hover:underline underline-offset-2 after:-translate-y-1/4 after:absolute relative after:content-[url("/icons/linkIcon.svg")]' href=''>Data Science and Artificial Intelligence (Institute Code 316 and Program Code 4181)</Link>
             <p className='mt-2 text-lg font-bold text-dwd-primary'>IIIT Dharwad</p>
             <p className='pl-2'>
                 IIIT Dharwad is an Institute of National Importance by an act of Parliament (23 of 2017) set up in PPP mode between the Ministry of Education, Government of India, Government of Karnataka, and KEONICS. The Institute’s Former Chairperson Smt. Sudha Murty, Board, and Senate constitute highly eminent leaders from administration, academia, and industry. They are instrumental in steering the institute in the right direction. IIIT Dharwad is a self-sustaining PPP Institute where all running expenses including salaries are met by the tuition and other fees paid by students.
