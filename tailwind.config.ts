@@ -26,6 +26,8 @@ const config = {
         "dwd-accent": "#CCE70B",
         "dwd-secondary1": "#7A8B99",
         "dwd-secondary2": "#99ADC0",
+        "customBlue": '#99ADBF',
+        "cardText": "#041E3F",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
