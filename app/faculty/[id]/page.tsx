@@ -42,14 +42,17 @@ type ProfileProp = {
 //         </>
 //     );
 // }
+interface pp {
+  params: { id: string };
+  searchParams: {};
+}
 
 interface ProfileProps {
   idd: number;
 }
 
-const Profile = ({ params }) => {
-  const profileId = params.id;
-
+const Profile = (params: pp) => {
+  const profileId = params.params.id;
   const profile: ProfileProp | undefined = ProfileProps.find(
     (profileProp) => profileProp.id == profileId
   );
