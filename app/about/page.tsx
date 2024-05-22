@@ -10,42 +10,48 @@ import DirectorBriefProfile from '@/components/about/DirectorBriefProfile';
 import AboutIIIT from '@/components/about/AboutIIIT';
 import ShortCampusVideo from '@/components/about/ShortCampusVideo';
 
-const aboutPage = () => {
-    const about: About = aboutData;
+const AboutPage = () => {
+  const about: About = aboutData;
 
-    return (
-        <div className="w-full flex flex-col items-center">
-            <div className="w-full min-h-40 sm:min-h-72 lg:min-h-96 xl:min-h-112 relative">
-                <Image
-                    src={main_gate}
-                    alt={'Image of Main Gate'}
-                    fill={true}
-                    priority
-                    style={{
-                        objectFit: 'cover',
-                        objectPosition: '70% 47%',
-                    }}
-                />
-            </div>
+  return (
+    <div className="w-full flex flex-col items-center">
+      <div className="w-full min-h-40 sm:min-h-72 lg:min-h-96 xl:min-h-112 relative">
+        <Image
+          src={main_gate}
+          alt={'Image of Main Gate'}
+          fill={true}
+          priority
+          style={{
+            objectFit: 'cover',
+            objectPosition: '70% 47%',
+          }}
+        />
+      </div>
 
-            <AboutIIIT aboutText={about.aboutText} />
+      <a href='#introduction' />
+      <AboutIIIT aboutText={about.aboutText} />
 
-            <DirectorsMessage
-                heading={about.directorsMessage.heading}
-                directorName={about.directorName}
-                text={about.directorsMessage.text}
-            />
-            <DirectorBriefProfile
-                directorName={about.directorName}
-                briefProfile={about.briefProfile}
-            />
-            <OurFamily />
-            <OurVision vision={about.vision} />
-            <OurMission missions={about.missions} />
-            <CoreValues coreValues={about.coreValues} />
-            <ShortCampusVideo />
-        </div>
-    );
+      <a href='#directorsmessage' />
+      <DirectorsMessage
+        heading={about.directorsMessage.heading}
+        directorName={about.directorName}
+        text={about.directorsMessage.text}
+      />
+      <DirectorBriefProfile
+        directorName={about.directorName}
+        briefProfile={about.briefProfile}
+      />
+
+      <a href='#family' />
+      <OurFamily />
+
+      <a href='#vision' />
+      <OurVision vision={about.vision} />
+      <OurMission missions={about.missions} />
+      <CoreValues coreValues={about.coreValues} />
+      <ShortCampusVideo />
+    </div>
+  );
 };
 
-export default aboutPage;
+export default AboutPage;

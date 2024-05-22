@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import React, { FC, useState, useRef } from 'react';
 import { LinkedinIcon, Instagram, Mail } from 'lucide-react';
 import Image from 'next/image';

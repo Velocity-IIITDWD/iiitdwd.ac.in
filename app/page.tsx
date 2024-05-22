@@ -12,6 +12,35 @@ import {
   CarouselPrevious,
 } from '@/components/ui/carousel';
 import { useRef } from 'react';
+import Image from 'next/image';
+
+const images = [
+  {
+    url: '/HomePage/Main1.jpg',
+    caption: 'Admissions 2024',
+  },
+  {
+    url: '/HomePage/Main2.jpg',
+    caption: 'Admissions 2023',
+  },
+  {
+    url: '/HomePage/Main3.jpeg',
+    caption:
+      'Prof. S. R. Mahadeva Prasanna taking the charge as the Director of IIIT Dharwad',
+  },
+  {
+    url: '/HomePage/Main4.jpeg',
+    caption: 'Prof. S. R. Mahadeva Prasanna - Director of IIIT Dharwad',
+  },
+  {
+    url: '/HomePage/Main5.jpeg',
+    caption: 'Prof. S. R. Mahadeva Prasanna - Director of IIIT Dharwad',
+  },
+  {
+    url: '/HomePage/Main6.jpeg',
+    caption: 'Faculties and Director of IIIT Dharwad',
+  },
+];
 
 export default function Home() {
   const plugin = useRef(Autoplay({ delay: 5000, stopOnInteraction: false }));
@@ -27,12 +56,24 @@ export default function Home() {
         className="w-full relative overflow-hidden"
       >
         <CarouselContent>
-          {Array.from({ length: 10 }).map((_, index) => (
+          {Array.from({ length: images?.length }).map((_, index) => (
             <CarouselItem key={index} className="">
               <div className="p-1">
-                <Card>
-                  <CardContent className="flex bg-gray-200 h-[60vh] items-center justify-center p-6">
-                    <span className="text-3xl font-semibold">{index + 1}</span>
+                <Card className="w-full h-full overflow-hidden">
+                  <CardContent className="flex relative bg-gray-200 h-[60vh] items-center justify-center">
+                    <Image
+                      alt="main image"
+                      src={images[index]?.url}
+                      width={0}
+                      height={0}
+                      sizes="100%"
+                      style={{ width: '100%', height: 'auto' }}
+                      className="w-full relative object-cover object-center"
+                    />
+
+                    <div className="absolute bottom-2 left-1/2 -translate-x-1/2 bg-slate-200/10 backdrop-blur p-2 rounded text-white">
+                      {images[index]?.caption}
+                    </div>
                   </CardContent>
                 </Card>
               </div>
@@ -80,8 +121,18 @@ export default function Home() {
       <div className="my-20 w-full flex flex-col items-center md:px-24 sm:px-10 p-4 gap-6">
         <p className="text-dwd-primary text-2xl font-bold">About Us</p>
 
-        <div className="w-full flex flex-col lg:flex-row-reverse gap-6 px-3">
-          <div className="w-full flex-none aspect-square lg:w-1/3 bg-gray-300 rounded shadow"></div>
+        <div className="w-full flex items-center flex-col lg:flex-row-reverse gap-6 px-3">
+          <div className="w-full flex-none overflow-hidden aspect-square h-fit lg:w-1/3 bg-gray-300 rounded shadow">
+            <Image
+              alt="main image"
+              src="/HomePage/gate.jpg"
+              width={0}
+              height={0}
+              sizes="100%"
+              style={{ height: '100%', width: 'auto' }}
+              className="h-full object-cover object-center"
+            />
+          </div>
           <div className="flex flex-1 flex-col text-dwd-primary gap-3 lg:py-8">
             <p>
               IIIT Dharwad is an Institute of National Importance set up in 2015
@@ -167,7 +218,7 @@ export default function Home() {
               <CarouselItem key={index} className="">
                 <div className="p-1">
                   <Card>
-                    <CardContent className="flex justify-center flex-col-reverse md:flex-row items-center gap-6 p-6">
+                    <CardContent className="flex justify-center flex-col-reverse lg:flex-row items-center gap-6 p-6">
                       <div className="flex flex-1 flex-col h-full text-dwd-primary gap-6">
                         <p className="text-xl font-semibold mb-4">
                           Event Heading - Drone Sessions
@@ -211,28 +262,30 @@ export default function Home() {
         </Carousel>
       </div>
 
-      <div className="w-full py-10 px-6 flex flex-col text-dwd-primary md:flex-row items-center justify-evenly gap-10 md:px-44">
+      <div className="w-full py-10 px-6 flex flex-col text-dwd-primary lg:flex-row items-center justify-evenly gap-10 md:px-24 lg:px-28 xl:px-44">
         <div className="grid grid-cols-2 w-fit grid-rows-2 gap-3">
-          <div className="rounded-md bg-gray-200 aspect-square w-[150px] lg:w-[200px] transition duration-300 shadow hover:bg-dwd-primary hover:text-white cursor-pointer flex flex-col items-center justify-center">
+          <div className="rounded-md bg-gray-200 aspect-square w-[150px] lg:w-[175px] xl:w-[200px] transition duration-300 shadow hover:bg-dwd-primary hover:text-white cursor-pointer flex flex-col items-center justify-center">
             <p className="text-3xl font-bold">1000+</p>
             <p className="font-semibold">Alumini</p>
           </div>
-          <div className="rounded-md bg-gray-200 aspect-square w-[150px] lg:w-[200px] transition duration-300 shadow hover:bg-dwd-primary hover:text-white cursor-pointer flex flex-col items-center justify-center">
+          <div className="rounded-md bg-gray-200 aspect-square w-[150px] lg:w-[175px] xl:w-[200px] transition duration-300 shadow hover:bg-dwd-primary hover:text-white cursor-pointer flex flex-col items-center justify-center">
             <p className="text-3xl font-bold">100+</p>
             <p className="font-semibold">Faculty</p>
           </div>
-          <div className="rounded-md bg-gray-200 aspect-square w-[150px] lg:w-[200px] transition duration-300 shadow hover:bg-dwd-primary hover:text-white cursor-pointer flex flex-col items-center justify-center">
+          <div className="rounded-md bg-gray-200 aspect-square w-[150px] lg:w-[175px] xl:w-[200px] transition duration-300 shadow hover:bg-dwd-primary hover:text-white cursor-pointer flex flex-col items-center justify-center">
             <p className="text-3xl font-bold">150+</p>
             <p className="font-semibold">Publications</p>
           </div>
-          <div className="rounded-md bg-gray-200 aspect-square w-[150px] lg:w-[200px] transition duration-300 shadow hover:bg-dwd-primary hover:text-white cursor-pointer flex flex-col items-center justify-center">
+          <div className="rounded-md bg-gray-200 aspect-square w-[150px] lg:w-[175px] xl:w-[200px] transition duration-300 shadow hover:bg-dwd-primary hover:text-white cursor-pointer flex flex-col items-center justify-center">
             <p className="text-3xl font-bold">750+</p>
             <p className="font-semibold">Placements</p>
           </div>
         </div>
         <div className="w-full max-w-[400px] rounded-md bg-gray-200 gap-3 flex flex-col p-3">
-          <p className="text-xl font-semibold mb-4">linkedin</p>
-          <div className="bg-gray-300 aspect-[2/3]"></div>
+          <a href="https://twitter.com/dharwad_iiit?ref_src=twsrc%5Etfw">
+            <p className="text-xl font-semibold mb-4">twitter</p>
+            <div className="bg-gray-300 aspect-[4/5]"></div>
+          </a>
         </div>
       </div>
 

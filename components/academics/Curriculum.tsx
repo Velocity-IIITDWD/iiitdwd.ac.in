@@ -1,6 +1,11 @@
 /* eslint-disable indent */
 'use client';
-import { CSEStructure, DSAIStrcutre, creditStructure } from '@/data/academics';
+import {
+  CSEStructure,
+  DSAIStrcutre,
+  ECEStructure,
+  creditStructure,
+} from '@/data/academics';
 import React, { useState } from 'react';
 import {
   Table,
@@ -40,6 +45,8 @@ function createTable(tabs: number, type: number): React.ReactElement[] {
     Branch = CSEStructure;
   } else if (type === 1) {
     Branch = DSAIStrcutre;
+  } else {
+    Branch = ECEStructure;
   }
   const courses = Branch[tabs - 1]?.map(
     (item: creditStructure, key: number) => (

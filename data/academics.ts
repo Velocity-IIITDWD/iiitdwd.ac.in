@@ -10,6 +10,29 @@ export interface courseStrcuture {
   credits: string;
 }
 
+export const ECEDetails: courseStrcuture[] = [
+  {
+    course: 'Core',
+    credits: '30%',
+  },
+  {
+    course: 'Electives',
+    credits: '25%',
+  },
+  {
+    course: 'Mathematics, Science and Humanities, Engineering',
+    credits: '25%',
+  },
+  {
+    course: 'Soft skills',
+    credits: '10%',
+  },
+  {
+    course: 'Projects',
+    credits: '10%',
+  },
+];
+
 export const CSEDetails: courseStrcuture[] = [
   {
     course: 'Core',
@@ -569,6 +592,272 @@ export const DSAIStrcutre: creditStructure[][] = [
       code: 'CS499',
       title: 'Major Project',
       credit: '0-0-0-32-8',
+      preReq: null,
+    },
+  ],
+];
+
+export const ECEStructure: creditStructure[][] = [
+  [
+    {
+      code: 'MA101',
+      title: 'Calculus',
+      credit: '3-1-0-0-4', // Assuming consistent credit format
+      preReq: null,
+    },
+    {
+      code: 'EC102',
+      title: 'Digital Design',
+      credit: '3-0-2-0-4', // Assuming consistent credit format
+      preReq: null,
+    },
+    {
+      code: 'CS103',
+      title: 'Programming and Data Structures',
+      credit: '3-1-2-0-5', // Assuming consistent credit format
+      preReq: null,
+    },
+    {
+      code: 'PH104',
+      title: 'Physics for ECE',
+      credit: '3-1-0-0-4', // Assuming consistent credit format
+      preReq: null,
+    },
+    {
+      code: 'EG102',
+      title: 'Basic Circuit Theory',
+      credit: '3-1-0-0-4', // Assuming consistent credit format
+      preReq: null,
+    },
+  ],
+  [
+    {
+      code: 'MA102',
+      title: 'Differential Equations',
+      credit: '3-1-0-0-4', // Assuming consistent credit format
+      preReq: null,
+    },
+    {
+      code: 'EC203',
+      title: 'Analog Electronics',
+      credit: '3-0-2-0-4', // Assuming consistent credit format
+      preReq: null,
+    },
+    {
+      code: 'EC208',
+      title: 'Introduction to Embedded Systems',
+      credit: '3-0-2-0-4', // Assuming consistent credit format
+      preReq: 'Digital Design-EC102', // Note the hyphen
+    },
+    {
+      code: 'EG101',
+      title: 'Engineering 101',
+      credit: '2-1-2-0-4', // Assuming consistent credit format
+      preReq: null,
+    },
+    {
+      code: 'HS103',
+      title: 'Language and Communication',
+      credit: '2-0-2-0-3', // Assuming consistent credit format
+      preReq: null,
+    },
+  ],
+  [
+    {
+      code: 'MA202',
+      title: 'Linear Algebra',
+      credit: '3-1-0-0-4', // Assuming consistent credit format
+      preReq: null,
+    },
+    {
+      code: 'EC207',
+      title: 'Electromagnetic Theory',
+      credit: '3-1-0-0-4', // Assuming consistent credit format
+      preReq: 'Calculus-MA101', // Note the hyphen
+    },
+    {
+      code: 'EC206',
+      title: 'Linear Integrated Circuits',
+      credit: '3-0-2-0-4', // Assuming consistent credit format
+      preReq: null,
+    },
+    {
+      code: 'EC201',
+      title: 'Signals and Systems',
+      credit: '3-1-0-0-4', // Assuming consistent credit format
+      preReq: 'Differential Equations-MA102', // Note the hyphen
+    },
+    {
+      code: 'EC202',
+      title: 'Microprocessors and Micro-controllers',
+      credit: '3-0-2-0-4', // Assuming consistent credit format
+      preReq:
+        'Programming and Data Structures-CS103, Introduction to Embedded Systems-EC208', // Note the hyphens and comma
+    },
+    {
+      code: 'HS203',
+      title: 'Professional Communication',
+      credit: '2-1-0-0-3', // Assuming consistent credit format
+      preReq: null,
+    },
+  ],
+  [
+    {
+      code: 'MA208',
+      title: 'Probability and Random Processes',
+      credit: '3-1-0-0-4', // Assuming consistent credit format
+      preReq: null,
+    },
+    {
+      code: 'EC205',
+      title: 'Control Systems',
+      credit: '3-0-2-0-4', // Assuming consistent credit format
+      preReq: 'Differential Equations-MA102', // Note the hyphen
+    },
+    {
+      code: 'EC310',
+      title: 'Embedded Systems Design',
+      credit: '3-1-0-0-4', // Assuming consistent credit format
+      preReq: 'Microprocessors and Microcontrollers-EC202', // Note the hyphen
+    },
+    {
+      code: 'EC204',
+      title: 'Analog and Digital Communication',
+      credit: '3-1-2-0-5', // Assuming consistent credit format
+      preReq: null,
+    },
+    {
+      code: 'HS204',
+      title: 'Economics',
+      credit: '3-1-0-0-4', // Assuming consistent credit format
+      preReq: null,
+    },
+    {
+      code: 'HS205',
+      title: 'Ethics',
+      credit: '3-0-0-0-3', // Assuming consistent credit format
+      preReq: null,
+    },
+  ],
+  [
+    {
+      code: 'EC306',
+      title: 'Digital Signal Processing',
+      credit: '3-0-2-0-4', // Assuming consistent credit format
+      preReq: 'Signals and Systems-EC201', // Note the hyphen
+    },
+    {
+      code: 'EC301',
+      title: 'Introduction to VLSI Design',
+      credit: '3-1-0-0-4', // Assuming consistent credit format
+      preReq: 'Digital Design-EC102, Analog Electronics-EC203', // Note the hyphens and comma
+    },
+    {
+      code: null,
+      title: 'Psychology/Sociology/Life Skills Basket',
+      credit: '3-0-0-0-3',
+      preReq: null,
+    },
+    {
+      code: null,
+      title: 'Elective 1',
+      credit: '4-0-0-0-4',
+      preReq: null,
+    },
+    {
+      code: null,
+      title: 'Elective 2',
+      credit: '4-0-0-0-4',
+      preReq: null,
+    },
+    {
+      code: null,
+      title: 'Elective 3',
+      credit: '4-0-0-0-4',
+      preReq: null,
+    },
+  ],
+  [
+    {
+      code: 'EC307',
+      title: 'Wireless Communication',
+      credit: '3-0-2-0-4', // Assuming consistent credit format
+      preReq: 'Analog and Digital Communication-EC204', // Note the hyphen
+    },
+    {
+      code: null,
+      title: 'Elective 4',
+      credit: '4-0-0-0-4',
+      preReq: null,
+    },
+    {
+      code: null,
+      title: 'Elective 5',
+      credit: '4-0-0-0-4',
+      preReq: null,
+    },
+    {
+      code: null,
+      title: 'Elective 6',
+      credit: '4-0-0-0-4',
+      preReq: null,
+    },
+    {
+      code: null,
+      title: 'Elective 7',
+      credit: '4-0-0-0-4',
+      preReq: null,
+    },
+    {
+      code: 'EC399',
+      title: 'Mini Project I',
+      credit: '0-0-0-8-2',
+      preReq: null,
+    },
+  ],
+  [
+    {
+      code: null,
+      title: 'Elective 8',
+      credit: '4-0-0-0-4',
+      preReq: null,
+    },
+    {
+      code: null,
+      title: 'Elective 9',
+      credit: '4-0-0-0-4',
+      preReq: null,
+    },
+    {
+      code: null,
+      title: 'Elective 10',
+      credit: '4-0-0-0-4',
+      preReq: null,
+    },
+    {
+      code: null,
+      title: 'Elective 11',
+      credit: '4-0-0-0-4',
+      preReq: null,
+    },
+    {
+      code: 'EC498',
+      title: 'Mini Project II',
+      credit: '0-0-0-8-2',
+      preReq: null,
+    },
+    {
+      code: 'HS101',
+      title: 'Environmental Studies*',
+      credit: '0-0-0-8-2',
+      preReq: null,
+    },
+  ],
+  [
+    {
+      code: 'EC499',
+      title: 'Major Project',
+      credit: '0-0-0-32-8', // Assuming consistent credit format
       preReq: null,
     },
   ],
