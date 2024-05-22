@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { ChevronDownIcon, HomeIcon, MenuIcon } from 'lucide-react';
+import { ChevronDownIcon, MenuIcon } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
@@ -98,10 +98,10 @@ function Header() {
                   <ChevronDownIcon size='1rem' className='rotate-0 group-open:rotate-180 transition-transform duration-300' />
                 </summary>
                 <div className='mt-2 ml-8 flex flex-col gap-2'>
-                  <Link className='hover:underline' href='/about/introduction' key='introduction'>Introduction</Link>
-                  <Link className='hover:underline' href='/about/vision' key='vision'>Vision and Message</Link>
-                  <Link className='hover:underline' href='/about/message' key='message'>Director&apos;s Message</Link>
-                  <Link className='hover:underline' href='/about/organization' key='organization'>Organization</Link>
+                  <Link className='hover:underline' href='/about#introduction' key='introduction'>Introduction</Link>
+                  <Link className='hover:underline' href='/about#directorsmessage' key='message'>Director&apos;s Message</Link>
+                  <Link className='hover:underline' href='/about#family' key='organization'>Our Family</Link>
+                  <Link className='hover:underline' href='/about#vision' key='vision'>Vision</Link>
                 </div>
               </details>
 
@@ -112,7 +112,7 @@ function Header() {
                 </summary>
                 <div className='mt-2 ml-8 flex flex-col gap-2'>
                   <Link className='hover:underline' href='/campus/facilities'>Facilities</Link>
-                  <Link className='hover:underline' href='/campus/clubs'>Clubs</Link>
+                  <Link className='hover:underline' href='/clubs'>Clubs</Link>
                   <Link className='hover:underline' href='/campus/events'>Events</Link>
                   <Link className='hover:underline' href='/campus/magazine'>Magazine</Link>
                 </div>
@@ -135,7 +135,7 @@ function Header() {
                   <ChevronDownIcon size='1rem' className='rotate-0 group-open:rotate-180 transition-transform duration-300' />
                 </summary>
                 <div className='mt-2 ml-8 flex flex-col gap-2'>
-                  <Link className='hover:underline' href='/academics/faculty'>Faculty</Link>
+                  <Link className='hover:underline' href='/faculty'>Faculty</Link>
                   <Link className='hover:underline' href='/academics/research'>Research</Link>
                   <details className='group/sub'>
                     <summary className='flex items-center justify-between focus:outline-none'>
@@ -174,24 +174,24 @@ function Header() {
               <NavigationMenuTrigger className='submenu-trigger'>About</NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul className='flex flex-col gap-4 w-[250px] p-4 text-sm'>
-                  <NavigationMenuLink href='/campus/facilities'>
+                  <NavigationMenuLink href='/about#introduction'>
                     <div className='hover:bg-accent p-2 rounded-md w-full'>
                       Introduction
                     </div>
                   </NavigationMenuLink>
-                  <NavigationMenuLink href='/campus/clubs'>
-                    <div className='hover:bg-accent p-2 rounded-md w-full'>
-                      Vision and Message
-                    </div>
-                  </NavigationMenuLink>
-                  <NavigationMenuLink href='/campus/events'>
+                  <NavigationMenuLink href='/about#directorsmessage'>
                     <div className='hover:bg-accent p-2 rounded-md w-full'>
                       Director&apos;s Message
                     </div>
                   </NavigationMenuLink>
-                  <NavigationMenuLink href='/campus/magazine'>
+                  <NavigationMenuLink href='/about#family'>
                     <div className='hover:bg-accent p-2 rounded-md w-full'>
-                      Organization
+                      Our Family
+                    </div>
+                  </NavigationMenuLink>
+                  <NavigationMenuLink href='/about#vision'>
+                    <div className='hover:bg-accent p-2 rounded-md w-full'>
+                      Vision
                     </div>
                   </NavigationMenuLink>
                 </ul>
@@ -206,7 +206,7 @@ function Header() {
                       Facilities
                     </div>
                   </NavigationMenuLink>
-                  <NavigationMenuLink href='/campus/clubs'>
+                  <NavigationMenuLink href='/clubs'>
                     <div className='hover:bg-accent p-2 rounded-md w-full'>
                       Clubs
                     </div>
@@ -249,7 +249,7 @@ function Header() {
                     <div className='hover:bg-accent p-2 rounded-md w-full invisible'>
                       abcd
                     </div>
-                    <NavigationMenuLink href='/academics/faculty'>
+                    <NavigationMenuLink href='/faculty'>
                       <div className='hover:bg-accent p-2 rounded-md w-full'>
                         Faculty
                       </div>

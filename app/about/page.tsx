@@ -10,7 +10,7 @@ import DirectorBriefProfile from '@/components/about/DirectorBriefProfile';
 import AboutIIIT from '@/components/about/AboutIIIT';
 import ShortCampusVideo from '@/components/about/ShortCampusVideo';
 
-const aboutPage = () => {
+const AboutPage = () => {
   const about: About = aboutData;
 
   return (
@@ -28,8 +28,10 @@ const aboutPage = () => {
         />
       </div>
 
+      <a href='#introduction' />
       <AboutIIIT aboutText={about.aboutText} />
 
+      <a href='#directorsmessage' />
       <DirectorsMessage
         heading={about.directorsMessage.heading}
         directorName={about.directorName}
@@ -39,7 +41,11 @@ const aboutPage = () => {
         directorName={about.directorName}
         briefProfile={about.briefProfile}
       />
+
+      <a href='#family' />
       <OurFamily />
+
+      <a href='#vision' />
       <OurVision vision={about.vision} />
       <OurMission missions={about.missions} />
       <CoreValues coreValues={about.coreValues} />
@@ -48,4 +54,4 @@ const aboutPage = () => {
   );
 };
 
-export default aboutPage;
+export default AboutPage;
