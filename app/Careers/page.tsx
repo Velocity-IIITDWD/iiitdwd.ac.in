@@ -10,7 +10,7 @@ const Page = () => {
     const [searchquery, setsearchquery] = useState('');
     const [search, setsearch] = useState('');
 
-    const handledropdown = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const handledropdown = (event: React.ChangeEvent<HTMLInputElement>|void) => {
         setselectedcategory(event.target.value);
         console.log(event.target.value);
         console.log(search);
