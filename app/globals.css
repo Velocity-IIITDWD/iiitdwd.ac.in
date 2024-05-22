@@ -170,14 +170,16 @@ transition-duration: 0.2s;
   border-radius: 50%;
   margin: 0 0.25rem;
   cursor: pointer;
+  margin-top: .9rem; /* Adjusted margin */
 }
 
 .embla__dot--selected {
   background-color: #013365;
   width: 0.8rem;
   height: 0.8rem;
-
+  margin-top: .75rem; /* Keep the same margin as non-selected dots */
 }
+
 
 @layer utilities {
   .text-balance {
