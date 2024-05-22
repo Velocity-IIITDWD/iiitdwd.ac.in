@@ -2,6 +2,241 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    :root {
+        --background: 0 0% 100%;
+        --foreground: 0 0% 3.9%;
+
+        --card: 0 0% 100%;
+        --card-foreground: 0 0% 3.9%;
+
+        --popover: 0 0% 100%;
+        --popover-foreground: 0 0% 3.9%;
+
+        --primary: 0 0% 9%;
+        --primary-foreground: 0 0% 98%;
+
+        --secondary: 0 0% 96.1%;
+        --secondary-foreground: 0 0% 9%;
+
+        --muted: 0 0% 96.1%;
+        --muted-foreground: 0 0% 45.1%;
+
+        --accent: 0 0% 96.1%;
+        --accent-foreground: 0 0% 9%;
+
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 0 0% 98%;
+
+        --border: 0 0% 89.8%;
+        --input: 0 0% 89.8%;
+        --ring: 0 0% 3.9%;
+
+        --radius: 0.5rem;
+    }
+
+    * {
+        @apply border-border;
+    }
+
+    html {
+        @apply min-h-screen w-full overflow-y-auto
+    }
+
+    body {
+        @apply min-h-screen h-full w-full flex flex-col bg-background text-foreground;
+    }
+
+    details > summary {
+        list-style: none;
+    }
+
+    details > summary::-webkit-details-marker {
+        display: none;
+    }
+}
+
+@layer utilities {
+    @keyframes scroll {
+        from {
+            transform: translateX(100%);
+        }
+
+        to {
+            transform: translateX(-100%);
+        }
+    }
+
+    .animate-marquee {
+        animation: scroll 10s linear infinite;
+    }
+}
+
+.break-last-words {
+  white-space: nowrap;
+}
+
+.container{
+  width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.procedure:hover
+{
+scale: 1.4;
+transition-duration: 0.2s;
+}
 
 
+.embla {
+  position: relative;
+  margin-left: 9%;
+  margin-right: 9%;
+}
+
+.embla__viewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+.embla__container {
+  display: flex;
+}
+
+.embla__slide {
+  flex: 0 0 33.3333%;
+  position: relative;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.slide-content {
+  background-color: #eee;
+  height: 200px;
+  width:350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  padding: 15px;
+}
+
+.embla__button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 25px;
+  color: #013365;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  padding: 0.5rem;
+  
+}
+.embla__button:hover
+{
+  transition-duration: 0.2s;
+  scale:1.1
+}
+.embla__button--prev {
+  left: -60px;
+
+
+}
+
+.embla__button--next {
+  right: -60px;
+}
+
+.embla__button__svg {
+  width: 2rem;
+  height: 2rem;
+  
+}
+
+.embla__dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.embla__dot {
+  background-color: #50A5CA;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  margin: 0 0.25rem;
+  cursor: pointer;
+  margin-top: .9rem; /* Adjusted margin */
+}
+
+.embla__dot--selected {
+  background-color: #013365;
+  width: 0.8rem;
+  height: 0.8rem;
+  margin-top: .75rem; /* Keep the same margin as non-selected dots */
+}
+
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+@media (max-width: 767px) {
+  .bar {
+    width: 50%; 
+  }
+  .procedure:hover
+{
+scale: 1;
+transition-duration: 0.2s;
+}
+  .container{
+    margin: 0;
+    padding: 0;
+    width:100%
+  }
+  .shortbox{
+  
+    margin-left: 5%;
+  }
+  .uj
+  {
+    margin-left: 25%;
+  }
+.whatsapp
+{
+  margin-left: 5%;
+  margin-right: 2%;
+}
+.buttons{
+  flex-direction: column;
+  white-space: nowrap;
+  gap: 25px;
+  margin-left:12%;
+width:220%;
+  
+}
+.embla__button--next
+{
+right:-40px;
+}
+.embla__button--prev
+{
+left:-40px;
+}
+.embla{
+margin-left: 9.5%;
+margin-right: 9.5%;
+}
+.slide-content
+{
+  width: 330px;
+}
+
+}
 
