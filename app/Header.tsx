@@ -9,50 +9,50 @@ import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuL
 
 import { announcements } from '@/data/announcements';
 
-type HeaderDropdownProps = {
-    trigger: React.ReactNode
-    subItems: React.ReactNode[],
-    key?: string
-};
+// type HeaderDropdownProps = {
+//     trigger: React.ReactNode
+//     subItems: React.ReactNode[],
+//     key?: string
+// };
 
-function HeaderDropdown({ trigger, subItems, key }: HeaderDropdownProps) {
-    return (
-        <div className='relative flex items-center group cursor-pointer' key={key}>
-            {trigger} <ChevronDownIcon className='rotate-0 transition-transform duration-500 group-hover:rotate-180' size='1rem' />
+// function HeaderDropdown({ trigger, subItems, key }: HeaderDropdownProps) {
+//     return (
+//         <div className='relative flex items-center group cursor-pointer' key={key}>
+//             {trigger} <ChevronDownIcon className='rotate-0 transition-transform duration-500 group-hover:rotate-180' size='1rem' />
 
-            <div className='invisible group-hover:visible group-hover:opacity-100 transition-opacity duration-200 absolute top-full z-10'>
-                <div className='invisible h-2'></div>
-                <div
-                    className='w-max flex flex-col gap-4 border border-dwd-secondary1 opacity-0 
-                    group-hover:opacity-100 transition-opacity duration-200 bg-white p-4'
-                >
-                    {subItems}
-                </div>
-            </div>
-        </div>
-    );
-}
+//             <div className='invisible group-hover:visible group-hover:opacity-100 transition-opacity duration-200 absolute top-full z-10'>
+//                 <div className='invisible h-2'></div>
+//                 <div
+//                     className='w-max flex flex-col gap-4 border border-dwd-secondary1 opacity-0 
+//                     group-hover:opacity-100 transition-opacity duration-200 bg-white p-4'
+//                 >
+//                     {subItems}
+//                 </div>
+//             </div>
+//         </div>
+//     );
+// }
 
-function HeaderDropdownRight({ trigger, subItems, key }: HeaderDropdownProps) {
-    return (
-        <div className='relative flex items-center group/right cursor-pointer' key={key}>
-            {trigger} <ChevronDownIcon className='-rotate-90 transition-transform duration-500' size='1rem' />
+// function HeaderDropdownRight({ trigger, subItems, key }: HeaderDropdownProps) {
+//     return (
+//         <div className='relative flex items-center group/right cursor-pointer' key={key}>
+//             {trigger} <ChevronDownIcon className='-rotate-90 transition-transform duration-500' size='1rem' />
 
-            <div
-                className='flex invisible group-hover/right:visible group-hover/right:opacity-100 
-                transition-opacity duration-200 absolute left-[calc(100%+1rem)] -top-1/2 z-10 -ml-6 -translate-y-[0.3rem]'
-            >
-                <div className='invisible w-6'></div>
-                <div
-                    className='w-max flex flex-col gap-4 border border-dwd-secondary1 opacity-0 
-                    group-hover/right:opacity-100 transition-opacity duration-200 bg-white p-4'
-                >
-                    {subItems}
-                </div>
-            </div>
-        </div>
-    );
-}
+//             <div
+//                 className='flex invisible group-hover/right:visible group-hover/right:opacity-100 
+//                 transition-opacity duration-200 absolute left-[calc(100%+1rem)] -top-1/2 z-10 -ml-6 -translate-y-[0.3rem]'
+//             >
+//                 <div className='invisible w-6'></div>
+//                 <div
+//                     className='w-max flex flex-col gap-4 border border-dwd-secondary1 opacity-0 
+//                     group-hover/right:opacity-100 transition-opacity duration-200 bg-white p-4'
+//                 >
+//                     {subItems}
+//                 </div>
+//             </div>
+//         </div>
+//     );
+// }
 
 function onNavChange() {
     setTimeout(() => {
@@ -147,14 +147,14 @@ function Header() {
                 </div>
                 <div className='hidden lg:block w-1/5'></div>
             </div>
-            <div className='flex flex-row lg:flex-row items-center justify-start border border-dwd-secondary1 relative h-16 lg:h-24'>
+            <div className='flex flex-row lg:flex-row items-center justify-start border-b border-dwd-secondary1 relative h-16 lg:h-24'>
                 {/* Big screen image */}
                 <Image
-                    src='/brand/logo-medium-light.png'
+                    src='/brand/logo-full-light.png'
                     width={0}
                     height={0}
                     sizes='100%'
-                    style={{ height: '100%', width: 'auto' }}
+                    style={{ height: '90%', width: 'auto' }}
                     alt='IIIT Dharwad Logo'
                     className='block lg:hidden xl:block mr-auto'
                     priority
