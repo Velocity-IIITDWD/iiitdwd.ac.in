@@ -282,8 +282,10 @@ export default function Home() {
           </div>
         </div>
         <div className="w-full max-w-[400px] rounded-md bg-gray-200 gap-3 flex flex-col p-3">
-          <p className="text-xl font-semibold mb-4">linkedin</p>
-          <div className="bg-gray-300 aspect-[2/3]"></div>
+          <a href="https://twitter.com/dharwad_iiit?ref_src=twsrc%5Etfw">
+            <p className="text-xl font-semibold mb-4">twitter</p>
+            <div className="bg-gray-300 aspect-[4/5]"></div>
+          </a>
         </div>
       </div>
 
