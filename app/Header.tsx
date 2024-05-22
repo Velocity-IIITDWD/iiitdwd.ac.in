@@ -99,7 +99,7 @@ function Header() {
                 </summary>
                 <div className='mt-2 ml-8 flex flex-col gap-2'>
                   <Link className='hover:underline' href='/about#introduction' key='introduction'>Introduction</Link>
-                  <Link className='hover:underline' href='/about#directorsmessage' key='message'>Director&apos;s Message</Link>
+                  <Link className='hover:underline' href='/about#directors-message' key='message'>Director&apos;s Message</Link>
                   <Link className='hover:underline' href='/about#family' key='organization'>Our Family</Link>
                   <Link className='hover:underline' href='/about#vision' key='vision'>Vision</Link>
                 </div>
@@ -179,7 +179,7 @@ function Header() {
                       Introduction
                     </div>
                   </NavigationMenuLink>
-                  <NavigationMenuLink href='/about#directorsmessage'>
+                  <NavigationMenuLink href='/about#directors-message'>
                     <div className='hover:bg-accent p-2 rounded-md w-full'>
                       Director&apos;s Message
                     </div>
