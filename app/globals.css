@@ -186,7 +186,7 @@ transition-duration: 0.2s;
 }
 @media (max-width: 767px) {
   .bar {
-    width: 50%; /* Set width to 100% for full width */
+    width: 50%; 
   }
   .procedure:hover
 {
@@ -235,10 +235,6 @@ margin-right: 9.5%;
 {
   width: 330px;
 }
-/*.buttonss
-{
-  white-space: nowrap;
-  margin-left: 0;
-}*/
+
 }
 
