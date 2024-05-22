@@ -123,13 +123,13 @@ const page = () => {
 
           <div className="hidden lg:block Header bg-dwd-primary text-white border  border-black">
 
-            <div className="flex justify-between items-center ">
+            <div className="flex justify-between items-center  ">
               <div className="title text-3xl w-1/2 text-center">Title and Description</div>
 
               <div className="w-1/2 flex justify-around gap-5 ">
                 <div className="date text-3xl">Last date to receive applications</div>
                 <div className="gi text-3xl">General Instruction</div>
-                <div className="app text-3xl pr-2">Application Form</div>
+                <div className="app text-3xl pr-2 ">Application Form</div>
               </div>
             </div>
 
