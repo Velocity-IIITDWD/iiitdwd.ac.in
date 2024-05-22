@@ -54,7 +54,8 @@ interface ListProps {
     </li>);
     return (
       <>
-      <div className="flex flex-row justify-center py-12 m-2 ml-4 pl-14">
+      <div className="flex flex-col justify-center py-12 m-2 ml-4 gap-4 ">
+            <div className='flex justify-center font-bold text-3xl text-dwd-primary bg-dwd-secondary2 py-6 rounded'>Faculty</div>
             <ul className='bg-background flex flex-wrap  mx-12 gap-8 '>{f_array}</ul>
         </div>
       </>
