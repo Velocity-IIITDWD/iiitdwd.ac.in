@@ -3,7 +3,7 @@ import React from 'react';
 
 import ReadMoreLess from './readmore';
 
-
+import Image from 'next/image';
 
 
 
@@ -44,7 +44,7 @@ const Card = (props: propstype) => {
                     <div className="btns flex w-1/2 gap-4 justify-between items-center">
                         <div className="lastdate w-1/3 text-center text-2xl text-red-600 ">{props.date} </div>
                         <button className=' border border-dwd-primary rounded-xl p-3'><Link href={props.GI}>
-                            <img src="/pdf.png" className='w-5 h-5' alt="" />
+                            <Image src="/pdf.png"  width={20} height={20} alt="" />
 
 
                         </Link></button>
