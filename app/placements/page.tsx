@@ -117,7 +117,7 @@ export default function Home() {
 </div>
 
       
-<div className='mt-20 cursor-grab'>
+<div className='mt-20  cursor-grab'>
       
       <EmblaCarousel slides={slides} />
     </div>

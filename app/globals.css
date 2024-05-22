@@ -92,8 +92,8 @@ transition-duration: 0.2s;
 
 .embla {
   position: relative;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 9%;
+  margin-right: 9%;
 }
 
 .embla__viewport {
@@ -142,13 +142,13 @@ transition-duration: 0.2s;
   scale:1.1
 }
 .embla__button--prev {
-  left: 10px;
+  left: -60px;
 
 
 }
 
 .embla__button--next {
-  right: 10px;
+  right: -60px;
 }
 
 .embla__button__svg {
@@ -218,6 +218,22 @@ transition-duration: 0.2s;
   margin-left:12%;
 width:220%;
   
+}
+.embla__button--next
+{
+right:-40px;
+}
+.embla__button--prev
+{
+left:-40px;
+}
+.embla{
+margin-left: 9.5%;
+margin-right: 9.5%;
+}
+.slide-content
+{
+  width: 330px;
 }
 /*.buttonss
 {
