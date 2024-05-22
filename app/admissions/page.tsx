@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function Page() {
     return (
-        <div className="p-4 max-w-5xl">
+        <div className="p-4 w-fit max-w-5xl">
             <p className="text-dwd-primary text-xl font-bold text-center mb-2">Admissions 2024</p>
             <div className="grid md:grid-cols-5 gap-2 ">
                 <Link href='/admissions/btech' className="group duration-100 hover:text-white p-2 md:col-span-3 rounded border-2 border-dwd-primary hover:bg-dwd-primary">
