@@ -58,7 +58,7 @@ export default function page() {
 
         <div className="md:w-1/2 max-w-[600px]">
           <Table className="text-slate-900 overflow-hidden rounded">
-            <TableCaption>CSE Course Details.</TableCaption>
+            <TableCaption>DSAI Course Details.</TableCaption>
             <TableHeader className="bg-[#ffa500]">
               <TableRow>
                 <TableHead className="border border-slate-700 w-[60px]"></TableHead>

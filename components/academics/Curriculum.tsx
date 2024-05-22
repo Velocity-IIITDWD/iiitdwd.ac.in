@@ -24,7 +24,7 @@ function createTabs(
         className={`${
           tabs === i &&
           'bg-dwd-secondary2 border border-slate-900 border-b-0 border-b-dwd-secondary2'
-        } text-dwd-primary min-w-[160px] flex-1 cursor-pointer border-b border-b-slate-700 justify-center flex rounded-t-lg py-3`}
+        } text-dwd-primary min-w-[100px] flex-1 cursor-pointer border-b border-b-slate-700 justify-center flex rounded-t-lg py-3`}
         onClick={() => setTab(i)}
       >
         Semester {i}
@@ -51,7 +51,7 @@ function createTable(tabs: number, type: number): React.ReactElement[] {
           {item?.title}
         </TableCell>
         <TableCell className="border-r border-slate-700">
-          {item?.credits}
+          {item?.credit}
         </TableCell>
         <TableCell>{item?.preReq}</TableCell>
       </TableRow>
