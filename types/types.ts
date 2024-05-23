@@ -8,8 +8,8 @@ interface Tender {
   corrections: TenderDocument[];
   documents: TenderDocument[];
   link: string;
-  publishDate: string;
-  submissionDeadline: string;
+  publishDate: string | number;
+  submissionDeadline: string | number;
   title: string;
   updatedAt: number;
 }

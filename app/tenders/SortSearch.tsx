@@ -41,7 +41,7 @@ export default function SortSearch({
   setActiveData,
   setArchiveData,
 }: SortSearchProps) {
-  const [sortAsc, setSortAsc] = useState(true);
+  const [sortAsc, setSortAsc] = useState(false);
   const [sortBy, setSortBy] = useState('Recently Updated');
   const [searchFor, setSearchFor] = useState('');
   const searchInputRef = useRef<HTMLInputElement>(null);

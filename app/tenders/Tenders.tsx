@@ -17,7 +17,7 @@ import {
 } from '@/components/ui/tabs-table/table';
 import { Download } from 'lucide-react';
 import Link from 'next/link';
-import { cn } from '@/lib/utils';
+import { cn, toDateString, toDateTimeString } from '@/lib/utils';
 
 import SortSearch from './SortSearch';
 import { useState } from 'react';
@@ -73,9 +73,7 @@ function TabsContentContent({ tabsData: tabsData }: TabsContentContentProps) {
                           <span
                             className={cn(
                               'inline-block underline',
-                              correction.title
-                                .toLowerCase()
-                                .indexOf('cancel') === -1
+                              correction.title.toLowerCase().includes('cancel')
                                 ? 'text-green-500'
                                 : 'text-red-500'
                             )}
@@ -96,19 +94,26 @@ function TabsContentContent({ tabsData: tabsData }: TabsContentContentProps) {
                       </Link>
                     </span>
                   </TableCell>
-                  <TableCell>{tender.publishDate}</TableCell>
+                  <TableCell>
+                    {toDateString(tender.publishDate as number)}
+                  </TableCell>
                   <TableCell
                     className={cn(
                       name === 'archive' && 'text-dwd-secondary2',
                       tender.cancelled && 'line-through'
                     )}
                   >
-                    {tender.submissionDeadline}
+                    {toDateTimeString(tender.submissionDeadline as number)}
                   </TableCell>
                 </TableRow>
               ))}
             </TableBody>
           </Table>
+          {!data.length && (
+            <div className="flex justify-center p-16 text-dwd-secondary1">
+              No results
+            </div>
+          )}
         </TabsContent>
       ))}
     </>

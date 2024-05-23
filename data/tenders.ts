@@ -1,6 +1,4 @@
-import { toDateString, toDateTimeString } from '@/lib/utils';
-
-const rawTenders: Tender[] = [
+export const tenders: Tender[] = [
   {
     cancelled: false,
     corrections: [],
@@ -100,25 +98,3 @@ const rawTenders: Tender[] = [
     updatedAt: 0,
   },
 ];
-
-export const tenders = rawTenders.map((tender) => ({
-  ...tender,
-  publishDate: Date.parse(tender.publishDate),
-  submissionDeadline: Date.parse(tender.submissionDeadline),
-}));
-
-const now = Date.now();
-
-export let active: Tender[] = [];
-export let archive: Tender[] = [];
-
-for (const tender of tenders) {
-  const newTender = {
-    ...tender,
-    publishDate: toDateString(tender.publishDate),
-    submissionDeadline: toDateTimeString(tender.submissionDeadline),
-  };
-  if (tender.cancelled || tender.submissionDeadline <= now)
-    archive.push(newTender);
-  else active.push(newTender);
-}
