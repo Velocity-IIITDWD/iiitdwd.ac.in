@@ -7,23 +7,8 @@ export type jobstype = {
   Apllication: string;
   Applicationoffline:string;
   StatusofApplications:string;
+  Addendum: string
 };
-
-// todo 1
-
-// Application: [
-//     {
-//         name: "Apply Online",
-//         link: "...form..link"
-//     },
-//     {
-//         name: "Apply Offline",
-//         link: "somelink"
-//     }
-// ]
-
-// todo 2
-// shadcn ui
 
 export const jobsdata: jobstype[] =[
   {
@@ -33,8 +18,9 @@ export const jobsdata: jobstype[] =[
     "date": "05.06.2024",
     "GI": "https://iiitdwd.ac.in/docs/SERB-Project-ASSO.pdf",
     "Apllication": "https://docs.google.com/forms/d/e/1FAIpQLSfLha6Cna4M6CjkxpBHb7yH57y01v3U0nTgRpwFO28rGOCKqA/closedform",
-    "Applicationoffline": "https://iiitdwd.ac.in/docs/Provisional_Shortlisting_Status_for_the_positing_on_Registrar.pdf",
-    "StatusofApplications": ""
+    "Applicationoffline": "https://iiitdwd.ac.in/docs/OfflineApplicationFormatDirIIITDharwad.pdf",
+    "StatusofApplications": "",
+    "Addendum": ""
   },
   {
     "title": "Recruitment of Project Associate",
@@ -44,7 +30,8 @@ export const jobsdata: jobstype[] =[
     "GI": "https://iiitdwd.ac.in/docs/SERB-Project-ASSO.pdf",
     "Apllication": "https://docs.google.com/forms/d/e/1FAIpQLSfLha6Cna4M6CjkxpBHb7yH57y01v3U0nTgRpwFO28rGOCKqA/closedform",
     "Applicationoffline": "",
-    "StatusofApplications": "yes"
+    "StatusofApplications": "https://iiitdwd.ac.in/docs/Provisional_Shortlisting_Status_for_the_positing_on_Registrar.pdf",
+    "Addendum": ""
   },
   {
     "title": "Recruitment of Project Assistant & Intern",
@@ -54,7 +41,8 @@ export const jobsdata: jobstype[] =[
     "GI": "https://iiitdwd.ac.in/docs/Tihan-Project-Asso.pdf",
     "Apllication": "https://docs.google.com/forms/d/e/1FAIpQLSfLha6Cna4M6CjkxpBHb7yH57y01v3U0nTgRpwFO28rGOCKqA/closedform",
     "Applicationoffline": "",
-    "StatusofApplications": ""
+    "StatusofApplications": "",
+    "Addendum": "https://iiitdwd.ac.in/docs/careers/AddendumFacultyRecruitmentMay2022.pdf"
   },
   {
     "title": "Position of Medical Officer [on contract]",
@@ -64,7 +52,8 @@ export const jobsdata: jobstype[] =[
     "GI": "https://iiitdwd.ac.in/docs/Tihan-Project-Asso.pdf",
     "Apllication": "https://docs.google.com/forms/d/e/1FAIpQLSfLha6Cna4M6CjkxpBHb7yH57y01v3U0nTgRpwFO28rGOCKqA/closedform",
     "Applicationoffline": "",
-    "StatusofApplications": ""
+    "StatusofApplications": "",
+    "Addendum": ""
   },
   {
     "title": "Position of Registrar",
@@ -74,7 +63,8 @@ export const jobsdata: jobstype[] =[
     "GI": "https://iiitdwd.ac.in/docs/Tihan-Project-Asso.pdf",
     "Apllication": "https://docs.google.com/forms/d/e/1FAIpQLSfLha6Cna4M6CjkxpBHb7yH57y01v3U0nTgRpwFO28rGOCKqA/closedform",
     "Applicationoffline": "",
-    "StatusofApplications": ""
+    "StatusofApplications": "",
+    "Addendum": ""
   },
   {
     "title": "Ph.D. Admission Notification for January 2024",
@@ -84,7 +74,8 @@ export const jobsdata: jobstype[] =[
     "GI": "https://iiitdwd.ac.in/docs/Tihan-Project-Asso.pdf",
     "Apllication": "https://docs.google.com/forms/d/e/1FAIpQLSfLha6Cna4M6CjkxpBHb7yH57y01v3U0nTgRpwFO28rGOCKqA/closedform",
     "Applicationoffline": "",
-    "StatusofApplications": ""
+    "StatusofApplications": "",
+    "Addendum": ""
   },
   {
     "title": "Faculty Recruitment October 2023",
@@ -94,7 +85,8 @@ export const jobsdata: jobstype[] =[
     "GI": "https://iiitdwd.ac.in/docs/Tihan-Project-Asso.pdf",
     "Apllication": "https://docs.google.com/forms/d/e/1FAIpQLSfLha6Cna4M6CjkxpBHb7yH57y01v3U0nTgRpwFO28rGOCKqA/closedform",
     "Applicationoffline": "",
-    "StatusofApplications": ""
+    "StatusofApplications": "",
+    "Addendum": ""
   },
   {
     "title": "PhD September 2023",
@@ -104,7 +96,8 @@ export const jobsdata: jobstype[] =[
     "GI": "https://iiitdwd.ac.in/docs/SERB-Project-ASSO.pdf",
     "Apllication": "https://docs.google.com/forms/d/e/1FAIpQLSfLha6Cna4M6CjkxpBHb7yH57y01v3U0nTgRpwFO28rGOCKqA/closedform",
     "Applicationoffline": "",
-    "StatusofApplications": ""
+    "StatusofApplications": "",
+    "Addendum": ""
   },
   {
     "title": "Recruitment of Project Associate",
@@ -114,7 +107,8 @@ export const jobsdata: jobstype[] =[
     "GI": "https://iiitdwd.ac.in/docs/SERB-Project-ASSO.pdf",
     "Apllication": "https://docs.google.com/forms/d/e/1FAIpQLSfLha6Cna4M6CjkxpBHb7yH57y01v3U0nTgRpwFO28rGOCKqA/closedform",
     "Applicationoffline": "",
-    "StatusofApplications": ""
+    "StatusofApplications": "",
+    "Addendum": ""
   },
   {
     "title": "Recruitment of Project Associate",
@@ -124,7 +118,8 @@ export const jobsdata: jobstype[] =[
     "GI": "https://iiitdwd.ac.in/docs/Tihan-Project-Asso.pdf",
     "Apllication": "https://docs.google.com/forms/d/e/1FAIpQLSfLha6Cna4M6CjkxpBHb7yH57y01v3U0nTgRpwFO28rGOCKqA/closedform",
     "Applicationoffline": "",
-    "StatusofApplications": ""
+    "StatusofApplications": "",
+    "Addendum": ""
   },
   {
     "title": "PhD August 2023",
@@ -134,7 +129,8 @@ export const jobsdata: jobstype[] =[
     "GI": "https://iiitdwd.ac.in/docs/SERB-Project-ASSO.pdf",
     "Apllication": "https://docs.google.com/forms/d/e/1FAIpQLSfLha6Cna4M6CjkxpBHb7yH57y01v3U0nTgRpwFO28rGOCKqA/closedform",
     "Applicationoffline": "",
-    "StatusofApplications": ""
+    "StatusofApplications": "",
+    "Addendum": ""
   },
   {
     "title": "Recruitment of Project Associate",
@@ -144,7 +140,8 @@ export const jobsdata: jobstype[] =[
     "GI": "https://iiitdwd.ac.in/docs/SERB-Project-ASSO.pdf",
     "Apllication": "https://docs.google.com/forms/d/e/1FAIpQLSfLha6Cna4M6CjkxpBHb7yH57y01v3U0nTgRpwFO28rGOCKqA/closedform",
     "Applicationoffline": "",
-    "StatusofApplications": ""
+    "StatusofApplications": "",
+    "Addendum": ""
   },
   {
     "title": "Post of Project Assistant Positions",
@@ -154,7 +151,8 @@ export const jobsdata: jobstype[] =[
     "GI": "https://iiitdwd.ac.in/docs/SERB-Project-ASSO.pdf",
     "Apllication": "https://docs.google.com/forms/d/e/1FAIpQLSfLha6Cna4M6CjkxpBHb7yH57y01v3U0nTgRpwFO28rGOCKqA/closedform",
     "Applicationoffline": "",
-    "StatusofApplications": ""
+    "StatusofApplications": "",
+    "Addendum": ""
   }
 ]
 ;

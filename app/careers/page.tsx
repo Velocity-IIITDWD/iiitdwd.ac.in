@@ -104,6 +104,7 @@ const Page = () => {
               Apllication={jobdata.Apllication}
               Applicationoffline={jobdata.Applicationoffline}
               StatusofApplications={jobdata.StatusofApplications}
+              Addendum={jobdata.Addendum}
             />
           ))}
         </div>

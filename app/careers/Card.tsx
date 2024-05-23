@@ -19,6 +19,8 @@ interface propstype {
     Apllication: string
     Applicationoffline: string;
     StatusofApplications: string;
+    Addendum: string
+
 }
 
 
@@ -53,6 +55,7 @@ const Card = (props: propstype) => {
 
                             {props.Applicationoffline ? <Button className='w-1/4   mt-3 hover:drop-shadow-xl    hover:scale-[1.05] hover:bg-white transition border bg-white border-dwd-primary text-black rounded-xl p-3'><Link href={props.Applicationoffline} className='overflow-hidden'>Apply Offline</Link></Button> : <div className='hidden' ></div>}
                             {props.StatusofApplications ? <Button className='w-1/4   mt-3 hover:drop-shadow-xl hover:scale-[1.05] hover:bg-white transition  break-normal h-auto border bg-white border-dwd-primary text-black rounded-xl p-3'><Link href={props.StatusofApplications} className='overflow-hidden'>Status of Application</Link></Button> : <div className='hidden'></div>}
+                            {props.Addendum ? <Button className='w-1/4   mt-3 hover:drop-shadow-xl    hover:scale-[1.05] hover:bg-white transition border bg-white border-dwd-primary text-black rounded-xl p-3'><Link href={props.Addendum} className='overflow-hidden'>Addendum</Link></Button> : <div className='hidden' ></div>}
                         </div>
                     </div>
 
@@ -100,6 +103,7 @@ const Card = (props: propstype) => {
                     <button className='w-1/2 border border-[#01122b] text-black rounded-xl p-3'><Link href={props.GI}>General Instruction</Link></button>
                     {props.Applicationoffline ? <button className='w-1/2  bg-[#01122b] text-white  rounded-xl p-3'><Link href={props.Applicationoffline}>Apply Offline</Link></button> : <div className='hidden' ></div>}
                     {props.StatusofApplications ? <button className='w-1/2  bg-[#01122b] text-white  rounded-xl p-3'><Link href={props.StatusofApplications}>Status of Application</Link></button>: <div className='hidden'></div>}
+                    {props.Addendum ? <button className='w-1/2  bg-[#01122b] text-white  rounded-xl p-3'><Link href={props.Addendum}>Addendum</Link></button>: <div className='hidden'></div>}
                     <button className='w-1/2 bg-[#01122b] text-white  rounded-xl p-3'><Link href={props.Apllication}>Apply Now</Link></button>
                 </div>
             </div>
@@ -121,6 +125,7 @@ const Card = (props: propstype) => {
 
                     {props.Applicationoffline ? <button className='w-1/2 bg-[#01122b] text-white  rounded-xl p-1'><Link href={props.Applicationoffline}>Apply Offline</Link></button> : <div className='hidden' ></div>}
                     {props.StatusofApplications ? <button className='w-1/2 bg-[#01122b] text-white  rounded-xl p-1'><Link href={props.StatusofApplications}>Status of Application</Link></button>: <div className='hidden'></div>}
+                    {props.Addendum ? <button className='w-1/2 bg-[#01122b] text-white  rounded-xl p-1'><Link href={props.Addendum}>Addendum</Link></button>: <div className='hidden'></div>}
 
 
 
