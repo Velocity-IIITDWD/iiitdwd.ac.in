@@ -125,7 +125,7 @@ const Card = (props: propstype) => {
 
                     {props.Applicationoffline ? <button className='w-1/2 bg-[#01122b] text-white  rounded-xl p-1'><Link href={props.Applicationoffline}>Apply Offline</Link></button> : <div className='hidden' ></div>}
                     {props.StatusofApplications ? <button className='w-1/2 bg-[#01122b] text-white  rounded-xl p-1'><Link href={props.StatusofApplications}>Status of Application</Link></button>: <div className='hidden'></div>}
-                    {props.Addendum ? <button className='w-1/2 bg-[#01122b] text-white  rounded-xl p-1'><Link href={props.Addendum}>Addendum</Link></button>: <div className='hidden'></div>}
+                    {props.Addendum  ? <button className='w-1/2 bg-[#01122b] text-white  rounded-xl p-1'><Link href={props.Addendum}>Addendum</Link></button>: <div className='hidden'></div>}
 
 
 
