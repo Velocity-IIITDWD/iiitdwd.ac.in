@@ -1,7 +1,7 @@
 
 import React from 'react';
 
-import ReadMoreLess from './readmore';
+import ReadMoreLess from '../../components/readmore';
 
 import Image from 'next/image';
 import { Button } from "@/components/ui/button"

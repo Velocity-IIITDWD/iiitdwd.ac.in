@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import Card from '@/components/Card';
+import Card from '@/app/careers/Card';
 import { jobsdata } from '@/data/jobs';
 import Image from 'next/image';
  
