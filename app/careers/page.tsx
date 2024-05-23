@@ -38,9 +38,9 @@ const Page = () => {
           </div>
         </div>
         <div className="dropdownNsearch px-2 flex items-center gap-5 justify-center w-[100vw] h-10">
-          <div className="Dropdown hover:scale-[1.05]  hover:drop-shadow-2xl transition flex items-center">
+          <div className="Dropdown hover:scale-[1.05]  hover:drop-shadow-2xl transition flex items-center">  
             <select
-              className="w-[20vw] pl-2 text-black text-xl md:text-3xl bg-dwd-secondary2 outline-none h-9 rounded-lg"
+              className="w-[20vw] pl-2 text-black text-lg md:text-3xl bg-dwd-secondary2 outline-none h-9 rounded-lg"
               onChange={handledropdown}
               name="category"
               id="category"
