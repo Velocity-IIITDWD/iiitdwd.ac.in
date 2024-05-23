@@ -26,11 +26,13 @@ const ContactPage: React.FC = () => {
       { threshold: 0.1 }
     );
 
-    const elements =
-      containerRef.current.querySelectorAll('.animate-on-scroll');
-    elements.forEach((element) => {
-      observer.observe(element);
-    });
+    if (containerRef.current) {
+      const elements =
+        containerRef.current.querySelectorAll('.animate-on-scroll');
+      elements.forEach((element) => {
+        observer.observe(element);
+      });
+    }
 
     return () => {
       observer.disconnect();
