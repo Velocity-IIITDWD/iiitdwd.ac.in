@@ -30,9 +30,9 @@ export const TabsTrigger = React.forwardRef<
     )}
     {...props}
   >
-    <div className='absolute bg-white w-2 h-2  -left-2 rounded-md -bottom-0 z-10' />
+    <div className="absolute bg-background w-2 h-2  -left-2 rounded-md -bottom-0 z-10" />
     {children}
-    <div className='absolute bg-white w-2 h-2 -right-2 rounded-md -bottom-0 z-10' />
+    <div className="absolute bg-background w-2 h-2 -right-2 rounded-md -bottom-0 z-10" />
   </TabsPrimitive.Trigger>
 ));
 TabsTrigger.displayName = TabsPrimitive.Trigger.displayName;
