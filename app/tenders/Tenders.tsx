@@ -153,8 +153,10 @@ export default function Tenders({ active, archive }: TendersProps) {
             </TabsList>
             <SortSearch
               selectedTab={selectedTab}
+              active={active}
               activeData={activeData}
               setActiveData={setActiveData}
+              archive={archive}
               archiveData={archiveData}
               setArchiveData={setArchiveData}
             />

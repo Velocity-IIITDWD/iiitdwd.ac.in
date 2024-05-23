@@ -1,4 +1,9 @@
-import { ArrowDownWideNarrow, ArrowUpNarrowWide, Search } from 'lucide-react';
+import {
+  ArrowDownWideNarrow,
+  ArrowUpNarrowWide,
+  Search,
+  X,
+} from 'lucide-react';
 
 import {
   Select,
@@ -8,11 +13,13 @@ import {
   SelectItem,
   SelectTrigger,
 } from '@/components/ui/select';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 
 type SortSearchProps = {
   selectedTab: string;
+  active: Tender[];
   activeData: Tender[];
+  archive: Tender[];
   archiveData: Tender[];
   setActiveData: React.Dispatch<React.SetStateAction<Tender[]>>;
   setArchiveData: React.Dispatch<React.SetStateAction<Tender[]>>;
@@ -27,24 +34,51 @@ const sortAttr = {
 
 export default function SortSearch({
   selectedTab,
+  active,
   activeData,
+  archive,
   archiveData,
   setActiveData,
   setArchiveData,
 }: SortSearchProps) {
   const [sortAsc, setSortAsc] = useState(true);
   const [sortBy, setSortBy] = useState('Recently Updated');
+  const [searchFor, setSearchFor] = useState('');
+  const searchInputRef = useRef<HTMLInputElement>(null);
+
+  const sortAndSetData = (sortBy: string, sortAsc: boolean, data: Tender[]) => {
+    const setData = selectedTab === 'active' ? setActiveData : setArchiveData;
+    const attr = sortAttr[sortBy as keyof typeof sortAttr] as keyof Tender;
+    const multiplier = sortAsc ? 1 : -1;
+    setData(
+      [...data].sort((t1, t2) => multiplier * (t1[attr] >= t2[attr] ? 1 : -1))
+    );
+  };
 
   const onSortChange = (newSortBy: string, newSortAsc: boolean) => {
     setSortBy(newSortBy);
     setSortAsc(newSortAsc);
     const data = selectedTab === 'active' ? activeData : archiveData;
-    const setData = selectedTab === 'active' ? setActiveData : setArchiveData;
-    const attr = sortAttr[newSortBy as keyof typeof sortAttr] as keyof Tender;
-    const multiplier = newSortAsc ? 1 : -1;
-    setData(
-      [...data].sort((t1, t2) => multiplier * (t1[attr] >= t2[attr] ? 1 : -1))
-    );
+    sortAndSetData(newSortBy, newSortAsc, data);
+  };
+
+  const onSearchByChange = (value: string) => {
+    if (value === searchFor) return;
+    setSearchFor(value);
+    let data = selectedTab === 'active' ? active : archive;
+    if (value) {
+      data = data.filter(
+        (tender) =>
+          tender.title.toLowerCase().includes(value) ||
+          tender.documents.some((doc) =>
+            doc.title.toLowerCase().includes(value)
+          ) ||
+          tender.corrections.some((cor) =>
+            cor.title.toLowerCase().includes(value)
+          )
+      );
+    }
+    sortAndSetData(sortBy, sortAsc, data);
   };
 
   return (
@@ -85,10 +119,26 @@ export default function SortSearch({
         <input
           type="text"
           placeholder="Search"
+          onChange={(event) =>
+            onSearchByChange(event.target.value.toLowerCase())
+          }
+          ref={searchInputRef}
           className="text-dwd-secondary1 rounded-l-md p-1 px-2 focus:outline-none w-full sm:w-auto"
         />
         <span className="px-2 flex items-center justify-center">
-          <Search size={16} className="cursor-pointer" />
+          {searchFor ? (
+            <X
+              size={16}
+              className="cursor-pointer"
+              onClick={() => {
+                onSearchByChange((searchInputRef.current!.value = ''));
+              }}
+            />
+          ) : (
+            <span title="type something to search" className="select-none">
+              <Search size={16} />
+            </span>
+          )}
         </span>
       </div>
     </div>
