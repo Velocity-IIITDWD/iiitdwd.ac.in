@@ -34,18 +34,17 @@ const Club: FC = () => {
       <div className="bg-dwd-secondary2 p-8 rounded-2xl mb-8 relative">
         <div className="absolute top-4 left-4">
           <button
-            className={`px-4 py-2 rounded-2xl mr-4 ${showTechnicalClubs ? 'bg-dwd-primary text-white hover:text-sky-600' : 'bg-dwd-secondary1 hover:text-white'}`}
+            className={`px-4 py-2 rounded-2xl mr-4 ${showTechnicalClubs ? ' hover:border-black bg-dwd-primary text-white hover:text-sky-600' : 'bg-dwd-secondary1 hover:text-white'}`}
             onClick={() => setShowTechnicalClubs(true)}
           >
-          Technical Clubs
+            Technical Clubs
           </button>
           <button
-            className={`px-4 py-2 rounded-2xl ${!showTechnicalClubs ? 'bg-dwd-primary text-white hover:text-sky-600' : 'bg-dwd-secondary1 hover:text-white'}`}
+            className={`px-4 py-2 rounded-2xl ${!showTechnicalClubs ? 'bg-dwd-primary hover:border-black text-white hover:text-sky-600' : 'bg-dwd-secondary1 hover:text-white'}`}
             onClick={() => setShowTechnicalClubs(false)}
           >
-          Non Technical Clubs
+            Non Technical Clubs
           </button>
-
         </div>
 
         <div className="mt-16">
@@ -104,10 +103,15 @@ const ClubCard: FC<{ clubName: string; aboutText: string; members: { name: strin
   const [showAbout, setShowAbout] = useState(true);
 
   return (
-    <div className="relative max-w-sm mx-auto bg-dwd-secondary2 p-4 rounded-md shadow-md mb-8 hover:border-dwd-primary border-2 border-transparent">
+    <div className="relative max-w-sm mx-auto bg-dwd-secondary2 p-4 rounded-md shadow-md mb-8 hover:border-dwd-primary border-2 border-transparent group">
       <div className="absolute -top-8 left-1/2 transform -translate-x-1/2">
-        <Image src={imagePath} alt={`${clubName} logo`} width={110} height={110} className="rounded-full border-4 border-gray-200" />
-
+        <Image
+          src={imagePath}
+          alt={`${clubName} logo`}
+          width={110}
+          height={110}
+          className="rounded-full border-4 bg-dwd-primary group-hover:border-dwd-primary"
+        />
       </div>
       <br />
       <div className="pt-12">
@@ -117,13 +121,13 @@ const ClubCard: FC<{ clubName: string; aboutText: string; members: { name: strin
             className={`px-4 py-2 cursor-pointer rounded-md mr-2 ${showAbout ? 'bg-dwd-primary hover:text-sky-600 text-white' : 'bg-dwd-secondary1 hover:text-white'}`}
             onClick={() => setShowAbout(true)}
           >
-        ABOUT
+            ABOUT
           </button>
           <button
             className={`px-4 py-2 cursor-pointer hover:text-sky-600 rounded-md ${!showAbout ? 'bg-dwd-primary hover:text-sky-600 text-white' : 'bg-dwd-secondary1 hover:text-white'}`}
             onClick={() => setShowAbout(false)}
           >
-        MEMBERS
+            MEMBERS
           </button>
         </div>
         {showAbout ? (
@@ -150,19 +154,18 @@ const ClubCard: FC<{ clubName: string; aboutText: string; members: { name: strin
         )}
         <br />
         <div className="flex justify-center space-x-4">
-          <a href="https://www.instagram.com" className="flex gap-2">
+          <a href="https://www.instagram.com" className="flex gap-2 hover:text-pink-600 hover:duration-800 hover:animate-pulse">
             <Instagram size="2rem" />
           </a>
-          <a href="https://www.linkedin.com/in/iiitdharwad/" className="flex gap-2">
+          <a href="https://www.linkedin.com/in/iiitdharwad/" className="flex gap-2 hover:text-blue-800 hover:duration-800 hover:animate-pulse">
             <LinkedinIcon size="2rem" />
           </a>
-          <a href="https://www.gmail.com" className="flex gap-2">
+          <a href="https://www.gmail.com" className="flex gap-2 hover:text-red-700 hover:duration-800 hover:animate-pulse">
             <Mail size="2rem" />
           </a>
         </div>
       </div>
     </div>
-
   );
 };
 
