@@ -1,6 +1,7 @@
 import type { Config } from "tailwindcss"
 
-const config = {
+const config: Config = {
+    
   darkMode: ["class"],
   content: [
     './pages/**/*.{ts,tsx}',
@@ -10,6 +11,7 @@ const config = {
 	],
   prefix: "",
   theme: {
+
     container: {
       center: true,
       padding: "2rem",
@@ -18,6 +20,11 @@ const config = {
       },
     },
     extend: {
+      backgroundImage: {
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "gradient-conic":
+            "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+    },
         minHeight: {
             '112': '28rem',
           },
