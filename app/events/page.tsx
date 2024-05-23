@@ -48,16 +48,5 @@ function ComponentEvent({ index }: ComponentEventProps) {
       </div>
     </div>
 
-    // return (
-    //   <div className="event">
-    //     <img src={eventImageSrc} alt="dw" />
-    //     <div className="event-details">
-    //       <h3>{announcements[index].text}</h3>
-    //       <p>Date: {announcements[index].timestamp}</p>
-    //       <a href="#" className="btn">
-    //         Know More
-    //       </a>
-    //     </div>
-    //   </div>
   );
 }
