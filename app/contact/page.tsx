@@ -76,7 +76,7 @@ const ContactPage: React.FC = () => {
           </div>
           <div className="mb-4">
             <h3 className="text-xl font-bold">Email</h3>
-            <p>office@iiitdwd.ac.in</p>
+            <p>contact@iiitdwd.ac.in</p>
           </div>
           <div>
             <h3 className="text-xl font-bold">Phone</h3>
@@ -99,7 +99,7 @@ const ContactPage: React.FC = () => {
               <li className="p-2 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
                 <strong>General Information:</strong>{' '}
                 <a href="mailto:info@iiitd.ac.in" className="text-blue-500">
-                  info@iiitd.ac.in
+                contact@iiitdwd.ac.in
                 </a>
               </li>
               <li className="p-2 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
@@ -141,15 +141,7 @@ const ContactPage: React.FC = () => {
                       admin-btech@iiitd.ac.in
                     </a>
                   </li>
-                  <li className="p-2 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                    <strong>For PG:</strong>{' '}
-                    <a
-                      href="mailto:admin-mtech@iiitd.ac.in"
-                      className="text-blue-500"
-                    >
-                      admin-mtech@iiitd.ac.in
-                    </a>
-                  </li>
+
                   <li className="p-2 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
                     <strong>For Ph.D.:</strong>{' '}
                     <a
@@ -182,7 +174,7 @@ const ContactPage: React.FC = () => {
                 You can also take the Bus Shuttle provided by the institute.
               </li>
               <li className="p-2 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                The institute is located at the
+                The institute is situated between Udaygiri and Ittigatti village. 
               </li>
             </ul>
           </div>
