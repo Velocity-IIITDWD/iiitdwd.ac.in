@@ -31,7 +31,7 @@ const Club: FC = () => {
     <div className="container mx-auto py-8 px-4">
       <h1 className="text-3xl font-bold text-center mb-8 text-dwd-primary">Our Clubs</h1>
 
-      <div className="bg-dwd-secondary2 p-8 rounded-2xl mb-8 relative">
+      <div className="bg-gray-200 p-8 rounded-2xl mb-8 relative">
         <div className="absolute top-4 left-4">
           <button
             className={`px-4 py-2 rounded-2xl mr-4 ${showTechnicalClubs ? ' hover:border-black bg-dwd-primary text-white hover:text-sky-600' : 'bg-dwd-secondary1 hover:text-white'}`}
@@ -103,7 +103,7 @@ const ClubCard: FC<{ clubName: string; aboutText: string; members: { name: strin
   const [showAbout, setShowAbout] = useState(true);
 
   return (
-    <div className="relative max-w-sm mx-auto bg-dwd-secondary2 p-4 rounded-md shadow-md mb-8 hover:border-dwd-primary border-2 border-transparent group">
+    <div className="relative max-w-sm mx-auto bg-gray-200 p-4 rounded-md shadow-md mb-8 hover:border-dwd-primary border-2 border-transparent group">
       <div className="absolute -top-8 left-1/2 transform -translate-x-1/2">
         <Image
           src={imagePath}
