@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import Tenders from './Tenders';
 import { tenders } from '@/data/tenders';
 
@@ -19,3 +20,7 @@ export default function TendersPage() {
 
   return <Tenders active={active} archive={archive} />;
 }
+
+export const metadata: Metadata = {
+  title: 'Tenders',
+};
