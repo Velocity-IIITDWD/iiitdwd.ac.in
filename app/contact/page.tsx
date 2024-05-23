@@ -5,7 +5,7 @@ import React, { useEffect, useRef } from 'react';
 import { FaPlane, FaTrain } from 'react-icons/fa';
 
 const ContactPage: React.FC = () => {
-  const containerRef = useRef(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
