@@ -1,7 +1,42 @@
+'use client';
+
 import Image from 'next/image';
+import React, { useEffect, useRef } from 'react';
 import { FaPlane, FaTrain } from 'react-icons/fa';
 
 const ContactPage: React.FC = () => {
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            if (entry.target.classList.contains('slide-in-left-animate')) {
+              entry.target.classList.add('slide-in-left');
+            } else if (
+              entry.target.classList.contains('slide-in-right-animate')
+            ) {
+              entry.target.classList.add('slide-in-right');
+            }
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    const elements =
+      containerRef.current.querySelectorAll('.animate-on-scroll');
+    elements.forEach((element) => {
+      observer.observe(element);
+    });
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
   return (
     <div className="flex flex-col mt-4 space-y-4">
       <div className="relative">
@@ -52,9 +87,9 @@ const ContactPage: React.FC = () => {
         </div>
       </div>
 
-      <div className="container mx-auto p-4 text-black">
+      <div className="container mx-auto p-4 text-black" ref={containerRef}>
         <div className="flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-4">
-          <div className="w-full lg:w-1/2 p-4 bg-gray-600 rounded-lg shadow-md transition-transform transform hover:scale-105">
+          <div className="w-full lg:w-1/2 p-4 bg-gray-600 rounded-lg shadow-md transition-transform transform animate-on-scroll slide-in-left-animate">
             <h2 className="text-xl font-bold mb-4 text-white">
               Email Addresses
             </h2>
@@ -126,7 +161,7 @@ const ContactPage: React.FC = () => {
               </li>
             </ul>
           </div>
-          <div className="w-full lg:w-1/2 p-4 bg-customBlue rounded-lg shadow-md transition-transform transform hover:scale-105">
+          <div className="w-full lg:w-1/2 p-4 bg-customBlue rounded-lg shadow-md transition-transform transform animate-on-scroll slide-in-right-animate">
             <h2 className="text-xl font-bold mb-4 text-white">
               Direction to Campus
             </h2>
@@ -142,7 +177,7 @@ const ContactPage: React.FC = () => {
                 The local bus shuttle also runs from Sattur Cross to the campus.
               </li>
               <li className="p-2 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                You can also take the Bus Shuttle provided by the institue.
+                You can also take the Bus Shuttle provided by the institute.
               </li>
               <li className="p-2 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
                 The institute is located at the
@@ -151,7 +186,7 @@ const ContactPage: React.FC = () => {
           </div>
         </div>
 
-        <div className="mt-4 p-4 bg-amber-100 rounded-lg shadow-md transition-transform transform hover:scale-105">
+        <div className="mt-4 p-4 bg-amber-100 rounded-lg shadow-md transition-transform transform animate-on-scroll slide-in-right-animate">
           <div className="flex items-center mb-4">
             <FaPlane className="text-2xl mr-2" />
             <h2 className="text-xl font-bold">How to reach from the Airport</h2>
@@ -162,21 +197,21 @@ const ContactPage: React.FC = () => {
           </p>
           <ul className="list-disc pl-5 space-y-2 mt-2">
             <li className="p-2 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
-              Take a Auto Rickshaw direcltly to the campus or Take the bus
+              Take an Auto Rickshaw directly to the campus or take the bus
               shuttle from Airport to Hosur Cross.
             </li>
             <li className="p-2 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
-              From Hosur Cross take the BRTS(Bus Rapid Transit System) to Sattur
-              Cross.
+              From Hosur Cross take the BRTS (Bus Rapid Transit System) to
+              Sattur Cross.
             </li>
             <li className="p-2 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
-              After reaching to Sattur Cross take a Auto Rickshaw directly to
-              the campus.
+              After reaching Sattur Cross take an Auto Rickshaw directly to the
+              campus.
             </li>
           </ul>
         </div>
 
-        <div className="mt-4 p-4 bg-indigo-100 rounded-lg shadow-md transition-transform transform hover:scale-105">
+        <div className="mt-4 p-4 bg-indigo-100 rounded-lg shadow-md transition-transform transform animate-on-scroll slide-in-left-animate">
           <div className="flex items-center mb-4">
             <FaTrain className="text-2xl mr-2" />
             <h2 className="text-xl font-bold">
@@ -191,12 +226,12 @@ const ContactPage: React.FC = () => {
           </p>
           <ul className="list-disc pl-5 space-y-2 mt-2">
             <li className="p-2 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
-              If you are reaching campus after mid-night you have to Auto
+              If you are reaching campus after midnight you have to take an Auto
               Rickshaw directly to campus or you can take BRTS to Sattur Cross.
             </li>
             <li className="p-2 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
-              After reaching Sattur Cross you can take Auto Rickshaw directly to
-              the campus.
+              After reaching Sattur Cross you can take an Auto Rickshaw directly
+              to the campus.
             </li>
           </ul>
 
@@ -209,15 +244,15 @@ const ContactPage: React.FC = () => {
           </p>
           <ul className="list-disc pl-5 space-y-2 mt-2">
             <li className="p-2 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
-              You can directly take a Auto Rickshaw directly to campus or you
-              can take Auto Rickshaw to Court Circle BRTS Station.
+              You can directly take an Auto Rickshaw directly to campus or you
+              can take an Auto Rickshaw to Court Circle BRTS Station.
             </li>
             <li className="p-2 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
               After that you can take BRTS from Court Circle to Sattur Cross
               BRTS Station.
             </li>
             <li className="p-2 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
-              After that you can take Auto Rickshaw directly to the campus.
+              After that you can take an Auto Rickshaw directly to the campus.
             </li>
           </ul>
         </div>
