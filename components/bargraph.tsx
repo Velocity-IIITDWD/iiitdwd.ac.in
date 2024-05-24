@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { Bar } from 'react-chartjs-2';
 import {
   Chart as ChartJS,
@@ -30,28 +30,46 @@ interface BarGraphProps {
     borderColor: string[];
     borderWidth: number;
   }[];
-  width: number; // Add width property
-  height: number; // Add height property
 }
 
 const BarGraph: React.FC<BarGraphProps> = ({ labels, datasets }) => {
-  const [windowWidth, setWindowWidth] = useState<number | undefined>(
-    typeof window !== 'undefined' ? window.innerWidth : undefined
-  );
+  const [dimensions, setDimensions] = useState({ width: 800, height: 400 });
+  const [isIntersecting, setIsIntersecting] = useState(false);
+  const barGraphRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleResize = () => {
-      setWindowWidth(window.innerWidth);
+      const width = window.innerWidth < 1000 ? 370 : 800;
+      const height = window.innerWidth < 1000 ? 200 : 400;
+      setDimensions({ width, height });
     };
 
-    if (typeof window !== 'undefined') {
-      window.addEventListener('resize', handleResize);
-      return () => window.removeEventListener('resize', handleResize);
-    }
+    handleResize(); // Set initial dimensions
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  const width = windowWidth && windowWidth < 1000 ? 370 : 800;
-  const height = windowWidth && windowWidth < 1000 ? 200 : 400;
+  useEffect(() => {
+    if (!barGraphRef.current) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsIntersecting(true);
+          observer.unobserve(barGraphRef.current!);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    observer.observe(barGraphRef.current);
+
+    return () => {
+      if (barGraphRef.current) {
+        observer.unobserve(barGraphRef.current);
+      }
+    };
+  }, [barGraphRef]);
 
   const data = {
     labels: labels,
@@ -66,12 +84,10 @@ const BarGraph: React.FC<BarGraphProps> = ({ labels, datasets }) => {
       }
     }
   };
-  
-  
 
   return (
-    <div style={{ width: width, height: height }}>
-      <Bar data={data} options={options} />
+    <div ref={barGraphRef} style={{ width: dimensions.width, height: dimensions.height }}>
+      {isIntersecting && <Bar data={data} options={options} />}
     </div>
   );
 };
