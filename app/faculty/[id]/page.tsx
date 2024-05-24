@@ -82,16 +82,12 @@ const Profile = (params: pp) => {
 
         <div className="bg-background flex flex-col md:flex-row lg:flex-row xl:flex-row gap-6 2xl:flex-row  justify-between relative py-12 px-12 space-x-12">
           <div className="bg-dwd-primary text-background px-12 py-12 rounded-lg">
-            <div className="flex flex-col">
-              <div>
-                <Image
+            <div className="flex flex-col ">
+              <div className="content-center">
+                <img
                   src={profile.content.card.photo}
-                  width={0}
-                  height={0}
-                  sizes="100%"
-                  style={{ height: '100%', width: 'auto' }}
-                  alt="IIIT Dharwad Logo"
-                  className="block lg:hidden xl:block mr-auto"
+                  alt="asd"
+                  className="object-srink-down"
                 />
               </div>
               <div>
