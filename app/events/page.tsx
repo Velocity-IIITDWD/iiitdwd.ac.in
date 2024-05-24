@@ -30,10 +30,10 @@ function ComponentEvent({ index }: ComponentEventProps) {
   const link: string = '/events/' + (index + 1);
   return (
     <div className=" bg-gray-200 p-12 rounded-xl transition duration-300 shadow hover:bg-dwd-secondary1 hover:text-white cursor-pointer">
-      <Image
+      <img
+        className="w-full h-72 object-cover rounded-lg"
         src={eventImageSrc}
         alt="Weekly Events"
-        className="w-full h-72 object-cover rounded-lg"
       />
       <div className="mt-8">
         <h2 className="text-2xl text-cardText font-bold">
