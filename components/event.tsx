@@ -3,6 +3,7 @@ import { events } from '@/data/events';
 import { eventInf } from '@/data/events';
 import React from 'react';
 import NotFound404 from '@/app/not-found'
+import Image from 'next/image';
 interface eventInformation {
   id: number;
   href: string;
@@ -80,7 +81,8 @@ function EventPage({ eventId, text, allImage }: ComponentEventProps) {
       <div className="relative max-w-full mx-auto overflow-hidden rounded-lg shadow-lg mt-12">
         <div className="flex transition-transform duration-500 ease-in-out justify-center items-center">
           {allImage.map((str: string) => (
-            <img
+            <Image
+              key={str}
               className="slide w-auto max-w-full h-[60vh] block box-border"
               src={str}
               alt="Event 1"

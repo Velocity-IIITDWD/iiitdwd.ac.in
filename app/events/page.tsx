@@ -1,6 +1,6 @@
-import { events } from "@/data/events";
-
-import Link from "next/link";
+import { events } from '@/data/events';
+import Image from 'next/image';
+import Link from 'next/link';
 // import { handleClientScriptLoad } from "next/script";
 export default function Home() {
   return (
@@ -27,12 +27,12 @@ interface ComponentEventProps {
 function ComponentEvent({ index }: ComponentEventProps) {
   // let str:string = {anouncements[0].href};
   const eventImageSrc = events[index].href;
-  const link: string = "/events/" + (index + 1);
+  const link: string = '/events/' + (index + 1);
   return (
     <div className=" bg-gray-200 p-12 rounded-xl transition duration-300 shadow hover:bg-dwd-secondary1 hover:text-white cursor-pointer">
-      <img
+      <Image
         src={eventImageSrc}
-        // alt="Weekly Events"
+        alt="Weekly Events"
         className="w-full h-72 object-cover rounded-lg"
       />
       <div className="mt-8">
@@ -47,6 +47,5 @@ function ComponentEvent({ index }: ComponentEventProps) {
         </Link>
       </div>
     </div>
-
   );
 }
