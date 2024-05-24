@@ -2,8 +2,8 @@
 import React, { FC, useState, useRef } from 'react';
 import { LinkedinIcon, Instagram, Mail } from 'lucide-react';
 import Image from 'next/image';
-import clubs from '../../data/members';
-import type { ClubName, Club as ClubData } from '../../data/members';
+import clubs from '../../../data/members';
+import type { ClubName, Club as ClubData } from '../../../data/members';
 
 const Club: FC = () => {
   const [showTechnicalClubs, setShowTechnicalClubs] = useState(true);

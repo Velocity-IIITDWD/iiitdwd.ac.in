@@ -107,12 +107,12 @@ function Header() {
 
               <details className='group'>
                 <summary className='flex items-center justify-between focus:outline-none'>
-                  <div>Campus</div>
+                  <Link className='hover:underline' href='/campus'>Campus</Link>
                   <ChevronDownIcon size='1rem' className='rotate-0 group-open:rotate-180 transition-transform duration-300' />
                 </summary>
                 <div className='mt-2 ml-8 flex flex-col gap-2'>
                   <Link className='hover:underline' href='/campus/facilities'>Facilities</Link>
-                  <Link className='hover:underline' href='/clubs'>Clubs</Link>
+                  <Link className='hover:underline' href='/campus/clubs'>Clubs</Link>
                   <Link className='hover:underline' href='/campus/events'>Events</Link>
                   <Link className='hover:underline' href='/campus/magazine'>Magazine</Link>
                 </div>
@@ -198,7 +198,9 @@ function Header() {
               </NavigationMenuContent>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuTrigger className='submenu-trigger'>Campus</NavigationMenuTrigger>
+              <Link href='/campus' passHref>
+                <NavigationMenuTrigger className='submenu-trigger'>Campus</NavigationMenuTrigger>
+              </Link>
               <NavigationMenuContent>
                 <ul className='flex flex-col gap-4 w-[250px] p-4 text-sm'>
                   <NavigationMenuLink href='/campus/facilities'>
@@ -206,7 +208,7 @@ function Header() {
                       Facilities
                     </div>
                   </NavigationMenuLink>
-                  <NavigationMenuLink href='/clubs'>
+                  <NavigationMenuLink href='/campus/clubs'>
                     <div className='hover:bg-accent p-2 rounded-md w-full'>
                       Clubs
                     </div>
