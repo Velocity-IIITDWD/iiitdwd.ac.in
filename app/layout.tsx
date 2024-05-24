@@ -1,5 +1,6 @@
 import './globals.css';
 import { Inter } from 'next/font/google';
+import { Metadata } from 'next';
 
 import React from 'react';
 import Header from './Header';
@@ -18,3 +19,11 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     </html>
   );
 }
+
+export const metadata: Metadata = {
+  title: {
+    template: '%s | IIIT Dharwad',
+    default: 'IIIT Dharwad',
+  },
+  description: 'IIIT Dharwad',
+};

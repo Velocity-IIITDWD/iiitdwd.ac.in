@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import Autoplay from 'embla-carousel-autoplay';
 import { ExternalLink } from 'lucide-react';
+import { images, ProgramCardDetails } from '@/data/homePage';
 
 import { Card, CardContent } from '@/components/ui/card';
 import {
@@ -13,41 +14,15 @@ import {
 } from '@/components/ui/carousel';
 import { useRef } from 'react';
 import Image from 'next/image';
-
-const images = [
-  {
-    url: '/HomePage/Main1.jpg',
-    caption: 'Admissions 2024',
-  },
-  {
-    url: '/HomePage/Main2.jpg',
-    caption: 'Admissions 2023',
-  },
-  {
-    url: '/HomePage/Main3.jpeg',
-    caption:
-      'Prof. S. R. Mahadeva Prasanna taking the charge as the Director of IIIT Dharwad',
-  },
-  {
-    url: '/HomePage/Main4.jpeg',
-    caption: 'Prof. S. R. Mahadeva Prasanna - Director of IIIT Dharwad',
-  },
-  {
-    url: '/HomePage/Main5.jpeg',
-    caption: 'Prof. S. R. Mahadeva Prasanna - Director of IIIT Dharwad',
-  },
-  {
-    url: '/HomePage/Main6.jpeg',
-    caption: 'Faculties and Director of IIIT Dharwad',
-  },
-];
+import MainCarousel from '@/components/HomePage/MainCarousel';
+import HomeCarousel from '@/components/HomePage/HomeCarousel';
 
 export default function Home() {
   const plugin = useRef(Autoplay({ delay: 5000, stopOnInteraction: false }));
 
   return (
     <div className="flex flex-col h-full w-full">
-      <Carousel
+      {/* <Carousel
         plugins={[plugin.current]}
         opts={{
           align: 'start',
@@ -60,18 +35,18 @@ export default function Home() {
             <CarouselItem key={index} className="">
               <div className="p-1">
                 <Card className="w-full h-full overflow-hidden">
-                  <CardContent className="flex relative bg-gray-200 h-[60vh] items-center justify-center">
+                  <CardContent className="flex p-0 relative bg-gray-200 h-[60vh] items-center justify-center">
                     <Image
                       alt="main image"
                       src={images[index]?.url}
                       width={0}
                       height={0}
                       sizes="100%"
-                      style={{ width: '100%', height: 'auto' }}
+                      style={{ height: '100%', width: '100%' }}
                       className="w-full relative object-cover object-center"
                     />
 
-                    <div className="absolute bottom-2 left-1/2 -translate-x-1/2 bg-slate-200/10 backdrop-blur p-2 rounded text-white">
+                    <div className="absolute bottom-2 left-1/2 w-fit max-w-full -translate-x-1/2 bg-slate-900/40 backdrop-blur p-2 rounded text-white">
                       {images[index]?.caption}
                     </div>
                   </CardContent>
@@ -80,29 +55,54 @@ export default function Home() {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className="absolute left-3 top-1/2 -translate-y-1/2" />
-        <CarouselNext className="absolute right-3 top-1/2 -translate-y-1/2" />
-      </Carousel>
+        <CarouselPrevious className="absolute bg-slate-900/40 backdrop-blur text-white left-3 top-1/2 -translate-y-1/2" />
+        <CarouselNext className="absolute bg-slate-900/40 backdrop-blur text-white right-3 top-1/2 -translate-y-1/2" />
+      </Carousel> */}
 
-      <div className="my-20 w-full flex flex-col items-center md:px-24 sm:px-10 p-4 gap-6">
+      <MainCarousel>
+        {images.map((item, index) => (
+          <Card
+            key={index}
+            className="w-full h-full relative flex-[0_0_100%] overflow-hidden"
+          >
+            <CardContent className="flex p-0 relative bg-gray-200 h-[60vh] items-center justify-center">
+              <Image
+                alt="main image"
+                src={item?.url}
+                width={0}
+                height={0}
+                sizes="100%"
+                style={{ height: '100%', width: '100%' }}
+                className="w-full relative object-cover object-center"
+              />
+
+              <div className="absolute bottom-4 left-1/2 w-fit max-w-full -translate-x-1/2 bg-slate-900/40 backdrop-blur p-2 rounded text-white">
+                {item?.caption}
+              </div>
+            </CardContent>
+          </Card>
+        ))}
+      </MainCarousel>
+
+      <div className="my-20 bg-gray-200 md:py-20 py-10 w-full flex flex-col items-center md:px-24 sm:px-10 p-4 gap-6">
         <p className="text-dwd-primary text-2xl font-bold">Announcements</p>
 
-        <div className="grid text-dwd-primary md:grid-cols-3 grid-cols-1 px-4">
-          <ul className="list-disc pl-8 p-4 border-0 border-r-0 border-b md:border-b-0 md:border-r flex flex-col gap-6">
+        <div className="grid text-dwd-primary text-justify lg:grid-cols-3 grid-cols-1 px-4">
+          <ul className="list-disc pl-8 p-4 px-8 border-0 border-dwd-primary border-r-0 border-b lg:border-b-0 lg:border-r flex flex-col gap-6">
             <li>
               IIIT Dharwad rolling out AICTE-Quality Improvement PG Certificate
               Program in Cybersecurity!
             </li>
             <li>One Day Workshop on Fractal Academics on June 15, 2024</li>
           </ul>
-          <ul className="list-disc pl-8 p-4 border-0 border-r-0 border-b md:border-b-0 md:border-r flex flex-col gap-6">
+          <ul className="list-disc pl-8 p-4 px-8 border-0 border-dwd-primary border-r-0 border-b lg:border-b-0 lg:border-r flex flex-col gap-6">
             <li>
               IIIT Dharwad rolling out AICTE-Quality Improvement PG Certificate
               Program in Cybersecurity!
             </li>
             <li>One Day Workshop on Fractal Academics on June 15, 2024</li>
           </ul>
-          <ul className="list-disc pl-8 p-4 flex flex-col gap-6">
+          <ul className="list-disc pl-8 p-4 px-8 flex flex-col gap-6">
             <li>
               IIIT Dharwad rolling out AICTE-Quality Improvement PG Certificate
               Program in Cybersecurity!
@@ -118,10 +118,10 @@ export default function Home() {
         </Link>
       </div>
 
-      <div className="my-20 w-full flex flex-col items-center md:px-24 sm:px-10 p-4 gap-6">
+      <div className="my-16 w-full flex flex-col items-center md:px-24 sm:px-10 p-4 gap-6">
         <p className="text-dwd-primary text-2xl font-bold">About Us</p>
 
-        <div className="w-full flex items-center flex-col lg:flex-row-reverse gap-6 px-3">
+        <div className="w-full flex items-center flex-col lg:flex-row-reverse lg:w-4/5 gap-6 px-3">
           <div className="w-full flex-none overflow-hidden aspect-square h-fit lg:w-1/3 bg-gray-300 rounded shadow">
             <Image
               alt="main image"
@@ -129,11 +129,11 @@ export default function Home() {
               width={0}
               height={0}
               sizes="100%"
-              style={{ height: '100%', width: 'auto' }}
+              style={{ height: '100%', width: '100%' }}
               className="h-full object-cover object-center"
             />
           </div>
-          <div className="flex flex-1 flex-col text-dwd-primary gap-3 lg:py-8">
+          <div className="flex text-justify flex-1 flex-col text-dwd-primary gap-3 lg:py-8">
             <p>
               IIIT Dharwad is an Institute of National Importance set up in 2015
               in Public-Private-Partnership mode between the Ministry of
@@ -177,30 +177,38 @@ export default function Home() {
         <p className="text-dwd-primary text-2xl font-bold px-10 mb-10">
           Programs
         </p>
-        <Carousel
-          opts={{
-            align: 'start',
-          }}
-          className="w-full relative overflow-hidden"
-        >
-          <CarouselContent>
-            {Array.from({ length: 10 }).map((_, index) => (
-              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/4">
-                <div className="p-1">
-                  <Card>
-                    <CardContent className="flex aspect-square items-center justify-center p-6">
-                      <span className="text-3xl font-semibold">
-                        {index + 1}
-                      </span>
-                    </CardContent>
-                  </Card>
+        <HomeCarousel>
+          {ProgramCardDetails.map((item, index) => (
+            <Card
+              key={index}
+              className="w-full h-full relative flex-[0_0_100%] lg:flex-[0_0_33.33%] overflow-hidden"
+            >
+              <CardContent className="flex p-0 flex-col aspect-square items-center justify-center">
+                <Image
+                  alt="main image"
+                  src={item?.image}
+                  width={0}
+                  height={0}
+                  sizes="100%"
+                  style={{ height: 'auto', width: '100%' }}
+                  className="aspect-[4/3] overflow-hidden object-cover object-center"
+                />
+                <div className="w-full text-dwd-primary p-4 flex flex-col gap-2 items-center justify-center">
+                  <p className="text-md text-center font-semibold">
+                    {item?.Header1}
+                  </p>
+                  <p className="text-sm">{item?.Header2}</p>
+                  <Link
+                    href={item?.link}
+                    className="flex w-fit rounded hover:bg-dwd-primary hover:text-white transition duration-300 border border-dwd-primary py-2 px-4 gap-2"
+                  >
+                    Read More
+                  </Link>
                 </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious className="absolute left-3 top-1/2 -translate-y-1/2" />
-          <CarouselNext className="absolute right-3 top-1/2 -translate-y-1/2" />
-        </Carousel>
+              </CardContent>
+            </Card>
+          ))}
+        </HomeCarousel>
       </div>
 
       <div className="w-full py-10 px-6 md:px-44">
@@ -219,7 +227,7 @@ export default function Home() {
                 <div className="p-1">
                   <Card>
                     <CardContent className="flex justify-center flex-col-reverse lg:flex-row items-center gap-6 p-6">
-                      <div className="flex flex-1 flex-col h-full text-dwd-primary gap-6">
+                      <div className="flex text-justify flex-1 flex-col h-full text-dwd-primary gap-6">
                         <p className="text-xl font-semibold mb-4">
                           Event Heading - Drone Sessions
                         </p>
@@ -293,30 +301,18 @@ export default function Home() {
         <p className="text-dwd-primary text-2xl font-bold px-10 mb-10">
           Gallery
         </p>
-        <Carousel
-          opts={{
-            align: 'start',
-          }}
-          className="w-full relative overflow-hidden"
-        >
-          <CarouselContent>
-            {Array.from({ length: 10 }).map((_, index) => (
-              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/4">
-                <div className="p-1">
-                  <Card>
-                    <CardContent className="flex aspect-square items-center justify-center p-6">
-                      <span className="text-3xl font-semibold">
-                        {index + 1}
-                      </span>
-                    </CardContent>
-                  </Card>
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious className="absolute left-3 top-1/2 -translate-y-1/2" />
-          <CarouselNext className="absolute right-3 top-1/2 -translate-y-1/2" />
-        </Carousel>
+        <HomeCarousel>
+          {Array.from({ length: 10 }).map((_, index) => (
+            <Card
+              key={index}
+              className="w-full h-full relative flex-[0_0_50%] lg:flex-[0_0_25%] overflow-hidden"
+            >
+              <CardContent className="flex aspect-square items-center justify-center p-6">
+                <span className="text-3xl font-semibold">{index + 1}</span>
+              </CardContent>
+            </Card>
+          ))}
+        </HomeCarousel>
       </div>
     </div>
   );

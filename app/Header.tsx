@@ -51,7 +51,7 @@ function Header() {
         </div>}
         <div className='flex gap-2 lg:w-1/5 text-center lg:text-left text-xs *:odd:font-bold'>
           {/* :TODO */}
-          <Link href='/idk'>Tenders</Link>              <div>|</div>
+          <Link href='/tenders'>Tenders</Link>              <div>|</div>
           <Link href='/idk'>AIMS</Link>                 <div>|</div>
           <Link href='/idk'>Students Fee Portal</Link>
         </div>

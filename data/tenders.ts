@@ -1,6 +1,4 @@
-import { toDateString, toDateTimeString } from '@/lib/utils';
-
-const rawTenders: Tender[] = [
+export const tenders: Tender[] = [
   {
     cancelled: false,
     corrections: [],
@@ -18,6 +16,7 @@ const rawTenders: Tender[] = [
     publishDate: '2024-05-16',
     submissionDeadline: '2024-05-27T17:00',
     title: 'Expression of Interest (Hostel Accommodation for Boys)',
+    updatedAt: 5,
   },
   {
     cancelled: true,
@@ -38,6 +37,7 @@ const rawTenders: Tender[] = [
     submissionDeadline: '2024-04-01T14:00',
     title:
       'Providing Partition Wall, Doors and other civil works at g-block IIIT Dharwad',
+    updatedAt: 4,
   },
   {
     cancelled: false,
@@ -57,6 +57,7 @@ const rawTenders: Tender[] = [
     submissionDeadline: '2022-01-28T15:00',
     title:
       'Providing, Supplying, Installing, Testing, Deployment and Commissioning of GPU based Server at IIIT Dharwad.',
+    updatedAt: 3,
   },
   {
     cancelled: false,
@@ -72,6 +73,7 @@ const rawTenders: Tender[] = [
     submissionDeadline: '2021-01-04T15:00',
     title:
       'Providing, Supplying, Installing, Testing and Commissioning of Home Appliances (TVs & Dryers) at IIIT Dharwad campus',
+    updatedAt: 2,
   },
   {
     cancelled: false,
@@ -82,6 +84,7 @@ const rawTenders: Tender[] = [
     submissionDeadline: '2020-01-31T15:00',
     title:
       'Notice Inviting Tender for Supply, Installation, Demonstration, and Training for RFID based Library Automation Setup at IIIT Dharwad',
+    updatedAt: 1,
   },
   {
     cancelled: false,
@@ -92,27 +95,6 @@ const rawTenders: Tender[] = [
     submissionDeadline: '2019-11-18T12:00',
     title:
       'NIT for Supply, Installation, Demonstration and Training for Audio Video Studio Setup at IIIT Dharwad',
+    updatedAt: 0,
   },
 ];
-
-export const tenders = rawTenders.map((tender) => ({
-  ...tender,
-  publishDate: Date.parse(tender.publishDate),
-  submissionDeadline: Date.parse(tender.submissionDeadline),
-}));
-
-const now = Date.now();
-
-export let active: Tender[] = [];
-export let archive: Tender[] = [];
-
-for (const tender of tenders) {
-  const newTender = {
-    ...tender,
-    publishDate: toDateString(tender.publishDate),
-    submissionDeadline: toDateTimeString(tender.submissionDeadline),
-  };
-  if (tender.cancelled || tender.submissionDeadline <= now)
-    archive.push(newTender);
-  else active.push(newTender);
-}
