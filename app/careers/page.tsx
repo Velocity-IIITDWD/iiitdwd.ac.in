@@ -1,9 +1,11 @@
 'use client';
 
 import React, { useState } from 'react';
-import Card from '@/components/Card';
+import Card from '@/app/careers/Card';
 import { jobsdata } from '@/data/jobs';
 import Image from 'next/image';
+ 
+
 
 const Page = () => {
   const [selectedcategory, setselectedcategory] = useState('');
@@ -12,9 +14,10 @@ const Page = () => {
 
   const handledropdown = (event: any) => {
     setselectedcategory(event.target.value);
-    console.log(event.target.value);
-    console.log(search);
+  
+  
   };
+
 
   const handlesearch = () => {
     setsearch(searchquery);
@@ -30,14 +33,14 @@ const Page = () => {
     <>
       <div className="content flex flex-col items-center pt-[3vh] overflow-x-hidden w-[100%] mb-7">
         <div id="temp" className="textcont pb-[2vh]">
-          <div className="Head text-center font-bold z-10 text-[#091d3f] text-6xl p-8">
+          <div className="hover:scale-[1.01]  hover:drop-shadow-2xl transition Head text-center font-bold z-10 text-[#091d3f] text-6xl p-8">
             Careers
           </div>
         </div>
         <div className="dropdownNsearch px-2 flex items-center gap-5 justify-center w-[100vw] h-10">
-          <div className="Dropdown flex items-center">
+          <div className="Dropdown hover:scale-[1.05]  hover:drop-shadow-2xl transition flex items-center">  
             <select
-              className="w-[20vw] pl-2 text-black text-xl md:text-3xl bg-dwd-secondary2 outline-none h-9 rounded-lg"
+              className="w-[20vw] pl-2 text-black text-lg md:text-3xl bg-dwd-secondary2 outline-none h-9 rounded-lg"
               onChange={handledropdown}
               name="category"
               id="category"
@@ -48,7 +51,7 @@ const Page = () => {
               <option value="others">Others</option>
             </select>
           </div>
-          <div className="search flex items-center">
+          <div className="search hover:scale-[1.01]  hover:drop-shadow-2xl transition flex items-center">
             <input
               className="bg-white w-[60vw] md:w-[60vw] lg:w-[20vw] h-9 rounded-[10px_0px_0px_10px] text-center border border-black text-2xl md:text-3xl"
               onChange={(e) => {
@@ -99,6 +102,9 @@ const Page = () => {
               date={jobdata.date}
               GI={jobdata.GI}
               Apllication={jobdata.Apllication}
+              Applicationoffline={jobdata.Applicationoffline}
+              StatusofApplications={jobdata.StatusofApplications}
+              Addendum={jobdata.Addendum}
             />
           ))}
         </div>
