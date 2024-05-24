@@ -130,8 +130,8 @@ let ProfileProps: Array<ProfileProp> = [
       },
       card: {
         photo: '/brand/logo-square-light.png',
-        designation: 'Humanities & Science',
-        department: 'Computer Science & Engineering',
+        designation: 'Assistant professor',
+        department: 'Electronics and Communication Engineering',
         mail_id: 'anushree@iiitdwd.ac.in',
         cabin_number: '?????',
       },
@@ -151,8 +151,8 @@ let ProfileProps: Array<ProfileProp> = [
       },
       card: {
         photo: '/brand/logo-square-light.png',
-        designation: 'Humanities & Science',
-        department: 'Computer Science & Engineering',
+        designation: 'Assistant professor',
+        department: 'Humanities & Science',
         mail_id: 'anushree@iiitdwd.ac.in',
         cabin_number: '?????',
       },
