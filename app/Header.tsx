@@ -174,25 +174,33 @@ function Header() {
               <NavigationMenuTrigger className='submenu-trigger'>About</NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul className='flex flex-col gap-4 w-[250px] p-4 text-sm'>
-                  <NavigationMenuLink href='/about#introduction'>
-                    <div className='hover:bg-accent p-2 rounded-md w-full'>
-                      Introduction
-                    </div>
+                  <NavigationMenuLink asChild>
+                    <Link href='/about#introduction'>
+                      <div className='hover:bg-accent p-2 rounded-md w-full'>
+                        Introduction
+                      </div>
+                    </Link>
                   </NavigationMenuLink>
-                  <NavigationMenuLink href='/about#directors-message'>
-                    <div className='hover:bg-accent p-2 rounded-md w-full'>
-                      Director&apos;s Message
-                    </div>
+                  <NavigationMenuLink asChild href='/about#directors-message'>
+                    <Link href='/about#directors-message'>
+                      <div className='hover:bg-accent p-2 rounded-md w-full'>
+                        Director&apos;s Message
+                      </div>
+                    </Link>
                   </NavigationMenuLink>
-                  <NavigationMenuLink href='/about#family'>
-                    <div className='hover:bg-accent p-2 rounded-md w-full'>
-                      Our Family
-                    </div>
+                  <NavigationMenuLink asChild>
+                    <Link href='/about#family'>
+                      <div className='hover:bg-accent p-2 rounded-md w-full'>
+                        Our Family
+                      </div>
+                    </Link>
                   </NavigationMenuLink>
-                  <NavigationMenuLink href='/about#vision'>
-                    <div className='hover:bg-accent p-2 rounded-md w-full'>
-                      Vision
-                    </div>
+                  <NavigationMenuLink asChild>
+                    <Link href='/about#vision'>
+                      <div className='hover:bg-accent p-2 rounded-md w-full'>
+                        Vision
+                      </div>
+                    </Link>
                   </NavigationMenuLink>
                 </ul>
               </NavigationMenuContent>
