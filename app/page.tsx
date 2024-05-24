@@ -38,7 +38,7 @@ export default function Home() {
         parallaxSection.style.backgroundPosition = backgroundPosition;
       };
 
-      const handleIntersection = (entries) => {
+      const handleIntersection = (entries: any) => {
         const [entry] = entries;
         if (entry.isIntersecting) {
           window.addEventListener('scroll', handleScroll); // Add event listener
