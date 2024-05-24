@@ -10,6 +10,8 @@ import DirectorBriefProfile from '@/components/about/DirectorBriefProfile';
 import AboutIIIT from '@/components/about/AboutIIIT';
 import ShortCampusVideo from '@/components/about/ShortCampusVideo';
 
+import './smoothScroll.css';
+
 const AboutPage = () => {
   const about: About = aboutData;
 
