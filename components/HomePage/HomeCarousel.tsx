@@ -39,7 +39,11 @@ const HomeCarousel: React.FC<PropType> = ({ options, children }) => {
   return (
     <section className="relative">
       <div className="overflow-hidden w-full" ref={emblaRef}>
-        <div className="flex gap-3">{children}</div>
+        <div className="flex gap-3">
+          {children}
+          {/* Wrap around elements spacing */}
+          <div className='w-3 invisible' />
+        </div>
       </div>
 
       <button
