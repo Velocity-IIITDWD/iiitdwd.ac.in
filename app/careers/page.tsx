@@ -95,17 +95,7 @@ const Page = () => {
             </div>
           </div>
           {filteredJobs.map((jobdata, index) => (
-            <Card
-              key={index}
-              title={jobdata.title}
-              details={jobdata.details}
-              date={jobdata.date}
-              GI={jobdata.GI}
-              Apllication={jobdata.Apllication}
-              Applicationoffline={jobdata.Applicationoffline}
-              StatusofApplications={jobdata.StatusofApplications}
-              Addendum={jobdata.Addendum}
-            />
+            <Card key={index} jobdata={jobdata} />
           ))}
         </div>
       </div>
