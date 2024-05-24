@@ -42,7 +42,7 @@ const Card = (props: propstype) => {
             <div className=" hidden lg:flex   card py-4 px-4 w-[100%] mt-3  flex-col gap-3  bg-white rounded-lg ">
 
 
-                <div className="tilte w-1/2 font-bold text-4xl">  {props.title}</div>
+                <div className="tilte w-1/2 font-bold text-3xl">  {props.title}</div>
 
 
                 <div className="InstructionnApply flex gap-2 justify-between items-center ">
