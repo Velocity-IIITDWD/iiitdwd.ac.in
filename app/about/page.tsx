@@ -9,43 +9,56 @@ import CoreValues from '@/components/about/CoreValues';
 import DirectorBriefProfile from '@/components/about/DirectorBriefProfile';
 import AboutIIIT from '@/components/about/AboutIIIT';
 import ShortCampusVideo from '@/components/about/ShortCampusVideo';
+import { Metadata } from 'next';
 
-const aboutPage = () => {
-    const about: About = aboutData;
+import './smoothScroll.css';
 
-    return (
-        <div className="w-full flex flex-col items-center">
-            <div className="w-full min-h-40 sm:min-h-72 lg:min-h-96 xl:min-h-112 relative">
-                <Image
-                    src={main_gate}
-                    alt={'Image of Main Gate'}
-                    fill={true}
-                    priority
-                    style={{
-                        objectFit: 'cover',
-                        objectPosition: '70% 47%',
-                    }}
-                />
-            </div>
+const AboutPage = () => {
+  const about: About = aboutData;
 
-            <AboutIIIT aboutText={about.aboutText} />
+  return (
+    <div className="w-full flex flex-col items-center">
+      <div className="w-full min-h-40 sm:min-h-72 lg:min-h-96 xl:min-h-112 relative">
+        <Image
+          src={main_gate}
+          alt={'Image of Main Gate'}
+          fill={true}
+          priority
+          style={{
+            objectFit: 'cover',
+            objectPosition: '70% 47%',
+          }}
+        />
+      </div>
 
-            <DirectorsMessage
-                heading={about.directorsMessage.heading}
-                directorName={about.directorName}
-                text={about.directorsMessage.text}
-            />
-            <DirectorBriefProfile
-                directorName={about.directorName}
-                briefProfile={about.briefProfile}
-            />
-            <OurFamily />
-            <OurVision vision={about.vision} />
-            <OurMission missions={about.missions} />
-            <CoreValues coreValues={about.coreValues} />
-            <ShortCampusVideo />
-        </div>
-    );
+      <div id='introduction' />
+      <AboutIIIT aboutText={about.aboutText} />
+
+      <div id='directors-message' />
+      <DirectorsMessage
+        heading={about.directorsMessage.heading}
+        directorName={about.directorName}
+        text={about.directorsMessage.text}
+      />
+      <DirectorBriefProfile
+        directorName={about.directorName}
+        briefProfile={about.briefProfile}
+      />
+
+      <div id='family' />
+      <OurFamily />
+
+      <div id='vision' />
+      <OurVision vision={about.vision} />
+      <OurMission missions={about.missions} />
+      <CoreValues coreValues={about.coreValues} />
+      <ShortCampusVideo />
+    </div>
+  );
 };
 
-export default aboutPage;
+export default AboutPage;
+
+export const metadata: Metadata = {
+  title: 'About',
+};
