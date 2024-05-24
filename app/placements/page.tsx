@@ -6,6 +6,7 @@ import '../globals.css';
 // pages/index.tsx
 
 import EmblaCarousel from '@/components/EmblaCarousel';
+import { Metadata } from 'next';
 
 
 //import Carousel from "@/components/Carousel";
@@ -232,4 +233,6 @@ export default function Home() {
   );
 }
 
-
+export const metadata: Metadata = {
+  title: 'Placements',
+};

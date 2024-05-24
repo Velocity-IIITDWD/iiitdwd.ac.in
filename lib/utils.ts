@@ -1,13 +1,14 @@
-import { type ClassValue, clsx } from 'clsx'
-import { twMerge } from 'tailwind-merge'
+import { type ClassValue, clsx } from 'clsx';
+import { twMerge } from 'tailwind-merge';
 
 export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs))
+  return twMerge(clsx(inputs));
 }
 
 export function toDateString(date: number) {
   const dateObj = new Date(date);
-  return dateObj.toLocaleString('default', {
+  return dateObj.toLocaleString('en-GB', {
+    // 'default' causes hydration error if client and server have different regions set
     day: '2-digit',
     month: 'short',
     year: 'numeric',
@@ -16,7 +17,7 @@ export function toDateString(date: number) {
 
 export function toDateTimeString(date: number) {
   const dateObj = new Date(date);
-  return dateObj.toLocaleString('default', {
+  return dateObj.toLocaleString('en-GB', {
     day: '2-digit',
     month: 'short',
     year: 'numeric',

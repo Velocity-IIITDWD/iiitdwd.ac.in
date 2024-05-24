@@ -1,3 +1,5 @@
+import { Metadata } from 'next';
+
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <div className="flex justify-center">
@@ -5,3 +7,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     </div>
   );
 }
+
+export const metadata: Metadata = {
+  title: 'Admissions',
+};

@@ -9,6 +9,7 @@ import CoreValues from '@/components/about/CoreValues';
 import DirectorBriefProfile from '@/components/about/DirectorBriefProfile';
 import AboutIIIT from '@/components/about/AboutIIIT';
 import ShortCampusVideo from '@/components/about/ShortCampusVideo';
+import { Metadata } from 'next';
 
 const AboutPage = () => {
   const about: About = aboutData;
@@ -55,3 +56,7 @@ const AboutPage = () => {
 };
 
 export default AboutPage;
+
+export const metadata: Metadata = {
+  title: 'About',
+};
