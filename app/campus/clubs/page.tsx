@@ -154,7 +154,7 @@ const ClubCard: FC<{ clubName: string; aboutText: string; members: { name: strin
         )}
         <br />
         <div className="flex justify-center space-x-4">
-          <a href="https://www.instagram.com" className="flex gap-2 hover:text-pink-600 hover:duration-800 hover:animate-pulse">
+          <a href="https://www.instagram.com" className="flex gap-2 hover:text-pink-600 hover:duration-800 hover:animate-ping">
             <Instagram size="2rem" />
           </a>
           <a href="https://www.linkedin.com/in/iiitdharwad/" className="flex gap-2 hover:text-blue-800 hover:duration-800 hover:animate-pulse">
