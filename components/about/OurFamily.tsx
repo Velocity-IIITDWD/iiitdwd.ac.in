@@ -26,6 +26,18 @@ const OurFamily = () => {
       </Link>
       <Link
         className="bg-dwd-primary hover:bg-dwd-secondary2/40 border-2 p-3 border-dwd-primary hover:text-dwd-primary text-white text-center rounded-full text-lg md:text-xl"
+        href={'/staff'}
+      >
+        Chairperson's Message
+      </Link>
+      <Link
+        className="bg-dwd-primary hover:bg-dwd-secondary2/40 border-2 p-3 border-dwd-primary hover:text-dwd-primary text-white text-center rounded-full text-lg md:text-xl"
+        href={'/staff'}
+      >
+        Former Directors
+      </Link>
+      <Link
+        className="bg-dwd-primary hover:bg-dwd-secondary2/40 border-2 p-3 border-dwd-primary hover:text-dwd-primary text-white text-center rounded-full text-lg md:text-xl"
         href={'/financeCommittee'}
       >
         Finance Committee
@@ -42,9 +54,8 @@ const OurFamily = () => {
       >
         Staff
       </Link>
-      <div className="hidden md:flex"></div>
       <Link
-        className="bg-dwd-primary hover:bg-dwd-secondary2/40 border-2 p-3 border-dwd-primary hover:text-dwd-primary text-white text-center rounded-full text-lg md:text-xl"
+        className="bg-dwd-primary col-span-1 sm:col-span-2 md:col-span-1 hover:bg-dwd-secondary2/40 border-2 p-3 border-dwd-primary hover:text-dwd-primary text-white text-center rounded-full text-lg md:text-xl"
         href={'/buildingAndWorksCommittee'}
       >
         Building and Works Committee
