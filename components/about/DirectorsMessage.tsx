@@ -14,7 +14,7 @@ const DirectorsMessage = ({
   return (
     <div className="flex p-4 mt-4 flex-col items-center justify-center">
       <span className="text-2xl md:text-4xl mb-8 text-dwd-primary text-center w-full font-semibold">
-        Director's Message
+        Director&apos;s Message
       </span>
       <p className="p-4 flex flex-col items-center md:inline content-center">
         <Image
