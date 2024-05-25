@@ -84,7 +84,7 @@ export default function Home() {
   return (
     <div>
       <div className="container">
-        <div className="text-4xl font-extrabold text-[#013365] text-center mt-5">Career Guidance Cell</div>
+        <div className="text-4xl font-extrabold text-[#013365] text-center mt-5 CGC">Career Guidance Cell</div>
       
         <div className=" shortbox text-[1.8rem] text-[#013365] font-extrabold ml-[20%] mt-20">Overview
           <div className=" whatsapp text-[1rem] text-black font-light mt-5 mr-[20%]">The Career Guidance Cell at IIIT Dharwad is driven by students and assisted by faculty for career development of students.</div>

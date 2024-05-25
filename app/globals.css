@@ -276,6 +276,19 @@ margin-right: 9.5%;
   }
 }
 
+@media (max-width:400px) {
+  .buttons{
+    white-space:initial;
+  }
+  .slide-content{
+    width:290px;
+  }
+  .CGC{
+    width: 100%;
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+}
 .slide-in-left {
   animation: slide-in-left 1s ease-out forwards;
 }
