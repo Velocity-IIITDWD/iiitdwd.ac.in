@@ -118,11 +118,14 @@ function Header() {
               <MenuIcon size="2rem" />
             </div>
           </SheetTrigger>
+
           <SheetContent side="left">
             <div className="flex flex-col gap-2 mt-4 -mr-2">
-              <Link href="/" className="hover:underline">
-                Home
-              </Link>
+              <SheetTrigger asChild>
+                <Link href="/" className="hover:underline">
+                  Home
+                </Link>
+              </SheetTrigger>
 
               <details className="group">
                 <summary className="flex items-center justify-between focus:outline-none">
@@ -133,34 +136,42 @@ function Header() {
                   />
                 </summary>
                 <div className="mt-2 ml-8 flex flex-col gap-2">
-                  <Link
-                    className="hover:underline"
-                    href="/about#introduction"
-                    key="introduction"
-                  >
-                    Introduction
-                  </Link>
-                  <Link
-                    className="hover:underline"
-                    href="/about#directors-message"
-                    key="message"
-                  >
-                    Director&apos;s Message
-                  </Link>
-                  <Link
-                    className="hover:underline"
-                    href="/about#family"
-                    key="organization"
-                  >
-                    Our Family
-                  </Link>
-                  <Link
-                    className="hover:underline"
-                    href="/about#vision"
-                    key="vision"
-                  >
-                    Vision
-                  </Link>
+                  <SheetTrigger asChild>
+                    <Link
+                      className="hover:underline"
+                      href="/about#introduction"
+                      key="introduction"
+                    >
+                      Introduction
+                    </Link>
+                  </SheetTrigger>
+                  <SheetTrigger asChild>
+                    <Link
+                      className="hover:underline"
+                      href="/about#directors-message"
+                      key="message"
+                    >
+                      Director&apos;s Message
+                    </Link>
+                  </SheetTrigger>
+                  <SheetTrigger asChild>
+                    <Link
+                      className="hover:underline"
+                      href="/about#family"
+                      key="organization"
+                    >
+                      Our Family
+                    </Link>
+                  </SheetTrigger>
+                  <SheetTrigger asChild>
+                    <Link
+                      className="hover:underline"
+                      href="/about#vision"
+                      key="vision"
+                    >
+                      Vision
+                    </Link>
+                  </SheetTrigger>
                 </div>
               </details>
 
@@ -175,18 +186,26 @@ function Header() {
                   />
                 </summary>
                 <div className="mt-2 ml-8 flex flex-col gap-2">
-                  <Link className="hover:underline" href="/campus/facilities">
-                    Facilities
-                  </Link>
-                  <Link className="hover:underline" href="/campus/clubs">
-                    Clubs
-                  </Link>
-                  <Link className="hover:underline" href="/campus/events">
-                    Events
-                  </Link>
-                  <Link className="hover:underline" href="/campus/magazine">
-                    Magazine
-                  </Link>
+                  <SheetTrigger asChild>
+                    <Link className="hover:underline" href="/campus/facilities">
+                      Facilities
+                    </Link>
+                  </SheetTrigger>
+                  <SheetTrigger asChild>
+                    <Link className="hover:underline" href="/campus/clubs">
+                      Clubs
+                    </Link>
+                  </SheetTrigger>
+                  <SheetTrigger asChild>
+                    <Link className="hover:underline" href="/campus/events">
+                      Events
+                    </Link>
+                  </SheetTrigger>
+                  <SheetTrigger asChild>
+                    <Link className="hover:underline" href="/campus/magazine">
+                      Magazine
+                    </Link>
+                  </SheetTrigger>
                 </div>
               </details>
 
@@ -199,12 +218,16 @@ function Header() {
                   />
                 </summary>
                 <div className="mt-2 ml-8 flex flex-col gap-2">
-                  <Link className="hover:underline" href="/admissions/btech">
-                    BTech
-                  </Link>
-                  <Link className="hover:underline" href="/admissions/phd">
-                    PhD
-                  </Link>
+                  <SheetTrigger asChild>
+                    <Link className="hover:underline" href="/admissions/btech">
+                      BTech
+                    </Link>
+                  </SheetTrigger>
+                  <SheetTrigger asChild>
+                    <Link className="hover:underline" href="/admissions/phd">
+                      PhD
+                    </Link>
+                  </SheetTrigger>
                 </div>
               </details>
 
@@ -217,12 +240,19 @@ function Header() {
                   />
                 </summary>
                 <div className="mt-2 ml-8 flex flex-col gap-2">
-                  <Link className="hover:underline" href="/faculty">
-                    Faculty
-                  </Link>
-                  <Link className="hover:underline" href="/academics/research">
-                    Research
-                  </Link>
+                  <SheetTrigger asChild>
+                    <Link className="hover:underline" href="/faculty">
+                      Faculty
+                    </Link>
+                  </SheetTrigger>
+                  <SheetTrigger asChild>
+                    <Link
+                      className="hover:underline"
+                      href="/academics/research"
+                    >
+                      Research
+                    </Link>
+                  </SheetTrigger>
                   <details className="group/sub">
                     <summary className="flex items-center justify-between focus:outline-none">
                       <div>Departments</div>
@@ -232,24 +262,30 @@ function Header() {
                       />
                     </summary>
                     <div className="mt-2 ml-8 flex flex-col gap-2">
-                      <Link
-                        className="hover:underline"
-                        href="/academics/departments/cse"
-                      >
-                        CSE
-                      </Link>
-                      <Link
-                        className="hover:underline"
-                        href="/academics/departments/dsai"
-                      >
-                        DSAI
-                      </Link>
-                      <Link
-                        className="hover:underline"
-                        href="/academics/departments/ece"
-                      >
-                        ECE
-                      </Link>
+                      <SheetTrigger asChild>
+                        <Link
+                          className="hover:underline"
+                          href="/academics/departments/cse"
+                        >
+                          CSE
+                        </Link>
+                      </SheetTrigger>
+                      <SheetTrigger asChild>
+                        <Link
+                          className="hover:underline"
+                          href="/academics/departments/dsai"
+                        >
+                          DSAI
+                        </Link>
+                      </SheetTrigger>
+                      <SheetTrigger asChild>
+                        <Link
+                          className="hover:underline"
+                          href="/academics/departments/ece"
+                        >
+                          ECE
+                        </Link>
+                      </SheetTrigger>
                     </div>
                   </details>
                   {/* <Link className='hover:underline' href='/academics/departments'>Departments</Link> */}
@@ -271,18 +307,11 @@ function Header() {
                 </Link>
               </SheetTrigger>
 
-              <Link href="/placements" className="hover:underline">
-                Placements
-              </Link>
-              <Link href="/tenders" className="hover:underline">
-                Tenders
-              </Link>
-              <Link href="/careers" className="hover:underline">
-                Jobs
-              </Link>
-              <Link href="/contact" className="hover:underline">
-                Contact Us
-              </Link>
+              <SheetTrigger asChild>
+                <Link href="/contact" className="hover:underline">
+                  Contact Us
+                </Link>
+              </SheetTrigger>
             </div>
           </SheetContent>
         </Sheet>
