@@ -17,6 +17,7 @@ import Image from 'next/image';
 import MainCarousel from '@/components/HomePage/MainCarousel';
 import HomeCarousel from '@/components/HomePage/HomeCarousel';
 import { GalleryImages } from '@/data/gallery';
+import { events } from '@/data/events';
 
 export default function Home() {
   const parallaxSectionRef = useRef<HTMLDivElement | null>(null);
@@ -200,7 +201,7 @@ export default function Home() {
                   </p>
                   <p className="text-sm">{item?.Header2}</p>
                   <Link
-                    href={item?.link}
+                    href="campus/events"
                     className="flex w-fit rounded hover:bg-dwd-primary hover:text-white transition duration-300 border border-dwd-primary py-2 px-4 gap-2"
                   >
                     Read More
@@ -224,43 +225,39 @@ export default function Home() {
           className="w-full relative overflow-hidden"
         >
           <CarouselContent>
-            {Array.from({ length: 10 }).map((_, index) => (
+            {events.map((_, index) => (
+              
               <CarouselItem key={index} className="">
                 <div className="p-1">
                   <Card>
                     <CardContent className="flex justify-center flex-col-reverse lg:flex-row items-center gap-6 p-6">
                       <div className="flex text-justify flex-1 flex-col h-full text-dwd-primary gap-6">
                         <p className="text-xl font-semibold mb-4">
-                          Event Heading - Drone Sessions
+                          {events[index].text}
                         </p>
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. Mauris at mauris eget odio pharetra placerat.
-                          Aliquam ultricies molestie diam, vel mollis quam porta
-                          sit amet. Ut feugiat felis quis sapien sodales, quis
-                          lacinia risus laoreet. Nullam interdum in ex eget
-                          porttitor. Proin felis magna, sodales id dui nec,
-                          cursus porta magna. Fusce sapien orci, scelerisque ut
-                          efficitur ut, tempus ut lacus.
+                        <p>{events[index].aboutEvent}</p>
+                        <p className="font-semibold mb-4">
+                          Date- {events[index].details.startDate}
                         </p>
-                        <p>
-                          Ut fringilla faucibus purus eget malesuada. Duis nec
-                          tempus leo. In laoreet, erat vitae iaculis molestie,
-                          mauris augue efficitur dui, vitae viverra dolor orci
-                          eget sem. Aliquam ut rhoncus risus, quis fermentum mi.
-                          Etiam nec orci nec est dignissim lobortis. Lorem ipsum
-                          dolor sit amet, consectetur adipiscing elit.
-                        </p>
-                        <p className="font-semibold mb-4">Date- XX/XX/XXXX</p>
                         <Link
-                          href={'/'}
+                         href={`/campus/events/${index+1}`}
                           className="flex w-fit rounded hover:bg-dwd-primary hover:text-white transition duration-300 border border-dwd-primary py-2 px-4 gap-2"
                         >
                           Read More
                           <ExternalLink />
                         </Link>
                       </div>
-                      <div className="w-full flex-none aspect-square lg:w-1/3 bg-gray-300 rounded shadow"></div>
+                      <div className="w-full flex-none aspect-square lg:w-1/3 bg-gray-30 rounded shadow">
+                        <Image
+                          alt="main image"
+                          src={events[index].href}
+                          width={0}
+                          height={0}
+                          sizes="100%"
+                          style={{ height: '100%', width: '100%' }}
+                          className="aspect-[4/3] overflow-hidden object-cover object-center"
+                        />
+                      </div>
                     </CardContent>
                   </Card>
                 </div>
