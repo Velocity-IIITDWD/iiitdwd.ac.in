@@ -63,18 +63,18 @@ const List = ({ ll }: ListProps) => {
     const f_array = final.map((arr) => (
       <li
         key={arr.id}
-        className="bg-dwd-secondary2 hover:bg-dwd-secondary1 flex-col flex-none justify-center text-background px-6 py-6 rounded-lg w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 mb-4 "
+        className="bg-dwd-secondary2 hover:bg-dwd-secondary1 flex grid justify-items-center flex-none justify-center text-background px-6 py-6 rounded-lg w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 mb-4 "
       >
         <Link href={`/faculty/${arr.id}`}>
-          <div className="flex flex-col gap-2 ">
+          <div className="flex flex-col gap-2">
             <Image
               src={arr.content.card.photo}
               width={0}
               height={0}
               sizes="100%"
-              style={{ height: '100%', width: 'auto' }}
-              alt="IIIT Dharwad Logo"
-              className="block lg:hidden xl:block mr-auto"
+              style={{ height: '100%', width: '250px' }}
+              alt={arr.content.head.name}
+              className="object-cover block  xl:block mr-auto"
             />
             <h3 className="text-dwd-primary  font-bold">
               {arr.content.head.name}
