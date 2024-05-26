@@ -4,10 +4,101 @@ import React from 'react';
 import { ChevronDownIcon, MenuIcon } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { Sheet, SheetClose, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger, NavigationMenuContent, navigationMenuTriggerStyle } from '@/components/ui/navigation-menu';
 
 import { announcements } from '@/data/announcements';
+
+type NavmenuItem = {
+  text: string,
+  // Atleast one of href or subGroups must be provided, im not enforcing it because types become hard to read
+  href?: string,
+  subGroups?: SubmenuGroup[],
+};
+
+type SubmenuGroup = {
+  // For desktop nav, if title is absent then the title element will be omitted.
+  // The title will **not** be omitted if this is an empty string.
+  // For the mobile nav, if title is absent or empty then the items will not be put into a collapsible.
+  title?: string,
+  items: SubmenuItem[],
+  // (Default 150) Group width in px for when rendering on desktop
+  width?: number
+};
+
+type SubmenuItem = {
+  text: string,
+  subText?: string,
+  href: string
+  hideOnMobile?: boolean,
+  hideOnDesktop?: boolean,
+};
+
+const navmenuItems: NavmenuItem[] = [
+  { text: 'Home', href: '/' },
+  {
+    text: 'About',
+    href: '/about',
+    subGroups: [{
+      width: 250,
+      items: [
+        { text: 'Introduction', href: '/about#introduction' },
+        { text: 'Director\'s Message', href: '/about#directors-message' },
+        { text: 'Our Family', href: '/about#family' },
+        { text: 'Vision', href: '/about#vision' },
+      ]
+    }]
+  },
+  {
+    text: 'Campus',
+    href: '/campus',
+    subGroups: [{
+      items: [
+        { text: 'Facilities', href: '/campus/facilities' },
+        { text: 'Clubs', href: '/campus/clubs' },
+        { text: 'Events', href: '/campus/events' },
+        { text: 'Magazine', href: '/campus/magazine' },
+      ]
+    }]
+  },
+  {
+    text: 'Admissions',
+    href: '/admissions',
+    subGroups: [{
+      items: [
+        { text: 'BTech', href: '/admissions/btech' },
+        { text: 'PhD', href: '/admissions/phd' },
+      ]
+    }]
+  },
+  {
+    text: 'Academics',
+    href: '/academics',
+    subGroups: [
+      {
+        title: '',
+        items: [
+          { text: 'Overview', href: '/academics' },
+          { text: 'Faculty', href: '/academics/faculty' },
+          { text: 'Research', href: '/academics/research' },
+        ]
+      },
+      {
+        title: 'Departments',
+        width: 250,
+        items: [
+          { text: 'CSE', subText: 'Computer Science and Engineering', href: '/academics/departments/cse' },
+          { text: 'DSAI', subText: 'Data Science and Artifical Intelligence', href: '/academics/departments/dsai' },
+          { text: 'ECE', subText: 'Electronics and Communication Engineering', href: 'academics/departments/ece' },
+        ]
+      }
+    ]
+  },
+  { text: 'Placements', href: '/placements' },
+  { text: 'Tenders', href: '/tenders' },
+  { text: 'Jobs', href: '/jobs' },
+  { text: 'Contact Us', href: '/contact' },
+];
 
 function onNavChange() {
   setTimeout(() => {
@@ -50,10 +141,9 @@ function Header() {
           </div>
         </div>}
         <div className='flex gap-2 lg:w-1/5 text-center lg:text-left text-xs *:odd:font-bold'>
-          {/* :TODO */}
-          <Link href='/tenders'>Tenders</Link>              <div>|</div>
-          <Link href='/idk'>AIMS</Link>                 <div>|</div>
-          <Link href='/idk'>Students Fee Portal</Link>
+          <Link href='/tenders'>Tenders</Link><div>|</div>
+          <Link href='https://aims.iiitdwd.ac.in/aims/'>AIMS</Link><div>|</div>
+          <Link href='https://www.onlinesbi.sbi/sbicollect/icollecthome.htm?corpID=873279'>Students Fee Portal</Link>
         </div>
         <div className='hidden lg:block w-1/5'></div>
       </div>
@@ -90,244 +180,98 @@ function Header() {
           </SheetTrigger>
           <SheetContent side='left'>
             <div className='flex flex-col gap-2 mt-4 -mr-2'>
-              <Link href='/' className='hover:underline'>Home</Link>
+              {navmenuItems.map(item => {
+                const dropdownTrigger = item.href
+                  ? <SheetClose key={item.text} asChild><Link key={item.text} className='hover:underline' href={item.href}>{item.text}</Link></SheetClose>
+                  : <div>{item.text}</div>
 
-              <details className='group'>
-                <summary className='flex items-center justify-between focus:outline-none'>
-                  <div>About</div>
-                  <ChevronDownIcon size='1rem' className='rotate-0 group-open:rotate-180 transition-transform duration-300' />
-                </summary>
-                <div className='mt-2 ml-8 flex flex-col gap-2'>
-                  <Link className='hover:underline' href='/about#introduction' key='introduction'>Introduction</Link>
-                  <Link className='hover:underline' href='/about#directors-message' key='message'>Director&apos;s Message</Link>
-                  <Link className='hover:underline' href='/about#family' key='organization'>Our Family</Link>
-                  <Link className='hover:underline' href='/about#vision' key='vision'>Vision</Link>
-                </div>
-              </details>
+                if (!item?.subGroups?.length) return dropdownTrigger;
 
-              <details className='group'>
-                <summary className='flex items-center justify-between focus:outline-none'>
-                  <Link className='hover:underline' href='/campus'>Campus</Link>
-                  <ChevronDownIcon size='1rem' className='rotate-0 group-open:rotate-180 transition-transform duration-300' />
-                </summary>
-                <div className='mt-2 ml-8 flex flex-col gap-2'>
-                  <Link className='hover:underline' href='/campus/facilities'>Facilities</Link>
-                  <Link className='hover:underline' href='/campus/clubs'>Clubs</Link>
-                  <Link className='hover:underline' href='/campus/events'>Events</Link>
-                  <Link className='hover:underline' href='/campus/magazine'>Magazine</Link>
-                </div>
-              </details>
-
-              <details className='group'>
-                <summary className='flex items-center justify-between focus:outline-none'>
-                  <div>Admissions</div>
-                  <ChevronDownIcon size='1rem' className='rotate-0 group-open:rotate-180 transition-transform duration-300' />
-                </summary>
-                <div className='mt-2 ml-8 flex flex-col gap-2'>
-                  <Link className='hover:underline' href='/admissions/btech'>BTech</Link>
-                  <Link className='hover:underline' href='/admissions/phd'>PhD</Link>
-                </div>
-              </details>
-
-              <details className='group'>
-                <summary className='flex items-center justify-between focus:outline-none'>
-                  <div>Academics</div>
-                  <ChevronDownIcon size='1rem' className='rotate-0 group-open:rotate-180 transition-transform duration-300' />
-                </summary>
-                <div className='mt-2 ml-8 flex flex-col gap-2'>
-                  <Link className='hover:underline' href='/faculty'>Faculty</Link>
-                  <Link className='hover:underline' href='/academics/research'>Research</Link>
-                  <details className='group/sub'>
+                return (
+                  <details key={item.text} className='group'>
                     <summary className='flex items-center justify-between focus:outline-none'>
-                      <div>Departments</div>
-                      <ChevronDownIcon size='1rem' className='rotate-0 group-open/sub:rotate-180 transition-transform duration-300' />
+                      {dropdownTrigger}
+                      <ChevronDownIcon size='1rem' className='rotate-0 group-open:rotate-180 transition-transform duration-300' />
                     </summary>
-                    <div className='mt-2 ml-8 flex flex-col gap-2'>
-                      <Link className='hover:underline' href='/academics/departments/cse'>CSE</Link>
-                      <Link className='hover:underline' href='/academics/departments/dsai'>DSAI</Link>
-                      <Link className='hover:underline' href='/academics/departments/ece'>ECE</Link>
+                    <div className='mt-2 ml-2 pl-6 flex flex-col gap-2 border-l border-l-gray-200'>
+                      {
+                        item.subGroups.map(group => (
+                          !group.title
+                            ? group.items.map(gItem => <Link key={gItem.text} className='hover:underline' href={gItem.href}>{gItem.text}</Link>)
+                            : <details key={group.title} className='group/sub'>
+                              <summary className='flex items-center justify-between focus:outline-none'>
+                                <div>{group.title}</div>
+                                <ChevronDownIcon size='1rem' className='rotate-0 group-open/sub:rotate-180 transition-transform duration-300' />
+                              </summary>
+
+                              <div className='mt-2 ml-2 pl-6 flex flex-col gap-2 border-l border-l-gray-200'>
+                                {
+                                  group.items
+                                    .filter(gItem => !gItem.hideOnMobile)
+                                    .map(gItem => (
+                                      <SheetClose key={gItem.text} asChild>
+                                        <Link className='hover:underline' href={gItem.href}>{gItem.text}</Link>
+                                      </SheetClose>
+                                    ))
+                                }
+                              </div>
+                            </details>
+                        ))
+                      }
                     </div>
                   </details>
-                  {/* <Link className='hover:underline' href='/academics/departments'>Departments</Link> */}
-                </div>
-              </details>
-
-              <Link href='/placements' className='hover:underline'>Placements</Link>
-              <Link href='/tenders' className='hover:underline'>Tenders</Link>
-              <Link href='/careers' className='hover:underline'>Jobs</Link>
-              <Link href='/contact' className='hover:underline'>Contact Us</Link>
+                )
+              })}
             </div>
           </SheetContent>
         </Sheet>
 
-        {/* Desktop navbar shadcn */}
+        {/* Desktop navbar */}
         <NavigationMenu onValueChange={onNavChange} className='ml-auto hidden lg:flex items-center justify-center mr-4 gap-8'>
           <NavigationMenuList>
-            <NavigationMenuItem>
-              <Link href='/' legacyBehavior passHref>
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                  Home
+            {navmenuItems.map(item => {
+              if (!item?.subGroups?.length) return <NavigationMenuItem key={item.text}>
+                <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+                  <Link href={item.href!}>
+                    <div className='hover:bg-accent p-2 rounded-md w-full'>
+                      {item.text}
+                    </div>
+                  </Link>
                 </NavigationMenuLink>
-              </Link>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuTrigger className='submenu-trigger'>About</NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className='flex flex-col gap-4 w-[250px] p-4 text-sm'>
-                  <NavigationMenuLink asChild>
-                    <Link href='/about#introduction'>
-                      <div className='hover:bg-accent p-2 rounded-md w-full'>
-                        Introduction
+              </NavigationMenuItem>
+
+              let groupWidthSum = 0;
+              for (let i = 0; i < item.subGroups.length; i++) {
+                groupWidthSum += item.subGroups[i].width || 150;
+              }
+
+              return <NavigationMenuItem key={item.text}>
+                <NavigationMenuTrigger className='submenu-trigger'>{item.text}</NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className='flex gap-4 p-4 text-sm' style={{ width: `${groupWidthSum}px` }}>
+                    {item.subGroups.map((group, i) => (
+                      <div key={i} className='flex flex-col' style={{ width: `${group.width || 150}px` }}>
+                        {group.title !== undefined && (
+                          <h3 className={'font-bold underline p-2 text-sm ' + (group.title ? '' : 'invisible')}>
+                            {group.title || '_'}
+                          </h3>
+                        )}
+                        {group.items.filter(gItem => !gItem.hideOnDesktop).map(gItem => (
+                          <NavigationMenuLink key={gItem.text} href={gItem.href}>
+                            <div className='flex flex-col hover:bg-accent p-2 rounded-md w-full'>
+                              {gItem.text}
+                              {gItem.subText && <div className='text-dwd-secondary2 text-xs'>
+                                {gItem.subText}
+                              </div>}
+                            </div>
+                          </NavigationMenuLink>
+                        ))}
                       </div>
-                    </Link>
-                  </NavigationMenuLink>
-                  <NavigationMenuLink asChild href='/about#directors-message'>
-                    <Link href='/about#directors-message'>
-                      <div className='hover:bg-accent p-2 rounded-md w-full'>
-                        Director&apos;s Message
-                      </div>
-                    </Link>
-                  </NavigationMenuLink>
-                  <NavigationMenuLink asChild>
-                    <Link href='/about#family'>
-                      <div className='hover:bg-accent p-2 rounded-md w-full'>
-                        Our Family
-                      </div>
-                    </Link>
-                  </NavigationMenuLink>
-                  <NavigationMenuLink asChild>
-                    <Link href='/about#vision'>
-                      <div className='hover:bg-accent p-2 rounded-md w-full'>
-                        Vision
-                      </div>
-                    </Link>
-                  </NavigationMenuLink>
-                </ul>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <Link href='/campus' passHref>
-                <NavigationMenuTrigger className='submenu-trigger'>Campus</NavigationMenuTrigger>
-              </Link>
-              <NavigationMenuContent>
-                <ul className='flex flex-col gap-4 w-[250px] p-4 text-sm'>
-                  <NavigationMenuLink href='/campus/facilities'>
-                    <div className='hover:bg-accent p-2 rounded-md w-full'>
-                      Facilities
-                    </div>
-                  </NavigationMenuLink>
-                  <NavigationMenuLink href='/campus/clubs'>
-                    <div className='hover:bg-accent p-2 rounded-md w-full'>
-                      Clubs
-                    </div>
-                  </NavigationMenuLink>
-                  <NavigationMenuLink href='/campus/events'>
-                    <div className='hover:bg-accent p-2 rounded-md w-full'>
-                      Events
-                    </div>
-                  </NavigationMenuLink>
-                  <NavigationMenuLink href='/campus/magazine'>
-                    <div className='hover:bg-accent p-2 rounded-md w-full'>
-                      Magazine
-                    </div>
-                  </NavigationMenuLink>
-                </ul>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuTrigger className='submenu-trigger'>Admissions</NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className='flex flex-col gap-4 w-[250px] p-4 text-sm'>
-                  <NavigationMenuLink href='/admissions/btech'>
-                    <div className='hover:bg-accent p-2 rounded-md w-full'>
-                      BTech
-                    </div>
-                  </NavigationMenuLink>
-                  <NavigationMenuLink href='/admissions/phd'>
-                    <div className='hover:bg-accent p-2 rounded-md w-full'>
-                      PhD
-                    </div>
-                  </NavigationMenuLink>
-                </ul>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuTrigger className='submenu-trigger'>Academics</NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className='flex gap-4 w-[400px] p-4 text-sm'>
-                  <div className='flex flex-col w-[150px]'>
-                    <div className='hover:bg-accent p-2 rounded-md w-full invisible'>
-                      abcd
-                    </div>
-                    <NavigationMenuLink href='/faculty'>
-                      <div className='hover:bg-accent p-2 rounded-md w-full'>
-                        Faculty
-                      </div>
-                    </NavigationMenuLink>
-                    <NavigationMenuLink href='/academics/research'>
-                      <div className='hover:bg-accent p-2 rounded-md w-full'>
-                        Research
-                      </div>
-                    </NavigationMenuLink>
-                  </div>
-                  <div className='flex flex-col w-[250px]'>
-                    <h3 className='font-bold underline p-2 text-sm'>Departments</h3>
-                    <NavigationMenuLink href='/academics/departments/cse'>
-                      <div className='flex flex-col hover:bg-accent p-2 rounded-md w-full'>
-                        CSE
-                        <div className='text-dwd-secondary2 text-xs'>
-                          Computer Science and Engineering
-                        </div>
-                      </div>
-                    </NavigationMenuLink>
-                    <NavigationMenuLink href='/academics/departments/dsai'>
-                      <div className='flex flex-col hover:bg-accent p-2 rounded-md w-full'>
-                        DSAI
-                        <div className='text-dwd-secondary2 text-xs'>
-                          Data Science and Artificial Intelligence
-                        </div>
-                      </div>
-                    </NavigationMenuLink>
-                    <NavigationMenuLink href='/academics/departments/ece'>
-                      <div className='flex flex-col hover:bg-accent p-2 rounded-md w-full'>
-                        ECE
-                        <div className='text-dwd-secondary2 text-xs'>
-                          Electronics and Communication Engineering
-                        </div>
-                      </div>
-                    </NavigationMenuLink>
-                  </div>
-                </ul>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <Link href='/placements' legacyBehavior passHref>
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                  Placements
-                </NavigationMenuLink>
-              </Link>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <Link href='/tenders' legacyBehavior passHref>
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                  Tenders
-                </NavigationMenuLink>
-              </Link>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <Link href='/careers' legacyBehavior passHref>
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                  Jobs
-                </NavigationMenuLink>
-              </Link>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <Link href='/contact' legacyBehavior passHref>
-                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                  Contact Us
-                </NavigationMenuLink>
-              </Link>
-            </NavigationMenuItem>
+                    ))}
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+            })}
           </NavigationMenuList>
         </NavigationMenu>
       </div>
