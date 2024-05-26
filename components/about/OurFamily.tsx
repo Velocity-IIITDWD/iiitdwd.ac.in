@@ -8,7 +8,7 @@ const OurFamily = () => {
       </span>
       <Link
         className="bg-dwd-primary hover:bg-dwd-secondary2/40 border-2 p-3 border-dwd-primary hover:text-dwd-primary text-white text-center rounded-full text-lg md:text-xl transition delay-100 duration-300"
-        href={'/visitors'}
+        href={'/visitor'}
       >
         Visitor
       </Link>
