@@ -15,7 +15,7 @@ const OurFamily = () => {
       <Link
         className="bg-dwd-primary hover:bg-dwd-secondary2/40 border-2 p-3 border-dwd-primary hover:text-dwd-primary text-white text-center rounded-full text-lg md:text-xl
         transition delay-100 duration-300"
-        href={'/boardOfGoverners'}
+        href={'/board_of_governers'}
       >
         Board of Governers
       </Link>
@@ -27,19 +27,19 @@ const OurFamily = () => {
       </Link>
       <Link
         className="bg-dwd-primary hover:bg-dwd-secondary2/40 border-2 p-3 border-dwd-primary hover:text-dwd-primary text-white text-center rounded-full text-lg md:text-xl transition delay-100 duration-300"
-        href={'/staff'}
+        href={'/chairperson'}
       >
         Chairperson&apos;s Message
       </Link>
       <Link
         className="bg-dwd-primary hover:bg-dwd-secondary2/40 border-2 p-3 border-dwd-primary hover:text-dwd-primary text-white text-center rounded-full text-lg md:text-xl transition delay-100 duration-300"
-        href={'/staff'}
+        href={'/former_directors'}
       >
         Former Directors
       </Link>
       <Link
         className="bg-dwd-primary hover:bg-dwd-secondary2/40 border-2 p-3 border-dwd-primary hover:text-dwd-primary text-white text-center rounded-full text-lg md:text-xl transition delay-100 duration-300"
-        href={'/financeCommittee'}
+        href={'/finance_committee'}
       >
         Finance Committee
       </Link>
@@ -57,7 +57,7 @@ const OurFamily = () => {
       </Link>
       <Link
         className="bg-dwd-primary col-span-1 sm:col-span-2 md:col-span-1 hover:bg-dwd-secondary2/40 border-2 p-3 border-dwd-primary hover:text-dwd-primary text-white text-center rounded-full text-lg md:text-xl transition delay-100 duration-300"
-        href={'/buildingAndWorksCommittee'}
+        href={'/building_and_works'}
       >
         Building and Works Committee
       </Link>
