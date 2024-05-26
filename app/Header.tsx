@@ -75,11 +75,11 @@ function Header() {
             Tenders
           </Link>{' '}
           <div>|</div>
-          <Link className="whitespace-nowrap" href="/idk">
+          <Link className="whitespace-nowrap" href="https://aims.iiitdwd.ac.in/aims/login/loginHome">
             AIMS
           </Link>{' '}
           <div>|</div>
-          <Link className="whitespace-nowrap" href="/idk">
+          <Link className="whitespace-nowrap" href="https://www.onlinesbi.sbi/sbicollect/icollecthome.htm?corpID=873279">
             Students Fee Portal
           </Link>
         </div>
