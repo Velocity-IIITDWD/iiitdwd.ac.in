@@ -150,7 +150,8 @@ function Header() {
                 </Link>
               </div>
             </div>
-          </div>)}
+          </div>
+        )}
         <div className='flex gap-2 lg:w-1/5 text-center lg:text-left text-xs *:odd:font-bold'>
           <Link href='/tenders'>Tenders</Link><div>|</div>
           <Link href='https://aims.iiitdwd.ac.in/aims/'>AIMS</Link><div>|</div>
