@@ -71,8 +71,8 @@ function Header() {
         )}
         <div className="flex gap-2 lg:w-1/5 text-center lg:text-left text-xs *:odd:font-bold">
           {/* :TODO */}
-          <Link className="whitespace-nowrap" href="/tenders">
-            Tenders
+          <Link className="whitespace-nowrap" href="/nirf">
+            NIRF
           </Link>{' '}
           <div>|</div>
           <Link className="whitespace-nowrap" href="https://aims.iiitdwd.ac.in/aims/login/loginHome">
