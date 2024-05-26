@@ -24,7 +24,7 @@ interface ProfileProp {
 
 let ProfileProps: Array<ProfileProp> = [
   {
-    id: '1',
+    id: 'Dr.AbdulWahid',
     content: {
       head: {
         name: 'Dr. Abdul Wahid',
@@ -50,7 +50,7 @@ let ProfileProps: Array<ProfileProp> = [
     },
   },
   {
-    id: '2',
+    id: 'Dr.AnandPBarangi',
     content: {
       head: {
         name: 'Dr. ANAND P. BARANGI',
@@ -71,7 +71,7 @@ let ProfileProps: Array<ProfileProp> = [
     },
   },
   {
-    id: '3',
+    id: 'Dr.AnimeshChaturvedi',
     content: {
       head: {
         name: 'Dr. Animesh Chaturvedi',
@@ -97,7 +97,7 @@ let ProfileProps: Array<ProfileProp> = [
     },
   },
   {
-    id: '4',
+    id: 'Dr.AnimeshRoy',
     content: {
       head: {
         name: 'Dr. Animesh Roy',
@@ -122,7 +122,7 @@ let ProfileProps: Array<ProfileProp> = [
     },
   },
   {
-    id: '5',
+    id: 'Dr.Anushreekini',
     content: {
       head: {
         name: 'Dr. Anushree kini',
@@ -143,7 +143,7 @@ let ProfileProps: Array<ProfileProp> = [
     },
   },
   {
-    id: '6',
+    id: 'Dr.Anushreekini',
     content: {
       head: {
         name: 'Dr. Anushree kini',
