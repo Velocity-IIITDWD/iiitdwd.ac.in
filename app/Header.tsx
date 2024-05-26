@@ -96,7 +96,7 @@ const navmenuItems: NavmenuItem[] = [
   },
   { text: 'Placements', href: '/placements' },
   { text: 'Tenders', href: '/tenders' },
-  { text: 'Jobs', href: '/jobs' },
+  { text: 'Careers', href: '/careers' },
   { text: 'Contact Us', href: '/contact' },
 ];
 
@@ -152,7 +152,7 @@ function Header() {
             </div>
           </div>)}
         <div className='flex gap-2 lg:w-1/5 text-center lg:text-left text-xs *:odd:font-bold'>
-          <Link href='/tenders'>Tenders</Link><div>|</div>
+          <Link href='/nirf'>NIRF</Link><div>|</div>
           <Link href='https://aims.iiitdwd.ac.in/aims/'>AIMS</Link><div>|</div>
           <Link href='https://www.onlinesbi.sbi/sbicollect/icollecthome.htm?corpID=873279'>Students Fee Portal</Link>
         </div>
@@ -259,7 +259,16 @@ function Header() {
               }
 
               return <NavigationMenuItem key={item.text}>
-                <NavigationMenuTrigger className='submenu-trigger'>{item.text}</NavigationMenuTrigger>
+                <NavigationMenuTrigger className='submenu-trigger'>
+                  {!item.href
+                    ? item.text
+                    : <NavigationMenuLink asChild>
+                    <Link href={item.href!}>
+                      <div>{item.text}</div>
+                    </Link>
+                  </NavigationMenuLink>
+                  }
+                </NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className='flex gap-4 p-4 text-sm' style={{ width: `${groupWidthSum}px` }}>
                     {item.subGroups.map((group, i) => (
