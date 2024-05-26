@@ -4,11 +4,11 @@ import Image from 'next/image';
 const ChairpersonMessage: React.FC = () => {
   return (
     <div className="flex flex-col items-center justify-center p-5 text-left w-11/12 max-w-5xl mx-auto">
-      <h2 className="text-4xl font-bold mb-4 text-center text-dwd-primary">Former Chairperson's Message</h2>
+      <h2 className="text-4xl font-bold mb-4 text-center text-dwd-primary">Former Chairperson&apos;s Message</h2>
       <div className="flex flex-col md:flex-row items-center bg-white shadow-lg rounded-lg p-6">
         <div className="chairperson-image slide-in-left mb-5 md:mb-0 md:mr-8">
           <div className="relative w-48 h-48">
-            <Image src="/sudha-murty.jpg" alt="Smt. Sudha Murty" layout="fill" objectFit="cover" className="rounded-full" />
+            <Image src="/sudha-murty.jpg" alt="Smt. Sudha Murty" layout="fill" objectFit="cover" className="rounded-lg" />
           </div>
         </div>
         <div className="chairperson-message slide-in-right text-lg">
