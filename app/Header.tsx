@@ -20,10 +20,10 @@ import { announcements } from '@/data/announcements';
 function onNavChange() {
   setTimeout(() => {
     const triggers = document.querySelectorAll(
-      ".submenu-trigger[data-state='open']"
+      '.submenu-trigger[data-state=\'open\']'
     );
     const dropdowns = document.querySelectorAll(
-      ".nav-viewport[data-state='open']"
+      '.nav-viewport[data-state=\'open\']'
     );
 
     if (!triggers.length || !dropdowns.length) return;

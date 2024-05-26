@@ -7,57 +7,50 @@ const OurFamily = () => {
         Our Family
       </span>
       <Link
-        className="bg-dwd-primary hover:bg-dwd-secondary2/40 border-2 p-3 border-dwd-primary hover:text-dwd-primary text-white text-center rounded-full text-lg md:text-xl transition delay-100 duration-300"
-        href={'/visitor'}
+        className="bg-dwd-primary hover:bg-dwd-secondary2/40 border-2 p-3 border-dwd-primary hover:text-dwd-primary text-white text-center rounded-full text-lg md:text-xl"
+        href="/visitors"
       >
         Visitor
       </Link>
       <Link
-        className="bg-dwd-primary hover:bg-dwd-secondary2/40 border-2 p-3 border-dwd-primary hover:text-dwd-primary text-white text-center rounded-full text-lg md:text-xl
-        transition delay-100 duration-300"
-        href={'/board_of_governers'}
+        className="bg-dwd-primary hover:bg-dwd-secondary2/40 border-2 p-3 border-dwd-primary hover:text-dwd-primary text-white text-center rounded-full text-lg md:text-xl"
+        href="/boardOfGoverners"
       >
-        Board of Governers
+        Board of Governors
       </Link>
       <Link
-        className="bg-dwd-primary hover:bg-dwd-secondary2/40 border-2 p-3 border-dwd-primary hover:text-dwd-primary text-white text-center rounded-full text-lg md:text-xl transition delay-100 duration-300"
-        href={'/senate'}
+        className="bg-dwd-primary hover:bg-dwd-secondary2/40 border-2 p-3 border-dwd-primary hover:text-dwd-primary text-white text-center rounded-full text-lg md:text-xl"
+        href="/senate"
       >
         Senate
       </Link>
       <Link
-        className="bg-dwd-primary hover:bg-dwd-secondary2/40 border-2 p-3 border-dwd-primary hover:text-dwd-primary text-white text-center rounded-full text-lg md:text-xl transition delay-100 duration-300"
-        href={'/chairperson'}
-      >
-        Chairperson&apos;s Message
-      </Link>
-      <Link
-        className="bg-dwd-primary hover:bg-dwd-secondary2/40 border-2 p-3 border-dwd-primary hover:text-dwd-primary text-white text-center rounded-full text-lg md:text-xl transition delay-100 duration-300"
-        href={'/former_directors'}
-      >
-        Former Directors
-      </Link>
-      <Link
-        className="bg-dwd-primary hover:bg-dwd-secondary2/40 border-2 p-3 border-dwd-primary hover:text-dwd-primary text-white text-center rounded-full text-lg md:text-xl transition delay-100 duration-300"
-        href={'/finance_committee'}
+        className="bg-dwd-primary hover:bg-dwd-secondary2/40 border-2 p-3 border-dwd-primary hover:text-dwd-primary text-white text-center rounded-full text-lg md:text-xl"
+        href="/financeCommittee"
       >
         Finance Committee
       </Link>
       <Link
-        className="bg-dwd-primary hover:bg-dwd-secondary2/40 border-2 p-3 border-dwd-primary hover:text-dwd-primary text-white text-center rounded-full text-lg md:text-xl transition delay-100 duration-300"
-        href={'/faculty'}
+        className="bg-dwd-primary hover:bg-dwd-secondary2/40 border-2 p-3 border-dwd-primary hover:text-dwd-primary text-white text-center rounded-full text-lg md:text-xl"
+        href="/faculty"
       >
         Faculty
       </Link>
       <Link
-        className="bg-dwd-primary hover:bg-dwd-secondary2/40 border-2 p-3 border-dwd-primary hover:text-dwd-primary text-white text-center rounded-full text-lg md:text-xl transition delay-100 duration-300"
-        href={'/staff'}
+        className="bg-dwd-primary hover:bg-dwd-secondary2/40 border-2 p-3 border-dwd-primary hover:text-dwd-primary text-white text-center rounded-full text-lg md:text-xl"
+        href="/staff"
       >
         Staff
       </Link>
       <Link
-        className="bg-dwd-primary col-span-1 sm:col-span-2 md:col-span-1 hover:bg-dwd-secondary2/40 border-2 p-3 border-dwd-primary hover:text-dwd-primary text-white text-center rounded-full text-lg md:text-xl transition delay-100 duration-300"
-        href={'/building_and_works'}
+        className="bg-dwd-primary hover:bg-dwd-secondary2/40 border-2 p-3 border-dwd-primary hover:text-dwd-primary text-white text-center rounded-full text-lg md:text-xl"
+        href="/about/chairperson"
+      >
+        Chairperson&apos;s Message
+      </Link>
+      <Link
+        className="bg-dwd-primary hover:bg-dwd-secondary2/40 border-2 p-3 border-dwd-primary hover:text-dwd-primary text-white text-center rounded-full text-lg md:text-xl"
+        href="/buildingAndWorksCommittee"
       >
         Building and Works Committee
       </Link>
