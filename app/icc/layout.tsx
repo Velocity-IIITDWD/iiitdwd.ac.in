@@ -5,5 +5,5 @@ export default function AcademicsLayout({ children } : { children: React.ReactNo
 }
 
 export const metadata: Metadata = {
-  title: 'Icc',
+  title: 'ICC',
 };

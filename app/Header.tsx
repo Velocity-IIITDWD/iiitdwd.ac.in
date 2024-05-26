@@ -75,6 +75,10 @@ function Header() {
             NIRF
           </Link>{' '}
           <div>|</div>
+          <Link className="whitespace-nowrap" href="/icc">
+            ICC
+          </Link>{' '}
+          <div>|</div>
           <Link className="whitespace-nowrap" href="https://aims.iiitdwd.ac.in/aims/login/loginHome">
             AIMS
           </Link>{' '}
