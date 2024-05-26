@@ -61,21 +61,21 @@ export default function Home() {
   
   
   const slides = [
-    { content: <div className="slide-content relative p-2 "><div className='absolute top-5 w-full text-center text-[#013365] font-bold Heading'>Project-Centric Learning<div className='subheading mt-5 text-black font-normal'>The focus on projects allows students to apply theoretical knowledge
+    { content: <div className="slide-content relative p-10 "><div className='absolute top-5 w-full text-center text-[#013365] font-bold Heading'>Project-Centric Learning<div className='subheading mt-5 text-black font-normal pl-2 pr-2'>The focus on projects allows students to apply theoretical knowledge
     practically, preparing them for real-world scenarios.</div></div></div> },
-    { content: <div className="slide-content relative p-2"><div className='absolute top-5 w-full text-center text-[#013365] font-bold Heading'>Institute Autonomy<div className='subheading mt-5 text-black font-normal'>An academic Senate with industry professionals ensures that the
+    { content: <div className="slide-content relative p-10"><div className='absolute top-5 w-full text-center text-[#013365] font-bold Heading'>Institute Autonomy<div className='subheading mt-5 text-black font-normal pl-2 pr-2'>An academic Senate with industry professionals ensures that the
     curriculum remains relevant and responsive to industry trends.</div></div></div> },
-    { content: <div className="slide-content relative p-2"><div className='absolute top-5 w-full text-center text-[#013365] font-bold Heading'>IT-Focused Curriculum<div className='subheading mt-5 text-black font-normal'>Specializing in IT-related fields from the start shows candidates
+    { content: <div className="slide-content relative p-10"><div className='absolute top-5 w-full text-center text-[#013365] font-bold Heading'>IT-Focused Curriculum<div className='subheading mt-5 text-black font-normal pl-2 pr-2'>Specializing in IT-related fields from the start shows candidates
     alignment with technology-driven industries, meeting modern job demands.</div></div></div> },
-    { content: <div className="slide-content relative p-2"><div className='absolute top-5 w-full text-center text-[#013365] font-bold Heading'>Practical Learning Opportunities<div className='subheading mt-5 text-black font-normal'>Involvement in projects and hackathons showcases candidates practical
+    { content: <div className="slide-content relative p-10"><div className='absolute top-5 w-full text-center text-[#013365] font-bold Heading'>Practical Learning Opportunities<div className='subheading mt-5 text-black font-normal pl-2 pr-2'>Involvement in projects and hackathons showcases candidates practical
     skills and problem-solving abilities.</div></div></div> },
-    { content: <div className="slide-content relative p-2"><div className='absolute top-5 w-full text-center text-[#013365] font-bold Heading'>Outcome-Based Education Emphasis<div className='subheading mt-5 text-black font-normal'>Demonstrates that students are trained to meet specific objectives,
+    { content: <div className="slide-content relative p-10"><div className='absolute top-5 w-full text-center text-[#013365] font-bold Heading'>Outcome-Based Education Emphasis<div className='subheading mt-5 text-black font-normal pl-2 pr-2'>Demonstrates that students are trained to meet specific objectives,
     indicating their skills are parallel to industry needs.</div></div></div> },
-    { content: <div className="slide-content relative p-2"><div className='absolute top-5 w-full text-center text-[#013365] font-bold Heading'>Holistic Curriculum<div className='subheading mt-5 text-black font-normal'>The balanced mix of theory, core subjects, breadth areas, soft skills,
+    { content: <div className="slide-content relative p-10"><div className='absolute top-5 w-full text-center text-[#013365] font-bold Heading'>Holistic Curriculum<div className='subheading mt-5 text-black font-normal pl-2 pr-2'>The balanced mix of theory, core subjects, breadth areas, soft skills,
      and projects ensures students are well-rounded and adaptable.</div></div></div> },
-    { content: <div className="slide-content relative p-2"><div className='absolute top-5 w-full text-center text-[#013365] font-bold Heading'>Specialization Opportunities<div className='subheading mt-5 text-black font-normal'>Elective subjects encourage students to pursue specialized knowledge,
+    { content: <div className="slide-content relative p-10"><div className='absolute top-5 w-full text-center text-[#013365] font-bold Heading'>Specialization Opportunities<div className='subheading mt-5 text-black font-normal pl-2 pr-2'>Elective subjects encourage students to pursue specialized knowledge,
      making them ideal candidates for roles requiring niche expertise.</div></div></div> },
-    { content: <div className="slide-content relative p-2"><div className='absolute top-5 w-full text-center text-[#013365] font-bold Heading'>Interdiscipinary Learning<div className='subheading mt-5 text-black font-normal'>Exposure to a variety of subjects promotes a diverse skill set, enabling
+    { content: <div className="slide-content relative p-10"><div className='absolute top-5 w-full text-center text-[#013365] font-bold Heading'>Interdiscipinary Learning<div className='subheading mt-5 text-black font-normal pl-2 pr-2'>Exposure to a variety of subjects promotes a diverse skill set, enabling
      graduates to approach challenges from multiple angles.</div></div></div> }
 
   ];
@@ -84,7 +84,7 @@ export default function Home() {
   return (
     <div>
       <div className="container">
-        <div className="text-4xl font-extrabold text-[#013365] text-center mt-5">Career Guidance Cell</div>
+        <div className="text-4xl font-extrabold text-[#013365] text-center mt-5 CGC">Career Guidance Cell</div>
       
         <div className=" shortbox text-[1.8rem] text-[#013365] font-extrabold ml-[20%] mt-20">Overview
           <div className=" whatsapp text-[1rem] text-black font-light mt-5 mr-[20%]">The Career Guidance Cell at IIIT Dharwad is driven by students and assisted by faculty for career development of students.</div>
@@ -122,18 +122,19 @@ export default function Home() {
       
           <EmblaCarousel slides={slides} />
         </div>
-        <div className="shortbox text-[1.8rem] text-[#013365] font-extrabold ml-[20%] mt-20">Overview
+        <div className="shortbox text-[1.8rem] text-[#013365] font-extrabold ml-[20%] mt-20">
+  Overview
           <div className='mt-20 bar'>
             <BarGraph
               labels={barGraphData.labels}
               datasets={barGraphData.datasets}
-              width={800}
-              height={400}
-            /></div>
-        </div>
+            />
+          </div>
+        </div>                                                                                                                                                          
+
       
         <div className=" shortbox ml-[20%]">
-          <div className=" whatsapp inline-block mt-20 mr-[10%]">
+          <div className="  inline-block mt-20 mr-[10%]">
             <div className=" text-[2rem] text-[rgb(1,51,101)] font-extrabold">Average Package of top 20%</div>
             <div className="text-[2rem] text-[rgb(1,51,101)] font-extrabold">students in 2023.</div>
           </div>
@@ -169,8 +170,8 @@ export default function Home() {
           </div>
         </div>
       
-        <div className=" shortbox ml-[20%] flex  mt-10 mb-10 mr-[20%] justify-around">
-          <div>
+        <div className=" shortbox contact ml-[20%] flex  mt-10 mb-10 mr-[20%] justify-around">
+          <div className='pp'>
             <strong className='text-[#013365]' style={{fontSize:21}}>CGC, Chairman</strong><br />
           Dr. Prakash Pawar, Asst. Professor<br />
           Email: <a href="mailto:cgc@iiitdwd.ac.in" className="text-blue-500">cgc@iiitdwd.ac.in</a>

@@ -72,27 +72,34 @@ function TabsContentContent({ tabsData: tabsData }: TabsContentContentProps) {
                         {tender.corrections.map((correction, index) => (
                           <span
                             className={cn(
-                              'inline-block underline',
+                              'inline-block',
+                              correction.link && 'underline',
                               correction.title.toLowerCase().includes('cancel')
-                                ? 'text-green-500'
-                                : 'text-red-500'
+                                ? 'text-red-500'
+                                : 'text-green-500'
                             )}
                             key={index}
                           >
-                            <Link href={correction.link} target="_blank">
-                              {correction.title}
-                            </Link>
+                            {correction.link ? (
+                              <Link href={correction.link} target="_blank">
+                                {correction.title}
+                              </Link>
+                            ) : (
+                              correction.title
+                            )}
                           </span>
                         ))}
                       </div>
                     </div>
                   </TableCell>
                   <TableCell className="text-center">
-                    <span className="inline-block">
-                      <Link href={tender.link} target="_blank">
-                        <Download className="text-dwd-secondary1" />
-                      </Link>
-                    </span>
+                    {tender.link && (
+                      <span className="inline-block">
+                        <Link href={tender.link} target="_blank">
+                          <Download className="text-dwd-secondary1" />
+                        </Link>
+                      </span>
+                    )}
                   </TableCell>
                   <TableCell>
                     {toDateString(tender.publishDate as number)}

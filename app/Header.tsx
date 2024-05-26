@@ -112,7 +112,8 @@ function onNavChange() {
     if (!triggers.length || !dropdowns.length) return;
 
     const { offsetLeft, offsetWidth } = triggers[0] as HTMLElement;
-    let menuLeftPosition = offsetLeft + offsetWidth / 2 - triggers[0].clientWidth / 2;
+    let menuLeftPosition =
+      offsetLeft + offsetWidth / 2 - triggers[0].clientWidth / 2;
 
     document.documentElement.style.setProperty(
       '--menu-left-position',
@@ -122,21 +123,32 @@ function onNavChange() {
 }
 
 function Header() {
-  const latestAnnouncement = announcements.length ? announcements[0] : undefined;
+  const latestAnnouncement = announcements.length
+    ? announcements[0]
+    : undefined;
 
   return (
-    <header className='flex flex-col w-full h-fit'>
-      <div className='flex flex-col lg:flex-row items-center justify-center bg-dwd-secondary1 px-2 lg:gap-4'>
+    <header className="flex flex-col w-full h-fit">
+      <div className="flex flex-col lg:flex-row items-center justify-center bg-dwd-secondary1 px-2 lg:gap-4">
         {/* Pushes announcement to center */}
-        <div className='hidden lg:block w-1/5'></div>
-        {latestAnnouncement && <div className='flex justify-end w-full lg:w-2/5 overflow-hidden'>
-          <div className='w-full overflow-clip'>
-            <div className='animate-marquee whitespace-nowrap'>
-              <Link href={latestAnnouncement.href} className='flex gap-2 items-center'>
-                <span className='text-xs px-1 text-white bg-red-500 animate-pulse'>NEW</span>
-                {latestAnnouncement.text}
-                <span className='text-xs px-1 text-white bg-red-500 animate-pulse'>NEW</span>
-              </Link>
+        <div className="hidden lg:block w-1/5"></div>
+        {latestAnnouncement && (
+          <div className="flex justify-end w-full lg:w-2/5 overflow-hidden">
+            <div className="w-full overflow-clip">
+              <div className="animate-marquee whitespace-nowrap">
+                <Link
+                  href={latestAnnouncement.href}
+                  className="flex gap-2 items-center"
+                >
+                  <span className="text-xs px-1 text-white bg-red-500 animate-pulse">
+                    NEW
+                  </span>
+                  {latestAnnouncement.text}
+                  <span className="text-xs px-1 text-white bg-red-500 animate-pulse">
+                    NEW
+                  </span>
+                </Link>
+              </div>
             </div>
           </div>
         </div>}
@@ -145,30 +157,30 @@ function Header() {
           <Link href='https://aims.iiitdwd.ac.in/aims/'>AIMS</Link><div>|</div>
           <Link href='https://www.onlinesbi.sbi/sbicollect/icollecthome.htm?corpID=873279'>Students Fee Portal</Link>
         </div>
-        <div className='hidden lg:block w-1/5'></div>
+        <div className="hidden lg:block w-1/5"></div>
       </div>
-      <div className='flex flex-row lg:flex-row items-center justify-start border-b border-dwd-secondary1 relative h-16 lg:h-24'>
-        <Link href='/' className='block h-full'>
+      <div className="flex flex-row lg:flex-row items-center justify-start border-b border-dwd-secondary1 relative h-16 lg:h-24">
+        <Link href="/" className="block h-full">
           {/* Big screen image */}
           <Image
-            src='/brand/logo-full-light.png'
+            src="/brand/logo-full-light.png"
             width={0}
             height={0}
-            sizes='100%'
+            sizes="100%"
             style={{ height: '90%', width: 'auto' }}
-            alt='IIIT Dharwad Logo'
-            className='block lg:hidden xl:block mr-auto'
+            alt="IIIT Dharwad Logo"
+            className="block lg:hidden xl:block mr-auto"
             priority
           />
           {/* Medium screen logo */}
           <Image
-            src='/brand/logo-square-light.png'
+            src="/brand/logo-square-light.png"
             width={0}
             height={0}
-            sizes='100%'
+            sizes="100%"
             style={{ height: '100%', width: 'auto' }}
-            alt='IIIT Dharwad Logo'
-            className='hidden lg:block xl:hidden mr-auto'
+            alt="IIIT Dharwad Logo"
+            className="hidden lg:block xl:hidden mr-auto"
             priority
           />
         </Link>
@@ -176,7 +188,9 @@ function Header() {
         {/* Mobile navbar */}
         <Sheet>
           <SheetTrigger asChild>
-            <div className='ml-auto mr-4 lg:hidden'><MenuIcon size='2rem' /></div>
+            <div className="ml-auto mr-4 lg:hidden">
+              <MenuIcon size="2rem" />
+            </div>
           </SheetTrigger>
           <SheetContent side='left'>
             <div className='flex flex-col gap-2 mt-4 -mr-2'>

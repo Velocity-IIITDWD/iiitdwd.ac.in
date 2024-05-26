@@ -39,12 +39,14 @@
         @apply border-border;
     }
 
-    html {
-        @apply min-h-screen w-full overflow-y-auto
+    html, body {
+        @apply min-h-screen w-full overflow-x-hidden overflow-y-auto;
+        margin: 0;
+        padding: 0;
     }
 
     body {
-        @apply min-h-screen h-full w-full flex flex-col bg-background text-foreground;
+        @apply flex flex-col bg-background text-foreground;
     }
 
     details > summary {
@@ -73,16 +75,17 @@
 }
 
 .break-last-words {
-  white-space: nowrap;
+    white-space: nowrap;
 }
 
-.container{
-  width: 100%;
+.container {
+    width: 100%;
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
 }
+
 .procedure:hover
 {
 scale: 1.4;
@@ -121,7 +124,9 @@ transition-duration: 0.2s;
   align-items: center;
   border-radius: 25px;
   padding: 15px;
+  border:solid black 1px;
 }
+
 
 .embla__button {
   position: absolute;
@@ -206,7 +211,12 @@ transition-duration: 0.2s;
   }
   .uj
   {
-    margin-left: 25%;
+    margin-left: 5%;
+  }
+
+  .pp{
+    margin-left: 5%;
+    margin-right:0%;
   }
 .whatsapp
 {
@@ -237,7 +247,11 @@ margin-right: 9.5%;
 {
   width: 330px;
 }
-
+.contact
+{
+  flex-direction: column;
+  gap:50px;
+}
 }
 
 @keyframes slide-in-left {
@@ -262,6 +276,19 @@ margin-right: 9.5%;
   }
 }
 
+@media (max-width:400px) {
+  .buttons{
+    white-space:initial;
+  }
+  .slide-content{
+    width:290px;
+  }
+  .CGC{
+    width: 100%;
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+}
 .slide-in-left {
   animation: slide-in-left 1s ease-out forwards;
 }

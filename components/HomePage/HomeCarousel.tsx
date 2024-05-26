@@ -39,40 +39,54 @@ const HomeCarousel: React.FC<PropType> = ({ options, children }) => {
   return (
     <section className="relative">
       <div className="overflow-hidden w-full" ref={emblaRef}>
-        <div className="flex gap-3">
-          {children}
-          {/* Wrap around elements spacing */}
-          <div className='w-3 invisible' />
-        </div>
+        <div className="flex gap-3 pl-3">{children}</div>
       </div>
 
       <button
-        className="absolute top-1/2 -translate-y-1/2 cursor-pointer p-1 rounded md:-left-10 left-2"
+        className="hidden md:flex md:absolute md:top-1/2 md:-translate-y-1/2 md:cursor-pointer md:p-1 md:rounded md:left-2"
         onClick={onPrevButtonClick}
         disabled={emblaApi?.canScrollPrev() === false}
       >
         <ChevronLeft size={32} />
       </button>
       <button
-        className="absolute top-1/2 -translate-y-1/2 cursor-pointer p-1 rounded md:-right-10 right-2"
+        className="hidden md:flex md:absolute md:top-1/2 md:-translate-y-1/2 md:cursor-pointer md:p-1 md:rounded md:right-2"
         onClick={onNextButtonClick}
         disabled={emblaApi?.canScrollNext() === false}
       >
         <ChevronRight size={32} />
       </button>
 
-      <div className="flex items-center gap-3 justify-center mt-3">
-        {scrollSnaps.map((_, index) => (
+      <div className="flex items-center gap-3 px-4 justify-between md:justify-center mt-3">
+        <div className="flex md:hidden gap-4">
           <button
-            key={index}
-            className={`aspect-square rounded-full cursor-pointer h-[10px]  ${
-              index === selectedIndex
-                ? 'bg-dwd-primary scale-[140%]'
-                : 'bg-gray-300 scale-1'
-            }`}
-            onClick={() => onDotButtonClick(index)}
-          />
-        ))}
+            className="p-1 rounded-full border-2 hover:bg-dwd-primary transition duration-300 hover:text-white border-dwd-primary"
+            onClick={onPrevButtonClick}
+            disabled={emblaApi?.canScrollPrev() === false}
+          >
+            <ChevronLeft size={24} />
+          </button>
+          <button
+            className="p-1 rounded-full border-2 hover:bg-dwd-primary transition duration-300 hover:text-white border-dwd-primary"
+            onClick={onNextButtonClick}
+            disabled={emblaApi?.canScrollNext() === false}
+          >
+            <ChevronRight size={24} />
+          </button>
+        </div>
+        <div className="flex gap-2">
+          {scrollSnaps.map((_, index) => (
+            <button
+              key={index}
+              className={`aspect-square rounded-full border-2 cursor-pointer h-[10px]  ${
+                index === selectedIndex
+                  ? 'border-dwd-primary bg-dwd-primary/60'
+                  : 'border-gray-600'
+              }`}
+              onClick={() => onDotButtonClick(index)}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );

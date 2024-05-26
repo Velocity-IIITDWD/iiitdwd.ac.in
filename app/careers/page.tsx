@@ -40,7 +40,7 @@ const Page = () => {
         <div className="dropdownNsearch px-2 flex items-center gap-5 justify-center w-[100vw] h-10">
           <div className="Dropdown hover:scale-[1.05]  hover:drop-shadow-2xl transition flex items-center">  
             <select
-              className="w-[20vw] pl-2 text-black text-lg md:text-3xl bg-dwd-secondary2 outline-none h-9 rounded-lg"
+              className="w-[20vw] pl-2 text-black text-lg md:text-3xl bg-dwd-secondary2 outline-none  h-9 rounded-lg"
               onChange={handledropdown}
               name="category"
               id="category"
@@ -69,7 +69,7 @@ const Page = () => {
               placeholder="Search..."
             />
             <div
-              className="bg-dwd-secondary2 flex items-center justify-center px-1 py-2 md:px-5 md:py-2 text-white font-semibold rounded-[0px_10px_10px_0px] cursor-pointer"
+              className="bg-dwd-secondary2  flex items-center justify-center px-1 py-2 md:px-5 md:py-2 text-white font-semibold rounded-[0px_10px_10px_0px] cursor-pointer"
               onClick={handlesearch}
             >
               <Image width={20} height={20} src="/search.png" alt="" />
@@ -79,33 +79,23 @@ const Page = () => {
         <div className="jobcont lg:border border-black mt-5 w-[90%]">
           <div className="hidden lg:block Header bg-dwd-primary text-white border border-black">
             <div className="flex justify-between items-center">
-              <div className="title text-3xl w-1/2 text-center">
+              <div className="title text-2xl py-2 w-1/2 text-center">
                 Title and Description
               </div>
               <div className="w-1/2 flex justify-around gap-5">
                 <div
                   className="
-                                date text-3xl"
+                                date text-2xl py-2"
                 >
                   Last date to receive applications
                 </div>
-                <div className="gi text-3xl">General Instruction</div>
-                <div className="app text-3xl pr-2">Application Form</div>
+                <div className="gi text-2xl py-2">General Instruction</div>
+                <div className="app text-2xl py-2 pr-2">Application Form</div>
               </div>
             </div>
           </div>
           {filteredJobs.map((jobdata, index) => (
-            <Card
-              key={index}
-              title={jobdata.title}
-              details={jobdata.details}
-              date={jobdata.date}
-              GI={jobdata.GI}
-              Apllication={jobdata.Apllication}
-              Applicationoffline={jobdata.Applicationoffline}
-              StatusofApplications={jobdata.StatusofApplications}
-              Addendum={jobdata.Addendum}
-            />
+            <Card key={index} jobdata={jobdata} />
           ))}
         </div>
       </div>
