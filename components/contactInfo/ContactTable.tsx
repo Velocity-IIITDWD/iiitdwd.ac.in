@@ -21,11 +21,9 @@ const ContactTable = ({
   contactCategories,
 }: ContactTableProps) => {
   const [contactTab, setContactTab] = useState('General Queries');
-  const [contacts, setContacts] = useState<Contact[]>([]);
-
-  useEffect(() => {
-    setContacts(Object.entries(contactInfo)[0][1]);
-  }, []);
+  const [contacts, setContacts] = useState<Contact[]>(
+    Object.entries(contactInfo)[0][1]
+  );
 
   return (
     <>

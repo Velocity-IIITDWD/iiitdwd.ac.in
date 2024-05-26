@@ -37,10 +37,10 @@ const CreateTabs = ({
       {
         <Select onValueChange={(value) => setCategory(value)}>
           <SelectTrigger className="w-full col-span-6 border-none focus:outline-none text-dwd-primary bg-dwd-secondary2 focus:shadow-none focus:ring-0 md:hidden focus:ring-offset-0">
-            <SelectValue placeholder="General Queries" />
+            <SelectValue placeholder="Select to Change" />
           </SelectTrigger>
           <SelectContent
-            className="shadow-none border-1 -inset-x-0.5 -inset-y-1 rounded-none border-dwd-primary rounded-b-sm md:hidden"
+            className=" border-1 w-full -inset-x-[1px] -inset-y-1 rounded-none border-dwd-primary rounded-b-sm md:hidden"
             side="bottom"
           >
             {contactCategories.map((category) => {
