@@ -26,7 +26,7 @@ const page = () => {
             The National Institutional Ranking Framework (NIRF) was approved by the MHRD and launched by Honourable Minister of Human Resource Development on 29th September 2015.
 
             <br />
-            This framework outlines a methodology to rank institutions across the country. The methodology draws from the overall recommendations broad understanding arrived at by a Core Committee set up by MHRD, to identify the broad parameters for ranking various universities and institutions. The parameters broadly cover 'Teaching, Learning and Resources,' 'Research and Professional Practices,' 'Graduation Outcomes,' 'Outreach and Inclusivity,' and 'Perception'.
+            This framework outlines a methodology to rank institutions across the country. The methodology draws from the overall recommendations broad understanding arrived at by a Core Committee set up by MHRD, to identify the broad parameters for ranking various universities and institutions. The parameters broadly cover  `&#39;` Teaching, Learning and Resources, `&#39;`  `&#39;`Research and Professional Practices, `&#39;`  `&#39;`Graduation Outcomes, `&#39;`  `&#39;`Outreach and Inclusivity, `&#39;` and  `&#39;`Perception `&#39;`.
           </div>
         </div>
 
