@@ -1,6 +1,8 @@
 'use client';
 
+import { ExternalLink } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 import React, { useEffect, useRef } from 'react';
 import { FaPlane, FaTrain } from 'react-icons/fa';
 
@@ -86,6 +88,13 @@ const ContactPage: React.FC = () => {
             <h3 className="text-xl font-bold">Fax</h3>
             <p>+91-836-2212841</p>
           </div>
+          <Link
+            className="font-medium w-fit text-lg mt-4 border p-2 rounded-md flex gap-4 items-center justify-center "
+            href={'/contact_info'}
+          >
+            More Contact Information
+            <ExternalLink />
+          </Link>
         </div>
       </div>
 
@@ -99,7 +108,7 @@ const ContactPage: React.FC = () => {
               <li className="p-2 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
                 <strong>General Information:</strong>{' '}
                 <a href="mailto:info@iiitd.ac.in" className="text-blue-500">
-                contact@iiitdwd.ac.in
+                  contact@iiitdwd.ac.in
                 </a>
               </li>
               <li className="p-2 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
@@ -174,7 +183,8 @@ const ContactPage: React.FC = () => {
                 You can also take the Bus Shuttle provided by the institute.
               </li>
               <li className="p-2 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                The institute is situated between Udaygiri and Ittigatti village. 
+                The institute is situated between Udaygiri and Ittigatti
+                village.
               </li>
             </ul>
           </div>
