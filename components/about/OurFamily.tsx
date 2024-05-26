@@ -42,6 +42,12 @@ const OurFamily = () => {
       >
         Staff
       </Link>
+      <Link
+        className="bg-dwd-primary hover:bg-dwd-secondary2/40 border-2 p-3 border-dwd-primary hover:text-dwd-primary text-white text-center rounded-full text-lg md:text-xl"
+        href={'/about/chairperson'}
+      >
+        Chairperson's Message
+      </Link>
       <div className="hidden md:flex"></div>
       <Link
         className="bg-dwd-primary hover:bg-dwd-secondary2/40 border-2 p-3 border-dwd-primary hover:text-dwd-primary text-white text-center rounded-full text-lg md:text-xl"
