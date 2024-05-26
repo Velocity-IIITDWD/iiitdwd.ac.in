@@ -240,7 +240,7 @@ export default function Home() {
                           Date- {events[index].details.startDate}
                         </p>
                         <Link
-                         href={`/campus/events/${index+1}`}
+                          href={`/campus/events/${index+1}`}
                           className="flex w-fit rounded hover:bg-dwd-primary hover:text-white transition duration-300 border border-dwd-primary py-2 px-4 gap-2"
                         >
                           Read More

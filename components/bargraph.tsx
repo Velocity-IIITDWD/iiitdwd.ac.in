@@ -41,16 +41,16 @@ const BarGraph: React.FC<BarGraphProps> = ({ labels, datasets }) => {
     const handleResize = () => {
       let width, height;
 
-if (window.innerWidth < 400) {
-    width = 330;
-    height = 200;
-} else if (window.innerWidth < 1000) {
-    width = 370;
-    height = 200;
-} else {
-    width = 800;
-    height = 400;
-}
+      if (window.innerWidth < 400) {
+        width = 330;
+        height = 200;
+      } else if (window.innerWidth < 1000) {
+        width = 370;
+        height = 200;
+      } else {
+        width = 800;
+        height = 400;
+      }
 
       setDimensions({ width, height });
     };

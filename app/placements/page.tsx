@@ -124,13 +124,13 @@ export default function Home() {
         </div>
         <div className="shortbox text-[1.8rem] text-[#013365] font-extrabold ml-[20%] mt-20">
   Overview
-  <div className='mt-20 bar'>
-    <BarGraph
-      labels={barGraphData.labels}
-      datasets={barGraphData.datasets}
-    />
-  </div>
-</div>                                                                                                                                                          
+          <div className='mt-20 bar'>
+            <BarGraph
+              labels={barGraphData.labels}
+              datasets={barGraphData.datasets}
+            />
+          </div>
+        </div>                                                                                                                                                          
 
       
         <div className=" shortbox ml-[20%]">
