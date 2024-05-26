@@ -6,7 +6,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
-import { Value } from '@radix-ui/react-select';
 
 interface CreateTabsProps {
   tab: string;

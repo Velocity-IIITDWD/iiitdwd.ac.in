@@ -1,12 +1,4 @@
 import ContactTable from '@/components/contactInfo/ContactTable';
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from '@/components/ui/tabs-table/table';
 import { contactCategories, contacts } from '@/data/contactInfo';
 const ContactInfo = () => {
   return (
