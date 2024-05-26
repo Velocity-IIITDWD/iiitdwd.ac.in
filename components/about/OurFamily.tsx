@@ -8,50 +8,49 @@ const OurFamily = () => {
       </span>
       <Link
         className="bg-dwd-primary hover:bg-dwd-secondary2/40 border-2 p-3 border-dwd-primary hover:text-dwd-primary text-white text-center rounded-full text-lg md:text-xl"
-        href={'/visitors'}
+        href="/visitors"
       >
         Visitor
       </Link>
       <Link
         className="bg-dwd-primary hover:bg-dwd-secondary2/40 border-2 p-3 border-dwd-primary hover:text-dwd-primary text-white text-center rounded-full text-lg md:text-xl"
-        href={'/boardOfGoverners'}
+        href="/boardOfGoverners"
       >
-        Board of Governers
+        Board of Governors
       </Link>
       <Link
         className="bg-dwd-primary hover:bg-dwd-secondary2/40 border-2 p-3 border-dwd-primary hover:text-dwd-primary text-white text-center rounded-full text-lg md:text-xl"
-        href={'/senate'}
+        href="/senate"
       >
         Senate
       </Link>
       <Link
         className="bg-dwd-primary hover:bg-dwd-secondary2/40 border-2 p-3 border-dwd-primary hover:text-dwd-primary text-white text-center rounded-full text-lg md:text-xl"
-        href={'/financeCommittee'}
+        href="/financeCommittee"
       >
         Finance Committee
       </Link>
       <Link
         className="bg-dwd-primary hover:bg-dwd-secondary2/40 border-2 p-3 border-dwd-primary hover:text-dwd-primary text-white text-center rounded-full text-lg md:text-xl"
-        href={'/faculty'}
+        href="/faculty"
       >
         Faculty
       </Link>
       <Link
         className="bg-dwd-primary hover:bg-dwd-secondary2/40 border-2 p-3 border-dwd-primary hover:text-dwd-primary text-white text-center rounded-full text-lg md:text-xl"
-        href={'/staff'}
+        href="/staff"
       >
         Staff
       </Link>
       <Link
         className="bg-dwd-primary hover:bg-dwd-secondary2/40 border-2 p-3 border-dwd-primary hover:text-dwd-primary text-white text-center rounded-full text-lg md:text-xl"
-        href={'/about/chairperson'}
+        href="/about/chairperson"
       >
         Chairperson's Message
       </Link>
-      <div className="hidden md:flex"></div>
       <Link
         className="bg-dwd-primary hover:bg-dwd-secondary2/40 border-2 p-3 border-dwd-primary hover:text-dwd-primary text-white text-center rounded-full text-lg md:text-xl"
-        href={'/buildingAndWorksCommittee'}
+        href="/buildingAndWorksCommittee"
       >
         Building and Works Committee
       </Link>
