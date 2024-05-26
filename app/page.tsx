@@ -17,55 +17,10 @@ import Image from 'next/image';
 import MainCarousel from '@/components/HomePage/MainCarousel';
 import HomeCarousel from '@/components/HomePage/HomeCarousel';
 import { GalleryImages } from '@/data/gallery';
+import AnimatedCounter from '@/components/HomePage/AnimatedCounter';
+import { once } from 'events';
 
 export default function Home() {
-  const parallaxSectionRef = useRef<HTMLDivElement | null>(null);
-  const observerRef = useRef<IntersectionObserver | null>(null);
-
-  useEffect(() => {
-    const parallaxSection = parallaxSectionRef.current;
-
-    if (parallaxSection) {
-      const handleScroll = () => {
-        const scrollY = window.scrollY;
-        const viewportHeight = window.innerHeight;
-
-        // Calculate dynamic background position (adjust as needed)
-        const backgroundPosition = `50% ${
-          0.3 * viewportHeight - (scrollY / viewportHeight) * 100
-        }px`;
-
-        parallaxSection.style.backgroundPosition = backgroundPosition;
-      };
-
-      const handleIntersection = (entries: any) => {
-        const [entry] = entries;
-        if (entry.isIntersecting) {
-          window.addEventListener('scroll', handleScroll); // Add event listener
-        } else {
-          window.removeEventListener('scroll', handleScroll); // Remove event listener
-        }
-      };
-
-      const options = {
-        root: null, // Observe relative to viewport
-        threshold: 0.5, // Consider section in viewport when 50% visible
-      };
-
-      const observer = new IntersectionObserver(handleIntersection, options);
-      observer.observe(parallaxSection);
-
-      observerRef.current = observer; // Store observer for cleanup
-    }
-
-    // Cleanup function to remove observer on unmount
-    return () => {
-      const observer = observerRef.current;
-      if (observer) {
-        observer.disconnect();
-      }
-    };
-  }, []);
   return (
     <div className="flex flex-col h-full w-full">
       <MainCarousel>
@@ -81,7 +36,7 @@ export default function Home() {
                 width={0}
                 height={0}
                 sizes="100%"
-                style={{ height: '100%', width: '100%' }}
+                style={{ height: '100%', width: 'auto' }}
                 className="w-full relative object-cover object-center"
               />
 
@@ -272,31 +227,55 @@ export default function Home() {
         </Carousel>
       </section>
 
-      <section
-        id="parallax"
-        ref={parallaxSectionRef}
-        className="w-full h-full bg-fixed relative overflow-hidden before:z-0 before:absolute before:h-full before:w-full before:left-0 before:top-0 before:bg-gray-900/80 bg-cover bg-repeat-y bg-[url('/HomePage/LandingPage.png')]"
-      >
-        <div className="relative py-24 lg:py-44 z-[1] text-white max-w-[1000px] mx-auto w-full px-10 flex flex-col md:flex-row gap-10 md:gap-4">
-          <div className="flex basis-1/3 flex-col gap-2 items-center justify-center">
-            <p className="text-3xl font-bold">1000+</p>
-            <div className="bg-gray-400 w-20 h-1 rounded relative before:block before:bg-gray-400 before:absolute before:left-1/2 before:-translate-x-1/2 before:aspect-square before:w-[10px] before:top-1/2 before:-translate-y-1/2 before:rotate-45"></div>
+      <section className="w-full h-full bg-fixed relative overflow-hidden before:z-0 before:absolute before:h-full before:w-full before:left-0 before:top-0 before:bg-gray-900/80 bg-cover bg-repeat-y bg-[url('/HomePage/LandingPage.png')]">
+        <div className="relative py-24 lg:py-44 z-[1] text-white max-w-[1000px] mx-auto w-full px-10 items-center justify-center flex flex-col lg:flex-row gap-10 lg:gap-4">
+          <div className="flex basis-1/4 px-6 flex-col gap-2 items-center justify-center">
+            <div className="flex gap-2 items-center">
+              <AnimatedCounter
+                className="text-3xl font-bold"
+                to={1000}
+                from={0}
+              />
+              <span className="text-3xl font-bold">+</span>
+            </div>
+            <div className="h-[3px] relative flex flex-col w-full border-t-0 bg-transparent bg-gradient-to-r from-transparent via-gray-200 to-transparent opacity-50 after:block after:absolute after:-bottom-1 after:left-1/2 after:w-1/3 after:h-[3px] after:-translate-x-1/2 after:border-t-0 after:bg-transparent after:bg-gradient-to-r after:from-transparent after:via-slate-200 after:to-transparent"></div>
             <p className="font-semibold">Alumini</p>
           </div>
-          <div className="flex basis-1/3 flex-col gap-2 items-center justify-center">
-            <p className="text-3xl font-bold">100+</p>
-            <div className="bg-gray-400 w-20 h-1 rounded relative before:block before:bg-gray-400 before:absolute before:left-1/2 before:-translate-x-1/2 before:aspect-square before:w-[10px] before:top-1/2 before:-translate-y-1/2 before:rotate-45"></div>
+          <div className="flex basis-1/4 px-6 flex-col gap-2 items-center justify-center">
+            <div className="flex gap-2 items-center">
+              <AnimatedCounter
+                className="text-3xl font-bold"
+                to={750}
+                from={0}
+              />
+              <span className="text-3xl font-bold">+</span>
+            </div>
+            <div className="h-[3px] relative flex flex-col w-full border-t-0 bg-transparent bg-gradient-to-r from-transparent via-gray-200 to-transparent opacity-50 after:block after:absolute after:-bottom-1 after:left-1/2 after:w-1/3 after:h-[3px] after:-translate-x-1/2 after:border-t-0 after:bg-transparent after:bg-gradient-to-r after:from-transparent after:via-slate-200 after:to-transparent"></div>
+            <p className="font-semibold">Placements</p>
+          </div>
+          <div className="flex basis-1/4 px-6 flex-col gap-2 items-center justify-center">
+            <div className="flex gap-2 items-center">
+              <AnimatedCounter
+                className="text-3xl font-bold"
+                to={100}
+                from={0}
+              />
+              <span className="text-3xl font-bold">+</span>
+            </div>
+            <div className="h-[3px] relative flex flex-col w-full border-t-0 bg-transparent bg-gradient-to-r from-transparent via-gray-200 to-transparent opacity-50 after:block after:absolute after:-bottom-1 after:left-1/2 after:w-1/3 after:h-[3px] after:-translate-x-1/2 after:border-t-0 after:bg-transparent after:bg-gradient-to-r after:from-transparent after:via-slate-200 after:to-transparent"></div>
             <p className="font-semibold">Faculty</p>
           </div>
-          <div className="flex basis-1/3 flex-col gap-2 items-center justify-center">
-            <p className="text-3xl font-bold">150+</p>
-            <div className="bg-gray-400 w-20 h-1 rounded relative before:block before:bg-gray-400 before:absolute before:left-1/2 before:-translate-x-1/2 before:aspect-square before:w-[10px] before:top-1/2 before:-translate-y-1/2 before:rotate-45"></div>
+          <div className="flex basis-1/4 px-6 flex-col gap-2 items-center justify-center">
+            <div className="flex gap-2 items-center">
+              <AnimatedCounter
+                className="text-3xl font-bold"
+                to={150}
+                from={0}
+              />
+              <span className="text-3xl font-bold">+</span>
+            </div>
+            <div className="h-[3px] relative flex flex-col w-full border-t-0 bg-transparent bg-gradient-to-r from-transparent via-gray-200 to-transparent opacity-50 after:block after:absolute after:-bottom-1 after:left-1/2 after:w-1/3 after:h-[3px] after:-translate-x-1/2 after:border-t-0 after:bg-transparent after:bg-gradient-to-r after:from-transparent after:via-slate-200 after:to-transparent"></div>
             <p className="font-semibold">Publications</p>
-          </div>
-          <div className="flex basis-1/3 flex-col gap-2 items-center justify-center">
-            <p className="text-3xl font-bold">750+</p>
-            <div className="bg-gray-400 w-20 h-1 rounded relative before:block before:bg-gray-400 before:absolute before:left-1/2 before:-translate-x-1/2 before:aspect-square before:w-[10px] before:top-1/2 before:-translate-y-1/2 before:rotate-45"></div>
-            <p className="font-semibold">Placements</p>
           </div>
         </div>
       </section>
