@@ -78,7 +78,7 @@ const navmenuItems: NavmenuItem[] = [
       {
         title: '',
         items: [
-          { text: 'Overview', href: '/academics' },
+          { text: 'Overview', href: '/academics', hideOnMobile: true },
           { text: 'Faculty', href: '/academics/faculty' },
           { text: 'Research', href: '/academics/research' },
         ]
@@ -150,8 +150,7 @@ function Header() {
                 </Link>
               </div>
             </div>
-          </div>
-        </div>}
+          </div>)}
         <div className='flex gap-2 lg:w-1/5 text-center lg:text-left text-xs *:odd:font-bold'>
           <Link href='/tenders'>Tenders</Link><div>|</div>
           <Link href='https://aims.iiitdwd.ac.in/aims/'>AIMS</Link><div>|</div>
@@ -211,7 +210,7 @@ function Header() {
                       {
                         item.subGroups.map(group => (
                           !group.title
-                            ? group.items.map(gItem => <Link key={gItem.text} className='hover:underline' href={gItem.href}>{gItem.text}</Link>)
+                            ? group.items.filter(gItem => !gItem.hideOnMobile).map(gItem => <Link key={gItem.text} className='hover:underline' href={gItem.href}>{gItem.text}</Link>)
                             : <details key={group.title} className='group/sub'>
                               <summary className='flex items-center justify-between focus:outline-none'>
                                 <div>{group.title}</div>
