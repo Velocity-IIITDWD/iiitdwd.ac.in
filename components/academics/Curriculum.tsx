@@ -28,8 +28,8 @@ function createTabs(
         key={i}
         className={`${
           tabs === i &&
-          'bg-dwd-secondary2 border border-slate-900 border-b-0 border-b-dwd-secondary2'
-        } text-dwd-primary min-w-[100px] flex-1 cursor-pointer border-b border-b-slate-700 justify-center flex rounded-t-lg py-3`}
+          'bg-slate-300 border border-slate-400 border-b-0 border-b-slate-300'
+        } text-dwd-primary min-w-[100px] flex-1 cursor-pointer border-b border-b-slate-400 justify-center flex rounded-t-lg py-3`}
         onClick={() => setTab(i)}
       >
         Semester {i}
@@ -51,13 +51,13 @@ function createTable(tabs: number, type: number): React.ReactElement[] {
   const courses = Branch[tabs - 1]?.map(
     (item: creditStructure, key: number) => (
       <TableRow className="odd:bg-gray-100" key={key}>
-        <TableCell className="border-r border-slate-700 font-semibold">
+        <TableCell className="border-r border-slate-400 font-semibold">
           {item?.code}
         </TableCell>
-        <TableCell className="border-r border-slate-700">
+        <TableCell className="border-r border-slate-400">
           {item?.title}
         </TableCell>
-        <TableCell className="border-r border-slate-700">
+        <TableCell className="border-r border-slate-400">
           {item?.credit}
         </TableCell>
         <TableCell>{item?.preReq}</TableCell>
@@ -77,20 +77,20 @@ export default function Curriculum({ type }: { type: number }) {
     <div className="mx-auto flex justify-center flex-col">
       <div className="flex w-full flex-wrap z-10">{alltabs}</div>
       <div className="">
-        <Table className="text-slate-900 border border-slate-700 border-t-0">
+        <Table className="text-slate-900 border border-slate-400 border-t-0">
           {/* <TableCaption>CSE Course Details.</TableCaption> */}
-          <TableHeader className="bg-dwd-secondary2">
+          <TableHeader className="bg-slate-300">
             <TableRow>
-              <TableHead className="border border-t-0 border-slate-700 text-slate-900 w-[160px]">
+              <TableHead className="border border-t-0 border-slate-400 text-slate-900 w-[160px]">
                 Course Code
               </TableHead>
-              <TableHead className="border border-t-0 border-slate-700 text-slate-900">
+              <TableHead className="border border-t-0 border-slate-400 text-slate-900">
                 Course
               </TableHead>
-              <TableHead className="border border-t-0 border-slate-700 text-slate-900 w-[160px]">
+              <TableHead className="border border-t-0 border-slate-400 text-slate-900 w-[160px]">
                 Credits
               </TableHead>
-              <TableHead className="border border-t-0 border-slate-700 text-slate-900 w-[400px]">
+              <TableHead className="border border-t-0 border-slate-400 text-slate-900 w-[400px]">
                 Prerequisites
               </TableHead>
             </TableRow>
