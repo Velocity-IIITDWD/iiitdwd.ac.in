@@ -24,14 +24,14 @@ interface ProfileProp {
 
 let ProfileProps: Array<ProfileProp> = [
   {
-    id: '1',
+    id: 'Dr.AbdulWahid',
     content: {
       head: {
         name: 'Dr. Abdul Wahid',
         profile_pdf: '--provide path string',
       },
       card: {
-        photo: '/brand/logo-square-light.png',
+        photo: '/faculty_images/1.jpeg',
         designation: 'Assistant professor',
         department: 'Computer Science & Engineering',
         mail_id: 'abdul.wahid@iiitdwd.ac.in',
@@ -50,14 +50,14 @@ let ProfileProps: Array<ProfileProp> = [
     },
   },
   {
-    id: '2',
+    id: 'Dr.AnandPBarangi',
     content: {
       head: {
-        name: 'Dr. ANAND P. BARANGI',
+        name: 'Dr. Anand P. Barangi',
         profile_pdf: '--provide path string',
       },
       card: {
-        photo: '/brand/logo-square-light.png',
+        photo: '/faculty_images/2.jpg',
         designation: 'Assistant professor',
         department: 'Humanities and Science',
         mail_id: 'anandbarangi@iiitdwd.ac.in',
@@ -71,14 +71,14 @@ let ProfileProps: Array<ProfileProp> = [
     },
   },
   {
-    id: '3',
+    id: 'Dr.AnimeshChaturvedi',
     content: {
       head: {
         name: 'Dr. Animesh Chaturvedi',
         profile_pdf: '--provide path string',
       },
       card: {
-        photo: '/brand/logo-square-light.png',
+        photo: '/faculty_images/3.jpg',
         designation: 'Assistant professor',
         department: 'Data Science and Intelligent Systems',
         mail_id: 'animesh@iiitdwd.ac.in',
@@ -97,14 +97,14 @@ let ProfileProps: Array<ProfileProp> = [
     },
   },
   {
-    id: '4',
+    id: 'Dr.AnimeshRoy',
     content: {
       head: {
         name: 'Dr. Animesh Roy',
         profile_pdf: '--provide path string',
       },
       card: {
-        photo: '/brand/logo-square-light.png',
+        photo: '/faculty_images/4.jpg',
         designation: 'Assistant professor',
         department: 'Computer Science & Engineering',
         mail_id: 'animeshroy@iiitdwd.ac.in',
@@ -122,16 +122,16 @@ let ProfileProps: Array<ProfileProp> = [
     },
   },
   {
-    id: '5',
+    id: 'Dr.Anushreekini',
     content: {
       head: {
         name: 'Dr. Anushree kini',
         profile_pdf: '--provide path string',
       },
       card: {
-        photo: '/brand/logo-square-light.png',
-        designation: 'Humanities & Science',
-        department: 'Computer Science & Engineering',
+        photo: '/faculty_images/5.jpg',
+        designation: 'Assistant professor',
+        department: 'Humanities & Science',
         mail_id: 'anushree@iiitdwd.ac.in',
         cabin_number: '?????',
       },
@@ -143,23 +143,27 @@ let ProfileProps: Array<ProfileProp> = [
     },
   },
   {
-    id: '6',
+    id: 'Dr.AswathBabuH',
     content: {
       head: {
-        name: 'Dr. Anushree kini',
+        name: 'Dr. Aswath Babu H',
         profile_pdf: '--provide path string',
       },
       card: {
-        photo: '/brand/logo-square-light.png',
-        designation: 'Humanities & Science',
-        department: 'Computer Science & Engineering',
-        mail_id: 'anushree@iiitdwd.ac.in',
+        photo: '/faculty_images/6.jpeg',
+        designation: 'Assistant professor',
+        department: 'Humanities & Science',
+        mail_id: 'aswath@iiitdwd.ac.in',
         cabin_number: '?????',
       },
       body: {
         profile_text:
           'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
-        interest_areas: [],
+        interest_areas: [
+          { id: 1, area: 'Quantum Optics' },
+          { id: 2, area: 'Quantum Information Theory' },
+          { id: 3, area: 'Non linear Dynamics' },
+        ],
       },
     },
   },

@@ -11,6 +11,8 @@ import AboutIIIT from '@/components/about/AboutIIIT';
 import ShortCampusVideo from '@/components/about/ShortCampusVideo';
 import { Metadata } from 'next';
 
+import './smoothScroll.css';
+
 const AboutPage = () => {
   const about: About = aboutData;
 
@@ -29,10 +31,10 @@ const AboutPage = () => {
         />
       </div>
 
-      <a href='#introduction' />
+      <div id='introduction' />
       <AboutIIIT aboutText={about.aboutText} />
 
-      <a href='#directorsmessage' />
+      <div id='directors-message' />
       <DirectorsMessage
         heading={about.directorsMessage.heading}
         directorName={about.directorName}
@@ -43,10 +45,10 @@ const AboutPage = () => {
         briefProfile={about.briefProfile}
       />
 
-      <a href='#family' />
+      <div id='family' />
       <OurFamily />
 
-      <a href='#vision' />
+      <div id='vision' />
       <OurVision vision={about.vision} />
       <OurMission missions={about.missions} />
       <CoreValues coreValues={about.coreValues} />
