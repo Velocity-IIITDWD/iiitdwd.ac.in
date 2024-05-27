@@ -35,7 +35,7 @@ export default function Home() {
                 width={0}
                 height={0}
                 sizes="100%"
-                className="md:w-auto w-full h-auto md:h-full relative object-cover object-center"
+                className="md:w-[80%] w-full h-[80%] md:h-full relative object-cover object-top"
               />
 
               <div className="absolute bottom-4 left-1/2 w-fit max-w-full -translate-x-1/2 bg-slate-900/40 backdrop-blur p-2 rounded text-white">

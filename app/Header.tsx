@@ -59,7 +59,7 @@ const navmenuItems: NavmenuItem[] = [
           { text: 'Introduction', href: '/about#introduction' },
           { text: "Director's Message", href: '/about#directors-message' },
           { text: 'Our Family', href: '/about#family' },
-          { text: 'Vision', href: '/about#vision' },
+          { text: 'Vision, Missions & Core Values', href: '/about#vision' },
         ],
       },
     ],
