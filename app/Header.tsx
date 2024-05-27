@@ -152,10 +152,23 @@ function Header() {
             </div>
           </div>
         )}
-        <div className='flex gap-2 lg:w-1/5 text-center lg:text-left text-xs *:odd:font-bold'>
-          <Link href='/nirf'>NIRF</Link><div>|</div>
-          <Link href='https://aims.iiitdwd.ac.in/aims/'>AIMS</Link><div>|</div>
-          <Link href='https://www.onlinesbi.sbi/sbicollect/icollecthome.htm?corpID=873279'>Students Fee Portal</Link>
+        <div className="flex gap-2 lg:w-1/5 text-center lg:text-left text-xs *:odd:font-bold">
+          {/* :TODO */}
+          <Link className="whitespace-nowrap" href="/nirf">
+            NIRF
+          </Link>{' '}
+          <div>|</div>
+          <Link className="whitespace-nowrap" href="/icc">
+            ICC
+          </Link>{' '}
+          <div>|</div>
+          <Link className="whitespace-nowrap" href="https://aims.iiitdwd.ac.in/aims/login/loginHome">
+            AIMS
+          </Link>{' '}
+          <div>|</div>
+          <Link className="whitespace-nowrap" href="https://www.onlinesbi.sbi/sbicollect/icollecthome.htm?corpID=873279">
+            Students Fee Portal
+          </Link>
         </div>
         <div className="hidden lg:block w-1/5"></div>
       </div>
