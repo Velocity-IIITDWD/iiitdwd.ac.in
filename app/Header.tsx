@@ -137,6 +137,7 @@ function Header() {
                 <div className='mt-2 ml-8 flex flex-col gap-2'>
                   <Link className='hover:underline' href='/faculty'>Faculty</Link>
                   <Link className='hover:underline' href='/academics/research'>Research</Link>
+                  <Link className='hover:underline' href='/academics/krc'>Knowledge Resource Centre</Link>
                   <details className='group/sub'>
                     <summary className='flex items-center justify-between focus:outline-none'>
                       <div>Departments</div>
@@ -259,6 +260,11 @@ function Header() {
                     <NavigationMenuLink href='/academics/research'>
                       <div className='hover:bg-accent p-2 rounded-md w-full'>
                         Research
+                      </div>
+                    </NavigationMenuLink>
+                    <NavigationMenuLink href='/academics/krc'>
+                      <div className='hover:bg-accent p-2 rounded-md w-full'>
+                        Knowledge Resource Centre
                       </div>
                     </NavigationMenuLink>
                   </div>
