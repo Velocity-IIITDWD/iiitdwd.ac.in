@@ -7,6 +7,11 @@ const nextConfig = {
         hostname: 'iiitdwd.ac.in',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'www.iiitdwd.ac.in',
+        pathname: '/**',
+      },
     ],
   },
 };

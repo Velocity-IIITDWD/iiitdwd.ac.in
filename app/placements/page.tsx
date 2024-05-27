@@ -7,6 +7,7 @@ import '../globals.css';
 
 import EmblaCarousel from '@/components/EmblaCarousel';
 import { Metadata } from 'next';
+import Link from 'next/link';
 
 
 //import Carousel from "@/components/Carousel";
@@ -207,19 +208,29 @@ export default function Home() {
           </div>
 
           <div style={{ width: '35%' }}>
-            <button className="buttonss bg-[#50A5CA] text-white px-4 py-4 rounded w-full  whitespace-no-wrap" style={{ fontSize: '14px' }}>
-      View CGC Committee
-            </button>
+            <Link href="/committee/cgc">
+              <button className="buttonss bg-[#50A5CA] text-white px-4 py-4 rounded w-full  whitespace-no-wrap" style={{ fontSize: '14px' }}>
+                CGC Committee
+              </button>
+            </Link>
           </div>
 
           <div style={{ width: '35%' }}>
-            <a href="/brochure.pdf" download="Brochure.pdf">
+            <Link href="/cgc/student_coordinators">
               <button className="buttonss bg-[#013365] text-white px-4 py-4 rounded w-full   whitespace-no-wrap" style={{ fontSize: '14px' }}>
-        Download Brochure
+                Student Coordinators Team
               </button>
-            </a>
+            </Link>
           </div>
 
+
+
+        </div>
+
+        <div className='mt-6 ml-[20%]'>
+          <Link href="/brochure.pdf" target='_blank' className="text-[#013365] text-lg font-bold after:-translate-y-1/3 after:absolute relative after:content-[url('/icons/linkIcon.svg')]">
+            Brochure
+          </Link>
         </div>
 
 
