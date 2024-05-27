@@ -3,6 +3,7 @@ import { FC, useState } from 'react';
 import { ProfileProps } from '@/data/faculty_profile';
 import '@/app/globals.css';
 import Image from 'next/image';
+import { CircleUser, GraduationCap, BriefcaseBusiness, Mail, MapPin, Split } from 'lucide-react';
 
 type ProfileProp = {
   id: string;
@@ -54,7 +55,7 @@ interface ProfileProps {
 const Profile = (params: pp) => {
   const profileId = params.params.id;
   const profile: ProfileProp | undefined = ProfileProps.find(
-    (profileProp) => profileProp.id == profileId
+    (profileProp) => profileProp.id === profileId
   );
   if (!profile) {
     return <div></div>;
@@ -92,10 +93,22 @@ const Profile = (params: pp) => {
               </div>
               <div>
                 <div className="flex flex-col space-y-4 pt-12">
-                  <div>{profile.content.card.department}</div>
-                  <div>{profile.content.card.designation}</div>
-                  <div>{profile.content.card.mail_id}</div>
-                  <div>{profile.content.card.cabin_number}</div>
+                  <div className="flex flex-row  gap-2  ">
+                    <Split />
+                    <span>{profile.content.card.department}</span>
+                  </div>
+                  <div className="flex flex-row  gap-2 ">
+                    <BriefcaseBusiness />
+                    <span>{profile.content.card.designation}</span>
+                  </div>
+                  <div className="flex flex-row  gap-2 ">
+                    <Mail />
+                    <span>{profile.content.card.mail_id}</span>
+                  </div>
+                  <div className="flex flex-row  gap-2 ">
+                    <MapPin />
+                    <span>{profile.content.card.cabin_number}</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -104,8 +117,9 @@ const Profile = (params: pp) => {
           <div className="flex flex-col space-y-8">
             <div>
               <div className="flex flex-col">
-                <div className="font-bold text-xl border-b-2 border-black">
-                  Profile
+                <div className="flex flex-row  gap-2 font-bold text-xl border-b-2 border-black">
+                  <CircleUser />
+                  <span>Profile</span>
                 </div>
                 <div className="pl-2 py-4">
                   {profile.content.body.profile_text}
@@ -114,8 +128,9 @@ const Profile = (params: pp) => {
             </div>
             <div>
               <div className="flex flex-col  py-20">
-                <div className="font-bold text-xl border-b-2 border-black">
-                  Area Of Interest
+                <div className="flex flex-row  gap-2 font-bold text-xl border-b-2 border-black">
+                  <GraduationCap />
+                  <span>Area of Interest</span>
                 </div>
                 <div>
                   <ul className="list-disc pl-10 py-4">
