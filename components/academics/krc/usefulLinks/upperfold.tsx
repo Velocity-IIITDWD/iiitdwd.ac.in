@@ -26,7 +26,7 @@ const UpperFold: FC<UpperFoldProps> = ({ paragraphText }) => {
         <div className="container mx-auto flex flex-col lg:flex-row items-center pl-2 pr-6 max-w-screen-lg h-full">
           <div className="w-full lg:w-1/2 flex flex-col justify-center mb-8 lg:mb-0 lg:pr-0 text-center lg:text-left">
             <h1 className="text-7xl lg:text-7xl font-bold">
-              Knowledge Resource Center
+              Knowledge Resource Centre
             </h1>
           </div>
           <div className="hidden lg:block h-full w-px bg-white mx-4"></div>
