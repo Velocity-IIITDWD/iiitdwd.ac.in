@@ -144,10 +144,10 @@ export default function Tenders({ active, archive }: TendersProps) {
   ];
 
   return (
-    <div className="flex flex-col w-full p-1 md:p-4">
-      <div className="uppercase text-dwd-primary font-bold text-3xl mx-11 my-5 text-center">
+    <section className="flex flex-col w-full p-1 md:p-4">
+      <h1 className="heading-text">
         Tenders
-      </div>
+      </h1>
       <div className="flex w-full">
         <TabData
           onValueChange={(value) => setSelectedTab(value)}
@@ -176,6 +176,6 @@ export default function Tenders({ active, archive }: TendersProps) {
           <TabsContentContent tabsData={tabsData} />
         </TabData>
       </div>
-    </div>
+    </section>
   );
 }

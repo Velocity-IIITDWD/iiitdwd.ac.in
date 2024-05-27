@@ -1,20 +1,16 @@
 import Image from 'next/image';
+import { type Profile } from '@/types/profile';
 
-export type Profile = {
-  content: string[];
-  imageURL: string;
-  title: string;
-};
-
-export default function ProfileCard({
-  content,
-  imageURL,
-  title,
-}: Profile) {
+export default function ProfileCard({ content, imageURL, title }: Profile) {
   return (
-    <div className="flex flex-col rounded-md overflow-hidden shadow-[0_3px_10px_rgb(0,0,0,0.2)] hover:shadow-[0_2px_5px_rgb(0,0,0,0.2)]">
-      <div className="relative aspect-square flex items-center">
-        <Image src={imageURL} fill={true} objectFit="contain" alt={title} />
+    <div className="flex flex-col rounded-md overflow-hidden shadow-[0_3px_10px_rgb(0,0,0,0.2)] hover:shadow-[0_1px_2px_rgb(0,0,0,0.2)]">
+      <div className="relative aspect-square bg-gradient-to-b from-white to-zinc-100">
+        <Image
+          src={imageURL || '/profile/blank-profile-square.png'}
+          fill={true}
+          objectFit="contain"
+          alt={title}
+        />
       </div>
       <div className="bg-white flex-1">
         <div className="flex flex-col p-4">
