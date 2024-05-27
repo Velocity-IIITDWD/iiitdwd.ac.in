@@ -54,10 +54,10 @@ const navmenuItems: NavmenuItem[] = [
     href: '/campus',
     subGroups: [{
       items: [
-        { text: 'Facilities', href: '/campus/facilities' },
-        { text: 'Clubs', href: '/campus/clubs' },
-        { text: 'Events', href: '/campus/events' },
-        { text: 'Magazine', href: '/campus/magazine' },
+        { text: 'Facilities', href: '/facilities' },
+        { text: 'Clubs', href: '/clubs' },
+        { text: 'Events', href: '/events' },
+        { text: 'Magazine', href: '/magazine' },
       ]
     }]
   },
@@ -79,8 +79,7 @@ const navmenuItems: NavmenuItem[] = [
         title: '',
         items: [
           { text: 'Overview', href: '/academics', hideOnMobile: true },
-          { text: 'Faculty', href: '/academics/faculty' },
-          { text: 'Research', href: '/academics/research' },
+          { text: 'Faculty', href: '/faculty' },
         ]
       },
       {

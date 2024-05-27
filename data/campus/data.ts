@@ -7,14 +7,14 @@ export interface CardData {
 export const cardData: CardData[] = [
   {
     title: 'Facilities',
-    href: '/campus/facilities',
+    href: '/facilities',
     image: '/campus/eblock.jpg',
   },
-  { title: 'Events', href: '/campus/events', image: '/campus/events.png' },
-  { title: 'Clubs', href: '/campus/clubs', image: '/campus/velocity_lat.png' },
+  { title: 'Events', href: '/events', image: '/campus/events.png' },
+  { title: 'Clubs', href: '/clubs', image: '/campus/velocity_lat.png' },
   {
     title: 'Institute Magazine',
-    href: '/campus/institute-magazine',
-    image: '/campus/magazin.png',
+    href: '/magazine',
+    image: '/Campus/magazine.png',
   },
 ];
