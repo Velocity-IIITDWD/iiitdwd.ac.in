@@ -44,7 +44,7 @@ export default function ResearchPage() {
             <h3 className="text-dwd-primary text-lg font-bold">{ad.time}</h3>
             <div className="border-l-2 border-dwd-primary mx-4 p-4 flex flex-col gap-2">
               <span>
-                Last date to send applications:
+                Last date to send applications:{' '}
                 <span className="font-semibold">{ad.lastDate}</span>
               </span>
               <span className="flex gap-4 text-blue-500 underline">
