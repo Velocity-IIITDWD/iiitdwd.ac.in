@@ -62,6 +62,11 @@
   details > summary::-webkit-details-marker {
     display: none;
   }
+
+  .heading-text {
+    @apply text-4xl font-bold my-10 text-center text-dwd-primary;
+  }
+
 }
 
 @layer utilities {

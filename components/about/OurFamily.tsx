@@ -8,13 +8,13 @@ const OurFamily = () => {
       </span>
       <Link
         className="bg-dwd-primary hover:bg-dwd-secondary2/40 border-2 p-3 border-dwd-primary hover:text-dwd-primary text-white text-center rounded-full text-lg md:text-xl"
-        href="/visitors"
+        href="/visitor"
       >
         Visitor
       </Link>
       <Link
         className="bg-dwd-primary hover:bg-dwd-secondary2/40 border-2 p-3 border-dwd-primary hover:text-dwd-primary text-white text-center rounded-full text-lg md:text-xl"
-        href="/boardOfGoverners"
+        href="/board_of_governers"
       >
         Board of Governors
       </Link>
@@ -32,13 +32,13 @@ const OurFamily = () => {
       </Link>
       <Link
         className="bg-dwd-primary hover:bg-dwd-secondary2/40 border-2 p-3 border-dwd-primary hover:text-dwd-primary text-white text-center rounded-full text-lg md:text-xl"
-        href="/buildingAndWorksCommittee"
+        href="/director/former"
       >
-        Former Director
+        Former Directors
       </Link>
       <Link
         className="bg-dwd-primary hover:bg-dwd-secondary2/40 border-2 p-3 border-dwd-primary hover:text-dwd-primary text-white text-center rounded-full text-lg md:text-xl"
-        href="/financeCommittee"
+        href="/committee/finance"
       >
         Finance Committee
       </Link>
@@ -56,9 +56,15 @@ const OurFamily = () => {
       </Link>
       <Link
         className="bg-dwd-primary hover:bg-dwd-secondary2/40 border-2 p-3 border-dwd-primary hover:text-dwd-primary text-white text-center rounded-full text-lg md:text-xl"
-        href="/buildingAndWorksCommittee"
+        href="/about/chairperson"
       >
-        Building and Works Committee
+        Chairperson&apos;s Message
+      </Link>
+      <Link
+        className="bg-dwd-primary hover:bg-dwd-secondary2/40 border-2 p-3 border-dwd-primary hover:text-dwd-primary text-white text-center rounded-full text-lg md:text-xl"
+        href="/committee/expert"
+      >
+        Expert Committee
       </Link>
     </div>
   );
