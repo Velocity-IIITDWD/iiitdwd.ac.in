@@ -2,96 +2,100 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 @layer base {
-    :root {
-        --background: 0 0% 100%;
-        --foreground: 0 0% 3.9%;
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
 
-        --card: 0 0% 100%;
-        --card-foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
 
-        --popover: 0 0% 100%;
-        --popover-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
 
-        --primary: 0 0% 9%;
-        --primary-foreground: 0 0% 98%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
 
-        --secondary: 0 0% 96.1%;
-        --secondary-foreground: 0 0% 9%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
 
-        --muted: 0 0% 96.1%;
-        --muted-foreground: 0 0% 45.1%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
 
-        --accent: 0 0% 96.1%;
-        --accent-foreground: 0 0% 9%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
 
-        --destructive: 0 84.2% 60.2%;
-        --destructive-foreground: 0 0% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
 
-        --border: 0 0% 89.8%;
-        --input: 0 0% 89.8%;
-        --ring: 0 0% 3.9%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
 
-        --radius: 0.5rem;
-    }
+    --radius: 0.5rem;
+  }
 
-    * {
-        @apply border-border;
-    }
+  * {
+    @apply border-border;
+  }
 
-    html, body {
-        @apply min-h-screen w-full overflow-x-hidden overflow-y-auto;
-        margin: 0;
-        padding: 0;
-    }
+  html,
+  body {
+    @apply min-h-screen w-full overflow-x-hidden overflow-y-auto;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+  }
 
-    body {
-        @apply flex flex-col bg-background text-foreground;
-    }
+  body {
+    @apply flex flex-col bg-background text-foreground;
+  }
 
-    details > summary {
-        list-style: none;
-    }
+  details > summary {
+    list-style: none;
+  }
 
-    details > summary::-webkit-details-marker {
-        display: none;
-    }
+  details > summary::-webkit-details-marker {
+    display: none;
+  }
 }
 
 @layer utilities {
-    @keyframes scroll {
-        from {
-            transform: translateX(100%);
-        }
-
-        to {
-            transform: translateX(-100%);
-        }
+  @keyframes scroll {
+    from {
+      transform: translateX(100%);
     }
 
-    .animate-marquee {
-        animation: scroll 10s linear infinite;
+    to {
+      transform: translateX(-100%);
     }
+  }
+
+  .animate-marquee {
+    animation: scroll 10s linear infinite;
+  }
 }
 
 .break-last-words {
-    white-space: nowrap;
+  white-space: nowrap;
 }
 
 .container {
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
-.procedure:hover
-{
-scale: 1.4;
-transition-duration: 0.2s;
+.procedure:hover {
+  scale: 1.4;
+  transition-duration: 0.2s;
 }
-
 
 .embla {
   position: relative;
@@ -118,15 +122,14 @@ transition-duration: 0.2s;
 .slide-content {
   background-color: #eee;
   height: 200px;
-  width:350px;
+  width: 350px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 25px;
   padding: 15px;
-  border:solid black 1px;
+  border: solid black 1px;
 }
-
 
 .embla__button {
   position: absolute;
@@ -139,17 +142,13 @@ transition-duration: 0.2s;
   cursor: pointer;
   z-index: 10;
   padding: 0.5rem;
-  
 }
-.embla__button:hover
-{
+.embla__button:hover {
   transition-duration: 0.2s;
-  scale:1.1
+  scale: 1.1;
 }
 .embla__button--prev {
   left: -60px;
-
-
 }
 
 .embla__button--next {
@@ -159,7 +158,6 @@ transition-duration: 0.2s;
 .embla__button__svg {
   width: 2rem;
   height: 2rem;
-  
 }
 
 .embla__dots {
@@ -169,22 +167,21 @@ transition-duration: 0.2s;
 }
 
 .embla__dot {
-  background-color: #50A5CA;
+  background-color: #50a5ca;
   width: 0.5rem;
   height: 0.5rem;
   border-radius: 50%;
   margin: 0 0.25rem;
   cursor: pointer;
-  margin-top: .9rem; /* Adjusted margin */
+  margin-top: 0.9rem; /* Adjusted margin */
 }
 
 .embla__dot--selected {
   background-color: #013365;
   width: 0.8rem;
   height: 0.8rem;
-  margin-top: .75rem; /* Keep the same margin as non-selected dots */
+  margin-top: 0.75rem; /* Keep the same margin as non-selected dots */
 }
-
 
 @layer utilities {
   .text-balance {
@@ -193,65 +190,56 @@ transition-duration: 0.2s;
 }
 @media (max-width: 767px) {
   .bar {
-    width: 50%; 
+    width: 50%;
   }
-  .procedure:hover
-{
-scale: 1;
-transition-duration: 0.2s;
-}
-  .container{
+  .procedure:hover {
+    scale: 1;
+    transition-duration: 0.2s;
+  }
+  .container {
     margin: 0;
     padding: 0;
-    width:100%
+    width: 100%;
   }
-  .shortbox{
-  
+  .shortbox {
     margin-left: 5%;
   }
-  .uj
-  {
+  .uj {
     margin-left: 5%;
   }
 
-  .pp{
+  .pp {
     margin-left: 5%;
-    margin-right:0%;
+    margin-right: 0%;
   }
-.whatsapp
-{
-  margin-left: 5%;
-  margin-right: 2%;
-}
-.buttons{
-  flex-direction: column;
-  white-space: nowrap;
-  gap: 25px;
-  margin-left:12%;
-width:220%;
-  
-}
-.embla__button--next
-{
-right:-40px;
-}
-.embla__button--prev
-{
-left:-40px;
-}
-.embla{
-margin-left: 9.5%;
-margin-right: 9.5%;
-}
-.slide-content
-{
-  width: 330px;
-}
-.contact
-{
-  flex-direction: column;
-  gap:50px;
-}
+  .whatsapp {
+    margin-left: 5%;
+    margin-right: 2%;
+  }
+  .buttons {
+    flex-direction: column;
+    white-space: nowrap;
+    gap: 25px;
+    margin-left: 12%;
+    width: 220%;
+  }
+  .embla__button--next {
+    right: -40px;
+  }
+  .embla__button--prev {
+    left: -40px;
+  }
+  .embla {
+    margin-left: 9.5%;
+    margin-right: 9.5%;
+  }
+  .slide-content {
+    width: 330px;
+  }
+  .contact {
+    flex-direction: column;
+    gap: 50px;
+  }
 }
 
 @keyframes slide-in-left {
@@ -276,14 +264,14 @@ margin-right: 9.5%;
   }
 }
 
-@media (max-width:400px) {
-  .buttons{
-    white-space:initial;
+@media (max-width: 400px) {
+  .buttons {
+    white-space: initial;
   }
-  .slide-content{
-    width:290px;
+  .slide-content {
+    width: 290px;
   }
-  .CGC{
+  .CGC {
     width: 100%;
     font-size: 2rem;
     line-height: 2.5rem;
@@ -296,4 +284,3 @@ margin-right: 9.5%;
 .slide-in-right {
   animation: slide-in-right 1s ease-out forwards;
 }
-

@@ -1,6 +1,5 @@
 'use client';
 import Link from 'next/link';
-import Autoplay from 'embla-carousel-autoplay';
 import { ExternalLink } from 'lucide-react';
 import { images, ProgramCardDetails } from '@/data/homePage';
 
@@ -12,61 +11,15 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel';
-import { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import MainCarousel from '@/components/HomePage/MainCarousel';
 import HomeCarousel from '@/components/HomePage/HomeCarousel';
 import { GalleryImages } from '@/data/gallery';
 import { events } from '@/data/events';
+import AnimatedCounter from '@/components/HomePage/AnimatedCounter';
+import AutoScrollCarousel from '@/components/HomePage/AutoScrollCarousel';
 
 export default function Home() {
-  const parallaxSectionRef = useRef<HTMLDivElement | null>(null);
-  const observerRef = useRef<IntersectionObserver | null>(null);
-
-  useEffect(() => {
-    const parallaxSection = parallaxSectionRef.current;
-
-    if (parallaxSection) {
-      const handleScroll = () => {
-        const scrollY = window.scrollY;
-        const viewportHeight = window.innerHeight;
-
-        // Calculate dynamic background position (adjust as needed)
-        const backgroundPosition = `50% ${
-          0.3 * viewportHeight - (scrollY / viewportHeight) * 100
-        }px`;
-
-        parallaxSection.style.backgroundPosition = backgroundPosition;
-      };
-
-      const handleIntersection = (entries: any) => {
-        const [entry] = entries;
-        if (entry.isIntersecting) {
-          window.addEventListener('scroll', handleScroll); // Add event listener
-        } else {
-          window.removeEventListener('scroll', handleScroll); // Remove event listener
-        }
-      };
-
-      const options = {
-        root: null, // Observe relative to viewport
-        threshold: 0.5, // Consider section in viewport when 50% visible
-      };
-
-      const observer = new IntersectionObserver(handleIntersection, options);
-      observer.observe(parallaxSection);
-
-      observerRef.current = observer; // Store observer for cleanup
-    }
-
-    // Cleanup function to remove observer on unmount
-    return () => {
-      const observer = observerRef.current;
-      if (observer) {
-        observer.disconnect();
-      }
-    };
-  }, []);
   return (
     <div className="flex flex-col h-full w-full">
       <MainCarousel>
@@ -75,15 +28,14 @@ export default function Home() {
             key={index}
             className="w-full h-full relative flex-[0_0_100%] overflow-hidden"
           >
-            <CardContent className="flex p-0 relative bg-gray-200 h-[60vh] items-center justify-center">
+            <CardContent className="flex p-0 relative bg-gray-50 h-[60vh] items-center shadow-lg justify-center">
               <Image
                 alt="main image"
                 src={item?.url}
                 width={0}
                 height={0}
                 sizes="100%"
-                style={{ height: '100%', width: '100%' }}
-                className="w-full relative object-cover object-center"
+                className="md:w-auto w-full h-auto md:h-full relative object-cover object-center"
               />
 
               <div className="absolute bottom-4 left-1/2 w-fit max-w-full -translate-x-1/2 bg-slate-900/40 backdrop-blur p-2 rounded text-white">
@@ -213,100 +165,110 @@ export default function Home() {
         </HomeCarousel>
       </section>
 
-      <section className="w-full py-10 px-6 md:px-44">
+      <section className="w-full py-10">
         <p className="text-dwd-primary text-2xl font-bold px-10 mb-10">
           Event Calendar
         </p>
-        <Carousel
-          opts={{
-            align: 'start',
-            loop: true,
-          }}
-          className="w-full relative overflow-hidden"
-        >
-          <CarouselContent>
-            {events.map((_, index) => (
-              
-              <CarouselItem key={index} className="">
-                <div className="p-1">
-                  <Card>
-                    <CardContent className="flex justify-center flex-col-reverse lg:flex-row items-center gap-6 p-6">
-                      <div className="flex text-justify flex-1 flex-col h-full text-dwd-primary gap-6">
-                        <p className="text-xl font-semibold mb-4">
-                          {events[index].text}
-                        </p>
-                        <p>{events[index].aboutEvent}</p>
-                        <p className="font-semibold mb-4">
-                          Date- {events[index].details.startDate}
-                        </p>
-                        <Link
-                          href={`/campus/events/${index+1}`}
-                          className="flex w-fit rounded hover:bg-dwd-primary hover:text-white transition duration-300 border border-dwd-primary py-2 px-4 gap-2"
-                        >
-                          Read More
-                          <ExternalLink />
-                        </Link>
-                      </div>
-                      <div className="w-full flex-none aspect-square lg:w-1/3 bg-gray-30 rounded shadow">
-                        <Image
-                          alt="main image"
-                          src={events[index].href}
-                          width={0}
-                          height={0}
-                          sizes="100%"
-                          style={{ height: '100%', width: '100%' }}
-                          className="aspect-[4/3] overflow-hidden object-cover object-center"
-                        />
-                      </div>
-                    </CardContent>
-                  </Card>
+        <AutoScrollCarousel>
+          {events?.map((item) => (
+            <Card
+              className="w-full h-full relative shadow-md flex-[0_0_100%] lg:flex-[0_0_33.33%]"
+              key={item?.id}
+            >
+              <CardContent className="flex justify-center flex-row items-center gap-6 p-4 md:p-6">
+                <div className="flex text-justify flex-1 flex-col h-full text-dwd-primary gap-6">
+                  <p className="text-xl font-semibold mb-4">{item?.text}</p>
+                  <p>{item?.aboutEvent}</p>
+                  <p className="font-semibold mb-4">
+                    Date- {item.details.startDate}
+                  </p>
+                  <Link
+                    href={`/campus/events/${item?.id + 1}`}
+                    className="flex w-fit rounded hover:bg-dwd-primary hover:text-white transition duration-300 border border-dwd-primary py-2 px-4 gap-2"
+                  >
+                    Read More
+                    <ExternalLink />
+                  </Link>
                 </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious className="absolute left-3 top-1/2 -translate-y-1/2" />
-          <CarouselNext className="absolute right-3 top-1/2 -translate-y-1/2" />
-        </Carousel>
+                <div className="flex-none aspect-square overflow-hidden w-1/3 bg-gray-30 rounded-lg shadow-lg border">
+                  <Image
+                    alt="main image"
+                    src={item?.href}
+                    width={0}
+                    height={0}
+                    sizes="100%"
+                    style={{ height: '100%', width: '100%' }}
+                    className="aspect-[4/3] overflow-hidden object-cover object-center"
+                  />
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </AutoScrollCarousel>
       </section>
 
-      <section
-        id="parallax"
-        ref={parallaxSectionRef}
-        className="w-full h-full bg-fixed relative overflow-hidden before:z-0 before:absolute before:h-full before:w-full before:left-0 before:top-0 before:bg-gray-900/80 bg-cover bg-repeat-y bg-[url('/HomePage/LandingPage.png')]"
-      >
-        <div className="relative py-24 lg:py-44 z-[1] text-white max-w-[1000px] mx-auto w-full px-10 flex flex-col md:flex-row gap-10 md:gap-4">
-          <div className="flex basis-1/3 flex-col gap-2 items-center justify-center">
-            <p className="text-3xl font-bold">1000+</p>
-            <div className="bg-gray-400 w-20 h-1 rounded relative before:block before:bg-gray-400 before:absolute before:left-1/2 before:-translate-x-1/2 before:aspect-square before:w-[10px] before:top-1/2 before:-translate-y-1/2 before:rotate-45"></div>
+      <section className="w-full h-full bg-fixed relative overflow-hidden before:z-0 before:absolute before:h-full before:w-full before:left-0 before:top-0 before:bg-gray-900/80 bg-cover bg-repeat-y bg-[url('/HomePage/LandingPage.png')]">
+        <div className="relative py-24 lg:py-44 z-[1] text-white max-w-[1000px] mx-auto w-full px-10 items-center justify-center flex flex-col lg:flex-row gap-10 lg:gap-4">
+          <div className="flex basis-1/4 px-6 flex-col gap-2 items-center justify-center">
+            <div className="flex gap-2 items-center">
+              <AnimatedCounter
+                className="text-3xl font-bold"
+                to={1000}
+                from={0}
+              />
+              <span className="text-3xl font-bold">+</span>
+            </div>
+            <div className="h-[3px] relative flex flex-col w-full border-t-0 bg-transparent bg-gradient-to-r from-transparent via-gray-200 to-transparent opacity-50 after:block after:absolute after:-bottom-1 after:left-1/2 after:w-1/3 after:h-[3px] after:-translate-x-1/2 after:border-t-0 after:bg-transparent after:bg-gradient-to-r after:from-transparent after:via-slate-200 after:to-transparent"></div>
             <p className="font-semibold">Alumini</p>
           </div>
-          <div className="flex basis-1/3 flex-col gap-2 items-center justify-center">
-            <p className="text-3xl font-bold">100+</p>
-            <div className="bg-gray-400 w-20 h-1 rounded relative before:block before:bg-gray-400 before:absolute before:left-1/2 before:-translate-x-1/2 before:aspect-square before:w-[10px] before:top-1/2 before:-translate-y-1/2 before:rotate-45"></div>
+          <div className="flex basis-1/4 px-6 flex-col gap-2 items-center justify-center">
+            <div className="flex gap-2 items-center">
+              <AnimatedCounter
+                className="text-3xl font-bold"
+                to={750}
+                from={0}
+              />
+              <span className="text-3xl font-bold">+</span>
+            </div>
+            <div className="h-[3px] relative flex flex-col w-full border-t-0 bg-transparent bg-gradient-to-r from-transparent via-gray-200 to-transparent opacity-50 after:block after:absolute after:-bottom-1 after:left-1/2 after:w-1/3 after:h-[3px] after:-translate-x-1/2 after:border-t-0 after:bg-transparent after:bg-gradient-to-r after:from-transparent after:via-slate-200 after:to-transparent"></div>
+            <p className="font-semibold">Placements</p>
+          </div>
+          <div className="flex basis-1/4 px-6 flex-col gap-2 items-center justify-center">
+            <div className="flex gap-2 items-center">
+              <AnimatedCounter
+                className="text-3xl font-bold"
+                to={100}
+                from={0}
+              />
+              <span className="text-3xl font-bold">+</span>
+            </div>
+            <div className="h-[3px] relative flex flex-col w-full border-t-0 bg-transparent bg-gradient-to-r from-transparent via-gray-200 to-transparent opacity-50 after:block after:absolute after:-bottom-1 after:left-1/2 after:w-1/3 after:h-[3px] after:-translate-x-1/2 after:border-t-0 after:bg-transparent after:bg-gradient-to-r after:from-transparent after:via-slate-200 after:to-transparent"></div>
             <p className="font-semibold">Faculty</p>
           </div>
-          <div className="flex basis-1/3 flex-col gap-2 items-center justify-center">
-            <p className="text-3xl font-bold">150+</p>
-            <div className="bg-gray-400 w-20 h-1 rounded relative before:block before:bg-gray-400 before:absolute before:left-1/2 before:-translate-x-1/2 before:aspect-square before:w-[10px] before:top-1/2 before:-translate-y-1/2 before:rotate-45"></div>
+          <div className="flex basis-1/4 px-6 flex-col gap-2 items-center justify-center">
+            <div className="flex gap-2 items-center">
+              <AnimatedCounter
+                className="text-3xl font-bold"
+                to={150}
+                from={0}
+              />
+              <span className="text-3xl font-bold">+</span>
+            </div>
+            <div className="h-[3px] relative flex flex-col w-full border-t-0 bg-transparent bg-gradient-to-r from-transparent via-gray-200 to-transparent opacity-50 after:block after:absolute after:-bottom-1 after:left-1/2 after:w-1/3 after:h-[3px] after:-translate-x-1/2 after:border-t-0 after:bg-transparent after:bg-gradient-to-r after:from-transparent after:via-slate-200 after:to-transparent"></div>
             <p className="font-semibold">Publications</p>
-          </div>
-          <div className="flex basis-1/3 flex-col gap-2 items-center justify-center">
-            <p className="text-3xl font-bold">750+</p>
-            <div className="bg-gray-400 w-20 h-1 rounded relative before:block before:bg-gray-400 before:absolute before:left-1/2 before:-translate-x-1/2 before:aspect-square before:w-[10px] before:top-1/2 before:-translate-y-1/2 before:rotate-45"></div>
-            <p className="font-semibold">Placements</p>
           </div>
         </div>
       </section>
 
-      <section className="my-16 w-full bg-gray-200 py-10 px-6 md:px-20">
+      <section className="my-16 w-full bg-gray-200 py-10 px-4 md:px-10">
         <p className="text-dwd-primary text-2xl font-bold px-10 mb-10">
           Gallery
         </p>
-        <HomeCarousel>
+        <AutoScrollCarousel>
           {GalleryImages.map((item, index) => (
             <Card
               key={index}
-              className="w-full h-full relative flex-[0_0_50%] lg:flex-[0_0_25%] overflow-hidden"
+              className="w-full h-full relative flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_25%] overflow-hidden"
             >
               <CardContent className="flex cursor-pointer group aspect-square p-0 items-center relative justify-center">
                 <Image
@@ -324,7 +286,7 @@ export default function Home() {
               </CardContent>
             </Card>
           ))}
-        </HomeCarousel>
+        </AutoScrollCarousel>
       </section>
     </div>
   );
