@@ -1,7 +1,5 @@
 import { NextPage } from 'next';
-import Header from '../Header';
-import Footer from '../Footer';
-import MainContent from '../../components/campus/MainContent';
+import MainContent from '@/components/campus/MainContent';
 
 const Home: NextPage = () => {
   return (

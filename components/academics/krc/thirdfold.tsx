@@ -34,7 +34,7 @@ const ThirdFold: FC = () => {
           ))}
         </div>
         <div className="flex justify-center mt-8">
-          <Link href="/academics/krc/useful-links#top" passHref={true}>
+          <Link href="/krc/useful-links#top" passHref={true}>
             <span className="bg-gray-300 text-gray-700 py-2 px-4 rounded transition-colors duration-300 hover:bg-black hover:text-white cursor-pointer">
               Show All
             </span>

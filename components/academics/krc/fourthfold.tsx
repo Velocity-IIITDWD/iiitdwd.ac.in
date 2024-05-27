@@ -38,7 +38,7 @@ const FourthFold: FC = () => {
         </div>
         <div className="flex justify-center mt-8">
           <Link
-            href="/academics/krc/links-technology-enabled-learning#top"
+            href="/krc/links-technology-enabled-learning#top"
             passHref={true}
           >
             <span className="bg-gray-700 text-white py-2 px-4 rounded transition-colors duration-300 hover:bg-white hover:text-black cursor-pointer">
