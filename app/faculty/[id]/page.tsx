@@ -1,9 +1,17 @@
+"use client"
 import { useRouter } from 'next/router';
 import { FC, useState } from 'react';
 import { ProfileProps } from '@/data/faculty_profile';
 import '@/app/globals.css';
 import Image from 'next/image';
-import { CircleUser, GraduationCap, BriefcaseBusiness, Mail, MapPin, Split } from 'lucide-react';
+import {
+  CircleUser,
+  GraduationCap,
+  BriefcaseBusiness,
+  Mail,
+  MapPin,
+  Split,
+} from 'lucide-react';
 
 type ProfileProp = {
   id: string;
@@ -60,9 +68,13 @@ const Profile = (params: pp) => {
   if (!profile) {
     return <div></div>;
   }
-  const areaofinterest_array = profile.content.body.interest_areas.map(
+
+  const areaofinterest_array: JSX.Element[] | undefined = profile.content.body.interest_areas.map(
     (arr) => <li key={arr.id}>{arr.area}</li>
   );
+
+
+    
 
   return (
     <>
@@ -81,13 +93,13 @@ const Profile = (params: pp) => {
           </div>
         </div>
 
-        <div className="bg-background flex flex-col md:flex-row lg:flex-row xl:flex-row gap-6 2xl:flex-row  justify-between relative py-12 px-12 space-x-12">
-          <div className="bg-dwd-primary text-background px-12 py-12 rounded-lg">
-            <div className="flex flex-col ">
-              <div className="content-center">
+        <div className="bg-background flex flex-col  md:flex-row lg:flex-row xl:flex-row gap-6 2xl:flex-row  relative py-12 px-12 space-x-16">
+          <div className="flex flex-col item-centerflex-none h-auto w-full md:w-1/4 lg:w-1/4 xl:w-1/4 2xl:w-1/4 bg-dwd-primary text-background px-12 py-12 rounded-lg">
+            <div className="flex flex-col item-center">
+              <div className="content-center flex flex-col item-center">
                 <img
                   src={profile.content.card.photo}
-                  alt="asd"
+                  alt={profile.content.head.name}
                   className="object-srink-down"
                 />
               </div>
@@ -105,7 +117,7 @@ const Profile = (params: pp) => {
                     <Mail />
                     <span>{profile.content.card.mail_id}</span>
                   </div>
-                  <div className="flex flex-row  gap-2 ">
+                  <div className="flex flex-row  gap-2 hidden">
                     <MapPin />
                     <span>{profile.content.card.cabin_number}</span>
                   </div>
@@ -117,27 +129,31 @@ const Profile = (params: pp) => {
           <div className="flex flex-col space-y-8">
             <div>
               <div className="flex flex-col">
-                <div className="flex flex-row  gap-2 font-bold text-xl border-b-2 border-black">
+                <div className="flex flex-row  gap-2 font-bold text-xl border-b-2 border-black hidden">
                   <CircleUser />
                   <span>Profile</span>
                 </div>
-                <div className="pl-2 py-4">
+                <div className="pl-2 py-4 hidden">
                   {profile.content.body.profile_text}
                 </div>
               </div>
             </div>
             <div>
-              <div className="flex flex-col  py-20">
-                <div className="flex flex-row  gap-2 font-bold text-xl border-b-2 border-black">
-                  <GraduationCap />
-                  <span>Area of Interest</span>
+              { areaofinterest_array.length ? (
+              <>
+                <div className="flex flex-col  py-20">
+                  <div className="flex flex-row  gap-2 font-bold text-xl border-b-2 border-black">
+                    <GraduationCap />
+                    <span>Area of Interest</span>
+                  </div>
+                  <div>
+                    <ul className="list-disc pl-10 py-4">
+                      {areaofinterest_array}
+                    </ul>
+                  </div>
                 </div>
-                <div>
-                  <ul className="list-disc pl-10 py-4">
-                    {areaofinterest_array}
-                  </ul>
-                </div>
-              </div>
+              </>
+              ) : (<div></div>)}
             </div>
           </div>
         </div>
