@@ -12,7 +12,7 @@ export default function ResearchPage() {
       <h1 className="heading-text">{title}</h1>
       <section className="px-14 pb-10">
         <h2 className="text-dwd-primary font-bold text-2xl">
-          Faculty's Areas of Expertise and Experience in Research
+          Faculty&apos;s Areas of Expertise and Experience in Research
         </h2>
         <ul className="px-8 pt-4 list-disc">
           <li>Data analytics, machine learning, and social network analysis</li>
