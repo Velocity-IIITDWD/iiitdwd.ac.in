@@ -21,7 +21,7 @@ const DirectorsMessage = ({
         Director&apos;s Message
       </span>
       <div className="p-4 flex flex-col gap-4 items-center md:inline content-center">
-        <div className="flex w-full gap-4">
+        <div className="flex flex-col md:flex-row w-full gap-4">
           <Image
             src={director.imageURL}
             alt={'Image of Director'}
