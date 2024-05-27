@@ -7,7 +7,7 @@ import ThirdFold from '@/components/academics/krc/usefulLinks/thirdfold';
 const Home: NextPage = () => {
   return (
     <div>
-      <UpperFold paragraphText="Important Links for Technology Enabled Learning Under the ICT Initiatives of MoE"/>
+      <UpperFold paragraphText="Important Links for Technology Enabled Learning Under the ICT Initiatives of MoE" />
       <ThirdFold />
       <FifthFold />
     </div>

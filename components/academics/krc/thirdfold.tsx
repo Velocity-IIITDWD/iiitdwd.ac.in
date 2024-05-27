@@ -11,7 +11,13 @@ const ThirdFold: FC = () => {
         <h2 className="text-4xl font-bold text-center mb-12">Useful Links</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8">
           {linkData.slice(0, maxCards).map((link, index) => (
-            <a key={index} href={link.link} target="_blank" rel="noopener noreferrer" className="group block p-6 sm:p-8 text-center border-2 border-black rounded-lg bg-gray-200 h-full flex flex-col justify-between transition-colors duration-300 hover:bg-black hover:text-white cursor-pointer">
+            <a
+              key={index}
+              href={link.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group block p-6 sm:p-8 text-center border-2 border-black rounded-lg bg-gray-200 h-full flex flex-col justify-between transition-colors duration-300 hover:bg-black hover:text-white cursor-pointer"
+            >
               <h3 className="text-xl font-bold mb-4 underline group-hover:text-white">
                 {link.title}
               </h3>

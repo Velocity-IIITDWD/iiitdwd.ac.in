@@ -20,12 +20,16 @@ const UpperFold = () => {
       <div className="absolute inset-0 flex justify-center items-center text-white z-0">
         <div className="container mx-auto flex flex-col lg:flex-row items-center pl-2 pr-6 max-w-screen-lg h-full">
           <div className="w-full lg:w-1/2 flex flex-col justify-center mb-8 lg:mb-0 lg:pr-0 text-center lg:text-left">
-            <h1 className="text-7xl lg:text-7xl font-bold">Knowledge Resource Center</h1>
+            <h1 className="text-7xl lg:text-7xl font-bold">
+              Knowledge Resource Center
+            </h1>
           </div>
           <div className="hidden lg:block h-full w-px bg-white mx-4"></div>
           <div className="w-full lg:w-1/2 flex flex-col justify-center lg:pl-8 text-center lg:text-left">
             <p className="text-lg lg:text-2xl">
-              The IIIT Dharwad Knowledge Resource Centre is innovative and user-centred, to develop, organize, preserve, and deliver information to the IIIT Dharwad community.
+              The IIIT Dharwad Knowledge Resource Centre is innovative and
+              user-centred, to develop, organize, preserve, and deliver
+              information to the IIIT Dharwad community.
             </p>
           </div>
         </div>

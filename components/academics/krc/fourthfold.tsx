@@ -9,7 +9,8 @@ const FourthFold: FC = () => {
     <div className="bg-black py-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-4xl font-bold text-center mb-12 text-white">
-          Important Links for Technology Enabled Learning Under the ICT Initiatives of MoE:
+          Important Links for Technology Enabled Learning Under the ICT
+          Initiatives of MoE:
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8">
           {linkData.slice(0, maxCards).map((link, index) => (
@@ -36,7 +37,10 @@ const FourthFold: FC = () => {
           ))}
         </div>
         <div className="flex justify-center mt-8">
-          <Link href="/academics/krc/links-technology-enabled-learning#top" passHref={true}>
+          <Link
+            href="/academics/krc/links-technology-enabled-learning#top"
+            passHref={true}
+          >
             <span className="bg-gray-700 text-white py-2 px-4 rounded transition-colors duration-300 hover:bg-white hover:text-black cursor-pointer">
               Show All Resources
             </span>
