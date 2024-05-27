@@ -7,8 +7,7 @@ export function cn(...inputs: ClassValue[]) {
 
 export function toDateString(date: number) {
   const dateObj = new Date(date);
-  return dateObj.toLocaleString('en-GB', {
-    // 'default' causes hydration error if client and server have different regions set
+  return dateObj.toLocaleString('en', {
     day: '2-digit',
     month: 'short',
     year: 'numeric',
@@ -17,7 +16,7 @@ export function toDateString(date: number) {
 
 export function toDateTimeString(date: number) {
   const dateObj = new Date(date);
-  return dateObj.toLocaleString('en-GB', {
+  return dateObj.toLocaleString('en', {
     day: '2-digit',
     month: 'short',
     year: 'numeric',
