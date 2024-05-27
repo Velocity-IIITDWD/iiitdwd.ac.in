@@ -18,14 +18,14 @@ export default function Issues() {
   const [selectedIssue, setIssue] = useState(issues[0])
   return (
     <>
-      <div className='sm:hidden flex flex-wrap gap-4 self-center justify-center'>
+      <div className='md:hidden flex flex-wrap gap-4 self-center justify-center'>
         {
           issues.map((issue: issueStructure, index: number) => (
             <MobileBtn key={issue.id} {...issue} />
           ))
         }
       </div>
-      <div className='max-sm:hidden flex flex-col gap-4'>
+      <div className='max-md:hidden flex flex-col gap-4'>
         <div className='flex gap-4 justify-center flex-wrap'>
           {issues.map((issue) => (
             <HoverCard key={issue.id}>

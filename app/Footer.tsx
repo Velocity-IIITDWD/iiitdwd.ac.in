@@ -93,7 +93,7 @@ function Footer() {
           <a href="https://www.onlinesbi.sbi/sbicollect/icollecthome.htm?corpID=873279">
             Student Fee Portal
           </a>{' '}
-          |<a href="">Annual Reports</a>
+          |<a href="/annual_reports">Annual Reports</a>
         </div>
         <div className="font-bold text-lg">
           <LinkIcon href="/contact" className="underline">
