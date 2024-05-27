@@ -85,7 +85,6 @@ function Footer() {
             </a>
           </div>
         </div>
-
         <div className="flex flex-col w-fit gap-2">
           <h2 className="w-fit font-bold text-lg lg:text-2xl mt-4 mb-2 half-underline">Other Links</h2>
           <Link className='hover:underline' href="https://iiitdwd.ac.in/docs/iiit_ppp_2017.pdf">IIIT PPP Act</Link>

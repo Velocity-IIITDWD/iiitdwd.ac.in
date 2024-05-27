@@ -36,21 +36,7 @@ type ProfileProp = {
   };
 };
 
-// find by id
 
-// function Profile(idd: number){
-//     let Profile: ProfileProp|undefined  = ProfileProps.find((ProfileProp)=>{return ProfileProp.id ? ProfileProp.id == idd : false;});
-//     return(
-//         <>
-//             <div className="bg-dwd-secondary1 flex-row">
-//                 <div className="gap-3 text-left">{Profile?.content.head.name}</div>
-//                 <div className="flow-row">
-//                 <div className="bg-dwd-accent gap-3 float-left"><a href="Profile.content.head.profile_pdf" className="text-center bg-dwd-secondary2">View Profile</a></div>
-//                 </div>
-//             </div>
-//         </>
-//     );
-// }
 interface pp {
   params: { id: string };
   searchParams: {};
@@ -93,7 +79,7 @@ const Profile = (params: pp) => {
           </div>
         </div>
 
-        <div className="bg-background flex flex-col  md:flex-row lg:flex-row xl:flex-row gap-6 2xl:flex-row  relative py-12 px-12 space-x-16">
+        <div className="bg-background flex flex-col  md:flex-row lg:flex-row xl:flex-row  gap-6 2xl:flex-row  relative py-12 px-12 space-x-16">
           <div className="flex flex-col item-centerflex-none h-auto w-full md:w-1/4 lg:w-1/4 xl:w-1/4 2xl:w-1/4 bg-dwd-primary text-background px-12 py-12 rounded-lg">
             <div className="flex flex-col item-center">
               <div className="content-center flex flex-col item-center">
@@ -126,7 +112,7 @@ const Profile = (params: pp) => {
             </div>
           </div>
 
-          <div className="flex flex-col space-y-8">
+          <div className="basis-1/2 flex flex-col space-y-8">
             <div>
               <div className="flex flex-col">
                 <div className="flex flex-row  gap-2 font-bold text-xl border-b-2 border-black hidden">
