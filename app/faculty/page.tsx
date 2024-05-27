@@ -72,7 +72,7 @@ const List = ({ ll }: ListProps) => {
               width={0}
               height={0}
               sizes="100%"
-              style={{ height: '100%', width: '250px' }}
+              style={{ height: '250px', width: '250px' }}
               alt={arr.content.head.name}
               className="object-cover block  xl:block mr-auto"
             />
