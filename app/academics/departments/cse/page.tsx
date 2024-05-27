@@ -14,12 +14,14 @@ import Curriculum from '@/components/academics/Curriculum';
 
 export default function page() {
   return (
-    <div className="w-full min-h-screen h-full flex py-10 flex-col lg:px-24 px-4 md:px-10 gap-10 item-center ">
-      <div className="w-full items-center flex md:flex-row gap-16 flex-col md:justify-between">
-        <div className="flex flex-col md:w-1/2">
-          <h1 className="text-dwd-primary text-xl font-bold pb-3">
-            Computer Science and Engineering (CSE)
-          </h1>
+    <div className="w-full min-h-screen h-full flex flex-col gap-10 item-center ">
+      <section className="w-full h-[50vh] bg-cover bg-center bg-[url('/HomePage/LandingPage.png')] relative before:z-0 before:absolute before:h-full before:w-full before:left-0 before:top-0 before:bg-gray-900/70 flex items-center justify-center">
+        <p className="text-white z-[1] text-3xl font-bold">
+          Computer Science and Engineering (CSE)
+        </p>
+      </section>
+      <div className="w-full lg:px-24 px-4 md:px-10 items-center flex md:flex-row gap-16 flex-col md:justify-between">
+        <div className="flex flex-col md:w-1/2 bg-slate-200 rounded shadow-lg p-4">
           <p className="text-dwd-primary pb-2">
             The CSE program at IIIT Dharwad emphasizes:
           </p>
@@ -41,29 +43,35 @@ export default function page() {
               like artificial intelligence, machine learning, and data science
             </li>
           </ul>
+          <a
+            href="/academics/course_description_cse.pdf"
+            className="rounded bg-dwd-primary flex items-center w-fit mt-10 justify-center p-3 text-white"
+            download="Curriculum.pdf"
+          >
+            Course Description
+          </a>
         </div>
 
-        <div className="md:w-1/2 max-w-[600px]">
+        <div className="md:w-1/2 max-w-[600px] rounded overflow-hidden shadow-lg border border-slate-400">
           <Table className="text-slate-900 overflow-hidden rounded">
-            <TableCaption>CSE Course Details.</TableCaption>
-            <TableHeader className="bg-[#ffa500]">
+            <TableHeader className="bg-slate-200">
               <TableRow>
-                <TableHead className="border border-slate-700 w-[60px]"></TableHead>
-                <TableHead className="border border-slate-700 text-slate-900">
+                <TableHead className="border border-slate-400 border-t-0 border-l-0 w-[60px]"></TableHead>
+                <TableHead className="border border-slate-400 border-t-0 text-slate-900">
                   Type of Courses
                 </TableHead>
-                <TableHead className="border border-slate-700 text-slate-900">
+                <TableHead className="border border-slate-400 border-t-0 border-r-0 text-slate-900">
                   Credits
                 </TableHead>
               </TableRow>
             </TableHeader>
-            <TableBody className=" font-medium">
+            <TableBody className="font-medium">
               {CSEDetails?.map((item, key) => (
                 <TableRow className="odd:bg-gray-100" key={key}>
-                  <TableCell className="border-r border-slate-700 font-semibold">
+                  <TableCell className="border-r border-slate-400 font-semibold">
                     {key + 1}
                   </TableCell>
-                  <TableCell className="border-r border-slate-700">
+                  <TableCell className="border-r border-slate-400">
                     {item?.course}
                   </TableCell>
                   <TableCell>{item?.credits}</TableCell>
@@ -74,7 +82,7 @@ export default function page() {
         </div>
       </div>
 
-      <div className="w-full">
+      <div className="w-full pb-10 lg:px-24 px-4 md:px-10">
         <Curriculum type={0} />
       </div>
     </div>

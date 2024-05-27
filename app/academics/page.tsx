@@ -5,28 +5,38 @@ import React from 'react';
 export default function page() {
   return (
     <div className="flex flex-col h-full w-full">
-      <div className="my-10 w-full flex flex-col items-center md:px-24 sm:px-10 p-4 gap-6">
-        <p className="text-dwd-primary text-2xl font-bold">Academics</p>
+      <section className="w-full h-[50vh] bg-cover bg-center bg-[url('/HomePage/LandingPage.png')] relative before:z-0 before:absolute before:h-full before:w-full before:left-0 before:top-0 before:bg-gray-900/70 flex items-center justify-center">
+        <p className="text-white z-[1] text-3xl font-bold">Academics</p>
+      </section>
 
+      <div className="my-10 w-full flex flex-col items-center md:px-24 sm:px-10 p-4 gap-6">
         <div className="w-full flex-wrap flex md:flex-nowrap gap-4">
           <Link
             href={'/'}
-            className="rounded bg-dwd-primary md:basis-1/3 basis-full flex items-center justify-center p-3 text-white"
+            className="rounded bg-dwd-primary md:basis-1/4 basis-full flex items-center justify-center p-3 text-white"
           >
             Academic Calendar
           </Link>
           <Link
             href={'/'}
-            className="rounded bg-dwd-primary md:basis-1/3 basis-full flex items-center justify-center p-3 text-white"
+            className="rounded bg-dwd-primary md:basis-1/4 basis-full flex items-center justify-center p-3 text-white"
           >
             Faculty
           </Link>
           <Link
             href={'/'}
-            className="rounded bg-dwd-primary md:basis-1/3 basis-full flex items-center justify-center p-3 text-white"
+            className="rounded bg-dwd-primary md:basis-1/4 basis-full flex items-center justify-center p-3 text-white"
           >
             Research
           </Link>
+          <a
+            href="/academics/Curricula_16May23.pdf"
+            target="_blank"
+            className="rounded bg-dwd-primary md:basis-1/4 basis-full flex items-center justify-center p-3 text-white"
+            // download="Curriculum.pdf"
+          >
+            Curriculum
+          </a>
         </div>
 
         {/* <div className="w-full bg-dwd-primary h-[1px] rounded"></div> */}
@@ -92,24 +102,27 @@ export default function page() {
           />
 
           <div className="flex flex-col gap-2">
-            <Link
-              href={'/academics/departments/cse'}
-              className="w-full rounded cursor-pointer shadow p-3 md:max-w-[400px] bg-gray-200 hover:bg-dwd-primary hover:text-white text-dwd-primary"
-            >
-              Computer Science & Engineering (CSE)
-            </Link>
-            <Link
-              href={'/academics/departments/dsai'}
-              className="w-full rounded cursor-pointer shadow p-3 md:max-w-[400px] bg-gray-200 hover:bg-dwd-primary hover:text-white text-dwd-primary"
-            >
-              Data Science & Artificial Engineering (DSAI)
-            </Link>
-            <Link
-              href={'/academics/departments/ece'}
-              className="w-full rounded cursor-pointer shadow p-3 md:max-w-[400px] bg-gray-200 hover:bg-dwd-primary hover:text-white text-dwd-primary"
-            >
-              Electronics & Communications Engineering (ECE)
-            </Link>
+            <div className="">Branches offered under B.tech Program : </div>
+            <div className="flex flex-col gap-2 pl-6">
+              <Link
+                href={'/academics/departments/cse'}
+                className="w-full rounded cursor-pointer shadow p-3 md:max-w-[400px] bg-slate-200 hover:bg-dwd-primary hover:text-white text-dwd-primary"
+              >
+                Computer Science & Engineering (CSE)
+              </Link>
+              <Link
+                href={'/academics/departments/dsai'}
+                className="w-full rounded cursor-pointer shadow p-3 md:max-w-[400px] bg-slate-200 hover:bg-dwd-primary hover:text-white text-dwd-primary"
+              >
+                Data Science & Artificial Engineering (DSAI)
+              </Link>
+              <Link
+                href={'/academics/departments/ece'}
+                className="w-full rounded cursor-pointer shadow p-3 md:max-w-[400px] bg-slate-200 hover:bg-dwd-primary hover:text-white text-dwd-primary"
+              >
+                Electronics & Communications Engineering (ECE)
+              </Link>
+            </div>
           </div>
         </div>
       </div>
