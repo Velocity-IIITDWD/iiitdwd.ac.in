@@ -50,7 +50,8 @@ Admission to the Indian Institute of Information Technology Dharwad is through C
               Currently, IIIT Dharwad offers three programs viz., Computer
               Science and Engineering (CSE), Data Science and Artificial
               Intelligence (DSAI), and Electronics and Communication Engineering
-              (ECE). The details of the programs can be found <a className="text-blue-800 hover:underline" href="/academics">
+              (ECE). The details of the programs can be found{' '}
+              <a className="text-blue-800 hover:underline" href="/academics">
                 at this page.
               </a>
             </div>
@@ -239,7 +240,7 @@ What about security arrangements for the girls’ hostel?
 "
           ans={
             <div>
-              The girls' hostel will have 24/7 security including a lady
+              The girls &apos; hostel will have 24/7 security including a lady
               security guard in addition to CCTV cameras. The girls hostel is
               also located in an exclusive building away from the other
               buildings.
