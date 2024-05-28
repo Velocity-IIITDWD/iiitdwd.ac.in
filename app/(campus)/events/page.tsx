@@ -11,7 +11,7 @@ export default function Home() {
       </h1>
       <br></br>
       <div className="container mx-auto p-4">
-        <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-12">
+        <div className="mx-9 grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-12">
           {events.map((_, index) => (
             <ComponentEvent key={index} index={index} />
           ))}
@@ -38,16 +38,17 @@ function ComponentEvent({ index }: ComponentEventProps) {
         src={eventImageSrc}
         alt="Weekly Events"
       />
-      <div className="mt-8">
+      <div className="mt-8 ">
         <h2 className="text-2xl text-cardText font-bold">
           {events[index].text}
         </h2>
         <p className="text-dwd-primary">Date: {events[index].timestamp}</p>
-        <Link href={link}>
-          <button className="mt-4 bg-dwd-primary text-xs text-white px-8 py-4 rounded">
-            Know More
-          </button>
-        </Link>
+       
+          <Link href={link}>
+            <button className="mt-4 bg-dwd-primary text-xs text-white px-8 py-4 rounded">
+              Know More
+            </button>
+          </Link>
       </div>
     </div>
   );
