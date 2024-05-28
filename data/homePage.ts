@@ -46,13 +46,13 @@ export const ProgramCardDetails: ProgramCards[] = [
     Header2: 'B-Tech (CSE)',
   },
   {
-    image: '/mitra.jpg',
+    image: '/dsai.jpg',
     link: '/academics/departments/dsai',
     Header1: 'Data Science and Artificial Intelligence',
     Header2: 'B-Tech (DSAI)',
   },
   {
-    image: '/drone.jpg',
+    image: '/ece.jpg',
     link: '/academics/departments/ece',
     Header1: 'Electronics and Communications Engineering',
     Header2: 'B-Tech (ECE)',
