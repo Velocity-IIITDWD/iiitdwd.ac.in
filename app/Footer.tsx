@@ -87,11 +87,14 @@ function Footer() {
         </div>
         <div className="flex flex-col w-fit gap-2">
           <h2 className="w-fit font-bold text-lg lg:text-2xl mt-4 mb-2 half-underline">Other Links</h2>
-          <Link className='hover:underline' href="https://iiitdwd.ac.in/docs/iiit_ppp_2017.pdf">IIIT PPP Act</Link>
-          <Link className='hover:underline' href="https://iiitdwd.ac.in/docs/ARIIA.pdf">ARIIA</Link>
-          <Link className='hover:underline' href="https://iiitdwd.ac.in/docs/RTI.pdf">RTI</Link>
+          <Link className='hover:underline' href="/faq">FAQ</Link>
+          <div className='flex gap-2'>
+            <Link className='hover:underline' href="https://iiitdwd.ac.in/docs/iiit_ppp_2017.pdf">IIIT PPP Act</Link><span className='select-none'>|</span>
+            <Link className='hover:underline' href="https://iiitdwd.ac.in/docs/ARIIA.pdf">ARIIA</Link><span className='select-none'>|</span>
+            <Link className='hover:underline' href="https://iiitdwd.ac.in/docs/RTI.pdf">RTI</Link>
+          </div>
           <Link className='hover:underline' href="https://aims.iiitdwd.ac.in/aims/">AIMS</Link>
-          <Link className='hover:underline' href="https://gmail.com/">Webmail</Link>
+          <Link className='hover:underline' href="/tenders">Tenders</Link>
           <Link className='hover:underline' href="/icc">ICC</Link>
           <Link className='hover:underline' href="/nirf">NIRF</Link>
           <Link className='hover:underline' href="https://www.onlinesbi.sbi/sbicollect/icollecthome.htm?corpID=873279">Student Fee Portal</Link>
