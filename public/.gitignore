@@ -2,3 +2,13 @@
 !.gitignore
 !images
 images/*
+!images/blank_profile_square.png
+!images/MainCarousel1.jpg
+!images/MainCarousel2.jpg
+!images/MainCarousel3.jpeg
+!images/MainCarousel4.jpeg
+!images/MainCarousel5.jpeg
+!images/MainCarousel6.jpeg
+!images/gate.jpg
+!images/IIIT_Dharwad.jpg
+!images/LandingPage.png

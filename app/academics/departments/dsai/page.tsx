@@ -56,27 +56,26 @@ export default function page() {
           </ul>
         </div>
 
-        <div className="md:w-1/2 max-w-[600px]">
+        <div className="md:w-1/2 max-w-[600px] rounded overflow-hidden shadow-lg border border-slate-400">
           <Table className="text-slate-900 overflow-hidden rounded">
-            <TableCaption>DSAI Course Details.</TableCaption>
-            <TableHeader className="bg-[#ffa500]">
+            <TableHeader className="bg-slate-200">
               <TableRow>
-                <TableHead className="border border-slate-700 w-[60px]"></TableHead>
-                <TableHead className="border border-slate-700 text-slate-900">
+                <TableHead className="border border-slate-400 border-t-0 border-l-0 w-[60px]"></TableHead>
+                <TableHead className="border border-slate-400 border-t-0 text-slate-900">
                   Type of Courses
                 </TableHead>
-                <TableHead className="border border-slate-700 text-slate-900">
+                <TableHead className="border border-slate-400 border-t-0 border-r-0 text-slate-900">
                   Credits
                 </TableHead>
               </TableRow>
             </TableHeader>
-            <TableBody className=" font-medium">
+            <TableBody className="font-medium">
               {DSAIDetails?.map((item, key) => (
                 <TableRow className="odd:bg-gray-100" key={key}>
-                  <TableCell className="border-r border-slate-700 font-semibold">
+                  <TableCell className="border-r border-slate-400 font-semibold">
                     {key + 1}
                   </TableCell>
-                  <TableCell className="border-r border-slate-700">
+                  <TableCell className="border-r border-slate-400">
                     {item?.course}
                   </TableCell>
                   <TableCell>{item?.credits}</TableCell>
