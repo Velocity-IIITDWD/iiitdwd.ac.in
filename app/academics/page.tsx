@@ -12,19 +12,27 @@ export default function page() {
       <div className="my-10 w-full flex flex-col items-center md:px-24 sm:px-10 p-4 gap-6">
         <div className="w-full flex-wrap flex md:flex-nowrap gap-4">
           <Link
-            href={'/'}
+            target='_blank'
+            href='/docs/academic_calendar_sem_1.pdf'
             className="rounded bg-dwd-primary md:basis-1/4 basis-full flex items-center justify-center p-3 text-white"
           >
-            Academic Calendar
+            Academic Calendar (1st Sem)
           </Link>
           <Link
-            href={'/'}
+            target='_blank'
+            href='/docs/academic_calendar_sem_3_5.pdf'
+            className="rounded bg-dwd-primary md:basis-1/4 basis-full flex items-center justify-center p-3 text-white"
+          >
+            Academic Calendar (3rd & 5th Sem)
+          </Link>
+          <Link
+            href='/faculty'
             className="rounded bg-dwd-primary md:basis-1/4 basis-full flex items-center justify-center p-3 text-white"
           >
             Faculty
           </Link>
           <Link
-            href={'/'}
+            href='/academics/research'
             className="rounded bg-dwd-primary md:basis-1/4 basis-full flex items-center justify-center p-3 text-white"
           >
             Research
@@ -33,7 +41,7 @@ export default function page() {
             href="/academics/Curricula_16May23.pdf"
             target="_blank"
             className="rounded bg-dwd-primary md:basis-1/4 basis-full flex items-center justify-center p-3 text-white"
-            // download="Curriculum.pdf"
+          // download="Curriculum.pdf"
           >
             Curriculum
           </a>
