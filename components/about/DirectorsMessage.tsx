@@ -1,6 +1,8 @@
 import { Profile } from '@/types/profile';
 import Image from 'next/image';
 import Link from 'next/link';
+import directorImage from '@/assets/s_r_mahadeva_prasanna.jpg';
+
 interface DirectorsMessageProps {
   heading: string;
   text1: string;
@@ -23,7 +25,7 @@ const DirectorsMessage = ({
       <div className="p-4 flex flex-col gap-4 items-center md:inline content-center">
         <div className="flex flex-col md:flex-row w-full gap-4">
           <Image
-            src={director.imageURL}
+            src={directorImage}
             alt={'Image of Director'}
             width={0}
             height={0}
@@ -45,7 +47,7 @@ const DirectorsMessage = ({
         <br />
         <Link
           className="self-start text-dwd-primary hover:cursor-pointer"
-          href={'/faculty'}
+          href={'/about#director-brief-profile'}
         >
           <span className="md:text-lg font-bold">{director.title}</span>
           <br />
