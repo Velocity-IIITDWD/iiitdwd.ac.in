@@ -110,7 +110,7 @@ export default function page() {
           />
 
           <div className="flex flex-col gap-2">
-            <div className="">Branches offered under B.tech Program : </div>
+            <div className="">Branches offered under B.Tech. Program : </div>
             <div className="flex flex-col gap-2 pl-6">
               <Link
                 href={'/academics/departments/cse'}
