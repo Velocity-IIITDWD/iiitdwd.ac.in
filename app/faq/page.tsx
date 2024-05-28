@@ -5,7 +5,6 @@ import React from 'react';
 
 import { connected } from 'process';
 import { HtmlContext } from 'next/dist/server/future/route-modules/app-page/vendored/contexts/entrypoints';
-import { Metadata } from 'next';
 export default function faq() {
   return (
     <div>
@@ -269,7 +268,3 @@ What about security arrangements for the girls’ hostel?
     </div>
   );
 }
-
-export const metadata: Metadata = {
-  title: 'FAQ',
-};
