@@ -6,12 +6,12 @@ export default [
     profiles: [
       {
         content: ['Former Chairperson, IIIT Dharwad'],
-        imageURL: 'https://iiitdwd.ac.in/img/sudha-murty.jpg',
+        imageURL: '/images/sudha_murty.jpg',
         title: 'Smt. Sudha Murty',
       },
       {
         content: ['Former Director, IIIT Dharwad'],
-        imageURL: 'https://iiitdwd.ac.in/img/bog/director.jpg',
+        imageURL: '/images/kavi_mahesh.jpg',
         title: 'Prof. Kavi Mahesh',
       },
     ],

@@ -25,7 +25,7 @@ export const facilities: Facility[] = [
       'It also houses the Multi-Function Hall, called the m Block, that can be converted into an auditorium or an indoor basketball court as needed.',
       'The π Block also has a Knowledge Resource Center and an incubation space.',
     ],
-    imageUrl: '/campus/piblock_latest.jpg', // Add the appropriate image URL
+    imageUrl: '/campus/piblock.jpg', // Add the appropriate image URL
   },
   {
     title: "Boys' Hostel",

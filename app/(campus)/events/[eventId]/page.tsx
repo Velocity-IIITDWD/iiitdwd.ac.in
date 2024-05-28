@@ -7,13 +7,13 @@ const DynamicComponentWithNoSSR = dynamic(() => import('@/components/event'), {
 export default function EventDetails({
   params,
 }: {
-  params: { eventId: Number };
+  params: { eventId: string };
 }) {
-  let eveId: Number = params.eventId;
+  // let eveId: Number = params.eventId;
 
   return (
     <div>
-      <DynamicComponentWithNoSSR eventId={eveId} />
+      <DynamicComponentWithNoSSR eventId={params.eventId} />
     </div>
   );
 }

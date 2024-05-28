@@ -18,6 +18,7 @@ import { GalleryImages } from '@/data/gallery';
 import { events } from '@/data/events';
 import AnimatedCounter from '@/components/HomePage/AnimatedCounter';
 import AutoScrollCarousel from '@/components/HomePage/AutoScrollCarousel';
+import { announcements } from '@/data/announcements';
 
 export default function Home() {
   return (
@@ -46,38 +47,53 @@ export default function Home() {
         ))}
       </MainCarousel>
 
-      <section className="my-20 bg-gray-200 md:py-20 py-10 w-full flex flex-col items-center md:px-24 sm:px-10 p-4 gap-6">
-        <p className="text-dwd-primary text-2xl font-bold">Announcements</p>
-
-        <div className="grid text-dwd-primary text-justify lg:grid-cols-3 grid-cols-1 px-4">
-          <ul className="list-disc pl-8 p-4 px-8 border-0 border-dwd-primary border-r-0 border-b lg:border-b-0 lg:border-r flex flex-col gap-6">
-            <li>
-              IIIT Dharwad rolling out AICTE-Quality Improvement PG Certificate
-              Program in Cybersecurity!
-            </li>
-            <li>One Day Workshop on Fractal Academics on June 15, 2024</li>
-          </ul>
-          <ul className="list-disc pl-8 p-4 px-8 border-0 border-dwd-primary border-r-0 border-b lg:border-b-0 lg:border-r flex flex-col gap-6">
-            <li>
-              IIIT Dharwad rolling out AICTE-Quality Improvement PG Certificate
-              Program in Cybersecurity!
-            </li>
-            <li>One Day Workshop on Fractal Academics on June 15, 2024</li>
-          </ul>
-          <ul className="list-disc pl-8 p-4 px-8 flex flex-col gap-6">
-            <li>
-              IIIT Dharwad rolling out AICTE-Quality Improvement PG Certificate
-              Program in Cybersecurity!
-            </li>
-            <li>One Day Workshop on Fractal Academics on June 15, 2024</li>
-          </ul>
+      <section className="my-20 bg-gray-200 md:py-20 py-10 w-full flex flex-col md:flex-row-reverse items-center md:px-20 sm:px-10 p-4 gap-6">
+        <Image
+          alt="main image"
+          src={'/HomePage/IIIT_Dharwad.jpg'}
+          width={0}
+          height={0}
+          sizes="100%"
+          style={{ height: 'auto', width: '100%' }}
+          className="w-full rounded shadow-lg md:basis-1/3 overflow-hidden object-cover object-center"
+        />
+        <div className="w-full basis-2/3 flex flex-col h-full">
+          <div className="w-full items-center p-1 border-b border-b-slate-500 flex justify-between">
+            <div className="text-dwd-primary font-semibold text-xl">
+              Announcements
+            </div>
+            <Link href={'/announcements'} className="text-red-500">
+              view all
+            </Link>
+          </div>
+          <div className="overflow-hidden h-[40vh] relative slide">
+            <div className="flex flex-col gap-2 p-2 absolute top-0 left-0 w-full scrolling-text slide">
+              {announcements?.map((item, index) => (
+                <a
+                  href={item?.link}
+                  target="_blank"
+                  key={index}
+                  className="text-dwd-primary hover:bg-dwd-primary/30 rounded items-center cursor-pointer p-1 flex gap-2"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    viewBox="0 0 16 16"
+                    className="w-5 flex-none"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"
+                    />
+                  </svg>
+                  <div>{item?.text}</div>
+                </a>
+              ))}
+            </div>
+          </div>
         </div>
-        <Link
-          href={'/announcements'}
-          className="border border-dwd-primary rounded px-4 py-2 hover:bg-dwd-primary hover:text-white  transition duration-300"
-        >
-          View All
-        </Link>
       </section>
 
       <section className="w-full h-full bg-fixed relative overflow-hidden before:z-0 before:absolute before:h-full before:w-full before:left-0 before:top-0 before:bg-gray-900/80 bg-cover bg-repeat-y bg-[url('/HomePage/IIIT_Dharwad.jpg')]">
@@ -183,7 +199,7 @@ export default function Home() {
                     Date- {item.details.startDate}
                   </p>
                   <Link
-                    href={`/campus/events/${item?.id + 1}`}
+                    href={`/events/${item?.id}`}
                     className="flex w-fit rounded hover:bg-dwd-primary hover:text-white transition duration-300 border border-dwd-primary py-2 px-4 gap-2"
                   >
                     Read More
@@ -209,7 +225,7 @@ export default function Home() {
 
       <section className="w-full h-full bg-fixed relative overflow-hidden before:z-0 before:absolute before:h-full before:w-full before:left-0 before:top-0 before:bg-gray-900/80 bg-cover bg-repeat-y bg-[url('/HomePage/LandingPage.png')]">
         <div className="relative py-24 lg:py-44 z-[1] text-white max-w-[1000px] mx-auto w-full px-10 items-center justify-center flex flex-col lg:flex-row gap-10 lg:gap-4">
-          <div className="flex basis-1/4 px-6 flex-col gap-2 items-center justify-center">
+          <div className="flex basis-1/3 px-6 flex-col gap-2 items-center justify-center">
             <div className="flex gap-2 items-center">
               <AnimatedCounter
                 className="text-3xl font-bold"
@@ -221,7 +237,7 @@ export default function Home() {
             <div className="h-[3px] relative flex flex-col w-full border-t-0 bg-transparent bg-gradient-to-r from-transparent via-gray-200 to-transparent opacity-50 after:block after:absolute after:-bottom-1 after:left-1/2 after:w-1/3 after:h-[3px] after:-translate-x-1/2 after:border-t-0 after:bg-transparent after:bg-gradient-to-r after:from-transparent after:via-slate-200 after:to-transparent"></div>
             <p className="font-semibold">Alumini</p>
           </div>
-          <div className="flex basis-1/4 px-6 flex-col gap-2 items-center justify-center">
+          <div className="flex basis-1/3 px-6 flex-col gap-2 items-center justify-center">
             <div className="flex gap-2 items-center">
               <AnimatedCounter
                 className="text-3xl font-bold"
@@ -233,7 +249,7 @@ export default function Home() {
             <div className="h-[3px] relative flex flex-col w-full border-t-0 bg-transparent bg-gradient-to-r from-transparent via-gray-200 to-transparent opacity-50 after:block after:absolute after:-bottom-1 after:left-1/2 after:w-1/3 after:h-[3px] after:-translate-x-1/2 after:border-t-0 after:bg-transparent after:bg-gradient-to-r after:from-transparent after:via-slate-200 after:to-transparent"></div>
             <p className="font-semibold">Placements</p>
           </div>
-          <div className="flex basis-1/4 px-6 flex-col gap-2 items-center justify-center">
+          <div className="flex basis-1/3 px-6 flex-col gap-2 items-center justify-center">
             <div className="flex gap-2 items-center">
               <AnimatedCounter
                 className="text-3xl font-bold"
@@ -245,7 +261,7 @@ export default function Home() {
             <div className="h-[3px] relative flex flex-col w-full border-t-0 bg-transparent bg-gradient-to-r from-transparent via-gray-200 to-transparent opacity-50 after:block after:absolute after:-bottom-1 after:left-1/2 after:w-1/3 after:h-[3px] after:-translate-x-1/2 after:border-t-0 after:bg-transparent after:bg-gradient-to-r after:from-transparent after:via-slate-200 after:to-transparent"></div>
             <p className="font-semibold">Faculty</p>
           </div>
-          <div className="flex basis-1/4 px-6 flex-col gap-2 items-center justify-center">
+          {/* <div className="flex basis-1/4 px-6 flex-col gap-2 items-center justify-center">
             <div className="flex gap-2 items-center">
               <AnimatedCounter
                 className="text-3xl font-bold"
@@ -256,7 +272,7 @@ export default function Home() {
             </div>
             <div className="h-[3px] relative flex flex-col w-full border-t-0 bg-transparent bg-gradient-to-r from-transparent via-gray-200 to-transparent opacity-50 after:block after:absolute after:-bottom-1 after:left-1/2 after:w-1/3 after:h-[3px] after:-translate-x-1/2 after:border-t-0 after:bg-transparent after:bg-gradient-to-r after:from-transparent after:via-slate-200 after:to-transparent"></div>
             <p className="font-semibold">Publications</p>
-          </div>
+          </div> */}
         </div>
       </section>
 

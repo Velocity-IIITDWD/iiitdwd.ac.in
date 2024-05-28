@@ -8,6 +8,7 @@ import CoreValues from '@/components/about/CoreValues';
 import DirectorBriefProfile from '@/components/about/DirectorBriefProfile';
 import AboutIIIT from '@/components/about/AboutIIIT';
 import ShortCampusVideo from '@/components/about/ShortCampusVideo';
+import mainGateImage from '@/assets/campus/main_gate.jpg';
 import { Metadata } from 'next';
 
 import './smoothScroll.css';
@@ -19,8 +20,8 @@ const AboutPage = () => {
     <div className="w-full flex flex-col items-center">
       <div className="w-full min-h-40 sm:min-h-72 lg:min-h-96 xl:min-h-112 relative">
         <Image
-          src={about.mainGate.imageURL}
-          alt={about.mainGate.name}
+          src={mainGateImage}
+          alt={'Main Gate Image'}
           fill={true}
           priority
           style={{
@@ -41,6 +42,7 @@ const AboutPage = () => {
         text2={about.directorsMessage.text2}
         text3={about.directorsMessage.text3}
       />
+      <div id="director-brief-profile" />
       <DirectorBriefProfile
         directorName={about.director.title}
         briefProfile={about.briefProfile}

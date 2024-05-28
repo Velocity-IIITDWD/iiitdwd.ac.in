@@ -6,132 +6,127 @@ export default [
     profiles: [
       {
         content: ['Professor-In-Charge Overall Examinations and AIMS'],
-        imageURL:
-          'https://iiitdwd.ac.in/img/non-teaching-staff/satish_Annigeri.jpg',
+        imageURL: '/images/satish_annigeri.jpg',
         title: 'Prof. Satish Annigeri',
       },
       {
         content: ['Junior Assistant'],
-        imageURL: 'https://iiitdwd.ac.in/img/non-teaching-staff/Anitha.jpg',
+        imageURL: '/images/anitha_k_p.jpg',
         title: 'Ms. Anitha K P',
       },
       {
         content: ['Junior Assistant'],
-        imageURL: 'https://iiitdwd.ac.in/img/non-teaching-staff/ashwin.jpeg',
+        imageURL: '/images/ashwin_hiremath.jpeg',
         title: 'Mr. Ashwin Hiremath',
       },
       {
         content: ['P.A to Director'],
-        imageURL: 'https://iiitdwd.ac.in/img/non-teaching-staff/Arya.jpg',
+        imageURL: '/images/arya_katwe.jpg',
         title: 'Ms. Arya Katwe',
       },
       {
         content: ['Security Head'],
-        imageURL:
-          'https://iiitdwd.ac.in/img/non-teaching-staff/security_head.jpg',
+        imageURL: '/images/basanagouda_v_patil.jpg',
         title: 'Mr. Basanagouda V Patil',
       },
       {
         content: ['Junior Assistant'],
-        imageURL: 'https://iiitdwd.ac.in/img/non-teaching-staff/kushal.jpeg',
+        imageURL: '/images/kushal_hiremath.jpeg',
         title: 'Mr. Kushal Hiremath',
       },
       {
         content: ['Executive Engineer'],
-        imageURL: 'https://iiitdwd.ac.in/img/non-teaching-staff/mahesh.jpeg',
+        imageURL: '/images/mahesh_chandra_k_j.jpeg',
         title: 'Mr. Mahesh Chandra K J',
       },
       {
         content: ['Senior Audit Officer'],
-        imageURL:
-          'https://iiitdwd.ac.in/img/non-teaching-staff/hiremath-sir.jpeg',
+        imageURL: '/images/n_r_hiremath.jpeg',
         title: 'Mr. N R Hiremath',
       },
       {
         content: ['Assistant Sports Coach'],
-        imageURL: 'https://iiitdwd.ac.in/img/non-teaching-staff/naveen.jpeg',
+        imageURL: '/images/naveen_shirahatti.jpeg',
         title: 'Mr. Naveen Shirahatti',
       },
       {
         content: ['Junior Technical Assistant'],
-        imageURL: 'https://iiitdwd.ac.in/img/non-teaching-staff/Neeta.jpeg',
+        imageURL: '/images/neeta_patil.jpeg',
         title: 'Mrs. Neeta Patil',
       },
       {
         content: ['Junior Technical Assistant'],
-        imageURL: 'https://iiitdwd.ac.in/img/non-teaching-staff/poogaA.jpg',
+        imageURL: '/images/pooja_akki.jpg',
         title: 'Ms. Pooja Akki',
       },
       {
         content: ['Multi Skilled worker'],
-        imageURL: 'https://iiitdwd.ac.in/img/non-teaching-staff/Prakash_y.jpg',
+        imageURL: '/images/prakash_y_kamkar.jpg',
         title: 'Mr. Prakash Y Kamkar.',
       },
       {
         content: ['Junior Technical Assistant'],
-        imageURL: 'https://iiitdwd.ac.in/img/non-teaching-staff/prasad.jpg',
+        imageURL: '/images/prasad_pulakeshi_kalal.jpg',
         title: 'Mr. Prasad Pulakeshi Kalal',
       },
       {
         content: ['Junior Assistant'],
-        imageURL:
-          'https://iiitdwd.ac.in/img/non-teaching-staff/raghvendra.jpeg',
+        imageURL: '/images/raghvendra_h.jpeg',
         title: 'Mr. Raghvendra H',
       },
       {
         content: ['Officiating Registrar and Assistant Registrar'],
-        imageURL: 'https://iiitdwd.ac.in/img/non-teaching-staff/ravi.jpg',
+        imageURL: '/images/ravi_b_vitlapur.jpg',
         title: 'Mr. Ravi B Vitlapur',
       },
       {
         content: ['PA to Registrar'],
-        imageURL: 'https://iiitdwd.ac.in/img/non-teaching-staff/Reshma.jpg',
+        imageURL: '/images/reshma_pyatishettar.jpg',
         title: 'Mrs. Reshma Pyatishettar',
       },
       {
         content: ['Senior Library Information Assistant'],
-        imageURL: 'https://iiitdwd.ac.in/img/non-teaching-staff/sagar.jpeg',
+        imageURL: '/images/sagar_kolekar.jpeg',
         title: 'Mr. Sagar Kolekar',
       },
       {
         content: ['Technical Assistant'],
-        imageURL: 'https://iiitdwd.ac.in/img/non-teaching-staff/sameer.jpeg',
+        imageURL: '/images/sameer_desai.jpeg',
         title: 'Mr. Sameer Desai',
       },
       {
         content: ['Medical Officer'],
-        imageURL:
-          'https://iiitdwd.ac.in/img/non-teaching-staff/Dr.%20Sangamesh_Patil.jpg',
+        imageURL: '/images/sangamesh_patil.jpg',
         title: 'Dr. Sangamesh Patil',
       },
       {
         content: ['Junior Assistant'],
-        imageURL: 'https://iiitdwd.ac.in/img/non-teaching-staff/shalini.jpeg',
+        imageURL: '/images/shalini_kotur.jpeg',
         title: 'Ms. Shalini Kotur',
       },
       {
         content: ['Junior Superintendent - HRM'],
-        imageURL: 'https://iiitdwd.ac.in/img/non-teaching-staff/suma.jpeg',
+        imageURL: '/images/suma_shetty.jpeg',
         title: 'Mrs. Suma Shetty',
       },
       {
         content: ['Junior Assistant'],
-        imageURL: 'https://iiitdwd.ac.in/img/non-teaching-staff/sunil.jpg',
+        imageURL: '/images/sunil_kulkarni.jpg',
         title: 'Mr. Sunil Kulkarni',
       },
       {
         content: ['Junior Superintendent - Accounts'],
-        imageURL: 'https://iiitdwd.ac.in/img/non-teaching-staff/swati.jpeg',
+        imageURL: '/images/swati_math.jpeg',
         title: 'Mrs. Swati Math',
       },
       {
         content: ['Student life coordinator'],
-        imageURL: 'https://iiitdwd.ac.in/img/non-teaching-staff/ujwal.jpg',
+        imageURL: '/images/ujwal_doddamani.jpg',
         title: 'Mr. Ujwal Doddamani',
       },
       {
         content: ['Office Asst/Attender'],
-        imageURL: 'https://iiitdwd.ac.in/img/non-teaching-staff/yellappa.JPG',
+        imageURL: '/images/yallappa_kuri.JPG',
         title: 'Mr. Yallappa Kuri',
       },
     ],

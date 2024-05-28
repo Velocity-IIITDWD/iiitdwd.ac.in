@@ -30,58 +30,58 @@ export const about: aboutStructure = {
 
 export const issues: issueStructure[] = [
   {
-    'issueUrl': 'https://iiitdwd.ac.in/magazine_img/issue_1.pdf',
+    'issueUrl': '/docs/issue_1.pdf',
     'id': 1,
     'displayText': 'Issue 1',
-    'previewImg': '/magazine/preview/issue_img1.png'
+    'previewImg': '/images/issue_img1.png'
   },
   {
-    'issueUrl': 'https://iiitdwd.ac.in/magazine_img/issue_2.pdf',
+    'issueUrl': '/docs/issue_2.pdf',
     'id': 2,
     'displayText': 'Issue 2',
-    'previewImg': '/magazine/preview/issue_img2.png'
+    'previewImg': '/images/issue_img2.png'
   },
   {
-    'issueUrl': 'https://iiitdwd.ac.in/magazine_img/issue_3.pdf',
+    'issueUrl': '/docs/issue_3.pdf',
     'id': 3,
     'displayText': 'Issue 3',
-    'previewImg': '/magazine/preview/issue_img3.png'
+    'previewImg': '/images/issue_img3.png'
   },
   {
-    'issueUrl': 'https://iiitdwd.ac.in/magazine_img/issue_4.pdf',
+    'issueUrl': '/docs/issue_4.pdf',
     'id': 4,
     'displayText': 'Issue 4',
-    'previewImg': '/magazine/preview/issue_img4.png'
+    'previewImg': '/images/issue_img4.png'
   },
   {
-    'issueUrl': 'https://iiitdwd.ac.in/magazine_img/issue5.pdf',
+    'issueUrl': '/docs/issue_5.pdf',
     'id': 5,
     'displayText': 'Issue 5',
-    'previewImg': '/magazine/preview/issue_img5.png'
+    'previewImg': '/images/issue_img5.png'
   },
   {
-    'issueUrl': 'https://iiitdwd.ac.in/magazine_img/issue_6.pdf',
+    'issueUrl': '/docs/issue_6.pdf',
     'id': 6,
     'displayText': 'Issue 6',
-    'previewImg': '/magazine/preview/issue_img6.png'
+    'previewImg': '/images/issue_img6.png'
   },
   {
-    'issueUrl': 'https://iiitdwd.ac.in/magazine_img/issue_7.pdf',
+    'issueUrl': '/docs/issue_7.pdf',
     'id': 7,
     'displayText': 'Issue 7',
-    'previewImg': '/magazine/preview/issue_img7.png'
+    'previewImg': '/images/issue_img7.png'
   },
   {
-    'issueUrl': 'https://iiitdwd.ac.in/magazine_img/issue_8.pdf',
+    'issueUrl': '/docs/issue_8.pdf',
     'id': 8,
     'displayText': 'Issue 8',
-    'previewImg': '/magazine/preview/issue_img8.png'
+    'previewImg': '/images/issue_img8.png'
   },
   {
-    'issueUrl': 'https://iiitdwd.ac.in/magazine_img/Issue9.pdf',
+    'issueUrl': '/docs/issue_9.pdf',
     'id': 9,
     'displayText': 'Issue 9',
-    'previewImg': '/magazine/preview/issue_img9.png'
+    'previewImg': '/images/issue_img9.png'
   }
 ]
 
