@@ -83,6 +83,14 @@
   .animate-marquee {
     animation: scroll 10s linear infinite;
   }
+
+  .half-underline:after {
+    content: '';
+    display: block;
+    width: 3rem;
+    height: 1px;
+    background-color: white;
+  }
 }
 
 .break-last-words {
