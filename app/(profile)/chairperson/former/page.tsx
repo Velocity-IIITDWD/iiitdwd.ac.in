@@ -8,7 +8,7 @@ const ChairpersonMessage: React.FC = () => {
       <div className="flex flex-col md:flex-row items-center bg-white shadow-lg rounded-lg p-6">
         <div className="chairperson-image slide-in-left mb-5 md:mb-0 md:mr-8">
           <div className="relative w-48 h-48">
-            <Image src="/sudha-murty.jpg" alt="Smt. Sudha Murty" layout="fill" objectFit="cover" className="rounded-lg" />
+            <Image src="/images/sudha_murty.jpg" alt="Smt. Sudha Murty" layout="fill" objectFit="cover" className="rounded-lg" />
           </div>
         </div>
         <div className="chairperson-message slide-in-right text-lg">
