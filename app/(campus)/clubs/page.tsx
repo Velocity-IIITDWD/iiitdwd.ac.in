@@ -9,17 +9,23 @@ const Club: FC = () => {
   const [showTechnicalClubs, setShowTechnicalClubs] = useState(true);
 
   const refs: Record<ClubName, React.RefObject<HTMLDivElement>> = {
+    'Velocity': useRef<HTMLDivElement>(null),
+    'Iridescence': useRef<HTMLDivElement>(null),
     'Return 0': useRef<HTMLDivElement>(null),
     'BlocSoc': useRef<HTMLDivElement>(null),
-    'Velocity': useRef<HTMLDivElement>(null),
     'GDSC IIIT Dharwad': useRef<HTMLDivElement>(null),
     'E cell': useRef<HTMLDivElement>(null),
     'Inquizitive': useRef<HTMLDivElement>(null),
     'Iris': useRef<HTMLDivElement>(null),
     'DSAI Society': useRef<HTMLDivElement>(null),
     'Quantum Computing Club': useRef<HTMLDivElement>(null),
+    'Techniosys': useRef<HTMLDivElement>(null),
     'Zeitgeist': useRef<HTMLDivElement>(null),
-    'Music Club': useRef<HTMLDivElement>(null),
+    'Prabodhini': useRef<HTMLDivElement>(null),
+    'Mosaic Club': useRef<HTMLDivElement>(null),
+    'In Motion': useRef<HTMLDivElement>(null),
+    'LimeLight': useRef<HTMLDivElement>(null),
+    '440 Hz': useRef<HTMLDivElement>(null),
     'Dance Club': useRef<HTMLDivElement>(null),
   };
 
@@ -43,7 +49,7 @@ const Club: FC = () => {
             className={`px-4 py-2 rounded-lg mt-4 md:mt-0 ${!showTechnicalClubs ? 'bg-dwd-primary hover:border-black text-white hover:text-sky-600' : 'bg-dwd-secondary1 hover:text-white'}`}
             onClick={() => setShowTechnicalClubs(false)}
           >
-            Non Technical Clubs
+            Cultural Clubs
           </button>
         </div>
 
@@ -51,7 +57,7 @@ const Club: FC = () => {
           {showTechnicalClubs ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {clubs
-                .filter((club: ClubData) => club.name !== 'Zeitgeist' && club.name !== 'Music Club' && club.name !== 'Dance Club')
+                .filter((club: ClubData) => !['Zeitgeist', '440 Hz', 'Dance Club', 'Iridescence', 'Prabodhini', 'Mosaic Club', 'In Motion', 'LimeLight'].includes(club.name))
                 .map((club: ClubData) => (
                   <div
                     key={club.name}
@@ -65,7 +71,7 @@ const Club: FC = () => {
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {clubs
-                .filter((club: ClubData) => club.name === 'Zeitgeist' || club.name === 'Music Club' || club.name === 'Dance Club')
+                .filter((club: ClubData) => ['Zeitgeist', '440 Hz', 'Dance Club', 'Iridescence', 'Prabodhini', 'Mosaic Club', 'In Motion', 'LimeLight'].includes(club.name))
                 .map((club: ClubData) => (
                   <div
                     key={club.name}
@@ -91,6 +97,9 @@ const Club: FC = () => {
               aboutText={club.aboutText}
               members={club.members}
               imagePath={club.imagePath}
+              instagram={club.instagram}
+              linkedin={club.linkedin}
+              gmail={club.gmail}
             />
           </div>
         ))}
@@ -99,7 +108,8 @@ const Club: FC = () => {
   );
 };
 
-const ClubCard: FC<{ clubName: string; aboutText: string; members: { name: string; position: string }[]; imagePath: string }> = ({ clubName, aboutText, members, imagePath }) => {
+
+const ClubCard: FC<{ clubName: string; aboutText: string; members: { name: string; position: string }[]; imagePath: string; instagram: string; linkedin: string; gmail: string }> = ({ clubName, aboutText, members, imagePath, instagram, linkedin, gmail }) => {
   const [showAbout, setShowAbout] = useState(true);
 
   return (
@@ -154,13 +164,13 @@ const ClubCard: FC<{ clubName: string; aboutText: string; members: { name: strin
         )}
         <br />
         <div className="flex justify-center space-x-4">
-          <a href="https://www.instagram.com" className="flex gap-2 hover:text-pink-600 hover:duration-800 hover:animate-ping">
+          <a href={instagram} className="flex gap-2 hover:text-pink-600 hover:duration-800 hover:animate-ping">
             <Instagram size="2rem" />
           </a>
-          <a href="https://www.linkedin.com/in/iiitdharwad/" className="flex gap-2 hover:text-blue-800 hover:duration-800 hover:animate-pulse">
+          <a href={linkedin} className="flex gap-2 hover:text-blue-800 hover:duration-800 hover:animate-pulse">
             <LinkedinIcon size="2rem" />
           </a>
-          <a href="https://www.gmail.com" className="flex gap-2 hover:text-red-700 hover:duration-800 hover:animate-pulse">
+          <a href={gmail} className="flex gap-2 hover:text-red-700 hover:duration-800 hover:animate-pulse">
             <Mail size="2rem" />
           </a>
         </div>
