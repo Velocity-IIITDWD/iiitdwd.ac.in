@@ -147,7 +147,7 @@ export default function Home() {
 
       
         <div className="shortbox text-[1.8rem] text-[#013365] font-extrabold ml-[20%] mt-20">Companies Visited</div>
-        <Image src="/images/Companies Visited.png" width="800" height="150" className="mx-auto block mt-10" alt='Companies visited'/>
+        <Image src="/assets/Companies Visited.png" width="800" height="150" className="mx-auto block mt-10" alt='Companies visited'/>
       
         <div className="shortbox text-[1.8rem] text-[#013365] font-extrabold ml-[20%] mt-20">Placement Procedure</div>
         <Image src="/images/Placement Procedure.png" width="800" height="150" className="mx-auto block mt-10 procedure" alt='Placement Procedure'/>
