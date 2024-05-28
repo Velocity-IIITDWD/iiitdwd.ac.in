@@ -6,20 +6,17 @@ export default [
     profiles: [
       {
         content: ['Lead Coordinator'],
-        imageURL:
-          'https://iiitdwd.ac.in/commitee_page/student_coordinators/IMG-20230709-WA0024%20-%20OM%20MORENDHA%20IIIT%20Dharwad.jpg',
+        imageURL: '/profile/cgc/student_coordinators/om-morendha.jpg',
         title: 'Om Morendha',
       },
       {
         content: ['Lead Coordinator'],
-        imageURL:
-          'https://iiitdwd.ac.in/commitee_page/student_coordinators/Shreyas_Bulbule.jpeg',
+        imageURL: '/profile/cgc/student_coordinators/shreyas-bulbule.jpeg',
         title: 'Shreyas Bulbule',
       },
       {
         content: ['Lead Coordinator'],
-        imageURL:
-          'https://iiitdwd.ac.in/commitee_page/student_coordinators/Screenshot_20230721-204026_Photos%20-%20GAURANG%20SUBHASH%20BELEKAR%20IIIT%20Dharwad.jpg',
+        imageURL: '/profile/cgc/student_coordinators/gaurang-belekar.jpg',
         title: 'Gaurang Belekar',
       },
     ],
@@ -29,69 +26,56 @@ export default [
     profiles: [
       {
         content: ['Coordinator'],
-        imageURL:
-          'https://iiitdwd.ac.in/commitee_page/student_coordinators/Snapchat-1219141046%20-%20SIDDHANT%20DIXIT%20IIIT%20Dharwad.jpg',
+        imageURL: '/profile/cgc/student_coordinators/siddhant-dixit.jpg',
         title: 'Siddhant Dixit',
       },
       {
         content: ['Coordinator'],
-        imageURL:
-          'https://iiitdwd.ac.in/commitee_page/student_coordinators/Nikhil%20B.jpeg',
+        imageURL: '/profile/cgc/student_coordinators/bhashapangu-nikhil.jpeg',
         title: 'Bhashapangu Nikhil',
       },
       {
         content: ['Coordinator'],
-        imageURL:
-          'https://iiitdwd.ac.in/commitee_page/student_coordinators/IMG_20230508_222905_671%20-%20HARSH%20RAWAT%20IIIT%20Dharwad.jpg',
+        imageURL: '/profile/cgc/student_coordinators/harsh-rawat.jpg',
         title: 'Harsh Rawat',
       },
       {
         content: ['Coordinator'],
-        imageURL:
-          'https://iiitdwd.ac.in/commitee_page/student_coordinators/IMG_20230817_194502%20-%20RISHIKA%20KUMARI%20IIIT%20Dharwad.jpg',
+        imageURL: '/profile/cgc/student_coordinators/rishika-kumari.jpg',
         title: 'Rishika Kumari',
       },
       {
         content: ['Coordinator'],
         imageURL:
-          'https://iiitdwd.ac.in/commitee_page/student_coordinators/Screenshot_20230806-195240_Photos%20-%20GARIMELLA%20AMRUTHAVALLI%20IIIT%20Dharwad.jpg',
+          '/profile/cgc/student_coordinators/garimella-amruthavalli.jpg',
         title: 'Garimella Amruthavalli',
       },
       {
         content: ['Coordinator'],
-        imageURL:
-          'https://iiitdwd.ac.in/commitee_page/student_coordinators/Screenshot%202023-08-09%20at%203.34.18%20PM%20-%20GAURAV%20AGARWAL%20IIIT%20Dharwad.png',
+        imageURL: '/profile/cgc/student_coordinators/gaurav-agarwal.png',
         title: 'Gaurav Agarwal',
       },
       {
         content: ['Coordinator'],
-        imageURL:
-          'https://iiitdwd.ac.in/commitee_page/student_coordinators/RAJNISH-20BEC035%20-%20RAJNISH%20KUMAR%20IIIT%20Dharwad.jpg',
+        imageURL: '/profile/cgc/student_coordinators/rajnish-kumar.jpg',
         title: 'Rajnish Kumar',
       },
       {
         content: ['Coordinator'],
-        imageURL:
-          'https://iiitdwd.ac.in/commitee_page/student_coordinators/IMG-20230724-WA0001%20-%20MOHIT%20SAINI%20IIIT%20Dharwad.jpg',
+        imageURL: '/profile/cgc/student_coordinators/mohit-saini.jpg',
         title: 'Mohit Saini',
       },
       {
         content: ['Coordinator'],
-        imageURL:
-          'https://iiitdwd.ac.in/commitee_page/student_coordinators/IMG_20231004_133647%20-%20B%20SRI%20VENKATA%20SAI%20TARUN%20IIIT%20Dharwad.jpg',
+        imageURL: '/profile/cgc/student_coordinators/b-tarun.jpg',
         title: 'B Tarun',
       },
       {
         content: ['Coordinator'],
-        imageURL:
-          'https://iiitdwd.ac.in/commitee_page/student_coordinators/poornima_pic%20-%20POORNIMA%20IIIT%20Dharwad.jpeg',
+        imageURL: '/profile/cgc/student_coordinators/poornima.jpeg',
         title: 'Poornima',
       },
-      {
-        content: ['Coordinator'],
-        imageURL: '',
-        title: 'Kanishk Bajpai',
-      },
+      { content: ['Coordinator'], imageURL: '', title: 'Kanishk Bajpai' },
     ],
   },
 ] as ProfileGroup[];

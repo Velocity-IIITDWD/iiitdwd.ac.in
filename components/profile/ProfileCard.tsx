@@ -8,7 +8,7 @@ export default function ProfileCard({ content, imageURL, title }: Profile) {
         <Image
           src={imageURL || '/profile/blank-profile-square.png'}
           fill={true}
-          objectFit="contain"
+          className="object-contain"
           alt={title}
         />
       </div>

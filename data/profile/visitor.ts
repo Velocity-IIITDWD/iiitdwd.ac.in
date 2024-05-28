@@ -12,7 +12,7 @@ export default [
           'Telephone: 91-11-23015321',
           'Fax : 91-11-23017290 / 91-11-23017824 (O)',
         ],
-        imageURL: 'https://iiitdwd.ac.in/docs/Smt.Droupadi-Murmu.jpeg',
+        imageURL: '/profile/visitor/droupadi-murmu.jpeg',
         title: 'Smt. Droupadi Murmu',
       },
     ],

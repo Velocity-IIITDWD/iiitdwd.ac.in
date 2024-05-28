@@ -6,7 +6,7 @@ export default [
     profiles: [
       {
         content: ['Officiating Chairperson & Director, IIIT Dharwad'],
-        imageURL: 'https://iiitdwd.ac.in/img/Director-new.JPG',
+        imageURL: '/profile/board_of_governors/s-r-mahadeva-prasanna.JPG',
         title: 'Prof. S. R. Mahadeva Prasanna',
       },
     ],
@@ -18,70 +18,70 @@ export default [
         content: [
           'Joint Secretary (TE), Ministry of Education, Government of India',
         ],
-        imageURL: 'https://iiitdwd.ac.in/img/bog/saumya_gupta.jpg',
+        imageURL: '/profile/board_of_governors/saumya-gupta.jpg',
         title: 'Smt. Saumya Gupta',
       },
       {
         content: [
           'Secretary to Government Department of Electronics Information Technology Biotechnology and Science & Technology. Government of Karnataka',
         ],
-        imageURL: 'https://iiitdwd.ac.in/img/bog/EkroopCaur-pic-1.jpg',
+        imageURL: '/profile/board_of_governors/ekroop-caur.jpg',
         title: 'Dr. Ekroop Caur, I.A.S',
       },
       {
         content: [
           'Department of Science & Technology & Managing Director, KSTePS Government of Karnataka',
         ],
-        imageURL: 'https://iiitdwd.ac.in/img/bog/PavankumarMalapatiIAS.jpg',
+        imageURL: '/profile/board_of_governors/pavan-kumar-malapati.jpg',
         title: 'Shri. Pavan Kumar Malapati, IAS',
       },
       {
         content: ['Former Director, IIT Hyderabad'],
-        imageURL: 'https://iiitdwd.ac.in/img/bog/uday.jpg',
+        imageURL: '/profile/board_of_governors/uday-b-desai.jpg',
         title: 'Prof. Uday B. Desai',
       },
       {
         content: ['Former Director, IIIT Bengaluru'],
-        imageURL: 'https://iiitdwd.ac.in/img/bog/sadagopan.jpg',
+        imageURL: '/profile/board_of_governors/s-sadagopan.jpg',
         title: 'Prof. S. Sadagopan',
       },
       {
         content: [
           'President, IESA & Former Additional Chief Secretary to Government of Karnataka',
         ],
-        imageURL: 'https://iiitdwd.ac.in/img/bog/vidyashankar.jpg',
-        title: 'Sri. M.N. Vidyashankar, IAS',
+        imageURL: '/profile/board_of_governors/m-n-vidyashankar.jpg',
+        title: 'Sri. M. N. Vidyashankar, IAS',
       },
       {
         content: [
           'Vice Chairman, Karnataka State Higher Education Council, Former Chief Secretary, Government of Karnataka',
         ],
-        imageURL: 'https://iiitdwd.ac.in/img/bog/ranganath.jpg',
-        title: 'Sri. S.V. Ranganath, IAS',
+        imageURL: '/profile/board_of_governors/s-v-ranganath.jpg',
+        title: 'Sri. S. V. Ranganath, IAS',
       },
       {
         content: ['Former Director, IISc Bengaluru'],
-        imageURL: 'https://iiitdwd.ac.in/img/bog/balaram.jpg',
+        imageURL: '/profile/board_of_governors/p-balaram.jpg',
         title: 'Prof. P. Balaram',
       },
       {
         content: ['Vice Chancellor, Ahmedabad University'],
-        imageURL: 'https://iiitdwd.ac.in/img/bog/pankaj.jpg',
+        imageURL: '/profile/board_of_governors/pankaj-chandra.jpg',
         title: 'Prof. Pankaj Chandra',
       },
       {
         content: ['Former Vice Chancellor, VTU and Professor, IISc, Bengaluru'],
-        imageURL: 'https://iiitdwd.ac.in/img/bog/khincha.jpg',
-        title: 'Prof. H.P. Khincha',
+        imageURL: '/profile/board_of_governors/h-p-khincha.jpg',
+        title: 'Prof. H. P. Khincha',
       },
       {
         content: ['Director, IIT Dharwad'],
-        imageURL: 'https://iiitdwd.ac.in/docs/Officiating_Dir.jpeg',
+        imageURL: '/profile/board_of_governors/venkappayya-r-desai.jpeg',
         title: 'Prof. Venkappayya R. Desai',
       },
       {
         content: ['Director, IIIT Dharwad'],
-        imageURL: 'https://iiitdwd.ac.in/img/Director-new.JPG',
+        imageURL: '/profile/board_of_governors/s-r-mahadeva-prasanna.JPG',
         title: 'Prof. S. R. Mahadeva Prasanna',
       },
     ],

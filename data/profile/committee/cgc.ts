@@ -6,12 +6,12 @@ export default [
     profiles: [
       {
         content: ['Chairman'],
-        imageURL: 'https://www.iiitdwd.ac.in/img/faculty/Prakash.jpg',
+        imageURL: '/profile/committee/cgc/prakash-pawar.jpg',
         title: 'Dr. Prakash Pawar',
       },
       {
         content: ['Member Secretary'],
-        imageURL: 'https://iiitdwd.ac.in/assets/img/ujwal.jpeg',
+        imageURL: '/profile/committee/cgc/ujwal-doddamani.jpeg',
         title: 'Mr. Ujwal Doddamani',
       },
     ],
@@ -21,22 +21,22 @@ export default [
     profiles: [
       {
         content: ['Ex-officio Member'],
-        imageURL: 'https://iiitdwd.ac.in/img/faculty/deepak.jpeg',
+        imageURL: '/profile/committee/cgc/deepak-kt.jpeg',
         title: 'Dr. Deepak KT',
       },
       {
         content: ['Ex-officio Member'],
-        imageURL: 'https://iiitdwd.ac.in/img/faculty/pavan.jpg',
+        imageURL: '/profile/committee/cgc/pavan-kumar.jpg',
         title: 'Dr. Pavan Kumar',
       },
       {
         content: ['Ex-officio Member'],
-        imageURL: 'https://iiitdwd.ac.in/img/faculty/Sunil.jpeg',
+        imageURL: '/profile/committee/cgc/sunil-saumya.jpeg',
         title: 'Dr. Sunil Saumya',
       },
       {
         content: ['Ex-officio Member'],
-        imageURL: 'https://iiitdwd.ac.in/img/faculty/aswath.jpeg',
+        imageURL: '/profile/committee/cgc/ashwath-babu-h.jpeg',
         title: 'Dr. Ashwath Babu H',
       },
     ],
@@ -46,27 +46,27 @@ export default [
     profiles: [
       {
         content: ['Member'],
-        imageURL: 'https://iiitdwd.ac.in/img/faculty/Animesh.jpg',
+        imageURL: '/profile/committee/cgc/animesh-chaturvedi.jpg',
         title: 'Dr. Animesh Chaturvedi',
       },
       {
         content: ['Member'],
-        imageURL: 'https://www.iiitdwd.ac.in/img/faculty/yelmewad.jpg',
+        imageURL: '/profile/committee/cgc/pramod-yelmewad.jpg',
         title: 'Dr. Pramod Yelmewad',
       },
       {
         content: ['Member'],
-        imageURL: 'https://iiitdwd.ac.in/img/faculty/vivekraj.jpg',
+        imageURL: '/profile/committee/cgc/vivek-raj.jpg',
         title: 'Dr. Vivek Raj',
       },
       {
         content: ['Member'],
-        imageURL: 'https://iiitdwd.ac.in/img/faculty/Prabhu_Prasad.png',
+        imageURL: '/profile/committee/cgc/prabhu-prasad-bm.png',
         title: 'Dr. Prabhu Prasad BM',
       },
       {
         content: ['Member'],
-        imageURL: 'https://iiitdwd.ac.in/img/faculty/Anushree.jpg',
+        imageURL: '/profile/committee/cgc/anushree-kini.jpg',
         title: 'Dr. Anushree Kini',
       },
     ],

@@ -6,22 +6,22 @@ export default [
     profiles: [
       {
         content: ['Chairman'],
-        imageURL: 'https://iiitdwd.ac.in/img/ex-committee/khincha.jpg',
+        imageURL: '/profile/committee/expert/h-p-khincha.jpg',
         title: 'Prof. H P Khincha',
       },
       {
         content: ['Member'],
-        imageURL: 'https://iiitdwd.ac.in/img/ex-committee/srinivasa-murthy.jpg',
+        imageURL: '/profile/committee/expert/b-r-srinivasa-murthy.jpg',
         title: 'Prof. B R Srinivasa Murthy',
       },
       {
         content: ['Member'],
-        imageURL: 'https://iiitdwd.ac.in/img/ex-committee/anuradha.jpg',
+        imageURL: '/profile/committee/expert/anuradha-n.jpg',
         title: 'Prof. Anuradha N.',
       },
       {
         content: ['Director, IIIT-Dharwad'],
-        imageURL: 'https://iiitdwd.ac.in/img/Director-new.JPG',
+        imageURL: '/profile/committee/expert/s-r-mahadeva-prasanna.JPG',
         title: 'Prof. S. R. Mahadeva Prasanna',
       },
       {
@@ -31,7 +31,7 @@ export default [
       },
       {
         content: ['Executive Engineer'],
-        imageURL: 'https://iiitdwd.ac.in/img/non-teaching-staff/mahesh.jpeg',
+        imageURL: '/profile/committee/expert/mahesh-chandra-k-j.jpeg',
         title: 'Mr. Mahesh Chandra K J',
       },
     ],

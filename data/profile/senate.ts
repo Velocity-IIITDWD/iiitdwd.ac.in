@@ -6,7 +6,7 @@ export default [
     profiles: [
       {
         content: ['Officiating Chairperson & Director, IIIT Dharwad'],
-        imageURL: 'https://iiitdwd.ac.in/img/Director-new.JPG',
+        imageURL: '/profile/senate/s-r-mahadeva-prasanna.JPG',
         title: 'Prof. S. R. Mahadeva Prasanna',
       },
     ],
@@ -16,29 +16,29 @@ export default [
     profiles: [
       {
         content: ['Former Professor, IISc Bengaluru'],
-        imageURL: 'https://iiitdwd.ac.in/img/senate/hs.jpg',
+        imageURL: '/profile/senate/h-s-jamadagni.jpg',
         title: 'Prof. H. S. Jamadagni',
       },
       {
         content: ['Vice Chancellor, Dayanand Sagar University, Bengaluru'],
-        imageURL: 'https://iiitdwd.ac.in/img/senate/knb.jpg',
+        imageURL: '/profile/senate/k-n-balasubramanya-murthy.jpg',
         title: 'Prof. K. N. Balasubramanya Murthy',
       },
       {
         content: ['Professor, IIIT Bangalore'],
-        imageURL: 'https://iiitdwd.ac.in/img/senate/knb.jpg',
+        imageURL: '/profile/senate/badrinath-ramamurthy.jpg',
         title: 'Prof. Badrinath Ramamurthy',
       },
       {
         content: [
           'Director, Higher Education & Entrepreneurship, INTEL, Bengaluru',
         ],
-        imageURL: 'https://iiitdwd.ac.in/img/senate/sumeet.jpg',
+        imageURL: '/profile/senate/sumeet-verma.jpg',
         title: 'Sri. Sumeet Verma',
       },
       {
         content: ['Professor, IIIT Bangalore'],
-        imageURL: 'https://iiitdwd.ac.in/img/senate/V-Ramasubramanian.jpg',
+        imageURL: '/profile/senate/v-ramasubramanian.jpg',
         title: 'Prof. V Ramasubramanian',
       },
     ],

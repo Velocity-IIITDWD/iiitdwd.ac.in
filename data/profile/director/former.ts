@@ -6,22 +6,22 @@ export default [
     profiles: [
       {
         content: ['Mentor Director', '(20 Jul 2015 - 16 Feb 2016)'],
-        imageURL: 'https://iiitdwd.ac.in/img/Bhattacharya.jpg',
+        imageURL: '/profile/director/former/swapan-bhattacharya.jpg',
         title: 'Dr. Swapan Bhattacharya',
       },
       {
         content: ['Mentor Director', '(16 Feb 2016 - 30 Aug 2017)'],
-        imageURL: 'https://iiitdwd.ac.in/img/Professor_Sadagopan_IIITB.jpg',
+        imageURL: '/profile/director/former/s-sadagopan.jpg',
         title: 'Prof. S Sadagopan',
       },
       {
         content: ['Former Director', '(01 Sept 2017 - 15 Sept 2023)'],
-        imageURL: 'https://iiitdwd.ac.in/img/about-page/director.jpg',
+        imageURL: '/profile/director/former/kavi-mahesh.jpg',
         title: 'Dr. Kavi Mahesh',
       },
       {
         content: ['Officiating Director', '(15 Sept 2023 - 01 May 2024)'],
-        imageURL: 'https://iiitdwd.ac.in/img/bog/venkapd.png',
+        imageURL: '/profile/director/former/venkappayya-r-desai.png',
         title: 'Prof. Venkappayya R. Desai',
       },
     ],
