@@ -85,6 +85,7 @@ const navmenuItems: NavmenuItem[] = [
       {
         items: [
           { text: 'BTech', href: '/admissions/btech' },
+          { text: 'MTech - Research', href: '/admissions/mtech' },
           { text: 'PhD', href: '/admissions/phd' },
         ],
       },
