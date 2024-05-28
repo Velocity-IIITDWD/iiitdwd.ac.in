@@ -31,7 +31,7 @@ const Card = ({ jobdata }: { jobdata: jobstype }) => {
       <div className=" hidden lg:flex   card py-4 px-4 w-[100%] mt-3  flex-col gap-3  bg-white rounded-lg ">
 
 
-        <div className="tilte w-1/2 font-bold text-3xl">  {jobdata.title}</div>
+        <div className="tilte w-1/2 font-bold text-2xl">  {jobdata.title}</div>
 
 
         <div className="InstructionnApply flex gap-2 justify-between items-center ">
@@ -87,7 +87,7 @@ const Card = ({ jobdata }: { jobdata: jobstype }) => {
 
 
 
-        <div className="lastdate text-2xl text-red-600 ">Last date to receive applications: {jobdata.date} </div>
+        <div className="lastdate text-2xl text-red-600 py-4 ">Last date to receive applications: {jobdata.date} </div>
         <div className="InstructionnApply flex gap-2 justify-between">
           <button className='w-1/2 border border-[#01122b] text-black rounded-xl p-3' onClick={()=>{openLink(jobdata.GI)}}>General Instruction</button>
           {jobdata.Applicationoffline ? <button className='w-1/2  bg-[#01122b] text-white  rounded-xl p-3' onClick={()=>{openLink(jobdata.Applicationoffline)}}>Apply Offline</button> : <div className='hidden' ></div>}

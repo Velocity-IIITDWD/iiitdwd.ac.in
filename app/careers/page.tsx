@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import Card from '@/app/careers/Card';
 import { jobsdata } from '@/data/jobs';
 import Image from 'next/image';
- 
+import searchimg from '@/assets/careers/search.png' 
 
 
 const Page = () => {
@@ -33,7 +33,7 @@ const Page = () => {
     <>
       <div className="content flex flex-col items-center pt-[3vh] overflow-x-hidden w-[100%] mb-7">
         <div id="temp" className="textcont pb-[2vh]">
-          <div className="hover:scale-[1.01]  hover:drop-shadow-2xl transition Head text-center font-bold z-10 text-[#091d3f] text-6xl p-8">
+          <div className=" Head text-center font-bold z-10 text-[#091d3f] text-6xl p-8">
             Careers
           </div>
         </div>
@@ -72,7 +72,7 @@ const Page = () => {
               className="bg-dwd-secondary2  flex items-center justify-center px-1 py-2 md:px-5 md:py-2 text-white font-semibold rounded-[0px_10px_10px_0px] cursor-pointer"
               onClick={handlesearch}
             >
-              <Image width={20} height={20} src="/search.png" alt="" />
+              <Image width={20} height={20} src={searchimg} alt="" />
             </div>
           </div>
         </div>
