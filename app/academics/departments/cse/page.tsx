@@ -11,6 +11,7 @@ import {
 } from '@/components/ui/table';
 import { CSEDetails } from '@/data/academics';
 import Curriculum from '@/components/academics/Curriculum';
+import { Metadata } from 'next';
 
 export default function page() {
   return (
@@ -88,3 +89,7 @@ export default function page() {
     </div>
   );
 }
+
+export const metadata: Metadata = {
+  title: 'CSE',
+};

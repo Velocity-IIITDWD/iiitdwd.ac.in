@@ -1,4 +1,4 @@
-import { NextPage } from 'next';
+import { Metadata, NextPage } from 'next';
 import MainContent from '@/components/campus/MainContent';
 
 const Home: NextPage = () => {
@@ -10,3 +10,7 @@ const Home: NextPage = () => {
 };
 
 export default Home;
+
+export const metadata: Metadata = {
+  title: 'Campus',
+};

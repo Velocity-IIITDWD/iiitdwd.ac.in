@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import dynamic from 'next/dynamic';
 
 const DynamicComponentWithNoSSR = dynamic(() => import('@/components/event'), {
@@ -17,3 +18,7 @@ export default function EventDetails({
     </div>
   );
 }
+
+export const metadata: Metadata = {
+  title: 'Events',
+};

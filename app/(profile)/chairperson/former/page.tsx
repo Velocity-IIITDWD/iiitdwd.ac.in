@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import { Metadata } from 'next';
 
 const ChairpersonMessage: React.FC = () => {
   return (
@@ -24,3 +25,7 @@ const ChairpersonMessage: React.FC = () => {
 };
 
 export default ChairpersonMessage;
+
+export const metadata: Metadata = {
+  title: 'Former Chairperson',
+};

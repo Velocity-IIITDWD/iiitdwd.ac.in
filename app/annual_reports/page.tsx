@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import Reports from './Reports';
 
 export default function Page() {
@@ -12,3 +13,7 @@ export default function Page() {
     </div>
   );
 }
+
+export const metadata: Metadata = {
+  title: 'Annual Reports',
+};
