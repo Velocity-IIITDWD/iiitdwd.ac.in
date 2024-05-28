@@ -1,13 +1,11 @@
 'use client'
 import React, { useEffect, useState } from 'react';
 
-
-interface propstype{
-  text:string
+interface PropsType {
+  text: string;
 }
 
-
-const ReadMoreLess = (props:propstype) => {
+const ReadMoreLess: React.FC<PropsType> = ({ text }) => {
   const [isTruncated, setIsTruncated] = useState(true);
   const [displayText, setDisplayText] = useState('');
 
@@ -17,33 +15,28 @@ const ReadMoreLess = (props:propstype) => {
 
   useEffect(() => {
     if (isTruncated) {
-      // Truncate text to first 200 characters
-      setDisplayText(props.text.substring(0, 200));
+      // Truncate text to the first 200 characters
+      setDisplayText(text.substring(0, 200));
     } else {
       // Show full text
-      setDisplayText(props.text);
+      setDisplayText(text);
     }
-  }, [isTruncated]);
+  }, [isTruncated, text]);
 
-  if(props.text.length >0){
+  if (text.length > 0) {
     return (
-      <div >
-        <p>{displayText} 
-          <button className='text-dwd-primary font-semibold' onClick={toggleIsTruncated}>
-            {isTruncated? '... Read More' : 'Show Less'}
-          </button></p>
-      </div>
-    );}
-  else{
-    return (
-      <div >
-        {displayText}
+      <div>
+        <p>
+          {displayText}
+          <button className="text-dwd-primary font-semibold" onClick={toggleIsTruncated}>
+            {isTruncated ? '... Read More' : ' Show Less'}
+          </button>
+        </p>
       </div>
     );
+  } else {
+    return <div>{displayText}</div>;
   }
-
-
-
 };
 
 export default ReadMoreLess;

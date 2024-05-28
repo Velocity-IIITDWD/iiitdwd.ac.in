@@ -1,6 +1,5 @@
 import { About, aboutData } from '@/data/about';
 import Image from 'next/image';
-import main_gate from '@/assets/images/campus/main_gate.jpg';
 import DirectorsMessage from '@/components/about/DirectorsMessage';
 import OurFamily from '@/components/about/OurFamily';
 import OurVision from '@/components/about/OurVision';
@@ -20,8 +19,8 @@ const AboutPage = () => {
     <div className="w-full flex flex-col items-center">
       <div className="w-full min-h-40 sm:min-h-72 lg:min-h-96 xl:min-h-112 relative">
         <Image
-          src={main_gate}
-          alt={'Image of Main Gate'}
+          src={about.mainGate.imageURL}
+          alt={about.mainGate.name}
           fill={true}
           priority
           style={{
@@ -31,24 +30,26 @@ const AboutPage = () => {
         />
       </div>
 
-      <div id='introduction' />
+      <div id="introduction" />
       <AboutIIIT aboutText={about.aboutText} />
 
-      <div id='directors-message' />
+      <div id="directors-message" />
       <DirectorsMessage
         heading={about.directorsMessage.heading}
-        directorName={about.directorName}
-        text={about.directorsMessage.text}
+        director={about.director}
+        text1={about.directorsMessage.text1}
+        text2={about.directorsMessage.text2}
+        text3={about.directorsMessage.text3}
       />
       <DirectorBriefProfile
-        directorName={about.directorName}
+        directorName={about.director.title}
         briefProfile={about.briefProfile}
       />
 
-      <div id='family' />
+      <div id="family" />
       <OurFamily />
 
-      <div id='vision' />
+      <div id="vision" />
       <OurVision vision={about.vision} />
       <OurMission missions={about.missions} />
       <CoreValues coreValues={about.coreValues} />

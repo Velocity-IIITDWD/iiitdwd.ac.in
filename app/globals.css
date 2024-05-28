@@ -62,6 +62,11 @@
   details > summary::-webkit-details-marker {
     display: none;
   }
+
+  .heading-text {
+    @apply text-4xl font-bold my-10 text-center text-dwd-primary;
+  }
+
 }
 
 @layer utilities {
@@ -77,6 +82,14 @@
 
   .animate-marquee {
     animation: scroll 10s linear infinite;
+  }
+
+  .half-underline:after {
+    content: '';
+    display: block;
+    width: 3rem;
+    height: 1px;
+    background-color: white;
   }
 }
 

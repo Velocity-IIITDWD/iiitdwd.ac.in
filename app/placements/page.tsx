@@ -7,6 +7,7 @@ import '../globals.css';
 
 import EmblaCarousel from '@/components/EmblaCarousel';
 import { Metadata } from 'next';
+import Link from 'next/link';
 
 
 //import Carousel from "@/components/Carousel";
@@ -146,10 +147,10 @@ export default function Home() {
 
       
         <div className="shortbox text-[1.8rem] text-[#013365] font-extrabold ml-[20%] mt-20">Companies Visited</div>
-        <img src="Companies Visited.png" width="800" height="150" className="mx-auto block mt-10" />
+        <Image src="/Companies Visited.png" width="800" height="150" className="mx-auto block mt-10" alt='Companies visited'/>
       
         <div className="shortbox text-[1.8rem] text-[#013365] font-extrabold ml-[20%] mt-20">Placement Procedure</div>
-        <img src="Placement Procedure.png" width="800" height="150" className="mx-auto block mt-10 procedure" />
+        <Image src="/Placement Procedure.png" width="800" height="150" className="mx-auto block mt-10 procedure" alt='Placement Procedure'/>
       
         <div className=" whatsapp text-[1rem] text-black font-light mt-5 ml-[20%] mr-[20%]">
         Note: The SRF provides the primary basis of communicating the details of the positions offered to the candidates. It is, therefore, highly desirable that the form is completed in all respects and it would be advantageous if it were accompanied by relevant company literature/JD.
@@ -164,9 +165,9 @@ export default function Home() {
         <div className="shortbox text-[1.8rem] text-[#013365] font-extrabold ml-[20%] mt-20">Contact
           <div className="whatsapp text-[1rem] text-black font-light mt-5 mr-[20%]">
           For any inquiries or if you would like to participate in recruitment activities at IIIT Dharwad, please contact the Career Guidance Cell (CGC) via email at 
-            <a className="text-[blue]" href="mailto:cgc@iiitdwd.ac.in"> cgc@iiitdwd.ac.in</a> 
+            <Link className="text-[blue]" href="mailto:cgc@iiitdwd.ac.in"> cgc@iiitdwd.ac.in</Link> 
           marking cc to 
-            <a className="text-[blue]" href="mailto:cgcoffice@iiitdwd.ac.in"> cgcoffice@iiitdwd.ac.in</a>.
+            <Link className="text-[blue]" href="mailto:cgcoffice@iiitdwd.ac.in"> cgcoffice@iiitdwd.ac.in</Link>.
           </div>
         </div>
       
@@ -174,12 +175,12 @@ export default function Home() {
           <div className='pp'>
             <strong className='text-[#013365]' style={{fontSize:21}}>CGC, Chairman</strong><br />
           Dr. Prakash Pawar, Asst. Professor<br />
-          Email: <a href="mailto:cgc@iiitdwd.ac.in" className="text-blue-500">cgc@iiitdwd.ac.in</a>
+          Email: <Link href="mailto:cgc@iiitdwd.ac.in" className="text-blue-500">cgc@iiitdwd.ac.in</Link>
           </div>
           <div className="uj">
             <strong className= '  text-[#013365]' style={{fontSize:21}}>CGC, Member Secretary (Placement Lead)</strong><br />
           Mr. Ujwal Doddamani<br />
-          Email: <a href="mailto:cgcoffice@iiitdwd.ac.in" className="text-blue-500">cgcoffice@iiitdwd.ac.in</a> / <a href="mailto:ujwal@iiitdwd.ac.in" className="text-blue-500">ujwal@iiitdwd.ac.in</a>
+          Email: <Link href="mailto:cgcoffice@iiitdwd.ac.in" className="text-blue-500">cgcoffice@iiitdwd.ac.in</Link> / <Link href="mailto:ujwal@iiitdwd.ac.in" className="text-blue-500">ujwal@iiitdwd.ac.in</Link>
           </div>
         </div>
       
@@ -191,43 +192,53 @@ export default function Home() {
         <div className="buttons flex flex-wrap gap-5 mb-4 mt-10 ml-[20%]">
 
           <div style={{ width: '35%' }}>
-            <a href="/Campus_Recruitment_Form_without_internship.docx" download="Campus_Recruitment_Form_without_internship.docx">
+            <Link href="/Campus_Recruitment_Form_without_internship.docx" download="Campus_Recruitment_Form_without_internship.docx">
               <button className="buttonss bg-[#013365] text-white px-4 py-4 rounded w-full whitespace-no-wrap" style={{ fontSize: '14px' }}>
         Campus Recruitment Form (w/o internship)
               </button>
-            </a>
+            </Link>
           </div>
 
           <div style={{ width: '35%' }}>
-            <a href="/Campus_Recruitment_Form_with_internship.docx" download="Campus_Recruitment_Form_with_internship.docx">
+            <Link href="/Campus_Recruitment_Form_with_internship.docx" download="Campus_Recruitment_Form_with_internship.docx">
               <button className="buttonss bg-[#50A5CA] text-white px-4 py-4 rounded w-full  whitespace-no-wrap" style={{ fontSize: '14px' }}>
         Campus Recruitment Form (with internship)
               </button>
-            </a>
+            </Link>
           </div>
 
           <div style={{ width: '35%' }}>
-            <button className="buttonss bg-[#50A5CA] text-white px-4 py-4 rounded w-full  whitespace-no-wrap" style={{ fontSize: '14px' }}>
-      View CGC Committee
-            </button>
-          </div>
-
-          <div style={{ width: '35%' }}>
-            <a href="/brochure.pdf" download="Brochure.pdf">
-              <button className="buttonss bg-[#013365] text-white px-4 py-4 rounded w-full   whitespace-no-wrap" style={{ fontSize: '14px' }}>
-        Download Brochure
+            <Link href="/committee/cgc">
+              <button className="buttonss bg-[#50A5CA] text-white px-4 py-4 rounded w-full  whitespace-no-wrap" style={{ fontSize: '14px' }}>
+                CGC Committee
               </button>
-            </a>
+            </Link>
           </div>
 
+          <div style={{ width: '35%' }}>
+            <Link href="/cgc/student_coordinators">
+              <button className="buttonss bg-[#013365] text-white px-4 py-4 rounded w-full   whitespace-no-wrap" style={{ fontSize: '14px' }}>
+                Student Coordinators Team
+              </button>
+            </Link>
+          </div>
+
+
+
+        </div>
+
+        <div className='mt-6 ml-[20%]'>
+          <Link href="/brochure.pdf" target='_blank' className="text-[#013365] text-lg font-bold after:-translate-y-1/3 after:absolute relative after:content-[url('/icons/linkIcon.svg')]">
+            Brochure
+          </Link>
         </div>
 
 
       </div>
       <div className="text-center  bg-[#f0f0f0] pt-5 pb-5 mt-20">
-    Follow us on <a href="https://www.linkedin.com/company/career-guidance-cell-cgc-iiit-dharwad/" className="text-blue-500 inline-flex items-center">
-          Linked<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0OCA0OCIgd2lkdGg9IjQ4cHgiIGhlaWdodD0iNDhweCI+PHBhdGggZmlsbD0iIzAyODhEMSIgZD0iTTQyLDM3YzAsMi43NjItMi4yMzgsNS01LDVIMTFjLTIuNzYxLDAtNS0yLjIzOC01LTVWMTEgYzAtMi43NjIsMi4yMzktNSw1LTVoMjZjMi43NjIsMCw1LDIuMjM4LDUsNVYzN3oiLz48cGF0aCBmaWxsPSIjRkZGIiBkPSJNMTIgMTlIMTdWMzZIMTJ6TTE0LjQ4NSAxN2gtLjAyOEMxMi45NjUgMTcgMTIgMTUuODg4IDEyIDE0LjQ5OSAxMiAxMy4wOCAxMi45OTUgMTIgMTQuNTE0IDEyYzEuNTIxIDAgMi40NTggMS4wOCAyLjQ4NiAyLjQ5OUMxNyAxNS44ODcgMTYuMDM1IDE3IDE0LjQ4NSAxN3pNMzYgMzZoLTV2LTkuMDk5YzAtMi4xOTgtMS4yMjUtMy42OTgtMy4xOTItMy42OTgtMS41MDEgMC0yLjMxMyAxLjAxMi0yLjcwNyAxLjk5QzI0Ljk1NyAyNS41NDMgMjUgMjYuNTExIDI1IDI3djloLTVWMTloNXYyLjYxNkMyNS43MjEgMjAuNSAyNi44NSAxOSAyOS43MzggMTljMy41NzggMCA2LjI2MSAyLjI1IDYuMjYxIDcuMjc0TDM2IDM2IDM2IDM2eiIvPjwvc3ZnPg==" alt="LinkedIn Icon" className="ml-1" width="25" height="25" />
-        </a> 
+    Follow us on <Link href="https://www.linkedin.com/company/career-guidance-cell-cgc-iiit-dharwad/" className="text-blue-500 inline-flex items-center">
+          Linked<Image src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0OCA0OCIgd2lkdGg9IjQ4cHgiIGhlaWdodD0iNDhweCI+PHBhdGggZmlsbD0iIzAyODhEMSIgZD0iTTQyLDM3YzAsMi43NjItMi4yMzgsNS01LDVIMTFjLTIuNzYxLDAtNS0yLjIzOC01LTVWMTEgYzAtMi43NjIsMi4yMzktNSw1LTVoMjZjMi43NjIsMCw1LDIuMjM4LDUsNVYzN3oiLz48cGF0aCBmaWxsPSIjRkZGIiBkPSJNMTIgMTlIMTdWMzZIMTJ6TTE0LjQ4NSAxN2gtLjAyOEMxMi45NjUgMTcgMTIgMTUuODg4IDEyIDE0LjQ5OSAxMiAxMy4wOCAxMi45OTUgMTIgMTQuNTE0IDEyYzEuNTIxIDAgMi40NTggMS4wOCAyLjQ4NiAyLjQ5OUMxNyAxNS44ODcgMTYuMDM1IDE3IDE0LjQ4NSAxN3pNMzYgMzZoLTV2LTkuMDk5YzAtMi4xOTgtMS4yMjUtMy42OTgtMy4xOTItMy42OTgtMS41MDEgMC0yLjMxMyAxLjAxMi0yLjcwNyAxLjk5QzI0Ljk1NyAyNS41NDMgMjUgMjYuNTExIDI1IDI3djloLTVWMTloNXYyLjYxNkMyNS43MjEgMjAuNSAyNi44NSAxOSAyOS43MzggMTljMy41NzggMCA2LjI2MSAyLjI1IDYuMjYxIDcuMjc0TDM2IDM2IDM2IDM2eiIvPjwvc3ZnPg==" alt="LinkedIn Icon" className="ml-1" width="25" height="25" />
+        </Link> 
     for the latest updates!
       </div>
     </div>

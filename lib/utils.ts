@@ -8,10 +8,10 @@ export function cn(...inputs: ClassValue[]) {
 export function toDateString(date: number) {
   const dateObj = new Date(date);
   return dateObj.toLocaleString('en-GB', {
-    // 'default' causes hydration error if client and server have different regions set
     day: '2-digit',
     month: 'short',
     year: 'numeric',
+    timeZone: 'IST',
   });
 }
 
@@ -24,5 +24,6 @@ export function toDateTimeString(date: number) {
     hour: '2-digit',
     minute: '2-digit',
     hour12: false,
+    timeZone: 'IST',
   });
 }
