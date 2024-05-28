@@ -144,7 +144,7 @@ Admission to the Indian Institute of Information Technology Dharwad is through C
               The fee structure and details can be found
               <a
                 className="text-blue-800 hover:underline"
-                href="https://iiitdwd.ac.in/docs/Fee%202022-23.pdf"
+                href="/docs/fee-2022.pdf"
               >
                 {' '}
                 here.

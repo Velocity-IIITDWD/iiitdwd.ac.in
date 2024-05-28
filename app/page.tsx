@@ -199,7 +199,7 @@ export default function Home() {
                     <p className="text-xl font-semibold mb-4">{item?.text}</p>
                     <p>{item?.aboutEvent}</p>
                     <p className="font-semibold mb-4">
-                      Date- {item.details.startDate}
+                      Date: {item.timestamp}
                     </p>
                   </div>
 
