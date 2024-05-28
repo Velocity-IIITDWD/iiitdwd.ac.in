@@ -8,7 +8,7 @@ import CoreValues from '@/components/about/CoreValues';
 import DirectorBriefProfile from '@/components/about/DirectorBriefProfile';
 import AboutIIIT from '@/components/about/AboutIIIT';
 import ShortCampusVideo from '@/components/about/ShortCampusVideo';
-import mainGateImage from '@/assets/main_gate.jpg';
+import mainGateImage from '@/assets/campus/main_gate.jpg';
 import { Metadata } from 'next';
 
 import './smoothScroll.css';
