@@ -2,7 +2,7 @@ import React from 'react';
 import Card from './Card';
 import { cardData } from '../../data/campus/data';
 import Image from 'next/image';
-import MainBlock from '@/assets/academics/MainBlock.jpg';
+import MainBlock from '@/assets/academics/MBlock.jpg';
 
 const MainContent: React.FC = () => {
   return (
