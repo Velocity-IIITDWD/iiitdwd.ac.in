@@ -31,16 +31,14 @@ const Card: React.FC<CardProps> = ({ title, items, imageUrl, isEven }) => {
             src={imageUrl}
             alt={title}
             layout="fill"
-            objectFit="cover"
-            className="rounded-lg"
+            className="rounded-lg object-cover"
           />
         ) : (
           <Image
             src={imageUrl}
             alt={title}
             layout="fill"
-            objectFit="cover"
-            className="rounded-lg"
+            className="rounded-lg object-cover"
           />
         )}
       </div>

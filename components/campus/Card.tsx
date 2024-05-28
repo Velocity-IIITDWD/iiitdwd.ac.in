@@ -14,7 +14,7 @@ const Card: React.FC<CardProps> = ({ title, href, image }) => {
     <Link href={href} legacyBehavior>
       <div className="group block bg-white overflow-hidden w-full max-w-[350px] my-4 transition-all duration-300 transform hover:scale-105 cursor-pointer">
         <div className="relative w-full h-52">
-          <Image src={image} alt={title} layout="fill" objectFit="cover" />
+          <Image src={image} alt={title} layout="fill" className="object-cover" />
           <div className="absolute inset-0 bg-[#164573] opacity-80 flex flex-col justify-center items-center transition-opacity duration-300 group-hover:opacity-95">
             <div className="text-white text-2xl font-bold mb-2">{title}</div>
             <div className="flex items-center text-white">
