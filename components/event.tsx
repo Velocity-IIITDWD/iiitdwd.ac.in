@@ -82,6 +82,9 @@ function EventPage({ eventId, text, allImage }: ComponentEventProps) {
         <div className="flex transition-transform duration-500 ease-in-out justify-center items-center">
           {allImage.map((str: string) => (
             <Image
+              width={0}
+              height={0}
+              sizes="100%"
               key={str}
               className="slide w-auto max-w-full h-[60vh] block box-border"
               src={str}

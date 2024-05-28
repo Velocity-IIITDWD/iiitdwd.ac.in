@@ -31,6 +31,10 @@ function ComponentEvent({ index }: ComponentEventProps) {
   return (
     <div className=" bg-gray-200 p-12 rounded-xl transition duration-300 shadow hover:bg-dwd-secondary1 hover:text-white cursor-pointer">
       <Image
+        // changed
+        width={0}
+        height={0}
+        sizes="100%"
         className="w-full h-72 object-cover rounded-lg"
         src={eventImageSrc}
         alt="Weekly Events"

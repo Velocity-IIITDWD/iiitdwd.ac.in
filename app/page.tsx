@@ -183,7 +183,7 @@ export default function Home() {
                     Date- {item.details.startDate}
                   </p>
                   <Link
-                    href={`/campus/events/${item?.id + 1}`}
+                    href={`/events/${item?.id + 1}`}
                     className="flex w-fit rounded hover:bg-dwd-primary hover:text-white transition duration-300 border border-dwd-primary py-2 px-4 gap-2"
                   >
                     Read More
