@@ -17,14 +17,14 @@ export default function page() {
             href="/docs/academic_calendar_sem_1.pdf"
             className="rounded bg-dwd-primary md:basis-1/4 basis-full flex items-center justify-center p-3 text-white"
           >
-            Academic Calendar (1st Sem)
+            Academic Calendar (2023 Batch Students)
           </Link>
           <Link
             target="_blank"
             href="/docs/academic_calendar_sem_3_5.pdf"
             className="rounded bg-dwd-primary md:basis-1/4 basis-full flex items-center justify-center p-3 text-white"
           >
-            Academic Calendar (3rd & 5th Sem)
+            Academic Calendar
           </Link>
           <Link
             href="/faculty"
