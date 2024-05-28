@@ -28,7 +28,7 @@ function ComponentEvent({ index }: ComponentEventProps) {
   const eventImageSrc = events[index].href;
   const link: string = '/events/' + events[index].id;
   return (
-    <div className="  bg-gray-200 p-6 rounded-xl transition duration-300 shadow hover:bg-gray-300 hover:text-white cursor-pointer">
+    <div className="  bg-gray-200 p-12 rounded-xl transition duration-300 shadow hover:bg-gray-300 hover:text-white cursor-pointer">
       <Image
         // changed
         width={0}

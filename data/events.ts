@@ -81,7 +81,7 @@ let events: eventInf[] = [
     id: 'Prof-Vittal-Rao',
     href: '/images/vittalrao.jpg',
     text: 'Special Lecture Series by Prof R Vittal Rao',
-    timestamp: '17-02-2023',
+    timestamp: '13-08-2021',
     allImage: ['/images/vittalrao.jpg'],
     details: {
       startDate: 'Start Date : 13-08-2021',
@@ -198,7 +198,7 @@ let events: eventInf[] = [
     id: 'woman-day',
     href: '/images/W1.jpeg',
     text: 'International Womens Day 2022',
-    timestamp: '05-06-2022',
+    timestamp: '08-03-2022',
     allImage: ['/images/W1.jpeg', '/images/W2.jpeg'],
     details: {
       startDate: ' Date : 08-03-2022',
@@ -221,7 +221,7 @@ let events: eventInf[] = [
     id: 'yoga-day',
     href: '/images/yoga1.jpg',
     text: '9th International Day of Yoga',
-    timestamp: '05-06-2022',
+    timestamp: '21-06-2023',
     allImage: ['/images/yoga1.jpg', '/images/yoga2.jpg'],
     details: {
       startDate: ' Date : 21-06-2023',
@@ -244,7 +244,7 @@ let events: eventInf[] = [
     id: 'fit-india-freedom-run-2.0',
     href: '/images/fit01.jpg',
     text: 'Fit Indian Freedom Run 2.0',
-    timestamp: '05-06-2022',
+    timestamp: '24-09-2021',
     allImage: ['/images/fit01.jpg', '/images/fit02.jpg'],
     details: {
       startDate: ' Date : 24-09-2021',
@@ -267,7 +267,7 @@ let events: eventInf[] = [
     id: 'faculty-development-program',
     href: '/images/fdp.jpg',
     text: 'Faculty Development Program on Smart Cities 2021',
-    timestamp: '05-06-2022',
+    timestamp: '08-11-2021',
     allImage: ['/images/fdp.jpg'],
     details: {
       startDate: 'Start Date : 08-11-2021',
@@ -290,7 +290,7 @@ let events: eventInf[] = [
     id: 'matribhasha-diwas',
     href: '/images/diwas.jpg',
     text: 'Matribhasha Diwas',
-    timestamp: '05-06-2022',
+    timestamp: '23-02-2021',
     allImage: ['/images/diwas.jpg'],
     details: {
       startDate: 'Date : 23-02-2021',
@@ -313,7 +313,7 @@ let events: eventInf[] = [
     id: 'nr-murthy-visit',
     href: '/images/NR_murthy.jpg',
     text: 'N R Narayana Murthy Visit',
-    timestamp: '05-06-2022',
+    timestamp: '03-02-2018',
     allImage: ['/images/NR_murthy.jpg'],
     details: {
       startDate: 'Date : 03-02-2018',
@@ -361,7 +361,7 @@ let events: eventInf[] = [
     id: 'chairperson-visit',
     href: '/images/Chairperson_Visit.jpg',
     text: 'Chairperson Visit',
-    timestamp: '05-06-2022',
+    timestamp: '22-03-2018',
     allImage: ['/images/Chairperson_Visit.jpg'],
     details: {
       startDate: 'Date : 22-03-2018',
