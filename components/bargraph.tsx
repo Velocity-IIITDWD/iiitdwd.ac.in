@@ -67,18 +67,17 @@ const BarGraph: React.FC<BarGraphProps> = ({ labels, datasets }) => {
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsIntersecting(true);
-          observer.unobserve(barGraphRef.current!);
+          observer.unobserve(entry.target);
         }
       },
       { threshold: 0.1 }
     );
 
-    observer.observe(barGraphRef.current);
+    const currentRef = barGraphRef.current;
+    observer.observe(currentRef);
 
     return () => {
-      if (barGraphRef.current) {
-        observer.unobserve(barGraphRef.current);
-      }
+      observer.unobserve(currentRef);
     };
   }, [barGraphRef]);
 
@@ -88,7 +87,7 @@ const BarGraph: React.FC<BarGraphProps> = ({ labels, datasets }) => {
   };
 
   const options = {
-    indexAxis: 'y' as 'y', // Change 'string' to 'y' or 'x' if needed
+    indexAxis: 'y' as const, // Ensure the type is 'y' or 'x' explicitly
     scales: {
       x: {
         beginAtZero: true
