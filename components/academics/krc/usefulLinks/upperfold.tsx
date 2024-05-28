@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import Image from 'next/image';
+import krcImage from '@/assets/krc/krc.jpg'; // Adjust the path to where the image is stored
 
 interface UpperFoldProps {
   paragraphText: string;
@@ -10,7 +11,7 @@ const UpperFold: FC<UpperFoldProps> = ({ paragraphText }) => {
     <div className="relative h-[70vh] lg:h-[80vh] overflow-x-hidden">
       {/* Image with a negative z-index to ensure it is below the header */}
       <Image
-        src="/krc/krc.jpg" // Ensure this image is correctly located in your public folder
+        src={krcImage} // Use the imported image
         alt="Library Background"
         layout="fill"
         objectFit="cover"

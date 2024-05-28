@@ -1,10 +1,11 @@
 import React from 'react';
 import Image from 'next/image';
+import { StaticImageData } from 'next/image'; // Import StaticImageData
 
 interface CardProps {
   title: string;
   items: string[];
-  imageUrl: string;
+  imageUrl: string | StaticImageData; // Use StaticImageData here
   isEven: boolean;
 }
 
@@ -24,13 +25,24 @@ const Card: React.FC<CardProps> = ({ title, items, imageUrl, isEven }) => {
         className="relative w-full lg:w-1/2 lg:mt-4"
         style={{ minHeight: '20rem', maxHeight: '20rem' }}
       >
-        <Image
-          src={imageUrl}
-          alt={title}
-          layout="fill"
-          objectFit="cover"
-          className="rounded-lg"
-        />
+        {/* Check if imageUrl is a string or StaticImageData */}
+        {typeof imageUrl === 'string' ? (
+          <Image
+            src={imageUrl}
+            alt={title}
+            layout="fill"
+            objectFit="cover"
+            className="rounded-lg"
+          />
+        ) : (
+          <Image
+            src={imageUrl}
+            alt={title}
+            layout="fill"
+            objectFit="cover"
+            className="rounded-lg"
+          />
+        )}
       </div>
       <div
         className={`w-full lg:w-1/2 pl-6 pr-6 mt-6 ${

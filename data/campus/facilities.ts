@@ -1,8 +1,16 @@
-// data.ts
+// Import StaticImageData type
+import { StaticImageData } from 'next/image';
+
+import eblockImage from '@/assets/campus/eblock.jpg';
+import piblockImage from '@/assets/campus/piblock.jpg';
+import boyshostelImage from '@/assets/campus/boyshostel.jpg';
+import girlshostelImage from '@/assets/campus/girlshostel.jpg';
+import healthblockImage from '@/assets/campus/healthblock.jpg';
+
 export interface Facility {
   title: string;
   items: string[];
-  imageUrl: string; // Add this line
+  imageUrl: string | StaticImageData; // Update the type here
 }
 
 export const facilities: Facility[] = [
@@ -16,7 +24,7 @@ export const facilities: Facility[] = [
       'The e Block has laboratories that are established with the latest computing equipment for hands-on learning.',
       'A well-stocked textbook library in the e Block provides a 24/7 automated self-service facility for students to borrow and return books at any time.',
     ],
-    imageUrl: '/campus/eblock.jpg', // Add the appropriate image URL
+    imageUrl: eblockImage, // Use the imported image
   },
   {
     title: 'Main Block',
@@ -25,7 +33,7 @@ export const facilities: Facility[] = [
       'It also houses the Multi-Function Hall, called the m Block, that can be converted into an auditorium or an indoor basketball court as needed.',
       'The π Block also has a Knowledge Resource Center and an incubation space.',
     ],
-    imageUrl: '/campus/piblock.jpg', // Add the appropriate image URL
+    imageUrl: piblockImage, // Use the imported image
   },
   {
     title: "Boys' Hostel",
@@ -35,7 +43,7 @@ export const facilities: Facility[] = [
       'Both the Dining Hall and the Common Room are of double height to give them excellent light and ventilation apart from a grand look.',
       'All rooms will be equipped with new furniture.',
     ],
-    imageUrl: '/campus/boyshostel.jpg', // Add the appropriate image URL
+    imageUrl: boyshostelImage, // Use the imported image
   },
   {
     title: "Girls' Hostel",
@@ -45,7 +53,7 @@ export const facilities: Facility[] = [
       'Both the Dining Hall and the Common Room are of double height to give them excellent light and ventilation apart from a grand look.',
       'All rooms will be equipped with new furniture.',
     ],
-    imageUrl: '/campus/girlshostel.jpg', // Add the appropriate image URL
+    imageUrl: girlshostelImage, // Use the imported image
   },
   {
     title: 'Health and Fitness Block',
@@ -54,6 +62,6 @@ export const facilities: Facility[] = [
       'The h Block can be used for small gatherings, music, and digital screening.',
       'The canteen has both indoor and outdoor seating.',
     ],
-    imageUrl: '/campus/healthblock.jpg', // Add the appropriate image URL
+    imageUrl: healthblockImage, // Use the imported image
   },
 ];
