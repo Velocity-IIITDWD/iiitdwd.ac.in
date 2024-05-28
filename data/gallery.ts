@@ -3,7 +3,7 @@ import EBlock from '@/assets/gallery/E_Block.jpg';
 import GBlock from '@/assets/gallery/G_Block.jpg';
 import BBlock from '@/assets/gallery/B_Block.jpg';
 import Library from '@/assets/gallery/Library.jpg';
-import PiBlock from '@/assets/gallery/PiBLock.jpg';
+import PiBlock from '@/assets/gallery/PiBlock.jpg';
 import HBlock from '@/assets/gallery/H_Block.jpg';
 import { StaticImageData } from 'next/image';
 
