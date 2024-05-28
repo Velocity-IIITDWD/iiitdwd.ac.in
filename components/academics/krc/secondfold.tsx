@@ -1,10 +1,11 @@
 import Image from 'next/image';
+import kioskImage from '@/assets/krc/kiosk.webp'; // Adjust the path to where the image is stored
 
 const SecondFold = () => {
   return (
     <div className="relative h-[50vh] md:h-[60vh] lg:h-[80vh] min-h-[50vh] overflow-x-hidden">
       <Image
-        src="/krc/kiosk.webp" // Ensure you have this image in your public/images directory
+        src={kioskImage} // Use the imported image
         alt="Library Background"
         layout="fill"
         objectFit="cover"

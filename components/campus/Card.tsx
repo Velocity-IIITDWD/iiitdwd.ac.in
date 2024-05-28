@@ -1,11 +1,12 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { StaticImageData } from 'next/image'; // Import StaticImageData
 
 interface CardProps {
   title: string;
   href: string;
-  image: string;
+  image: string | StaticImageData;
 }
 
 const Card: React.FC<CardProps> = ({ title, href, image }) => {
