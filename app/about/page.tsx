@@ -42,6 +42,7 @@ const AboutPage = () => {
         text2={about.directorsMessage.text2}
         text3={about.directorsMessage.text3}
       />
+      <div id="director-brief-profile" />
       <DirectorBriefProfile
         directorName={about.director.title}
         briefProfile={about.briefProfile}

@@ -47,7 +47,7 @@ const DirectorsMessage = ({
         <br />
         <Link
           className="self-start text-dwd-primary hover:cursor-pointer"
-          href={'/faculty'}
+          href={'/about#director-brief-profile'}
         >
           <span className="md:text-lg font-bold">{director.title}</span>
           <br />
