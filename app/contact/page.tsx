@@ -45,7 +45,7 @@ const ContactPage: React.FC = () => {
     <div className="flex flex-col mt-4 space-y-4">
       <div className="relative">
         <Image
-          src="/main_building.JPG"
+          src="/images/main_building.jpg"
           alt="Contact Banner"
           width={1920}
           height={1080}
