@@ -34,7 +34,7 @@ let aboutData: About = {
   director: {
     content: [],
     title: 'S. R. Mahadeva Prasanna',
-    imageURL: '/director.jpg',
+    imageURL: '/images/s_r_mahadeva_prasanna.jpg',
   },
   directorsMessage: {
     heading:
@@ -87,7 +87,7 @@ let aboutData: About = {
   },
   mainGate: {
     name: 'MainGate image',
-    imageURL: '/Campus/main_gate.jpg',
+    imageURL: '/images/main_gate.jpg',
   },
 };
 
