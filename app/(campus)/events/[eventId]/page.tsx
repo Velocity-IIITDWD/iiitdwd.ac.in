@@ -12,7 +12,7 @@ export default function EventDetails({
   // let eveId: Number = params.eventId;
 
   return (
-    <div>
+    <div >
       <DynamicComponentWithNoSSR eventId={params.eventId} />
     </div>
   );
