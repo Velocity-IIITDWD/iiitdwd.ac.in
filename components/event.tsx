@@ -2,20 +2,21 @@
 import { events } from '@/data/events';
 import { eventInf } from '@/data/events';
 import React from 'react';
-import NotFound404 from '@/app/not-found'
+import NotFound404 from '@/app/not-found';
 import Image from 'next/image';
 interface eventInformation {
-  id: number;
+  id: string;
   href: string;
   text: string;
   timestamp: string;
   allImage: string[];
 }
 interface DynamicComponentProps {
-  eventId: Number;
+  eventId: string;
 }
 export default function EventDetails({ eventId }: DynamicComponentProps) {
-  const EventId: Number = eventId;
+  const EventId: string = eventId;
+
   const theEvent: eventInf | undefined = events.find(
     (event) => event.id == EventId
   );
@@ -30,21 +31,52 @@ export default function EventDetails({ eventId }: DynamicComponentProps) {
 
   return (
     <EventPage
-      eventId={theEvent.id}
+      id={theEvent.id}
       text={theEvent.text}
+      details={theEvent.details}
+      venue={theEvent.venue}
+      organiser={theEvent.organiser}
+      aboutEvent={theEvent.aboutEvent}
       allImage={theEvent.allImage}
+      href={theEvent.href}
+      timestamp={theEvent.timestamp}
+      // eventId={theEvent.id}
+      // text={theEvent.text}
+      // allImage={theEvent.allImage}
     />
   );
 }
-
+interface event {
+  id: string;
+  href: string;
+  text: string;
+  timestamp: string;
+  allImage: string[];
+  details: {
+    startDate: string;
+    endDate: string;
+    ticketPrice: string;
+  };
+  venue: {
+    place: string;
+    street: string;
+    city: string;
+  };
+  organiser: {
+    name: string;
+    designation: string;
+    contact: string;
+  };
+  aboutEvent: string;
+}
 interface ComponentEventProps {
-  eventId: number;
+  eventId: string;
   text: string;
   allImage: string[];
 }
 
-function EventPage({ eventId, text, allImage }: ComponentEventProps) {
-  eventId--;
+function EventPage(theevent: event) {
+  // eventId--;
 
   let slideIndex = 0;
 
@@ -65,6 +97,7 @@ function EventPage({ eventId, text, allImage }: ComponentEventProps) {
       }
     });
   };
+
   const plusSlides = (n: number) => {
     slideIndex += n;
     showSlides(slideIndex);
@@ -76,12 +109,15 @@ function EventPage({ eventId, text, allImage }: ComponentEventProps) {
   return (
     <div>
       <h1 className="text-3xl text-dwd-primary mx-9 text-center mt-12 mb-0 font-roboto">
-        {text}
+        {theevent.text}
       </h1>
       <div className="relative max-w-full mx-auto overflow-hidden rounded-lg shadow-lg mt-12">
         <div className="flex transition-transform duration-500 ease-in-out justify-center items-center">
-          {allImage.map((str: string) => (
-            <img
+          {theevent.allImage.map((str: string) => (
+            <Image
+              width={0}
+              height={0}
+              sizes="100%"
               key={str}
               className="slide w-auto max-w-full h-[60vh] block box-border"
               src={str}
@@ -106,27 +142,28 @@ function EventPage({ eventId, text, allImage }: ComponentEventProps) {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div className="bg-gray-200 p-4 rounded-lg shadow-md">
             <h2 className="text-xl font-semibold mb-2">Details</h2>
-            <p>Start date : {events[eventId].details.startDate}</p>
-            <p>End date : {events[eventId].details.endDate}</p>
-            <p>Ticket price : {events[eventId].details.ticketPrice} </p>
+
+            <p>Start date : {theevent.details.startDate}</p>
+            <p>End date : {theevent.details.endDate}</p>
+            <p>Ticket price : {theevent.details.ticketPrice} </p>
           </div>
           <div className="bg-gray-200 p-4 rounded-lg shadow-md">
             <h2 className="text-xl font-semibold mb-2">Organiser</h2>
-            <p>{events[eventId].organiser.name}</p>
-            <p>{events[eventId].organiser.designation}</p>
-            <p>{events[eventId].organiser.contact}</p>
+            <p>{theevent.organiser.name}</p>
+            <p>{theevent.organiser.designation}</p>
+            <p>{theevent.organiser.contact}</p>
           </div>
           <div className="bg-gray-200 p-4 rounded-lg shadow-md">
             <h2 className="text-xl font-semibold mb-2">Venue</h2>
-            <p>Place : {events[eventId].venue.place}</p>
-            <p>Street : {events[eventId].venue.street}</p>
-            <p>City : {events[eventId].venue.city}</p>
+            <p>Place : {theevent.venue.place}</p>
+            <p>Street : {theevent.venue.street}</p>
+            <p>City : {theevent.venue.city}</p>
           </div>
         </div>
 
         <div className="bg-white p-4 rounded-lg shadow-md mt-6">
           <h2 className="text-xl font-semibold mb-2">Content Section</h2>
-          <p>{events[eventId].aboutEvent}</p>
+          <p>{theevent.aboutEvent}</p>
         </div>
       </div>
     </div>

@@ -57,9 +57,9 @@ const navmenuItems: NavmenuItem[] = [
         width: 250,
         items: [
           { text: 'Introduction', href: '/about#introduction' },
-          { text: "Director's Message", href: '/about#directors-message' },
+          { text: 'Director\'s Message', href: '/about#directors-message' },
           { text: 'Our Family', href: '/about#family' },
-          { text: 'Vision', href: '/about#vision' },
+          { text: 'Vision, Missions & Core Values', href: '/about#vision' },
         ],
       },
     ],
@@ -136,10 +136,10 @@ const navmenuItems: NavmenuItem[] = [
 function onNavChange() {
   setTimeout(() => {
     const triggers = document.querySelectorAll(
-      ".submenu-trigger[data-state='open']"
+      '.submenu-trigger[data-state=\'open\']'
     );
     const dropdowns = document.querySelectorAll(
-      ".nav-viewport[data-state='open']"
+      '.nav-viewport[data-state=\'open\']'
     );
 
     if (!triggers.length || !dropdowns.length) return;
@@ -162,8 +162,8 @@ function Header() {
 
   return (
     <header className="flex flex-col w-full h-fit">
-      <div className=" hidden md:flex flex-col lg:flex-row items-center justify-center bg-dwd-secondary1 px-2  lg:gap-4">
-        {/* Pushes announcement to center */}
+      {/* <div className=" hidden md:flex flex-col lg:flex-row items-center justify-center bg-dwd-secondary1 px-2  lg:gap-4">
+        Pushes announcement to center
         <div className="hidden lg:block w-1/5"></div>
         {latestAnnouncement && (
           <div className="flex justify-end w-full lg:w-2/5 overflow-hidden">
@@ -186,7 +186,6 @@ function Header() {
           </div>
         )}
         <div className="flex gap-2 lg:w-1/5 text-center lg:text-left text-xs *:odd:font-bold">
-          {/* :TODO */}
           <Link className="whitespace-nowrap" href="/nirf">
             NIRF
           </Link>{' '}
@@ -210,7 +209,7 @@ function Header() {
           </Link>
         </div>
         <div className="hidden lg:block w-1/5"></div>
-      </div>
+      </div> */}
       <div className="flex flex-row lg:flex-row items-center justify-start border-b border-dwd-secondary1 relative h-16 lg:h-24">
         <Link href="/" className="block h-full">
           {/* Big screen image */}

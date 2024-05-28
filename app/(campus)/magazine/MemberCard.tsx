@@ -1,4 +1,4 @@
-import { memberStructure } from "@/data/magazine"
+import { memberStructure } from '@/data/magazine'
 
 export default function MemberCard(member: memberStructure) {
   return (

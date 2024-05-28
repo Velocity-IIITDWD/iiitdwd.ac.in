@@ -82,19 +82,9 @@ const ContactPage: React.FC = () => {
           </div>
           <div>
             <h3 className="text-xl font-bold">Phone</h3>
-            <p>+91-836-2212839, +91-836-2212840</p>
+            <p>+91 08362-250879</p>
+            <p>+91 94497-32959</p>
           </div>
-          <div>
-            <h3 className="text-xl font-bold">Fax</h3>
-            <p>+91-836-2212841</p>
-          </div>
-          <Link
-            className="font-medium w-fit text-lg mt-4 border p-2 rounded-md flex gap-4 items-center justify-center "
-            href={'/contact_info'}
-          >
-            More Contact Information
-            <ExternalLink />
-          </Link>
         </div>
       </div>
 
@@ -107,35 +97,35 @@ const ContactPage: React.FC = () => {
             <ul className="list-none space-y-4">
               <li className="p-2 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
                 <strong>General Information:</strong>{' '}
-                <a href="mailto:info@iiitd.ac.in" className="text-blue-500">
+                <a href="mailto:contact@iiitdwd.ac.in" className="text-blue-500">
                   contact@iiitdwd.ac.in
                 </a>
               </li>
               <li className="p-2 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
                 <strong>Academic:</strong>{' '}
                 <a
-                  href="mailto:admin-academic@iiitd.ac.in"
+                  href="mailto:contact@iiitdwd.ac.in"
                   className="text-blue-500"
                 >
-                  admin-academic@iiitd.ac.in
+                  contact@iiitdwd.ac.in
                 </a>
               </li>
               <li className="p-2 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                <strong>Placement:</strong>{' '}
+                <strong>Placement/Internship:</strong>{' '}
                 <a
-                  href="mailto:admin-placement@iiitd.ac.in"
+                  href="mailto:cgc@iiitdwd.ac.in"
                   className="text-blue-500"
                 >
-                  admin-placement@iiitd.ac.in
+                  cgc@iiitdwd.ac.in
                 </a>
               </li>
               <li className="p-2 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                <strong>Website:</strong>{' '}
+                <strong>CGC Office:</strong>{' '}
                 <a
-                  href="mailto:admin-web@iiitd.ac.in"
+                  href="mailto:cgcoffice@iiitdwd.ac.in                  "
                   className="text-blue-500"
                 >
-                  admin-web@iiitd.ac.in
+                  cgcoffice@iiitdwd.ac.in
                 </a>
               </li>
               <li>
@@ -144,20 +134,20 @@ const ContactPage: React.FC = () => {
                   <li className="p-2 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
                     <strong>For UG:</strong>{' '}
                     <a
-                      href="mailto:admin-btech@iiitd.ac.in"
+                      href="mailto:contact@iiitdwd.ac.in"
                       className="text-blue-500"
                     >
-                      admin-btech@iiitd.ac.in
+                      contact@iiitdwd.ac.in
                     </a>
                   </li>
 
                   <li className="p-2 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
                     <strong>For Ph.D.:</strong>{' '}
                     <a
-                      href="mailto:admin-phd@iiitd.ac.in"
+                      href="mailto:contact@iiitdwd.ac.in"
                       className="text-blue-500"
                     >
-                      admin-phd@iiitd.ac.in
+                      contact@iiitdwd.ac.in
                     </a>
                   </li>
                 </ul>

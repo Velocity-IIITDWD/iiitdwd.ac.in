@@ -35,7 +35,7 @@ export default function Home() {
                 width={0}
                 height={0}
                 sizes="100%"
-                className="md:w-auto w-full h-auto md:h-full relative object-cover object-center"
+                className="md:w-[80%] w-full h-[80%] md:h-full relative object-cover object-top"
               />
 
               <div className="absolute bottom-4 left-1/2 w-fit max-w-full -translate-x-1/2 bg-slate-900/40 backdrop-blur p-2 rounded text-white">
@@ -183,7 +183,7 @@ export default function Home() {
                     Date- {item.details.startDate}
                   </p>
                   <Link
-                    href={`/campus/events/${item?.id + 1}`}
+                    href={`/events/${item?.id}`}
                     className="flex w-fit rounded hover:bg-dwd-primary hover:text-white transition duration-300 border border-dwd-primary py-2 px-4 gap-2"
                   >
                     Read More

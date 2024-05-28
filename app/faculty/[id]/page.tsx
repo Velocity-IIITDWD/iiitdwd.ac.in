@@ -1,9 +1,10 @@
-"use client"
+'use client'
 import { useRouter } from 'next/router';
 import { FC, useState } from 'react';
 import { ProfileProps } from '@/data/faculty_profile';
 import '@/app/globals.css';
 import Image from 'next/image';
+import Link from 'next/link';
 import {
   CircleUser,
   GraduationCap,
@@ -70,12 +71,12 @@ const Profile = (params: pp) => {
             {profile.content.head.name}
           </div>
           <div className="bg-dwd-primary flex justify-center  px-2 py-2 rounded">
-            <a
+            <Link
               href={profile.content.head.profile_pdf}
               className="align-middle bg-dwd-primary flex justify-center text-background rounded"
             >
               View Profile
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -83,7 +84,7 @@ const Profile = (params: pp) => {
           <div className="flex flex-col item-centerflex-none h-auto w-full md:w-1/4 lg:w-1/4 xl:w-1/4 2xl:w-1/4 bg-dwd-primary text-background px-12 py-12 rounded-lg">
             <div className="flex flex-col item-center">
               <div className="content-center flex flex-col item-center">
-                <img
+                <Image
                   src={profile.content.card.photo}
                   alt={profile.content.head.name}
                   className="object-srink-down"
@@ -126,19 +127,19 @@ const Profile = (params: pp) => {
             </div>
             <div>
               { areaofinterest_array.length ? (
-              <>
-                <div className="flex flex-col  py-20">
-                  <div className="flex flex-row  gap-2 font-bold text-xl border-b-2 border-black">
-                    <GraduationCap />
-                    <span>Area of Interest</span>
+                <>
+                  <div className="flex flex-col  py-20">
+                    <div className="flex flex-row  gap-2 font-bold text-xl border-b-2 border-black">
+                      <GraduationCap />
+                      <span>Area of Interest</span>
+                    </div>
+                    <div>
+                      <ul className="list-disc pl-10 py-4">
+                        {areaofinterest_array}
+                      </ul>
+                    </div>
                   </div>
-                  <div>
-                    <ul className="list-disc pl-10 py-4">
-                      {areaofinterest_array}
-                    </ul>
-                  </div>
-                </div>
-              </>
+                </>
               ) : (<div></div>)}
             </div>
           </div>

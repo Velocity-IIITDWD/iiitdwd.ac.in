@@ -37,7 +37,9 @@ const AboutPage = () => {
       <DirectorsMessage
         heading={about.directorsMessage.heading}
         director={about.director}
-        text={about.directorsMessage.text}
+        text1={about.directorsMessage.text1}
+        text2={about.directorsMessage.text2}
+        text3={about.directorsMessage.text3}
       />
       <DirectorBriefProfile
         directorName={about.director.title}

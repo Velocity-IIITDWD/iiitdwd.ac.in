@@ -6,9 +6,9 @@ export default function ProfileCard({ content, imageURL, title }: Profile) {
     <div className="flex flex-col rounded-md overflow-hidden shadow-[0_3px_10px_rgb(0,0,0,0.2)] hover:shadow-[0_1px_2px_rgb(0,0,0,0.2)]">
       <div className="relative aspect-square bg-gradient-to-b from-white to-zinc-100">
         <Image
-          src={imageURL || '/profile/blank-profile-square.png'}
+          src={imageURL || '/images/blank_profile_square.png'}
           fill={true}
-          objectFit="contain"
+          className="object-contain"
           alt={title}
         />
       </div>
