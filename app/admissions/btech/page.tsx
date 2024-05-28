@@ -112,7 +112,7 @@ export default function Page() {
                           <p>{GenderQuota.obc_ncl_pwd}</p>
                           <p>{GenderQuota.total}</p>
                           <p className='row-span-2'>{StateQuota.seatCapacity}</p>
-                          <p className='row-span-2'>{GenderQuota.total}</p>
+                          <p className='row-span-2'>{StateQuota.femaleSupernumerary}</p>
                         </Fragment>
                       )
                     }
