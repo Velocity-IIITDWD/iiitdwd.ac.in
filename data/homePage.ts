@@ -40,19 +40,19 @@ export const images: MainCarouselImage[] = [
 
 export const ProgramCardDetails: ProgramCards[] = [
   {
-    image: '/cse.jpg',
+    image: '/cse_program.jpg',
     link: '/academics/departments/cse',
     Header1: 'Computer Science and Engineering',
     Header2: 'B-Tech (CSE)',
   },
   {
-    image: '/dsai.jpg',
+    image: '/dsai_program.jpg',
     link: '/academics/departments/dsai',
     Header1: 'Data Science and Artificial Intelligence',
     Header2: 'B-Tech (DSAI)',
   },
   {
-    image: '/ece.jpg',
+    image: '/ece_program.jpg',
     link: '/academics/departments/ece',
     Header1: 'Electronics and Communications Engineering',
     Header2: 'B-Tech (ECE)',
