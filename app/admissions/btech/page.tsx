@@ -15,7 +15,7 @@ export default function Page() {
         width={1024}
         height={720}
         className="self-center mt-2"
-        src="/banner-admission-supernumerary.jpg"
+        src="/images/banner_admission_supernumerary.jpg"
       />
       <p className="text-lg font-bold text-dwd-primary">Seat matrix</p>
       <div className="text-center grid grid-cols-19 border-2 overflow-auto border-dwd-secondary1 rounded">
