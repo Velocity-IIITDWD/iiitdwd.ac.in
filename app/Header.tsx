@@ -127,7 +127,6 @@ const navmenuItems: NavmenuItem[] = [
     ],
   },
   { text: 'Placements', href: '/placements' },
-  { text: 'Tenders', href: '/tenders' },
   { text: 'Careers', href: '/careers' },
   { text: 'Contact Us', href: '/contact' },
 ];
