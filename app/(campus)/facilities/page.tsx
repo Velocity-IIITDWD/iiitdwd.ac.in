@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import { facilities } from '../../../data/campus/facilities';
 import Card from '../../../components/campus/facilities/Card';
+import { Metadata } from 'next';
 
 const FacilitiesPage: React.FC = () => {
   return (
@@ -28,3 +29,7 @@ const FacilitiesPage: React.FC = () => {
 };
 
 export default FacilitiesPage;
+
+export const metadata: Metadata = {
+  title: 'Facilities',
+};

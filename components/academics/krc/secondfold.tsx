@@ -8,9 +8,8 @@ const SecondFold = () => {
         src={kioskImage} // Use the imported image
         alt="Library Background"
         layout="fill"
-        objectFit="cover"
         quality={100}
-        className="z-0"
+        className="z-0 object-cover"
       />
       <div className="absolute inset-0 bg-[#04091E] opacity-70 z-10"></div>
       <div className="absolute inset-0 flex justify-center items-center text-white z-20">
@@ -18,7 +17,7 @@ const SecondFold = () => {
           <div className="hidden lg:grid lg:grid-cols-2 lg:gap-4">
             <div className="flex flex-col justify-center items-center text-center p-4 max-w-[90%] md:max-w-[80%] mx-auto">
               <p
-                className="text-base lg:text-xl lg:text-base"
+                className="text-base lg:text-base"
                 style={{
                   fontSize: '16px',
                   letterSpacing: '1px',
@@ -32,7 +31,7 @@ const SecondFold = () => {
             </div>
             <div className="flex flex-col justify-center items-center text-center p-4 max-w-[90%] md:max-w-[80%] mx-auto">
               <p
-                className="text-base lg:text-xl lg:text-base"
+                className="text-base lg:text-base"
                 style={{
                   fontSize: '16px',
                   letterSpacing: '1px',
@@ -46,7 +45,7 @@ const SecondFold = () => {
             </div>
             <div className="flex flex-col justify-center items-center text-center p-4 max-w-[90%] md:max-w-[80%] mx-auto">
               <p
-                className="text-base lg:text-xl lg:text-base"
+                className="text-base lg:text-base"
                 style={{
                   fontSize: '16px',
                   letterSpacing: '1px',
@@ -59,7 +58,7 @@ const SecondFold = () => {
             </div>
             <div className="flex flex-col justify-center items-center text-center p-4 max-w-[90%] md:max-w-[80%] mx-auto">
               <p
-                className="text-base lg:text-xl lg:text-base"
+                className="text-base lg:text-base"
                 style={{
                   fontSize: '16px',
                   letterSpacing: '1px',

@@ -5,6 +5,7 @@ import Issues from './Issues';
 import { about, facultyAdvisors, teams } from '@/data/magazine'
 import MemberCard from './MemberCard';
 import { Fragment } from 'react';
+import { Metadata } from 'next';
 
 export default function Page() {
   return (
@@ -56,3 +57,7 @@ export default function Page() {
     </div>
   );
 }
+
+export const metadata: Metadata = {
+  title: 'Magazine',
+};

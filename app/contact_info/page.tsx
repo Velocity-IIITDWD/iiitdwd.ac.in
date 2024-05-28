@@ -1,5 +1,6 @@
 import ContactTable from '@/components/contactInfo/ContactTable';
 import { contactCategories, contacts } from '@/data/contactInfo';
+import { Metadata } from 'next';
 const ContactInfo = () => {
   return (
     <div className="w-full flex justify-center items-center flex-col p-2">
@@ -15,3 +16,7 @@ const ContactInfo = () => {
 };
 
 export default ContactInfo;
+
+export const metadata: Metadata = {
+  title: 'Contact Info',
+};

@@ -1,4 +1,5 @@
 import { events } from '@/data/events';
+import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 // import { handleClientScriptLoad } from "next/script";
@@ -55,3 +56,7 @@ function ComponentEvent({ index }: ComponentEventProps) {
     </div>
   );
 }
+
+export const metadata: Metadata = {
+  title: 'Events',
+};
