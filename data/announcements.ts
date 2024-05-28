@@ -5,19 +5,19 @@ export type Announcement = {
 
 export const announcements: Announcement[] = [
   {
-    link: '/HomePage/Ph.D_and_M.Tech-Research_Aug24_Admission_NOtification.pdf',
+    link: '/docs/Ph.D_and_M.Tech-Research_Aug24_Admission_NOtification.pdf',
     text: 'Admission to Ph.D. and M. Tech. (Research), August 2024',
   },
   {
-    link: '/HomePage/AICTE_PROGRAM.pdf',
+    link: '/docs/AICTE_PROGRAM.pdf',
     text: 'IIIT Dharwad rolling out AICTE-Quality Improvement PG Certificate Program in Cybersecurity!',
   },
   {
-    link: '/HomePage/Brochure.pdf',
+    link: '/docs/Brochure.pdf',
     text: 'One Day Workshop on Fractal Academics on June 15, 2024',
   },
   {
-    link: '/HomePage/Cancellation_Wall_Partition.pdf',
+    link: '/docs/Cancellation_Wall_Partition.pdf',
     text: 'Cancellation of Tender - "Providing partition Wall, Doors and other Civil Works at g-block"- IIIT Dharwad Campus',
   },
   {
@@ -29,7 +29,7 @@ export const announcements: Announcement[] = [
     text: 'Notice Inviting Tender for Providing, Supplying and Installing Furnitures at IIIT Dharwad',
   },
   {
-    link: '/SRMP-ACMTMM-Jnl.pdf',
+    link: '/docs/SRMP-ACMTMM-Jnl.pdf',
     text: 'Journal article co-authored by Prof. Prasanna titled "Exploration of Speech and Music Information for Movie Genre Classification" gets accepted for publication in ACM Transactions on Multimedia Computing, Communications and Applications. Happy Reading!',
   },
 ];

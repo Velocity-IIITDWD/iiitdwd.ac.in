@@ -1,35 +1,44 @@
+import MBlock from '@/assets/gallery/M_Block.jpg';
+import EBlock from '@/assets/gallery/E_Block.jpg';
+import GBlock from '@/assets/gallery/G_Block.jpg';
+import BBlock from '@/assets/gallery/B_Block.jpg';
+import Library from '@/assets/gallery/Library.jpg';
+import PiBlock from '@/assets/gallery/PiBLock.jpg';
+import HBlock from '@/assets/gallery/H_Block.jpg';
+import { StaticImageData } from 'next/image';
+
 export interface gallery {
-  url: string;
+  url: StaticImageData;
   caption: string;
 }
 
 export const GalleryImages: gallery[] = [
   {
-    url: '/gallery/M_Block.JPG',
+    url: MBlock,
     caption: 'M Block',
   },
   {
-    url: '/gallery/PiBlock.JPG',
+    url: PiBlock,
     caption: 'Pi Block',
   },
   {
-    url: '/gallery/E_Block.JPG',
+    url: EBlock,
     caption: 'E Block',
   },
   {
-    url: '/gallery/Library.JPG',
+    url: Library,
     caption: 'Library',
   },
   {
-    url: '/gallery/B_Block.JPG',
+    url: BBlock,
     caption: 'B Block',
   },
   {
-    url: '/gallery/G_Block.JPG',
+    url: GBlock,
     caption: 'G Block',
   },
   {
-    url: '/gallery/H_Block.JPG',
+    url: HBlock,
     caption: 'H Block',
   },
 ];

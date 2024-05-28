@@ -2,13 +2,14 @@ import React from 'react';
 import Card from './Card';
 import { cardData } from '../../data/campus/data';
 import Image from 'next/image';
+import MainBlock from '@/assets/academics/mainblock.jpg';
 
 const MainContent: React.FC = () => {
   return (
     <main className="flex flex-col items-center">
       <div className="relative w-full h-[60vw] sm:h-[530px] overflow-hidden">
         <Image
-          src="/campus/mainblock.png"
+          src={MainBlock}
           alt="IIIT Dharwad Campus"
           className="object-cover w-full h-full"
           layout="fill"

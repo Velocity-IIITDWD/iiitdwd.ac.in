@@ -50,7 +50,7 @@ export default function Home() {
       <section className="my-20 bg-gray-200 md:py-20 py-10 w-full flex flex-col md:flex-row-reverse items-center md:px-20 sm:px-10 p-4 gap-6">
         <Image
           alt="main image"
-          src={'/HomePage/IIIT_Dharwad.jpg'}
+          src={'/images/IIIT_Dharwad.jpg'}
           width={0}
           height={0}
           sizes="100%"
@@ -62,12 +62,12 @@ export default function Home() {
             <div className="text-dwd-primary font-semibold text-xl">
               Announcements
             </div>
-            <Link href={'/announcements'} className="text-red-500">
+            {/* <Link href={'/announcements'} className="text-red-500">
               view all
-            </Link>
+            </Link> */}
           </div>
-          <div className="overflow-hidden h-[40vh] relative slide">
-            <div className="flex flex-col gap-2 p-2 absolute top-0 left-0 w-full scrolling-text slide">
+          <div className="overflow-hidden h-[40vh] relative">
+            <div className="flex flex-col gap-2 p-2 absolute top-0 left-0 w-full">
               {announcements?.map((item, index) => (
                 <a
                   href={item?.link}
@@ -96,7 +96,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="w-full h-full bg-fixed relative overflow-hidden before:z-0 before:absolute before:h-full before:w-full before:left-0 before:top-0 before:bg-gray-900/80 bg-cover bg-repeat-y bg-[url('/HomePage/IIIT_Dharwad.jpg')]">
+      <section className="w-full h-full bg-fixed relative overflow-hidden before:z-0 before:absolute before:h-full before:w-full before:left-0 before:top-0 before:bg-gray-900/80 bg-cover bg-repeat-y bg-[url('/images/IIIT_Dharwad.jpg')]">
         <div className="my-16 z-[1] relative w-full flex flex-col items-center md:px-24 sm:px-10 p-4 gap-6">
           <p className="text-white text-2xl font-bold">About Us</p>
 
@@ -223,7 +223,7 @@ export default function Home() {
         </AutoScrollCarousel>
       </section>
 
-      <section className="w-full h-full bg-fixed relative overflow-hidden before:z-0 before:absolute before:h-full before:w-full before:left-0 before:top-0 before:bg-gray-900/80 bg-cover bg-repeat-y bg-[url('/HomePage/LandingPage.png')]">
+      <section className="w-full h-full bg-fixed relative overflow-hidden before:z-0 before:absolute before:h-full before:w-full before:left-0 before:top-0 before:bg-gray-900/80 bg-cover bg-repeat-y bg-[url('/images/LandingPage.png')]">
         <div className="relative py-24 lg:py-44 z-[1] text-white max-w-[1000px] mx-auto w-full px-10 items-center justify-center flex flex-col lg:flex-row gap-10 lg:gap-4">
           <div className="flex basis-1/3 px-6 flex-col gap-2 items-center justify-center">
             <div className="flex gap-2 items-center">
