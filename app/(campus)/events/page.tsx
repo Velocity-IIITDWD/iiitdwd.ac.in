@@ -37,8 +37,6 @@ function ComponentEvent({ index }: ComponentEventProps) {
         className="w-full h-72 object-cover rounded-lg"
         src={eventImageSrc}
         alt="Weekly Events"
-        width="300"
-        height="300"
       />
       <div className="mt-8">
         <h2 className="text-2xl text-cardText font-bold">
