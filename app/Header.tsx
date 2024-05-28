@@ -85,6 +85,7 @@ const navmenuItems: NavmenuItem[] = [
       {
         items: [
           { text: 'BTech', href: '/admissions/btech' },
+          { text: 'MTech - Research', href: '/admissions/mtech' },
           { text: 'PhD', href: '/admissions/phd' },
         ],
       },
@@ -127,7 +128,6 @@ const navmenuItems: NavmenuItem[] = [
     ],
   },
   { text: 'Placements', href: '/placements' },
-  { text: 'Tenders', href: '/tenders' },
   { text: 'Careers', href: '/careers' },
   { text: 'Contact Us', href: '/contact' },
 ];
@@ -217,7 +217,7 @@ function Header() {
             width={0}
             height={0}
             sizes="100%"
-            style={{ height: '90%', width: 'auto' }}
+            style={{ height: '100%', width: 'auto' }}
             alt="IIIT Dharwad Logo"
             className="block lg:hidden xl:block mr-auto"
             priority
