@@ -107,7 +107,7 @@ function EventPage(theevent: event) {
     showSlides(slideIndex);
   }, 3000);
   return (
-    <div >
+    <div>
       <h1 className="text-3xl text-dwd-primary mx-9 text-center mt-12 mb-0 font-roboto">
         {theevent.text}
       </h1>

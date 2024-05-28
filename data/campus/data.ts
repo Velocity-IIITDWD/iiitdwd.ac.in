@@ -15,6 +15,6 @@ export const cardData: CardData[] = [
   {
     title: 'Institute Magazine',
     href: '/magazine',
-    image: '/Campus/magazine.png',
+    image: '/campus/magazine.png',
   },
 ];
