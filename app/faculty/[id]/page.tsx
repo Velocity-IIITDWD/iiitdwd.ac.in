@@ -96,9 +96,9 @@ const Profile = (params: pp) => {
                     <Split />
                     <span>{profile.content.card.department}</span>
                   </div>
-                  <div className="flex flex-row  gap-2 ">
-                    <BriefcaseBusiness />
-                    <span>{profile.content.card.designation}</span>
+                  <div className="flex flex-row gap-2 ">
+                    <span className='flex-shrink-0'><BriefcaseBusiness /></span>
+                    <span >{profile.content.card.designation}</span>
                   </div>
                   <div className="flex flex-row  gap-2 ">
                     <Mail />
