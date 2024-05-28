@@ -9,7 +9,8 @@ import EmblaCarousel from '@/components/EmblaCarousel';
 import { Metadata } from 'next';
 import Link from 'next/link';
 
-
+import CompaniesVisited from '@/assets/placements/Companies Visited.png'; 
+import PlacementProcedure from '@/assets/placements/Placement Procedure.png'; 
 //import Carousel from "@/components/Carousel";
 
 export default function Home() {
@@ -147,10 +148,10 @@ export default function Home() {
 
       
         <div className="shortbox text-[1.8rem] text-[#013365] font-extrabold ml-[20%] mt-20">Companies Visited</div>
-        <Image src="/assets/Companies Visited.png" width="800" height="150" className="mx-auto block mt-10" alt='Companies visited'/>
+        <Image src={CompaniesVisited} width="800" height="150" className="mx-auto block mt-10" alt='Companies visited'/>
       
         <div className="shortbox text-[1.8rem] text-[#013365] font-extrabold ml-[20%] mt-20">Placement Procedure</div>
-        <Image src="/images/Placement Procedure.png" width="800" height="150" className="mx-auto block mt-10 procedure" alt='Placement Procedure'/>
+        <Image src={PlacementProcedure} width="800" height="150" className="mx-auto block mt-10 procedure" alt='Placement Procedure'/>
       
         <div className=" whatsapp text-[1rem] text-black font-light mt-5 ml-[20%] mr-[20%]">
         Note: The SRF provides the primary basis of communicating the details of the positions offered to the candidates. It is, therefore, highly desirable that the form is completed in all respects and it would be advantageous if it were accompanied by relevant company literature/JD.
@@ -191,7 +192,7 @@ export default function Home() {
         <div className="buttons flex flex-wrap gap-5 mb-4 mt-10 ml-[20%]">
 
           <div style={{ width: '35%' }}>
-            <Link href="/docs/Campus_Recruitment_Form_without_internship.docx" download="Campus_Recruitment_Form_without_internship.docx">
+            <Link href="/Campus_Recruitment_Form_without_internship.docx" download="Campus_Recruitment_Form_without_internship.docx">
               <button className="buttonss bg-[#013365] text-white px-4 py-4 rounded w-full whitespace-no-wrap" style={{ fontSize: '14px' }}>
         Campus Recruitment Form (w/o internship)
               </button>
@@ -199,7 +200,7 @@ export default function Home() {
           </div>
 
           <div style={{ width: '35%' }}>
-            <Link href="/docs/Campus_Recruitment_Form_with_internship.docx" download="Campus_Recruitment_Form_with_internship.docx">
+            <Link href="/Campus_Recruitment_Form_with_internship.docx" download="Campus_Recruitment_Form_with_internship.docx">
               <button className="buttonss bg-[#50A5CA] text-white px-4 py-4 rounded w-full  whitespace-no-wrap" style={{ fontSize: '14px' }}>
         Campus Recruitment Form (with internship)
               </button>
@@ -227,7 +228,7 @@ export default function Home() {
         </div>
 
         <div className='mt-6 ml-[20%]'>
-          <Link href="/docs/brochure_cgc.pdf" target='_blank' className="text-[#013365] text-lg font-bold after:-translate-y-1/3 after:absolute relative after:content-[url('/icons/linkIcon.svg')]">
+          <Link href="/brochure_cgc.pdf" target='_blank' className="text-[#013365] text-lg font-bold after:-translate-y-1/3 after:absolute relative after:content-[url('/icons/linkIcon.svg')]">
             Brochure
           </Link>
         </div>
