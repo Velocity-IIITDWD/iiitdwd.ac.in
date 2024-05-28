@@ -2,4 +2,3 @@
 !.gitignore
 !images
 images/*
-!images/blank_profile_square.png
