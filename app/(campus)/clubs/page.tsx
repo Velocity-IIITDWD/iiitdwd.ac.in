@@ -18,7 +18,7 @@ const Club: FC = () => {
     'Iris': useRef<HTMLDivElement>(null),
     'DSAI Society': useRef<HTMLDivElement>(null),
     'Quantum Computing Club': useRef<HTMLDivElement>(null),
-    'Zeigeist': useRef<HTMLDivElement>(null),
+    'Zeitgeist': useRef<HTMLDivElement>(null),
     'Music Club': useRef<HTMLDivElement>(null),
     'Dance Club': useRef<HTMLDivElement>(null),
   };
@@ -31,31 +31,31 @@ const Club: FC = () => {
     <div className="container mx-auto py-8 px-4">
       <h1 className="text-3xl font-bold text-center mb-8 text-dwd-primary">Our Clubs</h1>
 
-      <div className="bg-gray-200 p-8 rounded-2xl mb-8 relative">
-        <div className="absolute top-4 left-4">
+      <div className="bg-gray-200 p-8 rounded-lg mb-8 relative">
+        <div className="top-4 left-4">
           <button
-            className={`px-4 py-2 rounded-2xl mr-4 ${showTechnicalClubs ? ' hover:border-black bg-dwd-primary text-white hover:text-sky-600' : 'bg-dwd-secondary1 hover:text-white'}`}
+            className={`px-4 py-2 rounded-lg mr-4 ${showTechnicalClubs ? ' hover:border-black bg-dwd-primary text-white hover:text-sky-600' : 'bg-dwd-secondary1 hover:text-white'}`}
             onClick={() => setShowTechnicalClubs(true)}
           >
             Technical Clubs
           </button>
           <button
-            className={`px-4 py-2 rounded-2xl ${!showTechnicalClubs ? 'bg-dwd-primary hover:border-black text-white hover:text-sky-600' : 'bg-dwd-secondary1 hover:text-white'}`}
+            className={`px-4 py-2 rounded-lg mt-4 md:mt-0 ${!showTechnicalClubs ? 'bg-dwd-primary hover:border-black text-white hover:text-sky-600' : 'bg-dwd-secondary1 hover:text-white'}`}
             onClick={() => setShowTechnicalClubs(false)}
           >
             Non Technical Clubs
           </button>
         </div>
 
-        <div className="mt-16">
+        <div className="mt-4">
           {showTechnicalClubs ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {clubs
-                .filter((club: ClubData) => club.name !== 'Zeigeist' && club.name !== 'Music Club' && club.name !== 'Dance Club')
+                .filter((club: ClubData) => club.name !== 'Zeitgeist' && club.name !== 'Music Club' && club.name !== 'Dance Club')
                 .map((club: ClubData) => (
                   <div
                     key={club.name}
-                    className="bg-dwd-primary text-white p-4 cursor-pointer hover:text-sky-600 rounded-xl shadow-md text-center"
+                    className="bg-dwd-primary text-white p-4 cursor-pointer hover:text-sky-600 rounded-lg shadow-md text-center"
                     onClick={() => scrollToClub(club.name)}
                   >
                     {club.name}
@@ -65,11 +65,11 @@ const Club: FC = () => {
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {clubs
-                .filter((club: ClubData) => club.name === 'Zeigeist' || club.name === 'Music Club' || club.name === 'Dance Club')
+                .filter((club: ClubData) => club.name === 'Zeitgeist' || club.name === 'Music Club' || club.name === 'Dance Club')
                 .map((club: ClubData) => (
                   <div
                     key={club.name}
-                    className="bg-dwd-primary text-white p-4 cursor-pointer hover:text-sky-600 rounded-xl shadow-md text-center"
+                    className="bg-dwd-primary text-white p-4 cursor-pointer hover:text-sky-600 rounded-lg shadow-md text-center"
                     onClick={() => scrollToClub(club.name)}
                   >
                     {club.name}
@@ -116,7 +116,7 @@ const ClubCard: FC<{ clubName: string; aboutText: string; members: { name: strin
       <br />
       <div className="pt-12">
         <h2 className="text-center text-2xl font-bold mb-4">{clubName}</h2>
-        <div className="flex justify-center mb-4">
+        {/* <div className="flex justify-center mb-4">
           <button
             className={`px-4 py-2 cursor-pointer rounded-md mr-2 ${showAbout ? 'bg-dwd-primary hover:text-sky-600 text-white' : 'bg-dwd-secondary1 hover:text-white'}`}
             onClick={() => setShowAbout(true)}
@@ -129,7 +129,7 @@ const ClubCard: FC<{ clubName: string; aboutText: string; members: { name: strin
           >
             MEMBERS
           </button>
-        </div>
+        </div> */}
         {showAbout ? (
           <div className="text-center mb-4">{aboutText}</div>
         ) : (

@@ -8,7 +8,7 @@ export type ClubName =
   | 'Iris'
   | 'DSAI Society'
   | 'Quantum Computing Club'
-  | 'Zeigeist'
+  | 'Zeitgeist'
   | 'Music Club'
   | 'Dance Club';
 
@@ -27,7 +27,7 @@ export interface Club {
 const clubs: Club[] = [
 {
     name: 'Return 0',
-    aboutText: 'It is a coding club of IIIT Dharwad. Main aim to improve coding culture in our college. All the members of our club are working to improve it and to help students develop problem solving skills through CP.',
+    aboutText: 'It is the competitive programming club of IIIT Dharwad. Its aim is to improve coding culture in our college. The club helps students develop problem solving skills through competitive programming.',
     members: [
       { name: 'ABC', position: 'President' },
       { name: 'BCD', position: 'Vice President' },
@@ -49,7 +49,7 @@ const clubs: Club[] = [
   },
   {
     name: 'Velocity',
-    aboutText: 'It is the Web Development Club of IIIT Dharwad. Main aim is to make developing websites fun and learn new technologies growing popular in tech industry.',
+    aboutText: 'It is the web development club of IIIT Dharwad. Its aim is to foster a community of developers and spread development culture and knowledge.',
     members: [
       { name: 'ABC', position: 'President' },
       { name: 'BCD', position: 'Vice President' },
@@ -125,7 +125,7 @@ const clubs: Club[] = [
     imagePath: '/Images/quantumclub.jpeg',
   },
   {
-    name: 'Zeigeist',
+    name: 'Zeitgeist',
     aboutText: 'The Zeitgeist Club of IIIT Dharwad is a dynamic and intellectually stimulating student organization that caters to enthusiasts of literature, public speaking, and anchoring. This club serves as a vibrant platform for students to explore and express their literary talents, enhance their communication skills, and engage in creative discourse.',
     members: [
       { name: 'ABC', position: 'President' },
