@@ -217,7 +217,7 @@ function Header() {
             width={0}
             height={0}
             sizes="100%"
-            style={{ height: '90%', width: 'auto' }}
+            style={{ height: '100%', width: 'auto' }}
             alt="IIIT Dharwad Logo"
             className="block lg:hidden xl:block mr-auto"
             priority
