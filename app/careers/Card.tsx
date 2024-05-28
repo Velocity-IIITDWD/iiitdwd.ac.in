@@ -9,6 +9,8 @@ import { Button } from '@/components/ui/button'
 import { jobstype } from '@/data/jobs';
 
 
+import pdfico from '@/assets/careers/pdf.png'
+
 const openLink = (url:string) => {
   window.open(url, '_blank');
 };
@@ -63,7 +65,7 @@ const Card = ({ jobdata }: { jobdata: jobstype }) => {
 
 
             <button className='hover:scale-[1.08] hover:drop-shadow-xl  transition border border-dwd-primary rounded-xl p-3' onClick={()=>{openLink(jobdata.GI)}}>
-              <Image src="/pdf.png" width={20} height={20} alt="" />
+              <Image src={pdfico} width={20} height={20} alt="" />
 
 
             </button>
