@@ -88,13 +88,6 @@ const ContactPage: React.FC = () => {
             <h3 className="text-xl font-bold">Fax</h3>
             <p>+91-836-2212841</p>
           </div>
-          <Link
-            className="font-medium w-fit text-lg mt-4 border p-2 rounded-md flex gap-4 items-center justify-center "
-            href={'/contact_info'}
-          >
-            More Contact Information
-            <ExternalLink />
-          </Link>
         </div>
       </div>
 
