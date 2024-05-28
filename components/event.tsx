@@ -143,9 +143,9 @@ function EventPage(theevent: event) {
           <div className="bg-gray-200 p-4 rounded-lg shadow-md">
             <h2 className="text-xl font-semibold mb-2">Details</h2>
 
-            <p>Start date : {theevent.details.startDate}</p>
-            <p>End date : {theevent.details.endDate}</p>
-            <p>Ticket price : {theevent.details.ticketPrice} </p>
+            <p> {theevent.details.startDate}</p>
+            <p>{theevent.details.endDate}</p>
+            <p> {theevent.details.ticketPrice} </p>
           </div>
           <div className="bg-gray-200 p-4 rounded-lg shadow-md">
             <h2 className="text-xl font-semibold mb-2">Organiser</h2>
@@ -156,13 +156,13 @@ function EventPage(theevent: event) {
           <div className="bg-gray-200 p-4 rounded-lg shadow-md">
             <h2 className="text-xl font-semibold mb-2">Venue</h2>
             <p>Place : {theevent.venue.place}</p>
-            <p>Street : {theevent.venue.street}</p>
+            <p> {theevent.venue.street}</p>
             <p>City : {theevent.venue.city}</p>
           </div>
         </div>
 
         <div className="bg-white p-4 rounded-lg shadow-md mt-6">
-          <h2 className="text-xl font-semibold mb-2">Content Section</h2>
+          <h2 className="text-xl font-semibold mb-2">Event Description</h2>
           <p>{theevent.aboutEvent}</p>
         </div>
       </div>

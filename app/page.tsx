@@ -258,7 +258,7 @@ export default function Home() {
             <div className="flex gap-2 items-center">
               <AnimatedCounter
                 className="text-3xl font-bold"
-                to={100}
+                to={40}
                 from={0}
               />
               <span className="text-3xl font-bold">+</span>
