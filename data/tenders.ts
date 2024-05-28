@@ -9,10 +9,10 @@ export const tenders: Tender[] = [
       },
       {
         title: 'Offline Application Form',
-        link: 'https://iiitdwd.ac.in/docs/Tenders/Offline_Application_Form.pdf',
+        link: '/docs/Offline_Application_Form.pdf',
       },
     ],
-    link: 'https://iiitdwd.ac.in/docs/Tenders/EXPRESSIONOFINTEREST.pdf',
+    link: '/docs/EXPRESSIONOFINTEREST.pdf',
     publishDate: '2024-05-16',
     submissionDeadline: '2024-05-27T17:00+05:30',
     title: 'Expression of Interest (Hostel Accommodation for Boys)',
@@ -22,17 +22,17 @@ export const tenders: Tender[] = [
     cancelled: true,
     corrections: [
       {
-        link: 'https://iiitdwd.ac.in/docs/Tenders/Cancellation.pdf',
+        link: '/docs/Cancellation.pdf',
         title: 'Cancellation Notice',
       },
     ],
     documents: [
       {
-        link: 'https://iiitdwd.ac.in/docs/Tenders/Brief-Tender-Notification-Partiation-Wall-Doors-and-other-Civil-Works.pdf',
+        link: '/docs/Brief-Tender-Notification-Partiation-Wall-Doors-and-other-Civil-Works.pdf',
         title: 'Brief Tender Notification',
       },
     ],
-    link: 'https://iiitdwd.ac.in/docs/Tenders/G%20-%20block-Aluminium-partition-work-final-07032024.pdf',
+    link: '/docs/G-block-Aluminium-partition-work-final-07032024.pdf',
     publishDate: '2024-03-07',
     submissionDeadline: '2024-04-01T14:00+05:30',
     title:
@@ -64,16 +64,16 @@ export const tenders: Tender[] = [
     cancelled: false,
     corrections: [
       {
-        link: 'https://iiitdwd.ac.in/docs/Tenders/Addendum01.pdf',
+        link: '/docs/Addendum01.pdf',
         title: 'Addendum - 01',
       },
       {
-        link: 'https://iiitdwd.ac.in/docs/Tenders/Corrigendum01.pdf',
+        link: '/docs/Corrigendum01.pdf',
         title: 'Extension of Bid Submission Date',
       },
     ],
     documents: [],
-    link: 'https://iiitdwd.ac.in/docs/Tenders/Tender_54.pdf',
+    link: '/docs/Tender_54.pdf',
     publishDate: '2022-06-03',
     submissionDeadline: '2022-06-28T15:00+05:30',
     title:
@@ -84,12 +84,12 @@ export const tenders: Tender[] = [
     cancelled: false,
     corrections: [
       {
-        link: 'https://iiitdwd.ac.in/docs/Tenders/Tender_55.pdf',
+        link: '/docs/Tender_55.pdf',
         title: 'Extension of Bid Submission Date',
       },
     ],
     documents: [],
-    link: 'https://iiitdwd.ac.in/docs/Tenders/Tender_53.pdf',
+    link: '/docs/Tender_53.pdf',
     publishDate: '2022-05-19',
     submissionDeadline: '2022-06-17T15:00+05:30',
     title:
@@ -100,7 +100,7 @@ export const tenders: Tender[] = [
     cancelled: false,
     corrections: [],
     documents: [],
-    link: 'https://iiitdwd.ac.in/docs/Tenders/Tender_52.pdf',
+    link: '/docs/Tender_52.pdf',
     publishDate: '2022-04-26',
     submissionDeadline: '2022-05-25T15:00+05:30',
     title:
@@ -111,12 +111,12 @@ export const tenders: Tender[] = [
     cancelled: false,
     corrections: [
       {
-        link: 'https://iiitdwd.ac.in/docs/Tenders/Tender_51.pdf',
+        link: '/docs/Tender_51.pdf',
         title: 'Extension of Bid Submission Date',
       },
     ],
     documents: [],
-    link: 'https://iiitdwd.ac.in/docs/Tenders/Tender_52.pdf',
+    link: '/docs/Tender_52.pdf',
     publishDate: '2022-04-02',
     submissionDeadline: '2022-05-02T17:00+05:30',
     title:
@@ -127,12 +127,12 @@ export const tenders: Tender[] = [
     cancelled: false,
     corrections: [
       {
-        link: 'https://iiitdwd.ac.in/docs/Tenders/Tender_50.pdf',
+        link: '/docs/Tender_50.pdf',
         title: 'Extension of Bid Submission Date',
       },
     ],
     documents: [],
-    link: 'https://iiitdwd.ac.in/docs/Tenders/Tender_49.pdf',
+    link: '/docs/Tender_49.pdf',
     publishDate: '2022-04-02',
     submissionDeadline: '2022-05-02T17:00+05:30',
     title: 'Running Canteen at IIIT Dharwad h -block" at IIIT Dharwad Campus',
@@ -142,16 +142,16 @@ export const tenders: Tender[] = [
     cancelled: false,
     corrections: [
       {
-        link: 'https://iiitdwd.ac.in/docs/Tenders/Tender_46.pdf',
+        link: '/docs/Tender_46.pdf',
         title: 'Addendum - 01',
       },
       {
-        link: 'https://iiitdwd.ac.in/docs/Tenders/Tender_47.pdf',
+        link: '/docs/tender_47.pdf',
         title: 'Extension of bid submission date',
       },
     ],
     documents: [],
-    link: 'https://iiitdwd.ac.in/docs/Tenders/Tender_43.pdf',
+    link: '/docs/Tender_43.pdf',
     publishDate: '2022-01-07',
     submissionDeadline: '2022-02-07T15:00+05:30',
     title:
@@ -162,16 +162,16 @@ export const tenders: Tender[] = [
     cancelled: false,
     corrections: [
       {
-        link: 'https://iiitdwd.ac.in/docs/Tenders/Tender_44.pdf',
+        link: '/docs/Tender_44.pdf',
         title: 'Extension of bid submission date',
       },
       {
-        link: 'https://iiitdwd.ac.in/docs/Tenders/Tender_45.pdf',
+        link: '/docs/Tender_45.pdf',
         title: 'Extension of bid submission date',
       },
     ],
     documents: [],
-    link: 'https://iiitdwd.ac.in/docs/Tenders/Tender_42.pdf',
+    link: '/docs/Tender_42.pdf',
     publishDate: '2021-12-30',
     submissionDeadline: '2022-02-08T15:00+05:30',
     title:
@@ -182,7 +182,7 @@ export const tenders: Tender[] = [
     cancelled: false,
     corrections: [],
     documents: [],
-    link: 'https://iiitdwd.ac.in/docs/Tenders/Tender_41.pdf',
+    link: '/docs/Tender_41.pdf',
     publishDate: '2021-08-05',
     submissionDeadline: '2021-08-30T15:00+05:30',
     title:
@@ -193,7 +193,7 @@ export const tenders: Tender[] = [
     cancelled: false,
     corrections: [],
     documents: [],
-    link: 'https://iiitdwd.ac.in/docs/Tenders/Tender_40.pdf',
+    link: '/docs/Tender_40.pdf',
     publishDate: '2021-08-03',
     submissionDeadline: '2021-08-30T15:00+05:30',
     title:
@@ -204,7 +204,7 @@ export const tenders: Tender[] = [
     cancelled: false,
     corrections: [],
     documents: [],
-    link: 'https://iiitdwd.ac.in/docs/Tenders/Tender_39.pdf',
+    link: '/docs/Tender_39.pdf',
     publishDate: '2021-08-03',
     submissionDeadline: '2021-08-19T15:00+05:30',
     title:
@@ -215,7 +215,7 @@ export const tenders: Tender[] = [
     cancelled: false,
     corrections: [],
     documents: [],
-    link: 'https://iiitdwd.ac.in/docs/Tenders/Tender_38.pdf',
+    link: '/docs/Tender_38.pdf',
     publishDate: '2021-02-18',
     submissionDeadline: '2021-03-16T15:00+05:30',
     title:
@@ -226,7 +226,7 @@ export const tenders: Tender[] = [
     cancelled: false,
     corrections: [],
     documents: [],
-    link: 'https://iiitdwd.ac.in/docs/Tenders/Tender_37.pdf',
+    link: '/docs/Tender_37.pdf',
     publishDate: '2021-02-08',
     submissionDeadline: '2021-02-23T15:00+05:30',
     title:
@@ -237,12 +237,12 @@ export const tenders: Tender[] = [
     cancelled: false,
     corrections: [
       {
-        link: 'https://iiitdwd.ac.in/docs/Tenders/Tender_36.pdf',
+        link: '/docs/Tender_36.pdf',
         title: 'Extension of bid submission date',
       },
     ],
     documents: [],
-    link: 'https://iiitdwd.ac.in/docs/Tenders/Tender_33.pdf',
+    link: '/docs/Tender_33.pdf',
     publishDate: '2020-12-19',
     submissionDeadline: '2020-12-28T15:00+05:30',
     title:
@@ -253,12 +253,12 @@ export const tenders: Tender[] = [
     cancelled: false,
     corrections: [
       {
-        link: 'https://iiitdwd.ac.in/docs/Tenders/Tender_35.pdf',
+        link: '/docs/Tender_35.pdf',
         title: 'Extension of bid submission date',
       },
     ],
     documents: [],
-    link: 'https://iiitdwd.ac.in/docs/Tenders/Tender_34.pdf',
+    link: '/docs/Tender_34.pdf',
     publishDate: '2020-12-19',
     submissionDeadline: '2021-01-04T15:00+05:30',
     title:
@@ -269,7 +269,7 @@ export const tenders: Tender[] = [
     cancelled: false,
     corrections: [],
     documents: [],
-    link: 'https://iiitdwd.ac.in/docs/Tenders/Tender_32.pdf',
+    link: '/docs/Tender_32.pdf',
     publishDate: '2020-11-25',
     submissionDeadline: '2020-12-15T15:00+05:30',
     title:
@@ -280,12 +280,12 @@ export const tenders: Tender[] = [
     cancelled: false,
     corrections: [
       {
-        link: 'https://iiitdwd.ac.in/docs/Tenders/Tender_31.pdf',
+        link: '/docs/Tender_31.pdf',
         title: 'Extension of Bid Submission Date',
       },
     ],
     documents: [],
-    link: 'https://iiitdwd.ac.in/docs/Tenders/Tender_27.pdf',
+    link: '/docs/Tender_27.pdf',
     publishDate: '2020-09-29',
     submissionDeadline: '2020-11-20T17:00+05:30',
     title:
@@ -296,7 +296,7 @@ export const tenders: Tender[] = [
     cancelled: false,
     corrections: [],
     documents: [],
-    link: 'https://iiitdwd.ac.in/docs/Tenders/Tender_30.pdf',
+    link: '/docs/Tender_30.pdf',
     publishDate: '2020-11-10',
     submissionDeadline: '2020-11-25T10:00+05:30',
     title:
@@ -307,12 +307,12 @@ export const tenders: Tender[] = [
     cancelled: false,
     corrections: [
       {
-        link: 'https://iiitdwd.ac.in/docs/Tenders/Tender_29.pdf',
+        link: '/docs/Tender_29.pdf',
         title: 'Corrigendum - 01',
       },
     ],
     documents: [],
-    link: 'https://iiitdwd.ac.in/docs/Tenders/Tender_24.pdf',
+    link: '/docs/Tender_24.pdf',
     publishDate: '2020-09-05',
     submissionDeadline: '2020-09-28T15:00+05:30',
     title:
@@ -323,12 +323,12 @@ export const tenders: Tender[] = [
     cancelled: false,
     corrections: [
       {
-        link: 'https://iiitdwd.ac.in/docs/Tenders/Tender_28.pdf',
+        link: '/docs/Tender_28.pdf',
         title: 'Corrigendum - 01',
       },
     ],
     documents: [],
-    link: 'https://iiitdwd.ac.in/docs/Tenders/Tender_23.pdf',
+    link: '/docs/Tender_23.pdf',
     publishDate: '2020-09-03',
     submissionDeadline: '2020-09-24T15:00+05:30',
     title: 'Providing and Supplying Catering Services at IIIT Dharwad',
@@ -359,11 +359,11 @@ export const tenders: Tender[] = [
     corrections: [],
     documents: [
       {
-        link: 'https://iiitdwd.ac.in/docs/Tenders/Tender_26.pdf',
+        link: '/docs/Tender_26.pdf',
         title: 'Pre-Bid Queries',
       },
     ],
-    link: 'https://iiitdwd.ac.in/docs/Tenders/Tender_23.pdf',
+    link: '/docs/Tender_23.pdf',
     publishDate: '2020-09-03',
     submissionDeadline: '2020-09-24T17:00+05:30',
     title: 'Providing and Supplying Catering Services at IIIT Dharwad',
@@ -373,7 +373,7 @@ export const tenders: Tender[] = [
     cancelled: true,
     corrections: [{ link: '', title: 'Cancelled' }],
     documents: [],
-    link: 'https://iiitdwd.ac.in/docs/Tenders/Tender_25.pdf',
+    link: '/docs/Tender_25.pdf',
     publishDate: '2020-09-12',
     submissionDeadline: '2020-09-26T17:00+05:30',
     title:
@@ -384,17 +384,17 @@ export const tenders: Tender[] = [
     cancelled: false,
     corrections: [
       {
-        link: 'https://iiitdwd.ac.in/docs/Tenders/Tender_22.pdf',
+        link: '/docs/Tender_22.pdf',
         title: 'Extension of Bid Submission Date',
       },
     ],
     documents: [
       {
-        link: 'https://iiitdwd.ac.in/docs/Tenders/Tender_21.pdf',
+        link: '/docs/Tender_21.pdf',
         title: 'Pre-Bid Queries',
       },
     ],
-    link: 'https://iiitdwd.ac.in/docs/Tenders/Tender_20.pdf',
+    link: '/docs/Tender_20.pdf',
     publishDate: '2020-07-07',
     submissionDeadline: '2020-08-03T15:00+05:30',
     title:
@@ -406,11 +406,11 @@ export const tenders: Tender[] = [
     corrections: [],
     documents: [
       {
-        link: 'https://iiitdwd.ac.in/docs/Tenders/Tender_19.pdf',
+        link: '/docs/Tender_19.pdf',
         title: 'Pre-Bid Meeting',
       },
     ],
-    link: 'https://iiitdwd.ac.in/docs/Tenders/Tender_17.pdf',
+    link: '/docs/Tender_17.pdf',
     publishDate: '2020-02-18',
     submissionDeadline: '2020-03-16T15:00+05:30',
     title:
@@ -422,11 +422,11 @@ export const tenders: Tender[] = [
     corrections: [],
     documents: [
       {
-        link: 'https://iiitdwd.ac.in/docs/Tenders/Tender_18.pdf',
+        link: '/docs/Tender_18.pdf',
         title: 'Pre-Bid Meeting',
       },
     ],
-    link: 'https://iiitdwd.ac.in/docs/Tenders/Tender_16.pdf',
+    link: '/docs/Tender_16.pdf',
     publishDate: '2020-02-14',
     submissionDeadline: '2020-03-12T15:00+05:30',
     title:
@@ -437,7 +437,7 @@ export const tenders: Tender[] = [
     cancelled: false,
     corrections: [],
     documents: [],
-    link: 'https://iiitdwd.ac.in/docs/Tenders/Tender_15.pdf',
+    link: '/docs/Tender_15.pdf',
     publishDate: '2020-01-10',
     submissionDeadline: '2020-01-31T15:00+05:30',
     title:
@@ -448,7 +448,7 @@ export const tenders: Tender[] = [
     cancelled: false,
     corrections: [],
     documents: [],
-    link: 'https://iiitdwd.ac.in/docs/Tenders/Tender_14.pdf',
+    link: '/docs/Tender_14.pdf',
     publishDate: '2019-10-17',
     submissionDeadline: '2019-11-18T12:00+05:30',
     title:
