@@ -188,7 +188,7 @@ export default function Home() {
         <AutoScrollCarousel>
           {events?.map((item) => (
             <Card
-              className="w-full h-full relative shadow-md flex-[0_0_100%] lg:flex-[0_0_33.33%]"
+              className="w-full relative shadow-md flex-[0_0_100%] lg:flex-[0_0_33.33%]"
               key={item?.id}
             >
               <CardContent className="flex justify-center flex-row items-center gap-6 p-4 md:p-6">
@@ -196,7 +196,7 @@ export default function Home() {
                   <p className="text-xl font-semibold mb-4">{item?.text}</p>
                   <p>{item?.aboutEvent}</p>
                   <p className="font-semibold mb-4">
-                    Date- {item.details.startDate}
+                    Date- {item.timestamp}
                   </p>
                   <Link
                     href={`/events/${item?.id}`}
