@@ -143,12 +143,12 @@ export default function Page() {
               seatMatrix.total.map((seats, index) => {
                 if (index === seatMatrix.total.length - 1)
                   return (
-                    <p className='border-r-transparent'>
-                      {seats}
+                    <p key={seats.id} className='border-r-transparent'>
+                      {seats.qty}
                     </p>
                   )
                 return (
-                  <p>{seats}</p>
+                  <p key={seats.id}>{seats.qty}</p>
                 )
               })
             }

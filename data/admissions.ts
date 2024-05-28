@@ -44,7 +44,10 @@ export interface seatStructure {
       femaleSupernumerary: number;
     }>
   }>,
-  total: Array<number>
+  total: Array<{
+    id: string;
+    qty: number;
+  }>
 }
 export const descriptions: descriptionStructure[] = [
   {
@@ -275,6 +278,57 @@ export const seatMatrix: seatStructure = {
     },
   ],
   total: [
-    152, 8, 39, 2, 59, 4, 28, 1, 105, 4, 402, 402, 67
+    {
+      id: 'open',
+      qty: 152,
+    },
+    {
+      id: 'open_pwd',
+      qty: 8
+    },
+    {
+      id: 'gen_ews',
+      qty: 39
+    },
+    {
+      id: 'gen_ews_pwd',
+      qty: 2
+    },
+    {
+      id: 'sc',
+      qty: 59
+    },
+    {
+      id: 'sc_pwd',
+      qty: 4
+    },
+    {
+      id: 'st',
+      qty: 28
+    },
+    {
+      id: 'st_pwd',
+      qty: 1
+    },
+    {
+      id: 'obc_ncl',
+      qty: 105
+    },
+    {
+      id: 'obc_ncl_pwd',
+      qty: 4
+    },
+    {
+      id: 'total',
+      qty: 402
+    },
+    {
+      id: 'seat_capacity',
+      qty: 402
+    },
+    {
+      id: 'supernumerary',
+      qty: 67
+    }
   ]
 }
