@@ -151,7 +151,7 @@ export default function Home() {
           {ProgramCardDetails.map((item, index) => (
             <Card
               key={index}
-              className="w-full h-full relative flex-[0_0_100%] lg:flex-[0_0_33.33%] overflow-hidden"
+              className="w-full relative flex-[0_0_100%] lg:flex-[0_0_33.33%] overflow-hidden"
             >
               <CardContent className="flex p-0 flex-col aspect-square items-center justify-center">
                 <Image
@@ -163,11 +163,13 @@ export default function Home() {
                   style={{ height: 'auto', width: '100%' }}
                   className="aspect-[4/3] overflow-hidden object-cover object-center"
                 />
-                <div className="w-full text-dwd-primary p-4 flex flex-col gap-2 items-center justify-center">
-                  <p className="text-md text-center font-semibold">
-                    {item?.Header1}
-                  </p>
-                  <p className="text-sm">{item?.Header2}</p>
+                <div className="w-full text-dwd-primary justify-between p-4 flex flex-col gap-2 items-center ">
+                  <div className="flex flex-col w-full items-center justify-center">
+                    <p className="text-md text-center font-semibold">
+                      {item?.Header1}
+                    </p>
+                    <p className="text-sm">{item?.Header2}</p>
+                  </div>
                   <Link
                     href="campus/events"
                     className="flex w-fit rounded hover:bg-dwd-primary hover:text-white transition duration-300 border border-dwd-primary py-2 px-4 gap-2"
@@ -188,16 +190,19 @@ export default function Home() {
         <AutoScrollCarousel>
           {events?.map((item) => (
             <Card
-              className="w-full h-full relative shadow-md flex-[0_0_100%] lg:flex-[0_0_33.33%]"
+              className="w-full relative shadow-md flex-[0_0_100%] lg:flex-[0_0_33.33%]"
               key={item?.id}
             >
-              <CardContent className="flex justify-center flex-row items-center gap-6 p-4 md:p-6">
-                <div className="flex text-justify flex-1 flex-col h-full text-dwd-primary gap-6">
-                  <p className="text-xl font-semibold mb-4">{item?.text}</p>
-                  <p>{item?.aboutEvent}</p>
-                  <p className="font-semibold mb-4">
-                    Date- {item.details.startDate}
-                  </p>
+              <CardContent className="flex justify-center h-full flex-row items-center gap-6 p-4 md:p-6">
+                <div className="flex text-justify flex-1 flex-col h-full justify-between text-dwd-primary gap-6">
+                  <div className="flex flex-col gap-2">
+                    <p className="text-xl font-semibold mb-4">{item?.text}</p>
+                    <p>{item?.aboutEvent}</p>
+                    <p className="font-semibold mb-4">
+                      Date- {item.details.startDate}
+                    </p>
+                  </div>
+
                   <Link
                     href={`/events/${item?.id}`}
                     className="flex w-fit rounded hover:bg-dwd-primary hover:text-white transition duration-300 border border-dwd-primary py-2 px-4 gap-2"

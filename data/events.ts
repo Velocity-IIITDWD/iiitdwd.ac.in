@@ -45,7 +45,7 @@ let events: eventInf[] = [
       contact: '493349',
     },
     aboutEvent:
-      'This is where the main content will go. You can add any text, images, or other elements here.',
+      'This is where the main content will go. You can add any text, images, or other elements here. This is where the main content will go. You can add any text, images, or other elements here. This is where the main content will go. You can add any text, images, or other elements here.',
   },
   {
     id: 'iiit-dwd2',
