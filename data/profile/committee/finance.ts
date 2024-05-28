@@ -6,7 +6,7 @@ export default [
     profiles: [
       {
         content: ['Officiating Chairperson & Director, IIIT Dharwad'],
-        imageURL: 'https://iiitdwd.ac.in/img/Director-new.JPG',
+        imageURL: '/images/s_r_mahadeva_prasanna.JPG',
         title: 'Prof. S. R. Mahadeva Prasanna',
       },
     ],
@@ -21,14 +21,14 @@ export default [
       },
       {
         content: ['Director (Finance), Ministry of Education - Ex-officio'],
-        imageURL: 'https://iiitdwd.ac.in/img/fin-committee/anil.jpg',
+        imageURL: '/images/anil_kumar.jpg',
         title: 'Sri. Anil Kumar',
       },
       {
         content: [
           'Department of Science & Technology & Managing Director, KSTePS Government of Karnataka',
         ],
-        imageURL: 'https://iiitdwd.ac.in/img/bog/PavankumarMalapatiIAS.jpg',
+        imageURL: '/images/pavan_kumar_malapati.jpg',
         title: 'Shri. Pavan Kumar Malapati, IAS',
       },
     ],
