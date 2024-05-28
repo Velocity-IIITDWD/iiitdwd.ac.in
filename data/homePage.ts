@@ -12,28 +12,28 @@ export interface ProgramCards {
 
 export const images: MainCarouselImage[] = [
   {
-    url: '/HomePage/Main1.jpg',
+    url: '/images/MainCarousel1.jpg',
     caption: 'Admissions 2024',
   },
   {
-    url: '/HomePage/Main2.jpg',
+    url: '/images/MainCarousel2.jpg',
     caption: 'Admissions 2023',
   },
   {
-    url: '/HomePage/Main3.jpeg',
+    url: '/images/MainCarousel3.jpeg',
     caption:
       'Prof. S. R. Mahadeva Prasanna taking the charge as the Director of IIIT Dharwad',
   },
   {
-    url: '/HomePage/Main4.jpeg',
+    url: '/images/MainCarousel4.jpeg',
     caption: 'Prof. S. R. Mahadeva Prasanna - Director of IIIT Dharwad',
   },
   {
-    url: '/HomePage/Main5.jpeg',
+    url: '/images/MainCarousel5.jpeg',
     caption: 'Prof. S. R. Mahadeva Prasanna - Director of IIIT Dharwad',
   },
   {
-    url: '/HomePage/Main6.jpeg',
+    url: '/images/MainCarousel6.jpeg',
     caption: 'Faculties and Director of IIIT Dharwad',
   },
 ];

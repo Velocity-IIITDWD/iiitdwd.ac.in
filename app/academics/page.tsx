@@ -1,47 +1,48 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import FirstConvocation from '@/assets/academics/FirstConvocation.jpg';
 
 export default function page() {
   return (
     <div className="flex flex-col h-full w-full">
-      <section className="w-full h-[50vh] bg-cover bg-center bg-[url('/HomePage/LandingPage.png')] relative before:z-0 before:absolute before:h-full before:w-full before:left-0 before:top-0 before:bg-gray-900/70 flex items-center justify-center">
+      <section className="w-full h-[50vh] bg-cover bg-center bg-[url('/images/LandingPage.png')] relative before:z-0 before:absolute before:h-full before:w-full before:left-0 before:top-0 before:bg-gray-900/70 flex items-center justify-center">
         <p className="text-white z-[1] text-3xl font-bold">Academics</p>
       </section>
 
       <div className="my-10 w-full flex flex-col items-center md:px-24 sm:px-10 p-4 gap-6">
         <div className="w-full flex-wrap flex md:flex-nowrap gap-4">
           <Link
-            target='_blank'
-            href='/docs/academic_calendar_sem_1.pdf'
+            target="_blank"
+            href="/docs/academic_calendar_sem_1.pdf"
             className="rounded bg-dwd-primary md:basis-1/4 basis-full flex items-center justify-center p-3 text-white"
           >
             Academic Calendar (1st Sem)
           </Link>
           <Link
-            target='_blank'
-            href='/docs/academic_calendar_sem_3_5.pdf'
+            target="_blank"
+            href="/docs/academic_calendar_sem_3_5.pdf"
             className="rounded bg-dwd-primary md:basis-1/4 basis-full flex items-center justify-center p-3 text-white"
           >
             Academic Calendar (3rd & 5th Sem)
           </Link>
           <Link
-            href='/faculty'
+            href="/faculty"
             className="rounded bg-dwd-primary md:basis-1/4 basis-full flex items-center justify-center p-3 text-white"
           >
             Faculty
           </Link>
           <Link
-            href='/academics/research'
+            href="/academics/research"
             className="rounded bg-dwd-primary md:basis-1/4 basis-full flex items-center justify-center p-3 text-white"
           >
             Research
           </Link>
           <a
-            href="/academics/Curricula_16May23.pdf"
+            href="/docs/Curricula_16May23.pdf"
             target="_blank"
             className="rounded bg-dwd-primary md:basis-1/4 basis-full flex items-center justify-center p-3 text-white"
-          // download="Curriculum.pdf"
+            // download="Curriculum.pdf"
           >
             Curriculum
           </a>
@@ -100,7 +101,7 @@ export default function page() {
 
         <div className="w-full flex flex-col md:flex-row-reverse gap-6 justify-between">
           <Image
-            src="/academics/FirstConvocation.jpg"
+            src={FirstConvocation}
             alt="Academics Image"
             width={0}
             height={0}
