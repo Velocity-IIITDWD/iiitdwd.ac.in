@@ -2,7 +2,7 @@ import { ProfileGroup } from '@/types/profile';
 
 export default [
   {
-    title: 'Officiating Chairperson',
+    title: 'Chairperson',
     profiles: [
       {
         content: ['Officiating Chairperson & Director, IIIT Dharwad'],
