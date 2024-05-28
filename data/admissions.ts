@@ -18,29 +18,34 @@ export interface linksStructure {
   type: string;
   links: Array<linkStructure>;
 }
-
-export const importantDates: dateStructure[] = [
-  {
-    id: 1,
-    title: 'Admission process starts',
-    date: '10th July 2024',
-  },
-  {
-    id: 2,
-    title: 'Last date of application submission',
-    date: '15th July 2024',
-  },
-  {
-    id: 3,
-    title: 'Orientation',
-    date: '10th August 2024',
-  },
-  {
-    id: 4,
-    title: 'Regular classes starts',
-    date: '10th October 2024',
-  },
-];
+export interface seatStructure {
+  instituteCode: number;
+  instituteName: string;
+  programs: Array<{
+    code: number;
+    name: string;
+    seatPoolQuota: Array<{
+      name: string;
+      seatPoolGender: Array<{
+        name: string;
+        open: number;
+        open_pwd: number,
+        gen_ews: number,
+        gen_ews_pwd: number,
+        sc: number,
+        sc_pwd: number,
+        st: number,
+        st_pwd: number,
+        obc_ncl: number,
+        obc_ncl_pwd: number,
+        total: number,
+      }>,
+      seatCapacity: number;
+      femaleSupernumerary: number;
+    }>
+  }>,
+  total: Array<number>
+}
 export const descriptions: descriptionStructure[] = [
   {
     id: 1,
@@ -117,12 +122,6 @@ export const links: linksStructure[] = [
         displayText:
           'JEE Main cutoff ranks',
       },
-      {
-        id: 4,
-        link: '',
-        displayText:
-          'Seat matrix',
-      },
     ],
   },
   {
@@ -147,3 +146,135 @@ export const links: linksStructure[] = [
     ]
   }
 ];
+export const seatMatrix: seatStructure = {
+  instituteCode: 316,
+  instituteName: 'Indian Institute of Information Technology (IIITDWD)',
+  programs: [
+    {
+      code: 4110,
+      name: 'B.Tech. in Computer Science and Engineering (4 Years)',
+      seatPoolQuota: [
+        {
+          name: 'All India',
+          seatPoolGender: [
+            {
+              name: 'Gender-Neutral',
+              open: 62,
+              open_pwd: 4,
+              gen_ews: 16,
+              gen_ews_pwd: 1,
+              sc: 24,
+              sc_pwd: 2,
+              st: 12,
+              st_pwd: 0,
+              obc_ncl: 42,
+              obc_ncl_pwd: 2,
+              total: 165,
+            },
+            {
+              name: 'Female-only (supernumerary)',
+              open: 14,
+              open_pwd: 0,
+              gen_ews: 3,
+              gen_ews_pwd: 0,
+              sc: 5,
+              sc_pwd: 0,
+              st: 2,
+              st_pwd: 0,
+              obc_ncl: 9,
+              obc_ncl_pwd: 0,
+              total: 33
+            }
+          ],
+          seatCapacity: 198,
+          femaleSupernumerary: 33
+        }
+      ]
+    },
+    {
+      code: 4114,
+      name: 'B.Tech. in Electronics and Communication Engineering (4 Years)',
+      seatPoolQuota: [
+        {
+          name: 'All India',
+          seatPoolGender: [
+            {
+              name: 'Gender-Neutral',
+              open: 32,
+              open_pwd: 2,
+              gen_ews: 8,
+              gen_ews_pwd:0,
+              sc: 12,
+              sc_pwd: 1,
+              st: 6,
+              st_pwd: 1,
+              obc_ncl: 22,
+              obc_ncl_pwd: 1,
+              total: 85
+            },
+            {
+              name: 'Female-only (supernumerary)',
+              open: 6,
+              open_pwd: 0,
+              gen_ews: 2,
+              gen_ews_pwd: 0,
+              sc: 3,
+              sc_pwd: 0,
+              st: 1,
+              st_pwd: 0,
+              obc_ncl: 5,
+              obc_ncl_pwd: 0,
+              total: 17
+            }
+          ],
+          seatCapacity: 102,
+          femaleSupernumerary: 17
+        }
+      ]
+    },
+    {
+      code: 4181,
+      name: 'B.Tech. in Data Science and Artificial Intelligence (4 Years)',
+      seatPoolQuota: [
+        {
+          name: 'All India',
+          seatPoolGender: [
+            {
+              name: 'Gender-Neutral',
+              open: 32,
+              open_pwd: 2,
+              gen_ews: 8,
+              gen_ews_pwd:1,
+              sc: 12,
+              sc_pwd: 1,
+              st: 6,
+              st_pwd: 0,
+              obc_ncl: 22,
+              obc_ncl_pwd: 1,
+              total: 85
+            },
+            {
+              name: 'Female-only (supernumerary)',
+              open: 6,
+              open_pwd: 0,
+              gen_ews: 2,
+              gen_ews_pwd: 0,
+              sc: 3,
+              sc_pwd: 0,
+              st: 1,
+              st_pwd: 0,
+              obc_ncl: 5,
+              obc_ncl_pwd: 0,
+              total: 17
+            }
+          ],
+          seatCapacity: 102,
+          femaleSupernumerary: 17
+        }
+      ]
+    },
+  ],
+  total: [
+    152, 8, 39, 2, 59, 4, 28, 1, 105, 4, 402, 402, 67
+  ]
+}

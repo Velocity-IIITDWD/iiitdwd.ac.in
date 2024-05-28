@@ -20,6 +20,12 @@ const config: Config = {
       },
     },
     extend: {
+      gridTemplateColumns: {
+        '19': 'repeat(19, minmax(140px,1fr))',
+      },
+      gridColumn: {
+        'span-19': 'span 19 / span 19'
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
