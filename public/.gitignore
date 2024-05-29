@@ -1,6 +1,7 @@
 *
 !.gitignore
 !images
+!.htaccess
 !images/*
 # !images/blank_profile_square.png
 # !images/MainCarousel1.jpg

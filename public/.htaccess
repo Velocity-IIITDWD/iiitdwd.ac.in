@@ -1,0 +1,9 @@
+Options -MultiViews
+RewriteEngine On
+
+# Try to serve file directly, fallback to .html, then to 404
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ $1.html [L]
+
+ErrorDocument 404 /404.html
