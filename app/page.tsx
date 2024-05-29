@@ -193,7 +193,7 @@ export default function Home() {
               className="w-full relative shadow-md flex-[0_0_100%] lg:flex-[0_0_33.33%]"
               key={item?.id}
             >
-              <CardContent className="flex justify-center h-full flex-row items-center gap-6 p-4 md:p-6">
+              <CardContent className="flex justify-center h-full flex-row items-center gap-6 p-4 md:p-6 max-md:flex-col">
                 <div className="flex text-justify flex-1 flex-col h-full justify-between text-dwd-primary gap-6">
                   <div className="flex flex-col gap-2">
                     <p className="text-xl font-semibold mb-4">{item?.text}</p>
@@ -209,7 +209,7 @@ export default function Home() {
                     <ExternalLink />
                   </Link>
                 </div>
-                <div className="flex-none aspect-square overflow-hidden w-1/3 bg-gray-30 rounded-lg shadow-lg border">
+                <div className="flex-none aspect-square overflow-hidden w-1/3 bg-gray-30 rounded-lg shadow-lg border max-md:-order-1">
                   <Image
                     alt="main image"
                     src={item?.href}
