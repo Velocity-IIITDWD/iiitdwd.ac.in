@@ -17,6 +17,7 @@ const FacilitiesPage: React.FC = () => {
         {facilities.map((facility, index) => (
           <Card
             key={index}
+            blockName={facility.blockName}
             title={facility.title}
             items={facility.items}
             imageUrl={facility.imageUrl}

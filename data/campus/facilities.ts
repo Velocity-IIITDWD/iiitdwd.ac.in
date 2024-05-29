@@ -9,6 +9,7 @@ import healthblockImage from '@/assets/campus/healthblock.jpg';
 
 export interface Facility {
   title: string;
+  blockName: string;
   items: string[];
   imageUrl: string | StaticImageData; // Update the type here
 }
@@ -16,6 +17,7 @@ export interface Facility {
 export const facilities: Facility[] = [
   {
     title: 'Academic Block',
+    blockName: 'e block',
     items: [
       'The Academic Building, called the e Block, has eliminated departmental boundaries, where faculty, technical staff, and laboratories across departments are interspersed by design to naturally promote and nurture information exchange and collaboration.',
       'IIIT Dharwad has created a new modular space which can be easily converted to an 80-seater classroom (unlike the 60-seater) with multiple alternative seating arrangements, several different laboratory configurations, and other team spaces, thereby optimizing energy efficiency and ventilation.',
@@ -28,6 +30,7 @@ export const facilities: Facility[] = [
   },
   {
     title: 'Main Block',
+    blockName: 'π block',
     items: [
       'The Main Building, referred to as the π Block, houses the boardroom, chairperson, director, and registrar offices, recruitment, research, collaboration, incubation, and knowledge sharing spaces.',
       'It also houses the Multi-Function Hall, called the m Block, that can be converted into an auditorium or an indoor basketball court as needed.',
@@ -36,9 +39,10 @@ export const facilities: Facility[] = [
     imageUrl: piblockImage, // Use the imported image
   },
   {
-    title: "Boys' Hostel",
+    title: "Boys Hostel",
+    blockName: 'b block',
     items: [
-      'The Boys’ Hostel, referred to as the b Block, has about 200 rooms spread over 6 floors.',
+      'The Boys Hostel, referred to as the b Block, has about 200 rooms spread over 6 floors.',
       'It features a spacious Dining Hall and a Common Room for reading, games, activities, etc.',
       'Both the Dining Hall and the Common Room are of double height to give them excellent light and ventilation apart from a grand look.',
       'All rooms will be equipped with new furniture.',
@@ -46,9 +50,10 @@ export const facilities: Facility[] = [
     imageUrl: boyshostelImage, // Use the imported image
   },
   {
-    title: "Girls' Hostel",
+    title: "Girls Hostel",
+    blockName: 'g block',
     items: [
-      'The Infosys Foundation Girls’ Hostel, referred to as the g Block, built by Infosys Foundation as a gift for IIIT Dharwad has about one hundred rooms.',
+      'The Infosys Foundation Girls Hostel, referred to as the g Block, built by Infosys Foundation as a gift for IIIT Dharwad has about one hundred rooms.',
       'It features a spacious Dining Hall and a Common Room for reading, games, activities, etc.',
       'Both the Dining Hall and the Common Room are of double height to give them excellent light and ventilation apart from a grand look.',
       'All rooms will be equipped with new furniture.',
@@ -57,6 +62,7 @@ export const facilities: Facility[] = [
   },
   {
     title: 'Health and Fitness Block',
+    blockName: 'h block',
     items: [
       'The Health and Fitness Block, called the h Block, has spaces for a wellness center, pharmacy, gymnasium, yoga room, activity/club rooms, music room, canteen, e-Bank, salon, and a small shop for essential supplies.',
       'The h Block can be used for small gatherings, music, and digital screening.',
