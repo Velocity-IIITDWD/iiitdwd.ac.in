@@ -96,6 +96,28 @@
   transform: translate3d(0, 0, 0);
 }
 
+.mission {
+  grid-auto-rows: 1fr;
+}
+
+.mission-item {
+  position: relative; /* Required for positioning the ::before pseudo-element */
+}
+
+.mission-item::before {
+  content: attr(
+    data-index
+  ); /* Use the data-index attribute to display the number */
+  position: absolute;
+  left: -1.6rem;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: right;
+  font-size: 1.5rem; /* Adjust font size as needed */
+  color: rgb(4, 30, 63); /* Adjust color as needed */
+  font-weight: bold; /* Adjust font weight as needed */
+}
+
 .scrolling-text {
   transform: translateY(100%);
   animation: my-animation 15s linear infinite;

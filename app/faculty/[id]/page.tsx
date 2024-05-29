@@ -1,6 +1,4 @@
-'use client'
-import { useRouter } from 'next/router';
-import { FC, useState } from 'react';
+// 'use client';
 import { ProfileProps } from '@/data/faculty_profile';
 import '@/app/globals.css';
 import Image from 'next/image';
@@ -13,6 +11,10 @@ import {
   MapPin,
   Split,
 } from 'lucide-react';
+
+export function generateStaticParams(): { id: string }[] {
+  return ProfileProps.map(p => ({ id: p.id }));
+}
 
 type ProfileProp = {
   id: string;
@@ -37,7 +39,6 @@ type ProfileProp = {
   };
 };
 
-
 interface pp {
   params: { id: string };
   searchParams: {};
@@ -56,12 +57,10 @@ const Profile = (params: pp) => {
     return <div></div>;
   }
 
-  const areaofinterest_array: JSX.Element[] | undefined = profile.content.body.interest_areas.map(
-    (arr) => <li key={arr.id}>{arr.area}</li>
-  );
-
-
-    
+  const areaofinterest_array: JSX.Element[] | undefined =
+    profile.content.body.interest_areas.map((arr) => (
+      <li key={arr.id}>{arr.area}</li>
+    ));
 
   return (
     <>
@@ -86,6 +85,10 @@ const Profile = (params: pp) => {
               <div className="content-center flex flex-col item-center">
                 <Image
                   src={profile.content.card.photo}
+                  width={0}
+                  height={0}
+                  sizes="100%"
+                  style={{ height: '250px', width: '250px' }}
                   alt={profile.content.head.name}
                   className="object-srink-down"
                 />
@@ -97,8 +100,10 @@ const Profile = (params: pp) => {
                     <span>{profile.content.card.department}</span>
                   </div>
                   <div className="flex flex-row gap-2 ">
-                    <span className='flex-shrink-0'><BriefcaseBusiness /></span>
-                    <span >{profile.content.card.designation}</span>
+                    <span className="flex-shrink-0">
+                      <BriefcaseBusiness />
+                    </span>
+                    <span>{profile.content.card.designation}</span>
                   </div>
                   <div className="flex flex-row  gap-2 ">
                     <Mail />
@@ -126,7 +131,7 @@ const Profile = (params: pp) => {
               </div>
             </div>
             <div>
-              { areaofinterest_array.length ? (
+              {areaofinterest_array.length ? (
                 <>
                   <div className="flex flex-col  py-20">
                     <div className="flex flex-row  gap-2 font-bold text-xl border-b-2 border-black">
@@ -140,7 +145,9 @@ const Profile = (params: pp) => {
                     </div>
                   </div>
                 </>
-              ) : (<div></div>)}
+              ) : (
+                <div></div>
+              )}
             </div>
           </div>
         </div>
