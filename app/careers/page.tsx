@@ -76,7 +76,7 @@ const Page = () => {
             </div>
           </div>
         </div>
-        <div className="jobcont lg:border border-black mt-5 w-[90%]">
+        <div className="jobcont pb-6 lg:border border-black mt-5 w-[90%]">
           <div className="hidden lg:block Header bg-dwd-primary text-white border border-black">
             <div className="flex justify-between items-center">
               <div className="title text-2xl py-2 w-1/2 text-center">

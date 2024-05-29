@@ -234,7 +234,7 @@ export const jobsdata: jobstype[] =[
   {
     "title": "Faculty Recruitment Advertisement October 2021 ",
     "cat": "faculty",
-    "details": `Applications are invited, for appointment to the post of Director of Indian Institute of Information Technology Dharwad, an Institute of National Importance.`,
+    "details": ``,
     "date": "23.10.2021",
     "GI": "/docs/faculty_recu_2021.pdf",
     "Application": "https://forms.gle/NzWh7wmc5qYGUzam6",
