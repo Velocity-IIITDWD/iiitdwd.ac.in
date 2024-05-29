@@ -4,12 +4,13 @@ import { StaticImageData } from 'next/image'; // Import StaticImageData
 
 interface CardProps {
   title: string;
+  blockName: string;
   items: string[];
   imageUrl: string | StaticImageData; // Use StaticImageData here
   isEven: boolean;
 }
 
-const Card: React.FC<CardProps> = ({ title, items, imageUrl, isEven }) => {
+const Card: React.FC<CardProps> = ({ title, blockName, items, imageUrl, isEven }) => {
   const cardColor = isEven
     ? 'bg-slate-200 bg-opacity-25'
     : 'bg-lime-200 bg-opacity-25';
@@ -47,7 +48,10 @@ const Card: React.FC<CardProps> = ({ title, items, imageUrl, isEven }) => {
           isEven ? 'lg:mt-4' : 'lg:mt-4'
         }`}
       >
-        <h2 className="text-xl font-semibold mb-4 text-green-600">| {title}</h2>
+        <h2 className="flex gap-2 text-xl font-semibold mb-4 text-green-600 border-l-2 pl-2 border-l-green-600">
+          {title}
+          <span className={`${isEven ? 'text-gray-500' : 'text-green-800'} italic`}>{blockName}</span>
+        </h2>
         <ul className="list-none space-y-2">
           {items.map((item, index) => (
             <li key={index} className="flex items-start text-sm">
