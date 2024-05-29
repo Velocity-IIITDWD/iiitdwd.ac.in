@@ -27,7 +27,7 @@ export const facilities: Facility[] = [
     imageUrl: eblockImage, // Use the imported image
   },
   {
-    title: 'Pi Block',
+    title: 'Main Block',
     items: [
       'The Main Building, referred to as the π Block, houses the boardroom, chairperson, director, and registrar offices, recruitment, research, collaboration, incubation, and knowledge sharing spaces.',
       'It also houses the Multi-Function Hall, called the m Block, that can be converted into an auditorium or an indoor basketball court as needed.',
@@ -36,9 +36,9 @@ export const facilities: Facility[] = [
     imageUrl: piblockImage, // Use the imported image
   },
   {
-    title: 'Boys Hostel',
+    title: "Boys' Hostel",
     items: [
-      'The Boys Hostel, referred to as the b Block, has about 200 rooms spread over 6 floors.',
+      'The Boys’ Hostel, referred to as the b Block, has about 200 rooms spread over 6 floors.',
       'It features a spacious Dining Hall and a Common Room for reading, games, activities, etc.',
       'Both the Dining Hall and the Common Room are of double height to give them excellent light and ventilation apart from a grand look.',
       'All rooms will be equipped with new furniture.',
@@ -46,9 +46,9 @@ export const facilities: Facility[] = [
     imageUrl: boyshostelImage, // Use the imported image
   },
   {
-    title: 'Girls Hostel',
+    title: "Girls' Hostel",
     items: [
-      'The Infosys Foundation Girls Hostel, referred to as the g Block, built by Infosys Foundation as a gift for IIIT Dharwad has about one hundred rooms.',
+      'The Infosys Foundation Girls’ Hostel, referred to as the g Block, built by Infosys Foundation as a gift for IIIT Dharwad has about one hundred rooms.',
       'It features a spacious Dining Hall and a Common Room for reading, games, activities, etc.',
       'Both the Dining Hall and the Common Room are of double height to give them excellent light and ventilation apart from a grand look.',
       'All rooms will be equipped with new furniture.',
