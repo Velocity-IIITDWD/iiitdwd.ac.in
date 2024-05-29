@@ -2,6 +2,8 @@ import Head from 'next/head';
 import { facilities } from '../../../data/campus/facilities';
 import Card from '../../../components/campus/facilities/Card';
 import { Metadata } from 'next';
+import Link from 'next/link';
+import { SquareArrowOutUpRightIcon } from 'lucide-react';
 
 const FacilitiesPage: React.FC = () => {
   return (
@@ -14,6 +16,14 @@ const FacilitiesPage: React.FC = () => {
         <h2 className="text-4xl font-bold mb-10 mt-10 text-center text-[#164573]">
           Facilities
         </h2>
+        <Link
+          href='https://photos.google.com/share/AF1QipPwwF4BjZ6IN1azpa3nBexu61-zCbL7FOqZk17_Oiz6291agIkh3E1M1HA4tPWcWg?pli=1&key=SExlNTExczRZamZjUFdTRzdPa2JWVnBfVjg2YUtR'
+          target='_blank'
+        >
+          <div className='w-full bg-lime-200 rounded-lg p-4 font-bold'>
+            View campus gallery <SquareArrowOutUpRightIcon className='inline' size='1rem' />
+          </div>
+        </Link>
         {facilities.map((facility, index) => (
           <Card
             key={index}

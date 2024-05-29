@@ -50,7 +50,7 @@ const Card: React.FC<CardProps> = ({ title, blockName, items, imageUrl, isEven }
       >
         <h2 className="flex gap-2 text-xl font-semibold mb-4 text-green-600 border-l-2 pl-2 border-l-green-600">
           {title}
-          <span className={`${isEven ? 'text-gray-400' : 'text-green-800'} italic`}>{blockName}</span>
+          <span className={`${isEven ? 'text-gray-500' : 'text-green-800'} italic`}>{blockName}</span>
         </h2>
         <ul className="list-none space-y-2">
           {items.map((item, index) => (
