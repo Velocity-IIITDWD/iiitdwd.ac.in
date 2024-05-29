@@ -1,5 +1,10 @@
 import { Metadata } from 'next';
 import dynamic from 'next/dynamic';
+import { events } from '@/data/events';
+
+export function generateStaticParams(): { eventId: string }[] {
+  return events.map(e => ({ eventId: e.id }));
+}
 
 const DynamicComponentWithNoSSR = dynamic(() => import('@/components/event'), {
   ssr: false,
