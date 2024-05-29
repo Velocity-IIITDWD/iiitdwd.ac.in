@@ -1,6 +1,4 @@
-'use client';
-import { useRouter } from 'next/router';
-import { FC, useState } from 'react';
+// 'use client';
 import { ProfileProps } from '@/data/faculty_profile';
 import '@/app/globals.css';
 import Image from 'next/image';
@@ -13,6 +11,10 @@ import {
   MapPin,
   Split,
 } from 'lucide-react';
+
+export function generateStaticParams(): { id: string }[] {
+  return ProfileProps.map(p => ({ id: p.id }));
+}
 
 type ProfileProp = {
   id: string;
