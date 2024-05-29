@@ -165,7 +165,7 @@ export default function Home() {
         <div className="shortbox text-[1.8rem] text-[#013365] font-extrabold ml-[20%] mt-20">Contact
           <div className="whatsapp text-[1rem] text-black font-light mt-5 mr-[20%]">
           For any inquiries or if you would like to participate in recruitment activities at IIIT Dharwad, please contact the Career Guidance Cell (CGC) via email at 
-            <Link className="text-[blue]" href="mailto:cgc@iiitdwd.ac.in"> cgc@iiitdwd.ac.in</Link> 
+            <Link className="text-[blue]" href="mailto:cgc@iiitdwd.ac.in"> cgc@iiitdwd.ac.in </Link> 
           marking cc to 
             <Link className="text-[blue]" href="mailto:cgcoffice@iiitdwd.ac.in"> cgcoffice@iiitdwd.ac.in</Link>.
           </div>
@@ -173,8 +173,8 @@ export default function Home() {
       
         <div className=" shortbox contact ml-[20%] flex  mt-10 mb-10 mr-[20%] justify-around">
           <div className='pp'>
-            <strong className='text-[#013365]' style={{fontSize:21}}>CGC, Chairman</strong><br />
-          Dr. Prakash Pawar, Asst. Professor<br />
+            <strong className='text-[#013365]' style={{fontSize:21}}>CGC, Faculty-In-yCharge</strong><br />
+          Dr. Manjunath K Vanahalli, Asst. Professor  <br />
           Email: <Link href="mailto:cgc@iiitdwd.ac.in" className="text-blue-500">cgc@iiitdwd.ac.in</Link>
           </div>
           <div className="uj">
