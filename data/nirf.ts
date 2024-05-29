@@ -13,11 +13,11 @@ export type linkstype = {
   
   export const linksdata: linkstype[] =[{
     curr_year: 2024,
-    "Overall_Report_curr":"https://iiitdwd.ac.in/docs/nirf/NIRF_Overall_2024.pdf",
-    "Engineering_Report_curr":"https://iiitdwd.ac.in/docs/nirf/NIRF_Engineering_2024.pdf",
+    "Overall_Report_curr":"/docs/NIRF_Overall_2024.pdf",
+    "Engineering_Report_curr":"/docs/NIRF_Engineering_2024.pdf",
 
     
     prev_year: 2023,
-    "Overall_Report_prev": "https://iiitdwd.ac.in/docs/nirf/NIRF_Overall_Report_2023.pdf",
-    "Engineering_Report_prev":"https://iiitdwd.ac.in/docs/nirf/NIRF_Engineering_Report_2023.pdf"
+    "Overall_Report_prev": "/docs/NIRF_Overall_Report_2023.pdf",
+    "Engineering_Report_prev":"/docs/NIRF_Engineering_Report_2023.pdf"
   }]
