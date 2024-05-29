@@ -20,7 +20,7 @@ const FacilitiesPage: React.FC = () => {
           href='https://photos.google.com/share/AF1QipPwwF4BjZ6IN1azpa3nBexu61-zCbL7FOqZk17_Oiz6291agIkh3E1M1HA4tPWcWg?pli=1&key=SExlNTExczRZamZjUFdTRzdPa2JWVnBfVjg2YUtR'
           target='_blank'
         >
-          <div className='w-full bg-lime-200 rounded-lg p-4 font-bold'>
+          <div className='w-fit rounded-lg p-4 font-bold'>
             View campus gallery <SquareArrowOutUpRightIcon className='inline' size='1rem' />
           </div>
         </Link>
