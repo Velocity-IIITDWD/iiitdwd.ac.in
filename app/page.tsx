@@ -171,7 +171,7 @@ export default function Home() {
                     <p className="text-sm">{item?.Header2}</p>
                   </div>
                   <Link
-                    href="campus/events"
+                    href={item?.link}
                     className="flex w-fit rounded hover:bg-dwd-primary hover:text-white transition duration-300 border border-dwd-primary py-2 px-4 gap-2"
                   >
                     Read More
@@ -198,9 +198,7 @@ export default function Home() {
                   <div className="flex flex-col gap-2">
                     <p className="text-xl font-semibold mb-4">{item?.text}</p>
                     <p>{item?.aboutEvent}</p>
-                    <p className="font-semibold mb-4">
-                      Date: {item.timestamp}
-                    </p>
+                    <p className="font-semibold mb-4">Date: {item.timestamp}</p>
                   </div>
 
                   <Link

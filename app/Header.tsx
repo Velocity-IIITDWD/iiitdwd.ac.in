@@ -57,7 +57,7 @@ const navmenuItems: NavmenuItem[] = [
         width: 250,
         items: [
           { text: 'Introduction', href: '/about#introduction' },
-          { text: 'Director\'s Message', href: '/about#directors-message' },
+          { text: "Director's Message", href: '/about#directors-message' },
           { text: 'Our Family', href: '/about#family' },
           { text: 'Vision, Missions & Core Values', href: '/about#vision' },
         ],
@@ -121,7 +121,7 @@ const navmenuItems: NavmenuItem[] = [
           {
             text: 'ECE',
             subText: 'Electronics and Communication Engineering',
-            href: 'academics/departments/ece',
+            href: '/academics/departments/ece',
           },
         ],
       },
@@ -135,10 +135,10 @@ const navmenuItems: NavmenuItem[] = [
 function onNavChange() {
   setTimeout(() => {
     const triggers = document.querySelectorAll(
-      '.submenu-trigger[data-state=\'open\']'
+      ".submenu-trigger[data-state='open']"
     );
     const dropdowns = document.querySelectorAll(
-      '.nav-viewport[data-state=\'open\']'
+      ".nav-viewport[data-state='open']"
     );
 
     if (!triggers.length || !dropdowns.length) return;

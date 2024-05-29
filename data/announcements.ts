@@ -5,7 +5,7 @@ export type Announcement = {
 
 export const announcements: Announcement[] = [
   {
-    link: '/docs/Ph.D_and_M.Tech-Research_Aug24_Admission_NOtification.pdf',
+    link: '/docs/Ph.D_and_M.Tech-Research_Aug24_Admission_Notification.pdf',
     text: 'Admission to Ph.D. and M. Tech. (Research), August 2024',
   },
   {

@@ -29,32 +29,32 @@ export interface seatStructure {
       seatPoolGender: Array<{
         name: string;
         open: number;
-        open_pwd: number,
-        gen_ews: number,
-        gen_ews_pwd: number,
-        sc: number,
-        sc_pwd: number,
-        st: number,
-        st_pwd: number,
-        obc_ncl: number,
-        obc_ncl_pwd: number,
-        total: number,
-      }>,
+        open_pwd: number;
+        gen_ews: number;
+        gen_ews_pwd: number;
+        sc: number;
+        sc_pwd: number;
+        st: number;
+        st_pwd: number;
+        obc_ncl: number;
+        obc_ncl_pwd: number;
+        total: number;
+      }>;
       seatCapacity: number;
       femaleSupernumerary: number;
-    }>
-  }>,
+    }>;
+  }>;
   total: Array<{
     id: string;
     qty: number;
-  }>
+  }>;
 }
 export const descriptions: descriptionStructure[] = [
   {
     id: 1,
     heading: 'IIIT Dharwad',
     description:
-      'IIIT Dharwad is an Institute of National Importance by an act of Parliament (23 of 2017) set up in PPP mode between the Ministry of Education, Government of India, Government of Karnataka, and KEONICS. The Institute\'s Former Chairperson Smt. Sudha Murty, Board, and Senate constitute highly eminent leaders from administration, academia, and industry. They are instrumental in steering the institute in the right direction. IIIT Dharwad is a self-sustaining PPP Institute where all running expenses including salaries are met by the tuition and other fees paid by students.',
+      "IIIT Dharwad is an Institute of National Importance by an act of Parliament (23 of 2017) set up in PPP mode between the Ministry of Education, Government of India, Government of Karnataka, and KEONICS. The Institute's Former Chairperson Smt. Sudha Murty, Board, and Senate constitute highly eminent leaders from administration, academia, and industry. They are instrumental in steering the institute in the right direction. IIIT Dharwad is a self-sustaining PPP Institute where all running expenses including salaries are met by the tuition and other fees paid by students.",
   },
   {
     id: 2,
@@ -93,13 +93,13 @@ export const links: linksStructure[] = [
       },
       {
         id: 3,
-        link: '',
+        link: '/docs/FEE_2024-25_Sheet1.pdf',
         displayText: 'Fee Structure',
       },
       {
         id: 4,
-        link: '',
-        displayText: 'FAQ\'s',
+        link: '/faq',
+        displayText: "FAQ's",
       },
     ],
   },
@@ -115,15 +115,13 @@ export const links: linksStructure[] = [
       },
       {
         id: 2,
-        link: '',
-        displayText:
-          'Undertaking to be signed by students and their parents',
+        link: '/docs/undertaking_2023.pdf',
+        displayText: 'Undertaking to be signed by students and their parents',
       },
       {
         id: 3,
-        link: '',
-        displayText:
-          'JEE Main cutoff ranks',
+        link: '/docs/JEE-CRL-CUT-OFF-RANKS-2023-24.pdf',
+        displayText: 'Cut-off JEE Ranks for 2023-24 admissions',
       },
     ],
   },
@@ -133,21 +131,24 @@ export const links: linksStructure[] = [
     links: [
       {
         id: 1,
-        link: '',
-        displayText: 'Computer Science and Engineering (Institute Code 316 and Program Code 4110)'
+        link: '/academics/departments/cse',
+        displayText:
+          'Computer Science and Engineering (Institute Code 316 and Program Code 4110)',
       },
       {
         id: 2,
-        link: '',
-        displayText: 'Electronics and Communication Engineering (Institute Code 316 and Program Code 4114)'
+        link: '/academics/departments/ece',
+        displayText:
+          'Electronics and Communication Engineering (Institute Code 316 and Program Code 4114)',
       },
       {
         id: 3,
-        link: '',
-        displayText: 'Data Science and Artificial Intelligence (Institute Code 316 and Program Code 4181)'
-      }
-    ]
-  }
+        link: '/academics/departments/dsai',
+        displayText:
+          'Data Science and Artificial Intelligence (Institute Code 316 and Program Code 4181)',
+      },
+    ],
+  },
 ];
 export const seatMatrix: seatStructure = {
   instituteCode: 316,
@@ -186,13 +187,13 @@ export const seatMatrix: seatStructure = {
               st_pwd: 0,
               obc_ncl: 9,
               obc_ncl_pwd: 0,
-              total: 33
-            }
+              total: 33,
+            },
           ],
           seatCapacity: 198,
-          femaleSupernumerary: 33
-        }
-      ]
+          femaleSupernumerary: 33,
+        },
+      ],
     },
     {
       code: 4114,
@@ -206,14 +207,14 @@ export const seatMatrix: seatStructure = {
               open: 32,
               open_pwd: 2,
               gen_ews: 8,
-              gen_ews_pwd:0,
+              gen_ews_pwd: 0,
               sc: 12,
               sc_pwd: 1,
               st: 6,
               st_pwd: 1,
               obc_ncl: 22,
               obc_ncl_pwd: 1,
-              total: 85
+              total: 85,
             },
             {
               name: 'Female-only (supernumerary)',
@@ -227,13 +228,13 @@ export const seatMatrix: seatStructure = {
               st_pwd: 0,
               obc_ncl: 5,
               obc_ncl_pwd: 0,
-              total: 17
-            }
+              total: 17,
+            },
           ],
           seatCapacity: 102,
-          femaleSupernumerary: 17
-        }
-      ]
+          femaleSupernumerary: 17,
+        },
+      ],
     },
     {
       code: 4181,
@@ -247,14 +248,14 @@ export const seatMatrix: seatStructure = {
               open: 32,
               open_pwd: 2,
               gen_ews: 8,
-              gen_ews_pwd:1,
+              gen_ews_pwd: 1,
               sc: 12,
               sc_pwd: 1,
               st: 6,
               st_pwd: 0,
               obc_ncl: 22,
               obc_ncl_pwd: 1,
-              total: 85
+              total: 85,
             },
             {
               name: 'Female-only (supernumerary)',
@@ -268,13 +269,13 @@ export const seatMatrix: seatStructure = {
               st_pwd: 0,
               obc_ncl: 5,
               obc_ncl_pwd: 0,
-              total: 17
-            }
+              total: 17,
+            },
           ],
           seatCapacity: 102,
-          femaleSupernumerary: 17
-        }
-      ]
+          femaleSupernumerary: 17,
+        },
+      ],
     },
   ],
   total: [
@@ -284,51 +285,51 @@ export const seatMatrix: seatStructure = {
     },
     {
       id: 'open_pwd',
-      qty: 8
+      qty: 8,
     },
     {
       id: 'gen_ews',
-      qty: 39
+      qty: 39,
     },
     {
       id: 'gen_ews_pwd',
-      qty: 2
+      qty: 2,
     },
     {
       id: 'sc',
-      qty: 59
+      qty: 59,
     },
     {
       id: 'sc_pwd',
-      qty: 4
+      qty: 4,
     },
     {
       id: 'st',
-      qty: 28
+      qty: 28,
     },
     {
       id: 'st_pwd',
-      qty: 1
+      qty: 1,
     },
     {
       id: 'obc_ncl',
-      qty: 105
+      qty: 105,
     },
     {
       id: 'obc_ncl_pwd',
-      qty: 4
+      qty: 4,
     },
     {
       id: 'total',
-      qty: 402
+      qty: 402,
     },
     {
       id: 'seat_capacity',
-      qty: 402
+      qty: 402,
     },
     {
       id: 'supernumerary',
-      qty: 67
-    }
-  ]
-}
+      qty: 67,
+    },
+  ],
+};

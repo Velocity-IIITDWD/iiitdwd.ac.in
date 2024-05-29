@@ -213,7 +213,7 @@ const ClubCard: FC<{
           )}
         </div>
 
-        <div className="flex justify-center space-x-4">
+        <div className="flex justify-center space-x-4 hidden">
           <a
             href={instagram}
             className="flex gap-2 hover:text-pink-600 hover:duration-800 hover:animate-ping"

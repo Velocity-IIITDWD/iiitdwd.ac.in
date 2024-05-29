@@ -14,9 +14,8 @@ const UpperFold: FC<UpperFoldProps> = ({ paragraphText }) => {
         src={krcImage} // Use the imported image
         alt="Library Background"
         layout="fill"
-        objectFit="cover"
         quality={100} // Consider adjusting quality for performance
-        className="z--10" // Negative z-index
+        className="z--10 object-cover" // Negative z-index
       />
 
       {/* Dark overlay with less negative z-index to appear above the image but below the header */}
