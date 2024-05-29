@@ -173,7 +173,7 @@ export default function Home() {
       
         <div className=" shortbox contact ml-[20%] flex  mt-10 mb-10 mr-[20%] justify-around">
           <div className='pp'>
-            <strong className='text-[#013365]' style={{fontSize:21}}>CGC, Faculty-In-yCharge</strong><br />
+            <strong className='text-[#013365]' style={{fontSize:21}}>CGC, Faculty-In-Charge</strong><br />
           Dr. Manjunath K Vanahalli, Asst. Professor  <br />
           Email: <Link href="mailto:cgc@iiitdwd.ac.in" className="text-blue-500">cgc@iiitdwd.ac.in</Link>
           </div>
