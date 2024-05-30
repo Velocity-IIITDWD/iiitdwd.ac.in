@@ -14,34 +14,34 @@ export default function page() {
         <div className="w-full flex-wrap flex md:flex-nowrap gap-4">
           <Link
             target="_blank"
-            href="/docs/academic_calendar_sem_1.pdf"
-            className="rounded bg-dwd-primary md:basis-1/4 basis-full flex items-center justify-center p-3 text-white"
+            href="/pdfs/Academic_Calendar_1st_year.pdf"
+            className="rounded bg-dwd-primary md:basis-1/4 basis-full flex items-center justify-center p-3 text-white text-center"
           >
-            Academic Calendar (2023 Batch Students)
+            Academic Calendar (1st Sem - 2023 Batch Students)
           </Link>
           <Link
             target="_blank"
-            href="/docs/academic_calendar_sem_3_5.pdf"
-            className="rounded bg-dwd-primary md:basis-1/4 basis-full flex items-center justify-center p-3 text-white"
+            href="/pdfs/Academic_Calendar2024-25.pdf"
+            className="rounded bg-dwd-primary md:basis-1/4 basis-full flex items-center justify-center p-3 text-white text-center"
           >
-            Academic Calendar
+            Academic Calendar (2024-25)
           </Link>
           <Link
             href="/faculty"
-            className="rounded bg-dwd-primary md:basis-1/4 basis-full flex items-center justify-center p-3 text-white"
+            className="rounded bg-dwd-primary md:basis-1/4 basis-full flex items-center justify-center p-3 text-white text-center"
           >
             Faculty
           </Link>
           <Link
             href="/academics/research"
-            className="rounded bg-dwd-primary md:basis-1/4 basis-full flex items-center justify-center p-3 text-white"
+            className="rounded bg-dwd-primary md:basis-1/4 basis-full flex items-center justify-center p-3 text-white text-center"
           >
             Research
           </Link>
           <a
             href="/docs/Curricula_16May23.pdf"
             target="_blank"
-            className="rounded bg-dwd-primary md:basis-1/4 basis-full flex items-center justify-center p-3 text-white"
+            className="rounded bg-dwd-primary md:basis-1/4 basis-full flex items-center justify-center p-3 text-white text-center"
             // download="Curriculum.pdf"
           >
             Curriculum

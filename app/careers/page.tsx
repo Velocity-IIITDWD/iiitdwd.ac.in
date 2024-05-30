@@ -44,6 +44,7 @@ export default function CareersPage() {
           </Select>
 
           <search className='rounded-sm overflow-clip flex w-full lg:max-w-md h-10'>
+
             <input
               onKeyDown={e => e.key === 'Enter' && updateSearch()}
               ref={searchInputRef}

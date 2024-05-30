@@ -63,24 +63,28 @@ const List = ({ ll }: ListProps) => {
     const f_array = final.map((arr) => (
       <li
         key={arr.id}
-        className="bg-dwd-secondary2 hover:bg-dwd-secondary1 flex grid justify-items-center flex-none justify-center text-background px-6 py-6 rounded-lg w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 mb-4 "
+        className="bg-dwd-secondary2 hover:bg-dwd-secondary1 flex grid flex-none justify-center text-background  px-6 py-6 rounded-lg  mb-4 "
       >
         <Link href={`/faculty/${arr.id}`}>
-          <div className="flex flex-col gap-2">
-            <Image
-              src={arr.content.card.photo}
-              width={0}
-              height={0}
-              sizes="100%"
-              style={{ height: '250px', width: '250px' }}
-              alt={arr.content.head.name}
-              className="object-cover block  xl:block mr-auto"
-            />
-            <h3 className="text-dwd-primary  font-bold">
-              {arr.content.head.name}
-            </h3>
-            <h6>{arr.content.card.designation}</h6>
-            <h6>{arr.content.card.department}</h6>
+          <div className="min-[3600px]:w-auto flex flex-col gap-4 min-[3600px]:flex-row">
+            <div>
+              <Image
+                src={arr.content.card.photo}
+                width={0}
+                height={0}
+                sizes="100%"
+                style={{ height: '250px', width: '250px' }}
+                alt={arr.content.head.name}
+                className="shrink-0 object-cover mx-auto"
+              />
+            </div>
+            <div className="min-[3600px]:w-1/2 flex flex-col gap-4 justify-center">
+              <h3 className="text-dwd-primary font-bold">
+                {arr.content.head.name}
+              </h3>
+              <h6>{arr.content.card.designation}</h6>
+              <h6>{arr.content.card.department}</h6>
+            </div>
           </div>
         </Link>
       </li>
@@ -196,7 +200,11 @@ const List = ({ ll }: ListProps) => {
             </button>
           </div>
         </div>
-        <ul className="bg-background flex flex-wrap mx-12 gap-8 ">{f_array}</ul>
+        <div className="flex">
+          <ul className="bg-background grid grid-cols-1 gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 mx-12 my-6 gap-8 content-start ">
+            {f_array}
+          </ul>
+        </div>
       </div>
     </>
   );

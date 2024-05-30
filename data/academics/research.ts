@@ -88,13 +88,13 @@ export const advertisements = [
     time: 'Aug 2023',
     lastDate: '10.06.2023',
     generalInstructions:
-      'https://iiitdwd.ac.in/docs/careers/PhDAdmAug23General%20Instructions.pdf',
+      '/docs/phd_ad_gen_inst_aug23.pdf',
     applicationForm: 'https://forms.gle/oMAWkdnLb6jzaLCD6',
   },
   {
     time: 'Jan 2023',
     lastDate: '04.11.2022',
-    generalInstructions: 'https://iiitdwd.ac.in/docs/careers/PhD_Oct_2022.pdf',
+    generalInstructions: '/docs/phd_ad_gen_inst_jan23.pdf',
     applicationForm: 'https://forms.gle/hNQjQD3icsiFHVkw9',
   },
 ];

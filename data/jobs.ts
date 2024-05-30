@@ -156,12 +156,7 @@ export const jobsData: Jobs[] = [
     "lastDate": "20.06.2022",
     "generalInstructions": "/docs/FacultyRecruitmentMay2022Updated.pdf",
     "application": "https://forms.gle/d4KtS25AJHHNGW2X6",
-    "extraInfo": [
-      [
-        "Addendum",
-        "/docs/AddendumFacultyRecruitmentMay2022.pdf"
-      ]
-    ]
+    "extraInfo": []
   },
   {
     "title": "Faculty Recruitment Advertisement May 2022    ",

@@ -5,9 +5,9 @@ export default [
     title: '',
     profiles: [
       {
-        content: ['Chairman'],
-        imageURL: '/images/prakash_pawar.jpg',
-        title: 'Dr. Prakash Pawar',
+        content: ['Faculty-In-Charge'],
+        imageURL: '/images/Dr.ManjunathKV.jpg',
+        title: 'Dr. Manjunath K Vanahalli',
       },
       {
         content: ['Member Secretary'],
