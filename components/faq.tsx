@@ -1,3 +1,4 @@
+'use client'
 import React, { useRef, useState, ReactNode } from 'react';
 import { ChevronRightIcon, ChevronDownIcon } from 'lucide-react';
 

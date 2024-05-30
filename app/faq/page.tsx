@@ -1,14 +1,9 @@
-'use client';
 import Page from '@/components/faq';
-import { useRef } from 'react';
-import React from 'react';
 
-import { connected } from 'process';
-import { HtmlContext } from 'next/dist/server/future/route-modules/app-page/vendored/contexts/entrypoints';
 export default function faq() {
   return (
     <div>
-      <br></br>
+      <br />
       <h1 className="text-dwd-primary text-3xl text-bold text-center  font-roboto">
         Frequently Asked Questions
       </h1>
@@ -144,7 +139,7 @@ Admission to the Indian Institute of Information Technology Dharwad is through C
               The fee structure and details can be found
               <a
                 className="text-blue-800 hover:underline"
-                href="/docs/fee-2022.pdf"
+                href="/docs/FEE_2024-25_Sheet1.pdf"
               >
                 {' '}
                 here.
