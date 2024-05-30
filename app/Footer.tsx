@@ -89,9 +89,10 @@ function Footer() {
           <h2 className="w-fit font-bold text-lg lg:text-2xl mt-4 mb-2 half-underline">Other Links</h2>
           <Link className='hover:underline' href="/faq">FAQ</Link>
           <div className='flex gap-2'>
-            <Link className='hover:underline' href="/docs/iiit_ppp_2017.pdf">IIIT PPP Act</Link><span className='select-none'>|</span>
-            <Link className='hover:underline' href="/docs/ARIIA.pdf">ARIIA</Link><span className='select-none'>|</span>
-            <Link className='hover:underline' href="/docs/RTI.pdf">RTI</Link>
+            <Link className='hover:underline' href="/pdfs/iiit_ppp_2017.pdf">IIIT PPP Act</Link><span className='select-none'>|</span>
+            <Link className='hover:underline' href="/pdfs/ARIIA.pdf">ARIIA</Link><span className='select-none'>|</span>
+            <Link className='hover:underline' href="/pdfs/RTI.pdf">RTI</Link>
+
           </div>
           <Link className='hover:underline' href="https://aims.iiitdwd.ac.in/aims/">AIMS</Link>
           <Link className='hover:underline' href="/tenders">Tenders</Link>

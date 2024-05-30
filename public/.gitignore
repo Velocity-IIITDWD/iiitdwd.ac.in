@@ -1,4 +1,6 @@
 *
+!pdfs
+!pdfs/*
 !.gitignore
 !images
 !.htaccess

@@ -18,9 +18,9 @@ export const images: MainCarouselImage[] = [
     link: '/admissions',
   },
   {
-    url: '/images/MainCarousel2.jpg',
-    caption: 'Admissions 2023',
-    link: '/admissions',
+    url: '/images/banner_admission_supernumerary.jpg',
+    caption: 'Supernumerary reservation introduced for 2024 admissions',
+    link: '/admissions/btech'
   },
   {
     url: '/images/MainCarousel3.jpeg',

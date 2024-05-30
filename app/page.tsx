@@ -42,7 +42,7 @@ export default function Home() {
                     className="md:w-[80%] w-full h-[80%] md:h-full relative object-cover object-top"
                   />
 
-                  <div className="absolute bottom-4 left-1/2 w-fit max-w-full -translate-x-1/2 bg-slate-900/40 backdrop-blur p-2 rounded text-white">
+                  <div className="absolute bottom-4 left-1/2 w-fit max-w-full -translate-x-1/2 bg-slate-900/40 backdrop-blur p-2 rounded text-white text-center">
                     {item?.caption}
                   </div>
                 </CardContent>
@@ -63,7 +63,7 @@ export default function Home() {
                   className="md:w-[80%] w-full h-[80%] md:h-full relative object-cover object-top"
                 />
 
-                <div className="absolute bottom-4 left-1/2 w-fit max-w-full -translate-x-1/2 bg-slate-900/40 backdrop-blur p-2 rounded text-white">
+                <div className="absolute bottom-4 left-1/2 w-fit max-w-full -translate-x-1/2 bg-slate-900/40 backdrop-blur p-2 rounded text-white text-center">
                   {item?.caption}
                 </div>
               </CardContent>
