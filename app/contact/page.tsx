@@ -1,6 +1,5 @@
 'use client';
 
-import { ExternalLink } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useEffect, useRef } from 'react';
@@ -78,12 +77,17 @@ const ContactPage: React.FC = () => {
           </div>
           <div className="mb-4">
             <h3 className="text-xl font-bold">Email</h3>
-            <p>contact@iiitdwd.ac.in</p>
+            <a href="mailto:contact@iiitdwd.ac.in" className="text-blue-500">
+              contact@iiitdwd.ac.in
+            </a>
           </div>
           <div>
             <h3 className="text-xl font-bold">Phone</h3>
-            <p>+91 08362-250879</p>
-            <p>+91 94497-32959</p>
+            <span>
+              <Link href="tel:0836 2250879">0836 2250879</Link>,
+              <br />
+              <Link href="tel:9449732959">9449732959</Link>
+            </span>
           </div>
         </div>
       </div>
@@ -97,58 +101,58 @@ const ContactPage: React.FC = () => {
             <ul className="list-none space-y-4">
               <li className="p-2 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
                 <strong>General Information:</strong>{' '}
-                <a href="mailto:contact@iiitdwd.ac.in" className="text-blue-500">
-                  contact@iiitdwd.ac.in
-                </a>
-              </li>
-              <li className="p-2 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                <strong>Academic:</strong>{' '}
-                <a
+                <Link
                   href="mailto:contact@iiitdwd.ac.in"
                   className="text-blue-500"
                 >
                   contact@iiitdwd.ac.in
-                </a>
+                </Link>
+              </li>
+              <li className="p-2 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                <strong>Academic:</strong>{' '}
+                <Link
+                  href="mailto:contact@iiitdwd.ac.in"
+                  className="text-blue-500"
+                >
+                  contact@iiitdwd.ac.in
+                </Link>
               </li>
               <li className="p-2 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
                 <strong>Placement/Internship:</strong>{' '}
-                <a
-                  href="mailto:cgc@iiitdwd.ac.in"
-                  className="text-blue-500"
-                >
+                <Link href="mailto:cgc@iiitdwd.ac.in" className="text-blue-500">
                   cgc@iiitdwd.ac.in
-                </a>
+                </Link>
               </li>
               <li className="p-2 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
                 <strong>CGC Office:</strong>{' '}
-                <a
+                <Link
                   href="mailto:cgcoffice@iiitdwd.ac.in                  "
                   className="text-blue-500"
                 >
                   cgcoffice@iiitdwd.ac.in
-                </a>
+                </Link>
               </li>
               <li>
                 <strong className="text-white">Student Verification:</strong>
                 <ul className="list-none pl-5 space-y-2">
                   <li className="p-2 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
                     <strong>For UG:</strong>{' '}
-                    <a
+                    <Link
                       href="mailto:contact@iiitdwd.ac.in"
                       className="text-blue-500"
                     >
                       contact@iiitdwd.ac.in
-                    </a>
+                    </Link>
                   </li>
 
                   <li className="p-2 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
                     <strong>For Ph.D.:</strong>{' '}
-                    <a
+                    <Link
                       href="mailto:contact@iiitdwd.ac.in"
                       className="text-blue-500"
                     >
                       contact@iiitdwd.ac.in
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </li>
@@ -164,7 +168,7 @@ const ContactPage: React.FC = () => {
             </p>
             <ul className="list-none pl-5 space-y-2 mt-2 marker-white">
               <li className="p-2 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                You can directly take a Auto Rickshaw directly to campus.
+                You can take an auto rickshaw directly to the campus
               </li>
               <li className="p-2 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
                 The local bus shuttle also runs from Sattur Cross to the campus.
@@ -191,7 +195,7 @@ const ContactPage: React.FC = () => {
           </p>
           <ul className="list-disc pl-5 space-y-2 mt-2">
             <li className="p-2 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
-              Take an Auto Rickshaw directly to the campus or take the bus
+              Take an auto rickshaw directly to the campus or take the bus
               shuttle from Airport to Hosur Cross.
             </li>
             <li className="p-2 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
@@ -199,7 +203,7 @@ const ContactPage: React.FC = () => {
               Sattur Cross.
             </li>
             <li className="p-2 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
-              After reaching Sattur Cross take an Auto Rickshaw directly to the
+              After reaching Sattur Cross take an auto rickshaw directly to the
               campus.
             </li>
           </ul>
@@ -224,7 +228,7 @@ const ContactPage: React.FC = () => {
               Rickshaw directly to campus or you can take BRTS to Sattur Cross.
             </li>
             <li className="p-2 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
-              After reaching Sattur Cross you can take an Auto Rickshaw directly
+              After reaching Sattur Cross you can take an auto rickshaw directly
               to the campus.
             </li>
           </ul>
@@ -238,15 +242,15 @@ const ContactPage: React.FC = () => {
           </p>
           <ul className="list-disc pl-5 space-y-2 mt-2">
             <li className="p-2 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
-              You can directly take an Auto Rickshaw directly to campus or you
-              can take an Auto Rickshaw to Court Circle BRTS Station.
+              You can directly take an auto rickshaw directly to campus or you
+              can take an auto rickshaw to Court Circle BRTS Station.
             </li>
             <li className="p-2 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
               After that you can take BRTS from Court Circle to Sattur Cross
               BRTS Station.
             </li>
             <li className="p-2 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
-              After that you can take an Auto Rickshaw directly to the campus.
+              After that you can take an auto rickshaw directly to the campus.
             </li>
           </ul>
         </div>
