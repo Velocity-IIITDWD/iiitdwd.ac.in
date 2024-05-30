@@ -38,7 +38,7 @@ export const jobsdata: jobstype[] =[
     "cat": "staff",
     "details": "Project Title: Autonomous Navigating Humanoid. The Project aims to develop an indoor navigating humanoid capable of interacting naturally with humans and understanding the environment. The task is to develop applications or features such as autonomous navigation, mapping, speech recognition, dialogue management, text-to-speech synthesizer, speaker recognition, and integration of subsystems to a mobile robot.",
     "date": "05.03.2024",
-    "GI": "/docs/Tihan-Project-Asso.pdfdocs/",
+    "GI": "/docs/Tihan-Project-Asso.pdf",
     "Application": "https://forms.gle/ySkP5mfo5X81rCh2A",
     "Applicationoffline": "",
     "StatusofApplications": "",
