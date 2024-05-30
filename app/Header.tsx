@@ -287,12 +287,12 @@ function Header() {
                               </SheetClose>
                             ))
                         ) : (
-                          <details key={group.title} className="group">
+                          <details key={group.title} className="group/sub">
                             <summary className="flex items-center justify-between focus:outline-none">
                               {group.title}
                               <ChevronDownIcon
                                 size="1rem"
-                                className="rotate-0 group-open:rotate-180 transition-transform duration-300"
+                                className="rotate-0 group-open/sub:rotate-180 transition-transform duration-300"
                               />
                             </summary>
                             <div className="mt-2 ml-2 pl-6 flex flex-col gap-2 border-l border-l-gray-200">
