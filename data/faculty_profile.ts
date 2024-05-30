@@ -32,7 +32,7 @@ let ProfileProps: Array<ProfileProp> = [
       },
       card: {
         photo: '/images/Dr.AbdulWahid.jpeg',
-        designation: 'Assistant professor',
+        designation: 'Assistant Professor',
         department: 'Computer Science & Engineering',
         mail_id: 'abdul.wahid@iiitdwd.ac.in',
         cabin_number: '?',
@@ -57,7 +57,7 @@ let ProfileProps: Array<ProfileProp> = [
       },
       card: {
         photo: '/images/Dr.AnandP.Barangi.jpg',
-        designation: 'Assistant professor',
+        designation: 'Assistant Professor',
         department: 'Humanities & Science',
         mail_id: 'anandbarangi@iiitdwd.ac.in',
         cabin_number: '?',
@@ -77,7 +77,7 @@ let ProfileProps: Array<ProfileProp> = [
       },
       card: {
         photo: '/images/Dr.AnimeshChaturvedi.jpg',
-        designation: 'Assistant professor',
+        designation: 'Assistant Professor',
         department: 'Data Science and Intelligent Systems',
         mail_id: 'animesh@iiitdwd.ac.in',
         cabin_number: '?',
@@ -102,7 +102,7 @@ let ProfileProps: Array<ProfileProp> = [
       },
       card: {
         photo: '/images/Dr.AnimeshRoy.jpg',
-        designation: 'Assistant professor',
+        designation: 'Assistant Professor',
         department: 'Computer Science & Engineering',
         mail_id: 'animeshroy@iiitdwd.ac.in',
         cabin_number: '?',
@@ -126,7 +126,7 @@ let ProfileProps: Array<ProfileProp> = [
       },
       card: {
         photo: '/images/Dr.Anushreekini.jpg',
-        designation: 'Assistant professor',
+        designation: 'Assistant Professor',
         department: 'Humanities & Science',
         mail_id: 'anushree@iiitdwd.ac.in',
         cabin_number: '?',
@@ -146,7 +146,7 @@ let ProfileProps: Array<ProfileProp> = [
       },
       card: {
         photo: '/images/Dr.AswathBabuH.jpeg',
-        designation: 'Assistant professor',
+        designation: 'Assistant Professor',
         department: 'Humanities & Science',
         mail_id: 'aswath@iiitdwd.ac.in',
         cabin_number: '?',
@@ -190,7 +190,7 @@ let ProfileProps: Array<ProfileProp> = [
       },
       card: {
         photo: '/images/Dr.ChannappaAkki.jpeg',
-        designation: ' Professor, Dean Planning and Development',
+        designation: ' Professor, Dean - Planning and Development',
         department: 'Computer Science & Engineering',
         mail_id: 'akki.channappa@gmail.com',
         cabin_number: '?',
@@ -240,7 +240,7 @@ let ProfileProps: Array<ProfileProp> = [
       card: {
         photo: '/images/Dr.DeepakKT.jpeg',
         designation:
-          'Assistant Professor, Dept. of ECE Associate Dean of Research and Development [R&D]',
+          'Assistant Professor, Associate Dean - Research and Development [R&D]',
         department: 'Electronics and Communication Engineering',
         mail_id: 'deepak@iiitdwd.ac.in',
         cabin_number: '?',
@@ -339,7 +339,7 @@ let ProfileProps: Array<ProfileProp> = [
       card: {
         photo: '/images/Dr.JagadishDN.jpeg',
         designation:
-          'Assistant Professor, Dept. of ECE Faculty-In-Charge of Student Welfare [SW]',
+          'Assistant Professor, Faculty-In-Charge - Student Welfare [S.W.]',
         department: 'Electronics and Communication Engineering',
         mail_id: 'jagadishdn@iiitdwd.ac.in',
         cabin_number: '?',
@@ -435,7 +435,7 @@ let ProfileProps: Array<ProfileProp> = [
       card: {
         photo: '/images/Dr.ManjunathKV.jpg',
         designation:
-          'Assistant Professor, Dept. of DSIS Faculty-In Charge of Career Guidance Cell [CGC]',
+          'Assistant Professor, Faculty-In Charge - Career Guidance Cell [CGC]',
         department: 'Data Science and Intelligent Systems',
         mail_id: 'manjunathkv@iiitdwd.ac.in',
         cabin_number: '?',
@@ -525,7 +525,7 @@ let ProfileProps: Array<ProfileProp> = [
       card: {
         photo: '/images/Dr.PavanKumarC.jpg',
         designation:
-          'Assistant Professor, Dept. of CSE Associate Dean (Information Communication Technology [ICT], Automation)',
+          'Assistant Professor, Associate Dean - (Information Communication Technology [ICT], Automation)',
         department: 'Computer Science & Engineering',
         mail_id: 'pavan@iiitdwd.ac.in',
         cabin_number: '?',
@@ -551,7 +551,7 @@ let ProfileProps: Array<ProfileProp> = [
       card: {
         photo: '/images/Dr.PrabhuPrasadBM.png',
         designation:
-          'Assistant Professor, Head of the Department [HoD], Dept. of CSE',
+          'Assistant Professor, Head of the Department [HoD] -  Dept. of CSE',
         department: 'Computer Science & Engineering',
         mail_id: 'prabhuprasad@iiitdwd.ac.in',
         cabin_number: '?',
@@ -576,7 +576,7 @@ let ProfileProps: Array<ProfileProp> = [
       card: {
         photo: '/images/Dr.PrakashPawar.jpg',
         designation:
-          'Assistant Professor, Head of the Department [HoD], Dept. of ECE',
+          'Assistant Professor, Head of the Department [HoD] - Dept. of ECE',
         department: 'Electronics and Communication Engineering',
         mail_id: 'Prakashpawar@iiitdwd.ac.in',
         cabin_number: '?',
@@ -625,7 +625,7 @@ let ProfileProps: Array<ProfileProp> = [
       card: {
         photo: '/images/Dr.RajendraHegadi.jpeg',
         designation:
-          'Associate Professor, Dept. of DSIS Professor-In-Charge of Academic & Student Welfare',
+          'Associate Professor, Professor-In-Charge - Academic & Student Welfare',
         department: 'Data Science and Intelligent Systems',
         mail_id: 'rajendrahegadi@iiitdwd.ac.in',
         cabin_number: '?',
@@ -866,7 +866,7 @@ let ProfileProps: Array<ProfileProp> = [
       card: {
         photo: '/images/Dr.SunilSaumya.jpeg',
         designation:
-          'Assistant Professor, Head of the Department [HoD], Dept. of DSIS',
+          'Assistant Professor, Head of the Department [HoD] - Dept. of DSIS',
         department: 'Data Science and Intelligent Systems',
         mail_id: 'sunil.saumya@iiitdwd.ac.in',
         cabin_number: '?',
@@ -894,7 +894,7 @@ let ProfileProps: Array<ProfileProp> = [
       body: {
         profile_text: '',
         interest_areas: [
-          { id: 1, area: 'Artificial intelligence (ML and DL)' },
+          { id: 1, area: 'Artificial intelligence [ML and DL]' },
           { id: 2, area: 'IoT' },
           { id: 3, area: 'Robotics' },
         ],
