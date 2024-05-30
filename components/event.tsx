@@ -160,11 +160,12 @@ function EventPage(theevent: event) {
             <p>City : {theevent.venue.city}</p>
           </div>
         </div>
-
-        <div className="bg-white p-4 rounded-lg shadow-md mt-6">
-          <h2 className="text-xl font-semibold mb-2">Event Description</h2>
-          <p>{theevent.aboutEvent}</p>
-        </div>
+        {theevent.aboutEvent && (
+          <div className="bg-white p-4 rounded-lg shadow-md mt-6">
+            <h2 className="text-xl font-semibold mb-2">Event Description</h2>
+            <p>{theevent.aboutEvent}</p>
+          </div>
+        )}
       </div>
     </div>
   );
