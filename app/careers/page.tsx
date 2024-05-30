@@ -1,102 +1,152 @@
 'use client';
 
-import React, { useState } from 'react';
-import Card from '@/app/careers/Card';
-import { jobsdata } from '@/data/jobs';
-import Image from 'next/image';
-import searchimg from '@/assets/careers/search.png' 
+import { Select, SelectContent, SelectItem, SelectValue, SelectTrigger } from '@/components/ui/select';
+import { FileTextIcon, SearchIcon, SquareArrowOutUpRight } from 'lucide-react';
 
+import { jobsData } from '@/data/jobs';
+import Link from 'next/link';
+import { useCallback, useEffect, useRef, useState } from 'react';
 
-const Page = () => {
-  const [selectedcategory, setselectedcategory] = useState('');
-  const [searchquery, setsearchquery] = useState('');
-  const [search, setsearch] = useState('');
+export default function CareersPage() {
+  const [category, setCategory] = useState('all');
+  const [searchText, setSearchText] = useState('');
+  const [filteredJobs, setFilteredJobs] = useState(jobsData);
+  useEffect(() => {
+    setFilteredJobs(
+      jobsData
+        .filter(job => category === 'all' || job.category === category)
+        .filter(job => !searchText || job.title.toLowerCase().includes(searchText.toLowerCase()) || job.details.toLowerCase().includes(searchText.toLowerCase()))
+    );
+  }, [category, searchText, jobsData]);
 
-  const handledropdown = (event: any) => {
-    setselectedcategory(event.target.value);
-  
-  
-  };
-
-
-  const handlesearch = () => {
-    setsearch(searchquery);
-  };
-
-  const filteredJobs = jobsdata.filter(
-    (job) =>
-      (!selectedcategory || job.cat === selectedcategory) &&
-      (!search || job.title.toLowerCase().includes(search.toLowerCase()))
-  );
+  const searchInputRef = useRef<HTMLInputElement>(null);
+  const updateSearch = useCallback(() => {
+    searchInputRef.current && setSearchText(searchInputRef.current.value);
+  }, [])
 
   return (
-    <>
-      <h1 className="heading-text">Careers</h1>
-      <div className="content flex flex-col items-center pt-[3vh] overflow-x-hidden w-[100%] mb-7">
-        <div className="dropdownNsearch px-2 flex items-center gap-5 justify-center w-[100vw] h-10">
-          <div className="Dropdown hover:scale-[1.05]  hover:drop-shadow-2xl transition flex items-center">  
-            <select
-              className="w-[20vw] pl-2 text-black text-lg md:text-3xl bg-dwd-secondary2 outline-none  h-9 rounded-lg"
-              onChange={handledropdown}
-              name="category"
-              id="category"
-            >
-              <option value="">All</option>
-              <option value="faculty">Faculty</option>
-              <option value="staff">Staff</option>
-              <option value="others">Others</option>
-            </select>
-          </div>
-          <div className="search hover:scale-[1.01]  hover:drop-shadow-2xl transition flex items-center">
+    <div className='flex flex-col w-full h-fit items-center mb-8'>
+      <h1 className='heading-text font-bold p-8 my-8'>Careers</h1>
+
+      {/* Filters */}
+      <div className='w-full flex flex-col px-4 gap-4'>
+        <div className='flex flex-col-reverse justify-center items-center lg:flex-row gap-4'>
+          <Select defaultValue='all' onValueChange={setCategory}>
+            <SelectTrigger className='rounded-sm w-full max-w-sm self-end lg:self-auto'>
+              <SelectValue placeholder='Filter by category' />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value='all'>All</SelectItem>
+              <SelectItem value='faculty'>Faculty</SelectItem>
+              <SelectItem value='staff'>Staff</SelectItem>
+              <SelectItem value='others'>Others</SelectItem>
+            </SelectContent>
+          </Select>
+
+          <search className='rounded-sm overflow-clip flex w-full lg:max-w-md h-10'>
+
             <input
-              className="bg-white w-[60vw] md:w-[60vw] lg:w-[20vw] h-9 rounded-[10px_0px_0px_10px] text-center border border-black text-2xl md:text-3xl"
-              onChange={(e) => {
-                setsearchquery(e.target.value);
-                if (!e.target.value) {
-                  handlesearch();
-                }
-              }}
-              onKeyDown={(e) => {
-                if (e.keyCode === 13) {
-                  handlesearch();
-                }
-              }}
-              type="text"
-              placeholder="Search..."
+              onKeyDown={e => e.key === 'Enter' && updateSearch()}
+              ref={searchInputRef}
+              className='w-full focus:outline-none pl-2 border border-r-0 border-gray-200 rounded-sm'
+              type='text'
+              placeholder='Search...'
             />
-            <div
-              className="bg-dwd-secondary2  flex items-center justify-center px-1 py-2 md:px-5 md:py-2 text-white font-semibold rounded-[0px_10px_10px_0px] cursor-pointer"
-              onClick={handlesearch}
-            >
-              <Image width={20} height={20} src={searchimg} alt="" />
+            <div onClick={updateSearch} className='flex items-center justify-center h-full w-16 bg-dwd-primary'>
+              <SearchIcon size='1rem' stroke='white' />
             </div>
-          </div>
+          </search>
         </div>
-        <div className="jobcont pb-6 lg:border border-black mt-5 w-[90%]">
-          <div className="hidden lg:block Header bg-dwd-primary text-white border border-black">
-            <div className="flex justify-between items-center">
-              <div className="title text-2xl py-2 w-1/2 text-center">
-                Title and Description
-              </div>
-              <div className="w-1/2 flex justify-around gap-5">
-                <div
-                  className="
-                                date text-2xl py-2"
-                >
-                  Last date to receive applications
-                </div>
-                <div className="gi text-2xl py-2">General Instruction</div>
-                <div className="app text-2xl py-2 pr-2">Application Form</div>
-              </div>
+
+        {/* Actual data */}
+        <div>
+          {/* Large screen table */}
+          <div className='hidden lg:flex flex-col border border-dwd-primary rounded-md'>
+            <div className='flex items-center bg-dwd-primary w-full text-white font-bold px-4'>
+              <div className='w-[calc(100%-27rem)]'>Title and Description</div>
+              <div className='w-36 text-center'>Deadline</div>
+              <div className='w-36 text-center'>General Instructions</div>
+              <div className='w-36 text-center'>Application Form</div>
             </div>
+            {filteredJobs.map((job, i) => <div key={i} className='flex items-center px-4 py-4 border-b last:border-0 border-dwd-primary'>
+              <div className='flex flex-col w-[calc(100%-27rem)]'>
+                <h3 className='text-lg font-bold'>{job.title}</h3>
+                {job.details && <div className='pr-4'>{job.details}</div>}
+
+                <div className='flex gap-2'>
+                  {job.extraInfo.map(([title, link]) => (
+                    <Link
+                      key={link}
+                      className='mt-8 px-4 py-2 border border-dwd-primary rounded-sm hover:bg-gray-100'
+                      target='_blank'
+                      href={link}
+                    >
+                      {title}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+              <div className='w-36 text-center font-bold'>{job.lastDate}</div>
+              <div className='w-36 flex items-center justify-center'>
+                <Link target='_blank' href={job.generalInstructions}>
+                  <FileTextIcon size='2rem' />
+                </Link>
+              </div>
+              <div className='w-36 text-center'>
+                <Link
+                  className='bg-gray-200 px-4 py-4 rounded-sm hover:bg-gray-300'
+                  target='_blank'
+                  href={job.application}
+                >
+                  Apply Now
+                </Link>
+              </div>
+            </div>)}
           </div>
-          {filteredJobs.map((jobdata, index) => (
-            <Card key={index} jobdata={jobdata} />
-          ))}
+
+          {/* Small and medium screen cards */}
+          <div className='w-full flex lg:hidden flex-col gap-4'>
+            {filteredJobs.map((job, i) => <div key={i} className='border border-dwd-primary p-4 rounded-sm'>
+              <div className='flex flex-col w-full gap-2'>
+                <h3 className='text-lg font-bold'>{job.title}</h3>
+                {job.details && <div>{job.details}</div>}
+
+                <div className='mt-8'>Deadline: <span className='font-bold'>{job.lastDate}</span></div>
+
+                <div className='flex gap-2'>
+                  {job.extraInfo.map(([title, link]) => (
+                    <Link
+                      key={link}
+                      className='mt-8 px-4 py-2 border border-dwd-primary rounded-sm hover:bg-gray-100'
+                      target='_blank'
+                      href={link}
+                    >
+                      {title}
+                    </Link>
+                  ))}
+                </div>
+
+                <div className='flex gap-4 mt-8'>
+                  <Link
+                    className='w-1/2 border border-gray-200 px-4 py-3 rounded-sm hover:bg-gray-100'
+                    target='_blank'
+                    href={job.generalInstructions}
+                  >
+                    General Instructions <SquareArrowOutUpRight size='1rem' className='inline' />
+                  </Link>
+                  <Link
+                    className='w-1/2 bg-gray-200 px-4 py-3 rounded-sm hover:bg-gray-300'
+                    target='_blank'
+                    href={job.application}
+                  >
+                    Apply Now
+                  </Link>
+                </div>
+              </div>
+            </div>)}
+          </div>
         </div>
       </div>
-    </>
-  );
-};
-
-export default Page;
+    </div >
+  )
+}

@@ -20,7 +20,7 @@ export const images: MainCarouselImage[] = [
   {
     url: '/images/banner_admission_supernumerary.jpg',
     caption: 'Supernumerary reservation introduced for 2024 admissions',
-    link: '/admissions/btech'
+    link: '/admissions/btech',
   },
   {
     url: '/images/MainCarousel3.jpeg',
@@ -46,18 +46,18 @@ export const ProgramCardDetails: ProgramCards[] = [
     image: '/images/cse_program.jpg',
     link: '/academics/departments/cse',
     Header1: 'Computer Science and Engineering',
-    Header2: 'B.Tech (CSE)',
+    Header2: 'B. Tech. (CSE)',
   },
   {
     image: '/images/dsai_program.jpg',
     link: '/academics/departments/dsai',
     Header1: 'Data Science and Artificial Intelligence',
-    Header2: 'B.Tech (DSAI)',
+    Header2: 'B. Tech. (DSAI)',
   },
   {
     image: '/images/ece_program.jpg',
     link: '/academics/departments/ece',
     Header1: 'Electronics and Communications Engineering',
-    Header2: 'B.Tech (ECE)',
+    Header2: 'B. Tech. (ECE)',
   },
 ];

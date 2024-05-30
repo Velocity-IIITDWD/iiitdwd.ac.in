@@ -15,12 +15,15 @@ import { Metadata } from 'next';
 
 export default function page() {
   return (
-    <div className="w-full min-h-screen h-full flex py-10 flex-col lg:px-24 px-4 md:px-10 gap-10 item-center ">
-      <div className="w-full items-center flex md:flex-row gap-16 flex-col md:justify-between">
+    <div className="w-full min-h-screen h-full flex flex-col gap-10 item-center ">
+      <section className="w-full h-[50vh] bg-cover bg-center bg-[url('/images/LandingPage.png')] relative before:z-0 before:absolute before:h-full before:w-full before:left-0 before:top-0 before:bg-gray-900/70 flex items-center justify-center">
+        <p className="text-white z-[1] text-3xl font-bold text-center">
+          Data Science and Artificial Intelligence (DSAI)
+        </p>
+      </section>
+      <div className="w-full lg:px-24 px-4 md:px-10 items-center flex md:flex-row gap-16 flex-col md:justify-between">
         <div className="flex flex-col md:w-1/2">
-          <h1 className="text-dwd-primary text-xl font-bold pb-3">
-            Data Science and Artificial Intelligence (DSAI)
-          </h1>
+          <h1 className="text-dwd-primary text-xl font-bold pb-3"></h1>
           <p className="text-dwd-primary mb-2">
             The DSAI program at IIIT Dharwad emphasizes:
           </p>
@@ -87,7 +90,7 @@ export default function page() {
         </div>
       </div>
 
-      <div className="w-full">
+      <div className="w-full pb-10 lg:px-24 px-4 md:px-10">
         <Curriculum type={1} />
       </div>
     </div>
