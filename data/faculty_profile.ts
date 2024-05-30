@@ -166,7 +166,7 @@ let ProfileProps: Array<ProfileProp> = [
     content: {
       head: {
         name: 'Dr. Chandrika Kamath',
-        profile_pdf: '/faculty',
+        profile_pdf: '',
       },
       card: {
         photo: '/images/Dr.ChandrikaKamath.png',
@@ -765,8 +765,7 @@ let ProfileProps: Array<ProfileProp> = [
     content: {
       head: {
         name: 'Dr. Shirshendu Layek',
-        profile_pdf:
-          'https://scholar.google.co.in/citations?user=fsKQ5XwAAAAJ&hl=en',
+        profile_pdf: '/docs/Dr.ShirshenduLayek.pdf',
       },
       card: {
         photo: '/images/Dr.ShirshenduLayek.jpg',
@@ -973,28 +972,5 @@ let ProfileProps: Array<ProfileProp> = [
     },
   },
 ];
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 export { ProfileProps };
