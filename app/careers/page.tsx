@@ -111,6 +111,8 @@ export default function CareersPage() {
                 <h3 className='text-lg font-bold'>{job.title}</h3>
                 {job.details && <div>{job.details}</div>}
 
+                <div className='mt-8'>Deadline: <span className='font-bold'>{job.lastDate}</span></div>
+
                 <div className='flex gap-2'>
                   {job.extraInfo.map(([title, link]) => (
                     <Link
