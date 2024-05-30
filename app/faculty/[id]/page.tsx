@@ -13,7 +13,7 @@ import {
 } from 'lucide-react';
 
 export function generateStaticParams(): { id: string }[] {
-  return ProfileProps.map(p => ({ id: p.id }));
+  return ProfileProps.map((p) => ({ id: p.id }));
 }
 
 type ProfileProp = {
@@ -69,10 +69,16 @@ const Profile = (params: pp) => {
           <div className="text-left font-bold text-3xl align-left">
             {profile.content.head.name}
           </div>
-          <div className="bg-dwd-primary flex justify-center  px-2 py-2 rounded">
+          <div
+            className={
+              profile.content.head.profile_pdf !== ''
+                ? 'bg-dwd-primary flex justify-center  px-2 py-2 rounded align-center'
+                : 'hidden'
+            }
+          >
             <Link
               href={profile.content.head.profile_pdf}
-              className="align-middle bg-dwd-primary flex justify-center text-background rounded"
+              className="bg-dwd-primary text-center text-background rounded align-center"
             >
               View Profile
             </Link>
@@ -80,9 +86,9 @@ const Profile = (params: pp) => {
         </div>
 
         <div className="bg-background flex flex-col  md:flex-row lg:flex-row xl:flex-row  gap-6 2xl:flex-row  relative py-12 px-12 space-x-16">
-          <div className="flex flex-col item-centerflex-none h-auto w-full md:w-1/4 lg:w-1/4 xl:w-1/4 2xl:w-1/4 bg-dwd-primary text-background px-12 py-12 rounded-lg">
-            <div className="flex flex-col item-center">
-              <div className="content-center flex flex-col item-center">
+          <div className="flex flex-col item-center flex-none  h-auto max-w-md w-full sm:w-full md:w-1/2 lg:w-1/3 xl:w-1/4 2xl:w-1/4 bg-dwd-primary text-background px-12 py-12 rounded-lg">
+            <div className="flex flex-col ">
+              <div className=" mx-auto flex flex-col  justify-center item-center">
                 <Image
                   src={profile.content.card.photo}
                   width={0}
@@ -90,13 +96,16 @@ const Profile = (params: pp) => {
                   sizes="100%"
                   style={{ height: '250px', width: '250px' }}
                   alt={profile.content.head.name}
-                  className="object-srink-down"
+                  className="object-srink-down align-center"
                 />
               </div>
               <div>
-                <div className="flex flex-col space-y-4 pt-12">
-                  <div className="flex flex-row  gap-2  ">
-                    <Split />
+                <div className="flex flex-col  space-y-4 pt-12">
+                  <div className="flex flex-row gap-2  ">
+                    <span className="flex-shrink-0">
+                      <Split />
+                    </span>
+
                     <span>{profile.content.card.department}</span>
                   </div>
                   <div className="flex flex-row gap-2 ">
@@ -105,9 +114,14 @@ const Profile = (params: pp) => {
                     </span>
                     <span>{profile.content.card.designation}</span>
                   </div>
-                  <div className="flex flex-row  gap-2 ">
-                    <Mail />
-                    <span>{profile.content.card.mail_id}</span>
+                  <div className="flex flex-row gap-2">
+                    <span className="flex-shrink-0">
+                      <Mail />
+                    </span>
+
+                    <span className="flex-shrink">
+                      {profile.content.card.mail_id}
+                    </span>
                   </div>
                   <div className="flex flex-row  gap-2 hidden">
                     <MapPin />
