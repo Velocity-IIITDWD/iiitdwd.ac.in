@@ -91,8 +91,8 @@ export default function Home() {
               View all
             </Link>
           </div>
-          <div className="overflow-hidden h-[40vh] relative">
-            <div className="flex flex-col gap-2 p-2 absolute top-0 left-0 w-full">
+          <div className="relative">
+            <div className="flex flex-col gap-2 p-2 w-full">
               {announcements?.map((item, index) => (
                 <a
                   href={item?.link}

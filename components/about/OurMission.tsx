@@ -19,7 +19,7 @@ const romanNumerals = [
 
 const OurMission = ({ missions }: OurMissionProps) => {
   return (
-    <div className="grid mission items-center p-8 gap-4 w-full justify-items-center">
+    <div className="grid mission items-center p-10 gap-4 w-full justify-items-center">
       <span className="mb-8 text-center text-2xl sm:text-3xl md:text-4xl font-bold text-dwd-primary">
         Our Mission
       </span>
