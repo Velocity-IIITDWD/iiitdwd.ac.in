@@ -107,6 +107,8 @@ function EventPage(theevent: event) {
     showSlides(slideIndex);
   }, 3000);
   return (
+    // {(true)?1:0}
+    
     <div>
       <h1 className="text-3xl text-dwd-primary mx-9 text-center mt-12 mb-0 font-roboto">
         {theevent.text}
@@ -119,7 +121,7 @@ function EventPage(theevent: event) {
               height={0}
               sizes="100%"
               key={str}
-              className="slide w-auto max-w-full h-[60vh] block box-border"
+              className="slide w-auto max-w-full h-[50vh] lg:h-[60vh] block box-border"
               src={str}
               alt="Event 1"
             />
