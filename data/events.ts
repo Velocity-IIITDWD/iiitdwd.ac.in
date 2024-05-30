@@ -174,7 +174,7 @@ let events: eventInf[] = [
   {
     id: 'world-environment-day',
     href: '/images/E1.jpg',
-    text: 'World Enironment Day 2022',
+    text: 'World Environment Day 2022',
     timestamp: '05-06-2022',
     allImage: ['/images/E1.jpg', '/images/E2.jpg'],
     details: {
@@ -197,7 +197,7 @@ let events: eventInf[] = [
   {
     id: 'woman-day',
     href: '/images/W1.jpeg',
-    text: 'International Womens Day 2022',
+    text: 'International Women\'s Day 2022',
     timestamp: '08-03-2022',
     allImage: ['/images/W1.jpeg', '/images/W2.jpeg'],
     details: {
@@ -323,7 +323,7 @@ let events: eventInf[] = [
     venue: {
       place: 'Seminar Hall, IIIT Dharwad',
       street: 'Street : IT Park',
-      city: 'Huble',
+      city: 'Hubli',
     },
     organiser: {
       name: 'IIIT Dharwad',
@@ -355,7 +355,7 @@ let events: eventInf[] = [
       contact: '9900456936',
     },
     aboutEvent:
-      'Prof. HiroyaFujisaki, Professor Emeritus at the University of Tokyo visited IIIT Dharwad, 17th March 2018. He had interaction session with faculty members and he gave suggestions on research directions.',
+      'Prof. Hiroya Fujisaki, Professor Emeritus at the University of Tokyo visited IIIT Dharwad, 17th March 2018. He had interaction session with faculty members and he gave suggestions on research directions.',
   },
   {
     id: 'chairperson-visit',
