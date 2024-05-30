@@ -106,7 +106,7 @@ let events: eventInf[] = [
     href: '/images/orientation0.png',
     text: 'Orientation Program 2021-22',
     timestamp: '22-12-2021',
-    allImage: ['/images/orientation0.png', '/images/orientation1.png'],
+    allImage: ['/images/orientation0.png', '/images/orientation1.jpg'],
     details: {
       startDate: 'Start Date : 22-12-2021',
       endDate: 'End Date : 24-12-2021',
