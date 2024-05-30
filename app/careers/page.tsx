@@ -68,7 +68,7 @@ export default function CareersPage() {
               <div className='w-36 text-center'>General Instructions</div>
               <div className='w-36 text-center'>Application Form</div>
             </div>
-            {filteredJobs.map(job => <div className='flex items-center px-4 py-4 border-b last:border-0 border-dwd-primary'>
+            {filteredJobs.map((job, i) => <div key={i} className='flex items-center px-4 py-4 border-b last:border-0 border-dwd-primary'>
               <div className='flex flex-col w-[calc(100%-27rem)]'>
                 <h3 className='text-lg font-bold'>{job.title}</h3>
                 {job.details && <div className='pr-4'>{job.details}</div>}
@@ -76,6 +76,7 @@ export default function CareersPage() {
                 <div className='flex gap-2'>
                   {job.extraInfo.map(([title, link]) => (
                     <Link
+                      key={link}
                       className='mt-8 px-4 py-2 border border-dwd-primary rounded-sm hover:bg-gray-100'
                       target='_blank'
                       href={link}
@@ -105,7 +106,7 @@ export default function CareersPage() {
 
           {/* Small and medium screen cards */}
           <div className='w-full flex lg:hidden flex-col gap-4'>
-            {filteredJobs.map(job => <div className='border border-dwd-primary p-4 rounded-sm'>
+            {filteredJobs.map((job, i) => <div key={i} className='border border-dwd-primary p-4 rounded-sm'>
               <div className='flex flex-col w-full gap-2'>
                 <h3 className='text-lg font-bold'>{job.title}</h3>
                 {job.details && <div>{job.details}</div>}
@@ -113,6 +114,7 @@ export default function CareersPage() {
                 <div className='flex gap-2'>
                   {job.extraInfo.map(([title, link]) => (
                     <Link
+                      key={link}
                       className='mt-8 px-4 py-2 border border-dwd-primary rounded-sm hover:bg-gray-100'
                       target='_blank'
                       href={link}
