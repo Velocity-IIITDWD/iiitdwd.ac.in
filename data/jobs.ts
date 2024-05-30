@@ -185,7 +185,8 @@ export const jobsdata: jobstype[] =[
     "Application": "https://forms.gle/d4KtS25AJHHNGW2X6",
     "Applicationoffline": "",
     "StatusofApplications": "",
-    "Addendum": "/docs/AddendumFacultyRecruitmentMay2022.pdf"
+    // "Addendum": "/docs/AddendumFacultyRecruitmentMay2022.pdf" // doc missing in the old website
+    "Addendum": "",
   },
   {
     "title": "Faculty Recruitment Advertisement May 2022    ",

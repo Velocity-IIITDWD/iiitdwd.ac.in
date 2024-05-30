@@ -31,12 +31,8 @@ const Page = () => {
 
   return (
     <>
+      <h1 className="heading-text">Careers</h1>
       <div className="content flex flex-col items-center pt-[3vh] overflow-x-hidden w-[100%] mb-7">
-        <div id="temp" className="textcont pb-[2vh]">
-          <div className=" Head text-center font-bold z-10 text-[#091d3f] text-6xl p-8">
-            Careers
-          </div>
-        </div>
         <div className="dropdownNsearch px-2 flex items-center gap-5 justify-center w-[100vw] h-10">
           <div className="Dropdown hover:scale-[1.05]  hover:drop-shadow-2xl transition flex items-center">  
             <select
