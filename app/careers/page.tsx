@@ -26,7 +26,7 @@ export default function CareersPage() {
 
   return (
     <div className='flex flex-col w-full h-fit items-center mb-8'>
-      <h1 className='text-2xl font-bold p-8 my-8'>Careers</h1>
+      <h1 className='heading-text font-bold p-8 my-8'>Careers</h1>
 
       {/* Filters */}
       <div className='w-full flex flex-col px-4 gap-4'>
