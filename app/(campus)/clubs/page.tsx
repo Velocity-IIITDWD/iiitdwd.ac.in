@@ -32,7 +32,7 @@ const Club: FC = () => {
   const scrollToClub = (clubName: ClubName) => {
     const element = refs[clubName]?.current;
     if (element) {
-      const offsetTop = element.offsetTop - 46; // Adjust the offset value as needed
+      const offsetTop = element.offsetTop - 46; 
       window.scrollTo({
         top: offsetTop,
         behavior: 'smooth',
