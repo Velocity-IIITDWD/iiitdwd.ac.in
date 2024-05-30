@@ -263,7 +263,7 @@ export default function Home() {
               <span className="text-3xl font-bold">+</span>
             </div>
             <div className="h-[3px] relative flex flex-col w-full border-t-0 bg-transparent bg-gradient-to-r from-transparent via-gray-200 to-transparent opacity-50 after:block after:absolute after:-bottom-1 after:left-1/2 after:w-1/3 after:h-[3px] after:-translate-x-1/2 after:border-t-0 after:bg-transparent after:bg-gradient-to-r after:from-transparent after:via-slate-200 after:to-transparent"></div>
-            <p className="font-semibold">Alumini</p>
+            <p className="font-semibold">Alumni</p>
           </div>
           {/* <div className="flex basis-1/3 px-6 flex-col gap-2 items-center justify-center">
             <div className="flex gap-2 items-center">
