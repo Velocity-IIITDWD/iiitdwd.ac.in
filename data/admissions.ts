@@ -82,16 +82,6 @@ export const links: linksStructure[] = [
     type: 'Quick Links',
     links: [
       {
-        id: 1,
-        link: '',
-        displayText: 'Online B.Tech. Admission Form 2024-25',
-      },
-      {
-        id: 2,
-        link: '',
-        displayText: 'Information Brochure',
-      },
-      {
         id: 3,
         link: '/docs/FEE_2024-25_Sheet1.pdf',
         displayText: 'Fee Structure',
@@ -99,7 +89,7 @@ export const links: linksStructure[] = [
       {
         id: 4,
         link: '/faq',
-        displayText: "FAQ's",
+        displayText: 'FAQ\'s',
       },
     ],
   },
@@ -109,7 +99,7 @@ export const links: linksStructure[] = [
     links: [
       {
         id: 1,
-        link: '',
+        link: '/docs/btech_admission_guidelines_2023.pdf',
         displayText:
           'Guidelines for students alloted through JoSAA/CSAB Counselling (*will be updated soon*)',
       },

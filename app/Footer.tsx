@@ -92,6 +92,7 @@ function Footer() {
             <Link className='hover:underline' href="/pdfs/iiit_ppp_2017.pdf">IIIT PPP Act</Link><span className='select-none'>|</span>
             <Link className='hover:underline' href="/pdfs/ARIIA.pdf">ARIIA</Link><span className='select-none'>|</span>
             <Link className='hover:underline' href="/pdfs/RTI.pdf">RTI</Link>
+
           </div>
           <Link className='hover:underline' href="https://aims.iiitdwd.ac.in/aims/">AIMS</Link>
           <Link className='hover:underline' href="/tenders">Tenders</Link>
