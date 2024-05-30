@@ -114,7 +114,7 @@ export default function Home() {
             <LPA number="35" medianText="Highest CTC" />
           </div>
           <div className="inline-block">
-            <LPA number="20" medianText="Average CTC" />
+            <LPA number="11" medianText="Average CTC" />
           </div>
         </div>
 
@@ -124,7 +124,7 @@ export default function Home() {
           <EmblaCarousel slides={slides} />
         </div>
         <div className="shortbox text-[1.8rem] text-[#013365] font-extrabold ml-[20%] mt-20">
-  Overview
+        Offered Placement CTC
           <div className='mt-20 bar'>
             <BarGraph
               labels={barGraphData.labels}
