@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div>
       <br></br>
-      <h1 className="text-3xl text-dwd-primary mx-9 text-center font-roboto">
+      <h1 className="text-4xl font-bold text-dwd-primary mx-9 text-center font-roboto">
         Events
       </h1>
       <br></br>
@@ -29,7 +29,7 @@ function ComponentEvent({ index }: ComponentEventProps) {
   const eventImageSrc = events[index].href;
   const link: string = '/events/' + events[index].id;
   return (
-    <div className="  bg-gray-200 p-6 rounded-xl transition duration-300 shadow hover:bg-gray-300 hover:text-white cursor-pointer ">
+    <div className="flex flex-col justify-start bg-gray-200 p-6 rounded-xl transition duration-300 shadow hover:bg-gray-300 hover:text-white cursor-pointer ">
       <Image
         // changed
         width={0}
@@ -41,13 +41,13 @@ function ComponentEvent({ index }: ComponentEventProps) {
         alt="Weekly Events"
       />
 
-      <div className="mt-8 ">
+      <div className="mt-8 flex flex-col grow">
         <h2 className="text-xl text-cardText font-bold">
           {events[index].text}
         </h2>
         <p className="text-dwd-primary">Date: {events[index].timestamp}</p>
 
-        <Link href={link}>
+        <Link href={link} className='mt-auto'>
           <button className="mt-4 bg-dwd-primary text-xs text-white px-8 py-4 rounded">
             Know More
           </button>
