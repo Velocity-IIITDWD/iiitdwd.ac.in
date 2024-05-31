@@ -7,7 +7,7 @@ import { Fragment } from 'react';
 export default function Page() {
   return (
     <div className="w-fit max-w-5xl p-4 flex flex-col gap-2 pb-12 overflow-auto">
-      <p className="text-dwd-primary font-bold text-xl text-center mb-2">
+      <p className="text-dwd-primary font-bold text-4xl text-center mb-2">
         B.Tech. Admissions {year}
       </p>
       <Image
