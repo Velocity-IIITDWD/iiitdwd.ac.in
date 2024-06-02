@@ -30,7 +30,14 @@ const Club: FC = () => {
   };
 
   const scrollToClub = (clubName: ClubName) => {
-    refs[clubName]?.current?.scrollIntoView({ behavior: 'smooth' });
+    const element = refs[clubName]?.current;
+    if (element) {
+      const offsetTop = element.offsetTop - 46; 
+      window.scrollTo({
+        top: offsetTop,
+        behavior: 'smooth',
+      });
+    }
   };
 
   return (

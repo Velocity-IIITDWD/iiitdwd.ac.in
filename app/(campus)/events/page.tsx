@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div>
       <br></br>
-      <h1 className="text-3xl font-bold text-dwd-primary mx-9 text-center font-roboto">
+      <h1 className="text-4xl font-bold text-dwd-primary mx-9 text-center font-roboto">
         Events
       </h1>
       <br></br>

@@ -82,7 +82,7 @@ export default function SortSearch({
   };
 
   return (
-    <div className="sm:bg-dwd-secondary1 sm:m-1 flex items-center rounded-md text-sm text-white w-full sm:w-auto self-end sm:self-auto flex-col sm:flex-row gap-2 sm:gap-0 mb-28 md:mb-auto">
+    <div className="sm:bg-dwd-secondary1 sm:m-1 flex sm:items-center rounded-md text-sm text-white w-full sm:w-auto self-end sm:self-auto flex-col sm:flex-row gap-2 sm:gap-0 mb-28 md:mb-auto">
       <div className="flex p-1 gap-1 items-center justify-center  bg-dwd-secondary1 rounded-md w-full select-none">
         <div className="flex items-center justify-center pl-3">
           <span
