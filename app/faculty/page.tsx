@@ -3,31 +3,8 @@ import { FC, useState } from 'react';
 import '@/app/globals.css';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ProfileProps } from '@/data/faculty_profile';
+import { ProfileProps, ProfileProp } from '@/data/faculty_profile';
 import Profile from './[id]/page';
-
-type ProfileProp = {
-  id: string;
-  content: {
-    head: {
-      name: string;
-      profile_pdf: string;
-    };
-
-    card: {
-      photo: string;
-      designation: string;
-      department: string;
-      mail_id: string;
-      cabin_number: string;
-    };
-
-    body: {
-      profile_text: string;
-      interest_areas: { id: number; area: string }[];
-    };
-  };
-};
 
 interface ListProps {
   ll: ProfileProp[];
