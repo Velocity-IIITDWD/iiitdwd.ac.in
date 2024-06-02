@@ -29,6 +29,7 @@ export interface Club {
   aboutText: string;
   members: Member[];
   imagePath: string;
+  isTechnical: boolean;
   instagram?: string;
   linkedin?: string;
   gmail: string;
@@ -51,6 +52,7 @@ const clubs: Club[] = [
       { name: 'EFG', position: 'Event Management Lead' },
     ],
     imagePath: '/images/velocity.png',
+    isTechnical: true,
     github:
       'github.com/velocity-IIITDWD',
     instagram:
@@ -70,6 +72,7 @@ const clubs: Club[] = [
       { name: 'EFG', position: 'Event Management Lead' },
     ],
     imagePath: '/images/iridescence.jpg',
+    isTechnical: false,
     instagram:
       'https://www.instagram.com/iridescence.iiitdwd?igsh=bzBzbjQ3MDJjcnBq',
     linkedin:
@@ -87,6 +90,7 @@ const clubs: Club[] = [
       { name: 'EFG', position: 'Event Management Lead' },
     ],
     imagePath: '/images/gdsc.JPG',
+    isTechnical: true,
     instagram: 'https://www.instagram.com/gdsc_iiitdwd?igsh=MThueGhyZGN2M2dxcw%3D%3D&utm_source=qr',
     linkedin:
       'https://www.linkedin.com/company/gdsc-iiit-dharwad-new/',
@@ -107,6 +111,7 @@ const clubs: Club[] = [
       { name: 'EFG', position: 'Event Management Lead' },
     ],
     imagePath: '/images/return0.png',
+    isTechnical: true,
     instagram:
       'https://www.instagram.com/return0_iiitdwd/',
     linkedin:
@@ -124,6 +129,7 @@ const clubs: Club[] = [
       { name: 'EFG', position: 'Event Management Lead' },
     ],
     imagePath: '/images/blocsoc.jpg',
+    isTechnical: true,
     linkedin:
       'https://www.linkedin.com/company/blocsoc-iiitdwd/',
     gmail: 'mailto:blocsoc@iiitdwd.ac.in',
@@ -140,6 +146,7 @@ const clubs: Club[] = [
       { name: 'EFG', position: 'Event Management Lead' },
     ],
     imagePath: '/images/ieee.jpg',
+    isTechnical: true,
     gmail: 'mailto:ieeestudentbranch@iiitdwd.ac.in',
     gmail2: 'mailto:ieeecompsoc@iiitdwd.ac.in ',
     website: 'https://ewh.ieee.org/sb/bangalore/iiitdwd/'
@@ -155,6 +162,7 @@ const clubs: Club[] = [
       { name: 'EFG', position: 'Event Management Lead' },
     ],
     imagePath: '/images/ecell.jpeg',
+    isTechnical: true,
     gmail: 'mailto:ecell@iiitdwd.ac.in',
     linktree: 'https://linktr.ee/ecell.iiitdwd'
   },
@@ -169,6 +177,7 @@ const clubs: Club[] = [
       { name: 'EFG', position: 'Event Management Lead' },
     ],
     imagePath: '/images/inquizitive.png',
+    isTechnical: true,
     instagram:
       'https://www.instagram.com/inquizitive.iiitdwd/',
     linkedin:
@@ -186,6 +195,7 @@ const clubs: Club[] = [
       { name: 'EFG', position: 'Event Management Lead' },
     ],
     imagePath: '/images/iris.png',
+    isTechnical: true,
     instagram:
       'https://www.instagram.com/iris_iiitdwd?igsh=czJkY3d4YXRwaWYw',
     linkedin:
@@ -203,6 +213,7 @@ const clubs: Club[] = [
       { name: 'EFG', position: 'Event Management Lead' },
     ],
     imagePath: '/images/dsai.png',
+    isTechnical: true,
     instagram:
       'https://www.instagram.com/dsaisoc_iiitdwd?igsh=bmxidWV1ZnpjZmQ0',
     linkedin:
@@ -220,6 +231,7 @@ const clubs: Club[] = [
       { name: 'EFG', position: 'Event Management Lead' },
     ],
     imagePath: '/images/quantumclub.jpeg',
+    isTechnical: true,
     instagram: 'https://www.instagram.com/qciiitdwd?igsh=azZzd3RtMzhndGEx',
     linkedin:
       'https://www.linkedin.com/company/indian-institute-of-information-technology-dharwad-karnataka/posts/?feedView=all',
@@ -236,6 +248,7 @@ const clubs: Club[] = [
       { name: 'EFG', position: 'Event Management Lead' },
     ],
     imagePath: '/images/techniosys.png',
+    isTechnical: true,
     instagram:
       'https://www.instagram.com/techniosys.iiitdwd/',
     linkedin:
@@ -253,6 +266,7 @@ const clubs: Club[] = [
       { name: 'EFG', position: 'Event Management Lead' },
     ],
     imagePath: '/images/zeigeist.jpg',
+    isTechnical: false,
     instagram:
       'https://www.instagram.com/zeitgeist_iiitdwd?igsh=MTljYzl6YmUzdjFjOA==',
     linkedin:
@@ -270,6 +284,7 @@ const clubs: Club[] = [
       { name: 'EFG', position: 'Event Management Lead' },
     ],
     imagePath: '/images/prabodhini.jpg',
+    isTechnical: false,
     instagram:
       'https://www.instagram.com/prabodhini_iiitdwd?igsh=Z2FqbDV6OXZ5NXAy',
     linkedin:
@@ -287,6 +302,7 @@ const clubs: Club[] = [
       { name: 'EFG', position: 'Event Management Lead' },
     ],
     imagePath: '/images/mosaic.jpg',
+    isTechnical: false,
     instagram: 'https://www.instagram.com/mosaic_iiitdwd?igsh=NDc5OGUxcDlocjJ4',
     linkedin:
       'https://www.linkedin.com/company/indian-institute-of-information-technology-dharwad-karnataka/posts/?feedView=all',
@@ -303,6 +319,7 @@ const clubs: Club[] = [
       { name: 'EFG', position: 'Event Management Lead' },
     ],
     imagePath: '/images/inmotion.jpg',
+    isTechnical: false,
     instagram:
       ' https://www.instagram.com/inmotion.iiitdwd?igsh=MXc0eHE2eDc5Ymt3eQ== ',
     linkedin:
@@ -320,6 +337,7 @@ const clubs: Club[] = [
       { name: 'EFG', position: 'Event Management Lead' },
     ],
     imagePath: '/images/drama.jpg',
+    isTechnical: false,
     instagram:
       'https://www.instagram.com/limelight.iiitdwd?igsh=aDVnamd4OG5peWx5',
     linkedin:
@@ -337,6 +355,7 @@ const clubs: Club[] = [
       { name: 'EFG', position: 'Event Management Lead' },
     ],
     imagePath: '/images/music.png',
+    isTechnical: false,
     instagram:
       'https://www.instagram.com/440hz_iiitdwd?igsh=MTVuMWp4OTMxeGNkeQ==',
     linkedin:
@@ -354,6 +373,7 @@ const clubs: Club[] = [
       { name: 'EFG', position: 'Event Management Lead' },
     ],
     imagePath: '/images/dance.PNG',
+    isTechnical: false,
     instagram: 'https://www.instagram.com/velocity_iiitdh/',
     linkedin:
       'https://www.linkedin.com/company/indian-institute-of-information-technology-dharwad-karnataka/posts/?feedView=all',

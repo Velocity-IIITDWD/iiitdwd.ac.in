@@ -8,38 +8,6 @@ import type { ClubName, Club as ClubData } from '../../../data/members';
 const Club: FC = () => {
   const [showTechnicalClubs, setShowTechnicalClubs] = useState(true);
 
-  const refs: Record<ClubName, React.RefObject<HTMLDivElement>> = {
-    Velocity: useRef<HTMLDivElement>(null),
-    Iridescence: useRef<HTMLDivElement>(null),
-    'Return 0': useRef<HTMLDivElement>(null),
-    BlocSoc: useRef<HTMLDivElement>(null),
-    'GDSC IIIT Dharwad': useRef<HTMLDivElement>(null),
-    'E cell': useRef<HTMLDivElement>(null),
-    Inquizitive: useRef<HTMLDivElement>(null),
-    Iris: useRef<HTMLDivElement>(null),
-    'DSAI Society': useRef<HTMLDivElement>(null),
-    'Quantum Computing Club': useRef<HTMLDivElement>(null),
-    Techniosys: useRef<HTMLDivElement>(null),
-    Zeitgeist: useRef<HTMLDivElement>(null),
-    Prabodhini: useRef<HTMLDivElement>(null),
-    'Mosaic Club': useRef<HTMLDivElement>(null),
-    'In Motion': useRef<HTMLDivElement>(null),
-    LimeLight: useRef<HTMLDivElement>(null),
-    '440 Hz': useRef<HTMLDivElement>(null),
-    'Dance Club': useRef<HTMLDivElement>(null),
-  };
-
-  const scrollToClub = (clubName: ClubName) => {
-    const element = refs[clubName]?.current;
-    if (element) {
-      const offsetTop = element.offsetTop - 46;
-      window.scrollTo({
-        top: offsetTop,
-        behavior: 'smooth',
-      });
-    }
-  };
-
   return (
     <div className="container mx-auto py-8 px-4">
       <h1 className="text-3xl font-bold text-center mb-8 text-dwd-primary">
@@ -72,52 +40,29 @@ const Club: FC = () => {
           {showTechnicalClubs ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {clubs
-                .filter(
-                  (club: ClubData) =>
-                    ![
-                      'Zeitgeist',
-                      '440 Hz',
-                      'Dance Club',
-                      'Iridescence',
-                      'Prabodhini',
-                      'Mosaic Club',
-                      'In Motion',
-                      'LimeLight',
-                    ].includes(club.name)
-                )
+                .filter((club: ClubData) => club.isTechnical)
                 .map((club: ClubData) => (
-                  <div
+                  <a
                     key={club.name}
                     className="bg-dwd-primary text-white p-4 cursor-pointer hover:text-sky-600 rounded-lg shadow-md text-center"
-                    onClick={() => scrollToClub(club.name)}
+                    href={`#${club.name}`}
                   >
                     {club.name}
-                  </div>
+                  </a>
                 ))}
             </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {clubs
-                .filter((club: ClubData) =>
-                  [
-                    'Zeitgeist',
-                    '440 Hz',
-                    'Dance Club',
-                    'Iridescence',
-                    'Prabodhini',
-                    'Mosaic Club',
-                    'In Motion',
-                    'LimeLight',
-                  ].includes(club.name)
-                )
+                .filter((club: ClubData) => !club.isTechnical)
                 .map((club: ClubData) => (
-                  <div
+                  <a
                     key={club.name}
                     className="bg-dwd-primary text-white p-4 cursor-pointer hover:text-sky-600 rounded-lg shadow-md text-center"
-                    onClick={() => scrollToClub(club.name)}
+                    href={`#${club.name}`}
                   >
                     {club.name}
-                  </div>
+                  </a>
                 ))}
             </div>
           )}
@@ -128,8 +73,8 @@ const Club: FC = () => {
       <br />
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 gap-y-12">
-        {clubs.map((club: ClubData) => (
-          <div key={club.name} ref={refs[club.name]}>
+        {clubs.filter(club => club.isTechnical === showTechnicalClubs).map((club: ClubData) => (
+          <div key={club.name} id={club.name} className='scroll-m-12'>
             <ClubCard
               {...club}
             />
