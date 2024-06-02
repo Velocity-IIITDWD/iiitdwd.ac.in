@@ -54,7 +54,7 @@ const clubs: Club[] = [
     imagePath: '/images/velocity.png',
     isTechnical: true,
     github:
-      'github.com/velocity-IIITDWD',
+      'https://github.com/velocity-IIITDWD',
     instagram:
       'https://www.instagram.com/velocity.iiitdwd',
     linkedin:
@@ -321,7 +321,7 @@ const clubs: Club[] = [
     imagePath: '/images/inmotion.jpg',
     isTechnical: false,
     instagram:
-      ' https://www.instagram.com/inmotion.iiitdwd?igsh=MXc0eHE2eDc5Ymt3eQ== ',
+      'https://www.instagram.com/inmotion.iiitdwd?igsh=MXc0eHE2eDc5Ymt3eQ== ',
     linkedin:
       'https://www.linkedin.com/company/indian-institute-of-information-technology-dharwad-karnataka/posts/?feedView=all',
     gmail: 'mailto:velocity.iiitdh@gmail.com',
