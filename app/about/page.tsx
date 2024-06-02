@@ -20,7 +20,7 @@ const AboutPage = () => {
 
   return (
     <div className="flex flex-col h-full w-full">
-      <section className="w-full h-[50vh] bg-fixed bg-cover bg-center bg-[url('/images/main_building.jpg')] relative before:z-0 before:absolute before:h-full before:w-full before:left-0 before:top-0 before:bg-[#041E3FB3] flex items-center justify-center"></section>
+      <section className="w-full h-[50vh] bg-cover bg-center bg-[url('/images/main_building.jpg')] relative before:z-0 before:absolute before:h-full before:w-full before:left-0 before:top-0 before:bg-[#041E3FB3] flex items-center justify-center"></section>
       <div
         id="introduction"
         className="my-10 w-full flex flex-col items-center md:px-24 sm:px-10 p-4 gap-6"
@@ -49,7 +49,7 @@ const AboutPage = () => {
 
           <div className="flex flex-col gap-2 lg:border-r border-gray-600 w-full text-dwd-primary text-sm p-4">
             <div className="flex flex-col font-semibold text-base">
-              2. Mission and Vision
+              2. Strategic Goals
             </div>
             <div className="">Mission:</div>
             <ul className="list-disc pl-4">
@@ -230,7 +230,7 @@ const AboutPage = () => {
       </div>
 
       <section className="w-full py-10 bg-cover bg-center bg-[url('/images/main_building.jpg')] relative before:z-0 before:absolute before:h-full before:w-full before:left-0 before:top-0 before:bg-[#041E3FB3] flex items-center justify-center">
-        <div className="z-[1] text-white flex items-center justify-center flex-col gap-10 max-w-[1000px] w-full">
+        <div className="z-[1] px-4 text-white flex items-center justify-center flex-col gap-10 max-w-[1000px] w-full">
           <p className="text-3xl font-bold">Our Mission</p>
           <div className="flex flex-col gap-6 md:flex-row">
             <div className="bg-white text-dwd-primary basis-1/3 rounded p-3">
@@ -252,23 +252,40 @@ const AboutPage = () => {
 
       <section className="w-full gap-8 text-dwd-primary py-10 flex-col bg-cover bg-center relative flex items-center justify-center">
         <p className="text-3xl font-bold">Core Values</p>
-        <div className="flex text-lg gap-6 font-semibold flex-wrap">
-          <div>Integrity</div>
-          <div>Service</div>
-          <div>Positivity</div>
-          <div>Commitment</div>
-          <div>Passion for Technology</div>
+        <div className="flex text gap-6 font-[500] text-[#465766] flex-col md:flex-row text-center">
+          <div className="py-2 px-3 rounded shadow-lg bg-[#eff7ff]">
+            Integrity
+          </div>
+          <div className="py-2 px-3 rounded shadow-lg bg-[#eff7ff]">
+            Service
+          </div>
+          <div className="py-2 px-3 rounded shadow-lg bg-[#eff7ff]">
+            Positivity
+          </div>
+          <div className="py-2 px-3 rounded shadow-lg bg-[#eff7ff]">
+            Commitment
+          </div>
+          <div className="py-2 px-3 rounded shadow-lg bg-[#eff7ff]">
+            Passion for Technology
+          </div>
         </div>
       </section>
 
-      <iframe
-        className="w-full aspect-video"
-        src="https://www.youtube.com/embed/5A8hThnROHs?si=QsaWacwdQSoRBXFG&autoplay=1&mute=1&showinfo=0&controls=0&vq=hd720"
-        frameBorder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-        title="YouTube video player"
-      ></iframe>
+      <section className="w-full bg-gray-200 px-2 md:px-10 lg:px-16 py-10 flex flex-col md:flex-row">
+        <div className="basis-1/2 font-semibold text-dwd-primary mb-4">
+          A Short Video on our Campus
+        </div>
+        <div className="basis-1/2 rounded overflow-hidden border-gray-400 border shadow">
+          <iframe
+            className="w-full aspect-video"
+            src="https://www.youtube.com/embed/5A8hThnROHs?si=QsaWacwdQSoRBXFG&autoplay=1&mute=1&showinfo=0&controls=0&vq=hd720"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            title="YouTube video player"
+          ></iframe>
+        </div>
+      </section>
 
       {/* <div id="introduction" />
       <AboutIIIT aboutText={about.aboutText} />

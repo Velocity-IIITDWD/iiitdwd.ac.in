@@ -46,7 +46,7 @@ export default function Home() {
                     className="md:w-[80%] w-full h-[80%] md:h-full relative object-cover object-top"
                   />
 
-                  <div className="absolute bottom-4 left-1/2 w-fit max-w-full -translate-x-1/2 bg-slate-900/40 backdrop-blur p-2 rounded text-white text-center">
+                  <div className="absolute text-sm md:text-base bottom-4 left-1/2 w-fit max-w-full -translate-x-1/2 bg-slate-900/40 backdrop-blur p-2 rounded text-white text-center">
                     {item?.caption}
                   </div>
                 </CardContent>
@@ -67,7 +67,7 @@ export default function Home() {
                   className="md:w-[80%] w-full h-[80%] md:h-full relative object-cover object-top"
                 />
 
-                <div className="absolute bottom-4 left-1/2 w-fit max-w-full -translate-x-1/2 bg-slate-900/40 backdrop-blur p-2 rounded text-white text-center">
+                <div className="absolute text-sm md:text-base bottom-4 left-1/2 w-fit max-w-full -translate-x-1/2 bg-slate-900/40 backdrop-blur p-2 rounded text-white text-center">
                   {item?.caption}
                 </div>
               </CardContent>
@@ -91,10 +91,7 @@ export default function Home() {
             <div className="text-dwd-primary font-semibold text-xl">
               Announcements
             </div>
-            <Link
-              href={'/announcements'}
-              className="text-red-500 rounded px-2 py-1 bg-red-300/50"
-            >
+            <Link href={'/announcements'} className="text-red-500">
               View all
             </Link>
           </div>
@@ -156,7 +153,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="w-full flex my-16 flex-col gap-4">
+      {/* <section className="w-full flex my-16 flex-col gap-4">
         <div className="flex justify-center gap-4 flex-col w-full max-w-[1000px] mx-auto lg:flex-row">
           <div className="shadow-lg rounded w-full basis-1/2 flex flex-col gap-3 text-black p-4">
             <div className="w-full flex justify-between items-center">
@@ -184,18 +181,18 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section
         style={{
           backgroundImage: `url(${Programs[program]?.image})`,
         }}
-        className="min-h-[60vh] mb-16 bg-fixed w-full p-4 bg-cover relative bg-center before:z-0 before:absolute before:h-full before:w-full before:left-0 before:top-0 before:bg-[#041E3FB3]"
+        className="my-16 bg-fixed w-full p-4 bg-cover relative bg-center before:z-0 before:absolute before:h-full before:w-full before:left-0 before:top-0 before:bg-[#041E3FB3]"
       >
-        <div className="w-full relative flex-none z-[1] max-w-[1200px] mx-auto h-full flex flex-col lg:flex-row gap-4 px-4 py-10">
+        <div className="w-full relative flex-none items-center justify-center z-[1] max-w-[1200px] mx-auto h-full flex flex-col lg:flex-row gap-4 px-4 py-10">
           <div className="flex gap-1 text-dwd-primary flex-col bg-white rounded h-full p-8 pt-10">
             <p className="text-4xl font-bold">Academic</p>
-            <p className="text-4xl font-bold mb-4">Programme</p>
+            <p className="text-4xl font-bold mb-4">Programmes</p>
             <div
               onClick={() => setProgram(0)}
               className={`p-2 uppercase font-semibold hover:text-white rounded cursor-pointer transition-colors duration-200 ease-linear bg_slider ${
@@ -227,7 +224,7 @@ export default function Home() {
               Electronics and Communications Engineering
             </div>
           </div>
-          <div className="w-full flex-1 gap-4 h-full text-white flex flex-col pl-10">
+          <div className="w-full flex-1 gap-4 h-full text-white flex flex-col md:pl-10">
             <p className="text-2xl font-semibold">{Programs[program]?.title}</p>
             <p className="text-base">{Programs[program]?.description}</p>
           </div>

@@ -111,13 +111,13 @@ export default function Curriculum({ type }: { type: number }) {
               <TableHead className="border border-t-0 border-slate-400 text-slate-900 w-[160px]">
                 Course Code
               </TableHead>
-              <TableHead className="border border-t-0 border-slate-400 text-slate-900">
+              <TableHead className="border border-t-0 border-slate-400 min-w-[180px] text-slate-900">
                 Course
               </TableHead>
-              <TableHead className="border border-t-0 border-slate-400 text-slate-900 w-[160px]">
+              <TableHead className="border border-t-0 border-slate-400 text-slate-900 min-w-[120px]">
                 Credits
               </TableHead>
-              <TableHead className="border border-t-0 border-slate-400 text-slate-900 w-[400px]">
+              <TableHead className="border border-t-0 border-slate-400 text-slate-900 min-w-[250px]">
                 Prerequisites
               </TableHead>
             </TableRow>

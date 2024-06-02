@@ -74,21 +74,21 @@ export const Programs: ProgramsType[] = [
     image: '/images/cse_program.jpg',
     title: 'Computer Science and Engineering (B. Tech.)',
     description:
-      "The Computer Science and Engineering (CSE) program at IIIT Dharwad, an Institute of National Importance established in 2015, offers a robust curriculum covering core and advanced topics like AI, machine learning, and cybersecurity. With strong industry collaboration, state-of-the-art facilities, and a focus on research, students gain practical experience and innovative skills. Located in the educational hub of Hubballi-Dharwad, IIIT Dharwad provides a vibrant academic environment. Graduates are well-equipped for diverse career paths in software development, research, and leadership roles, contributing to India's global IT leadership.",
+      "The Computer Science and Engineering program at IIIT Dharwad offers a robust curriculum in AI, machine learning, and cybersecurity. Established in 2015, it features strong industry collaboration, state-of-the-art facilities, and a research focus. Graduates excel in software development, research, and leadership, contributing to India's global IT leadership.",
     link: '/academics/departments/cse',
   },
   {
     image: '/images/dsai_program.jpg',
     title: 'Data Science and Artificial Intelligence (B. Tech.)',
     description:
-      "The Data Science and Artificial Intelligence (DSAI) program at IIIT Dharwad, an Institute of National Importance established in 2015, offers a comprehensive curriculum that covers core and advanced topics such as big data analytics, machine learning, and deep learning. With a strong emphasis on industry collaboration, cutting-edge facilities, and a focus on research, students acquire practical skills and innovative expertise. Situated in the educational hub of Hubballi-Dharwad, IIIT Dharwad fosters a vibrant academic environment. Graduates are well-prepared for diverse career paths in data science, AI research, and technology leadership, contributing to India's global prominence in AI and data-driven innovation.",
+      'The Data Science and Artificial Intelligence (DSAI) program at IIIT Dharwad offers a comprehensive curriculum in big data analytics, machine learning, and deep learning. With industry collaboration, cutting-edge facilities, and a research focus, students gain practical skills. Graduates are prepared for careers in data science, AI research, and technology leadership.',
     link: '/academics/departments/dsai',
   },
   {
     image: '/images/ece_program.jpg',
     title: 'Electronics and Communication Engineering (B. Tech.)',
     description:
-      "The Electronics and Communication Engineering (ECE) program at IIIT Dharwad, an Institute of National Importance established in 2015, offers a robust curriculum that spans core and advanced topics like embedded systems, wireless communication, and VLSI design. With extensive industry collaboration, state-of-the-art facilities, and a strong research focus, students gain hands-on experience and innovative skills. Located in the educational hub of Hubballi-Dharwad, IIIT Dharwad provides a dynamic academic environment. Graduates are well-equipped for diverse career paths in electronics, communication systems, and research, playing a key role in advancing India's technology and engineering sectors.",
+      "The Electronics and Communication Engineering program at IIIT Dharwad offers a robust curriculum in embedded systems, wireless communication, and VLSI design. Established in 2015, it features strong industry collaboration and research focus. Graduates excel in electronics, communication systems, and research, advancing India's technology and engineering sectors.",
     link: '/academics/departments/ece',
   },
 ];

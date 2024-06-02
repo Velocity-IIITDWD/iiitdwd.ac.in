@@ -36,16 +36,18 @@ function ComponentEvent({ index }: ComponentEventProps) {
         height={0}
         sizes="100%"
         // className="w-full h-72 object-cover rounded-lg"
-        className=" h-72 object-cover w-full"
+        className=" h-72 object-cover flex-none w-full"
         src={eventImageSrc}
         alt="Weekly Events"
       />
 
-      <div className="p-5 text-dwd-primary">
-        <p className="text-lg leading-tight font-semibold tracking-tight">
-          {events[index].text}
-        </p>
-        <p className="text-xs">{events[index].organiser?.name}</p>
+      <div className="p-5 h-full flex-1 justify-between flex flex-col text-dwd-primary">
+        <div>
+          <p className="text-lg leading-tight font-semibold tracking-tight">
+            {events[index].text}
+          </p>
+          <p className="text-xs">{events[index].organiser?.name}</p>
+        </div>
         <div className="flex gap-2 items-center mt-4">
           <p className="text-xs font-semibold px-4 py-2 rounded-full border border-dwd-primary">
             Date: {events[index].timestamp}
