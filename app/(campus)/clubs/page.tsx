@@ -1,6 +1,6 @@
 'use client';
 import React, { FC, useState, useRef } from 'react';
-import { LinkedinIcon, Instagram, Mail } from 'lucide-react';
+import { LinkedinIcon, Instagram, Mail, Github, ExternalLink, QrCode, Twitter } from 'lucide-react';
 import Image from 'next/image';
 import clubs from '../../../data/members';
 import type { ClubName, Club as ClubData } from '../../../data/members';
@@ -72,7 +72,7 @@ const Club: FC = () => {
       <br />
       <br />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 gap-y-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 gap-y-16">
         {clubs.filter(club => club.isTechnical === showTechnicalClubs).map((club: ClubData) => (
           <div key={club.name} id={club.name} className='scroll-m-12'>
             <ClubCard
@@ -93,6 +93,11 @@ const ClubCard: FC<{
   instagram?: string;
   linkedin?: string;
   gmail: string;
+  gmail2?: string;
+  website?: string;
+  github?: string;
+  twitter?: string;
+  linktree?: string;
 }> = ({
   name,
   aboutText,
@@ -101,6 +106,11 @@ const ClubCard: FC<{
   instagram,
   linkedin,
   gmail,
+  gmail2,
+  website,
+  github,
+  twitter,
+  linktree,
 }) => {
   const [showAbout, setShowAbout] = useState(true);
   return (
@@ -154,13 +164,37 @@ const ClubCard: FC<{
             </div>
           )}
         </div>
-        <div className="flex justify-center space-x-4 hidden">
-          <a
+        <div className="flex justify-center space-x-4">
+          {github ? <a
+            href={github}
+            className="flex gap-2 hover:text-pink-600 hover:duration-800 hover:animate-pulse"
+          >
+            <Github size="2rem" />
+          </a> : ''}
+          {website ? <a
+            href={website}
+            className="flex gap-2 hover:text-pink-600 hover:duration-800 hover:animate-pulse"
+          >
+            <ExternalLink size="2rem" />
+          </a> : ''}
+          {linktree ? <a
+            href={linktree}
+            className="flex gap-2 hover:text-pink-600 hover:duration-800 hover:animate-pulse"
+          >
+            <QrCode size="2rem" />
+          </a> : ''}
+          {linktree ? <a
+            href={twitter}
+            className="flex gap-2 hover:text-pink-600 hover:duration-800 hover:animate-pulse"
+          >
+            <Twitter size="2rem" />
+          </a> : ''}
+          {instagram ? <a
             href={instagram}
-            className="flex gap-2 hover:text-pink-600 hover:duration-800 hover:animate-ping"
+            className="flex gap-2 hover:text-pink-600 hover:duration-800 hover:animate-pulse"
           >
             <Instagram size="2rem" />
-          </a>
+          </a> : ''}
           <a
             href={linkedin}
             className="flex gap-2 hover:text-blue-800 hover:duration-800 hover:animate-pulse"
@@ -173,6 +207,12 @@ const ClubCard: FC<{
           >
             <Mail size="2rem" />
           </a>
+          {gmail2 ? <a
+            href={gmail2}
+            className="flex gap-2 hover:text-red-700 hover:duration-800 hover:animate-pulse"
+          >
+            <Mail size="2rem" />
+          </a> : ''}
         </div>
       </div>
     </div>
