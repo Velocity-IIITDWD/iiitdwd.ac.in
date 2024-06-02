@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div>
       <br></br>
-      <h1 className="text-3xl text-dwd-primary mx-9 text-center font-roboto">
+      <h1 className="text-3xl font-bold text-dwd-primary mx-9 text-center font-roboto">
         Events
       </h1>
       <br></br>
@@ -29,29 +29,34 @@ function ComponentEvent({ index }: ComponentEventProps) {
   const eventImageSrc = events[index].href;
   const link: string = '/events/' + events[index].id;
   return (
-    <div className="  bg-gray-200 p-6 rounded-xl transition duration-300 shadow hover:bg-gray-300 hover:text-white cursor-pointer ">
+    <div className="bg-gray-100 gap-2 flex flex-col overflow-hidden rounded-xl transition duration-300 shadow-lg hover:bg-gray-50 hover:text-white cursor-pointer ">
       <Image
         // changed
         width={0}
         height={0}
         sizes="100%"
         // className="w-full h-72 object-cover rounded-lg"
-        className="mx-auto my-auto w-fit h-72 object-cover rounded-lg"
+        className=" h-72 object-cover w-full"
         src={eventImageSrc}
         alt="Weekly Events"
       />
 
-      <div className="mt-8 ">
-        <h2 className="text-xl text-cardText font-bold">
+      <div className="p-5 text-dwd-primary">
+        <p className="text-lg leading-tight font-semibold tracking-tight">
           {events[index].text}
-        </h2>
-        <p className="text-dwd-primary">Date: {events[index].timestamp}</p>
+        </p>
+        <p className="text-xs">{events[index].organiser?.name}</p>
+        <div className="flex gap-2 items-center mt-4">
+          <p className="text-xs font-semibold px-4 py-2 rounded-full border border-dwd-primary">
+            Date: {events[index].timestamp}
+          </p>
 
-        <Link href={link}>
-          <button className="mt-4 bg-dwd-primary text-xs text-white px-8 py-4 rounded">
-            Know More
-          </button>
-        </Link>
+          <Link href={link}>
+            <button className=" bg-dwd-primary text-xs text-white px-4 py-2 rounded-full">
+              Know More
+            </button>
+          </Link>
+        </div>
       </div>
     </div>
   );

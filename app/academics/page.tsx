@@ -6,7 +6,7 @@ import FirstConvocation from '@/assets/academics/FirstConvocation.jpg';
 export default function page() {
   return (
     <div className="flex flex-col h-full w-full">
-      <section className="w-full h-[50vh] bg-cover bg-center bg-[url('/images/LandingPage.png')] relative before:z-0 before:absolute before:h-full before:w-full before:left-0 before:top-0 before:bg-gray-900/70 flex items-center justify-center">
+      <section className="w-full h-[50vh] bg-cover bg-center bg-[url('/images/LandingPage.png')] relative before:z-0 before:absolute before:h-full before:w-full before:left-0 before:top-0 before:bg-[#041E3FB3] flex items-center justify-center">
         <p className="text-white z-[1] text-3xl font-bold">Academics</p>
       </section>
 

@@ -16,14 +16,13 @@ import { Metadata } from 'next';
 export default function page() {
   return (
     <div className="w-full min-h-screen h-full flex flex-col gap-10 item-center ">
-      <section className="w-full h-[50vh] bg-cover bg-center bg-[url('/images/LandingPage.png')] relative before:z-0 before:absolute before:h-full before:w-full before:left-0 before:top-0 before:bg-gray-900/70 flex items-center justify-center">
+      <section className="w-full h-[50vh] bg-cover bg-center bg-[url('/images/LandingPage.png')] relative before:z-0 before:absolute before:h-full before:w-full before:left-0 before:top-0 before:bg-[#041E3FB3] flex items-center justify-center">
         <p className="text-white z-[1] text-3xl font-bold text-center">
           Data Science and Artificial Intelligence (DSAI)
         </p>
       </section>
-      <div className="w-full lg:px-24 px-4 md:px-10 items-center flex md:flex-row gap-16 flex-col md:justify-between">
-        <div className="flex flex-col md:w-1/2">
-          <h1 className="text-dwd-primary text-xl font-bold pb-3"></h1>
+      <div className="w-full lg:px-24 px-4 md:px-10 items-center flex lg:flex-row gap-16 flex-col lg:justify-between">
+        <div className="flex flex-col lg:w-1/2 bg-slate-200 rounded shadow-lg p-4">
           <p className="text-dwd-primary mb-2">
             The DSAI program at IIIT Dharwad emphasizes:
           </p>
@@ -60,7 +59,7 @@ export default function page() {
           </ul>
         </div>
 
-        <div className="md:w-1/2 max-w-[600px] rounded overflow-hidden shadow-lg border border-slate-400">
+        <div className="lg:w-1/2 max-w-[600px] rounded overflow-hidden shadow-lg border border-slate-400">
           <Table className="text-slate-900 overflow-hidden rounded">
             <TableHeader className="bg-slate-200">
               <TableRow>

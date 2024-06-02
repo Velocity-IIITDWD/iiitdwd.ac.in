@@ -118,6 +118,31 @@
   font-weight: bold; /* Adjust font weight as needed */
 }
 
+.bg_slider {
+  --initialTextColor: #041e3f;
+  --slideTextColor: #fff;
+
+  --initialBgColor: #fff;
+  --slideBgColor: #041e3f;
+
+  background-image: linear-gradient(
+    90deg,
+    var(--initialBgColor) 0%,
+    var(--initialBgColor) 50%,
+    var(--slideBgColor) 50%,
+    var(--slideBgColor) 100%
+  );
+  background-size: 200%;
+  transition: background-position 0.3s cubic-bezier(0.47, 0.1, 1, 0.63),
+    color 0.2s linear;
+  transition-delay: 0s, 0.15s;
+}
+
+.bg_slider:hover {
+  cursor: pointer;
+  background-position: -100% 100%;
+}
+
 .scrolling-text {
   transform: translateY(100%);
   animation: my-animation 15s linear infinite;
@@ -148,9 +173,9 @@
   margin-left: auto;
 }
 
-.procedure:hover {
-  scale: 1.4;
-  transition-duration: 0.2s;
+.shadow_inset {
+  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset,
+    rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
 }
 
 .embla {
