@@ -5,6 +5,7 @@ export type ClubName =
   | 'BlocSoc'
   | 'GDSC IIIT Dharwad'
   | 'E cell'
+  | 'IEEE SB & CS'
   | 'Inquizitive'
   | 'Iris'
   | 'DSAI Society'
@@ -28,28 +29,35 @@ export interface Club {
   aboutText: string;
   members: Member[];
   imagePath: string;
-  instagram: string;
-  linkedin: string;
+  instagram?: string;
+  linkedin?: string;
   gmail: string;
+  gmail2?: string;
+  website?: string;
+  github?: string;
+  twitter?: string;
+  linktree?: string;
 }
 
 const clubs: Club[] = [
   {
     name: 'Velocity',
     aboutText:
-      'It is the web development club of IIIT Dharwad. Its aim is to foster a community of developers and spread development culture and knowledge.At Velocity Club, our mission is to empower students with the knowledge and skills needed to excel in the field of web development. ',
+      ' Velocity is the development club of IIIT Dharwad aiming to cultivate and foster a development culture among all the students. The club encompasses a community that allows everyone to participate and grow together. Velocity has held many events and workshops to build a strong confidence and foundation among all batches in development.',
     members: [
       { name: 'ABC', position: 'President' },
       { name: 'BCD', position: 'Vice President' },
       { name: 'DEF', position: 'Social Media Lead' },
       { name: 'EFG', position: 'Event Management Lead' },
     ],
-    imagePath: '/images/velocity.jpeg',
+    imagePath: '/images/velocity.png',
+    github:
+      'github.com/velocity-IIITDWD',
     instagram:
-      'https://www.instagram.com/velocity.iiitdwd?igsh=amRzdGpoOGlzbWNs',
+      'https://www.instagram.com/velocity.iiitdwd',
     linkedin:
-      'https://www.linkedin.com/company/indian-institute-of-information-technology-dharwad-karnataka/posts/?feedView=all',
-    gmail: 'mailto:velocity.iiitdh@gmail.com',
+      'https://www.linkedin.com/company/velocity-iiit-dharwad/',
+    gmail: 'mailto:velocity@iiitdwd.ac.in',
   },
   {
     name: 'Iridescence',
@@ -71,58 +79,75 @@ const clubs: Club[] = [
   {
     name: 'GDSC IIIT Dharwad',
     aboutText:
-      'The Google Developer Student Club (GDSC) at IIIT Dharwad is an active and innovative student organization that aims to empower students with the knowledge and skills needed to thrive in the tech industry.The motto of this club is to -  Learn. Grow. Connect.',
+      'Google Developer Students Club is a community group for students who are interested in technology, especially technology from Google. It is a place to grow as a developer, starting from a beginner developer with resources and labs provided by google itself. From app dev, web dev, AI/ML, Cloud computing and IoT we host workshops and competitions and there is something for everyone. GDSC is not always about “programming” but also about connecting, learning together and growing together. We guide them in their career journey from internships to hackathons and leaderships skills. Come discover your inner potential with GDSC!',
     members: [
       { name: 'ABC', position: 'President' },
       { name: 'BCD', position: 'Vice President' },
       { name: 'DEF', position: 'Social Media Lead' },
       { name: 'EFG', position: 'Event Management Lead' },
     ],
-    imagePath: '/images/gdsc.jpeg',
-    instagram: 'https://www.instagram.com/gdsc_iiitdwd?igsh=ZnJlazVoMnJ2N2N0',
+    imagePath: '/images/gdsc.JPG',
+    instagram: 'https://www.instagram.com/gdsc_iiitdwd?igsh=MThueGhyZGN2M2dxcw%3D%3D&utm_source=qr',
     linkedin:
-      'https://www.linkedin.com/company/indian-institute-of-information-technology-dharwad-karnataka/posts/?feedView=all',
-    gmail: 'mailto:velocity.iiitdh@gmail.com',
+      'https://www.linkedin.com/company/gdsc-iiit-dharwad-new/',
+    gmail: 'mailto:gdsc@iiitdwd.ac.in',
+    twitter: 'https://twitter.com/gdsc_iiitdwd',
+    github: 'https://github.com/GDSC-IIIT-Dharwad-24',
+    linktree: 'https://linktr.ee/gdsc_iiitdwd'
+
   },
   {
     name: 'Return 0',
     aboutText:
-      'It is the competitive programming club of IIIT Dharwad. Its aim is to improve coding culture in our college. The club helps students develop problem solving skills by conducting regular contest discussions and problem solving sessions .',
+      'Return 0 is the competitive programming club of IIIT Dharwad, dedicated to fostering a vibrant community of algorithmic problem solvers. Our club encourages participation in coding competitions and problem-solving activities to enhance analytical and programming skills. Through interactive sessions, discussions, and various competitions, we promote continuous learning and growth in the field of competitive programming.',
     members: [
       { name: 'ABC', position: 'President' },
       { name: 'BCD', position: 'Vice President' },
       { name: 'DEF', position: 'Social Media Lead' },
       { name: 'EFG', position: 'Event Management Lead' },
     ],
-    imagePath: '/images/return0.jpeg',
+    imagePath: '/images/return0.png',
     instagram:
-      'https://www.instagram.com/return0_iiitdwd?igsh=anFuZXl5cnNmZnJm',
+      'https://www.instagram.com/return0_iiitdwd/',
     linkedin:
-      'https://www.linkedin.com/company/indian-institute-of-information-technology-dharwad-karnataka/posts/?feedView=all',
-    gmail: 'mailto:velocity.iiitdh@gmail.com',
+      'https://www.linkedin.com/company/return-0/ ',
+    gmail: 'mailto:return0@iiitdwd.ac.in',
   },
   {
     name: 'BlocSoc',
     aboutText:
-      'It is a club related to BlockChain development and Web3 Technology. The club aims to create a thriving community of students who are passionate about decentralized technologies, smart contracts, and the transformative potential of blockchain.',
+      'BlocSoc is an active community focused on the exploration and advancement of blockchain technology. Our club unites enthusiasts and developers to learn, collaborate, and drive innovation in the blockchain arena.',
     members: [
       { name: 'ABC', position: 'President' },
       { name: 'BCD', position: 'Vice President' },
       { name: 'DEF', position: 'Social Media Lead' },
       { name: 'EFG', position: 'Event Management Lead' },
     ],
-    imagePath: '/images/blocsoc.jpeg',
-    instagram:
-      'https://www.instagram.com/blocsoc.iiitdwd?igsh=azY3bHhnaHFyZ2M1',
+    imagePath: '/images/blocsoc.jpg',
     linkedin:
-      'https://www.linkedin.com/company/indian-institute-of-information-technology-dharwad-karnataka/posts/?feedView=all',
-    gmail: 'mailto:velocity.iiitdh@gmail.com',
+      'https://www.linkedin.com/company/blocsoc-iiitdwd/',
+    gmail: 'mailto:blocsoc@iiitdwd.ac.in',
+    twitter: 'https://x.com/Blocsoc_iiit?t=zlDtzBc6QZao2D24ej52Tg&s=09'
   },
-
+  {
+    name: 'IEEE SB & CS',
+    aboutText:
+      'The IEEE Student Branch and Computer Society of IIIT Dharwad serves as a vibrant hub for students passionate about technology, engineering, and innovation. Our branch fosters a community of learning, collaboration, and professional growth. We aim to empower students with the knowledge, skills, and networking opportunities essential for success in the various field of technology. Through a wide range of activities, workshops, seminars, and projects.',
+    members: [
+      { name: 'ABC', position: 'President' },
+      { name: 'BCD', position: 'Vice President' },
+      { name: 'DEF', position: 'Social Media Lead' },
+      { name: 'EFG', position: 'Event Management Lead' },
+    ],
+    imagePath: '/images/ieee.jpg',
+    gmail: 'mailto:ieeestudentbranch@iiitdwd.ac.in',
+    gmail2: 'mailto:ieeecompsoc@iiitdwd.ac.in ',
+    website: 'https://ewh.ieee.org/sb/bangalore/iiitdwd/'
+  },
   {
     name: 'E cell',
     aboutText:
-      'Community to promote entrepreneurship culture. On our way to build a network of students, mentors & entrepreneurs.We invite entrepreneurs and conduct several events, seminars, webinars and workshops for the students of and beyond our college',
+      'E-Cell Club at IIIT Dharwad is a dynamic platform designed to empower students with entrepreneurial ambitions. We are dedicated to nurturing the entrepreneurial spirit within our students by providing them with the resources, mentorship, and opportunities they need to succeed. Our club is a hub for innovation and creativity, where students can explore their ideas, develop business skills, and connect with like-minded individuals and industry professionals. Through a series of interactive sessions, workshops, and competitions, we aim to enhance business acumen and instill the confidence required to launch successful startups.',
     members: [
       { name: 'ABC', position: 'President' },
       { name: 'BCD', position: 'Vice President' },
@@ -130,61 +155,59 @@ const clubs: Club[] = [
       { name: 'EFG', position: 'Event Management Lead' },
     ],
     imagePath: '/images/ecell.jpeg',
-    instagram: 'https://www.instagram.com/ecell.iiitdwd?igsh=YXZremJ0M2gzZ2Qw',
-    linkedin:
-      'https://www.linkedin.com/company/indian-institute-of-information-technology-dharwad-karnataka/posts/?feedView=all',
-    gmail: 'mailto:velocity.iiitdh@gmail.com',
+    gmail: 'mailto:ecell@iiitdwd.ac.in',
+    linktree: 'https://linktr.ee/ecell.iiitdwd'
   },
   {
     name: 'Inquizitive',
     aboutText:
-      'The Official Quiz Club of IIIT Dharwad. We conduct trivia and technical quizzes for students of all years at our institute. We are a team of highly motivated individuals who actively foster the budding quizzing culture at IIIT Dharwad.It is dedicated to promoting intellectual curiosity, critical thinking, and knowledge sharing through the art of quizzing.',
+      'We at InQuizitive are dedicated to inculcating a culture of curiosity and knowledge among the students of IIIT Dharwad through quizzing. Our club regularly organizes innovative quizzes covering a wide range of topics, including technology, science, and pop culture. We strive to enhance the critical thinking of students by providing a platform for all to challenge themselves while learning in a positive and engaging environment.',
     members: [
       { name: 'ABC', position: 'President' },
       { name: 'BCD', position: 'Vice President' },
       { name: 'DEF', position: 'Social Media Lead' },
       { name: 'EFG', position: 'Event Management Lead' },
     ],
-    imagePath: '/images/inquizitive.jpeg',
+    imagePath: '/images/inquizitive.png',
     instagram:
-      'https://www.instagram.com/inquizitive.iiitdwd?igsh=MXEwMHZxdzNrYmRqdw==',
+      'https://www.instagram.com/inquizitive.iiitdwd/',
     linkedin:
-      'https://www.linkedin.com/company/indian-institute-of-information-technology-dharwad-karnataka/posts/?feedView=all',
-    gmail: 'mailto:velocity.iiitdh@gmail.com',
+      'https://www.linkedin.com/company/inquizitive-iiit-dharwad/',
+    gmail: 'mailto:inquizitive@iiitdwd.ac.in',
   },
   {
     name: 'Iris',
     aboutText:
-      'Innovation & Robotics Club of IIIT Dharwad Students.Our club is dedicated to fostering a passion for robotics and providing students with hands-on experience in the field. We conduct regular workshops, competitions, and events to help students learn about the latest developments in robotics and explore the endless possibilities of this exciting field.',
+      'IRIS is a dynamic community of students united by a shared passion for robotics and technology. Whether you\'re a seasoned robotics enthusiast or just starting to explore the world of engineering, our club offers a welcoming space for everyone. Beyond robotics, we delve into various domains including compilers, IoT, circuit designing, and VLSI, providing a broad spectrum of opportunities for learning and innovation. Join us to collaborate, learn, and contribute to exciting technological advancements.',
     members: [
       { name: 'ABC', position: 'President' },
       { name: 'BCD', position: 'Vice President' },
       { name: 'DEF', position: 'Social Media Lead' },
       { name: 'EFG', position: 'Event Management Lead' },
     ],
-    imagePath: '/images/iris.jpeg',
+    imagePath: '/images/iris.png',
     instagram:
-      'https://www.instagram.com/iris_iiitdwd?igsh=MXhjNHMya2tzOWU0dw==',
+      'https://www.instagram.com/iris_iiitdwd?igsh=czJkY3d4YXRwaWYw',
     linkedin:
-      'https://www.linkedin.com/company/indian-institute-of-information-technology-dharwad-karnataka/posts/?feedView=all',
-    gmail: 'mailto:velocity.iiitdh@gmail.com',
+      'https://www.linkedin.com/company/iris-iiitdwd/',
+    gmail: 'mailto:iris@iiitdwd.ac.in',
   },
   {
     name: 'DSAI Society',
     aboutText:
-      '"Bringing forth Data Scientists out of budding enthusiasts". Hustling forward with the goal of promoting Data Science culture among the students, and creating unprecedented Data Scientists. We believe that every student should have the opportunity to learn Data Science and develop a passion for it, and we aim to provide the best environment for it.',
+      'The DSAI Society at IIIT Dharwad is a student-run club focused on promoting knowledge and interest in Data Science and Artificial Intelligence. It provides a platform for students to learn, collaborate, and innovate in the fields of data science, machine learning, and AI. The society organizes workshops, seminars, competitions, and learning challenges to help students enhance their skills and stay updated with the latest advancements in the industry. Through these activities, the DSAI Society aims to foster a community of tech enthusiasts and prepare students for careers in these rapidly evolving fields.',
     members: [
       { name: 'ABC', position: 'President' },
       { name: 'BCD', position: 'Vice President' },
       { name: 'DEF', position: 'Social Media Lead' },
       { name: 'EFG', position: 'Event Management Lead' },
     ],
-    imagePath: '/images/dsai.jpeg',
+    imagePath: '/images/dsai.png',
     instagram:
-      'https://www.instagram.com/dsaisoc_iiitdwd?igsh=ajh3N2tzeHE5b3Rt',
+      'https://www.instagram.com/dsaisoc_iiitdwd?igsh=bmxidWV1ZnpjZmQ0',
     linkedin:
-      'https://www.linkedin.com/company/indian-institute-of-information-technology-dharwad-karnataka/posts/?feedView=all',
-    gmail: 'mailto:velocity.iiitdh@gmail.com',
+      'https://www.linkedin.com/company/dsai-society-iiitdharwad/',
+    gmail: 'mailto:dsaisoc@iiitdwd.ac.in',
   },
   {
     name: 'Quantum Computing Club',
@@ -205,19 +228,19 @@ const clubs: Club[] = [
   {
     name: 'Techniosys',
     aboutText:
-      'Techniosys is the gaming club at IIIT Dharwad, dedicated to bringing together students with a shared passion for video games, e-sports, and the broader gaming culture.It organizes a wide range of activities and events.The club aims to promote teamwork, strategic thinking, and sportsmanship through organized gaming activities and events.',
+      'Techniosys is the tech innovation club of IIIT Dharwad, dedicated to exploring and mastering upcoming technology platforms. Our club focuses on organizing events and workshops on APIs, cloud services, and other cutting-edge technologies to help students enhance their skills and improve their CVs. In addition to tech-centric activities, Techniosys offers a unique blend of relaxation and fun through our dedicated eSports team, which hosts exciting eSports tournaments and gaming sessions. Focuses to stay ahead in tech trends and enjoy a balanced student life with tech and play.',
     members: [
       { name: 'ABC', position: 'President' },
       { name: 'BCD', position: 'Vice President' },
       { name: 'DEF', position: 'Social Media Lead' },
       { name: 'EFG', position: 'Event Management Lead' },
     ],
-    imagePath: '/images/techniosys.jpg',
+    imagePath: '/images/techniosys.png',
     instagram:
-      'https://www.instagram.com/techniosys.iiitdwd?igsh=MWxjaWV0bWRjdGF4eA==',
+      'https://www.instagram.com/techniosys.iiitdwd/',
     linkedin:
-      'https://www.linkedin.com/company/indian-institute-of-information-technology-dharwad-karnataka/posts/?feedView=all',
-    gmail: 'mailto:velocity.iiitdh@gmail.com',
+      'https://www.linkedin.com/in/techniosys-iiit-dharwad-482065257/',
+    gmail: 'mailto:techniosys@iiitdwd.ac.in',
   },
   {
     name: 'Zeitgeist',

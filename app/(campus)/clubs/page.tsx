@@ -32,7 +32,7 @@ const Club: FC = () => {
   const scrollToClub = (clubName: ClubName) => {
     const element = refs[clubName]?.current;
     if (element) {
-      const offsetTop = element.offsetTop - 46; 
+      const offsetTop = element.offsetTop - 46;
       window.scrollTo({
         top: offsetTop,
         behavior: 'smooth',
@@ -49,20 +49,18 @@ const Club: FC = () => {
       <div className="bg-gray-200 p-8 rounded-lg mb-8 relative">
         <div className="top-4 left-4">
           <button
-            className={`px-4 py-2 rounded-lg mr-4 ${
-              showTechnicalClubs
-                ? ' hover:border-black bg-dwd-primary text-white hover:text-sky-600'
-                : 'bg-dwd-secondary1 hover:text-white'
+            className={`px-4 py-2 rounded-lg mr-4 ${showTechnicalClubs
+              ? ' hover:border-black bg-dwd-primary text-white hover:text-sky-600'
+              : 'bg-dwd-secondary1 hover:text-white'
             }`}
             onClick={() => setShowTechnicalClubs(true)}
           >
             Technical Clubs
           </button>
           <button
-            className={`px-4 py-2 rounded-lg mt-4 md:mt-0 ${
-              !showTechnicalClubs
-                ? 'bg-dwd-primary hover:border-black text-white hover:text-sky-600'
-                : 'bg-dwd-secondary1 hover:text-white'
+            className={`px-4 py-2 rounded-lg mt-4 md:mt-0 ${!showTechnicalClubs
+              ? 'bg-dwd-primary hover:border-black text-white hover:text-sky-600'
+              : 'bg-dwd-secondary1 hover:text-white'
             }`}
             onClick={() => setShowTechnicalClubs(false)}
           >
@@ -133,13 +131,7 @@ const Club: FC = () => {
         {clubs.map((club: ClubData) => (
           <div key={club.name} ref={refs[club.name]}>
             <ClubCard
-              clubName={club.name}
-              aboutText={club.aboutText}
-              members={club.members}
-              imagePath={club.imagePath}
-              instagram={club.instagram}
-              linkedin={club.linkedin}
-              gmail={club.gmail}
+              {...club}
             />
           </div>
         ))}
@@ -149,15 +141,15 @@ const Club: FC = () => {
 };
 
 const ClubCard: FC<{
-  clubName: string;
+  name: string;
   aboutText: string;
   members: { name: string; position: string }[];
   imagePath: string;
-  instagram: string;
-  linkedin: string;
+  instagram?: string;
+  linkedin?: string;
   gmail: string;
 }> = ({
-  clubName,
+  name,
   aboutText,
   members,
   imagePath,
@@ -166,36 +158,34 @@ const ClubCard: FC<{
   gmail,
 }) => {
   const [showAbout, setShowAbout] = useState(true);
-
   return (
     <div className="relative max-w-sm mx-auto h-full flex flex-col bg-gray-200 p-4 pt-0 rounded-md shadow-md mb-8 hover:border-dwd-primary border-2 border-transparent group">
       <div className="w-full relative flex-none h-[110px]">
         <Image
           src={imagePath}
-          alt={`${clubName} logo`}
+          alt={`${name} logo`}
           width={110}
           height={110}
-          className="rounded-full border-4 absolute left-1/2 -translate-y-1/3 transform -translate-x-1/2 bg-dwd-primary group-hover:border-dwd-primary"
+          className="rounded-full border-4 absolute left-1/2 -translate-y-1/3 transform -translate-x-1/2 bg-black group-hover:border-dwd-primary"
         />
       </div>
-
       <div className="flex flex-1 flex-col justify-between">
         <div className="flex flex-col">
-          <h2 className="text-center text-2xl font-bold mb-4">{clubName}</h2>
+          <h2 className="text-center text-2xl font-bold mb-4">{name}</h2>
           {/* <div className="flex justify-center mb-4">
-          <button
-            className={`px-4 py-2 cursor-pointer rounded-md mr-2 ${showAbout ? 'bg-dwd-primary hover:text-sky-600 text-white' : 'bg-dwd-secondary1 hover:text-white'}`}
-            onClick={() => setShowAbout(true)}
-          >
-            ABOUT
-          </button>
-          <button
-            className={`px-4 py-2 cursor-pointer hover:text-sky-600 rounded-md ${!showAbout ? 'bg-dwd-primary hover:text-sky-600 text-white' : 'bg-dwd-secondary1 hover:text-white'}`}
-            onClick={() => setShowAbout(false)}
-          >
-            MEMBERS
-          </button>
-        </div> */}
+        <button
+          className={`px-4 py-2 cursor-pointer rounded-md mr-2 ${showAbout ? 'bg-dwd-primary hover:text-sky-600 text-white' : 'bg-dwd-secondary1 hover:text-white'}`}
+          onClick={() => setShowAbout(true)}
+        >
+          ABOUT
+        </button>
+        <button
+          className={`px-4 py-2 cursor-pointer hover:text-sky-600 rounded-md ${!showAbout ? 'bg-dwd-primary hover:text-sky-600 text-white' : 'bg-dwd-secondary1 hover:text-white'}`}
+          onClick={() => setShowAbout(false)}
+        >
+          MEMBERS
+        </button>
+      </div> */}
           {showAbout ? (
             <div className="text-center mb-4">{aboutText}</div>
           ) : (
@@ -219,7 +209,6 @@ const ClubCard: FC<{
             </div>
           )}
         </div>
-
         <div className="flex justify-center space-x-4 hidden">
           <a
             href={instagram}
