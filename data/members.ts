@@ -44,7 +44,7 @@ const clubs: Club[] = [
   {
     name: 'Velocity',
     aboutText:
-      'Velocity is the development club of IIIT Dharwad aiming to cultivate and foster a development culture among all the students. The club encompasses a community that allows everyone to participate and grow together. Velocity has held many events and workshops to build a strong confidence and foundation among all batches in development. IIIT Dharwad\'s website is designed & developed by Velocity!',
+      "Velocity is the development club of IIIT Dharwad aiming to cultivate and foster a development culture among all the students. The club encompasses a community that allows everyone to participate and grow together. Velocity has held many events and workshops to build a strong confidence and foundation among all batches in development. IIIT Dharwad's website is designed & developed by Velocity!",
     members: [
       { name: 'ABC', position: 'President' },
       { name: 'BCD', position: 'Vice President' },
@@ -53,12 +53,9 @@ const clubs: Club[] = [
     ],
     imagePath: '/images/velocity.png',
     isTechnical: true,
-    github:
-      'https://github.com/velocity-IIITDWD',
-    instagram:
-      'https://www.instagram.com/velocity.iiitdwd',
-    linkedin:
-      'https://www.linkedin.com/company/velocity-iiit-dharwad/',
+    github: 'https://github.com/velocity-IIITDWD',
+    instagram: 'https://www.instagram.com/velocity.iiitdwd',
+    linkedin: 'https://www.linkedin.com/company/velocity-iiit-dharwad/',
     gmail: 'mailto:velocity@iiitdwd.ac.in',
   },
   {
@@ -77,7 +74,7 @@ const clubs: Club[] = [
       'https://www.instagram.com/iridescence.iiitdwd?igsh=bzBzbjQ3MDJjcnBq',
     linkedin:
       'https://www.linkedin.com/company/indian-institute-of-information-technology-dharwad-karnataka/posts/?feedView=all',
-    gmail: 'mailto:velocity.iiitdh@gmail.com',
+    gmail: 'mailto:iridescence@iiitdwd.ac.in>',
   },
   {
     name: 'IEEE SB & CS',
@@ -93,7 +90,7 @@ const clubs: Club[] = [
     isTechnical: true,
     gmail: 'mailto:ieeestudentbranch@iiitdwd.ac.in',
     gmail2: 'mailto:ieeecompsoc@iiitdwd.ac.in ',
-    website: 'https://ewh.ieee.org/sb/bangalore/iiitdwd/'
+    website: 'https://ewh.ieee.org/sb/bangalore/iiitdwd/',
   },
   {
     name: 'Techniosys',
@@ -107,10 +104,8 @@ const clubs: Club[] = [
     ],
     imagePath: '/images/techniosys.png',
     isTechnical: true,
-    instagram:
-      'https://www.instagram.com/techniosys.iiitdwd/',
-    linkedin:
-      'https://www.linkedin.com/in/techniosys-iiit-dharwad-482065257/',
+    instagram: 'https://www.instagram.com/techniosys.iiitdwd/',
+    linkedin: 'https://www.linkedin.com/in/techniosys-iiit-dharwad-482065257/',
     gmail: 'mailto:techniosys@iiitdwd.ac.in',
   },
   {
@@ -129,7 +124,7 @@ const clubs: Club[] = [
       'https://www.instagram.com/zeitgeist_iiitdwd?igsh=MTljYzl6YmUzdjFjOA==',
     linkedin:
       'https://www.linkedin.com/company/indian-institute-of-information-technology-dharwad-karnataka/posts/?feedView=all',
-    gmail: 'mailto:velocity.iiitdh@gmail.com',
+    gmail: 'mailto:zeitgeist@iiitdwd.ac.in',
   },
   {
     name: 'E cell',
@@ -144,7 +139,7 @@ const clubs: Club[] = [
     imagePath: '/images/ecell.jpeg',
     isTechnical: true,
     gmail: 'mailto:ecell@iiitdwd.ac.in',
-    linktree: 'https://linktr.ee/ecell.iiitdwd'
+    linktree: 'https://linktr.ee/ecell.iiitdwd',
   },
   {
     name: 'LimeLight',
@@ -162,7 +157,7 @@ const clubs: Club[] = [
       'https://www.instagram.com/limelight.iiitdwd?igsh=aDVnamd4OG5peWx5',
     linkedin:
       'https://www.linkedin.com/company/indian-institute-of-information-technology-dharwad-karnataka/posts/?feedView=all',
-    gmail: 'mailto:velocity.iiitdh@gmail.com',
+    gmail: 'mailto:21bcs011@iiitdwd.ac.in',
   },
   {
     name: 'BlocSoc',
@@ -176,10 +171,9 @@ const clubs: Club[] = [
     ],
     imagePath: '/images/blocsoc.jpg',
     isTechnical: true,
-    linkedin:
-      'https://www.linkedin.com/company/blocsoc-iiitdwd/',
+    linkedin: 'https://www.linkedin.com/company/blocsoc-iiitdwd/',
     gmail: 'mailto:blocsoc@iiitdwd.ac.in',
-    twitter: 'https://x.com/Blocsoc_iiit?t=zlDtzBc6QZao2D24ej52Tg&s=09'
+    twitter: 'https://x.com/Blocsoc_iiit?t=zlDtzBc6QZao2D24ej52Tg&s=09',
   },
   {
     name: 'Mosaic Club',
@@ -196,7 +190,7 @@ const clubs: Club[] = [
     instagram: 'https://www.instagram.com/mosaic_iiitdwd?igsh=NDc5OGUxcDlocjJ4',
     linkedin:
       'https://www.linkedin.com/company/indian-institute-of-information-technology-dharwad-karnataka/posts/?feedView=all',
-    gmail: 'mailto:velocity.iiitdh@gmail.com',
+    gmail: 'mailto:mosaic@iiitdwd.ac.in',
   },
   {
     name: 'DSAI Society',
@@ -212,8 +206,7 @@ const clubs: Club[] = [
     isTechnical: true,
     instagram:
       'https://www.instagram.com/dsaisoc_iiitdwd?igsh=bmxidWV1ZnpjZmQ0',
-    linkedin:
-      'https://www.linkedin.com/company/dsai-society-iiitdharwad/',
+    linkedin: 'https://www.linkedin.com/company/dsai-society-iiitdharwad/',
     gmail: 'mailto:dsaisoc@iiitdwd.ac.in',
   },
   {
@@ -231,7 +224,7 @@ const clubs: Club[] = [
     instagram: 'https://www.instagram.com/velocity_iiitdh/',
     linkedin:
       'https://www.linkedin.com/company/indian-institute-of-information-technology-dharwad-karnataka/posts/?feedView=all',
-    gmail: 'mailto:velocity.iiitdh@gmail.com',
+    gmail: 'mailto:',
   },
   {
     name: 'GDSC IIIT Dharwad',
@@ -245,14 +238,13 @@ const clubs: Club[] = [
     ],
     imagePath: '/images/gdsc.JPG',
     isTechnical: true,
-    instagram: 'https://www.instagram.com/gdsc_iiitdwd?igsh=MThueGhyZGN2M2dxcw%3D%3D&utm_source=qr',
-    linkedin:
-      'https://www.linkedin.com/company/gdsc-iiit-dharwad-new/',
+    instagram:
+      'https://www.instagram.com/gdsc_iiitdwd?igsh=MThueGhyZGN2M2dxcw%3D%3D&utm_source=qr',
+    linkedin: 'https://www.linkedin.com/company/gdsc-iiit-dharwad-new/',
     gmail: 'mailto:gdsc@iiitdwd.ac.in',
     twitter: 'https://twitter.com/gdsc_iiitdwd',
     github: 'https://github.com/GDSC-IIIT-Dharwad-24',
-    linktree: 'https://linktr.ee/gdsc_iiitdwd'
-
+    linktree: 'https://linktr.ee/gdsc_iiitdwd',
   },
   {
     name: 'Quantum Computing Club',
@@ -269,12 +261,12 @@ const clubs: Club[] = [
     instagram: 'https://www.instagram.com/qciiitdwd?igsh=azZzd3RtMzhndGEx',
     linkedin:
       'https://www.linkedin.com/company/indian-institute-of-information-technology-dharwad-karnataka/posts/?feedView=all',
-    gmail: 'mailto:velocity.iiitdh@gmail.com',
+    gmail: 'mailto:qcclub@iiitdwd.ac.in',
   },
   {
     name: 'IRIS',
     aboutText:
-      'IRIS is a dynamic community of students united by a shared passion for robotics and technology. Whether you\'re a seasoned robotics enthusiast or just starting to explore the world of engineering, our club offers a welcoming space for everyone. Beyond robotics, we delve into various domains including compilers, IoT, circuit designing, and VLSI, providing a broad spectrum of opportunities for learning and innovation. Join us to collaborate, learn, and contribute to exciting technological advancements.',
+      "IRIS is a dynamic community of students united by a shared passion for robotics and technology. Whether you're a seasoned robotics enthusiast or just starting to explore the world of engineering, our club offers a welcoming space for everyone. Beyond robotics, we delve into various domains including compilers, IoT, circuit designing, and VLSI, providing a broad spectrum of opportunities for learning and innovation. Join us to collaborate, learn, and contribute to exciting technological advancements.",
     members: [
       { name: 'ABC', position: 'President' },
       { name: 'BCD', position: 'Vice President' },
@@ -283,10 +275,8 @@ const clubs: Club[] = [
     ],
     imagePath: '/images/iris.png',
     isTechnical: true,
-    instagram:
-      'https://www.instagram.com/iris_iiitdwd?igsh=czJkY3d4YXRwaWYw',
-    linkedin:
-      'https://www.linkedin.com/company/iris-iiitdwd/',
+    instagram: 'https://www.instagram.com/iris_iiitdwd?igsh=czJkY3d4YXRwaWYw',
+    linkedin: 'https://www.linkedin.com/company/iris-iiitdwd/',
     gmail: 'mailto:iris@iiitdwd.ac.in',
   },
   {
@@ -305,7 +295,7 @@ const clubs: Club[] = [
       'https://www.instagram.com/inmotion.iiitdwd?igsh=MXc0eHE2eDc5Ymt3eQ== ',
     linkedin:
       'https://www.linkedin.com/company/indian-institute-of-information-technology-dharwad-karnataka/posts/?feedView=all',
-    gmail: 'mailto:velocity.iiitdh@gmail.com',
+    gmail: 'mailto:21bcs026@iiitdwd.ac.in',
   },
   {
     name: 'Inquizitive',
@@ -319,10 +309,8 @@ const clubs: Club[] = [
     ],
     imagePath: '/images/inquizitive.png',
     isTechnical: true,
-    instagram:
-      'https://www.instagram.com/inquizitive.iiitdwd/',
-    linkedin:
-      'https://www.linkedin.com/company/inquizitive-iiit-dharwad/',
+    instagram: 'https://www.instagram.com/inquizitive.iiitdwd/',
+    linkedin: 'https://www.linkedin.com/company/inquizitive-iiit-dharwad/',
     gmail: 'mailto:inquizitive@iiitdwd.ac.in',
   },
   {
@@ -341,7 +329,7 @@ const clubs: Club[] = [
       'https://www.instagram.com/prabodhini_iiitdwd?igsh=Z2FqbDV6OXZ5NXAy',
     linkedin:
       'https://www.linkedin.com/company/indian-institute-of-information-technology-dharwad-karnataka/posts/?feedView=all',
-    gmail: 'mailto:velocity.iiitdh@gmail.com',
+    gmail: 'mailto:',
   },
   {
     name: '440 Hz',
@@ -359,7 +347,7 @@ const clubs: Club[] = [
       'https://www.instagram.com/440hz_iiitdwd?igsh=MTVuMWp4OTMxeGNkeQ==',
     linkedin:
       'https://www.linkedin.com/company/indian-institute-of-information-technology-dharwad-karnataka/posts/?feedView=all',
-    gmail: 'mailto:velocity.iiitdh@gmail.com',
+    gmail: 'mailto:21bcs003@iiitdwd.ac.in',
   },
   {
     name: 'Return 0',
@@ -373,10 +361,8 @@ const clubs: Club[] = [
     ],
     imagePath: '/images/return0.png',
     isTechnical: true,
-    instagram:
-      'https://www.instagram.com/return0_iiitdwd/',
-    linkedin:
-      'https://www.linkedin.com/company/return-0/ ',
+    instagram: 'https://www.instagram.com/return0_iiitdwd/',
+    linkedin: 'https://www.linkedin.com/company/return-0/ ',
     gmail: 'mailto:return0@iiitdwd.ac.in',
   },
 ];
