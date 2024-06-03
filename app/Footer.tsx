@@ -117,7 +117,7 @@ function Footer() {
       </div>
 
       <div className='flex justify-between lg:justify-center w-full max-w-7xl'>
-        <div>Copyright © IIIT Dharwad 2024, All Rights Reserved</div>
+        <div>Copyright &copy; IIIT Dharwad 2024, All Rights Reserved | <Link href="/clubs#Velocity" className='hover:underline underline-offset-2'>Designed & Developed by Velocity IIIT Dharwad</Link></div>
       </div>
     </footer>
   );
