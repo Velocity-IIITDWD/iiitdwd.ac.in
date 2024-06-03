@@ -74,7 +74,7 @@ const clubs: Club[] = [
       'https://www.instagram.com/iridescence.iiitdwd?igsh=bzBzbjQ3MDJjcnBq',
     linkedin:
       'https://www.linkedin.com/company/indian-institute-of-information-technology-dharwad-karnataka/posts/?feedView=all',
-    gmail: 'mailto:iridescence@iiitdwd.ac.in>',
+    gmail: 'mailto:iridescence@iiitdwd.ac.in',
   },
   {
     name: 'IEEE SB & CS',
