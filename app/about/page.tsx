@@ -19,7 +19,20 @@ const AboutPage = () => {
   const about: About = aboutData;
 
   return (
-    <div className="flex flex-col h-full w-full">
+    <div className="w-full flex flex-col items-center">
+      <div className="w-full min-h-40 sm:min-h-72 lg:min-h-96 xl:min-h-112 relative">
+        <Image
+          src={mainGateImage}
+          alt={'Main Gate Image'}
+          fill={true}
+          priority
+          style={{
+            objectFit: 'cover',
+            objectPosition: '70% 47%',
+          }}
+        />
+      </div>
+      {/* <div className="flex flex-col h-full w-full">
       <section className="w-full h-[50vh] bg-cover bg-center bg-[url('/images/main_building.jpg')] relative before:z-0 before:absolute before:h-full before:w-full before:left-0 before:top-0 before:bg-[#041E3FB3] flex items-center justify-center"></section>
       <div
         id="introduction"
@@ -27,8 +40,8 @@ const AboutPage = () => {
       >
         <p className="font-semibold text-2xl text-dwd-primary">
           About IIIT Dharwad
-        </p>
-        <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        </p> */}
+      {/* <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           <div className="flex flex-col gap-2 md:border-r border-gray-600 w-full text-dwd-primary text-sm p-4">
             <div className="flex flex-col font-semibold text-base">
               1. Introduction
@@ -136,7 +149,8 @@ const AboutPage = () => {
               </li>
             </ul>
           </div>
-        </div>
+        </div> */}
+      {/* <div className="text-justify">{aboutData?.aboutText}</div>
       </div>
 
       <section
@@ -278,18 +292,16 @@ const AboutPage = () => {
         <div className="basis-1/2 rounded overflow-hidden border-gray-400 border shadow">
           <iframe
             className="w-full aspect-video"
-            src="https://www.youtube.com/embed/5A8hThnROHs?si=QsaWacwdQSoRBXFG&autoplay=1&mute=1&showinfo=0&controls=0&vq=hd720"
+            src="https://www.youtube.com/embed/5A8hThnROHs?si=QsaWacwdQSoRBXFG&autoplay=1&mute=1&showinfo=0&controls=0&vq=hd720&loop=1"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
             title="YouTube video player"
           ></iframe>
         </div>
-      </section>
-
-      {/* <div id="introduction" />
+      </section> */}
+      <div id="introduction" />
       <AboutIIIT aboutText={about.aboutText} />
-
       <div id="directors-message" />
       <DirectorsMessage
         heading={about.directorsMessage.heading}
@@ -303,15 +315,24 @@ const AboutPage = () => {
         directorName={about.director.title}
         briefProfile={about.briefProfile}
       />
-
       <div id="family" />
       <OurFamily />
-
       <div id="vision" />
-      <OurVision vision={about.vision} />
+      <section
+        id="vision"
+        className="w-full py-20 bg-cover bg-center bg-[url('/images/main_building.jpg')] relative before:z-0 before:absolute before:h-full before:w-full before:left-0 before:top-0 before:bg-[#041E3FB3] flex items-center justify-center"
+      >
+        <div className="z-[1] text-white flex items-center justify-center flex-col gap-2 max-w-[1200px] w-full">
+          <p className="text-3xl font-bold">Our Vision</p>
+          <div className="text-center font-semibold text-lg">
+            To be a globally renowned academy of information technology for
+            societal development.
+          </div>
+        </div>
+      </section>
       <OurMission missions={about.missions} />
       <CoreValues coreValues={about.coreValues} />
-      <ShortCampusVideo /> */}
+      <ShortCampusVideo />
     </div>
   );
 };

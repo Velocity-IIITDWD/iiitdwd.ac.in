@@ -316,6 +316,7 @@ let ProfileProps: ProfileProp[] = [
         department: 'Electronics and Communication Engineering',
         mail_id: 'Jagadeesha@iiitdwd.ac.in',
         cabin_number: '?',
+        position: 'Faculty In Charge - International Relations',
       },
       body: {
         profile_text: '',

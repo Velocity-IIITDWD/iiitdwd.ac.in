@@ -59,10 +59,10 @@ const List = ({ ll }: ListProps) => {
                   {arr?.content?.head?.name}
                 </h3>
                 <ul className="list-disc text-xs pl-4 text-gray-500 mt-2">
+                  <li>{arr?.content?.card?.designation}</li>
                   {arr?.content?.card?.position && (
                     <li>{arr?.content?.card?.position}</li>
                   )}
-                  <li>{arr?.content?.card?.designation}</li>
                 </ul>
               </div>
               <h6 className="text-sm mt-3">{arr.content.card.department}</h6>

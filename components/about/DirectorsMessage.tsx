@@ -20,12 +20,12 @@ const DirectorsMessage = ({
   return (
     <div
       id="directors-message"
-      className="flex p-4 mt-4 flex-col items-center justify-center md:px-16 lg:px-24 xl:px-44"
+      className="flex p-4 mt-4 flex-col items-center justify-center md:px-16 lg:px-24 2xl:px-44"
     >
       <span className="text-2xl md:text-4xl mb-8 text-dwd-primary text-center w-full font-semibold">
         Director&apos;s Message
       </span>
-      <div className="p-4 flex flex-col gap-4 items-center content-center">
+      <div className="flex flex-col gap-4 items-center content-center">
         <div className="flex flex-col gap-4">
           <span className="text-dwd-primary font-semibold md:text-lg">
             {heading}

@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { descriptions, seatMatrix, year, links } from '@/data/admissions';
-
+import { ExternalLink } from 'lucide-react';
 import { Fragment } from 'react';
 
 export default function Page() {
@@ -83,18 +83,18 @@ export default function Page() {
             </div>
           </div>
         </div>
-        <div className='grid grid-cols-19 col-span-19 [&>p]:p-2 [&>p]:border [&>p]:flex [&>p]:justify-center [&>p]:items-center'>
+        <div className="grid grid-cols-19 col-span-19 [&>p]:p-2 [&>p]:border [&>p]:flex [&>p]:justify-center [&>p]:items-center">
           <p className="row-span-6">{seatMatrix.instituteCode}</p>
-          <p className="row-span-6">
-            {seatMatrix.instituteName}
-          </p>
+          <p className="row-span-6">{seatMatrix.instituteName}</p>
           {seatMatrix.programs.map((program) => (
             <Fragment key={program.code}>
               <p className="row-span-2">{program.code}</p>
               <p className="row-span-2">{program.name}</p>
               {program.seatPoolQuota.map((StateQuota) => (
                 <>
-                  <p key={StateQuota.name} className="row-span-2">{StateQuota.name}</p>
+                  <p key={StateQuota.name} className="row-span-2">
+                    {StateQuota.name}
+                  </p>
                   {StateQuota.seatPoolGender.map((GenderQuota, index) => {
                     if (index == 0) {
                       return (
@@ -111,10 +111,14 @@ export default function Page() {
                           <p>{GenderQuota.obc_ncl}</p>
                           <p>{GenderQuota.obc_ncl_pwd}</p>
                           <p>{GenderQuota.total}</p>
-                          <p className='row-span-2'>{StateQuota.seatCapacity}</p>
-                          <p className='row-span-2'>{StateQuota.femaleSupernumerary}</p>
+                          <p className="row-span-2">
+                            {StateQuota.seatCapacity}
+                          </p>
+                          <p className="row-span-2">
+                            {StateQuota.femaleSupernumerary}
+                          </p>
                         </Fragment>
-                      )
+                      );
                     }
                     return (
                       <Fragment key={GenderQuota.name}>
@@ -131,30 +135,33 @@ export default function Page() {
                         <p>{GenderQuota.obc_ncl_pwd}</p>
                         <p>{GenderQuota.total}</p>
                       </Fragment>
-                    )
+                    );
                   })}
                 </>
               ))}
             </Fragment>
           ))}
-          <div className='grid grid-cols-19 col-span-19 bg-dwd-secondary1 text-white font-bold [&>p]:p-2 [&>p]:border [&>p]:flex [&>p]:justify-center [&>p]:items-center'>
-            <p className='col-span-6 border-l-transparent'>Total</p>
-            {
-              seatMatrix.total.map((seats, index) => {
-                if (index === seatMatrix.total.length - 1)
-                  return (
-                    <p key={seats.id} className='border-r-transparent'>
-                      {seats.qty}
-                    </p>
-                  )
+          <div className="grid grid-cols-19 col-span-19 bg-dwd-secondary1 text-white font-bold [&>p]:p-2 [&>p]:border [&>p]:flex [&>p]:justify-center [&>p]:items-center">
+            <p className="col-span-6 border-l-transparent">Total</p>
+            {seatMatrix.total.map((seats, index) => {
+              if (index === seatMatrix.total.length - 1)
                 return (
-                  <p key={seats.id}>{seats.qty}</p>
-                )
-              })
-            }
+                  <p key={seats.id} className="border-r-transparent">
+                    {seats.qty}
+                  </p>
+                );
+              return <p key={seats.id}>{seats.qty}</p>;
+            })}
           </div>
         </div>
       </div>
+
+      <Link
+        className='pl-2 mt-2 text-dwd-primary w-fit block hover:underline underline-offset-2 after:-translate-y-1/3 after:absolute relative after:content-[url("/icons/linkIcon.svg")]'
+        href={'/contact_info'}
+      >
+        For General Queries you can contact here
+      </Link>
 
       {links.map((obj) => (
         <Fragment key={obj.id}>
