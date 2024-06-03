@@ -156,6 +156,13 @@ export default function Page() {
         </div>
       </div>
 
+      <Link
+        className='pl-2 mt-2 text-dwd-primary w-fit block hover:underline underline-offset-2 after:-translate-y-1/3 after:absolute relative after:content-[url("/icons/linkIcon.svg")]'
+        href={'/contact_info'}
+      >
+        For General Queries you can contact here
+      </Link>
+
       {links.map((obj) => (
         <Fragment key={obj.id}>
           <p className="mt-2 text-lg font-bold text-dwd-primary">{obj.type}</p>
@@ -189,13 +196,6 @@ export default function Page() {
           contact@iiitdwd.ac.in
         </Link>
       </p>
-      <Link
-        href={'/contact_info'}
-        className="px-2 flex gap-2 items-center py-1 rounded border w-fit border-dwd-primary hover:bg-dwd-primary text-dwd-primary hover:text-white"
-      >
-        Contact Info
-        <ExternalLink size={16} />
-      </Link>
     </div>
   );
 }
