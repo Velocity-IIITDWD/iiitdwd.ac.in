@@ -1,0 +1,23 @@
+name: Clean and Deploy
+
+on:
+  workflow_dispatch:
+
+jobs:
+  clean-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Clean remote directory (except /docs)
+        uses: SamKirkland/FTP-Deploy-Action@4.1.0
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: /
+          exclude: |
+            *
+            !/docs/
