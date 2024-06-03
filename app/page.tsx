@@ -192,7 +192,7 @@ export default function Home() {
         <div className="w-full relative flex-none items-center justify-center z-[1] max-w-[1200px] mx-auto h-full flex flex-col lg:flex-row gap-4 px-4 py-10">
           <div className="flex gap-1 text-dwd-primary flex-col bg-white rounded h-full p-8 pt-10">
             <p className="text-4xl font-bold">Academic</p>
-            <p className="text-4xl font-bold mb-4">Programmes</p>
+            <p className="text-4xl font-bold mb-4">Programs</p>
             <div
               onClick={() => setProgram(0)}
               className={`p-2 uppercase font-semibold hover:text-white rounded cursor-pointer transition-colors duration-200 ease-linear bg_slider ${
