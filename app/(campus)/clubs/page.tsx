@@ -4,9 +4,12 @@ import { LinkedinIcon, Instagram, Mail, Github, ExternalLink, QrCode, Twitter } 
 import Image from 'next/image';
 import clubs from '../../../data/members';
 import type { ClubName, Club as ClubData } from '../../../data/members';
+import Link from 'next/link';
 
 const Club: FC = () => {
-  const [showTechnicalClubs, setShowTechnicalClubs] = useState(true);
+  const [showTechnicalClubs, setShowTechnicalClubs] = useState('all');
+
+  const checkTechnical = (isTechnical: Boolean) => isTechnical === (showTechnicalClubs === 'yes') || showTechnicalClubs === 'all'
 
   return (
     <div className="container mx-auto py-8 px-4">
@@ -14,25 +17,34 @@ const Club: FC = () => {
         Our Clubs
       </h1>
 
-      <div className="bg-gray-200 p-8 rounded-lg mb-8 relative">
+      <div className="bg-gray-200 p-8 rounded-lg mb-16 relative">
         <div className="top-4 left-4">
           <button
-            className={`px-4 py-2 rounded-lg mr-4 ${showTechnicalClubs
+            className={`px-4 py-2 rounded-lg mr-4 ${showTechnicalClubs === 'all'
               ? ' hover:border-black bg-dwd-primary text-white hover:text-sky-600'
               : 'bg-dwd-secondary1 hover:text-white'
             }`}
-            onClick={() => setShowTechnicalClubs(true)}
+            onClick={() => setShowTechnicalClubs('all')}
           >
-            Technical Clubs
+            All
           </button>
           <button
-            className={`px-4 py-2 rounded-lg mt-4 md:mt-0 ${!showTechnicalClubs
+            className={`px-4 py-2 rounded-lg mr-4 ${showTechnicalClubs === 'yes'
+              ? ' hover:border-black bg-dwd-primary text-white hover:text-sky-600'
+              : 'bg-dwd-secondary1 hover:text-white'
+            }`}
+            onClick={() => setShowTechnicalClubs('yes')}
+          >
+            Technical
+          </button>
+          <button
+            className={`px-4 py-2 rounded-lg mt-4 md:mt-0 ${showTechnicalClubs === 'no'
               ? 'bg-dwd-primary hover:border-black text-white hover:text-sky-600'
               : 'bg-dwd-secondary1 hover:text-white'
             }`}
-            onClick={() => setShowTechnicalClubs(false)}
+            onClick={() => setShowTechnicalClubs('no')}
           >
-            Cultural Clubs
+            Cultural
           </button>
         </div>
 
@@ -40,40 +52,37 @@ const Club: FC = () => {
           {showTechnicalClubs ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {clubs
-                .filter((club: ClubData) => club.isTechnical)
+                .filter((club: ClubData) => checkTechnical(club.isTechnical))
                 .map((club: ClubData) => (
-                  <a
+                  <Link
                     key={club.name}
                     className="bg-dwd-primary text-white p-4 cursor-pointer hover:text-sky-600 rounded-lg shadow-md text-center"
                     href={`#${club.name}`}
                   >
                     {club.name}
-                  </a>
+                  </Link>
                 ))}
             </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {clubs
-                .filter((club: ClubData) => !club.isTechnical)
+                .filter((club: ClubData) => checkTechnical(club.isTechnical))
                 .map((club: ClubData) => (
-                  <a
+                  <Link
                     key={club.name}
                     className="bg-dwd-primary text-white p-4 cursor-pointer hover:text-sky-600 rounded-lg shadow-md text-center"
                     href={`#${club.name}`}
                   >
                     {club.name}
-                  </a>
+                  </Link>
                 ))}
             </div>
           )}
         </div>
       </div>
 
-      <br />
-      <br />
-
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 gap-y-16">
-        {clubs.filter(club => club.isTechnical === showTechnicalClubs).map((club: ClubData) => (
+        {clubs.filter(club => checkTechnical(club.isTechnical)).map((club: ClubData) => (
           <div key={club.name} id={club.name} className='scroll-m-12'>
             <ClubCard
               {...club}
@@ -165,54 +174,54 @@ const ClubCard: FC<{
           )}
         </div>
         <div className="flex justify-center space-x-4">
-          {github ? <a
-            href={github}
+          {github ? <Link
+            href={`${github}`}
             className="flex gap-2 hover:text-pink-600 hover:duration-800 hover:animate-pulse"
           >
             <Github size="2rem" />
-          </a> : ''}
-          {website ? <a
-            href={website}
+          </Link> : ''}
+          {website ? <Link
+            href={`${website}`}
             className="flex gap-2 hover:text-pink-600 hover:duration-800 hover:animate-pulse"
           >
             <ExternalLink size="2rem" />
-          </a> : ''}
-          {linktree ? <a
-            href={linktree}
+          </Link> : ''}
+          {linktree ? <Link
+            href={`${linktree}`}
             className="flex gap-2 hover:text-pink-600 hover:duration-800 hover:animate-pulse"
           >
             <QrCode size="2rem" />
-          </a> : ''}
-          {linktree ? <a
-            href={twitter}
+          </Link> : ''}
+          {twitter ? <Link
+            href={`${twitter}`}
             className="flex gap-2 hover:text-pink-600 hover:duration-800 hover:animate-pulse"
           >
             <Twitter size="2rem" />
-          </a> : ''}
-          {instagram ? <a
-            href={instagram}
+          </Link> : ''}
+          {instagram ? <Link
+            href={`${instagram}`}
             className="flex gap-2 hover:text-pink-600 hover:duration-800 hover:animate-pulse"
           >
             <Instagram size="2rem" />
-          </a> : ''}
-          <a
-            href={linkedin}
+          </Link> : ''}
+          <Link
+            href={`${linkedin}`}
             className="flex gap-2 hover:text-blue-800 hover:duration-800 hover:animate-pulse"
           >
             <LinkedinIcon size="2rem" />
-          </a>
-          <a
-            href={gmail}
+          </Link>
+          <Link
+            href={`${gmail}`}
             className="flex gap-2 hover:text-red-700 hover:duration-800 hover:animate-pulse"
           >
             <Mail size="2rem" />
-          </a>
-          {gmail2 ? <a
-            href={gmail2}
+          </Link>
+          {gmail2 ? <Link
+            href={`${gmail2}`}
             className="flex gap-2 hover:text-red-700 hover:duration-800 hover:animate-pulse"
           >
             <Mail size="2rem" />
-          </a> : ''}
+          </Link> : ''}
         </div>
       </div>
     </div>

@@ -7,7 +7,7 @@ export type ClubName =
   | 'E cell'
   | 'IEEE SB & CS'
   | 'Inquizitive'
-  | 'Iris'
+  | 'IRIS'
   | 'DSAI Society'
   | 'Quantum Computing Club'
   | 'Techniosys'
@@ -185,7 +185,7 @@ const clubs: Club[] = [
     gmail: 'mailto:inquizitive@iiitdwd.ac.in',
   },
   {
-    name: 'Iris',
+    name: 'IRIS',
     aboutText:
       'IRIS is a dynamic community of students united by a shared passion for robotics and technology. Whether you\'re a seasoned robotics enthusiast or just starting to explore the world of engineering, our club offers a welcoming space for everyone. Beyond robotics, we delve into various domains including compilers, IoT, circuit designing, and VLSI, providing a broad spectrum of opportunities for learning and innovation. Join us to collaborate, learn, and contribute to exciting technological advancements.',
     members: [
