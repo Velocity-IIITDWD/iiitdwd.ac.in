@@ -18,7 +18,10 @@ const DirectorsMessage = ({
   director,
 }: DirectorsMessageProps) => {
   return (
-    <div className="flex p-4 mt-4 flex-col items-center justify-center md:px-16 lg:px-44">
+    <div
+      id="directors-message"
+      className="flex p-4 mt-4 flex-col items-center justify-center md:px-16 lg:px-24 xl:px-44"
+    >
       <span className="text-2xl md:text-4xl mb-8 text-dwd-primary text-center w-full font-semibold">
         Director&apos;s Message
       </span>

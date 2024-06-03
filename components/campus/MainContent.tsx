@@ -14,12 +14,10 @@ const MainContent: React.FC = () => {
           className="object-cover w-full h-full"
           layout="fill"
         />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="bg-white bg-opacity-65 rounded-lg p-2 text-center w-[70%] sm:w-[40%]">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-blue-900">
-              IIIT Dharwad Campus
-            </h1>
-          </div>
+        <div className="absolute inset-0 bg-[#041E3FB3] flex items-center justify-center">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white">
+            IIIT Dharwad Campus
+          </h1>
         </div>
       </div>
       <div className="flex flex-wrap justify-center p-4 w-full gap-4">

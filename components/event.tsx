@@ -108,9 +108,9 @@ function EventPage(theevent: event) {
   }, 3000);
   return (
     // {(true)?1:0}
-    
+
     <div>
-      <h1 className="text-3xl text-dwd-primary mx-9 text-center mt-12 mb-0 font-roboto">
+      <h1 className="text-3xl font-bold text-dwd-primary mx-9 text-center mt-12 mb-0 font-roboto">
         {theevent.text}
       </h1>
       <div className="relative max-w-full mx-auto overflow-hidden rounded-lg shadow-lg mt-12">

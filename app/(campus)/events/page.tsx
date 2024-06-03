@@ -29,29 +29,36 @@ function ComponentEvent({ index }: ComponentEventProps) {
   const eventImageSrc = events[index].href;
   const link: string = '/events/' + events[index].id;
   return (
-    <div className="flex flex-col justify-start bg-gray-200 p-6 rounded-xl transition duration-300 shadow hover:bg-gray-300 hover:text-white cursor-pointer ">
+    <div className="bg-gray-100 gap-2 flex flex-col overflow-hidden rounded-xl transition duration-300 shadow-lg hover:bg-gray-50 hover:text-white cursor-pointer ">
       <Image
         // changed
         width={0}
         height={0}
         sizes="100%"
         // className="w-full h-72 object-cover rounded-lg"
-        className="mx-auto my-auto w-fit h-72 object-cover rounded-lg"
+        className=" h-72 object-cover flex-none w-full"
         src={eventImageSrc}
         alt="Weekly Events"
       />
 
-      <div className="mt-8 flex flex-col grow">
-        <h2 className="text-xl text-cardText font-bold">
-          {events[index].text}
-        </h2>
-        <p className="text-dwd-primary">Date: {events[index].timestamp}</p>
+      <div className="p-5 h-full flex-1 justify-between flex flex-col text-dwd-primary">
+        <div>
+          <p className="text-lg leading-tight font-semibold tracking-tight">
+            {events[index].text}
+          </p>
+          <p className="text-xs">{events[index].organiser?.name}</p>
+        </div>
+        <div className="flex gap-2 items-center mt-4">
+          <p className="text-xs font-semibold px-4 py-2 rounded-full border border-dwd-primary">
+            Date: {events[index].timestamp}
+          </p>
 
-        <Link href={link} className='mt-auto'>
-          <button className="mt-4 bg-dwd-primary text-xs text-white px-8 py-4 rounded">
-            Know More
-          </button>
-        </Link>
+          <Link href={link}>
+            <button className=" bg-dwd-primary text-xs text-white px-4 py-2 rounded-full">
+              Know More
+            </button>
+          </Link>
+        </div>
       </div>
     </div>
   );

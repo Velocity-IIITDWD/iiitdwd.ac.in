@@ -4,6 +4,11 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+@font-face {
+  font-family: 'PP Neue Montreal';
+  src: url('/fonts/ppneuemontreal-medium.ttf') format('truetype');
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -45,6 +50,7 @@
   body {
     @apply min-h-screen w-full overflow-x-hidden overflow-y-auto;
     font-family: 'Roboto', sans-serif;
+    /* font-family: 'PP Neue Montreal', sans-serif; */
     font-weight: 400;
     font-style: normal;
     margin: 0;
@@ -118,6 +124,31 @@
   font-weight: bold; /* Adjust font weight as needed */
 }
 
+.bg_slider {
+  --initialTextColor: #041e3f;
+  --slideTextColor: #fff;
+
+  --initialBgColor: #fff;
+  --slideBgColor: #041e3f;
+
+  background-image: linear-gradient(
+    90deg,
+    var(--initialBgColor) 0%,
+    var(--initialBgColor) 50%,
+    var(--slideBgColor) 50%,
+    var(--slideBgColor) 100%
+  );
+  background-size: 200%;
+  transition: background-position 0.3s cubic-bezier(0.47, 0.1, 1, 0.63),
+    color 0.2s linear;
+  transition-delay: 0s, 0.15s;
+}
+
+.bg_slider:hover {
+  cursor: pointer;
+  background-position: -100% 100%;
+}
+
 .scrolling-text {
   transform: translateY(100%);
   animation: my-animation 15s linear infinite;
@@ -148,9 +179,9 @@
   margin-left: auto;
 }
 
-.procedure:hover {
-  scale: 1.4;
-  transition-duration: 0.2s;
+.shadow_inset {
+  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset,
+    rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
 }
 
 .embla {

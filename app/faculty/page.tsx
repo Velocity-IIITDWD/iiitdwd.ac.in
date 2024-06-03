@@ -3,31 +3,8 @@ import { FC, useState } from 'react';
 import '@/app/globals.css';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ProfileProps } from '@/data/faculty_profile';
+import { ProfileProps, ProfileProp } from '@/data/faculty_profile';
 import Profile from './[id]/page';
-
-type ProfileProp = {
-  id: string;
-  content: {
-    head: {
-      name: string;
-      profile_pdf: string;
-    };
-
-    card: {
-      photo: string;
-      designation: string;
-      department: string;
-      mail_id: string;
-      cabin_number: string;
-    };
-
-    body: {
-      profile_text: string;
-      interest_areas: { id: number; area: string }[];
-    };
-  };
-};
 
 interface ListProps {
   ll: ProfileProp[];
@@ -60,30 +37,45 @@ const List = ({ ll }: ListProps) => {
       if (ALL) return 1 === 1;
     });
 
-    const f_array = final.map((arr) => (
+    const f_array = final.map((arr: ProfileProp) => (
       <li
-        key={arr.id}
-        className="bg-dwd-secondary2 hover:bg-dwd-secondary1 flex grid flex-none justify-center text-background  px-6 py-6 rounded-lg  mb-4 "
+        key={arr?.id}
+        className="bg-gray-100 hover:bg-gray-50 shadow-lg flex flex-none justify-center text-background p-8 rounded-lg mb-4 "
       >
-        <Link href={`/faculty/${arr.id}`}>
-          <div className="min-[3600px]:w-auto flex flex-col gap-4 min-[3600px]:flex-row">
-            <div>
-              <Image
-                src={arr.content.card.photo}
-                width={0}
-                height={0}
-                sizes="100%"
-                style={{ height: '250px', width: '250px' }}
-                alt={arr.content.head.name}
-                className="shrink-0 object-cover mx-auto"
-              />
-            </div>
-            <div className="min-[3600px]:w-1/2 flex flex-col gap-4 justify-center">
-              <h3 className="text-dwd-primary font-bold">
-                {arr.content.head.name}
-              </h3>
-              <h6>{arr.content.card.designation}</h6>
-              <h6>{arr.content.card.department}</h6>
+        <Link href={`/faculty/${arr?.id}`}>
+          <div className="flex flex-col gap-4 h-full">
+            <Image
+              src={arr?.content?.card?.photo}
+              width={0}
+              height={0}
+              sizes="100%"
+              style={{ height: '250px', width: '250px' }}
+              alt={arr?.content?.head?.name}
+              className="shrink-0 object-cover mx-auto rounded-lg shadow"
+            />
+            <div className="h-full flex flex-col justify-between text-dwd-primary">
+              <div className="flex flex-col">
+                <h3 className="text-dwd-primary font-bold">
+                  {arr?.content?.head?.name}
+                </h3>
+                <ul className="list-disc text-xs pl-4 text-gray-500 mt-2">
+                  {arr?.content?.card?.position && (
+                    <li>{arr?.content?.card?.position}</li>
+                  )}
+                  <li>{arr?.content?.card?.designation}</li>
+                </ul>
+              </div>
+              <h6 className="text-sm mt-3">{arr.content.card.department}</h6>
+
+              {/* <div className="mt-4 flex flex-col gap-2">
+                <h6 className="text-xs">{arr.content.card.designation}</h6>
+                <h6 className="text-xs">{arr.content.card.department}</h6>
+                {arr.content.card.position && (
+                  <h6 className="text-sm 0 rounded font-medium w-full">
+                    {arr.content.card.position}
+                  </h6>
+                )}
+              </div> */}
             </div>
           </div>
         </Link>
@@ -94,11 +86,11 @@ const List = ({ ll }: ListProps) => {
   f_array = qwe();
   return (
     <>
-      <div className="flex flex-col justify-center py-0  m-4 gap-4 ">
-        <div className="flex justify-center font-bold text-3xl text-dwd-primary bg-dwd-secondary2 py-6 rounded">
-          Faculty
-        </div>
-        <div className="bg-dwd-secondary1 flex flex-wrap justify-left gap-6 py-2 px-6 rounded ">
+      <div className="flex flex-col justify-center py-0 gap-4">
+        <section className="w-full h-[50vh] bg-cover bg-center bg-[url('/images/main_building.jpg')] relative before:z-0 before:absolute before:h-full before:w-full before:left-0 before:top-0 before:bg-[#041E3FB3] flex items-center justify-center">
+          <p className="text-white z-[1] text-3xl font-bold">Faculty</p>
+        </section>
+        <div className="bg-gray-200 shadow-inner flex flex-wrap justify-left gap-6 py-2 mx-2 px-6 rounded ">
           <div
             className={`bg-background rounded-2xl font-bold px-4 py-1 ${
               ALL
@@ -201,7 +193,7 @@ const List = ({ ll }: ListProps) => {
           </div>
         </div>
         <div className="flex">
-          <ul className="bg-background grid grid-cols-1 gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 mx-12 my-6 gap-8 content-start ">
+          <ul className="bg-background grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 mx-12 my-6 gap-8 content-start ">
             {f_array}
           </ul>
         </div>

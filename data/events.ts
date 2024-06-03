@@ -54,7 +54,7 @@ let events: eventInf[] = [
       contact: '',
     },
     aboutEvent:
-      'Inter IIIT, hosted by IIIT Allahabad once every four years, serves as a paramount display of unity and competition among the 25 government funded IIITs spread across the nation. This unique sports event brings together elite athletes and teams, solidifying its position as a premier competition in the IIIT community. Celebrating a shared passion for sportsmanship and athleticism, Inter IIIT fosters lasting bonds and leaves an enduring mark on intercollegiate sports within the IIIT ecosystem.',
+      'Inter IIIT, held every four years by IIIT Allahabad, unites athletes from 25 government-funded IIITs in a premier sports competition. Celebrating sportsmanship and fostering lasting bonds, it is a key event in the IIIT community.',
   },
   {
     id: 'yoga-day',
@@ -288,7 +288,7 @@ let events: eventInf[] = [
       contact: '',
     },
     aboutEvent:
-      'IIIT Dharwad in association with BITES, hosted two out of three special lecture series (virtual) on “The Ultimate Challenge - Some Unsolved Problems in Mathematics” by Prof R Vittal Rao, Former Professor of Mathematics, IISc, Bengaluru. These two lectures are second and third lectures of the series, conducted on August 13, 2021, and, August 27, 2021, respectively.',
+      'IIIT Dharwad, in association with BITES, hosted two virtual lectures on "The Ultimate Challenge - Some Unsolved Problems in Mathematics" by Prof. R Vittal Rao from IISc, Bengaluru. These lectures were conducted on August 13 and 27, 2021.',
   },
 
   {
@@ -387,6 +387,5 @@ let events: eventInf[] = [
       'Shri. N R Narayana Murthy, Founder Infosys India Pvt Ltd visited IIIT Dharwad at 11:00 AM, 3rd February 2019. He had discussions with faculty, staff and students. He shared his experience during his Infosys day’s and also gave suggestion on career.',
   },
 ];
-
 
 export { events };
