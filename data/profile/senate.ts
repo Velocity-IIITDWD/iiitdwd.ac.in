@@ -6,7 +6,7 @@ export default [
     profiles: [
       {
         content: ['Officiating Chairperson & Director, IIIT Dharwad'],
-        imageURL: '/images/s_r_mahadeva_prasanna.JPG',
+        imageURL: '/images/s_r_mahadeva_prasanna.jpg',
         title: 'Prof. S. R. Mahadeva Prasanna',
       },
     ],
@@ -16,12 +16,12 @@ export default [
     profiles: [
       {
         content: ['Former Professor, IISc Bengaluru'],
-        imageURL: '/images/h_s_jamadagni.jpg',
+        imageURL: '/images/h_s_jamadagni.png',
         title: 'Prof. H. S. Jamadagni',
       },
       {
         content: ['Vice Chancellor, Dayanand Sagar University, Bengaluru'],
-        imageURL: '/images/k_n_balasubramanya_murthy.jpg',
+        imageURL: '/images/k_n_balasubramanya_murthy.png',
         title: 'Prof. K. N. Balasubramanya Murthy',
       },
       {
@@ -33,7 +33,7 @@ export default [
         content: [
           'Director, Higher Education & Entrepreneurship, INTEL, Bengaluru',
         ],
-        imageURL: '/images/sumeet_verma.jpg',
+        imageURL: '/images/sumeet_verma.png',
         title: 'Sri. Sumeet Verma',
       },
       {
