@@ -34,3 +34,5 @@ jobs:
           local-dir: ./out/
           exclude: |
             **/docs/**
+        env:
+          ARGS: --delete
