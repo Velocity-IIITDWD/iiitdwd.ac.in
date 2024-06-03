@@ -1,7 +1,7 @@
 import { ProfileGroup } from '@/types/profile';
 
 export default [
-  {
+  { 
     title: 'Research Scholars and Project Staff',
     profiles: [
       {

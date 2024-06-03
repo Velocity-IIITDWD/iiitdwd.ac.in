@@ -14,7 +14,7 @@ export interface ProfileProp {
       cabin_number: string;
       position?: string;
     };
-
+ 
     body: {
       profile_text: string;
       interest_areas: { id: number; area: string }[];
@@ -30,7 +30,7 @@ let ProfileProps: ProfileProp[] = [
         profile_pdf: '/docs/Dr.AbdulWahid.pdf',
       },
       card: {
-        photo: '/images/Dr.AbdulWahid.jpeg',
+        photo: '/images/Dr.AbdulWahid.jpg',
         designation: 'Assistant Professor',
         department: 'Computer Science & Engineering',
         mail_id: 'abdul.wahid@iiitdwd.ac.in',
@@ -188,7 +188,7 @@ let ProfileProps: ProfileProp[] = [
         profile_pdf: '/docs/Dr.ChannappaAkki.pdf',
       },
       card: {
-        photo: '/images/Dr.ChannappaAkki.jpeg',
+        photo: '/images/Dr.ChannappaAkki.jpg',
         designation: ' Professor',
         department: 'Computer Science & Engineering',
         mail_id: 'akki.channappa@gmail.com',
@@ -238,7 +238,7 @@ let ProfileProps: ProfileProp[] = [
         profile_pdf: 'https://deepakthotappa.wixsite.com/mysite', //website link
       },
       card: {
-        photo: '/images/Dr.DeepakKT.jpeg',
+        photo: '/images/Dr.DeepakKT.jpg',
         designation: 'Assistant Professor',
         department: 'Electronics and Communication Engineering',
         mail_id: 'deepak@iiitdwd.ac.in',
@@ -338,7 +338,7 @@ let ProfileProps: ProfileProp[] = [
         profile_pdf: 'https://sites.google.com/iiitdwd.ac.in/jagadishdn', //website
       },
       card: {
-        photo: '/images/Dr.JagadishDN.jpeg',
+        photo: '/images/Dr.JagadishDN.jpg',
         designation: 'Assistant Professor',
         department: 'Electronics and Communication Engineering',
         mail_id: 'jagadishdn@iiitdwd.ac.in',
@@ -363,7 +363,7 @@ let ProfileProps: ProfileProp[] = [
         profile_pdf: '/docs/Dr.KrishnenduGhosh.pdf',
       },
       card: {
-        photo: '/images/Dr.KrishnenduGhosh.png',
+        photo: '/images/Dr.KrishnenduGhosh.jpg',
         designation: 'Assistant Professor',
         department: 'Computer Science & Engineering',
         mail_id: 'krishnendu@iiitdwd.ac.in',
@@ -386,7 +386,7 @@ let ProfileProps: ProfileProp[] = [
         profile_pdf: 'https://sites.google.com/view/lakshya',
       },
       card: {
-        photo: '/images/Dr.LakshmanMahto.jpeg',
+        photo: '/images/Dr.LakshmanMahto.jpg',
         designation: 'Assistant Professor',
         department: 'Humanities & Science',
         mail_id: 'lakshman@iiitdwd.ac.in',
@@ -551,7 +551,7 @@ let ProfileProps: ProfileProp[] = [
         profile_pdf: 'https://prabhuprasadbm.github.io/',
       },
       card: {
-        photo: '/images/Dr.PrabhuPrasadBM.png',
+        photo: '/images/Dr.PrabhuPrasadBM.jpg',
         designation: 'Assistant Professor',
         department: 'Computer Science & Engineering',
         mail_id: 'prabhuprasad@iiitdwd.ac.in',
@@ -625,7 +625,7 @@ let ProfileProps: ProfileProp[] = [
         profile_pdf: '/docs/Dr.RajendraHegadi.pdf',
       },
       card: {
-        photo: '/images/Dr.RajendraHegadi.jpeg',
+        photo: '/images/Dr.RajendraHegadi.jpg',
         designation: 'Associate Professor',
         department: 'Data Science and Intelligent Systems',
         mail_id: 'rajendrahegadi@iiitdwd.ac.in',
@@ -649,7 +649,7 @@ let ProfileProps: ProfileProp[] = [
         profile_pdf: '/docs/Dr.RajeshNS.pdf',
       },
       card: {
-        photo: '/images/Dr.RajeshNS.jpeg',
+        photo: '/images/Dr.RajeshNS.jpg',
         designation: 'Assistant Professor',
         department: 'Humanities & Science',
         mail_id: 'rajeshns29@gmail.com, rajesh.ns29@iiitdwd.ac.in',
@@ -793,7 +793,7 @@ let ProfileProps: ProfileProp[] = [
         profile_pdf: '/docs/Dr.SomenBhattacharjee.pdf',
       },
       card: {
-        photo: '/images/Dr.SomenBhattacharjee.jpeg',
+        photo: '/images/Dr.SomenBhattacharjee.jpg',
         designation: 'Assistant  Professor',
         department: 'Electronics and Communication Engineering',
         mail_id: 'somen@iiitdwd.ac.in',
@@ -866,7 +866,7 @@ let ProfileProps: ProfileProp[] = [
         profile_pdf: '/docs/Dr.SunilSaumya.pdf',
       },
       card: {
-        photo: '/images/Dr.SunilSaumya.jpeg',
+        photo: '/images/Dr.SunilSaumya.jpg',
         designation: 'Assistant Professor',
         department: 'Data Science and Intelligent Systems',
         mail_id: 'sunil.saumya@iiitdwd.ac.in',
@@ -911,7 +911,7 @@ let ProfileProps: ProfileProp[] = [
         profile_pdf: '/docs/Dr.SuvadipHazra.pdf',
       },
       card: {
-        photo: '/images/Dr.SuvadipHazra.png',
+        photo: '/images/Dr.SuvadipHazra.jpg',
         designation: 'Assistant  Professor',
         department: 'Computer Science & Engineering',
         mail_id: 'suvadip@iiitdwd.ac.in',
