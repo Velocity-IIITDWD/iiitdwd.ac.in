@@ -18,63 +18,22 @@ import { GalleryImages } from '@/data/gallery';
 import { events } from '@/data/events';
 import AnimatedCounter from '@/components/HomePage/AnimatedCounter';
 import AutoScrollCarousel from '@/components/HomePage/AutoScrollCarousel';
+import { EmblaOptionsType } from 'embla-carousel';
 import { announcements } from '@/data/announcements';
 import { useState } from 'react';
 import { url } from 'inspector';
+import EmblaCarousel from '@/components/HomePage/EmblaCarousel';
 
 export default function Home() {
   const [program, setProgram] = useState(0);
 
+  const OPTIONS: EmblaOptionsType = { loop: true };
+  const SLIDE_COUNT = 5;
+  const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
+
   return (
     <div className="flex flex-col h-full w-full">
-      <MainCarousel>
-        {images.map((item, index) =>
-          item?.link ? (
-            <Link
-              key={index}
-              className="w-full h-full relative flex-[0_0_100%] overflow-hidden"
-              href={item?.link}
-            >
-              <Card>
-                <CardContent className="flex p-0 relative bg-gray-50 h-[60vh] items-center shadow-lg justify-center">
-                  <Image
-                    alt="main image"
-                    src={item?.url}
-                    width={0}
-                    height={0}
-                    sizes="100%"
-                    className="md:w-[80%] w-full h-[80%] md:h-full relative object-cover object-top"
-                  />
-
-                  <div className="absolute text-sm md:text-base bottom-4 left-1/2 w-fit max-w-full -translate-x-1/2 bg-slate-900/40 backdrop-blur p-2 rounded text-white text-center">
-                    {item?.caption}
-                  </div>
-                </CardContent>
-              </Card>
-            </Link>
-          ) : (
-            <Card
-              key={index}
-              className="w-full h-full relative flex-[0_0_100%] overflow-hidden"
-            >
-              <CardContent className="flex p-0 relative bg-gray-50 h-[60vh] items-center shadow-lg justify-center">
-                <Image
-                  alt="main image"
-                  src={item?.url}
-                  width={0}
-                  height={0}
-                  sizes="100%"
-                  className="md:w-[80%] w-full h-[80%] md:h-full relative object-cover object-top"
-                />
-
-                <div className="absolute text-sm md:text-base bottom-4 left-1/2 w-fit max-w-full -translate-x-1/2 bg-slate-900/40 backdrop-blur p-2 rounded text-white text-center">
-                  {item?.caption}
-                </div>
-              </CardContent>
-            </Card>
-          )
-        )}
-      </MainCarousel>
+      <MainCarousel />
 
       <section className="my-20 bg-white border-t border-b shadow_inset border-slate-100 md:py-20 py-10 w-full flex flex-col lg:flex-row-reverse items-center md:px-20 sm:px-10 p-4 gap-6">
         <Image
