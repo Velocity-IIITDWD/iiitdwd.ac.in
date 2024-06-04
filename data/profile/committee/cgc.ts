@@ -16,27 +16,27 @@ export default [
       },
     ],
   },
-  {
+  { 
     title: '',
     profiles: [
       {
         content: ['Ex-officio Member'],
-        imageURL: '/images/deepak_kt.jpeg',
+        imageURL: '/images/Dr.DeepakKT.jpg',
         title: 'Dr. Deepak KT',
       },
       {
         content: ['Ex-officio Member'],
-        imageURL: '/images/pavan_kumar.jpg',
+        imageURL: '/images/Dr.PavanKumarC.jpg',
         title: 'Dr. Pavan Kumar',
       },
       {
         content: ['Ex-officio Member'],
-        imageURL: '/images/sunil_saumya.jpeg',
+        imageURL: '/images/Dr.SunilSaumya.jpg',
         title: 'Dr. Sunil Saumya',
       },
       {
         content: ['Ex-officio Member'],
-        imageURL: '/images/ashwath_babu_h.jpeg',
+        imageURL: '/images/Dr.AswathBabuH.jpeg',
         title: 'Dr. Ashwath Babu H',
       },
     ],
@@ -46,7 +46,7 @@ export default [
     profiles: [
       {
         content: ['Member'],
-        imageURL: '/images/animesh_chaturvedi.jpg',
+        imageURL: '/images/Dr.AnimeshChaturvedi.jpg',
         title: 'Dr. Animesh Chaturvedi',
       },
       {
@@ -56,17 +56,17 @@ export default [
       },
       {
         content: ['Member'],
-        imageURL: '/images/vivek_raj.jpg',
+        imageURL: '/images/Dr.VivekrajVK.jpg',
         title: 'Dr. Vivek Raj',
       },
       {
         content: ['Member'],
-        imageURL: '/images/prabhu_prasad_bm.png',
+        imageURL: '/images/Dr.PrabhuPrasadBM.jpg',
         title: 'Dr. Prabhu Prasad BM',
       },
       {
         content: ['Member'],
-        imageURL: '/images/anushree_kini.jpg',
+        imageURL: '/images/Dr.Anushreekini.jpg',
         title: 'Dr. Anushree Kini',
       },
     ],

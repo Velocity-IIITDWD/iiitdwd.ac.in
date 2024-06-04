@@ -16,7 +16,7 @@ export default [
       },
       {
         content: ['Junior Assistant'],
-        imageURL: '/images/ashwin_hiremath.jpeg',
+        imageURL: '/images/ashwin_hiremath.jpg',
         title: 'Mr. Ashwin Hiremath',
       },
       {
@@ -31,7 +31,7 @@ export default [
       },
       {
         content: ['Junior Assistant'],
-        imageURL: '/images/kushal_hiremath.jpeg',
+        imageURL: '/images/kushal_hiremath.jpg',
         title: 'Mr. Kushal Hiremath',
       },
       {
@@ -41,12 +41,12 @@ export default [
       },
       {
         content: ['Senior Audit Officer'],
-        imageURL: '/images/n_r_hiremath.jpeg',
+        imageURL: '/images/n_r_hiremath.jpg',
         title: 'Mr. N R Hiremath',
       },
       {
         content: ['Assistant Sports Coach'],
-        imageURL: '/images/naveen_shirahatti.jpeg',
+        imageURL: '/images/naveen_shirahatti.jpg',
         title: 'Mr. Naveen Shirahatti',
       },
       {
@@ -71,7 +71,7 @@ export default [
       },
       {
         content: ['Junior Assistant'],
-        imageURL: '/images/raghvendra_h.jpeg',
+        imageURL: '/images/raghvendra_h.jpg',
         title: 'Mr. Raghvendra H',
       },
       {
@@ -86,12 +86,12 @@ export default [
       },
       {
         content: ['Senior Library Information Assistant'],
-        imageURL: '/images/sagar_kolekar.jpeg',
+        imageURL: '/images/sagar_kolekar.jpg',
         title: 'Mr. Sagar Kolekar',
       },
       {
         content: ['Technical Assistant'],
-        imageURL: '/images/sameer_desai.jpeg',
+        imageURL: '/images/sameer_desai.jpg',
         title: 'Mr. Sameer Desai',
       },
       {
@@ -101,12 +101,12 @@ export default [
       },
       {
         content: ['Junior Assistant'],
-        imageURL: '/images/shalini_kotur.jpeg',
+        imageURL: '/images/shalini_kotur.jpg',
         title: 'Ms. Shalini Kotur',
       },
       {
         content: ['Junior Superintendent - HRM'],
-        imageURL: '/images/suma_shetty.jpeg',
+        imageURL: '/images/suma_shetty.jpg',
         title: 'Mrs. Suma Shetty',
       },
       {
@@ -116,7 +116,7 @@ export default [
       },
       {
         content: ['Junior Superintendent - Accounts'],
-        imageURL: '/images/swati_math.jpeg',
+        imageURL: '/images/swati_math.jpg',
         title: 'Mrs. Swati Math',
       },
       {
