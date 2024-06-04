@@ -54,7 +54,7 @@ export default function Page() {
           </p>
 
           <div className="font-bold mt-4 text-lg text-dwd-primary">
-            The minimum eligibility criteria for the M. Tech  program are given below:
+            The minimum eligibility criteria for the  Ph.D.  program are given below:
 
 
             <div className="mx-auto my-9 text-md font-normal">
