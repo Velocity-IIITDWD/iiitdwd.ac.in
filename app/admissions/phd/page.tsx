@@ -31,14 +31,16 @@ export default function Page() {
               2. B.E. / B.Tech. / M.Sc. / Technology or an equivalent degree, in relevant areas</li>
           </ol>
               B.E. / B.Tech. applicants with experience in a reputed R&D organization or a company, or those who have published papers in reputed conferences and journals, or patents are preferred.
-          <div className="my-4 text-lg font-semibold text-dwd-primary">
+          <div className="mt-10 mb-2   text-lg font-semibold text-dwd-primary">
             •  Ph.D. in Physics / Mathematics
           </div>
-          <p>
-            ⁃ Master’s Degree in relevant areas is a must.
+          <p className="pl-4 mb-8">
+             Master’s Degree in relevant areas is a must.
           </p>
-          <div className="font-bold mt-4 text-lg text-dwd-primary">
-            * The minimum eligibility criteria for the  Ph.D.  program are given below:
+          <div className="font-bold mt-4 text-lg ">
+            <p className="text-[#db4444] text-lg">
+            The minimum eligibility criteria for the  Ph.D.  program are given below:
+            </p>
             <div className="mx-auto my-9 text-md font-normal">
               <table className="border-collapse border border-gray-400 mx-auto">
                 <thead>

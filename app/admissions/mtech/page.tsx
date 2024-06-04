@@ -19,7 +19,10 @@ export default function Page() {
             The minimum requirement is a B.E. / B.Tech. / M.Sc. / M.C.A. or equivalent for IT/ Engineering disciplines with a valid score in an entrance examination such as GATE/NET or national level selection process conducted by IIIT Dharwad or any other national level examination.
           </div>
           <div className="font-bold mt-4 text-lg text-dwd-primary">
-           * The minimum eligibility criteria for the M. Tech. program are given below:
+          <p className="text-[#db4444] text-lg">
+
+           The minimum eligibility criteria for the M. Tech. program are given below:
+          </p>
             <div className="mx-auto my-9 text-md font-normal">
               <table className="border-collapse border border-gray-400 mx-auto">
                 <thead>
