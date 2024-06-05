@@ -12,7 +12,7 @@ export const announcements: Announcement[] = [
   },
   {
     link: '/docs/Ph.D_and_M.Tech-Research_Aug24_Admission_Notification.pdf',
-    text: 'Admission to Ph.D. and M. Tech. (Research), August 2024',
+    text: 'Admission to Ph.D. and M. Tech. (Research) : Last date is extended till 12th June 2024',
     new: true,
   },
   {

@@ -84,12 +84,12 @@ export const links: linksStructure[] = [
       {
         id: 3,
         link: '/docs/FEE_2024-25_Sheet1.pdf',
-        displayText: 'Fee Structure',
+        displayText: 'Fee Structure for the batch 2024-2025',
       },
       {
         id: 4,
         link: '/faq',
-        displayText: 'FAQ\'s',
+        displayText: "FAQ's",
       },
     ],
   },

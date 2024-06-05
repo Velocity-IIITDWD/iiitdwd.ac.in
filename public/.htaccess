@@ -1,10 +1,10 @@
 Options -MultiViews
 RewriteEngine On
 
-# Redirect requests for non-existent files or directories to the root
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^ / [L,R=302]
+# # Redirect requests for non-existent files or directories to the root
+# RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteCond %{REQUEST_FILENAME} !-d
+# RewriteRule ^ / [L,R=302]
 
 
 # Try to serve file directly, fallback to .html, then to 404
