@@ -10,7 +10,7 @@ export default [
         title: 'Dr. Manjunath K Vanahalli',
       },
       {
-        content: ['Member Secretary'],
+        content: ['Member Secretary (ujwal@iiitdwd.ac.in) '],
         imageURL: '/images/ujwal_doddamani.jpeg',
         title: 'Mr. Ujwal Doddamani',
       },
@@ -21,23 +21,18 @@ export default [
     profiles: [
       {
         content: ['Ex-officio Member'],
-        imageURL: '/images/deepak_kt.jpeg',
-        title: 'Dr. Deepak KT',
+        imageURL: '/images/Dr.PrabhuPrasadBM.png',
+        title: 'Dr. Prabhu Prasad B M',
       },
       {
         content: ['Ex-officio Member'],
-        imageURL: '/images/pavan_kumar.jpg',
-        title: 'Dr. Pavan Kumar',
+        imageURL: '/images/Dr.PrakashPawar.jpg',
+        title: 'Dr. Prakash Pawar',
       },
       {
         content: ['Ex-officio Member'],
-        imageURL: '/images/sunil_saumya.jpeg',
+        imageURL: '/images/Dr.SunilSaumya.jpeg',
         title: 'Dr. Sunil Saumya',
-      },
-      {
-        content: ['Ex-officio Member'],
-        imageURL: '/images/ashwath_babu_h.jpeg',
-        title: 'Dr. Ashwath Babu H',
       },
     ],
   },
@@ -46,8 +41,8 @@ export default [
     profiles: [
       {
         content: ['Member'],
-        imageURL: '/images/animesh_chaturvedi.jpg',
-        title: 'Dr. Animesh Chaturvedi',
+        imageURL: '/images/vivek_raj.jpg',
+        title: 'Dr. Vivek Raj',
       },
       {
         content: ['Member'],
@@ -56,13 +51,23 @@ export default [
       },
       {
         content: ['Member'],
-        imageURL: '/images/vivek_raj.jpg',
-        title: 'Dr. Vivek Raj',
+        imageURL: '/images/animesh_chaturvedi.jpg',
+        title: 'Dr. Animesh Chaturvedi',
       },
       {
         content: ['Member'],
-        imageURL: '/images/prabhu_prasad_bm.png',
-        title: 'Dr. Prabhu Prasad BM',
+        imageURL: '/images/Dr.DibyajyotiGuha.jpg',
+        title: 'Dr. Dibyajyoti Guha',
+      },
+      {
+        content: ['Member'],
+        imageURL: '/images/Dr.SunilCK.jpg',
+        title: 'Dr. Sunil C K',
+      },
+      {
+        content: ['Member'],
+        imageURL: '/images/Dr.SiddharthR.jpg',
+        title: 'Dr. Siddharth R',
       },
       {
         content: ['Member'],

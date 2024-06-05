@@ -17,7 +17,7 @@ export default function page() {
             href="/pdfs/Academic_Calendar_1st_year.pdf"
             className="rounded bg-dwd-primary md:basis-1/4 basis-full flex items-center justify-center p-3 text-white text-center"
           >
-            Academic Calendar (1st Sem - 2023 Batch Students)
+            Academic Calendar (1st year)
           </Link>
           <Link
             target="_blank"
