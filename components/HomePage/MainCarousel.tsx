@@ -172,14 +172,14 @@ const MainCarousel: React.FC<PropType> = ({ options }) => {
             item?.link ? (
               <Link key={index} className="embla__slide" href={item?.link}>
                 <Card className="slide_number_main border-none p-0">
-                  <CardContent className="flex border rounded-lg p-0 relative shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px] bg-gray-50 h-[40vh] md:h-[60vh] items-center justify-center">
+                  <CardContent className="flex border rounded-lg overflow-hidden p-0 relative shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px] bg-gray-50 h-[30vh] md:h-[60vh] items-center justify-center">
                     <Image
                       alt="main image"
                       src={item?.url}
                       width={0}
                       height={0}
                       sizes="100%"
-                      className="w-full h-[80%] md:h-full relative object-cover object-top"
+                      className="w-full h-auto md:h-full relative object-cover object-top"
                     />
 
                     <div className="absolute text-xs md:text-base bottom-4 left-1/2 w-fit max-w-full -translate-x-1/2 bg-slate-900/40 backdrop-blur p-2 rounded text-white text-center">
@@ -190,7 +190,7 @@ const MainCarousel: React.FC<PropType> = ({ options }) => {
               </Link>
             ) : (
               <Card key={index} className="embla__slide border-none p-0">
-                <CardContent className="flex p-0 border rounded-lg overflow-hidden shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px] slide_number_main relative bg-gray-50 h-[40vh] md:h-[60vh] items-center justify-center">
+                <CardContent className="flex p-0 border rounded-lg overflow-hidden shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px] slide_number_main relative bg-gray-50 h-[30vh] md:h-[60vh] items-center justify-center">
                   <Image
                     alt="main image"
                     src={item?.url}

@@ -1,35 +1,21 @@
 'use client';
 import Link from 'next/link';
 import { ExternalLink } from 'lucide-react';
-import { images, ProgramCardDetails, Programs } from '@/data/homePage';
+import { Programs } from '@/data/homePage';
 
 import { Card, CardContent } from '@/components/ui/card';
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from '@/components/ui/carousel';
+
 import Image from 'next/image';
 import MainCarousel from '@/components/HomePage/MainCarousel';
-import HomeCarousel from '@/components/HomePage/HomeCarousel';
 import { GalleryImages } from '@/data/gallery';
 import { events } from '@/data/events';
 import AnimatedCounter from '@/components/HomePage/AnimatedCounter';
 import AutoScrollCarousel from '@/components/HomePage/AutoScrollCarousel';
-import { EmblaOptionsType } from 'embla-carousel';
 import { announcements } from '@/data/announcements';
 import { useState } from 'react';
-import { url } from 'inspector';
-import EmblaCarousel from '@/components/HomePage/EmblaCarousel';
 
 export default function Home() {
   const [program, setProgram] = useState(0);
-
-  const OPTIONS: EmblaOptionsType = { loop: true };
-  const SLIDE_COUNT = 5;
-  const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
 
   return (
     <div className="flex flex-col h-full w-full">
