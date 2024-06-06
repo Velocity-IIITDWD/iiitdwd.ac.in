@@ -6,6 +6,11 @@ export type Announcement = {
 
 export const announcements: Announcement[] = [
   {
+    link: '/docs/Notice - Cancellation of Advt. for the post of Registrar-reg.pdf',
+    text: 'Notice - Cancellation of Advt. for the post of Registrar-reg',
+    new: true,
+  },
+  {
     link: '/docs/M.TechbyResearch.pdf',
     text: 'Sponsored position under M. Tech by research',
     new: true,
