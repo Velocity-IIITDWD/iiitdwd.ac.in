@@ -10,7 +10,7 @@ export default [
         title: 'Dr. Manjunath K Vanahalli',
       },
       {
-        content: ['Member Secretary'],
+        content: ['Member Secretary (ujwal@iiitdwd.ac.in) '],
         imageURL: '/images/ujwal_doddamani.jpeg',
         title: 'Mr. Ujwal Doddamani',
       },
