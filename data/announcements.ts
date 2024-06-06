@@ -6,7 +6,7 @@ export type Announcement = {
 
 export const announcements: Announcement[] = [
   {
-    link: '/docs/Notice - Cancellation of Advt. for the post of Registrar-reg.pdf',
+    link: '/docs/Cancellation_of_Advt_for_ the_post_of_Registrar-reg.pdf',
     text: 'Notice - Cancellation of Advt. for the post of Registrar-reg',
     new: true,
   },
