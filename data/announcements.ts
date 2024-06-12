@@ -6,6 +6,11 @@ export type Announcement = {
 
 export const announcements: Announcement[] = [
   {
+    link: '/docs/MoU-Director_Office.docx',
+    text: 'Signing of MoU between IIIT Dharwad and IIT Dharwad',
+    new: true,
+  },
+  {
     link: '/tenders',
     text: 'Tender : Bus Hiring Service - Regular Basis',
     new: true,

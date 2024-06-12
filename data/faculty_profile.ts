@@ -599,7 +599,7 @@ let ProfileProps: ProfileProp[] = [
     content: {
       head: {
         name: 'Dr. Pramod Yelmewad',
-        profile_pdf: '/docs/Dr.PramodYelmewad.pdf',
+        profile_pdf: 'https://sites.google.com/view/pramod-yelmewad/home',
       },
       card: {
         photo: '/images/Dr.PramodYelmewad.jpg',
