@@ -10,6 +10,21 @@ export default function Page() {
       <p className="text-dwd-primary font-bold text-4xl text-center mb-2">
         B.Tech. Admissions {year}
       </p>
+
+      <Image
+        alt=" admission banner"
+        width={500}
+        height={100}
+        className="self-center mt-2"
+        src="/images/1717307021103.jpg"
+      />
+      <a
+        className='mx-auto my-2 text-dwd-primary  block hover:underline underline-offset-2 after:-translate-y-1/3 after:absolute relative after:content-[url("/icons/linkIcon.svg")] w-fit self-center'
+        href={'https://lnkd.in/gw5-vFw2'}
+      >
+        IIIT Dharwad Undergraduate Admission 2024 Form IIIT Dharwad
+        Undergraduate Admission 2024 Queries Form
+      </a>
       <Image
         alt="supernumerary admission banner"
         width={1024}
@@ -17,6 +32,7 @@ export default function Page() {
         className="self-center mt-2"
         src="/images/banner_admission_supernumerary.jpg"
       />
+
       <p className="text-lg font-bold text-dwd-primary">Seat matrix</p>
       <div className="text-center grid grid-cols-19 border-2 overflow-auto border-dwd-secondary1 rounded">
         <div className="grid grid-cols-19 col-span-19 bg-dwd-secondary1">

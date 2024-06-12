@@ -30,6 +30,11 @@ export const images: MainCarouselImage[] = [
     link: '/admissions/btech',
   },
   {
+    url: '/images/Sign-MoU.jpg',
+    caption: 'Signing of MoU between IIIT Dharwad and IIT Dharwad',
+    link: '/docs/MoU-Director_Office.docx',
+  },
+  {
     url: '/images/MainCarousel3.jpeg',
     caption:
       'Prof. S. R. Mahadeva Prasanna taking the charge as the Director of IIIT Dharwad',

@@ -2,6 +2,16 @@ export const tenders: Tender[] = [
   {
     cancelled: false,
     corrections: [],
+    documents: [],
+    link: '/docs/GeM-Bidding-648796-Providing-Bus-service.pdf',
+    publishDate: '2024-06-06',
+    submissionDeadline: '2024-06-27T20:00+05:30',
+    title: 'Bus Hiring Service - Regular Basis (GEM/2024/B/5021590)',
+    updatedAt: 49,
+  },
+  {
+    cancelled: false,
+    corrections: [],
     documents: [
       {
         title: 'Online Application Form',
