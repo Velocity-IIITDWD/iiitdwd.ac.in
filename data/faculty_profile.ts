@@ -189,11 +189,11 @@ let ProfileProps: ProfileProp[] = [
       },
       card: {
         photo: '/images/Dr.ChannappaAkki.jpeg',
-        designation: ' Professor',
+        designation: 'Professor',
         department: 'Computer Science & Engineering',
         mail_id: 'akki.channappa@gmail.com',
         cabin_number: '?',
-        position: 'Dean - Planning and Development',
+        position: 'Professor-in-Charge - Planning and Development',
       },
       body: {
         profile_text: '',

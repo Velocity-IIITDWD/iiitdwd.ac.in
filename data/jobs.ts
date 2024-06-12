@@ -137,7 +137,7 @@ export const jobsData: Jobs[] = [
     "details": "",
     "lastDate": "07.02.2023",
     "generalInstructions": "/images/JRF_advertisement.jpg",
-    "application": "/docs/careers/JRF_application_form.pdf",
+    "application": "/docs/JRF_application_form.pdf",
     "extraInfo": []
   },
   {
