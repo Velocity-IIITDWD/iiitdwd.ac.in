@@ -109,9 +109,9 @@ export const links: linksStructure[] = [
     links: [
       {
         id: 1,
-        link: '/docs/btech_admission_guidelines_2023.pdf',
+        link: '#',
         displayText:
-          'Guidelines for students alloted through JoSAA/CSAB Counselling (*will be updated soon*)',
+          'Guidelines for students alloted through JoSAA/CSAB Counselling (will be updated soon)',
       },
       {
         id: 2,
