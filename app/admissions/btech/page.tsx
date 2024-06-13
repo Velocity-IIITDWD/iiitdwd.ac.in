@@ -20,7 +20,7 @@ export default function Page() {
       />
       <a
         className='mx-auto my-2 text-dwd-primary  block hover:underline underline-offset-2 after:-translate-y-1/3 after:absolute relative after:content-[url("/icons/linkIcon.svg")] w-fit self-center'
-        href={'https://lnkd.in/gw5-vFw2'}
+        href={'https://forms.gle/XYBoGw9xJQZ7gkzYA'}
       >
         IIIT Dharwad Undergraduate Admission 2024 Form IIIT Dharwad
         Undergraduate Admission 2024 Queries Form
