@@ -1,6 +1,32 @@
 Options -MultiViews
 RewriteEngine On
 
+Redirect 301 /About.php /about
+Redirect 301 /Academics.php /academics
+Redirect 301 /Admissions.php /admissions
+Redirect 301 /Ourcampus.php /campus
+Redirect 301 /Events.php /events
+Redirect 301 /CareerGuidance.php /placements
+Redirect 301 /Careers.php /careers
+Redirect 301 /Tenders.php /tenders
+Redirect 301 /Magazine.php /magazine
+Redirect 301 /Nirf.php /nirf
+Redirect 301 /ICC.php /icc
+Redirect 301 /Annual_Reports.php /annual_reports
+Redirect 301 /contact.php /contact
+Redirect 301 /staff.php /staff
+Redirect 301 /BTechCSECurriculum.php /academics/departments/cse
+Redirect 301 /hari.php /
+Redirect 301 /Dr.Rajendra_Hegadi.php /faculty/Dr.RajendraHegadi
+Redirect 301 /Dr.Anand.php /faculty/Dr.AnandP.Barangi
+Redirect 301 /Abdul_Wahid.php /faculty/Dr.AbdulWahid
+Redirect 301 /Dr.Deepak.php /faculty/Dr.DeepakKT
+Redirect 301 /computer-science.php /academics/departments/cse
+Redirect 301 /academics/departments/cse /admissions/btech
+Redirect 301 /facilities.php /facilities
+Redirect 301 /docs/BROCHURE.pdf /docs/brochure_cgc.pdf
+Redirect 301 /Electronics-Communication.php /academics/departments/ece
+
 # # Redirect requests for non-existent files or directories to the root
 # RewriteCond %{REQUEST_FILENAME} !-f
 # RewriteCond %{REQUEST_FILENAME} !-d
