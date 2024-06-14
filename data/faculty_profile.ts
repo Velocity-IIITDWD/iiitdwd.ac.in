@@ -448,26 +448,6 @@ let ProfileProps: ProfileProp[] = [
     },
   },
   {
-    id: 'Dr.MukeshKumarMishra',
-    content: {
-      head: {
-        name: 'Dr. Mukesh Kumar Mishra',
-        profile_pdf: '/docs/Dr.MukeshKumarMishra.pdf',
-      },
-      card: {
-        photo: '/images/Dr.MukeshKumarMishra.png',
-        designation: 'Assistant Professor',
-        department: 'Electronics and Communication Engineering',
-        mail_id: 'mukeshkumar@iiitdwd.ac.in',
-        cabin_number: '?',
-      },
-      body: {
-        profile_text: '',
-        interest_areas: [{ id: 1, area: 'Wireless Communication' }],
-      },
-    },
-  },
-  {
     id: 'Dr.NavyashreeG.R.',
     content: {
       head: {

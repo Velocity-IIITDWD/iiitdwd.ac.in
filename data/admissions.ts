@@ -82,6 +82,16 @@ export const links: linksStructure[] = [
     type: 'Quick Links',
     links: [
       {
+        id: 1,
+        link: '/docs/Josaa_Schedule_2024.pdf',
+        displayText: 'JoSAA 2024 Schedule (Updated on 10-06-2024)',
+      },
+      {
+        id: 2,
+        link: '/docs/CSAB_Schedule_2024.pdf',
+        displayText: 'CSAB-2024 Special Rounds Schedule',
+      },
+      {
         id: 3,
         link: '/docs/FEE_2024-25_Sheet1.pdf',
         displayText: 'Fee Structure for the batch 2024-2025',
@@ -99,9 +109,9 @@ export const links: linksStructure[] = [
     links: [
       {
         id: 1,
-        link: '/docs/btech_admission_guidelines_2023.pdf',
+        link: '#',
         displayText:
-          'Guidelines for students alloted through JoSAA/CSAB Counselling (*will be updated soon*)',
+          'Guidelines for students alloted through JoSAA/CSAB Counselling (will be updated soon)',
       },
       {
         id: 2,
@@ -112,6 +122,18 @@ export const links: linksStructure[] = [
         id: 3,
         link: '/docs/JEE-CRL-CUT-OFF-RANKS-2023-24.pdf',
         displayText: 'Cut-off JEE Ranks for 2023-24 admissions',
+      },
+      {
+        id: 4,
+        link: '/docs/Performance_in Class_XII_2024.pdf',
+        displayText:
+          'Performance in Class XII for candidates seeking admission in IIIT Dharwad',
+      },
+      {
+        id: 5,
+        link: '/docs/Top_20_Percentil_2024.pdf',
+        displayText:
+          'Category wise Top-20 percentile cut-off marks out-of total 500 marks for 2023 and 2024',
       },
     ],
   },
