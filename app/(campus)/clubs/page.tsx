@@ -1,6 +1,14 @@
 'use client';
 import React, { FC, useState, useRef } from 'react';
-import { LinkedinIcon, Instagram, Mail, Github, ExternalLink, QrCode, Twitter } from 'lucide-react';
+import {
+  LinkedinIcon,
+  Instagram,
+  Mail,
+  Github,
+  ExternalLink,
+  QrCode,
+  Twitter,
+} from 'lucide-react';
 import Image from 'next/image';
 import clubs from '../../../data/members';
 import type { ClubName, Club as ClubData } from '../../../data/members';
@@ -8,8 +16,11 @@ import Link from 'next/link';
 
 const Club: FC = () => {
   const [showTechnicalClubs, setShowTechnicalClubs] = useState('all');
+  const [selectedClub, setSelectedClub] = useState<string>('');
 
-  const checkTechnical = (isTechnical: Boolean) => isTechnical === (showTechnicalClubs === 'yes') || showTechnicalClubs === 'all'
+  const checkTechnical = (isTechnical: Boolean) =>
+    isTechnical === (showTechnicalClubs === 'yes') ||
+    showTechnicalClubs === 'all';
 
   return (
     <div className="container mx-auto py-8 px-4">
@@ -20,27 +31,30 @@ const Club: FC = () => {
       <div className="bg-gray-200 p-8 rounded-lg mb-16 relative">
         <div className="top-4 left-4">
           <button
-            className={`px-4 py-2 rounded-lg mr-4 ${showTechnicalClubs === 'all'
-              ? ' hover:border-black bg-dwd-primary text-white hover:text-sky-600'
-              : 'bg-dwd-secondary1 hover:text-white'
+            className={`px-4 py-2 rounded-lg mr-4 ${
+              showTechnicalClubs === 'all'
+                ? ' hover:border-black bg-dwd-primary text-white hover:text-sky-600'
+                : 'bg-dwd-secondary1 hover:text-white'
             }`}
             onClick={() => setShowTechnicalClubs('all')}
           >
             All
           </button>
           <button
-            className={`px-4 py-2 rounded-lg mr-4 ${showTechnicalClubs === 'yes'
-              ? ' hover:border-black bg-dwd-primary text-white hover:text-sky-600'
-              : 'bg-dwd-secondary1 hover:text-white'
+            className={`px-4 py-2 rounded-lg mr-4 ${
+              showTechnicalClubs === 'yes'
+                ? ' hover:border-black bg-dwd-primary text-white hover:text-sky-600'
+                : 'bg-dwd-secondary1 hover:text-white'
             }`}
             onClick={() => setShowTechnicalClubs('yes')}
           >
             Technical
           </button>
           <button
-            className={`px-4 py-2 rounded-lg mt-4 md:mt-0 ${showTechnicalClubs === 'no'
-              ? 'bg-dwd-primary hover:border-black text-white hover:text-sky-600'
-              : 'bg-dwd-secondary1 hover:text-white'
+            className={`px-4 py-2 rounded-lg mt-4 md:mt-0 ${
+              showTechnicalClubs === 'no'
+                ? 'bg-dwd-primary hover:border-black text-white hover:text-sky-600'
+                : 'bg-dwd-secondary1 hover:text-white'
             }`}
             onClick={() => setShowTechnicalClubs('no')}
           >
@@ -58,6 +72,7 @@ const Club: FC = () => {
                     key={club.name}
                     className="bg-dwd-primary text-white p-4 cursor-pointer hover:text-sky-600 rounded-lg shadow-md text-center"
                     href={`#${club.name}`}
+                    onClick={() => setSelectedClub(club?.name)}
                   >
                     {club.name}
                   </Link>
@@ -72,6 +87,7 @@ const Club: FC = () => {
                     key={club.name}
                     className="bg-dwd-primary text-white p-4 cursor-pointer hover:text-sky-600 rounded-lg shadow-md text-center"
                     href={`#${club.name}`}
+                    onClick={() => setSelectedClub(club?.name)}
                   >
                     {club.name}
                   </Link>
@@ -82,13 +98,13 @@ const Club: FC = () => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 gap-y-16">
-        {clubs.filter(club => checkTechnical(club.isTechnical)).map((club: ClubData) => (
-          <div key={club.name} id={club.name} className='scroll-m-12'>
-            <ClubCard
-              {...club}
-            />
-          </div>
-        ))}
+        {clubs
+          .filter((club) => checkTechnical(club.isTechnical))
+          .map((club: ClubData) => (
+            <div key={club.name} id={club.name} className="scroll-m-12">
+              <ClubCard {...club} highlighted={selectedClub === club.name} />
+            </div>
+          ))}
       </div>
     </div>
   );
@@ -107,6 +123,7 @@ const ClubCard: FC<{
   github?: string;
   twitter?: string;
   linktree?: string;
+  highlighted: boolean;
 }> = ({
   name,
   aboutText,
@@ -120,10 +137,14 @@ const ClubCard: FC<{
   github,
   twitter,
   linktree,
+  highlighted,
 }) => {
   const [showAbout, setShowAbout] = useState(true);
   return (
-    <div className="relative max-w-sm mx-auto h-full flex flex-col bg-gray-200 p-4 pt-0 rounded-md shadow-md mb-8 hover:border-dwd-primary border-2 border-transparent group">
+    <div
+      style={{ borderColor: highlighted ? 'black' : 'transparent' }}
+      className="relative max-w-sm mx-auto h-full flex flex-col bg-gray-200 p-4 pt-0 rounded-md shadow-md mb-8 hover:border-dwd-primary border-2 border-transparent group"
+    >
       <div className="w-full relative flex-none h-[110px]">
         <Image
           src={imagePath}
@@ -174,36 +195,56 @@ const ClubCard: FC<{
           )}
         </div>
         <div className="flex justify-center space-x-4">
-          {github ? <Link
-            href={`${github}`}
-            className="flex gap-2 hover:text-pink-600 hover:duration-800 hover:animate-pulse"
-          >
-            <Github size="2rem" />
-          </Link> : ''}
-          {website ? <Link
-            href={`${website}`}
-            className="flex gap-2 hover:text-pink-600 hover:duration-800 hover:animate-pulse"
-          >
-            <ExternalLink size="2rem" />
-          </Link> : ''}
-          {linktree ? <Link
-            href={`${linktree}`}
-            className="flex gap-2 hover:text-pink-600 hover:duration-800 hover:animate-pulse"
-          >
-            <QrCode size="2rem" />
-          </Link> : ''}
-          {twitter ? <Link
-            href={`${twitter}`}
-            className="flex gap-2 hover:text-pink-600 hover:duration-800 hover:animate-pulse"
-          >
-            <Twitter size="2rem" />
-          </Link> : ''}
-          {instagram ? <Link
-            href={`${instagram}`}
-            className="flex gap-2 hover:text-pink-600 hover:duration-800 hover:animate-pulse"
-          >
-            <Instagram size="2rem" />
-          </Link> : ''}
+          {github ? (
+            <Link
+              href={`${github}`}
+              className="flex gap-2 hover:text-pink-600 hover:duration-800 hover:animate-pulse"
+            >
+              <Github size="2rem" />
+            </Link>
+          ) : (
+            ''
+          )}
+          {website ? (
+            <Link
+              href={`${website}`}
+              className="flex gap-2 hover:text-pink-600 hover:duration-800 hover:animate-pulse"
+            >
+              <ExternalLink size="2rem" />
+            </Link>
+          ) : (
+            ''
+          )}
+          {linktree ? (
+            <Link
+              href={`${linktree}`}
+              className="flex gap-2 hover:text-pink-600 hover:duration-800 hover:animate-pulse"
+            >
+              <QrCode size="2rem" />
+            </Link>
+          ) : (
+            ''
+          )}
+          {twitter ? (
+            <Link
+              href={`${twitter}`}
+              className="flex gap-2 hover:text-pink-600 hover:duration-800 hover:animate-pulse"
+            >
+              <Twitter size="2rem" />
+            </Link>
+          ) : (
+            ''
+          )}
+          {instagram ? (
+            <Link
+              href={`${instagram}`}
+              className="flex gap-2 hover:text-pink-600 hover:duration-800 hover:animate-pulse"
+            >
+              <Instagram size="2rem" />
+            </Link>
+          ) : (
+            ''
+          )}
           <Link
             href={`${linkedin}`}
             className="flex gap-2 hover:text-blue-800 hover:duration-800 hover:animate-pulse"
@@ -216,12 +257,16 @@ const ClubCard: FC<{
           >
             <Mail size="2rem" />
           </Link>
-          {gmail2 ? <Link
-            href={`${gmail2}`}
-            className="flex gap-2 hover:text-red-700 hover:duration-800 hover:animate-pulse"
-          >
-            <Mail size="2rem" />
-          </Link> : ''}
+          {gmail2 ? (
+            <Link
+              href={`${gmail2}`}
+              className="flex gap-2 hover:text-red-700 hover:duration-800 hover:animate-pulse"
+            >
+              <Mail size="2rem" />
+            </Link>
+          ) : (
+            ''
+          )}
         </div>
       </div>
     </div>
