@@ -1,5 +1,5 @@
 'use client';
-import React, { FC, useState, useRef } from 'react';
+import React, { FC, useState, useRef, useEffect } from 'react';
 import {
   LinkedinIcon,
   Instagram,
@@ -15,8 +15,29 @@ import type { ClubName, Club as ClubData } from '../../../data/members';
 import Link from 'next/link';
 
 const Club: FC = () => {
-  const [showTechnicalClubs, setShowTechnicalClubs] = useState('all');
   const [selectedClub, setSelectedClub] = useState<string>('');
+
+  function extractHash(url: string): string {
+    const hashIndex = url.indexOf('#');
+    if (hashIndex > -1) {
+      const hash = url.substring(hashIndex + 1);
+      return decodeURIComponent(hash).replace(/%20/g, ' ');
+    }
+    return '';
+  }
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      setSelectedClub(extractHash(window.location.href));
+    };
+    handleHashChange();
+    window.addEventListener('hashchange', handleHashChange);
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange);
+    };
+  }, []);
+
+  const [showTechnicalClubs, setShowTechnicalClubs] = useState('all');
 
   const checkTechnical = (isTechnical: Boolean) =>
     isTechnical === (showTechnicalClubs === 'yes') ||
@@ -142,8 +163,9 @@ const ClubCard: FC<{
   const [showAbout, setShowAbout] = useState(true);
   return (
     <div
-      style={{ borderColor: highlighted ? 'black' : 'transparent' }}
-      className="relative max-w-sm mx-auto h-full flex flex-col bg-gray-200 p-4 pt-0 rounded-md shadow-md mb-8 hover:border-dwd-primary border-2 border-transparent group"
+      className={`relative max-w-sm mx-auto h-full flex flex-col bg-gray-200 p-4 pt-0 rounded-md shadow-md mb-8 group border-2 transition duration-300 ${
+        highlighted && 'border-black'
+      } hover:border-dwd-primary`}
     >
       <div className="w-full relative flex-none h-[110px]">
         <Image
