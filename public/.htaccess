@@ -1,6 +1,10 @@
+# Disable MultiViews option to ensure rewrite rules work correctly
 Options -MultiViews
+
+# Enable the rewrite engine
 RewriteEngine On
 
+# Permanent 301 redirects from old PHP pages to new URL paths
 Redirect 301 /About.php /about
 Redirect 301 /Academics.php /academics
 Redirect 301 /Admissions.php /admissions
@@ -18,20 +22,25 @@ Redirect 301 /staff.php /staff
 Redirect 301 /BTechCSECurriculum.php /academics/departments/cse
 Redirect 301 /BTechDSISCurriculum.php /academics/departments/dsai
 Redirect 301 /BTechECECurriculum.php /academics/departments/ece
-Redirect 301 /hari.php /
-Redirect 301 /Dr.Rajendra_Hegadi.php /faculty/Dr.RajendraHegadi
-Redirect 301 /Dr.Anand.php /faculty/Dr.AnandP.Barangi
-Redirect 301 /Abdul_Wahid.php /faculty/Dr.AbdulWahid
-Redirect 301 /Dr.Deepak.php /faculty/Dr.DeepakKT
 Redirect 301 /computer-science.php /academics/departments/cse
 Redirect 301 /academics/departments/cse /admissions/btech
 Redirect 301 /facilities.php /facilities
 Redirect 301 /docs/BROCHURE.pdf /docs/brochure_cgc.pdf
 Redirect 301 /Electronics-Communication.php /academics/departments/ece
 
-# Try to serve file directly, fallback to .html, then to 404
+# Try to serve the requested file directly
+# If the file doesn't exist, check if the corresponding .html file exists
+# If the .html file exists, serve it and stop processing further rules
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{DOCUMENT_ROOT}/$1.html -f
 RewriteRule ^(.*)$ $1.html [L]
 
-ErrorDocument 404 404.html
+# If the requested file and corresponding .html file don't exist, show 404.html
+# This rule is only reached if the previous rule didn't match
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /404.html [L]
+
+# Specify the custom 404 error document to be served
+ErrorDocument 404 /404.html
