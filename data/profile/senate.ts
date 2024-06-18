@@ -26,7 +26,7 @@ export default [
       },
       {
         content: ['Professor, IIT Hyderabad'],
-        imageURL: '/images/ch_subrahmanyam.png',
+        imageURL: '/images/ch_subrahmanyam.jpeg',
         title: 'Prof. Ch. Subrahmanyam',
       },
       {
