@@ -40,7 +40,7 @@ RewriteRule ^(.*)$ $1.html [L]
 # This rule is only reached if the previous rule didn't match
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ /404.html [L]
+RewriteRule ^(.*)$ / [L,R=301]
 
 # Specify the custom 404 error document to be served
 ErrorDocument 404 /404.html
