@@ -953,6 +953,156 @@ let ProfileProps: ProfileProp[] = [
       },
     },
   },
+  {
+    id: 'Dr.ShrinivasKulkarni',
+    content: {
+      head: {
+        name: 'Dr. Shrinivas Kulkarni',
+        profile_pdf: 'https://www.linkedin.com/in/shrinivaskk/',
+      },
+      card: {
+        photo: '/images/ShrinivasKulkarni.jpeg',
+        designation: 'Professor in Practice',
+        department: 'Computer Science & Engineering',
+        mail_id: 'shrinivaskk@gmail.com',
+        cabin_number: '?',
+      },
+      body: {
+        profile_text: '',
+        interest_areas: [
+          { id: 1, area: 'Cyber Security' },
+        ],
+      },
+    },
+  },
+  {
+    id: 'Dr.RajeshVasa',
+    content: {
+      head: {
+        name: 'Dr. Rajesh Vasa',
+        profile_pdf: 'https://www.deakin.edu.au/about-deakin/people/rajesh-vasa',
+      },
+      card: {
+        photo: '/images/RajeshVasa.jpg',
+        designation: 'Adjunct Professor',
+        department: 'Computer Science & Engineering',
+        mail_id: '',
+        cabin_number: '?',
+      },
+      body: {
+        profile_text: '',
+        interest_areas: [
+          { id: 1, area: 'Design and construction of robust AI infused technology' },
+        ],
+      },
+    },
+  },
+  {
+    id: 'Dr.AmbarishKulkarni',
+    content: {
+      head: {
+        name: 'Dr. Ambarish Kulkarni',
+        profile_pdf: 'https://www.swinburne.edu.au/research/our-research/access-our-research/find-a-researcheror-supervisor/researcher-profile/?id=ambarishkulkarni',
+      },
+      card: {
+        photo: '/images/AmbarishKulkarni.jpg',
+        designation: 'Adjunct Professor',
+        department: 'Electronics and Communication Engineering',
+        mail_id: 'ambarishkulkarni@swin.edu.au',
+        cabin_number: '?',
+      },
+      body: {
+        profile_text: '',
+        interest_areas: [
+          { id: 1, area: 'Biotechnology' },
+          { id: 2, area: 'Transportation Systems Engineering' },
+          { id: 3, area: 'Electric Vehicle Research' },
+          { id: 4, area: 'Virtual Design and Prototyping' },
+          { id: 5, area: 'Design and development' },
+          { id: 6, area: 'Virtual and Augmented reality' },
+        ],
+      },
+    },
+  },
+  {
+    id: 'Dr.IsraelCohen',
+    content: {
+      head: {
+        name: 'Dr. Israel Cohen',
+        profile_pdf: 'https://israelcohen.com/',
+      },
+      card: {
+        photo: '/images/IsraelCohen.jpg',
+        designation: 'Adjunct Professor',
+        department: 'Electronics and Communication Engineering',
+        mail_id: 'icohen@ee.technion.ac.il',
+        cabin_number: '?',
+      },
+      body: {
+        profile_text: '',
+        interest_areas: [
+          { id: 1, area: 'Array Signal Processing' },
+          { id: 2, area: 'Speech and image processing' },
+          { id: 3, area: 'Electric Vehicle Research' },
+          { id: 4, area: 'Immersive voice communication' },
+          { id: 5, area: 'Design and development' },
+          { id: 6, area: 'Deep learning-based signal processing' },
+        ],
+      },
+    },
+  },
+  {
+    id: 'Dr.NixonPatel',
+    content: {
+      head: {
+        name: 'Dr. Nixon Patel',
+        profile_pdf: 'https://www.linkedin.com/in/nixonpatel',
+      },
+      card: {
+        photo: '/images/NixonPatel.jpg',
+        designation: 'Professor in Practice',
+        department: 'Data Science and Intelligent Systems',
+        mail_id: 'nixonpatel@gmail.com',
+        cabin_number: '?',
+      },
+      body: {
+        profile_text: '',
+        interest_areas: [
+          { id: 1, area: 'Quantum Computing' },
+          { id: 2, area: 'GenAI deep Stack' },
+          { id: 3, area: 'Big data analytics' },
+          { id: 4, area: 'Cloud' },
+          { id: 5, area: 'Machine learning, mobility and IoT' },
+        ],
+      },
+    },
+  },
+  {
+    id: 'Dr.SRMahadevaPrasanna',
+    content: {
+      head: {
+        name: 'Dr. S R Mahadeva Prasanna',
+        profile_pdf: 'https://sites.google.com/iitdh.ac.in/prasanna/home',
+      },
+      card: {
+        photo: '/images/SRMahadevaPrasanna.jpg',
+        designation: 'Professor and Director',
+        department: 'Data Science and Intelligent Systems',
+        mail_id: 'prasanna@iiitdwd.ac.in',
+        cabin_number: '?',
+      },
+      body: {
+        profile_text: '',
+        interest_areas: [
+          { id: 1, area: 'Speech and Handwriting Processing' },
+          { id: 2, area: 'Applications of Signal Processing and Pattern Recognition' },
+          { id: 3, area: 'Applications of Artificial Intelligence' },
+          { id: 4, area: 'Machine Learning' },
+          { id: 5, area: 'Deep Learning' },
+        ],
+      },
+    },
+  },
 ];
 
 export { ProfileProps };
