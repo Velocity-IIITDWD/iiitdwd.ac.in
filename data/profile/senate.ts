@@ -5,7 +5,7 @@ export default [
     title: 'Chairman Senate',
     profiles: [
       {
-        content: ['Officiating Chairperson & Director, IIIT Dharwad'],
+        content: ['Director, Chairman, IIIT Dharwad'],
         imageURL: '/images/s_r_mahadeva_prasanna.jpg',
         title: 'Prof. S. R. Mahadeva Prasanna',
       },
@@ -15,14 +15,9 @@ export default [
     title: 'Members',
     profiles: [
       {
-        content: ['Former Professor, IISc Bengaluru'],
-        imageURL: '/images/h_s_jamadagni.png',
-        title: 'Prof. H. S. Jamadagni',
-      },
-      {
-        content: ['Vice Chancellor, Dayanand Sagar University, Bengaluru'],
-        imageURL: '/images/k_n_balasubramanya_murthy.png',
-        title: 'Prof. K. N. Balasubramanya Murthy',
+        content: ['Professor, IIT Madras'],
+        imageURL: '/images/madhu_mutyam.png',
+        title: 'Prof. Madhu Mutyam',
       },
       {
         content: ['Professor, IIIT Bangalore'],
@@ -30,26 +25,29 @@ export default [
         title: 'Prof. Badrinath Ramamurthy',
       },
       {
-        content: [
-          'Director, Higher Education & Entrepreneurship, INTEL, Bengaluru',
-        ],
+        content: ['Professor, IIT Hyderabad'],
+        imageURL: '/images/ch_subrahmanyam.jpeg',
+        title: 'Prof. Ch. Subrahmanyam',
+      },
+      {
+        content: ['Professor, IIT Dharwad'],
+        imageURL: '/images/dhiraj_v_patil.png',
+        title: 'Prof. Dhiraj V. Patil',
+      },
+      {
+        content: ['Professor, IIIT Hyderabad'],
+        imageURL: '/images/vasudeva_verma.png',
+        title: 'Prof. Vasudeva Verma',
+      },
+      {
+        content: ['McAfee Bengaluru'],
+        imageURL: '/images/dattatraya_kulkarni.png',
+        title: 'Dr. Dattatraya Kulkarni',
+      },
+      {
+        content: ['Intel Bengaluru'],
         imageURL: '/images/sumeet_verma.png',
-        title: 'Sri. Sumeet Verma',
-      },
-      {
-        content: ['Professor, IIIT Bangalore'],
-        imageURL: '/images/v_ramasubramanian.jpg',
-        title: 'Prof. V Ramasubramanian',
-      },
-    ],
-  },
-  {
-    title: 'Non Member Secretary',
-    profiles: [
-      {
-        content: ['Non Member Secretary, IIIT Dharwad'],
-        imageURL: '',
-        title: 'Registrar, IIIT Dharwad',
+        title: 'Shri Sumeet Verma',
       },
     ],
   },
