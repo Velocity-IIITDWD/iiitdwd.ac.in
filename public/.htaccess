@@ -16,6 +16,8 @@ Redirect 301 /Annual_Reports.php /annual_reports
 Redirect 301 /contact.php /contact
 Redirect 301 /staff.php /staff
 Redirect 301 /BTechCSECurriculum.php /academics/departments/cse
+Redirect 301 /BTechDSISCurriculum.php /academics/departments/dsai
+Redirect 301 /BTechECECurriculum.php /academics/departments/ece
 Redirect 301 /hari.php /
 Redirect 301 /Dr.Rajendra_Hegadi.php /faculty/Dr.RajendraHegadi
 Redirect 301 /Dr.Anand.php /faculty/Dr.AnandP.Barangi
@@ -26,12 +28,6 @@ Redirect 301 /academics/departments/cse /admissions/btech
 Redirect 301 /facilities.php /facilities
 Redirect 301 /docs/BROCHURE.pdf /docs/brochure_cgc.pdf
 Redirect 301 /Electronics-Communication.php /academics/departments/ece
-
-# # Redirect requests for non-existent files or directories to the root
-# RewriteCond %{REQUEST_FILENAME} !-f
-# RewriteCond %{REQUEST_FILENAME} !-d
-# RewriteRule ^ / [L,R=302]
-
 
 # Try to serve file directly, fallback to .html, then to 404
 RewriteCond %{REQUEST_FILENAME} !-f
