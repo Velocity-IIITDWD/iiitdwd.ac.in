@@ -20,6 +20,11 @@ export default [
         title: 'Prof. Madhu Mutyam',
       },
       {
+        content: ['Professor, IIIT Bangalore'],
+        imageURL: '/images/badrinath_ramamurthy.jpg',
+        title: 'Prof. Badrinath Ramamurthy',
+      },
+      {
         content: ['Professor, IIT Hyderabad'],
         imageURL: '/images/ch_subrahmanyam.png',
         title: 'Prof. Ch. Subrahmanyam',
@@ -43,11 +48,6 @@ export default [
         content: ['Intel Bengaluru'],
         imageURL: '/images/sumeet_verma.png',
         title: 'Shri Sumeet Verma',
-      },
-      {
-        content: ['Professor, IIIT Bangalore'],
-        imageURL: '/images/badrinath_ramamurthy.jpg',
-        title: 'Prof. Badrinath Ramamurthy',
       },
     ],
   },
