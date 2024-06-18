@@ -203,6 +203,8 @@ const List = ({ ll }: ListProps) => {
 };
 
 const Faculty = () => {
+  const profiles = ProfileProps.sort((a,b) => (a.id > b.id) ? 1 : -1);
+  console.log(profiles)
   return (
     <>
       <List ll={ProfileProps} />
