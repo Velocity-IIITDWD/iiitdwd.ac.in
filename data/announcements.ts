@@ -6,6 +6,16 @@ export type Announcement = {
 
 export const announcements: Announcement[] = [
   {
+    link: '/docs/Prof_Lakshmivarahan.pdf',
+    text: 'Talk: Mathematics of Bigdata Analysis',
+    new: true,
+  },
+  {
+    link: '/docs/SLD-SRMP.pdf',
+    text: 'Journal article coauthored by Prof. Prasanna titled "Spoken Language Change Detection inspired Speaker Change Detection" gets published in Circuits, Systems and Signal Processing (Springer)',
+    new: true,
+  },
+  {
     link: '/docs/MoU-Director_Office.docx',
     text: 'Signing of MoU between IIIT Dharwad and IIT Dharwad',
     new: true,
@@ -43,17 +53,17 @@ export const announcements: Announcement[] = [
   {
     link: '/docs/Brochure.pdf',
     text: 'One Day Workshop on Fractal Academics on June 15, 2024',
-    new: true,
+    new: false,
   },
   {
     link: '/docs/IIITDharwad_Research_Internship_Rolling_Advertisement.pdf',
     text: 'IIIT Dharwad invites applications from students for internships throughout the year.',
-    new: true,
+    new: false,
   },
   {
     link: '/docs/AICTE_PROGRAM.pdf',
     text: 'IIIT Dharwad rolling out AICTE-Quality Improvement PG Certificate Program in Cybersecurity!',
-    new: true,
+    new: false,
   },
   {
     link: '/docs/Cancellation_Wall_Partition.pdf',
