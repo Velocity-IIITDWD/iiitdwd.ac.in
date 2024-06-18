@@ -23,7 +23,7 @@ export interface ProfileProp {
 }
 let ProfileProps: ProfileProp[] = [
   {
-    id: 'Dr.AbdulWahid',
+    id: 'AbdulWahid',
     content: {
       head: {
         name: 'Dr. Abdul Wahid',
@@ -48,7 +48,7 @@ let ProfileProps: ProfileProp[] = [
     },
   },
   {
-    id: 'Dr.AnandP.Barangi',
+    id: 'AnandP.Barangi',
     content: {
       head: {
         name: 'Dr. Anand P. Barangi',
@@ -68,7 +68,7 @@ let ProfileProps: ProfileProp[] = [
     },
   },
   {
-    id: 'Dr.AnimeshChaturvedi',
+    id: 'AnimeshChaturvedi',
     content: {
       head: {
         name: 'Dr. Animesh Chaturvedi',
@@ -93,7 +93,7 @@ let ProfileProps: ProfileProp[] = [
     },
   },
   {
-    id: 'Dr.AnimeshRoy',
+    id: 'AnimeshRoy',
     content: {
       head: {
         name: 'Dr. Animesh Roy',
@@ -117,7 +117,7 @@ let ProfileProps: ProfileProp[] = [
     },
   },
   {
-    id: 'Dr.Anushreekini',
+    id: 'Anushreekini',
     content: {
       head: {
         name: 'Dr. Anushree kini',
@@ -137,7 +137,7 @@ let ProfileProps: ProfileProp[] = [
     },
   },
   {
-    id: 'Dr.AswathBabuH',
+    id: 'AswathBabuH',
     content: {
       head: {
         name: 'Dr. Aswath Babu H',
@@ -161,7 +161,7 @@ let ProfileProps: ProfileProp[] = [
     },
   },
   {
-    id: 'Dr.ChandrikaKamath',
+    id: 'ChandrikaKamath',
     content: {
       head: {
         name: 'Dr. Chandrika Kamath',
@@ -181,7 +181,7 @@ let ProfileProps: ProfileProp[] = [
     },
   },
   {
-    id: 'Dr.ChannappaAkki',
+    id: 'ChannappaAkki',
     content: {
       head: {
         name: 'Dr. Channappa Akki',
@@ -206,7 +206,7 @@ let ProfileProps: ProfileProp[] = [
     },
   },
   {
-    id: 'Dr.ChinmayanandaA',
+    id: 'ChinmayanandaA',
     content: {
       head: {
         name: 'Dr. Chinmayananda A',
@@ -231,7 +231,7 @@ let ProfileProps: ProfileProp[] = [
     },
   },
   {
-    id: 'Dr.DeepakKT',
+    id: 'DeepakKT',
     content: {
       head: {
         name: 'Dr. Deepak K T',
@@ -255,7 +255,7 @@ let ProfileProps: ProfileProp[] = [
     },
   },
   {
-    id: 'Dr.DibyajyotiGuha',
+    id: 'DibyajyotiGuha',
     content: {
       head: {
         name: 'Dr. Dibyajyoti Guha',
@@ -280,7 +280,7 @@ let ProfileProps: ProfileProp[] = [
     },
   },
   {
-    id: 'Dr.GirishGN',
+    id: 'GirishGN',
     content: {
       head: {
         name: 'Dr. Girish G N',
@@ -304,7 +304,7 @@ let ProfileProps: ProfileProp[] = [
     },
   },
   {
-    id: 'Dr.JagadeeshaRB',
+    id: 'JagadeeshaRB',
     content: {
       head: {
         name: 'Dr. Jagadeesha R B',
@@ -331,7 +331,7 @@ let ProfileProps: ProfileProp[] = [
     },
   },
   {
-    id: 'Dr.JagadishDN',
+    id: 'JagadishDN',
     content: {
       head: {
         name: 'Dr. Jagadish D N',
@@ -356,7 +356,7 @@ let ProfileProps: ProfileProp[] = [
     },
   },
   {
-    id: 'Dr.KrishnenduGhosh',
+    id: 'KrishnenduGhosh',
     content: {
       head: {
         name: 'Dr. Krishnendu Ghosh',
@@ -379,7 +379,7 @@ let ProfileProps: ProfileProp[] = [
     },
   },
   {
-    id: 'Dr.LakshmanMahto',
+    id: 'LakshmanMahto',
     content: {
       head: {
         name: 'Dr. Lakshman Mahto',
@@ -403,7 +403,7 @@ let ProfileProps: ProfileProp[] = [
     },
   },
   {
-    id: 'Dr.MalayKumar',
+    id: 'MalayKumar',
     content: {
       head: {
         name: 'Dr. Malay Kumar',
@@ -427,7 +427,7 @@ let ProfileProps: ProfileProp[] = [
     },
   },
   {
-    id: 'Dr.ManjunathKV',
+    id: 'ManjunathKV',
     content: {
       head: {
         name: 'Dr. Manjunath K V',
@@ -448,7 +448,7 @@ let ProfileProps: ProfileProp[] = [
     },
   },
   {
-    id: 'Dr.NavyashreeG.R.',
+    id: 'NavyashreeG.R.',
     content: {
       head: {
         name: 'Dr. Navyashree G. R.',
@@ -473,7 +473,7 @@ let ProfileProps: ProfileProp[] = [
     },
   },
   {
-    id: 'Dr.NatarajKS',
+    id: 'NatarajKS',
     content: {
       head: {
         name: 'Dr. Nataraj K S',
@@ -497,7 +497,7 @@ let ProfileProps: ProfileProp[] = [
     },
   },
   {
-    id: 'Dr.PavanKumarC',
+    id: 'PavanKumarC',
     content: {
       head: {
         name: 'Dr. Pavan Kumar C',
@@ -524,7 +524,7 @@ let ProfileProps: ProfileProp[] = [
     },
   },
   {
-    id: 'Dr.PrabhuPrasadBM',
+    id: 'PrabhuPrasadBM',
     content: {
       head: {
         name: 'Dr. Prabhu Prasad B M',
@@ -549,7 +549,7 @@ let ProfileProps: ProfileProp[] = [
     },
   },
   {
-    id: 'Dr.PrakashPawar',
+    id: 'PrakashPawar',
     content: {
       head: {
         name: 'Dr. Prakash Pawar',
@@ -575,7 +575,7 @@ let ProfileProps: ProfileProp[] = [
     },
   },
   {
-    id: 'Dr.PramodYelmewad',
+    id: 'PramodYelmewad',
     content: {
       head: {
         name: 'Dr. Pramod Yelmewad',
@@ -598,7 +598,7 @@ let ProfileProps: ProfileProp[] = [
     },
   },
   {
-    id: 'Dr.RajendraHegadi',
+    id: 'RajendraHegadi',
     content: {
       head: {
         name: 'Dr. Rajendra Hegadi',
@@ -622,7 +622,7 @@ let ProfileProps: ProfileProp[] = [
     },
   },
   {
-    id: 'Dr.RajeshNS',
+    id: 'RajeshNS',
     content: {
       head: {
         name: 'Dr. Rajesh N S',
@@ -648,7 +648,7 @@ let ProfileProps: ProfileProp[] = [
     },
   },
   {
-    id: 'Dr.RajibSharma',
+    id: 'RajibSharma',
     content: {
       head: {
         name: 'Dr. Rajib Sharma',
@@ -672,7 +672,7 @@ let ProfileProps: ProfileProp[] = [
     },
   },
   {
-    id: 'Dr.RameshAthe',
+    id: 'RameshAthe',
     content: {
       head: {
         name: 'Dr. Ramesh Athe',
@@ -699,7 +699,7 @@ let ProfileProps: ProfileProp[] = [
     },
   },
   {
-    id: 'Dr.SibasankarPadhy',
+    id: 'SibasankarPadhy',
     content: {
       head: {
         name: 'Dr. Sibasankar Padhy',
@@ -720,7 +720,7 @@ let ProfileProps: ProfileProp[] = [
     },
   },
   {
-    id: 'Dr.SiddharthR',
+    id: 'SiddharthR',
     content: {
       head: {
         name: 'Dr.Siddharth R',
@@ -743,7 +743,7 @@ let ProfileProps: ProfileProp[] = [
     },
   },
   {
-    id: 'Dr.ShirshenduLayek',
+    id: 'ShirshenduLayek',
     content: {
       head: {
         name: 'Dr. Shirshendu Layek',
@@ -766,7 +766,7 @@ let ProfileProps: ProfileProp[] = [
     },
   },
   {
-    id: 'Dr.SomenBhattacharjee',
+    id: 'SomenBhattacharjee',
     content: {
       head: {
         name: 'Dr. Somen Bhattacharjee',
@@ -790,7 +790,7 @@ let ProfileProps: ProfileProp[] = [
     },
   },
   {
-    id: 'Dr.SadhviManerikar',
+    id: 'SadhviManerikar',
     content: {
       head: {
         name: 'Dr. Sadhvi Manerikar',
@@ -815,7 +815,7 @@ let ProfileProps: ProfileProp[] = [
     },
   },
   {
-    id: 'Dr.SunilKumarPV',
+    id: 'SunilKumarPV',
     content: {
       head: {
         name: 'Dr. Sunil Kumar P V',
@@ -839,7 +839,7 @@ let ProfileProps: ProfileProp[] = [
     },
   },
   {
-    id: 'Dr.SunilSaumya',
+    id: 'SunilSaumya',
     content: {
       head: {
         name: 'Dr. Sunil Saumya',
@@ -860,7 +860,7 @@ let ProfileProps: ProfileProp[] = [
     },
   },
   {
-    id: 'Dr.SunilCK',
+    id: 'SunilCK',
     content: {
       head: {
         name: 'Dr. Sunil C K',
@@ -884,7 +884,7 @@ let ProfileProps: ProfileProp[] = [
     },
   },
   {
-    id: 'Dr.SuvadipHazra',
+    id: 'SuvadipHazra',
     content: {
       head: {
         name: 'Dr. Suvadip Hazra',
@@ -908,7 +908,7 @@ let ProfileProps: ProfileProp[] = [
     },
   },
   {
-    id: 'Dr.UtkarshKhaire',
+    id: 'UtkarshKhaire',
     content: {
       head: {
         name: 'Dr.Utkarsh Khaire',
@@ -931,7 +931,7 @@ let ProfileProps: ProfileProp[] = [
     },
   },
   {
-    id: 'Dr.VivekrajVK',
+    id: 'VivekrajVK',
     content: {
       head: {
         name: 'Dr. Vivekraj V K',
@@ -954,7 +954,7 @@ let ProfileProps: ProfileProp[] = [
     },
   },
   {
-    id: 'Dr.ShrinivasKulkarni',
+    id: 'ShrinivasKulkarni',
     content: {
       head: {
         name: 'Dr. Shrinivas Kulkarni',
@@ -976,10 +976,10 @@ let ProfileProps: ProfileProp[] = [
     },
   },
   {
-    id: 'Dr.RajeshVasa',
+    id: 'RajeshVasa',
     content: {
       head: {
-        name: 'Dr. Rajesh Vasa',
+        name: 'Prof. Rajesh Vasa',
         profile_pdf: 'https://www.deakin.edu.au/about-deakin/people/rajesh-vasa',
       },
       card: {
@@ -998,10 +998,10 @@ let ProfileProps: ProfileProp[] = [
     },
   },
   {
-    id: 'Dr.AmbarishKulkarni',
+    id: 'AmbarishKulkarni',
     content: {
       head: {
-        name: 'Dr. Ambarish Kulkarni',
+        name: 'Prof. Ambarish Kulkarni',
         profile_pdf: 'https://www.swinburne.edu.au/research/our-research/access-our-research/find-a-researcher-or-supervisor/researcher-profile/?id=ambarishkulkarni',
       },
       card: {
@@ -1025,10 +1025,10 @@ let ProfileProps: ProfileProp[] = [
     },
   },
   {
-    id: 'Dr.IsraelCohen',
+    id: 'IsraelCohen',
     content: {
       head: {
-        name: 'Dr. Israel Cohen',
+        name: 'Prof. Israel Cohen',
         profile_pdf: 'https://israelcohen.com/',
       },
       card: {
@@ -1052,10 +1052,10 @@ let ProfileProps: ProfileProp[] = [
     },
   },
   {
-    id: 'Dr.NixonPatel',
+    id: 'NixonPatel',
     content: {
       head: {
-        name: 'Dr. Nixon Patel',
+        name: 'Prof. Nixon Patel',
         profile_pdf: 'https://www.linkedin.com/in/nixonpatel',
       },
       card: {
@@ -1078,10 +1078,10 @@ let ProfileProps: ProfileProp[] = [
     },
   },
   {
-    id: 'Dr.SRMahadevaPrasanna',
+    id: 'SRMahadevaPrasanna',
     content: {
       head: {
-        name: 'Dr. S R Mahadeva Prasanna',
+        name: 'Prof. S R Mahadeva Prasanna',
         profile_pdf: 'https://sites.google.com/iitdh.ac.in/prasanna/home',
       },
       card: {
