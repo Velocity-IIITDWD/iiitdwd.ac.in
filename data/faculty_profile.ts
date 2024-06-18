@@ -1002,7 +1002,7 @@ let ProfileProps: ProfileProp[] = [
     content: {
       head: {
         name: 'Dr. Ambarish Kulkarni',
-        profile_pdf: 'https://www.swinburne.edu.au/research/our-research/access-our-research/find-a-researcheror-supervisor/researcher-profile/?id=ambarishkulkarni',
+        profile_pdf: 'https://www.swinburne.edu.au/research/our-research/access-our-research/find-a-researcher-or-supervisor/researcher-profile/?id=ambarishkulkarni',
       },
       card: {
         photo: '/images/AmbarishKulkarni.jpg',
