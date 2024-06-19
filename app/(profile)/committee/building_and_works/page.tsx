@@ -1,8 +1,8 @@
 import { Metadata } from 'next';
-import group from '@/data/profile/committee/expert';
+import group from '@/data/profile/committee/building_and_works';
 import { ProfileGroup } from '@/components/profile/ProfileGroup';
 
-const title = 'Expert Committee';
+const title = 'Building and Works committee';
 
 export default function ExpertCommitteePage() {
   return (
