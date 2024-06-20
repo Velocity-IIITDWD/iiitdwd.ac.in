@@ -30,7 +30,7 @@ export default [
         title: 'Prof. Ch. Subrahmanyam',
       },
       {
-        content: ['Professor, IIT Dharwad'],
+        content: ['Associate Professor, IIT Dharwad'],
         imageURL: '/images/dhiraj_v_patil.png',
         title: 'Prof. Dhiraj V. Patil',
       },

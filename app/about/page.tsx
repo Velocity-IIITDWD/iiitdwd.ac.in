@@ -200,9 +200,9 @@ const AboutPage = () => {
           </Link>
           <Link
             className="bg-[#DEE6EE] rounded text-dwd-primary px-3 py-1 hover:text-white hover:bg-dwd-primary"
-            href="/committee/expert"
+            href="/committee/building_and_works"
           >
-            Expert Committee
+            Building and Works Committee
           </Link>
           <Link
             className="bg-[#DEE6EE] rounded text-dwd-primary px-3 py-1 hover:text-white hover:bg-dwd-primary"

@@ -27,9 +27,9 @@ const OurFamily = () => {
         </Link>
         <Link
           className="bg-dwd-primary hover:bg-dwd-secondary2/40 border-2 p-3 border-dwd-primary hover:text-dwd-primary text-white text-center rounded-full text-lg md:text-xl"
-          href="/committee/expert"
+          href="/committee/building_and_works"
         >
-          Expert Committee
+          Building and Works Committee
         </Link>
         <Link
           className="bg-dwd-primary hover:bg-dwd-secondary2/40 border-2 p-3 border-dwd-primary hover:text-dwd-primary text-white text-center rounded-full text-lg md:text-xl"

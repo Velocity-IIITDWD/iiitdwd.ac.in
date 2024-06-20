@@ -12,7 +12,7 @@ import {
   HoverCardTrigger,
 } from '@/components/ui/hover-card'
 
-export default function Issues() {
+export default function Reports() {
   annualReports.sort((a,b) => b.id - a.id)
   const [selectedReport, setIssue] = useState(annualReports[0])
   return (
@@ -33,7 +33,7 @@ export default function Issues() {
               </HoverCardTrigger>
               <HoverCardContent className='m-2 flex flex-col items-center gap-2 border-0'>
                 <Image onClick={() => setIssue(report)} alt='annual report cover image' loading='eager' src={report.previewImg} height={200} width={200} className='cursor-pointer w-fit h-fit rounded-t-md' />
-                <Link href={selectedReport.issueUrl} className='bg-dwd-primary px-4 py-2 rounded text-white self-center text-center w-full'>
+                <Link prefetch={false} href={selectedReport.issueUrl} className='bg-dwd-primary px-4 py-2 rounded text-white self-center text-center w-full'>
                   Open as a tab
                 </Link>
               </HoverCardContent>
