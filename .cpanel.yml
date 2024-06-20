@@ -1,0 +1,4 @@
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/ikyplzlyo7q4/beta
+    - /bin/cp -R out $DEPLOYPATH
