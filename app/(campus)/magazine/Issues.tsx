@@ -34,8 +34,8 @@ export default function Issues() {
               </HoverCardTrigger>
               <HoverCardContent className='m-2 flex flex-col items-center gap-2 border-0'>
                 <Image onClick={() => setIssue(issue)} alt='magazine cover image' loading='eager' src={issue.previewImg} height={200} width={200} className='cursor-pointer w-fit h-fit rounded-t-md' />
-                <Link prefetch={false} href={selectedIssue.issueUrl} className='bg-dwd-primary px-4 py-2 rounded text-white self-center text-center w-full'>
-                  Open as a tab
+                <Link target="_blank" href={selectedIssue.issueUrl} className='bg-dwd-primary px-4 py-2 rounded text-white self-center text-center w-full'>
+                  Open in new tab
                 </Link>
               </HoverCardContent>
             </HoverCard>
