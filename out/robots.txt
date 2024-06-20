@@ -1,0 +1,17 @@
+# *
+User-agent: *
+Disallow: /faculty/*
+
+# *
+User-agent: *
+Disallow: /events/*
+
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://iiitdwd.ac.in
+
+# Sitemaps
+Sitemap: https://iiitdwd.ac.in/sitemap.xml
