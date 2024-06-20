@@ -22,9 +22,10 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+        token: ${{ secrets.PAT }}
     - name: Set up Git
       run: |
-          git config --global user.email "github-build@abc.xyz"
+          git config --global user.email "github-build@github.com"
           git config --global user.name "github-build"
     - run: |
           npm ci
