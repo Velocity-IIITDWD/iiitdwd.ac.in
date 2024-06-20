@@ -23,7 +23,6 @@ Redirect 301 /BTechCSECurriculum.php /academics/departments/cse
 Redirect 301 /BTechDSISCurriculum.php /academics/departments/dsai
 Redirect 301 /BTechECECurriculum.php /academics/departments/ece
 Redirect 301 /computer-science.php /academics/departments/cse
-Redirect 301 /academics/departments/cse /admissions/btech
 Redirect 301 /facilities.php /facilities
 Redirect 301 /docs/BROCHURE.pdf /docs/brochure_cgc.pdf
 Redirect 301 /Electronics-Communication.php /academics/departments/ece
