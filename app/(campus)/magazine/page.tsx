@@ -1,5 +1,3 @@
-// 'use client'
-
 import Image from 'next/image';
 import Issues from './Issues';
 import { about, facultyAdvisors, teams } from '@/data/magazine';
