@@ -48,7 +48,7 @@ let ProfileProps: ProfileProp[] = [
     },
   },
   {
-    id: 'AnandP.Barangi',
+    id: 'AnandPBarangi',
     content: {
       head: {
         name: 'Dr. Anand P. Barangi',
@@ -448,7 +448,7 @@ let ProfileProps: ProfileProp[] = [
     },
   },
   {
-    id: 'NavyashreeG.R.',
+    id: 'NavyashreeGR',
     content: {
       head: {
         name: 'Dr. Navyashree G. R.',

@@ -29,7 +29,7 @@ jobs:
             git config --global user.name "github-build"
       - run: |
             npm ci
-            npm run build
+            rm -rf out && npm run build
       - name: Commit changes
         run: |
             git add . && git diff-index --quiet HEAD || git commit -m "Automated build commit"
