@@ -8,30 +8,31 @@ on:
 
 jobs:
   build:
-
+    if: contains(github.event.head_commit.message, 'Automated build commit') == false
     runs-on: ubuntu-latest
-
     strategy:
       matrix:
         node-version: [18.x]
-
     steps:
-    - uses: actions/checkout@v4
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-        token: ${{ secrets.PAT }}
-    - name: Set up Git
-      run: |
-          git config --global user.email "github-build@github.com"
-          git config --global user.name "github-build"
-    - run: |
-          npm ci
-          npm run build
-    - name: Commit changes
-      env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: |
-          git add . && git diff-index --quiet HEAD || git commit -m "Automated build commit" && git push origin main
+      - name: Checking out...
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.PAT }}
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+      - name: Set up Git
+        run: |
+            git config --global user.email "github-build@github.com"
+            git config --global user.name "github-build"
+      - run: |
+            npm ci
+            rm -rf out && npm run build
+      - name: Commit changes
+        run: |
+            git add . && git diff-index --quiet HEAD || git commit -m "Automated build commit"
+      - name: Push changes
+        run: |
+          git push origin main
