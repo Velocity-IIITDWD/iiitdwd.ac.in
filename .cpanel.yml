@@ -1,6 +1,6 @@
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/ikyplzlyo7q4/main
-    - find /home/ikyplzlyo7q4/main/ -mindepth 1 -maxdepth 1 ! -name docs -exec rm -rf {} +
+    - export DEPLOYPATH=/home/ikyplzlyo7q4/public_html
+    - find /home/ikyplzlyo7q4/public_html/ -mindepth 1 -maxdepth 1 ! -name docs -exec rm -rf {} +
     - cd out
     - /bin/cp -a . $DEPLOYPATH
