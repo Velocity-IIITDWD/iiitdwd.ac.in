@@ -38,3 +38,6 @@ next-env.d.ts
 # next-sitemap
 public/robots.txt
 public/sitemap*.xml
+
+# we have the docs on server. to save space on github, we ignore them
+public/docs/*
