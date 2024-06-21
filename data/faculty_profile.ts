@@ -27,13 +27,13 @@ let ProfileProps: ProfileProp[] = [
     content: {
       head: {
         name: 'Prof. V. Ravishankar',
-        profile_pdf: 'https://iitd.irins.org/profile/2271'
+        profile_pdf: 'https://iitd.irins.org/profile/2271',
       },
       card: {
         photo: '/images/Prof.V.Ravishankar.jpg',
         designation: 'Adjunct Professor',
         department: 'Humanities & Science',
-        mail_id: 'vravi@physics.iiitd.ac.in',
+        mail_id: 'vravi@physics.iitd.ac.in',
         cabin_number: '?',
       },
       body: {
@@ -41,9 +41,9 @@ let ProfileProps: ProfileProp[] = [
         interest_areas: [
           { id: 1, area: 'High Energy Physics' },
           { id: 2, area: 'Quantum Information' },
-        ]
-      }
-    }
+        ],
+      },
+    },
   },
   {
     id: 'AbdulWahid',
@@ -992,9 +992,7 @@ let ProfileProps: ProfileProp[] = [
       },
       body: {
         profile_text: '',
-        interest_areas: [
-          { id: 1, area: 'Cyber Security' },
-        ],
+        interest_areas: [{ id: 1, area: 'Cyber Security' }],
       },
     },
   },
@@ -1003,7 +1001,8 @@ let ProfileProps: ProfileProp[] = [
     content: {
       head: {
         name: 'Prof. Rajesh Vasa',
-        profile_pdf: 'https://www.deakin.edu.au/about-deakin/people/rajesh-vasa',
+        profile_pdf:
+          'https://www.deakin.edu.au/about-deakin/people/rajesh-vasa',
       },
       card: {
         photo: '/images/RajeshVasa.jpg',
@@ -1015,7 +1014,10 @@ let ProfileProps: ProfileProp[] = [
       body: {
         profile_text: '',
         interest_areas: [
-          { id: 1, area: 'Design and construction of robust AI infused technology' },
+          {
+            id: 1,
+            area: 'Design and construction of robust AI infused technology',
+          },
         ],
       },
     },
@@ -1025,7 +1027,8 @@ let ProfileProps: ProfileProp[] = [
     content: {
       head: {
         name: 'Prof. Ambarish Kulkarni',
-        profile_pdf: 'https://www.swinburne.edu.au/research/our-research/access-our-research/find-a-researcher-or-supervisor/researcher-profile/?id=ambarishkulkarni',
+        profile_pdf:
+          'https://www.swinburne.edu.au/research/our-research/access-our-research/find-a-researcher-or-supervisor/researcher-profile/?id=ambarishkulkarni',
       },
       card: {
         photo: '/images/AmbarishKulkarni.jpg',
@@ -1118,7 +1121,10 @@ let ProfileProps: ProfileProp[] = [
         profile_text: '',
         interest_areas: [
           { id: 1, area: 'Speech and Handwriting Processing' },
-          { id: 2, area: 'Applications of Signal Processing and Pattern Recognition' },
+          {
+            id: 2,
+            area: 'Applications of Signal Processing and Pattern Recognition',
+          },
           { id: 3, area: 'Applications of Artificial Intelligence' },
           { id: 4, area: 'Machine Learning' },
           { id: 5, area: 'Deep Learning' },
