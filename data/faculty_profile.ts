@@ -23,6 +23,29 @@ export interface ProfileProp {
 }
 let ProfileProps: ProfileProp[] = [
   {
+    id: 'ProfVRavishankar',
+    content: {
+      head: {
+        name: 'Prof. V. Ravishankar',
+        profile_pdf: 'https://iitd.irins.org/profile/2271'
+      },
+      card: {
+        photo: '/images/Prof.V.Ravishankar.jpg',
+        designation: 'Adjunct Professor',
+        department: 'Humanities & Science',
+        mail_id: 'vravi@physics.iiitd.ac.in',
+        cabin_number: '?',
+      },
+      body: {
+        profile_text: '',
+        interest_areas: [
+          { id: 1, area: 'High Energy Physics' },
+          { id: 2, area: 'Quantum Information' },
+        ]
+      }
+    }
+  },
+  {
     id: 'AbdulWahid',
     content: {
       head: {
