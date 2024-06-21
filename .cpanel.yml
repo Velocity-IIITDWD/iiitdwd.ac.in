@@ -1,4 +1,6 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/ikyplzlyo7q4/beta
-    - /bin/cp -R out/* $DEPLOYPATH
+    - find /home/ikyplzlyo7q4/beta/ -mindepth 1 -maxdepth 1 ! -name docs -exec rm -rf {} +
+    - cd out
+    - /bin/cp -a . $DEPLOYPATH
