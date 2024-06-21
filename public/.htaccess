@@ -26,20 +26,21 @@ Redirect 301 /computer-science.php /academics/departments/cse
 Redirect 301 /facilities.php /facilities
 Redirect 301 /docs/BROCHURE.pdf /docs/brochure_cgc.pdf
 Redirect 301 /Electronics-Communication.php /academics/departments/ece
+Redirect 301 /contact.php /contact
 
 # Try to serve the requested file directly
 # If the file doesn't exist, check if the corresponding .html file exists
 # If the .html file exists, serve it and stop processing further rules
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+# RewriteCond %{DOCUMENT_ROOT}/$1.html -f
 RewriteRule ^(.*)$ $1.html [L]
 
-# If the requested file and corresponding .html file don't exist, show 404.html
-# This rule is only reached if the previous rule didn't match
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ / [L,R=301]
+# # If the requested file and corresponding .html file don't exist, show 404.html
+# # This rule is only reached if the previous rule didn't match
+# RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteCond %{REQUEST_FILENAME} !-d
+# RewriteRule ^(.*)$ / [L,R=301]
 
 # Specify the custom 404 error document to be served
 ErrorDocument 404 /404.html
