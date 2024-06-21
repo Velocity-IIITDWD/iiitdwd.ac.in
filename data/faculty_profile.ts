@@ -23,7 +23,7 @@ export interface ProfileProp {
 }
 let ProfileProps: ProfileProp[] = [
   {
-    id: 'Prof.V.Ravishankar',
+    id: 'ProfVRavishankar',
     content: {
       head: {
         name: 'Prof. V. Ravishankar',
