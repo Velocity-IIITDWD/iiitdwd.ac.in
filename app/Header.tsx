@@ -303,7 +303,7 @@ function Header() {
                                     <Link
                                       key={gItem.text}
                                       href={gItem.href}
-                                      className="hover:underline text-1xl"
+                                      className="hover:underline"
                                     >
                                       {gItem.text}
                                     </Link>
