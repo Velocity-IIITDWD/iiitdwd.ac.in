@@ -30,7 +30,7 @@
 
 ## 📍 Overview
 
-This is a repository which contains the code for the website [iiitdwd.ac.in](https://iiitdwd.ac.in/). It was built by the [**_Club Velocity team_**](https://github.com/Velocity-IIITDWD).
+This is a repository which contains the code for the website [iiitdwd.ac.in](https://iiitdwd.ac.in/). It is built and maintained by the [**_Club Velocity Team_**](https://github.com/Velocity-IIITDWD).
 
 ---
 
@@ -71,7 +71,7 @@ Use the following command to build and run iiitdwd.ac.in:
 npm run build && npm run start
 ```
 
-You can also run it in _Dev_
+You can also run it in `dev` mode to make changes and view them, using -
 
 ```sh
 npm run dev
