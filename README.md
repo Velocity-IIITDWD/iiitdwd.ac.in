@@ -63,7 +63,7 @@ cd iiitdwd.ac.in
 npm install
 ```
 
-### 🤖 Running iiitdwd.ac.in
+### 🏃‍♂️ Running iiitdwd.ac.in
 
 Use the following command to build and run iiitdwd.ac.in:
 
@@ -71,11 +71,33 @@ Use the following command to build and run iiitdwd.ac.in:
 npm run build && npm run start
 ```
 
-You can also run it in `dev` mode to make changes and view them, using -
+To run in development mode with live reloading:
 
 ```sh
 npm run dev
 ```
+
+The application will be accessible at http://localhost:3000.
+
+---
+
+### 🐳 Docker Commands
+
+To build the Docker image:
+
+```shell
+docker build -t iiitdwd-website .
+```
+
+To run the Docker container:
+
+```shell
+docker run -p 3000:80 iiitdwd-website
+```
+
+The application will be accessible at http://localhost:3000.
+
+We use apache server on docker to serve the static files, which mimics the production environment.
 
 ---
 
@@ -92,6 +114,8 @@ This project exists thanks to all the people who contribute.
 ---
 
 ## 🤝 Contributing
+
+Check out our [**Contributing Guide**](CONTRIBUTING.md) for ways to contribute and guidelines.
 
 Contributions are welcome! Here are some ways you can contribute:
 
