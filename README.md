@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://cdn-icons-png.flaticon.com/512/6295/6295417.png" width="100" />
+  <img src="public\brand\logo-medium-light.png" width="350" />
 </p>
 <p align="center">
     <h1 align="center">IIIT Dharwad Website</h1>
@@ -71,6 +71,12 @@ Use the following command to build and run iiitdwd.ac.in:
 npm run build && npm run start
 ```
 
+You can also run it in _Dev_
+
+```sh
+npm run dev
+```
+
 ---
 
 ## 👏 Contributors
@@ -89,7 +95,7 @@ This project exists thanks to all the people who contribute.
 
 Contributions are welcome! Here are some ways you can contribute:
 
-- **[Submit Pull Requests](https://github.com/Velocity-IIITDWD/iiitdwd.ac.in/blob/main/CONTRIBUTING.md)**: Review open PRs, and submit your own PRs.
+- **[Submit Pull Requests](https://github.com/Velocity-IIITDWD/iiitdwd.ac.in/pulls)**: Review open PRs, and submit your own PRs.
 - **[Report Issues](https://github.com/Velocity-IIITDWD/iiitdwd.ac.in/issues)**: Submit bugs found or log feature requests for Iiitdwd.ac.in.
 
 ---
