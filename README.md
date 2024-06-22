@@ -115,7 +115,7 @@ This project exists thanks to all the people who contribute.
 
 ## 🤝 Contributing
 
-Check out our [**Contributing Guide**](CONTRIBUTING.md) for ways to contribute and guidelines.
+Check out our [**Contributing Guide**](docs/CONTRIBUTING.md) for ways to contribute and guidelines.
 
 Contributions are welcome! Here are some ways you can contribute:
 

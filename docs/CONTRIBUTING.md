@@ -32,13 +32,11 @@ We follow a consistent code style and use linting tools to maintain code quality
 - Follow the JavaScript/TypeScript coding conventions.
 - Run `npm run lint` to check for linting errors.
 
-## Commit Message Style
+## Commit Message Style Guide
 
-When committing your changes, please follow these guidelines for writing commit messages:
+All pull requests SHOULD adhere to the [Conventional Commits specification](https://conventionalcommits.org/)
 
-- Use the present tense and imperative mood (e.g., "Add feature" instead of "Added feature" or "Adds feature").
-- Keep the first line of the commit message concise and limited to 50 characters.
-- Provide additional details in the commit body if necessary, separated by a blank line.
+View the convention of commit messages [locally here](./COMMIT_MESSAGE.md)
 
 ## Pull Request Process
 
