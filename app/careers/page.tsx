@@ -7,17 +7,24 @@ import { jobsData } from '@/data/jobs';
 import Link from 'next/link';
 import { useCallback, useEffect, useRef, useState } from 'react';
 
+const currDate = new Date();
+const updatedJobsData = jobsData.map(job => {
+  const splittedDate = job.lastDate.split('.').map(num => Number(num));
+  const jobDate = new Date(splittedDate[2], splittedDate[1] - 1, splittedDate[0]);
+  return ({ ...job, application: jobDate > currDate ? job.application : '#' })
+})
+
 export default function CareersPage() {
   const [category, setCategory] = useState('all');
   const [searchText, setSearchText] = useState('');
-  const [filteredJobs, setFilteredJobs] = useState(jobsData);
+  const [filteredJobs, setFilteredJobs] = useState(updatedJobsData);
   useEffect(() => {
     setFilteredJobs(
-      jobsData
+      updatedJobsData
         .filter(job => category === 'all' || job.category === category)
         .filter(job => !searchText || job.title.toLowerCase().includes(searchText.toLowerCase()) || job.details.toLowerCase().includes(searchText.toLowerCase()))
     );
-  }, [category, searchText, jobsData]);
+  }, [category, searchText]);
 
   const searchInputRef = useRef<HTMLInputElement>(null);
   const updateSearch = useCallback(() => {
