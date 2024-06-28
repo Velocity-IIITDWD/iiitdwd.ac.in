@@ -19,7 +19,7 @@ export const announcements: Announcement[] = [
   {
     link: '/docs/Ph.D_and_M.Tech-Research_Aug24_Admission_Notification-Extended.pdf',
     text: 'Ph.D and M.Tech-Research Aug 24 Admission Notification-Extended',
-    new: true,
+    new: false,
     year: '2024',
     month: '6',
   },
