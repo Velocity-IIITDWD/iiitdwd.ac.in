@@ -83,26 +83,21 @@ export const links: linksStructure[] = [
     links: [
       {
         id: 1,
-        link: '/docs/State-wise-List-of-Reporting-Centers.pdf',
-        displayText: 'State wise List of Reporting Centers for Physical Verification of PwD Candidates [for NIT+ System Only] JoSAA/CSAB 2024',
-      },
-      {
-        id: 2,
         link: '/docs/Josaa_Schedule_2024.pdf',
         displayText: 'JoSAA 2024 Schedule (Updated on 10-06-2024)',
       },
       {
-        id: 3,
+        id: 2,
         link: '/docs/CSAB_Schedule_2024.pdf',
         displayText: 'CSAB-2024 Special Rounds Schedule',
       },
       {
-        id: 4,
+        id: 3,
         link: '/docs/FEE_2024-25_Sheet1.pdf',
         displayText: 'Fee Structure for the batch 2024-2025',
       },
       {
-        id: 5,
+        id: 4,
         link: '/faq',
         displayText: "FAQ's",
       },

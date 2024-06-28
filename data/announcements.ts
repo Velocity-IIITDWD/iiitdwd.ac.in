@@ -10,20 +10,6 @@ export type Announcement = {
 
 export const announcements: Announcement[] = [
   {
-    link: '/docs/A_reinforcement_learning_approach_to_dairy_farm_battery_management_using_Q_learning.pdf',
-    text: 'Journal article co-authored by Dr. Abdul Wahid titled "A reinforcement learning approach to dairy farm battery management using Q learning" gets published in Journal of Energy Storage (Elsevier, Impact Factor: 9.4)',
-    new: true,
-    year: '2024',
-    month: '6',
-  },
-  {
-    link: '/docs/Ph.D_and_M.Tech-Research_Aug24_Admission_Notification-Extended.pdf',
-    text: 'Ph.D and M.Tech-Research Aug 24 Admission Notification-Extended',
-    new: true,
-    year: '2024',
-    month: '6',
-  },
-  {
     link: '/docs/Prof_Lakshmivarahan.pdf',
     text: 'Talk: Mathematics of Bigdata Analysis',
     new: true,
@@ -68,7 +54,7 @@ export const announcements: Announcement[] = [
   {
     link: '/docs/Ph.D_and_M.Tech-Research_Aug24_Admission_Notification.pdf',
     text: 'Admission to Ph.D. and M. Tech. (Research) : Last date is extended till 12th June 2024',
-    new: false,
+    new: true,
     year: '2024',
     month: '6',
   },
@@ -82,7 +68,7 @@ export const announcements: Announcement[] = [
   {
     link: '/tenders',
     text: 'Expression of Interests (Hostel Accommodation of Boys)',
-    new: false,
+    new: true,
     year: '2024',
     month: '6',
   },

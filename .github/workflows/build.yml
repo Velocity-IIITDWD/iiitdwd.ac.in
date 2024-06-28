@@ -1,0 +1,38 @@
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
+
+name: build
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    if: contains(github.event.head_commit.message, 'Automated build commit') == false
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18.x]
+    steps:
+      - name: Checking out...
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.PAT }}
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+      - name: Set up Git
+        run: |
+            git config --global user.email "github-build@github.com"
+            git config --global user.name "github-build"
+      - run: |
+            npm ci
+            rm -rf out && npm run build
+      - name: Commit changes
+        run: |
+            git add . && git diff-index --quiet HEAD || git commit -m "Automated build commit"
+      - name: Push changes
+        run: |
+          git push origin main
