@@ -27,6 +27,7 @@ Redirect 301 /facilities.php /facilities
 Redirect 301 /docs/BROCHURE.pdf /docs/brochure_cgc.pdf
 Redirect 301 /Electronics-Communication.php /academics/departments/ece
 Redirect 301 /contact.php /contact
+Redirect 301 /Faculty.php /faculty
 
 # Try to serve the requested file directly
 # If the file doesn't exist, check if the corresponding .html file exists

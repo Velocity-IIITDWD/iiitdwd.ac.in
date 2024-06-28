@@ -1,0 +1,36 @@
+name: Deploy to cPanel
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - dev
+
+jobs:
+  deploy:
+    name: Build & FTP Sync
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4.0.2
+        with:
+          node-version: '20'
+
+      - name: ⬇️ Install dependencies
+        run: npm ci
+
+      - name: 🛠️ Build Next.js application
+        run: npm run build
+
+      - name: 📂 Sync files
+        uses: sebastianpopp/ftp-action@releases/v2
+        with:
+          host: ${{ secrets.BETA_FTP_SERVER }}
+          user: ${{ secrets.BETA_FTP_USERNAME }}
+          password: ${{ secrets.BETA_FTP_PASSWORD }}
+          localDir: ./out/
+          options: "--parallel=10 --exclude-glob=**/docs/**"

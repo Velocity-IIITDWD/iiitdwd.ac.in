@@ -243,13 +243,13 @@ function Header() {
             </div>
           </SheetTrigger>
           <SheetContent side="left">
-            <div className="flex flex-col gap-2 mt-4 -mr-2">
+            <div className="flex flex-col gap-2 mt-4 -mr-2 ">
               {navmenuItems.map((item) => {
                 const dropdownTrigger = item.href ? (
                   <SheetClose key={item.text} asChild>
                     <Link
                       key={item.text}
-                      className="hover:underline"
+                      className="hover:underline text-2xl"
                       href={item.href}
                     >
                       {item.text}
@@ -262,7 +262,7 @@ function Header() {
                 if (!item?.subGroups?.length) return dropdownTrigger;
 
                 return (
-                  <details key={item.text} className="group">
+                  <details key={item.text} className="group text-lg">
                     <summary className="flex items-center justify-between focus:outline-none">
                       {dropdownTrigger}
                       <ChevronDownIcon
