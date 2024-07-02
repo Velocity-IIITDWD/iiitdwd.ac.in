@@ -88,8 +88,8 @@ export const links: linksStructure[] = [
       },
       {
         id: 2,
-        link: '/docs/Josaa_Schedule_2024.pdf',
-        displayText: 'JoSAA 2024 Schedule (Updated on 10-06-2024)',
+        link: '/docs/Josaa_Schedule-Updated_on_27thJune2024.pdf',
+        displayText: 'JoSAA 2024 Schedule (Updated on 27-06-2024)',
       },
       {
         id: 3,
