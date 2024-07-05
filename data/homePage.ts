@@ -51,6 +51,10 @@ export const images: MainCarouselImage[] = [
     url: '/images/MainCarousel6.jpeg',
     caption: 'Faculties and Director of IIIT Dharwad',
   },
+  {
+    url: '/images/MainCarousel7.jpg',
+    caption: 'Convocation 2024',
+  },
 ];
 
 export const ProgramCardDetails: ProgramCards[] = [
