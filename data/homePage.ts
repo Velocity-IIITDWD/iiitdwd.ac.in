@@ -22,6 +22,7 @@ export const images: MainCarouselImage[] = [
   {
     url: '/images/MainCarousel7.jpeg',
     caption: 'Convocation 2024',
+    link: 'https://www.youtube.com/live/Sh5VyQxKQvk?feature=shared',
   },
   {
     url: '/images/MainCarousel1.jpg',
