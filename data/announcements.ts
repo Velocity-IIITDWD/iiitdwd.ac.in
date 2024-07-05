@@ -10,6 +10,20 @@ export type Announcement = {
 
 export const announcements: Announcement[] = [
   {
+    link: '/docs/educators_students_enabling_workshop_qc.pdf',
+    text: 'One-day workshop on "Faculty, Researchers, and Students enabling workshop on Quantum Information Processing" at IIIT Dharwad on 15th July 2024',
+    new: true,
+    year: '2024',
+    month: '7',
+  },
+  {
+    link: '/docs/peer_to_peer_energy_trading_in_dairy_farms_using_multi_agent_systems.pdf',
+    text: 'Journal article co-authored by Dr. Abdul Wahid titled "Peer-to-peer energy trading in dairy farms using multi-agent systems" gets published in Computers and Electrical Engineering (Elsevier, Impact Factor: 4.0)',
+    new: true,
+    year: '2024',
+    month: '7',
+  },
+  {
     link: '/docs/A_reinforcement_learning_approach_to_dairy_farm_battery_management_using_Q_learning.pdf',
     text: 'Journal article co-authored by Dr. Abdul Wahid titled "A reinforcement learning approach to dairy farm battery management using Q learning" gets published in Journal of Energy Storage (Elsevier, Impact Factor: 9.4)',
     new: true,
