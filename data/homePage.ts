@@ -20,6 +20,10 @@ export interface ProgramsType {
 
 export const images: MainCarouselImage[] = [
   {
+    url: '/images/MainCarousel7.jpg',
+    caption: 'Convocation 2024',
+  },
+  {
     url: '/images/MainCarousel1.jpg',
     caption: 'Admissions 2024',
     link: '/admissions',
@@ -50,10 +54,6 @@ export const images: MainCarouselImage[] = [
   {
     url: '/images/MainCarousel6.jpeg',
     caption: 'Faculties and Director of IIIT Dharwad',
-  },
-  {
-    url: '/images/MainCarousel7.jpg',
-    caption: 'Convocation 2024',
   },
 ];
 
