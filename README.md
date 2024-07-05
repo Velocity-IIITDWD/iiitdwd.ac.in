@@ -117,8 +117,6 @@ This project exists thanks to all the people who contribute.
 
 Check out our [**Contributing Guide**](docs/CONTRIBUTING.md) for ways to contribute and guidelines.
 
-Contributions are welcome! Here are some ways you can contribute:
-
 - **[Submit Pull Requests](https://github.com/Velocity-IIITDWD/iiitdwd.ac.in/pulls)**: Review open PRs, and submit your own PRs.
 - **[Report Issues](https://github.com/Velocity-IIITDWD/iiitdwd.ac.in/issues)**: Submit bugs found or log feature requests for Iiitdwd.ac.in.
 
