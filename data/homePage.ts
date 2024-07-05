@@ -20,7 +20,7 @@ export interface ProgramsType {
 
 export const images: MainCarouselImage[] = [
   {
-    url: '/images/MainCarousel7.jpg',
+    url: '/images/MainCarousel7.jpeg',
     caption: 'Convocation 2024',
   },
   {
