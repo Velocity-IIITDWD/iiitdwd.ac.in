@@ -10,6 +10,13 @@ export type Announcement = {
 
 export const announcements: Announcement[] = [
   {
+    link: '/docs/PhD_MTech(R)_Jul2024_List - Shalini K.pdf',
+    text: 'Provisional list of candidates selected for admission to Ph.D. and M.Tech. (Research) for the Aug 2024 session.',
+    new: true,
+    year: '2024',
+    month: '7',
+  },
+  {
     link: 'https://www.youtube.com/watch?v=Sh5VyQxKQvk',
     text: 'Prof. Anil Sahasrabudhe, Chairman - National Educational Technology Forum (NETF) will be delivering the Sixth Convocation Address on 13th July 2024',
     new: true,
