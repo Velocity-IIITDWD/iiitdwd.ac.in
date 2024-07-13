@@ -8,6 +8,7 @@ export interface ProfileProp {
 
     card: {
       photo: string;
+      PhD:string,
       designation: string;
       department: string;
       mail_id: string;
@@ -31,6 +32,7 @@ let ProfileProps: ProfileProp[] = [
       },
       card: {
         photo: '/images/Prof.V.Ravishankar.jpg',
+        PhD:'',
         designation: 'Adjunct Professor',
         department: 'Humanities & Science',
         mail_id: 'vravi@physics.iitd.ac.in',
@@ -54,6 +56,7 @@ let ProfileProps: ProfileProp[] = [
       },
       card: {
         photo: '/images/Dr.AbdulWahid.jpeg',
+        PhD:'Ph.D. (IIT Dhanbad)',
         designation: 'Assistant Professor',
         department: 'Computer Science & Engineering',
         mail_id: 'abdul.wahid@iiitdwd.ac.in',
@@ -79,6 +82,7 @@ let ProfileProps: ProfileProp[] = [
       },
       card: {
         photo: '/images/Dr.AnandP.Barangi.jpg',
+        PhD:'Ph.D. (Karnatak University, Dharwad)',
         designation: 'Assistant Professor',
         department: 'Humanities & Science',
         mail_id: 'anandbarangi@iiitdwd.ac.in',
@@ -99,6 +103,7 @@ let ProfileProps: ProfileProp[] = [
       },
       card: {
         photo: '/images/Dr.AnimeshChaturvedi.jpg',
+        PhD:'Ph.D. (IIT Indore)',
         designation: 'Assistant Professor',
         department: 'Data Science and Intelligent Systems',
         mail_id: 'animesh@iiitdwd.ac.in',
@@ -124,6 +129,7 @@ let ProfileProps: ProfileProp[] = [
       },
       card: {
         photo: '/images/Dr.AnimeshRoy.jpg',
+        PhD:'Ph.D. (IIEST)',
         designation: 'Assistant Professor',
         department: 'Computer Science & Engineering',
         mail_id: 'animeshroy@iiitdwd.ac.in',
@@ -148,6 +154,7 @@ let ProfileProps: ProfileProp[] = [
       },
       card: {
         photo: '/images/Dr.Anushreekini.jpg',
+        PhD:'Ph.D. (KLE Technological University)',
         designation: 'Assistant Professor',
         department: 'Humanities & Science',
         mail_id: 'anushree@iiitdwd.ac.in',
@@ -168,6 +175,7 @@ let ProfileProps: ProfileProp[] = [
       },
       card: {
         photo: '/images/Dr.AswathBabuH.jpeg',
+        PhD:'Ph.D. (IIT Kanpur)',
         designation: 'Assistant Professor',
         department: 'Humanities & Science',
         mail_id: 'aswath@iiitdwd.ac.in',
@@ -192,6 +200,7 @@ let ProfileProps: ProfileProp[] = [
       },
       card: {
         photo: '/images/Dr.ChandrikaKamath.png',
+        PhD:'Ph.D. (KUD)',
         designation: 'Visiting Faculty',
         department: 'Humanities & Science',
         mail_id: '-',
@@ -212,6 +221,7 @@ let ProfileProps: ProfileProp[] = [
       },
       card: {
         photo: '/images/Dr.ChannappaAkki.jpeg',
+        PhD:'Ph.D. (IIT Roorkee)',
         designation: 'Professor',
         department: 'Computer Science & Engineering',
         mail_id: 'akki.channappa@gmail.com',
@@ -237,6 +247,7 @@ let ProfileProps: ProfileProp[] = [
       },
       card: {
         photo: '/images/Dr.ChinmayanandaA.jpg',
+        PhD:'Ph.D. (IISc Bengaluru)',
         designation: 'Assistant Professor',
         department: 'Electronics and Communication Engineering',
         mail_id: 'chinmay@iiitdwd.ac.in',
@@ -262,6 +273,7 @@ let ProfileProps: ProfileProp[] = [
       },
       card: {
         photo: '/images/Dr.DeepakKT.jpeg',
+        PhD:'Ph.D. (IIT Guwahati)',
         designation: 'Assistant Professor',
         department: 'Electronics and Communication Engineering',
         mail_id: 'deepak@iiitdwd.ac.in',
@@ -286,6 +298,7 @@ let ProfileProps: ProfileProp[] = [
       },
       card: {
         photo: '/images/Dr.DibyajyotiGuha.jpg',
+        PhD:'Ph.D. (IIT Bhubaneswar)',
         designation: 'Assistant Professor',
         department: 'Computer Science & Engineering',
         mail_id: 'dguha@iiitdwd.ac.in',
@@ -311,6 +324,7 @@ let ProfileProps: ProfileProp[] = [
       },
       card: {
         photo: '/images/Dr.GirishGN.jpeg',
+        PhD:'Ph.D. (NITK)',
         designation: 'Assistant Professor',
         department: 'Computer Science & Engineering',
         mail_id: 'girish@iiitdwd.ac.in',
@@ -335,6 +349,7 @@ let ProfileProps: ProfileProp[] = [
       },
       card: {
         photo: '/images/Dr.JagadeeshaRB.jpg',
+        PhD:'Ph.D. (NTHU, Taiwan)',
         designation: 'Assistant Professor',
         department: 'Electronics and Communication Engineering',
         mail_id: 'Jagadeesha@iiitdwd.ac.in',
@@ -362,6 +377,7 @@ let ProfileProps: ProfileProp[] = [
       },
       card: {
         photo: '/images/Dr.JagadishDN.jpeg',
+        PhD:'Ph.D. (NITK Surathkal)',
         designation: 'Assistant Professor',
         department: 'Electronics and Communication Engineering',
         mail_id: 'jagadishdn@iiitdwd.ac.in',
@@ -387,6 +403,7 @@ let ProfileProps: ProfileProp[] = [
       },
       card: {
         photo: '/images/Dr.KrishnenduGhosh.png',
+        PhD:'Ph.D. (IIT Kharagpur)',
         designation: 'Assistant Professor',
         department: 'Computer Science & Engineering',
         mail_id: 'krishnendu@iiitdwd.ac.in',
@@ -410,6 +427,7 @@ let ProfileProps: ProfileProp[] = [
       },
       card: {
         photo: '/images/Dr.LakshmanMahto.jpeg',
+        PhD:'Ph.D. (IIT Mandi)',
         designation: 'Assistant Professor',
         department: 'Humanities & Science',
         mail_id: 'lakshman@iiitdwd.ac.in',
@@ -434,6 +452,7 @@ let ProfileProps: ProfileProp[] = [
       },
       card: {
         photo: '/images/Dr.MalayKumar.jpg',
+        PhD:'Ph.D. (NIT Raipur)',
         designation: 'Assistant Professor',
         department: 'Computer Science & Engineering',
         mail_id: 'malay.kumar@iiitdwd.ac.in',
@@ -458,6 +477,7 @@ let ProfileProps: ProfileProp[] = [
       },
       card: {
         photo: '/images/Dr.ManjunathKV.jpg',
+        PhD:'Ph.D. (NITK Surathkal)',
         designation: 'Assistant Professor',
         department: 'Data Science and Intelligent Systems',
         mail_id: 'manjunathkv@iiitdwd.ac.in',
@@ -479,6 +499,7 @@ let ProfileProps: ProfileProp[] = [
       },
       card: {
         photo: '/images/Dr.NavyashreeG.R..jpg',
+        PhD:'Ph.D. (NITK Surathkal)',
         designation: 'Visiting Faculty',
         department: 'Humanities & Science',
         mail_id: 'navyashree@iiitdwd.ac.in',
@@ -504,6 +525,7 @@ let ProfileProps: ProfileProp[] = [
       },
       card: {
         photo: '/images/Dr.NatarajKS.jpg',
+        PhD:'Ph.D. (IIT Bombay)',
         designation: 'Assistant Professor',
         department: 'Electronics and Communication Engineering',
         mail_id: 'nataraj@iiitdwd.ac.in',
@@ -528,6 +550,7 @@ let ProfileProps: ProfileProp[] = [
       },
       card: {
         photo: '/images/Dr.PavanKumarC.jpg',
+        PhD:'Ph.D. (VIT Vellore)',
         designation: 'Assistant Professor',
         department: 'Computer Science & Engineering',
         mail_id: 'pavan@iiitdwd.ac.in',
@@ -555,6 +578,7 @@ let ProfileProps: ProfileProp[] = [
       },
       card: {
         photo: '/images/Dr.PrabhuPrasadBM.png',
+        PhD:'Ph.D. (NITK Surathkal)',
         designation: 'Assistant Professor',
         department: 'Computer Science & Engineering',
         mail_id: 'prabhuprasad@iiitdwd.ac.in',
@@ -580,6 +604,7 @@ let ProfileProps: ProfileProp[] = [
       },
       card: {
         photo: '/images/Dr.PrakashPawar.jpg',
+        PhD:'Ph.D. (NITK Surathkal)',
         designation: 'Assistant Professor',
         department: 'Electronics and Communication Engineering',
         mail_id: 'Prakashpawar@iiitdwd.ac.in',
@@ -606,6 +631,7 @@ let ProfileProps: ProfileProp[] = [
       },
       card: {
         photo: '/images/Dr.PramodYelmewad.jpg',
+        PhD:'Ph.D. (NITK Surathkal)',
         designation: 'Assistant Professor',
         department: 'Computer Science & Engineering',
         mail_id: 'pramodyelmewad@iiitdwd.ac.in',
@@ -629,6 +655,7 @@ let ProfileProps: ProfileProp[] = [
       },
       card: {
         photo: '/images/Dr.RajendraHegadi.jpeg',
+        PhD:'Ph.D. (MGRRI, Chennai)',
         designation: 'Associate Professor',
         department: 'Data Science and Intelligent Systems',
         mail_id: 'rajendrahegadi@iiitdwd.ac.in',
@@ -653,6 +680,7 @@ let ProfileProps: ProfileProp[] = [
       },
       card: {
         photo: '/images/Dr.RajeshNS.jpeg',
+        PhD:'Ph.D. (NITK Surathkal)',
         designation: 'Assistant Professor',
         department: 'Humanities & Science',
         mail_id: 'rajeshns29@gmail.com, rajesh.ns29@iiitdwd.ac.in',
@@ -679,6 +707,7 @@ let ProfileProps: ProfileProp[] = [
       },
       card: {
         photo: '/images/Dr.RajibSharma.jpg',
+        PhD:'Ph.D. (IIT Guwahati)',
         designation: 'Assistant Professor',
         department: 'Data Science and Intelligent Systems',
         mail_id: 'rajibd2k@iiitdwd.ac.in',
@@ -703,6 +732,7 @@ let ProfileProps: ProfileProp[] = [
       },
       card: {
         photo: '/images/Dr.RameshAthe.jpg',
+        PhD:'Ph.D. (Osmania University, Hyderabad)',
         designation: 'Assistant Professor',
         department: 'Data Science and Intelligent Systems',
         mail_id: ' ramesh.athe@iiitdwd.ac.in',
@@ -731,6 +761,7 @@ let ProfileProps: ProfileProp[] = [
       },
       card: {
         photo: '/images/Dr.SibasankarPadhy.jpg',
+        PhD:'Ph.D. (IIT Guwahati)',
         designation: 'Assistant Professor',
         department: 'Electronics and Communication Engineering',
         mail_id: 'sibasankar@iiitdwd.ac.in',
@@ -751,6 +782,7 @@ let ProfileProps: ProfileProp[] = [
       },
       card: {
         photo: '/images/Dr.SiddharthR.jpg',
+        PhD:'Ph.D. (NIT Puducherry)',
         designation: 'Assistant  Professor',
         department: 'Data Science and Intelligent Systems',
         mail_id: 'siddharth_r@iiitdwd.ac.in',
@@ -774,6 +806,7 @@ let ProfileProps: ProfileProp[] = [
       },
       card: {
         photo: '/images/Dr.ShirshenduLayek.jpg',
+        PhD:'Ph.D. (IIT Dhanbad)',
         designation: 'Assistant  Professor',
         department: 'Data Science and Intelligent Systems',
         mail_id: 'shirshendu@iiitdwd.ac.in',
@@ -797,6 +830,7 @@ let ProfileProps: ProfileProp[] = [
       },
       card: {
         photo: '/images/Dr.SomenBhattacharjee.jpeg',
+        PhD:'Ph.D. (IIT Guwahati)',
         designation: 'Assistant  Professor',
         department: 'Electronics and Communication Engineering',
         mail_id: 'somen@iiitdwd.ac.in',
@@ -821,6 +855,7 @@ let ProfileProps: ProfileProp[] = [
       },
       card: {
         photo: '/images/Dr.SadhviManerikar.jpg',
+        PhD:'Ph.D. (NIT Goa)',
         designation: 'Assistant  Professor',
         department: 'Computer Science & Engineering',
         mail_id: 'Sadhvi@iiitdwd.ac.in',
@@ -846,6 +881,7 @@ let ProfileProps: ProfileProp[] = [
       },
       card: {
         photo: '/images/Dr.SunilKumarPV.jpg',
+        PhD:'Ph.D. (NIT, Calicut)',
         designation: 'Assistant  Professor',
         department: 'Computer Science & Engineering',
         mail_id: 'sunilkumar.pv@iiitdwd.ac.in',
@@ -870,6 +906,7 @@ let ProfileProps: ProfileProp[] = [
       },
       card: {
         photo: '/images/Dr.SunilSaumya.jpeg',
+        PhD:'Ph.D. (NIT Patna)',
         designation: 'Assistant Professor',
         department: 'Data Science and Intelligent Systems',
         mail_id: 'sunil.saumya@iiitdwd.ac.in',
@@ -891,6 +928,7 @@ let ProfileProps: ProfileProp[] = [
       },
       card: {
         photo: '/images/Dr.SunilCK.jpg',
+        PhD:'Ph.D. (NITK Surathkal)',
         designation: 'Assistant  Professor',
         department: 'Computer Science & Engineering',
         mail_id: 'sunilck@iiitdwd.ac.in',
@@ -915,6 +953,7 @@ let ProfileProps: ProfileProp[] = [
       },
       card: {
         photo: '/images/Dr.SuvadipHazra.png',
+        PhD:'Ph.D. (NIT Durgapur)',
         designation: 'Assistant  Professor',
         department: 'Computer Science & Engineering',
         mail_id: 'suvadip@iiitdwd.ac.in',
@@ -939,6 +978,7 @@ let ProfileProps: ProfileProp[] = [
       },
       card: {
         photo: '/images/Dr.UtkarshKhaire.jpg',
+        PhD:'Ph.D. (NIT Nagaland)',
         designation: 'Assistant  Professor',
         department: 'Data Science and Intelligent Systems',
         mail_id: 'utkarshkhaire@iiitdwd.ac.in',
@@ -962,6 +1002,7 @@ let ProfileProps: ProfileProp[] = [
       },
       card: {
         photo: '/images/Dr.VivekrajVK.jpg',
+        PhD:'Ph.D. (IIT Roorkee)',
         designation: 'Assistant  Professor',
         department: 'Computer Science & Engineering',
         mail_id: 'vivekraj@iiitdwd.ac.in',
@@ -985,6 +1026,7 @@ let ProfileProps: ProfileProp[] = [
       },
       card: {
         photo: '/images/ShrinivasKulkarni.jpeg',
+        PhD:'',
         designation: 'Professor in Practice',
         department: 'Computer Science & Engineering',
         mail_id: 'shrinivaskk@gmail.com',
@@ -1006,6 +1048,7 @@ let ProfileProps: ProfileProp[] = [
       },
       card: {
         photo: '/images/RajeshVasa.jpg',
+        PhD:'',
         designation: 'Adjunct Professor',
         department: 'Computer Science & Engineering',
         mail_id: '',
@@ -1032,6 +1075,7 @@ let ProfileProps: ProfileProp[] = [
       },
       card: {
         photo: '/images/AmbarishKulkarni.jpg',
+        PhD:'',
         designation: 'Adjunct Professor',
         department: 'Electronics and Communication Engineering',
         mail_id: 'ambarishkulkarni@swin.edu.au',
@@ -1059,6 +1103,7 @@ let ProfileProps: ProfileProp[] = [
       },
       card: {
         photo: '/images/IsraelCohen.jpg',
+        PhD:'',
         designation: 'Adjunct Professor',
         department: 'Electronics and Communication Engineering',
         mail_id: 'icohen@ee.technion.ac.il',
@@ -1086,6 +1131,7 @@ let ProfileProps: ProfileProp[] = [
       },
       card: {
         photo: '/images/NixonPatel.jpg',
+        PhD:'',
         designation: 'Professor in Practice',
         department: 'Data Science and Intelligent Systems',
         mail_id: 'nixonpatel@gmail.com',
@@ -1112,6 +1158,7 @@ let ProfileProps: ProfileProp[] = [
       },
       card: {
         photo: '/images/SRMahadevaPrasanna.jpg',
+        PhD:'Ph.D. (IIT Madras)',
         designation: 'Professor and Director',
         department: 'Data Science and Intelligent Systems',
         mail_id: 'prasanna@iiitdwd.ac.in',
