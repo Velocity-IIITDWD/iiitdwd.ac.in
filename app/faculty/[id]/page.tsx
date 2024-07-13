@@ -30,6 +30,7 @@ type ProfileProp = {
       department: string;
       mail_id: string;
       cabin_number: string;
+      PhD:string;
     };
 
     body: {
@@ -114,15 +115,17 @@ const Profile = (params: pp) => {
                     </span>
                     <span>{profile.content.card.designation}</span>
                   </div>
-                  <div className="flex flex-row gap-2">
-                    <span className="flex-shrink-0">
-                      <Mail />
-                    </span>
-
-                    <span className="flex-shrink">
-                      {profile.content.card.mail_id}
-                    </span>
-                  </div>
+                  {profile.content.card.PhD !== '' && (  
+                    <div className="flex flex-row gap-2">
+                      <span className="flex-shrink-0">
+                        <GraduationCap />
+                      </span>
+                      <span className="flex-shrink">
+                        {profile.content.card.PhD}
+                      </span>
+                    </div>
+                  )}
+                 
                   <div className="flex flex-row  gap-2 hidden">
                     <MapPin />
                     <span>{profile.content.card.cabin_number}</span>
