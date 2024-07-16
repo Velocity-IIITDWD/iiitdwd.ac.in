@@ -51,7 +51,7 @@ let ProfileProps: ProfileProp[] = [
     id: 'AbdulWahid',
     content: {
       head: {
-        name: 'Dr. Abdul Wahid',
+        name: 'Dr. Abdul Wahid', 
         profile_pdf: '/docs/Dr.AbdulWahid.pdf',
       },
       card: {
@@ -1176,6 +1176,70 @@ let ProfileProps: ProfileProp[] = [
           { id: 4, area: 'Machine Learning' },
           { id: 5, area: 'Deep Learning' },
         ],
+      },
+    },
+  },
+
+  {
+    id: 'AnandJBariya',
+    content: {
+      head: {
+        name: 'Dr Anand J Bariya',
+        profile_pdf: '/docs/AnandJBariya.pdf',
+      },
+      card: {
+        photo: '/images/AnandJBariya.png',
+        PhD:'Ph.D. (Stanford)',
+        designation: 'Professor of Practice',
+        department: 'Electronics and Communication Engineering',
+        mail_id: 'abariya@alumni.stanford.edu',
+        cabin_number: '?',
+      },
+      body: {
+        profile_text: '',
+        interest_areas: [],
+      },
+    },
+  },
+  {
+    id: 'GirishDhanakshirur',
+    content: {
+      head: {
+        name: 'Prof. Girish Dhanakshirur',
+        profile_pdf: '/docs/GirishDhanakshirur.pdf',
+      },
+      card: {
+        photo: '/images/GirishDhanakshirur.jpg',
+        PhD:'',
+        designation: 'Professor of Practice',
+        department: 'Data Science and Intelligent Systems',
+        mail_id: 'girishdhanak@in.ibm.com',
+        cabin_number: '?',
+      },
+      body: {
+        profile_text: '',
+        interest_areas: [],
+      },
+    },
+  },
+  {
+    id: 'KarthikSankaran',
+    content: {
+      head: {
+        name: 'Karthik Sankaran',
+        profile_pdf: '/docs/KarthikSankaran.pdf',
+      },
+      card: {
+        photo: '/images/KarthikSankaran.jpeg',
+        PhD:'',
+        designation: 'Professor of Practice',
+        department: 'Electronics and Communication Engineering',
+        mail_id: 'sankaran.karthik@gmail.com',
+        cabin_number: '?',
+      },
+      body: {
+        profile_text: '',
+        interest_areas: [],
       },
     },
   },
