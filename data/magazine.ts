@@ -143,7 +143,6 @@ export const teams: teamStructure[] = [
       { id: 22, role: 'Head', name: 'Shreyansh Tiwari' },
       { id: 23, role: 'Member', name: 'Nomtha' },
       { id: 24, role: 'Member', name: 'Ambrish Pandey' },
-      { id: 25, role: 'Member', name: 'Shreyansh Tiwari' },
       { id: 26, role: 'Member', name: 'Saagarika Ural S' },
       { id: 27, role: 'Member', name: 'Parmitha' },
       { id: 28, role: 'Member', name: 'Rishik Natra' },
