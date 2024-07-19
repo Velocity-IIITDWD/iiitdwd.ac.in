@@ -10,6 +10,13 @@ export type Announcement = {
 
 export const announcements: Announcement[] = [
   {
+    link: '/docs/GeM-Bidding-6649263.pdf',
+    text: 'Bus Hiring Service - Regular Basis - Local; 34-36; Non Deluxe (NDX); 1200 Km(s)*180 Hr(s)',
+    new: true,
+    year: '2024',
+    month: '7',
+  },
+  {
     link: '/docs/PhD_MTech(R)_Jul2024_List - Shalini K.pdf',
     text: 'Provisional list of candidates selected for admission to Ph.D. and M.Tech. (Research) for the Aug 2024 session.',
     new: true,
@@ -47,7 +54,7 @@ export const announcements: Announcement[] = [
   {
     link: '/docs/Ph.D_and_M.Tech-Research_Aug24_Admission_Notification-Extended.pdf',
     text: 'Ph.D and M.Tech-Research Aug 24 Admission Notification-Extended',
-    new: true,
+    new: false,
     year: '2024',
     month: '6',
   },
