@@ -10,6 +10,24 @@ export type Jobs = {
 
 export const jobsData: Jobs[] = [
   {
+    "title": "Data Dissemination and Resource Optimization in Post-Disaster Scenarios using Hybrid 5G-Mobile Adhoc Networks",
+    "category": "staff",
+    "details": ``,
+    "lastDate": "04.08.2024",
+    "generalInstructions": "/docs/ResearchFelloship-Shalini_K.pdf",
+    "application": "https://forms.gle/U9dnMzEaw3rwQVWTA",
+    "extraInfo": []
+  },
+  {
+    "title": "Project Associate I Position for my SERB funded SRG Project",
+    "category": "staff",
+    "details": "",
+    "lastDate": "30.07.2023",
+    "generalInstructions": "/docs/ApplicationforSERBprojectSRG.docx-Shalini_K.pdf",
+    "application": "https://forms.gle/2EceR3pjZVViDUkZ6",
+    "extraInfo": []
+  },
+  {
     "title": "Admission to Ph.D. and M. Tech. (Research), August 2024",
     "category": "others",
     "details": "",
