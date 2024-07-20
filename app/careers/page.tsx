@@ -8,11 +8,14 @@ import Link from 'next/link';
 import { useCallback, useEffect, useRef, useState } from 'react';
 
 const currDate = new Date();
+
+
 const updatedJobsData = jobsData.map(job => {
   const splittedDate = job.lastDate.split('.').map(num => Number(num));
   const jobDate = new Date(splittedDate[2], splittedDate[1] - 1, splittedDate[0]);
-  return ({ ...job, application: jobDate > currDate ? job.application : '#' })
-})
+  return ({ ...job, application: jobDate > currDate ? job.application : '#', actualDate: jobDate })
+}).sort((a,b) => new Date(b.actualDate).getTime() - new Date(a.actualDate).getTime())
+
 
 export default function CareersPage() {
   const [category, setCategory] = useState('all');

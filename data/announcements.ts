@@ -10,6 +10,20 @@ export type Announcement = {
 
 export const announcements: Announcement[] = [
   {
+    link: '/docs/ResearchFelloship.pdf',
+    text: 'Data Dissemination and Resource Optimization in Post-Disaster Scenarios using Hybrid 5G-Mobile Adhoc Networks  ',
+    new: true,
+    year: '2024',
+    month: '7',
+  },
+  {
+    link: '/docs/ApplicationforSERBprojectSRG.docx.pdf',
+    text: 'Project Associate I Position for my SERB funded SRG Project  ',
+    new: true,
+    year: '2024',
+    month: '7',
+  },
+  {
     link: '/docs/GeM-Bidding-6649263.pdf',
     text: 'Bus Hiring Service - Regular Basis - Local; 34-36; Non Deluxe (NDX); 1200 Km(s)*180 Hr(s)',
     new: true,
