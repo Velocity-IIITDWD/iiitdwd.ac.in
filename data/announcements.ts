@@ -10,14 +10,14 @@ export type Announcement = {
 
 export const announcements: Announcement[] = [
   {
-    link: '/docs/ResearchFelloship-Shalini_K.pdf',
+    link: '/docs/ResearchFelloship.pdf',
     text: 'Data Dissemination and Resource Optimization in Post-Disaster Scenarios using Hybrid 5G-Mobile Adhoc Networks  ',
     new: true,
     year: '2024',
     month: '7',
   },
   {
-    link: '/docs/ApplicationforSERBproje ctSRG.docx-Shalini_K.pdf',
+    link: '/docs/ApplicationforSERBprojectSRG.docx.pdf',
     text: 'Project Associate I Position for my SERB funded SRG Project  ',
     new: true,
     year: '2024',

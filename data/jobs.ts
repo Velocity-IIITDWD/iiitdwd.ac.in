@@ -14,7 +14,7 @@ export const jobsData: Jobs[] = [
     "category": "staff",
     "details": ``,
     "lastDate": "04.08.2024",
-    "generalInstructions": "/docs/ResearchFelloship-Shalini_K.pdf",
+    "generalInstructions": "/docs/ResearchFelloship.pdf",
     "application": "https://forms.gle/U9dnMzEaw3rwQVWTA",
     "extraInfo": []
   },
@@ -22,8 +22,8 @@ export const jobsData: Jobs[] = [
     "title": "Project Associate I Position for my SERB funded SRG Project",
     "category": "staff",
     "details": "",
-    "lastDate": "30.07.2023",
-    "generalInstructions": "/docs/ApplicationforSERBprojectSRG.docx-Shalini_K.pdf",
+    "lastDate": "30.07.2024",
+    "generalInstructions": "/docs/ApplicationforSERBprojectSRG.docx.pdf",
     "application": "https://forms.gle/2EceR3pjZVViDUkZ6",
     "extraInfo": []
   },
