@@ -5,7 +5,7 @@ export const tenders: Tender[] = [
     documents: [],
     link: '/docs/GeM-Bidding-6649263.pdf',
     publishDate: '2024-07-19',
-    submissionDeadline: '2024-08-19T20:00+05:30',
+    submissionDeadline: '2024-08-08T12:00+05:30',
     title: 'Bus Hiring Service - Regular Basis - Local; 34-36; Non Deluxe (NDX); 1200 Km(s)*180 Hr(s)',
     updatedAt: 49,
   },
