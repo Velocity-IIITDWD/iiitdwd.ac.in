@@ -98,11 +98,16 @@ export const links: linksStructure[] = [
       },
       {
         id: 4,
+        link: '/docs/Important_Notice_For_Prospective_Students_22-07-24.pdf',
+        displayText: 'Important Notice for Prospective Students of 2024',
+      },
+      {
+        id: 5,
         link: '/docs/FEE_2024-25_Sheet1.pdf',
         displayText: 'Fee Structure for the batch 2024-2025',
       },
       {
-        id: 5,
+        id: 6,
         link: '/faq',
         displayText: "FAQ's",
       },
