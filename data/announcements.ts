@@ -10,6 +10,13 @@ export type Announcement = {
 
 export const announcements: Announcement[] = [
   {
+    link: '/docs/Important_Notice_For_Prospective_Students_22-07-24.pdf',
+    text: 'Important Notice for Prospective Students of 2024',
+    new: true,
+    month: '7',
+    year: '2024',
+  },
+  {
     link: '/docs/ResearchFelloship.pdf',
     text: 'Data Dissemination and Resource Optimization in Post-Disaster Scenarios using Hybrid 5G-Mobile Adhoc Networks  ',
     new: true,
