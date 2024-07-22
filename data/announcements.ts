@@ -61,14 +61,14 @@ export const announcements: Announcement[] = [
   {
     link: '/docs/peer_to_peer_energy_trading_in_dairy_farms_using_multi_agent_systems.pdf',
     text: 'Journal article co-authored by Dr. Abdul Wahid titled "Peer-to-peer energy trading in dairy farms using multi-agent systems" gets published in Computers and Electrical Engineering (Elsevier, Impact Factor: 4.0)',
-    new: true,
+    new: false,
     year: '2024',
     month: '7',
   },
   {
     link: '/docs/A_reinforcement_learning_approach_to_dairy_farm_battery_management_using_Q_learning.pdf',
     text: 'Journal article co-authored by Dr. Abdul Wahid titled "A reinforcement learning approach to dairy farm battery management using Q learning" gets published in Journal of Energy Storage (Elsevier, Impact Factor: 9.4)',
-    new: true,
+    new: false,
     year: '2024',
     month: '6',
   },
