@@ -359,7 +359,7 @@ const clubs: Club[] = [
       { name: 'DEF', position: 'Social Media Lead' },
       { name: 'EFG', position: 'Event Management Lead' },
     ],
-    imagePath: '/images/return0.png',
+    imagePath: '/images/return0.jpeg',
     isTechnical: true,
     instagram: 'https://www.instagram.com/return0_iiitdwd/',
     linkedin: 'https://www.linkedin.com/company/return-0/ ',

@@ -3,8 +3,12 @@ import { FC, useState } from 'react';
 import '@/app/globals.css';
 import Image from 'next/image';
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
 import { ProfileProps, ProfileProp } from '@/data/faculty_profile';
-import Profile from './[id]/page';
+
+
+const Profile = dynamic(() => import('./[id]/page'));
+
 
 interface ListProps {
   ll: ProfileProp[];
@@ -49,6 +53,7 @@ const List = ({ ll }: ListProps) => {
               width={0}
               height={0}
               sizes="100%"
+              loading = "lazy"
               style={{ height: '250px', width: '250px' }}
               alt={arr?.content?.head?.name}
               className="shrink-0 object-cover mx-auto rounded-lg shadow"
@@ -88,7 +93,7 @@ const List = ({ ll }: ListProps) => {
   return (
     <>
       <div className="flex flex-col justify-center py-0 gap-4">
-        <section className="w-full h-[50vh] bg-cover bg-center bg-[url('/images/main_building.jpg')] relative before:z-0 before:absolute before:h-full before:w-full before:left-0 before:top-0 before:bg-[#041E3FB3] flex items-center justify-center">
+        <section className="w-full h-[50vh] bg-cover bg-center bg-[url('/images/main_building.webp')] relative before:z-0 before:absolute before:h-full before:w-full before:left-0 before:top-0 before:bg-[#041E3FB3] flex items-center justify-center">
           <p className="text-white z-[1] text-3xl font-bold">Faculty</p>
         </section>
         <div className="bg-gray-200 shadow-inner flex flex-wrap justify-left gap-6 py-2 mx-2 px-6 rounded ">

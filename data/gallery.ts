@@ -1,10 +1,10 @@
-import MBlock from '@/assets/gallery/M_Block.jpg';
-import EBlock from '@/assets/gallery/E_Block.jpg';
-import GBlock from '@/assets/gallery/G_Block.jpg';
-import BBlock from '@/assets/gallery/B_Block.jpg';
+import MBlock from '@/assets/gallery/M_Block.webp';
+import EBlock from '@/assets/gallery/E_Block.webp';
+import GBlock from '@/assets/gallery/G_Block.webp';
+import BBlock from '@/assets/gallery/B_Block.webp';
 import Library from '@/assets/gallery/Library.jpg';
-import PiBlock from '@/assets/gallery/PiBlock.jpg';
-import HBlock from '@/assets/gallery/H_Block.jpg';
+import PiBlock from '@/assets/gallery/PiBlock.webp';
+import HBlock from '@/assets/gallery/H_Block.webp';
 import { StaticImageData } from 'next/image';
 
 export interface gallery {

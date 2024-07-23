@@ -1,19 +1,25 @@
 import { About, aboutData } from '@/data/about';
+
+
+import dynamic from 'next/dynamic';
 import Image from 'next/image';
-import DirectorsMessage from '@/components/about/DirectorsMessage';
-import OurFamily from '@/components/about/OurFamily';
-import OurVision from '@/components/about/OurVision';
-import OurMission from '@/components/about/OurMission';
-import CoreValues from '@/components/about/CoreValues';
-import DirectorBriefProfile from '@/components/about/DirectorBriefProfile';
-import AboutIIIT from '@/components/about/AboutIIIT';
-import ShortCampusVideo from '@/components/about/ShortCampusVideo';
-import mainGateImage from '@/assets/campus/main_gate.jpg';
+import mainGateImage from '@/assets/campus/main_gate.webp';
 import { Metadata } from 'next';
 import directorImage from '@/assets/s_r_mahadeva_prasanna.jpg';
-
 import './smoothScroll.css';
 import Link from 'next/link';
+
+
+const DirectorsMessage = dynamic(() => import('@/components/about/DirectorsMessage'));
+const OurFamily = dynamic(() => import('@/components/about/OurFamily'));
+const OurVision = dynamic(() => import('@/components/about/OurVision'));
+const OurMission = dynamic(() => import('@/components/about/OurMission'));
+const CoreValues = dynamic(() => import('@/components/about/CoreValues'));
+const DirectorBriefProfile = dynamic(() => import('@/components/about/DirectorBriefProfile'));
+const AboutIIIT = dynamic(() => import('@/components/about/AboutIIIT'));
+const ShortCampusVideo = dynamic(() => import('@/components/about/ShortCampusVideo'));
+
+
 
 const AboutPage = () => {
   const about: About = aboutData;
@@ -155,7 +161,7 @@ const AboutPage = () => {
 
       <section
         id="vision"
-        className="w-full py-20 bg-cover bg-center bg-[url('/images/main_building.jpg')] relative before:z-0 before:absolute before:h-full before:w-full before:left-0 before:top-0 before:bg-[#041E3FB3] flex items-center justify-center"
+        className="w-full py-20 bg-cover bg-center bg-[url('/images/main_building.webp')] relative before:z-0 before:absolute before:h-full before:w-full before:left-0 before:top-0 before:bg-[#041E3FB3] flex items-center justify-center"
       >
         <div className="z-[1] text-white flex items-center justify-center flex-col gap-2 max-w-[1200px] w-full">
           <p className="text-3xl font-bold">Our Vision</p>
@@ -300,7 +306,7 @@ const AboutPage = () => {
           ></iframe>
         </div>
       </section> */}
-      <div id="introduction" />
+      <div id="introduction"/>
       <AboutIIIT aboutText={about.aboutText} />
       <div id="directors-message" />
       <DirectorsMessage
@@ -317,10 +323,10 @@ const AboutPage = () => {
       />
       <div id="family" />
       <OurFamily />
-      <div id="vision" />
+      <div id="vision"  />
       <section
         id="vision"
-        className="w-full py-20 bg-cover bg-center bg-[url('/images/main_building.jpg')] relative before:z-0 before:absolute before:h-full before:w-full before:left-0 before:top-0 before:bg-[#041E3FB3] flex items-center justify-center"
+        className="w-full py-20 bg-cover bg-center bg-[url('/images/main_building.webp')] relative before:z-0 before:absolute before:h-full before:w-full before:left-0 before:top-0 before:bg-[#041E3FB3] flex items-center justify-center"
       >
         <div className="z-[1] text-white flex items-center justify-center flex-col gap-2 max-w-[1200px] w-full">
           <p className="text-3xl font-bold">Our Vision</p>
