@@ -27,11 +27,11 @@ export type eventInf = {
 let events: eventInf[] = [
   {
     id: 'iiit-sport-event',
-    href: '/images/iiitevent.png',
+    href: '/images/iiitevent.webp',
     text: 'Inter IIIT Sport meet at IIIT Allahabad',
     timestamp: '06-03-2024',
     allImage: [
-      '/images/iiitevent.png',
+      '/images/iiitevent.webp',
       '/images/iiitevent1.png',
       '/images/iiitevent2.png',
       '/images/iiitevent3.png',
@@ -81,10 +81,10 @@ let events: eventInf[] = [
   },
   {
     id: 'inaugration-of-iiitdwd',
-    href: '/images/inaug.jpg',
+    href: '/images/inaug.webp',
     text: 'Inauguration of IIIT Dharwad',
     timestamp: '26-09-2022',
-    allImage: ['/images/inaug.jpg', '/images/inaug1.jpg'],
+    allImage: ['/images/inaug.webp', '/images/inaug1.jpg'],
     details: {
       startDate: 'Date : 26-09-2022',
       endDate: '',
@@ -104,10 +104,10 @@ let events: eventInf[] = [
   },
   {
     id: 'blood-donor-day',
-    href: '/images/blooddonor.jpg',
+    href: '/images/blooddonor.webp',
     text: 'World Blood Donor Day 2022',
     timestamp: '14-06-2022',
-    allImage: ['/images/blooddonor.jpg', '/images/blooddonor2.jpg'],
+    allImage: ['/images/blooddonor.webp', '/images/blooddonor2.jpg'],
     details: {
       startDate: ' Date : 14-06-2022',
       endDate: '',
@@ -152,7 +152,7 @@ let events: eventInf[] = [
 
   {
     id: 'sports-day-2022',
-    href: '/images/sports2022.png',
+    href: '/images/sports2022.webp',
     text: 'Sports Day 2022',
     timestamp: '29-04-2022',
     allImage: ['/images/sports2022.png', '/images/sports2022-1.png'],
@@ -198,7 +198,7 @@ let events: eventInf[] = [
   },
   {
     id: 'orientation-program-2022',
-    href: '/images/orientation0.png',
+    href: '/images/orientation0.webp',
     text: 'Orientation Program 2021-22',
     timestamp: '22-12-2021',
     allImage: ['/images/orientation0.png', '/images/orientation1.jpg'],
@@ -316,10 +316,10 @@ let events: eventInf[] = [
   },
   {
     id: 'HiroyaFujisaki-visit',
-    href: '/images/Prof._HiroyaFujisaki_Visit.jpg',
+    href: '/images/Prof._HiroyaFujisaki_Visit.webp',
     text: 'Prof. HiroyaFujisaki visit',
     timestamp: '17-03-2021',
-    allImage: ['/images/Prof._HiroyaFujisaki_Visit.jpg'],
+    allImage: ['/images/Prof._HiroyaFujisaki_Visit.webp'],
     details: {
       startDate: 'Date : 17-03-2021',
       endDate: '',
@@ -341,10 +341,10 @@ let events: eventInf[] = [
 
   {
     id: 'chairperson-visit',
-    href: '/images/Chairperson_Visit.jpg',
+    href: '/images/Chairperson_Visit.webp',
     text: 'Chairperson Visit',
     timestamp: '22-03-2018',
-    allImage: ['/images/Chairperson_Visit.jpg'],
+    allImage: ['/images/Chairperson_Visit.webp'],
     details: {
       startDate: 'Date : 22-03-2018',
       endDate: '',
@@ -364,10 +364,10 @@ let events: eventInf[] = [
   },
   {
     id: 'nr-murthy-visit',
-    href: '/images/NR_murthy.jpg',
+    href: '/images/NR_murthy.webp',
     text: 'N R Narayana Murthy Visit',
     timestamp: '03-02-2018',
-    allImage: ['/images/NR_murthy.jpg'],
+    allImage: ['/images/NR_murthy.webp'],
     details: {
       startDate: 'Date : 03-02-2018',
       endDate: '',

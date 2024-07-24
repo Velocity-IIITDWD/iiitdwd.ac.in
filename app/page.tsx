@@ -3,16 +3,22 @@ import Link from 'next/link';
 import { ExternalLink } from 'lucide-react';
 import { Programs } from '@/data/homePage';
 
-import { Card, CardContent } from '@/components/ui/card';
 
+import dynamic from 'next/dynamic';
 import Image from 'next/image';
-import MainCarousel from '@/components/HomePage/MainCarousel';
 import { GalleryImages } from '@/data/gallery';
 import { events } from '@/data/events';
-import AnimatedCounter from '@/components/HomePage/AnimatedCounter';
-import AutoScrollCarousel from '@/components/HomePage/AutoScrollCarousel';
 import { announcements } from '@/data/announcements';
 import { useState } from 'react';
+import { Card, CardContent } from '@/components/ui/card';
+
+
+const MainCarousel = dynamic(() => import('@/components/HomePage/MainCarousel'));
+const AnimatedCounter = dynamic(() => import('@/components/HomePage/AnimatedCounter'));
+const AutoScrollCarousel = dynamic(() => import('@/components/HomePage/AutoScrollCarousel'));
+
+
+
 
 export default function Home() {
   const [program, setProgram] = useState(0);
@@ -24,7 +30,7 @@ export default function Home() {
       <section className="my-20 bg-white border-t border-b shadow_inset border-slate-100 md:py-20 py-10 w-full flex flex-col lg:flex-row-reverse items-center md:px-20 sm:px-10 p-4 gap-6">
         <Image
           alt="main image"
-          src={'/images/IIIT_Dharwad.jpg'}
+          src={'/images/IIIT_Dharwad.webp'}
           width={0}
           height={0}
           sizes="100%"
@@ -72,7 +78,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="w-full h-full bg-fixed relative overflow-hidden before:z-0 before:absolute before:h-full before:w-full before:left-0 before:top-0 before:bg-[#041E3FB3] bg-cover bg-repeat-y bg-[url('/images/IIIT_Dharwad.jpg')]">
+      <section className="w-full h-full bg-fixed relative overflow-hidden before:z-0 before:absolute before:h-full before:w-full before:left-0 before:top-0 before:bg-[#041E3FB3] bg-cover bg-repeat-y bg-[url('/images/IIIT_Dharwad.webp')]">
         <div className="my-16 z-[1] relative w-full flex flex-col items-center md:px-24 sm:px-10 p-4 gap-6">
           <p className="text-white text-3xl font-bold">About Us</p>
 
@@ -292,7 +298,7 @@ export default function Home() {
         </AutoScrollCarousel>
       </section>
 
-      <section className="w-full h-full bg-fixed relative overflow-hidden before:z-0 before:absolute before:h-full before:w-full before:left-0 before:top-0 before:bg-[#041E3FB3] bg-cover bg-repeat-y bg-[url('/images/LandingPage.png')]">
+      <section className="w-full h-full bg-fixed relative overflow-hidden before:z-0 before:absolute before:h-full before:w-full before:left-0 before:top-0 before:bg-[#041E3FB3] bg-cover bg-repeat-y bg-[url('/images/LandingPage.jpg')]">
         <div className="relative py-24 lg:py-44 z-[1] text-white max-w-[1000px] mx-auto w-full px-10 items-center justify-center flex flex-col lg:flex-row gap-10 lg:gap-4">
           <div className="flex basis-1/3 px-6 flex-col gap-2 items-center justify-center">
             <div className="flex gap-2 items-center">
