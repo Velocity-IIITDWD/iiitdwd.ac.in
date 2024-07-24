@@ -1027,7 +1027,7 @@ let ProfileProps: ProfileProp[] = [
       card: {
         photo: '/images/ShrinivasKulkarni.jpeg',
         PhD:'',
-        designation: 'Professor in Practice',
+        designation: 'Professor of Practice',
         department: 'Computer Science & Engineering',
         mail_id: 'shrinivaskk@gmail.com',
         cabin_number: '?',
@@ -1132,7 +1132,7 @@ let ProfileProps: ProfileProp[] = [
       card: {
         photo: '/images/NixonPatel.jpg',
         PhD:'',
-        designation: 'Professor in Practice',
+        designation: 'Professor of Practice',
         department: 'Data Science and Intelligent Systems',
         mail_id: 'nixonpatel@gmail.com',
         cabin_number: '?',
