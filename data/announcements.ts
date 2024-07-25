@@ -10,6 +10,13 @@ export type Announcement = {
 
 export const announcements: Announcement[] = [
   {
+    link: '/docs/Sana_hostel_info.pdf',
+    text: 'Hostel Facility for 2024-25 Batch Students',
+    new: true,
+    month: '7',
+    year: '2024',
+  },
+  {
     link: '/docs/Important_Notice_For_Prospective_Students_22-07-24.pdf',
     text: 'Important Notice for Prospective Students of 2024',
     new: true,
@@ -54,7 +61,7 @@ export const announcements: Announcement[] = [
   {
     link: '/docs/educators_students_enabling_workshop_qc.pdf',
     text: 'One-day workshop on "Faculty, Researchers, and Students enabling workshop on Quantum Information Processing" at IIIT Dharwad on 15th July 2024',
-    new: true,
+    new: false,
     year: '2024',
     month: '7',
   },
