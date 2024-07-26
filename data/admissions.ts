@@ -83,31 +83,36 @@ export const links: linksStructure[] = [
     links: [
       {
         id: 1,
+        link: '/docs/Guidelines for admission 2024-25.pdf',
+        displayText: 'Guidelines for Admission 2024',
+      },
+      {
+        id: 2,
         link: '/docs/Important_Notice_For_Prospective_Students_22-07-24.pdf',
         displayText: 'Important Notice for Prospective Students of 2024',
       },
       {
-        id: 2,
+        id: 3,
         link: '/docs/CSAB_Schedule_2024.pdf',
         displayText: 'CSAB-2024 Special Rounds Schedule',
       },
       {
-        id: 3,
+        id: 4,
         link: '/docs/Josaa_Schedule-Updated_on_27thJune2024.pdf',
         displayText: 'JoSAA 2024 Schedule (Updated on 27-06-2024)',
       },
       {
-        id: 4,
+        id: 5,
         link: '/docs/State-wise-List-of-Reporting-Centers.pdf',
         displayText: 'State wise List of Reporting Centers for Physical Verification of PwD Candidates [for NIT+ System Only] JoSAA/CSAB 2024',
       },
       {
-        id: 5,
+        id: 6,
         link: '/docs/FEE_2024-25_Sheet1.pdf',
         displayText: 'Fee Structure for the batch 2024-2025',
       },
       {
-        id: 6,
+        id: 7,
         link: '/faq',
         displayText: "FAQ's",
       },

@@ -10,6 +10,13 @@ export type Announcement = {
 
 export const announcements: Announcement[] = [
   {
+    link: '/docs/Guidelines for admission 2024-25.pdf',
+    text: 'Guidelines for Admission 2024',
+    new: true,
+    month: '7',
+    year: '2024',
+  },
+  {
     link: '/docs/Sana_hostel_info.pdf',
     text: 'Hostel Facility for 2024-25 Batch Students',
     new: true,
