@@ -107,7 +107,7 @@ function EventPage(theevent: event) {
     showSlides(slideIndex);
   }, 3000);
   return (
-    // {(true)?1:0}
+  // {(true)?1:0}
 
     <div>
       <h1 className="text-3xl font-bold text-dwd-primary mx-9 text-center mt-12 mb-0 font-roboto">

@@ -13,16 +13,16 @@ export default function Page() {
             1. Regular (Full-time) - Institute fellowship or self-financed</li>
             <li className="p-4">
             2. Part-time - External or College Teacher
-</li>
+            </li>
           </ol>
           <div className="mt-4">
             The minimum requirement is a B.E. / B.Tech. / M.Sc. / M.C.A. or equivalent for IT/ Engineering disciplines with a valid score in an entrance examination such as GATE/NET or national level selection process conducted by IIIT Dharwad or any other national level examination.
           </div>
           <div className="font-bold mt-4 text-lg text-dwd-primary">
-          <p className="text-[#db4444] text-lg">
+            <p className="text-[#db4444] text-lg">
 
            The minimum eligibility criteria for the M. Tech. program are given below:
-          </p>
+            </p>
             <div className="mx-auto my-9 text-md font-normal">
               <table className="border-collapse border border-gray-400 mx-auto">
                 <thead>
