@@ -10,6 +10,13 @@ export type Announcement = {
 
 export const announcements: Announcement[] = [
   {
+    link: '/docs/Guidelines for hostel feesInternet Banking.pdf',
+    text: 'Guidelines to pay Hostel fees using QR Code/Internet Banking for 2024 Batch Students',
+    new: true,
+    month: '7',
+    year: '2024',
+  },
+  {
     link: '/docs/Guidelines for admission 2024-25.pdf',
     text: 'Guidelines for Admission 2024',
     new: true,
@@ -61,7 +68,7 @@ export const announcements: Announcement[] = [
   {
     link: 'https://www.youtube.com/watch?v=Sh5VyQxKQvk',
     text: 'Prof. Anil Sahasrabudhe, Chairman - National Educational Technology Forum (NETF) will be delivering the Sixth Convocation Address on 13th July 2024',
-    new: true,
+    new: false,
     year: '2024',
     month: '7',
   },
@@ -204,5 +211,5 @@ export const announcements: Announcement[] = [
     new: false,
     year: '2024',
     month: '6',
-  },
+  },
 ];
