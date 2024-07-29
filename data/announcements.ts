@@ -10,7 +10,7 @@ export type Announcement = {
 
 export const announcements: Announcement[] = [
   {
-    link: '/docs/Guidelines for hostel fees/Internet Banking.pdf',
+    link: '/docs/Guidelines for hostel feesInternet Banking.pdf',
     text: 'Guidelines to pay Hostel fees using QR Code/Internet Banking for 2024 Batch Students',
     new: true,
     month: '7',
