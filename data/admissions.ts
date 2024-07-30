@@ -82,6 +82,11 @@ export const links: linksStructure[] = [
     type: 'Quick Links',
     links: [
       {
+        id: 6,
+        link: '/docs/Guidelines for hostel feesInternet Banking.pdf',
+        displayText: 'Guidelines to pay Hostel fees using QR Code/Internet Banking for 2024 Batch Students',
+      },
+      {
         id: 1,
         link: '/docs/Hostel Facility for 2024 batch students.pdf',
         displayText: 'Hostel Facility for 2024 batch students',
