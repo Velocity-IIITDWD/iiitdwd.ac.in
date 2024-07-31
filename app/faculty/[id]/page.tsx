@@ -150,7 +150,7 @@ const Profile = (params: pp) => {
             <div>
               {areaofinterest_array.length ? (
                 <>
-                  <div className="flex flex-col  py-20">
+                  <div className="flex flex-col md:pt-20">
                     <div className="flex flex-row  gap-2 font-bold text-xl border-b-2 border-black">
                       <GraduationCap />
                       <span>Area of Interest</span>
@@ -166,6 +166,17 @@ const Profile = (params: pp) => {
                 <div></div>
               )}
             </div>
+            {profile.content.card.mail_id && (
+              <div>
+                <span className='font-bold'>Email: </span>
+                <Link 
+                  href={`mailto:${profile.content.card.mail_id}`}
+                  className='underline hover:text-blue-400'
+                >
+                  {profile.content.card.mail_id}
+                </Link>
+              </div>
+            )}
           </div>
         </div>
       </div>
