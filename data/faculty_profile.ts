@@ -52,7 +52,7 @@ let ProfileProps: ProfileProp[] = [
     content: {
       head: {
         name: 'Dr. Abdul Wahid', 
-        profile_pdf: '/docs/Dr.AbdulWahid.pdf',
+        profile_pdf: 'https://sites.google.com/view/abdulwahid-cse',
       },
       card: {
         photo: '/images/Dr.AbdulWahid.jpeg',

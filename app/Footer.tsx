@@ -100,6 +100,7 @@ function Footer() {
           <Link className='hover:underline' href="/nirf">NIRF</Link>
           <Link className='hover:underline' href="https://www.onlinesbi.sbi/sbicollect/icollecthome.htm?corpID=873279">Student Fee Portal</Link>
           <Link className='hover:underline' href="/annual_reports">Annual Reports</Link>
+          <Link className='hover:underline' target='_blank' href="/docs/Anti_Ragging_Information.pdf">Anti Ragging</Link>
         </div>
 
         <div className="flex flex-col w-fit gap-2">
