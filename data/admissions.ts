@@ -78,6 +78,27 @@ export const descriptions: descriptionStructure[] = [
 export const year = 2024;
 export const links: linksStructure[] = [
   {
+    id: 4,
+    type: 'B.Tech Admission 2024',
+    links: [
+      {
+        id: 1,
+        link: '/docs/Guidelines for hostel feesInternet Banking.pdf',
+        displayText: 'Guidelines to pay Hostel fees using QR Code/Internet Banking for 2024 Batch Students',
+      },
+      {
+        id: 2,
+        link: '/docs/Guidelines for admission 2024-25.pdf',
+        displayText: 'Guidelines for Admission 2024',
+      },
+      {
+        id: 3,
+        link: '/docs/CSAB_Tentative_Vacancy_2024.pdf',
+        displayText: 'Tentative Seat Vacancy for CSAB Special Rounds 2024',
+      },
+    ]
+  },
+  {
     id: 1,
     type: 'Quick Links',
     links: [
