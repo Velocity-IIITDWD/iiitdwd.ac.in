@@ -15,14 +15,9 @@ export default [
     title: 'Members',
     profiles: [
       {
-        content: ['Adviser (IITs/IIITs), Ministry of Education'],
-        imageURL: '',
-        title: 'Ms. Manmohan Kaur',
-      },
-      {
-        content: ['Director (Finance), Ministry of Education - Ex-officio'],
-        imageURL: '/images/anil_kumar.jpg',
-        title: 'Sri. Anil Kumar',
+        content: ['Director, Department of ITBT & ST, GOK'],
+        imageURL: '/images/Shri_Darshan_H_V.jpg',
+        title: 'Shri Darshan H. V., IAS'
       },
       {
         content: [
@@ -34,12 +29,22 @@ export default [
     ],
   },
   {
+    title: 'Special Invitee',
+    profiles: [
+      {
+        content: ['Former Vice Chancellor, VTU and Professor, IISc, Bengaluru'],
+        imageURL: '/images/Prof_H_P_Khincha.jpg',
+        title: 'Prof. H. P. Khincha'
+      },
+    ]
+  },
+  {
     title: 'Non Member Secretary',
     profiles: [
       {
-        content: ['Non Member Secretary, IIIT Dharwad'],
+        content: ['Officiating Registrar, IIIT Dharwad'],
         imageURL: '',
-        title: 'Registrar, IIIT Dharwad',
+        title: 'Mr. Ravi B. Vitlapur',
       },
     ],
   },
