@@ -70,7 +70,7 @@ export default [
         title: 'Mr. Ravi B Vitlapur',
       },
       {
-        content: ['PA to Registrar'],
+        content: ['Junior Assistant'],
         imageURL: '/images/reshma_pyatishettar.jpg',
         title: 'Mrs. Reshma Pyatishettar',
       },
