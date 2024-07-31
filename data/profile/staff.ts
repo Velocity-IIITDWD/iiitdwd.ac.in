@@ -11,11 +11,6 @@ export default [
       },
       {
         content: ['Junior Assistant'],
-        imageURL: '/images/anitha_k_p.jpg',
-        title: 'Ms. Anitha K P',
-      },
-      {
-        content: ['Junior Assistant'],
         imageURL: '/images/ashwin_hiremath.jpeg',
         title: 'Mr. Ashwin Hiremath',
       },
@@ -28,11 +23,6 @@ export default [
         content: ['Security Head'],
         imageURL: '/images/basanagouda_v_patil.jpg',
         title: 'Mr. Basanagouda V Patil',
-      },
-      {
-        content: ['Junior Assistant'],
-        imageURL: '/images/kushal_hiremath.jpeg',
-        title: 'Mr. Kushal Hiremath',
       },
       {
         content: ['Executive Engineer'],
