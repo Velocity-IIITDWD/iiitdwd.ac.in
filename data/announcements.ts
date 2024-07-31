@@ -10,6 +10,13 @@ export type Announcement = {
 
 export const announcements: Announcement[] = [
   {
+    link: '/docs/CSAB_Tentative_Vacancy_2024.pdf',
+    text: 'Tentative Seat Vacancy for CSAB Special Rounds 2024',
+    new: true,
+    month: '7',
+    year: '2024',
+  },
+  {
     link: '/docs/Guidelines for hostel feesInternet Banking.pdf',
     text: 'Guidelines to pay Hostel fees using QR Code/Internet Banking for 2024 Batch Students',
     new: true,
@@ -61,7 +68,7 @@ export const announcements: Announcement[] = [
   {
     link: '/docs/PhD_MTech(R)_Jul2024_List - Shalini K.pdf',
     text: 'Provisional list of candidates selected for admission to Ph.D. and M.Tech. (Research) for the Aug 2024 session.',
-    new: true,
+    new: false,
     year: '2024',
     month: '7',
   },
