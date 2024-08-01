@@ -10,6 +10,13 @@ export type Announcement = {
 
 export const announcements: Announcement[] = [
   {
+    link: '/docs/A Meta-Analysis Approach.pdf',
+    text: 'Impact of Spontaneous  Abortion of First-Trimester on Medical Management',
+    new: true,
+    month: '8',
+    year: '2024',
+  },
+  {
     link: '/docs/CSAB_Tentative_Vacancy_2024.pdf',
     text: 'Tentative Seat Vacancy for CSAB Special Rounds 2024',
     new: true,
