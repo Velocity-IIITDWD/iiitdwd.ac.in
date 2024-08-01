@@ -68,7 +68,7 @@ export const announcements: Announcement[] = [
   {
     link: '/docs/GeM-Bidding-6649263.pdf',
     text: 'Bus Hiring Service - Regular Basis - Local; 34-36; Non Deluxe (NDX); 1200 Km(s)*180 Hr(s)',
-    new: true,
+    new: false,
     year: '2024',
     month: '7',
   },
