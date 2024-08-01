@@ -165,12 +165,7 @@ export default function Page() {
         </div>
       </div>
 
-      <Link
-        className='pl-2 mt-2 text-dwd-primary w-fit block hover:underline underline-offset-2 after:-translate-y-1/3 after:absolute relative after:content-[url("/icons/linkIcon.svg")]'
-        href={'/contact_info'}
-      >
-        For General Queries you can contact here
-      </Link>
+      
 
       {links.map((obj) => (
         <Fragment key={obj.id}>
