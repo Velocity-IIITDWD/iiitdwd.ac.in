@@ -1243,6 +1243,27 @@ let ProfileProps: ProfileProp[] = [
       },
     },
   },
+  {
+    id: 'KGopinath',
+    content: {
+      head: {
+        name: 'Dr. K. Gopinath',
+        profile_pdf: '/docs/KGopinath.pdf',
+      },
+      card: {
+        photo: '/images/Dr._K._Gopinath.jpg',
+        PhD:'Ph.D.(VTU)',
+        designation: 'Professor-In-Charge',
+        department: 'Mechanical Engineering',
+        mail_id: '',
+        cabin_number: '?',
+      },
+      body: {
+        profile_text: '',
+        interest_areas: [],
+      },
+    },
+  }
 ];
 
 export { ProfileProps };
