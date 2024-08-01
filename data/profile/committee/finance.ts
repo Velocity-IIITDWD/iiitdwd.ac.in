@@ -15,6 +15,11 @@ export default [
     title: 'Members',
     profiles: [
       {
+        content: ['Director - Finance, Department of Higher Education, MoE, GoI'],
+        imageURL: '',
+        title: ' Shri. Mukesh Kumar'
+      },
+      {
         content: ['Director, Department of ITBT & ST, GOK'],
         imageURL: '/images/Shri_Darshan_H_V.jpg',
         title: 'Shri Darshan H. V., IAS'

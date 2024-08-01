@@ -10,6 +10,13 @@ export type Announcement = {
 
 export const announcements: Announcement[] = [
   {
+    link: '/docs/A Meta-Analysis Approach.pdf',
+    text: 'Impact of Spontaneous  Abortion of First-Trimester on Medical Management',
+    new: true,
+    month: '8',
+    year: '2024',
+  },
+  {
     link: '/docs/CSAB_Tentative_Vacancy_2024.pdf',
     text: 'Tentative Seat Vacancy for CSAB Special Rounds 2024',
     new: true,
@@ -61,7 +68,7 @@ export const announcements: Announcement[] = [
   {
     link: '/docs/GeM-Bidding-6649263.pdf',
     text: 'Bus Hiring Service - Regular Basis - Local; 34-36; Non Deluxe (NDX); 1200 Km(s)*180 Hr(s)',
-    new: true,
+    new: false,
     year: '2024',
     month: '7',
   },
