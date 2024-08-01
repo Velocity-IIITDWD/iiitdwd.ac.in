@@ -83,25 +83,30 @@ export const links: linksStructure[] = [
     links: [
       {
         id: 1,
-        link: '/docs/Guidelines for hostel feesInternet Banking.pdf',
-        displayText: 'Guidelines to pay Hostel fees using QR Code/Internet Banking for 2024 Batch Students',
-      },
-      {
-        id: 2,
         link: '/docs/Guidelines for admission 2024-25.pdf',
         displayText: 'Guidelines for Admission 2024',
       },
       {
+        id: 2,
+        link: '/docs/Guidelines for hostel feesInternet Banking.pdf',
+        displayText: 'Guidelines to pay Hostel fees using QR Code/Internet Banking for 2024 Batch Students',
+      },
+      {
+        id: 3,
+        link: '/contact_info',
+        displayText: 'For General Queries you can contact here',
+      },
+    ]
+  },
+  
+  {
+    id: 1,
+    type: 'Quick Links',
+    links: [{
         id: 3,
         link: '/docs/CSAB_Tentative_Vacancy_2024.pdf',
         displayText: 'Tentative Seat Vacancy for CSAB Special Rounds 2024',
       },
-    ]
-  },
-  {
-    id: 1,
-    type: 'Quick Links',
-    links: [
       {
         id: 1,
         link: '/docs/Hostel Facility for 2024 batch students.pdf',
