@@ -10,6 +10,13 @@ export type Announcement = {
 
 export const announcements: Announcement[] = [
   {
+    link: '/docs/A-Meta-Analysis-Approach.pdf',
+    text: 'A meta-analysis approach on medical, surgical and expectant management" gets published in Epidemiology, Biostatistics, and Public Health (Scopus indexed)',
+    new: true,
+    month: '8',
+    year: '2024',
+  },
+  {
     link: '/docs/A Meta-Analysis Approach.pdf',
     text: 'Impact of Spontaneous  Abortion of First-Trimester on Medical Management',
     new: true,
