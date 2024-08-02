@@ -399,7 +399,7 @@ let ProfileProps: ProfileProp[] = [
     content: {
       head: {
         name: 'Dr. Krishnendu Ghosh',
-        profile_pdf: '/docs/Dr.KrishnenduGhosh.pdf',
+        profile_pdf: 'https://sites.google.com/view/krishnendughosh',
       },
       card: {
         photo: '/images/Dr.KrishnenduGhosh.png',
@@ -802,7 +802,7 @@ let ProfileProps: ProfileProp[] = [
     content: {
       head: {
         name: 'Dr. Shirshendu Layek',
-        profile_pdf: '/docs/Dr.ShirshenduLayek.pdf',
+        profile_pdf: 'https://sites.google.com/view/shirshendulayek',
       },
       card: {
         photo: '/images/Dr.ShirshenduLayek.jpg',
