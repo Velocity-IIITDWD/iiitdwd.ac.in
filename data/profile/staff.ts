@@ -10,6 +10,11 @@ export default [
         title: 'Prof. Satish Annigeri',
       },
       {
+        content: ['Professor-In-Charge, Mechanical Engineering'],
+        imageURL: '/images/Dr._K._Gopinath.jpg',
+        title: 'Dr. K. Gopinath',
+      },
+      {
         content: ['Junior Assistant'],
         imageURL: '/images/ashwin_hiremath.jpeg',
         title: 'Mr. Ashwin Hiremath',
