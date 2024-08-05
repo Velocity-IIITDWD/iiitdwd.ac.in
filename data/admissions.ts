@@ -102,11 +102,7 @@ export const links: linksStructure[] = [
   {
     id: 1,
     type: 'Quick Links',
-    links: [{
-        id: 3,
-        link: '/docs/CSAB_Tentative_Vacancy_2024.pdf',
-        displayText: 'Tentative Seat Vacancy for CSAB Special Rounds 2024',
-      },
+    links: [
       {
         id: 1,
         link: '/docs/Hostel Facility for 2024 batch students.pdf',
