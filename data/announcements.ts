@@ -24,13 +24,6 @@ export const announcements: Announcement[] = [
     year: '2024',
   },
   {
-    link: '/docs/CSAB_Tentative_Vacancy_2024.pdf',
-    text: 'Tentative Seat Vacancy for CSAB Special Rounds 2024',
-    new: true,
-    month: '7',
-    year: '2024',
-  },
-  {
     link: '/docs/Guidelines for hostel feesInternet Banking.pdf',
     text: 'Guidelines to pay Hostel fees using QR Code/Internet Banking for 2024 Batch Students',
     new: true,
