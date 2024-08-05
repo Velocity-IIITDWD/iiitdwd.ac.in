@@ -10,17 +10,17 @@ export type Announcement = {
 
 export const announcements: Announcement[] = [
   {
-    link: '/docs/A-Meta-Analysis-Approach.pdf',
-    text: 'A meta-analysis approach on medical, surgical and expectant management" gets published in Epidemiology, Biostatistics, and Public Health (Scopus indexed)',
+    link: '/docs/implicit_self-supervised_language_representation.pdf',
+    text: 'Journal article co-authored by Prof. Prasanna titled "Implicit Self-supervised Language Representation for Spoken Language Diarization" gets published in IEEE/ACM Transactions on Audio, Speech and Language Processing, Happy Reading! ',
     new: true,
     month: '8',
     year: '2024',
   },
   {
-    link: '/docs/CSAB_Tentative_Vacancy_2024.pdf',
-    text: 'Tentative Seat Vacancy for CSAB Special Rounds 2024',
+    link: '/docs/A-Meta-Analysis-Approach.pdf',
+    text: 'A meta-analysis approach on medical, surgical and expectant management" gets published in Epidemiology, Biostatistics, and Public Health (Scopus indexed)',
     new: true,
-    month: '7',
+    month: '8',
     year: '2024',
   },
   {
