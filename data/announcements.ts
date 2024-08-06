@@ -10,6 +10,13 @@ export type Announcement = {
 
 export const announcements: Announcement[] = [
   {
+    link: '/docs/Impact-of-Spontaneous-Abortion-of-First-Trimester-on-Medical-Management_-A-Systematic-Review-and-Meta-Analysis-of-Randomized-Con.pdf',
+    text: 'Impact of spontaneous abortion of first trimester on medical management-a systematic review" gets published in a book titled "Modernizing Maternal Care with Digital Technologies". 2024:250-68. ISBN: 9798369337110; Chapter 11; (Scopus indexed)',
+    new: true,
+    month: '8',
+    year: '2024',
+  },
+  {
     link: '/docs/implicit_self-supervised_language_representation.pdf',
     text: 'Journal article co-authored by Prof. Prasanna titled "Implicit Self-supervised Language Representation for Spoken Language Diarization" gets published in IEEE/ACM Transactions on Audio, Speech and Language Processing, Happy Reading! ',
     new: true,
@@ -54,14 +61,14 @@ export const announcements: Announcement[] = [
   {
     link: '/docs/ResearchFelloship.pdf',
     text: 'Data Dissemination and Resource Optimization in Post-Disaster Scenarios using Hybrid 5G-Mobile Adhoc Networks  ',
-    new: true,
+    new: false,
     year: '2024',
     month: '7',
   },
   {
     link: '/docs/ApplicationforSERBprojectSRG.docx.pdf',
     text: 'Project Associate I Position for my SERB funded SRG Project  ',
-    new: true,
+    new: false,
     year: '2024',
     month: '7',
   },

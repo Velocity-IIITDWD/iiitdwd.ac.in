@@ -10,6 +10,15 @@ export type Jobs = {
 
 export const jobsData: Jobs[] = [
   {
+    "title": "Smart Crop Management System Enabled by 5G Drone Surveillance and Digital Twin Technology for Enhanced Precision Agriculture",
+    "category": "staff",
+    "details": ``,
+    "lastDate": "16.08.2024",
+    "generalInstructions": "/docs/Advertisement for the Recruitment of Multiple Research Positions.pdf",
+    "application": "https://forms.gle/xNcQ9y6PX92gJyK99",
+    "extraInfo": []
+  },
+  {
     "title": "Data Dissemination and Resource Optimization in Post-Disaster Scenarios using Hybrid 5G-Mobile Adhoc Networks",
     "category": "staff",
     "details": ``,
