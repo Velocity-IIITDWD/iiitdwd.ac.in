@@ -10,6 +10,13 @@ export type Announcement = {
 
 export const announcements: Announcement[] = [
   {
+    link: '/docs/Advertisement for the Recruitment of Multiple Research Positions.pdf',
+    text: 'Advertisement for the Recruitment of Multiple Research Positions',
+    new: true,
+    month: '8',
+    year: '2024',
+  },
+  {
     link: '/docs/Impact-of-Spontaneous-Abortion-of-First-Trimester-on-Medical-Management_-A-Systematic-Review-and-Meta-Analysis-of-Randomized-Con.pdf',
     text: 'Impact of spontaneous abortion of first trimester on medical management-a systematic review" gets published in a book titled "Modernizing Maternal Care with Digital Technologies". 2024:250-68. ISBN: 9798369337110; Chapter 11; (Scopus indexed)',
     new: true,
