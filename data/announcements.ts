@@ -38,13 +38,6 @@ export const announcements: Announcement[] = [
     year: '2024',
   },
   {
-    link: '/docs/Guidelines for hostel feesInternet Banking.pdf',
-    text: 'Guidelines to pay Hostel fees using QR Code/Internet Banking for 2024 Batch Students',
-    new: true,
-    month: '7',
-    year: '2024',
-  },
-  {
     link: '/docs/Guidelines for admission 2024-25.pdf',
     text: 'Guidelines for Admission 2024',
     new: true,
