@@ -14,14 +14,14 @@ export default function page() {
         <div className="w-full flex-wrap flex md:flex-nowrap gap-4">
           <Link
             target="_blank"
-            href="/pdfs/Academic_Calendar_1st_year.pdf"
+            href="/docs/Academic_Calendar_year_1_2024-25.pdf"
             className="rounded bg-dwd-primary md:basis-1/4 basis-full flex items-center justify-center p-3 text-white text-center"
           >
             Academic Calendar (1st year)
           </Link>
           <Link
             target="_blank"
-            href="/pdfs/Academic_Calendar2024-25.pdf"
+            href="/docs/Academic_Calendar_year_234_2024-25.pdf"
             className="rounded bg-dwd-primary md:basis-1/4 basis-full flex items-center justify-center p-3 text-white text-center"
           >
             Academic Calendar (2024-25)
