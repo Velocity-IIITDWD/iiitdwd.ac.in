@@ -88,11 +88,6 @@ export const links: linksStructure[] = [
       },
       {
         id: 2,
-        link: '/docs/Guidelines for hostel feesInternet Banking.pdf',
-        displayText: 'Guidelines to pay Hostel fees using QR Code/Internet Banking for 2024 Batch Students',
-      },
-      {
-        id: 3,
         link: '/contact_info',
         displayText: 'For General Queries you can contact here',
       },
