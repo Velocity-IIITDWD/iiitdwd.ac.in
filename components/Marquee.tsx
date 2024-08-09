@@ -17,7 +17,7 @@ const Marquee = () => {
       <div className="marquee-container">
         <div className="marquee-content">
           {Array(4).fill(marqueeItems).flat().map((item, index) => (
-            <span className="marquee-item" key={index}>
+            <span className="marquee-item text-lg sm:text-base" key={index}>
               <Link href={item.href}>{item.text}</Link>
             </span>
           ))}
