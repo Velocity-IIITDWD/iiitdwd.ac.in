@@ -10,6 +10,13 @@ export type Announcement = {
 
 export const announcements: Announcement[] = [
   {
+    link: '/docs/Supervisor Allocation.pdf',
+    text: 'Supervisor allocation for newly admitted M.Tech(R) and Ph.D candidates',
+    new: true,
+    month: '8',
+    year: '2024',
+  },
+  {
     link: '/docs/Tender for Classroom cum Lab Furniture.pdf',
     text: 'Tender for Classroom cum Lab Furniture',
     new: true,
@@ -19,13 +26,6 @@ export const announcements: Announcement[] = [
   {
     link: '/docs/Tender for providing Security and House Keeping Services.pdf',
     text: 'Tender for providing Security and House Keeping Services',
-    new: true,
-    month: '8',
-    year: '2024',
-  },
-  {
-    link: '/docs/Supervisor Allocation.pdf',
-    text: 'Supervisor allocation for newly admitted M.Tech(R) and Ph.D candidates',
     new: true,
     month: '8',
     year: '2024',
