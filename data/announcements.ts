@@ -24,13 +24,6 @@ export const announcements: Announcement[] = [
     year: '2024',
   },
   {
-    link: '/docs/Supervisor Allocation.pdf',
-    text: 'Supervisor allocation for newly admitted M.Tech(R) and Ph.D candidates',
-    new: true,
-    month: '8',
-    year: '2024',
-  },
-  {
     link: '/docs/Advertisement for the Recruitment of Multiple Research Positions.pdf',
     text: 'Advertisement for the Recruitment of Multiple Research Positions',
     new: true,
@@ -61,7 +54,7 @@ export const announcements: Announcement[] = [
   {
     link: '/docs/Guidelines for admission 2024-25.pdf',
     text: 'Guidelines for Admission 2024',
-    new: false,
+    new: true,
     month: '7',
     year: '2024',
   },
