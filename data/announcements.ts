@@ -10,6 +10,13 @@ export type Announcement = {
 
 export const announcements: Announcement[] = [
   {
+    link: '/docs/Supervisor Allocation.pdf',
+    text: 'Supervisor allocation for newly admitted M.Tech(R) and Ph.D candidates',
+    new: true,
+    month: '8',
+    year: '2024',
+  },
+  {
     link: '/docs/Advertisement for the Recruitment of Multiple Research Positions.pdf',
     text: 'Advertisement for the Recruitment of Multiple Research Positions',
     new: true,
@@ -54,7 +61,7 @@ export const announcements: Announcement[] = [
   {
     link: '/docs/Important_Notice_For_Prospective_Students_22-07-24.pdf',
     text: 'Important Notice for Prospective Students of 2024',
-    new: true,
+    new: false,
     month: '7',
     year: '2024',
   },
