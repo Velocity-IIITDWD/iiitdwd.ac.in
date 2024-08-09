@@ -81,6 +81,12 @@ export const issues: issueStructure[] = [
     displayText: 'Issue 9',
     previewImg: '/images/issue_img9.png',
   },
+  {
+    issueUrl: '/docs/Issue_10.pdf',
+    id: 10,
+    displayText: 'Issue 10',
+    previewImg: '/images/issue_img10.jpg',
+  },
 ];
 
 export const facultyAdvisors: memberStructure[] = [
