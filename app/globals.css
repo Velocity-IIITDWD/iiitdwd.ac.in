@@ -388,7 +388,7 @@
 
 .marquee-content {
   display: flex;
-  animation: marquee 10s linear infinite;
+  animation: marquee 50s linear infinite;
   white-space: nowrap;
   font-size: 1.125rem;
   color: #1a202c;

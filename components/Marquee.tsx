@@ -16,8 +16,11 @@ const Marquee = () => {
     <section className="marquee-section mt-6">
       <div className="marquee-container">
         <div className="marquee-content">
-          {Array(4).fill(marqueeItems).flat().map((item, index) => (
-            <span className="marquee-item text-lg sm:text-base" key={index}>
+          {Array(8).fill(marqueeItems).flat().map((item, index) => (
+            <span 
+              className="marquee-item text-sm sm:text-xs md:text-sm lg:text-base" 
+              key={index}
+            >
               <Link href={item.href}>{item.text}</Link>
             </span>
           ))}
