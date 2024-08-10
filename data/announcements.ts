@@ -10,6 +10,27 @@ export type Announcement = {
 
 export const announcements: Announcement[] = [
   {
+    link: '/docs/Supervisor Allocation.pdf',
+    text: 'Supervisor allocation for newly admitted M.Tech(R) and Ph.D candidates',
+    new: true,
+    month: '8',
+    year: '2024',
+  },
+  {
+    link: '/docs/Tender for Classroom cum Lab Furniture.pdf',
+    text: 'Tender for Classroom cum Lab Furniture',
+    new: true,
+    month: '8',
+    year: '2024',
+  },
+  {
+    link: '/docs/Tender for providing Security and House Keeping Services.pdf',
+    text: 'Tender for providing Security and House Keeping Services',
+    new: true,
+    month: '8',
+    year: '2024',
+  },
+  {
     link: '/docs/Advertisement for the Recruitment of Multiple Research Positions.pdf',
     text: 'Advertisement for the Recruitment of Multiple Research Positions',
     new: true,
@@ -47,14 +68,14 @@ export const announcements: Announcement[] = [
   {
     link: '/docs/Sana_hostel_info.pdf',
     text: 'Hostel Facility for 2024-25 Batch Students',
-    new: true,
+    new: false,
     month: '7',
     year: '2024',
   },
   {
     link: '/docs/Important_Notice_For_Prospective_Students_22-07-24.pdf',
     text: 'Important Notice for Prospective Students of 2024',
-    new: true,
+    new: false,
     month: '7',
     year: '2024',
   },
@@ -232,5 +253,5 @@ export const announcements: Announcement[] = [
     new: false,
     year: '2024',
     month: '6',
-  },
+  },
 ];
