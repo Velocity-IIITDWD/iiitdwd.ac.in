@@ -10,6 +10,13 @@ export type Announcement = {
 
 export const announcements: Announcement[] = [
   {
+    link: '/docs/TVLSI-00159-2024.pdf',
+    text: 'One of the article co-authored by Dr.Prakash Pawar "A Novel TriNet Architecture for Enhanced Analog IC Design Automation" has been accepted for publication as a Regular Paper in the IEEE Transactions on Very Large Scale Integration Systems(TVLSI)',
+    new: true,
+    month: '8',
+    year: '2024',
+  },
+  {
     link: '/docs/Tender for Classroom cum Lab Furniture.pdf',
     text: 'Tender for Classroom cum Lab Furniture',
     new: true,
@@ -61,7 +68,7 @@ export const announcements: Announcement[] = [
   {
     link: '/docs/Sana_hostel_info.pdf',
     text: 'Hostel Facility for 2024-25 Batch Students',
-    new: true,
+    new: false,
     month: '7',
     year: '2024',
   },

@@ -16,43 +16,47 @@ export default function Home() {
   
   // Define your bar graph data
   const barGraphData = {
-    labels: ['2019', '2020', '2021', '2022', '2023'],
+    labels: ['2019', '2020', '2021', '2022', '2023', '2024'],
     datasets: [
       {
         label: 'Average CTC',
-        data: [6, 7, 7.3, 8, 11.52],
+        data: [6, 7, 7.3, 8, 11.52, 9.54],
         backgroundColor: [
           '#50A5CA',
           '#50A5CA',
           '#50A5CA',
           '#50A5CA',
-          '#50A5CA'
+          '#50A5CA',
+          '#50A5CA',
         ],
         borderColor: [
           '#50A5CA',
           '#50A5CA',
           '#50A5CA',
           '#50A5CA',
-          '#50A5CA'
+          '#50A5CA',
+          '#50A5CA',
         ],
         borderWidth: 1
       },
       {
         label: 'Highest CTC',
-        data: [10, 11, 25, 25, 35],
+        data: [10, 11, 25, 25, 35, 46],
         backgroundColor: [
           'rgba(1, 51, 101, 1)',
           'rgba(1, 51, 101, 1)',
           'rgba(1, 51, 101, 1)',
           'rgba(1, 51, 101, 1)',
-          'rgba(1, 51, 101, 1)'
+          'rgba(1, 51, 101, 1)',
+          'rgba(1, 51, 101, 1)',
         ],
         borderColor: [
           'rgba(1, 51, 101, 1)',
           'rgba(1, 51, 101, 1)',
           'rgba(1, 51, 101, 1)',
           'rgba(1, 51, 101, 1)',
-          'rgba(1, 51, 101, 1)'
+          'rgba(1, 51, 101, 1)',
+          'rgba(1, 51, 101, 1)',
         ],
         borderWidth: 1
       }
@@ -111,10 +115,10 @@ export default function Home() {
             <LPA number="8" medianText="Median CTC" />
           </div>
           <div className="inline-block mr-[20%]">
-            <LPA number="35" medianText="Highest CTC" />
+            <LPA number="46" medianText="Highest CTC" />
           </div>
           <div className="inline-block">
-            <LPA number="11" medianText="Average CTC" />
+            <LPA number="9.54" medianText="Average CTC" />
           </div>
         </div>
 
@@ -137,16 +141,20 @@ export default function Home() {
         <div className=" shortbox ml-[20%]">
           <div className="  inline-block mt-20 mr-[10%]">
             <div className=" text-[2rem] text-[rgb(1,51,101)] font-extrabold">Average Package of top 20%</div>
-            <div className="text-[2rem] text-[rgb(1,51,101)] font-extrabold">students in 2023.</div>
+            <div className="text-[2rem] text-[rgb(1,51,101)] font-extrabold">students in 2024.</div>
           </div>
           <div className=" whatsapp inline-block mt-20">
-            <div className="text-8xl font-bold text-[#50A5CA] inline-block">19.5</div>
+            <div className="text-8xl font-bold text-[#50A5CA] inline-block">17.3</div>
             <div className="text-5xl font-bold text-[#013365] inline-block"> LPA</div>
           </div>
         </div>
 
+        <div className='ml-[20%] mt-16 text-dwd-primary'>
+          * All data mentioned above is as of 10/08/2024
+        </div>
+
       
-        <div className="shortbox text-[1.8rem] text-[#013365] font-extrabold ml-[20%] mt-20">Companies Visited</div>
+        <div className="shortbox text-[1.8rem] text-[#013365] font-extrabold ml-[20%] mt-16">Companies Visited</div>
         <Image src="/images/companies_visited.png" width="800" height="150" className="mx-auto block mt-10" alt='Companies visited'/>
       
         <div className="shortbox text-[1.8rem] text-[#013365] font-extrabold ml-[20%] mt-20">Placement Procedure</div>
@@ -224,7 +232,6 @@ export default function Home() {
           </div>
 
 
-
         </div>
 
         <div className='mt-6 ml-[20%]'>
@@ -233,7 +240,6 @@ export default function Home() {
           </Link>
         </div>
 
-
       </div>
       <div className="text-center  bg-[#f0f0f0] pt-5 pb-5 mt-20">
     Follow us on <Link href="https://www.linkedin.com/company/career-guidance-cell-cgc-iiit-dharwad/" className="text-blue-500 inline-flex items-center">
@@ -241,6 +247,7 @@ export default function Home() {
         </Link> 
     for the latest updates!
       </div>
+
     </div>
   );
 }
