@@ -68,7 +68,7 @@ export const announcements: Announcement[] = [
   {
     link: '/docs/Sana_hostel_info.pdf',
     text: 'Hostel Facility for 2024-25 Batch Students',
-    new: true,
+    new: false,
     month: '7',
     year: '2024',
   },
