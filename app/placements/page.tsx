@@ -149,8 +149,12 @@ export default function Home() {
           </div>
         </div>
 
+        <div className='ml-[20%] mt-16 text-dwd-primary'>
+          * All data mentioned above is as of 10/08/2024
+        </div>
+
       
-        <div className="shortbox text-[1.8rem] text-[#013365] font-extrabold ml-[20%] mt-20">Companies Visited</div>
+        <div className="shortbox text-[1.8rem] text-[#013365] font-extrabold ml-[20%] mt-16">Companies Visited</div>
         <Image src="/images/companies_visited.png" width="800" height="150" className="mx-auto block mt-10" alt='Companies visited'/>
       
         <div className="shortbox text-[1.8rem] text-[#013365] font-extrabold ml-[20%] mt-20">Placement Procedure</div>
