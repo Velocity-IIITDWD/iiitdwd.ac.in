@@ -19,11 +19,7 @@ export interface ProgramsType {
 }
 
 export const images: MainCarouselImage[] = [
-  {
-    url: '/images/MainCarousel7.webp',
-    caption: 'Convocation 2024',
-    link: 'https://www.youtube.com/live/Sh5VyQxKQvk?feature=shared',
-  },
+  
   {
     url: '/images/MainCarousel1.webp',
     caption: 'Admissions 2024',
