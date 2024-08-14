@@ -11,7 +11,7 @@ export type Announcement = {
 export const announcements: Announcement[] = [
   {
     link: '',
-    text: 'The last date for Fee Payment and Admission is Extend till 16th-Aug-2024',
+    text: 'The last date for Fee Payment and Admission is extended till 16th-Aug-2024',
     new: true,
     month: '8',
     year: '2024',
@@ -68,7 +68,7 @@ export const announcements: Announcement[] = [
   {
     link: '/docs/implicit_self-supervised_language_representation.pdf',
     text: 'Journal article co-authored by Prof. Prasanna titled "Implicit Self-supervised Language Representation for Spoken Language Diarization" gets published in IEEE/ACM Transactions on Audio, Speech and Language Processing, Happy Reading! ',
-    new: true,
+    new: false,
     month: '8',
     year: '2024',
   },
