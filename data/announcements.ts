@@ -10,6 +10,13 @@ export type Announcement = {
 
 export const announcements: Announcement[] = [
   {
+    link: '/docs/minor-program.pdf',
+    text: 'Minor Program',
+    new: true,
+    month: '8',
+    year: '2024',
+  },
+  {
     link: '/docs/Supervisor Allocation.pdf',
     text: 'Supervisor allocation for the Ph.D and M.Tech(R)',
     new: true,
@@ -61,7 +68,7 @@ export const announcements: Announcement[] = [
   {
     link: '/docs/A-Meta-Analysis-Approach.pdf',
     text: 'A meta-analysis approach on medical, surgical and expectant management" gets published in Epidemiology, Biostatistics, and Public Health (Scopus indexed)',
-    new: true,
+    new: false,
     month: '8',
     year: '2024',
   },
