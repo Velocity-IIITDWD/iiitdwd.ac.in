@@ -10,6 +10,13 @@ export type Announcement = {
 
 export const announcements: Announcement[] = [
   {
+    link: '',
+    text: 'The last date for Fee Payment and Admission is Extend till 16th-Aug-2024',
+    new: true,
+    month: '8',
+    year: '2024',
+  },
+  {
     link: '/docs/minor-program.pdf',
     text: 'Minor Program',
     new: true,
