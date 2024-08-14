@@ -10,6 +10,13 @@ export type Announcement = {
 
 export const announcements: Announcement[] = [
   {
+    link: '/docs/project-fellows.pdf',
+    text: 'Advertise for the Recruitment for Research Fellows',
+    new: true,
+    month: '8',
+    year: '2024',
+  },
+  {
     link: '',
     text: 'The last date for Fee Payment and Admission is extended till 16th-Aug-2024',
     new: true,
@@ -61,7 +68,7 @@ export const announcements: Announcement[] = [
   {
     link: '/docs/Impact-of-Spontaneous-Abortion-of-First-Trimester-on-Medical-Management_-A-Systematic-Review-and-Meta-Analysis-of-Randomized-Con.pdf',
     text: 'Impact of spontaneous abortion of first trimester on medical management-a systematic review" gets published in a book titled "Modernizing Maternal Care with Digital Technologies". 2024:250-68. ISBN: 9798369337110; Chapter 11; (Scopus indexed)',
-    new: true,
+    new: false,
     month: '8',
     year: '2024',
   },
