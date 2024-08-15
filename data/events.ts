@@ -26,6 +26,40 @@ export type eventInf = {
 
 let events: eventInf[] = [
   {
+    id: 'independence-day-2024',
+    href: '/images/independence_day_78_6.webp',
+    text: 'Celebrating 78th Independence Day',
+    timestamp: '15-08-2024',
+    allImage: [
+      '/images/independence_day_78_1.webp',
+      '/images/independence_day_78_2.webp',
+      '/images/independence_day_78_3.webp',
+      '/images/independence_day_78_4.webp',
+      '/images/independence_day_78_5.webp',
+      '/images/independence_day_78_6.webp',
+      '/images/independence_day_78_7.webp',
+      '/images/independence_day_78_8.webp',
+      '/images/independence_day_78_9.webp',
+      '/images/independence_day_78_10.webp',
+    ],
+    details: {
+      startDate: 'Start date : 15-08-2024',
+      endDate: 'End date : 15-08-2024',
+      ticketPrice: '',
+    },
+    venue: {
+      place: 'IIIT Dharwad',
+      street: '',
+      city: 'Dharwad',
+    },
+    organiser: {
+      name: 'IIIT Dharwad',
+      designation: '',
+      contact: '',
+    },
+    aboutEvent: 'Celebration of 78th independence day.',
+  },
+  {
     id: 'iiit-sport-event',
     href: '/images/iiitevent.webp',
     text: 'Inter IIIT Sport meet at IIIT Allahabad',
