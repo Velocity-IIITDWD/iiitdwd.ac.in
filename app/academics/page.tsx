@@ -132,6 +132,12 @@ export default function page() {
                 Electronics & Communications Engineering (ECE)
               </Link>
             </div>
+            <Link
+              href={'/docs/minor-program.pdf'}
+              className="w-full rounded cursor-pointer shadow p-3 mt-1 md:max-w-[400px] bg-slate-200 hover:bg-dwd-primary hover:text-white text-dwd-primary"
+            >
+              Minor Programs
+            </Link>
           </div>
         </div>
       </div>
