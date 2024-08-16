@@ -68,7 +68,7 @@ export default function Page() {
             </div>
           </div>
           <div className="my-4">
-          Areas of Research interests include Computer Science and Engineering, Data Science and Intelligent Systems, Electronics and Communication Engineering but not limited to: Blockchain, Cloud Computing and Security, Coding Theory, Computer Networks, Computer Vision and Image Processing, Natural Language Processing, Parallel Computing, Speech Processing, Data Analytics, Internet of Things, Machine Learning, Deep Learning, Optimization, Signal Processing, Soft Computing, Social Networks, Physics, Quantum Computing, Mathematics and Statistics.
+          Areas of Research interests include Computer Science and Engineering, Data Science and Artificial Intelligence, Electronics and Communication Engineering but not limited to: Blockchain, Cloud Computing and Security, Coding Theory, Computer Networks, Computer Vision and Image Processing, Natural Language Processing, Parallel Computing, Speech Processing, Data Analytics, Internet of Things, Machine Learning, Deep Learning, Optimization, Signal Processing, Soft Computing, Social Networks, Physics, Quantum Computing, Mathematics and Statistics.
           </div>
         </div>
       </div>
