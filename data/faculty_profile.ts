@@ -911,7 +911,7 @@ let ProfileProps: ProfileProp[] = [
         department: 'Data Science and Intelligent Systems',
         mail_id: 'sunil.saumya@iiitdwd.ac.in',
         cabin_number: '?',
-        position: 'Head of the Department [HoD] - Dept. of DSIS',
+        position: 'Head of the Department [HoD] - Dept. of DSAI',
       },
       body: {
         profile_text: '',

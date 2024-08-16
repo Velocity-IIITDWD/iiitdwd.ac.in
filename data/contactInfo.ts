@@ -44,8 +44,8 @@ const contacts: ContactData = {
     "academicQueries": [
         { name: "Dr. Prakash Pawar", designation: "Assistant Professor, HoD (ECE)", contactNumber: "9743083540" },
         { name: "Dr. Prabhu Prasad B M", designation: "Assistant Professor, HoD (CSE)", contactNumber: "9008862681" },
-        { name: "Dr. Rajendra Hegadi", designation: "Dept. of DSIS Professor-In-Charge of Academic & Student Welfare", contactNumber: "8827382264" },
-        { name: "Dr. Sunil Saumya", designation: "HoD (DSIS)", contactNumber: "8863830309" },
+        { name: "Dr. Rajendra Hegadi", designation: "Dept. of DSAI Professor-In-Charge of Academic & Student Welfare", contactNumber: "8827382264" },
+        { name: "Dr. Sunil Saumya", designation: "HoD (DSAI)", contactNumber: "8863830309" },
         { name: "Dr. K. T. Deepak", designation: "Dept. of ECE Associate Dean of Research and Development [R&D]", contactNumber: "9900456936" },
         { name: "Dr. Pavan Kumar C", designation: "Dept. of CSE Associate Dean (Information Communication Technology [ICT], Automation)", contactNumber: "9789714476" },
         { name: "Dr. Aswath Babu", designation: "Faculty-In-Charge (H&S)", contactNumber: "8970994766" }
@@ -53,7 +53,7 @@ const contacts: ContactData = {
     "careerGuidanceCell": [
         { name: "Mr. Ujwal Doddamani", designation: "Student Life Coordinator", contactNumber: "9886376600" },
         { name: "Dr. Pramod Yelmewad", designation: "Assistant Professor", contactNumber: "9823093744" },
-        { name: "Dr. Manjunath K Vanahalli", designation: "Assistant Professor, Dept. of DSIS Faculty-In Charge of Career Guidance Cell [CGC]", contactNumber: "9823093744" }
+        { name: "Dr. Manjunath K Vanahalli", designation: "Assistant Professor, Dept. of DSAI Faculty-In Charge of Career Guidance Cell [CGC]", contactNumber: "9823093744" }
     ],
     "feeRelatedQueries": [
         { name: "Ms. Swati Math", designation: "Junior Superintendent-Accounts", contactNumber: "7026609000" },
