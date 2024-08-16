@@ -10,6 +10,20 @@ export type Announcement = {
 
 export const announcements: Announcement[] = [
   {
+    link: '/docs/Book-chapter.pdf',
+    text: 'Book chapter corresponding authored by Dr Ramesh Athe titled " Impact of spontaneous abortion of first trimester on medical management-a systematic review" gets published in a book titled "Modernizing Maternal Care with Digital Technologies". 2024:250-68. ISBN: 9798369337110; Chapter 11; (Scopus indexed). ',
+    new: true,
+    month: '8',
+    year: '2024',
+  },
+  {
+    link: '/docs/Journal-article.pdf',
+    text: 'Journal article corresponding authored by Dr Ramesh Athe titled " A meta-analysis approach on medical, surgical and expectant management" gets published in Epidemiology, Biostatistics, and Public Health (Scopus indexed).',
+    new: true,
+    month: '8',
+    year: '2024',
+  },
+  {
     link: '/docs/project-fellows.pdf',
     text: 'Advertise for the Recruitment for Research Fellows',
     new: true,
