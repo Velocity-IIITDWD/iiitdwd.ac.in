@@ -68,14 +68,14 @@ export const announcements: Announcement[] = [
   {
     link: '/docs/Tender for providing Security and House Keeping Services.pdf',
     text: 'Tender for providing Security and House Keeping Services',
-    new: true,
+    new: false,
     month: '8',
     year: '2024',
   },
   {
     link: '/docs/Advertisement for the Recruitment of Multiple Research Positions.pdf',
     text: 'Advertisement for the Recruitment of Multiple Research Positions',
-    new: true,
+    new: false,
     month: '8',
     year: '2024',
   },

@@ -18,7 +18,7 @@ export default function Page() {
               3. Part-time</li>
           </ol>
           <div className="my-4 text-lg font-semibold text-dwd-primary">
-            •  Ph.D. in Computer Science and Engineering / Data Science and Intelligent Systems / Electronics and Communication Engineering
+            •  Ph.D. in Computer Science and Engineering / Data Science and Artificial Intelligence / Electronics and Communication Engineering
           </div>
           <p>
             To be eligible for admission, one of the following is a must:
@@ -86,7 +86,7 @@ export default function Page() {
             </div>
           </div>
           <div className="my-4">
-            Areas of Research interests include Computer Science and Engineering, Data Science and Intelligent Systems, Electronics and Communication Engineering, Physics and Mathematics encompassing the following areas, but not limited to: Blockchain, Cloud Computing and Security, Coding Theory, Computer Networks, Computer Vision and Image Processing, Natural Language Processing, Parallel Computing, Speech Processing, Data Analytics, Internet of Things, Machine Learning, Deep Learning, Optimization, Signal Processing, Soft Computing, Social Networks, Physics, Quantum Computing, Mathematics and Statistics
+            Areas of Research interests include Computer Science and Engineering, Data Science and Artificial Intelligence, Electronics and Communication Engineering, Physics and Mathematics encompassing the following areas, but not limited to: Blockchain, Cloud Computing and Security, Coding Theory, Computer Networks, Computer Vision and Image Processing, Natural Language Processing, Parallel Computing, Speech Processing, Data Analytics, Internet of Things, Machine Learning, Deep Learning, Optimization, Signal Processing, Soft Computing, Social Networks, Physics, Quantum Computing, Mathematics and Statistics
           </div>
         </div>
       </div>

@@ -34,7 +34,7 @@ const List = ({ ll }: ListProps) => {
 
       if (DSAI)
         return (
-          a.content.card.department == 'Data Science and Intelligent Systems'
+          a.content.card.department == 'Data Science and Artificial Intelligence'
         );
 
       if (HS) return a.content.card.department == 'Humanities & Science';
