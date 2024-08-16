@@ -2,6 +2,7 @@ import { ChevronDown } from 'lucide-react';
 import { Metadata } from 'next';
 import { type Announcement, announcements } from '@/data/announcements';
 
+
 const newAnnouncements = announcements.filter(a => a.new);
 const oldAnnouncements = announcements.filter(a => !a.new);
 const byMonth: Record<string, Announcement[]> = {};
