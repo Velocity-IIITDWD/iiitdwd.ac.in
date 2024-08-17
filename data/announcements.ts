@@ -10,6 +10,13 @@ export type Announcement = {
 
 export const announcements: Announcement[] = [
   {
+    link: '#',
+    text: 'Last date for 1st Year Admission and Fee Payment has extended till Saturday 17/8/2024',
+    new: true,
+    month: '8',
+    year: '2024',
+  },
+  {
     link: '/docs/Book-chapter.pdf',
     text: 'Book chapter corresponding authored by Dr Ramesh Athe titled " Impact of spontaneous abortion of first trimester on medical management-a systematic review" gets published in a book titled "Modernizing Maternal Care with Digital Technologies". 2024:250-68. ISBN: 9798369337110; Chapter 11; (Scopus indexed). ',
     new: true,
@@ -30,13 +37,7 @@ export const announcements: Announcement[] = [
     month: '8',
     year: '2024',
   },
-  {
-    link: '',
-    text: 'The last date for Fee Payment and Admission is extended till 16th-Aug-2024',
-    new: true,
-    month: '8',
-    year: '2024',
-  },
+  
   {
     link: '/docs/minor-program.pdf',
     text: 'Minor Program',
