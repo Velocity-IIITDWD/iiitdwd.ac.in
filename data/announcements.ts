@@ -11,7 +11,7 @@ export type Announcement = {
 export const announcements: Announcement[] = [
   {
     link: '#',
-    text: 'Last date for 1st Year Admission and Fee Payment has extended till Saturday 17/8/2024',
+    text: 'Last date for 1st Year Admission and Fee Payment has extended till Saturday, August 24, 2024',
     new: true,
     month: '8',
     year: '2024',
