@@ -709,7 +709,7 @@ let ProfileProps: ProfileProp[] = [
         photo: '/images/Dr.RajibSharma.jpg',
         PhD:'Ph.D. (IIT Guwahati)',
         designation: 'Assistant Professor',
-        department: 'Data Science and Artificial Intelligence',
+        department: 'Electronics and Communication Engineering',
         mail_id: 'rajibd2k@iiitdwd.ac.in',
         cabin_number: '?',
       },
