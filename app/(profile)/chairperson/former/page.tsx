@@ -13,7 +13,7 @@ export default function FormerChairpersonPage() {
         <ProfileGroup key={index} profiles={profiles} title={title} />
       ))} */}
 
-      <div className='w-full flex flex-col items-center gap-8 p-4'>
+      <div className='w-full flex flex-col items-center gap-8 p-4 pb-16'>
         <div className='flex flex-col xl:flex-row items-center gap-2 w-full 
         max-w-screen-lg shadow-[0_3px_10px_rgb(0,0,0,0.2)] h-max rounded-md overflow-clip'>
           <div className='relative h-full aspect-square grow shrink-0 min-h-full w-80'>
