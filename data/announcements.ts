@@ -10,6 +10,13 @@ export type Announcement = {
 
 export const announcements: Announcement[] = [
   {
+    link: '/docs/fpubh-12-1364226.pdf',
+    text: 'Journal article co-authored by Dr Ramesh Athe titled "Cost-effectiveness of portable-automated ABR for universal neonatal hearing screening in India" gets published in " Frontiers in Public Health" (Scopus indexed)',
+    new: true,
+    month: '8',
+    year: '2024',
+  },
+  {
     link: '#',
     text: 'Last date for 1st Year Admission and Fee Payment has extended till Saturday, August 24, 2024',
     new: true,
@@ -62,7 +69,7 @@ export const announcements: Announcement[] = [
   {
     link: '/docs/Tender for Classroom cum Lab Furniture.pdf',
     text: 'Tender for Classroom cum Lab Furniture',
-    new: true,
+    new: false,
     month: '8',
     year: '2024',
   },
