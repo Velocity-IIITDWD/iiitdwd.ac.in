@@ -132,7 +132,7 @@ export default [
       {
         content: [],
         imageURL: '/images/Karusala_Deepak_Chowdary.jpeg',
-        title: 'Mr. Karusala Deepak Chowdary', 
+        title: 'Mr.  Karusala Deepak Chowdary', 
       },
       {
         content: [],
