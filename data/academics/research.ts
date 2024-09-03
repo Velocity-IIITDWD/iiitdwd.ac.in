@@ -82,7 +82,7 @@ export default [
       {
         content: [],
         imageURL: '/images/Vani_Yelamali.jpg',
-        title: 'Mr. Vani Yelamali',
+        title: 'Mrs. Vani Yelamali',
       },
       {
         content: [],
@@ -97,7 +97,7 @@ export default [
       {
         content: [],
         imageURL: '/images/Brindashree_B_V.jpg',
-        title: 'Mr. Brindashree B V',
+        title: ' Brindashree B V',
       },
       {
         content: [],
@@ -132,12 +132,12 @@ export default [
       {
         content: [],
         imageURL: '/images/Karusala_Deepak_Chowdary.jpeg',
-        title: 'Mr. Karusala Deepak Chowdary', 
+        title: 'Mr.  Karusala Deepak Chowdary', 
       },
       {
         content: [],
         imageURL: '/images/Meghana_Pujar.jpg',
-        title: 'Mr. Meghana Pujar ', 
+        title: ' Meghana Pujar ', 
       },
     ],
   },
