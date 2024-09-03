@@ -1026,7 +1026,7 @@ let ProfileProps: ProfileProp[] = [
       },
       card: {
         photo: '/images/ShrinivasKulkarni.jpeg',
-        PhD:'',
+        PhD:'PhD - The University of Edinburgh',
         designation: 'Professor of Practice',
         department: 'Computer Science & Engineering',
         mail_id: 'shrinivaskk@gmail.com',
@@ -1048,7 +1048,7 @@ let ProfileProps: ProfileProp[] = [
       },
       card: {
         photo: '/images/RajeshVasa.jpg',
-        PhD:'',
+        PhD:'PhD - Swinburne Univ. of Technology',
         designation: 'Adjunct Professor',
         department: 'Computer Science & Engineering',
         mail_id: '',
@@ -1075,7 +1075,7 @@ let ProfileProps: ProfileProp[] = [
       },
       card: {
         photo: '/images/AmbarishKulkarni.jpg',
-        PhD:'',
+        PhD:'Ph.D - Swinburne University of Technology, Australia',
         designation: 'Adjunct Professor',
         department: 'Electronics and Communication Engineering',
         mail_id: 'ambarishkulkarni@swin.edu.au',
@@ -1103,7 +1103,7 @@ let ProfileProps: ProfileProp[] = [
       },
       card: {
         photo: '/images/IsraelCohen.jpg',
-        PhD:'',
+        PhD:'Technion- Israel Institute of Technology, Haifa, Israel',
         designation: 'Adjunct Professor',
         department: 'Electronics and Communication Engineering',
         mail_id: 'icohen@ee.technion.ac.il',
@@ -1131,7 +1131,7 @@ let ProfileProps: ProfileProp[] = [
       },
       card: {
         photo: '/images/NixonPatel.jpg',
-        PhD:'',
+        PhD:'PhD- North Carolina State University',
         designation: 'Professor of Practice',
         department: 'Data Science and Artificial Intelligence',
         mail_id: 'nixonpatel@gmail.com',
@@ -1210,7 +1210,7 @@ let ProfileProps: ProfileProp[] = [
       },
       card: {
         photo: '/images/GirishDhanakshirur.jpg',
-        PhD:'',
+        PhD:'M.S (Computer Science & Engineering) from Florida Atlantic University, USA ',
         designation: 'Professor of Practice',
         department: 'Data Science and Artificial Intelligence',
         mail_id: 'girishdhanak@in.ibm.com',
@@ -1231,7 +1231,7 @@ let ProfileProps: ProfileProp[] = [
       },
       card: {
         photo: '/images/KarthikSankaran.jpeg',
-        PhD:'',
+        PhD:'PhD - The University of Texas at Austin',
         designation: 'Professor of Practice',
         department: 'Electronics and Communication Engineering',
         mail_id: 'sankaran.karthik@gmail.com',
