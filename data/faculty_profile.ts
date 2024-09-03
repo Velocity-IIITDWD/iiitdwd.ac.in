@@ -1026,7 +1026,7 @@ let ProfileProps: ProfileProp[] = [
       },
       card: {
         photo: '/images/ShrinivasKulkarni.jpeg',
-        PhD:'PhD - The University of Edinburgh',
+        PhD:'PhD - University of Edinburgh',
         designation: 'Professor of Practice',
         department: 'Computer Science & Engineering',
         mail_id: 'shrinivaskk@gmail.com',
@@ -1231,7 +1231,7 @@ let ProfileProps: ProfileProp[] = [
       },
       card: {
         photo: '/images/KarthikSankaran.jpeg',
-        PhD:'PhD - The University of Texas at Austin',
+        PhD:'PhD - University of Texas at Austin',
         designation: 'Professor of Practice',
         department: 'Electronics and Communication Engineering',
         mail_id: 'sankaran.karthik@gmail.com',
