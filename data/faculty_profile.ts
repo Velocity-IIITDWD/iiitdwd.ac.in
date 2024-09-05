@@ -213,6 +213,27 @@ let ProfileProps: ProfileProp[] = [
     },
   },
   {
+    id: 'MilindChabbi',
+    content: {
+      head: {
+        name: 'Dr. Milind Chabbi',
+        profile_pdf: '/docs/Milind_Chabbi.pdf',
+      },
+      card: {
+        photo: '/images/Milind-Chabbi.png',
+        PhD:'Rice Univeristy', 
+        designation: 'Professor of Practice',
+        department: '',
+        mail_id: 'Chabbi.Milind@Gmail.com',
+        cabin_number: '?',
+      },
+      body: {
+        profile_text: '',
+        interest_areas: [],
+      },
+    },
+  },
+  {
     id: 'ChannappaAkki',
     content: {
       head: {
