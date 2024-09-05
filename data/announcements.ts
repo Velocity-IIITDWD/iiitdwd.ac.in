@@ -31,6 +31,13 @@ export const announcements: Announcement[] = [
     year: '2024',
   },
   {
+    link: '/docs/MOI.pdf',
+    text: 'Medium of Instruction certificate',
+    new: true,
+    month: '9',
+    year: '2024',
+  },
+  {
     link: '/docs/fpubh-12-1364226.pdf',
     text: 'Journal article co-authored by Dr Ramesh Athe titled "Cost-effectiveness of portable-automated ABR for universal neonatal hearing screening in India" gets published in " Frontiers in Public Health" (Scopus indexed)',
     new: true,
@@ -69,7 +76,7 @@ export const announcements: Announcement[] = [
   {
     link: '/docs/Supervisor Allocation.pdf',
     text: 'Supervisor allocation for the Ph.D and M.Tech(R)',
-    new: true,
+    new: false,
     month: '8',
     year: '2024',
   },
