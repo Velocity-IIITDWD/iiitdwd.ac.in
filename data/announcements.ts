@@ -69,7 +69,7 @@ export const announcements: Announcement[] = [
   {
     link: '/docs/Supervisor Allocation.pdf',
     text: 'Supervisor allocation for the Ph.D and M.Tech(R)',
-    new: false,
+    new: true,
     month: '8',
     year: '2024',
   },
