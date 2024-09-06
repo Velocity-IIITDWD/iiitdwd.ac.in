@@ -10,6 +10,20 @@ export type Announcement = {
 
 export const announcements: Announcement[] = [
   {
+    link: '/docs/M.Tech(R)-Admission-Rolling-Advertisement.pdf',
+    text: 'Rolling advertisement for M.Tech by Research advertisement',
+    new: true,
+    month: '9',
+    year: '2024',
+  },
+  {
+    link: '/docs/PhD.Admissions-Rolling-Advertisement.pdf',
+    text: 'Rolling advertisement for Phd by Research advertisement',
+    new: true,
+    month: '9',
+    year: '2024',
+  },
+  {
     link: '#',
     text: 'Last date for 1st Year Admission and Fee Payment has extended till Thursday, September 5th 2024',
     new: true,
@@ -62,14 +76,14 @@ export const announcements: Announcement[] = [
   {
     link: '/docs/Supervisor Allocation.pdf',
     text: 'Supervisor allocation for the Ph.D and M.Tech(R)',
-    new: true,
+    new: false,
     month: '8',
     year: '2024',
   },
   {
     link: '/docs/TVLSI-00159-2024.pdf',
     text: 'One of the article co-authored by Dr.Prakash Pawar "A Novel TriNet Architecture for Enhanced Analog IC Design Automation" has been accepted for publication as a Regular Paper in the IEEE Transactions on Very Large Scale Integration Systems(TVLSI)',
-    new: true,
+    new: false,
     month: '8',
     year: '2024',
   },

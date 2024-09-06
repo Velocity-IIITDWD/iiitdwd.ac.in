@@ -17,7 +17,7 @@ export default function page() {
             href="/docs/Academic_Calendar_year_1_2024-25.pdf"
             className="rounded bg-dwd-primary md:basis-1/4 basis-full flex items-center justify-center p-3 text-white text-center"
           >
-            Academic Calendar (1st year)
+            Academic Calendar <br/>(1st year)
           </Link>
           <Link
             target="_blank"
@@ -25,6 +25,13 @@ export default function page() {
             className="rounded bg-dwd-primary md:basis-1/4 basis-full flex items-center justify-center p-3 text-white text-center"
           >
             Academic Calendar (2024-25)
+          </Link>
+          <Link
+            target="_blank"
+            href="/docs/MOI.pdf"
+            className="rounded bg-dwd-primary md:basis-1/4 basis-full flex items-center justify-center p-3 text-white text-center"
+          >
+            Medium of Instruction
           </Link>
           <Link
             href="/faculty"
