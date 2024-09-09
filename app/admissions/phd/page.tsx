@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 export default function Page() {
   return <div className="flex flex-col h-full w-full">
     <section className="w-full h-[50vh] bg-cover bg-center bg-[url('/images/LandingPage.png')] relative before:z-0 before:absolute before:h-full before:w-full before:left-0 before:top-0 before:bg-[#041E3FB3] flex items-center justify-center">
@@ -87,6 +89,36 @@ export default function Page() {
           </div>
           <div className="my-4">
             Areas of Research interests include Computer Science and Engineering, Data Science and Artificial Intelligence, Electronics and Communication Engineering, Physics and Mathematics encompassing the following areas, but not limited to: Blockchain, Cloud Computing and Security, Coding Theory, Computer Networks, Computer Vision and Image Processing, Natural Language Processing, Parallel Computing, Speech Processing, Data Analytics, Internet of Things, Machine Learning, Deep Learning, Optimization, Signal Processing, Soft Computing, Social Networks, Physics, Quantum Computing, Mathematics and Statistics
+          </div>
+        </div>
+
+        {/* New Rolling Advertisement for Ph.D. section */}
+        <div className="my-10 p-6 bg-white rounded-lg shadow">
+          <h2 className="text-2xl font-bold text-dwd-primary mb-4">
+            Rolling Advertisement for Admission to Ph.D.
+          </h2>
+          <p>IIIT Dharwad invites applications for admission to its Doctor of Philosophy (Ph.D.) programme. Prospective candidates can submit their applications at any time throughout the academic year, as the institute accepts applications on a rolling basis, under the following categories:</p>
+          <ol className="p-4">
+            <li className="p-2">
+              1. Regular (Full-time) - Institute fellowship or self-financed
+            </li>
+            <li className="p-2">
+              2. Part-time - External or College Teacher
+            </li>
+          </ol>
+          <p>Note that applicants admitted under the 2nd category shall not receive any financial support from IIIT Dharwad. Applicants admitted under the 1st category may receive fellowship, subject to the availability of funds/grants. The final decision regarding admitting a candidate will be taken by the competent authority. For more information, <Link href='/docs/PhD.Admissions-Rolling-Advertisement.pdf'>please click here</Link>.</p>
+          
+          <a href="https://forms.gle/UNH8K8PUwsg9dVGH6" className="text-blue-600 underline">
+            Link for Application Form
+          </a>
+          <p className="mt-4">Application submission is open throughout the year. Shortlisted candidates will be intimated about further process, date, and time over email.</p>
+          
+          <div className="mt-6">
+            <h3 className="text-lg font-bold">Contact Information</h3>
+            <p>Professor In-Charge (Academics)<br />
+              IIIT Dharwad, Ittigatti Road, Near Sattur Colony, Dharwad -580009<br />
+              Email: pic-ac@iiitdwd.ac.in
+            </p>
           </div>
         </div>
       </div>
