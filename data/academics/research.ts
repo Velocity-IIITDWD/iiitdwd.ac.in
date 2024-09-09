@@ -137,11 +137,62 @@ export default [
       {
         content: [],
         imageURL: '/images/Meghana_Pujar.jpg',
-        title: ' Meghana Pujar ', 
+        title: 'Meghana Pujar', 
+      },
+      {
+        content: [],
+        imageURL: '/images/olivia_gogoi.jpg',
+        title: 'Olivia Gogoi',
+      },
+      {
+        content: [],
+        imageURL: '/images/chunduru_anilkumar.jpg',
+        title: 'Chunduru Anilkumar',
+      },
+      {
+        content: [],
+        imageURL: '/images/sabyasachi_ghosal.jpg',
+        title: 'Sabyasachi Ghosal',
+      },
+      {
+        content: [],
+        imageURL: '/images/vimal_nb.jpg',
+        title: 'Vimal N B',
+      },
+      {
+        content: [],
+        imageURL: '/images/mamatha_e.jpg',
+        title: 'Mamatha E',
+      },
+      {
+        content: [],
+        imageURL: '/images/shrinivas_neeralakeri.jpg',
+        title: 'Shrinivas Neeralakeri',
+      },
+      {
+        content: [],
+        imageURL: '/images/sahana_punagin.jpg',
+        title: 'Sahana Punagin',
+      },
+      {
+        content: [],
+        imageURL: '/images/jyoti_gadad.jpg',
+        title: 'Mrs. Jyoti Gadad',
+      },
+      {
+        content: [],
+        imageURL: '/images/palshini_b_limbani.jpg',
+        title: 'PALSHINI B LIMBANI',
+      },
+      {
+        content: [],
+        imageURL: '/images/priyanka_m_jakali.jpg',
+        title: 'Ms. Priyanka M Jakali',
       },
     ],
   },
 ] as ProfileGroup[];
+
 
 export const advertisements = [
   {
