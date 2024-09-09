@@ -137,11 +137,62 @@ export default [
       {
         content: [],
         imageURL: '/images/Meghana_Pujar.jpg',
-        title: ' Meghana Pujar ', 
+        title: 'Meghana Pujar', 
+      },
+      {
+        content: [],
+        imageURL: '/images/olivia_gogoi.jpg',
+        title: 'Research Scholar (PhD) Olivia Gogoi',
+      },
+      {
+        content: [],
+        imageURL: '/images/chunduru_anilkumar.jpg',
+        title: 'Research Scholar (PhD) Chunduru Anilkumar',
+      },
+      {
+        content: [],
+        imageURL: '/images/sabyasachi_ghosal.jpg',
+        title: 'Research Scholar (PhD) Sabyasachi Ghosal',
+      },
+      {
+        content: [],
+        imageURL: '/images/vimal_nb.jpg',
+        title: 'Research Scholar (PhD) Vimal N B',
+      },
+      {
+        content: [],
+        imageURL: '/images/mamatha_e.jpg',
+        title: 'Research Scholar (PhD) Mamatha E',
+      },
+      {
+        content: [],
+        imageURL: '/images/shrinivas_neeralakeri.jpg',
+        title: 'Research Scholar (PhD) Shrinivas Neeralakeri',
+      },
+      {
+        content: [],
+        imageURL: '/images/sahana_punagin.jpg',
+        title: 'Research Scholar (PhD) Sahana Punagin',
+      },
+      {
+        content: [],
+        imageURL: '/images/jyoti_gadad.jpg',
+        title: 'Research Scholar Mrs. Jyoti Gadad',
+      },
+      {
+        content: [],
+        imageURL: '/images/palshini_b_limbani.jpg',
+        title: 'M.Tech Research PALSHINI B LIMBANI',
+      },
+      {
+        content: [],
+        imageURL: '/images/priyanka_m_jakali.jpg',
+        title: 'Research Scholar (PhD) Ms. Priyanka M Jakali',
       },
     ],
   },
 ] as ProfileGroup[];
+
 
 export const advertisements = [
   {
