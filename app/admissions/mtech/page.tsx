@@ -74,7 +74,7 @@ export default function Page() {
             </div>
           </div>
           <div>
-            <div className="text-dwd-primary text-lg md:text-xl font-bold">
+            {/* <div className="text-dwd-primary text-lg md:text-xl font-bold">
               IIIT Dharwad offers M. Tech. (Research) program in Computer
               Science & Engineering, Data Science & Intelligent Systems and
               Electronics & Communication Engineering in the following
@@ -165,7 +165,7 @@ export default function Page() {
                   </tbody>
                 </table>
               </div>
-            </div>
+            </div>*/}
             <div className="my-4">
               Areas of Research interests include Computer Science and
               Engineering, Data Science and Artificial Intelligence, Electronics
