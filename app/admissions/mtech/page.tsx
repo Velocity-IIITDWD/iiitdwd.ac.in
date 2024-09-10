@@ -74,7 +74,7 @@ export default function Page() {
             </div>
           </div>
           <div>
-            <div className="text-dwd-primary text-lg md:text-xl font-bold">
+            {/* <div className="text-dwd-primary text-lg md:text-xl font-bold">
               IIIT Dharwad offers M. Tech. (Research) program in Computer
               Science & Engineering, Data Science & Intelligent Systems and
               Electronics & Communication Engineering in the following
@@ -176,7 +176,7 @@ export default function Page() {
               Things, Machine Learning, Deep Learning, Optimization, Signal
               Processing, Soft Computing, Social Networks, Physics, Quantum
               Computing, Mathematics and Statistics.
-            </div>
+            </div>*/}
           </div>
         </div>
       </div>
