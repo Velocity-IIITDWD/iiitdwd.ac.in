@@ -176,7 +176,7 @@ export default function Page() {
                   </tbody>
                 </table>
               </div>
-            </div> */}
+            </div> 
             <div className="my-4">
               Areas of Research interests include Computer Science and
               Engineering, Data Science and Artificial Intelligence, Electronics
@@ -188,7 +188,7 @@ export default function Page() {
               Things, Machine Learning, Deep Learning, Optimization, Signal
               Processing, Soft Computing, Social Networks, Physics, Quantum
               Computing, Mathematics and Statistics
-            </div>
+            </div>*/}
           </div>
         </div>
       </div>
