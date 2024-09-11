@@ -81,13 +81,6 @@ export const announcements: Announcement[] = [
     year: '2024',
   },
   {
-    link: '/docs/TVLSI-00159-2024.pdf',
-    text: 'One of the article co-authored by Dr.Prakash Pawar "A Novel TriNet Architecture for Enhanced Analog IC Design Automation" has been accepted for publication as a Regular Paper in the IEEE Transactions on Very Large Scale Integration Systems(TVLSI)',
-    new: false,
-    month: '8',
-    year: '2024',
-  },
-  {
     link: '/docs/Tender for Classroom cum Lab Furniture.pdf',
     text: 'Tender for Classroom cum Lab Furniture',
     new: false,
