@@ -37,7 +37,7 @@ const List = ({ ll }: ListProps) => {
           a.content.card.department == 'Data Science and Artificial Intelligence'
         );
 
-      if (DASD) return a.content.card.department == 'Humanities & Science';
+      if (DASD) return a.content.card.department == 'Department of Arts, Science, and Design';
       if (ALL) return 1 === 1;
     });
 
