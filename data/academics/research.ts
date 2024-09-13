@@ -189,6 +189,11 @@ export default [
         imageURL: '/images/priyanka_m_jakali.jpg',
         title: 'Ms. Priyanka M Jakali',
       },
+      {
+        content: ['PhD Scholar - ECE'],
+        imageURL: '/images/banasmita_patra.jpg',
+        title: 'Ms. Banasmita Patra',
+      }
     ],
   },
 ] as ProfileGroup[];
