@@ -10,7 +10,6 @@ import { events } from '@/data/events';
 import { announcements } from '@/data/announcements';
 import { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import Marquee from '@/components/Marquee';
 
 const MainCarousel = dynamic(
   () => import('@/components/HomePage/MainCarousel')
@@ -28,7 +27,6 @@ export default function Home() {
   return (
     <div className="flex flex-col h-full w-full">
       <MainCarousel />
-      {/* <Marquee /> */}
 
       <section className=" bg-white border-t border-b border-slate-100 md:py-20 py-10 w-full flex flex-col lg:flex-row-reverse items-center md:px-20 sm:px-10 p-4 gap-6">
         <Image
