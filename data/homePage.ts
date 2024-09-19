@@ -19,17 +19,6 @@ export interface ProgramsType {
 }
 
 export const images: MainCarouselImage[] = [
-  
-  // {
-  //   url: '/images/MainCarousel1.webp',
-  //   caption: 'Admissions 2024',
-  //   link: '/admissions',
-  // },
-  // {
-  //   url: '/images/banner_admission_supernumerary.webp',
-  //   caption: 'Supernumerary reservation introduced for 2024 admissions',
-  //   link: '/admissions/btech',
-  // },
   {
     url: '/images/Sign-MoU.webp',
     caption: 'Signing of MoU between IIIT Dharwad and IIT Dharwad',
