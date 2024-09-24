@@ -688,6 +688,7 @@ let ProfileProps: ProfileProp[] = [
         interest_areas: [
           { id: 1, area: 'Cryptography & Network Security' },
           { id: 2, area: 'Blockchain and AI/ML' },
+          { id: 3, area: 'Cybersecurity' },
         ],
       },
     },
@@ -1261,6 +1262,61 @@ let ProfileProps: ProfileProp[] = [
       body: {
         profile_text: '',
         interest_areas: [],
+      },
+    },
+  },
+  {
+    id: 'SantoshDevanallikar',
+    content: {
+      head: {
+        name: 'Dr. Santosh Devanallikar',
+        profile_pdf: '/docs/SantoshDevanallikar.pdf',
+      },
+      card: {
+        photo: '/images/SantoshDevanallikar.jpeg',
+        PhD:'M.Sc - University of Southampton, Southampton, UK',
+        designation: 'Professor of Practice',
+        department: 'Electronics and Communication Engineering',
+        mail_id: '',
+        cabin_number: '?',
+      },
+      body: {
+        profile_text: '',
+        interest_areas: [
+          { id: 1, area: 'ASIC/Chip-Design' },
+          { id: 2, area: 'VLSI' },
+          { id: 3, area: 'VCS, NC-Verilog' },
+          { id: 4, area: 'Design-Compiler' },
+          { id: 5, area: 'RTL compiler' },
+          { id: 6, area: 'PrimeTime' },
+        ],
+      },
+    },
+  },
+  {
+    id: 'RavikumarCP',
+    content: {
+      head: {
+        name: 'Dr. Ravikumar C.P',
+        profile_pdf: '/docs/RavikumarCP.pdf',
+      },
+      card: {
+        photo: '/images/RavikumarCP.jpg',
+        PhD:'Ph.D - University of Southern California Los Angeles, CA',
+        designation: 'Adjunct Professor',
+        department: 'Electronics and Communication Engineering',
+        mail_id: '',
+        cabin_number: '?',
+      },
+      body: {
+        profile_text: '',
+        interest_areas: [
+          { id: 1, area: 'VLSI physical design' },
+          { id: 2, area: 'VLSI test' },
+          { id: 3, area: 'parallel processing' },
+          { id: 4, area: 'electronic design automation' },
+          { id: 5, area: 'embedded systems' },
+        ],
       },
     },
   },
