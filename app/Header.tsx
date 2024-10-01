@@ -98,7 +98,7 @@ const navmenuItems: NavmenuItem[] = [
       {
         title: '',
         items: [
-          { text: 'Overview', href: '/academics', hideOnMobile: true },
+          { text: 'Overview', href: '/academics', hideOnMobile: false },
           { text: 'Faculty', href: '/faculty' },
           { text: 'Research', href: '/academics/research' },
           { text: 'Knowledge Resource Centre', href: '/krc' },
