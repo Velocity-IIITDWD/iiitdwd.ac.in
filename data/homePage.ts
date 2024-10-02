@@ -41,6 +41,15 @@ export const images: MainCarouselImage[] = [
     url: '/images/MainCarousel6.webp',
     caption: 'Faculties and Director of IIIT Dharwad',
   },
+  {
+    url: '/images/MainCarousel9.webp',
+    caption: 'Independence Day Celebration',
+  },
+  {
+    url: '/images/MainCarousel10.webp',
+    caption: 'Independence Day Celelbration',
+  }
+
 ];
 
 export const ProgramCardDetails: ProgramCards[] = [
