@@ -18,7 +18,7 @@ const List = ({ ll }: ListProps) => {
   const [CSE, setshowCSE] = useState(false);
   const [ECE, setshowECE] = useState(false);
   const [DSAI, setshowDSAI] = useState(false);
-  const [HS, setshowHS] = useState(false);
+  const [DASD, setshowDASD] = useState(false);
   const [ALL, setshowALL] = useState(true);
   let f_array: JSX.Element[];
   function qwe() {
@@ -34,10 +34,10 @@ const List = ({ ll }: ListProps) => {
 
       if (DSAI)
         return (
-          a.content.card.department == 'Data Science and Intelligent Systems'
+          a.content.card.department == 'Data Science and Artificial Intelligence'
         );
 
-      if (HS) return a.content.card.department == 'Humanities & Science';
+      if (DASD) return a.content.card.department == 'Department of Arts, Science, and Design';
       if (ALL) return 1 === 1;
     });
 
@@ -109,7 +109,7 @@ const List = ({ ll }: ListProps) => {
                 setshowCSE(false);
                 setshowECE(false);
                 setshowDSAI(false);
-                setshowHS(false);
+                setshowDASD(false);
                 setshowALL(true);
                 f_array = qwe();
               }}
@@ -129,7 +129,7 @@ const List = ({ ll }: ListProps) => {
                 setshowCSE(true);
                 setshowECE(false);
                 setshowDSAI(false);
-                setshowHS(false);
+                setshowDASD(false);
                 setshowALL(false);
                 f_array = qwe();
               }}
@@ -149,7 +149,7 @@ const List = ({ ll }: ListProps) => {
                 setshowCSE(false);
                 setshowECE(true);
                 setshowDSAI(false);
-                setshowHS(false);
+                setshowDASD(false);
                 setshowALL(false);
                 f_array = qwe();
               }}
@@ -169,7 +169,7 @@ const List = ({ ll }: ListProps) => {
                 setshowCSE(false);
                 setshowECE(false);
                 setshowDSAI(true);
-                setshowHS(false);
+                setshowDASD(false);
                 setshowALL(false);
                 f_array = qwe();
               }}
@@ -179,7 +179,7 @@ const List = ({ ll }: ListProps) => {
           </div>
           <div
             className={`bg-background rounded-2xl font-bold px-4 py-1 ${
-              HS
+              DASD
                 ? 'bg-dwd-primary text-background'
                 : 'bg-background text-dwd-primary'
             }`}
@@ -189,12 +189,12 @@ const List = ({ ll }: ListProps) => {
                 setshowCSE(false);
                 setshowECE(false);
                 setshowDSAI(false);
-                setshowHS(true);
+                setshowDASD(true);
                 setshowALL(false);
                 f_array = qwe();
               }}
             >
-              HS
+              DASD
             </button>
           </div>
         </div>

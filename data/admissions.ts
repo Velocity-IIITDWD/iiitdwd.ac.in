@@ -78,14 +78,26 @@ export const descriptions: descriptionStructure[] = [
 export const year = 2024;
 export const links: linksStructure[] = [
   {
+    id: 4,
+    type: 'B.Tech Admission 2024',
+    links: [
+      {
+        id: 1,
+        link: '/docs/Guidelines for admission 2024-25.pdf',
+        displayText: 'Guidelines for Admission 2024',
+      },
+      {
+        id: 2,
+        link: '/contact_info',
+        displayText: 'For General Queries you can contact here',
+      },
+    ]
+  },
+  
+  {
     id: 1,
     type: 'Quick Links',
     links: [
-      {
-        id: 6,
-        link: '/docs/Guidelines for hostel feesInternet Banking.pdf',
-        displayText: 'Guidelines to pay Hostel fees using QR Code/Internet Banking for 2024 Batch Students',
-      },
       {
         id: 1,
         link: '/docs/Hostel Facility for 2024 batch students.pdf',
@@ -93,36 +105,39 @@ export const links: linksStructure[] = [
       },
       {
         id: 2,
+<<<<<<< HEAD
         link: '/docs/Guidelines for  2024-25.pdf',
         displayText: 'Guidelines for  2024',
       },
       {
         id: 3,
+=======
+>>>>>>> 84f23c83f4594c79476949871c91cb843234897c
         link: '/docs/Important_Notice_For_Prospective_Students_22-07-24.pdf',
         displayText: 'Important Notice for Prospective Students of 2024',
       },
       {
-        id: 4,
+        id: 3,
         link: '/docs/CSAB_Schedule_2024.pdf',
         displayText: 'CSAB-2024 Special Rounds Schedule',
       },
       {
-        id: 5,
+        id: 4,
         link: '/docs/Josaa_Schedule-Updated_on_27thJune2024.pdf',
         displayText: 'JoSAA 2024 Schedule (Updated on 27-06-2024)',
       },
       {
-        id: 6,
+        id: 5,
         link: '/docs/State-wise-List-of-Reporting-Centers.pdf',
         displayText: 'State wise List of Reporting Centers for Physical Verification of PwD Candidates [for NIT+ System Only] JoSAA/CSAB 2024',
       },
       {
-        id: 7,
+        id: 6,
         link: '/docs/FEE_2024-25_Sheet1.pdf',
         displayText: 'Fee Structure for the batch 2024-2025',
       },
       {
-        id: 8,
+        id: 7,
         link: '/faq',
         displayText: "FAQ's",
       },

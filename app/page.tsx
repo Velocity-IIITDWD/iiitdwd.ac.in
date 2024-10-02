@@ -3,7 +3,6 @@ import Link from 'next/link';
 import { ExternalLink } from 'lucide-react';
 import { Programs } from '@/data/homePage';
 
-
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import { GalleryImages } from '@/data/gallery';
@@ -12,13 +11,15 @@ import { announcements } from '@/data/announcements';
 import { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 
-
-const MainCarousel = dynamic(() => import('@/components/HomePage/MainCarousel'));
-const AnimatedCounter = dynamic(() => import('@/components/HomePage/AnimatedCounter'));
-const AutoScrollCarousel = dynamic(() => import('@/components/HomePage/AutoScrollCarousel'));
-
-
-
+const MainCarousel = dynamic(
+  () => import('@/components/HomePage/MainCarousel')
+);
+const AnimatedCounter = dynamic(
+  () => import('@/components/HomePage/AnimatedCounter')
+);
+const AutoScrollCarousel = dynamic(
+  () => import('@/components/HomePage/AutoScrollCarousel')
+);
 
 export default function Home() {
   const [program, setProgram] = useState(0);
@@ -27,7 +28,7 @@ export default function Home() {
     <div className="flex flex-col h-full w-full">
       <MainCarousel />
 
-      <section className="my-20 bg-white border-t border-b shadow_inset border-slate-100 md:py-20 py-10 w-full flex flex-col lg:flex-row-reverse items-center md:px-20 sm:px-10 p-4 gap-6">
+      <section className=" bg-white border-t border-b border-slate-100 md:py-20 py-10 w-full flex flex-col lg:flex-row-reverse items-center md:px-20 sm:px-10 p-4 gap-6">
         <Image
           alt="main image"
           src={'/images/IIIT_Dharwad.webp'}
@@ -75,31 +76,32 @@ export default function Home() {
           </div>
           <div className="relative">
             <div className="flex flex-col gap-2 p-3 w-full">
-              {announcements
-                ?.filter((item) => item.new)
-                .map((item, index) => (
-                  <a
-                    href={item?.link}
-                    target="_blank"
-                    key={index}
-                    className="text-dwd-primary shadow group relative hover:bg-dwd-primary hover:text-white bg-[#C7D3DE50] rounded items-center cursor-pointer p-1 pr-12 flex gap-2"
+              {(announcements?.length <= 8
+                ? announcements.filter((a) => a.new)
+                : announcements.slice(0, 8)
+              ).map((item, index) => (
+                <a
+                  href={item?.link}
+                  target="_blank"
+                  key={index}
+                  className="text-dwd-primary shadow group relative hover:bg-dwd-primary hover:text-white bg-[#C7D3DE50] rounded items-center cursor-pointer p-1 pr-12 flex gap-2"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    viewBox="0 0 16 16"
+                    className="w-5 flex-none"
                   >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      viewBox="0 0 16 16"
-                      className="w-5 flex-none"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"
-                      />
-                    </svg>
-                    <div>{item?.text}</div>
-                  </a>
-                ))}
+                    <path
+                      fillRule="evenodd"
+                      d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"
+                    />
+                  </svg>
+                  <div>{item?.text}</div>
+                </a>
+              ))}
             </div>
           </div>
         </div>

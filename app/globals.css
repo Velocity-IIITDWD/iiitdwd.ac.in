@@ -371,3 +371,54 @@
 .slide-in-right {
   animation: slide-in-right 1s ease-out forwards;
 }
+
+.marquee-section {
+  background-color: #f7fafc; 
+  padding: 10px 0;
+  border: 1px solid #e2e8f0; 
+  border-radius: 8px; 
+}
+
+.marquee-container {
+  display: flex;
+  width: 200%;
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee-content {
+  display: flex;
+  animation: marquee 50s linear infinite;
+  white-space: nowrap;
+  font-size: 1.125rem;
+  color: #1a202c;
+}
+
+.marquee-item {
+  margin-right: 100px;
+  display: flex;
+  align-items: center;
+  padding: 5px 0;
+}
+
+.marquee-item a {
+  color: #3182ce;
+  text-decoration: none;
+  padding: 4px 8px; 
+  border-radius: 4px; 
+  transition: color 0.3s, text-decoration 0.3s;
+}
+
+.marquee-item a:hover {
+  color: #2b6cb0;
+  text-decoration: underline;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

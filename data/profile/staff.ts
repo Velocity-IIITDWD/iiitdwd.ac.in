@@ -10,6 +10,14 @@ export default [
         title: 'Prof. Satish Annigeri',
       },
       {
+<<<<<<< HEAD
+=======
+        content: ['Professor-In-Charge, Students welfare and administration'],
+        imageURL: '/images/Dr._K._Gopinath.jpg',
+        title: 'Dr. K. Gopinath',
+      },
+      {
+>>>>>>> 84f23c83f4594c79476949871c91cb843234897c
         content: ['Junior Assistant'],
         imageURL: '/images/ashwin_hiremath.jpeg',
         title: 'Mr. Ashwin Hiremath',
@@ -23,11 +31,6 @@ export default [
         content: ['Security Head'],
         imageURL: '/images/basanagouda_v_patil.jpg',
         title: 'Mr. Basanagouda V Patil',
-      },
-      {
-        content: ['Junior Assistant'],
-        imageURL: '/images/kushal_hiremath.jpeg',
-        title: 'Mr. Kushal Hiremath',
       },
       {
         content: ['Executive Engineer'],
@@ -75,7 +78,7 @@ export default [
         title: 'Mr. Ravi B Vitlapur',
       },
       {
-        content: ['PA to Registrar'],
+        content: ['Junior Assistant'],
         imageURL: '/images/reshma_pyatishettar.jpg',
         title: 'Mrs. Reshma Pyatishettar',
       },

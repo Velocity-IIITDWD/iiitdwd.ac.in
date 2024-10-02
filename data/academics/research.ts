@@ -76,12 +76,128 @@ export default [
       },
       {
         content: [],
-        imageURL: '/images/joel_dsouza.jpg',
-        title: 'Mr. Joel Dsouza',
+        imageURL: '/images/Santosh_G_Kondaguli.jpg',
+        title: 'Mr. Santosh G Kondaguli',
       },
+      {
+        content: [],
+        imageURL: '/images/Vani_Yelamali.jpg',
+        title: 'Mrs. Vani Yelamali',
+      },
+      {
+        content: [],
+        imageURL: '/images/RAKSHITH_B.jpg',
+        title: 'Mr. RAKSHITH B',
+      },
+      {
+        content: [],
+        imageURL: '/images/Sandeep_Singh.jpeg',
+        title: 'Mr. Sandeep Singh',
+      },
+      {
+        content: [],
+        imageURL: '/images/Brindashree_B_V.jpg',
+        title: ' Brindashree B V',
+      },
+      {
+        content: [],
+        imageURL: '/images/Anil_Mallappa_Kabbur.jpeg',
+        title: 'Mr.  Anil Mallappa Kabbur', 
+      },
+      {
+        content: [],
+        imageURL: '/images/Madhu_Asundi.jpg',
+        title: 'Mrs. Madhu Asundi', 
+      },
+      {
+        content: [],
+        imageURL: '/images/ADITHYA_D_A.jpg',
+        title: 'Mr. ADITHYA D A', 
+      },
+      {
+        content: [],
+        imageURL: '/images/Chandrika_Bhosge.jpg',
+        title: 'Mrs. Chandrika Bhosge', 
+      },
+      {
+        content: [],
+        imageURL: '/images/Sneha_Shetty_R.jpeg',
+        title: 'Mrs. Sneha Shetty R', 
+      },
+      {
+        content: [],
+        imageURL: '/images/Smitha_K.jpeg',
+        title: 'Mrs. Smitha K', 
+      },
+      {
+        content: [],
+        imageURL: '/images/Karusala_Deepak_Chowdary.jpeg',
+        title: 'Mr.  Karusala Deepak Chowdary', 
+      },
+      {
+        content: [],
+        imageURL: '/images/Meghana_Pujar.jpg',
+        title: 'Meghana Pujar', 
+      },
+      {
+        content: [],
+        imageURL: '/images/olivia_gogoi.jpg',
+        title: 'Olivia Gogoi',
+      },
+      {
+        content: [],
+        imageURL: '/images/chunduru_anilkumar.jpg',
+        title: 'Chunduru Anilkumar',
+      },
+      {
+        content: [],
+        imageURL: '/images/sabyasachi_ghosal.jpg',
+        title: 'Sabyasachi Ghosal',
+      },
+      {
+        content: [],
+        imageURL: '/images/vimal_nb.jpg',
+        title: 'Vimal N B',
+      },
+      {
+        content: [],
+        imageURL: '/images/mamatha_e.jpg',
+        title: 'Mamatha E',
+      },
+      {
+        content: [],
+        imageURL: '/images/shrinivas_neeralakeri.jpg',
+        title: 'Shrinivas Neeralakeri',
+      },
+      {
+        content: [],
+        imageURL: '/images/sahana_punagin.jpg',
+        title: 'Sahana Punagin',
+      },
+      {
+        content: [],
+        imageURL: '/images/jyoti_gadad.jpg',
+        title: 'Mrs. Jyoti Gadad',
+      },
+      {
+        content: [],
+        imageURL: '/images/palshini_b_limbani.jpg',
+        title: 'PALSHINI B LIMBANI',
+      },
+      {
+        content: [],
+        imageURL: '/images/priyanka_m_jakali.jpg',
+        title: 'Ms. Priyanka M Jakali',
+      },
+      {
+        content: ['PhD Scholar - ECE'],
+        imageURL: '/images/banasmita_patra.jpg',
+        title: 'Ms. Banasmita Patra',
+      }
     ],
   },
 ] as ProfileGroup[];
+
 
 export const advertisements = [
   {
