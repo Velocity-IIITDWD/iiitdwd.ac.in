@@ -37,6 +37,33 @@ export default function Home() {
           style={{ height: 'auto', width: '100%' }}
           className="w-full rounded shadow-lg lg:basis-1/3 overflow-hidden object-cover object-center"
         />
+         <Image
+          alt="main image2"
+          src={'/images/main_Homepage2.JPG'}
+          width={0}
+          height={0}
+          sizes="100%"
+          style={{ height: 'auto', width: '100%' }}
+          className="w-full rounded shadow-lg lg:basis-1/3 overflow-hidden object-cover object-center"
+        />
+         <Image
+          alt="main image3"
+          src={'/images/main_Homepage3.JPG'}
+          width={0}
+          height={0}
+          sizes="100%"
+          style={{ height: 'auto', width: '100%' }}
+          className="w-full rounded shadow-lg lg:basis-1/3 overflow-hidden object-cover object-center"
+        />
+         <Image
+          alt="main image4"
+          src={'/images/main_Homepage4.JPG'}
+          width={0}
+          height={0}
+          sizes="100%"
+          style={{ height: 'auto', width: '100%' }}
+          className="w-full rounded shadow-lg lg:basis-1/3 overflow-hidden object-cover object-center"
+        />
         <div className="w-full lg:basis-2/3 flex flex-col h-full">
           <div className="w-full items-center p-2 border-b border-b-slate-500 flex justify-between">
             <div className="text-dwd-primary font-semibold text-xl">

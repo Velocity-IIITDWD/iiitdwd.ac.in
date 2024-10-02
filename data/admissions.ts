@@ -93,8 +93,8 @@ export const links: linksStructure[] = [
       },
       {
         id: 2,
-        link: '/docs/Guidelines for admission 2024-25.pdf',
-        displayText: 'Guidelines for Admission 2024',
+        link: '/docs/Guidelines for  2024-25.pdf',
+        displayText: 'Guidelines for  2024',
       },
       {
         id: 3,
@@ -146,13 +146,13 @@ export const links: linksStructure[] = [
       {
         id: 3,
         link: '/docs/JEE-CRL-CUT-OFF-RANKS-2023-24.pdf',
-        displayText: 'Cut-off JEE Ranks for 2023-24 admissions',
+        displayText: 'Cut-off JEE Ranks for 2023-24 s',
       },
       {
         id: 4,
         link: '/docs/Performance_in Class_XII_2024.pdf',
         displayText:
-          'Performance in Class XII for candidates seeking admission in IIIT Dharwad',
+          'Performance in Class XII for candidates seeking  in IIIT Dharwad',
       },
       {
         id: 5,

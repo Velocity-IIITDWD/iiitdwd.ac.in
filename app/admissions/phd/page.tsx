@@ -21,7 +21,7 @@ export default function Page() {
             •  Ph.D. in Computer Science and Engineering / Data Science and Intelligent Systems / Electronics and Communication Engineering
           </div>
           <p>
-            To be eligible for admission, one of the following is a must:
+            To be eligible for , one of the following is a must:
           </p>
           <ol className="p-4">
             <li className="p-2">
