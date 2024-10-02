@@ -1269,7 +1269,7 @@ let ProfileProps: ProfileProp[] = [
     id: 'SantoshDevanallikar',
     content: {
       head: {
-        name: 'Dr. Santosh Devanallikar',
+        name: 'Mr. Santosh Devanallikar',
         profile_pdf: '/docs/SantoshDevanallikar.pdf',
       },
       card: {
