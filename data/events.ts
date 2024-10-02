@@ -41,6 +41,10 @@ let events: eventInf[] = [
       '/images/independence_day_78_8.webp',
       '/images/independence_day_78_9.webp',
       '/images/independence_day_78_10.webp',
+      '/images/independence_day_78_11.webp',
+      '/images/independence_day_78_12.webp',
+      '/images/independence_day_78_13.webp',
+
     ],
     details: {
       startDate: 'Start date : 15-08-2024',
