@@ -20,6 +20,23 @@ export interface ProgramsType {
 
 export const images: MainCarouselImage[] = [
   {
+    url: '/images/Ind_Day-1.webp',
+    caption: 'Celebrating 78th Independence Day',
+    link: '#',
+  },
+  {
+    url: '/images/Ind_Day-2.webp',
+    caption: 'Celebrating 78th Independence Day',
+    link: '#',
+    
+  },
+  {
+    url: '/images/Ind_Day-3.webp',
+    caption: 'Celebrating 78th Independence Day',
+    link: '#',
+
+  },
+  {
     url: '/images/Sign-MoU.webp',
     caption: 'Signing of MoU between IIIT Dharwad and IIT Dharwad',
     link: '/docs/MoU-Director_Office.docx',

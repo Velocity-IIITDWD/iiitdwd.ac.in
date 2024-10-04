@@ -179,7 +179,7 @@ const MainCarousel: React.FC<PropType> = ({ options }) => {
                       width={0}
                       height={0}
                       sizes="100%"
-                      className="w-full h-auto md:h-full relative object-cover object-top"
+                      className="w-full h-auto md:h-full relative object-contain"
                     />
 
                     <div className="absolute text-xs md:text-base bottom-4 left-1/2 w-fit max-w-full -translate-x-1/2 bg-slate-900/40 backdrop-blur p-2 rounded text-white text-center">
