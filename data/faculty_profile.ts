@@ -1320,6 +1320,33 @@ let ProfileProps: ProfileProp[] = [
       },
     },
   },
+  {
+    id: 'RajeshKumar',
+    content: {
+      head: {
+        name: 'Dr. Rajesh Kumar',
+        profile_pdf: '/docs/Dr.RajeshKumar.pdf',
+      },
+      card: {
+        photo: '/images/RajeshKumar.jpg',
+        PhD:'',
+        designation: 'Assistant Professor',
+        department: 'Electronics and Communication Engineering',
+        mail_id: 'rajeshk@iiitdwd.ac.in',
+        cabin_number: '?',
+      },
+      body: {
+        profile_text: '',
+        interest_areas: [
+          { id: 1, area: 'RF VLSI Design' },
+          { id: 2, area: 'RFIC' },
+          { id: 3, area: 'MMIC Design' },
+          { id: 4, area: 'RF Power Amplifier' },
+          { id: 5, area: 'DOHERTY Power Amplifier Design' },
+        ],
+      },
+    },
+  },
 ];
 
 export { ProfileProps };
