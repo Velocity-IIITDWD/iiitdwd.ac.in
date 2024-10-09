@@ -10,6 +10,13 @@ export type Announcement = {
 
 export const announcements: Announcement[] = [
   {
+    link: '/docs/Dr.Animesh-Heidelberg-Laureate-Forum.pdf',
+    text: 'Congrats, Dr Animesh Chaturvedi for attending Heidelberg Laureate Forum as 200 Young Researcher',
+    new: true,
+    month: '10',
+    year: '2024',
+  },
+  {
     link: '/docs/M.Tech(R)-Admission-Rolling-Advertisement.pdf',
     text: 'Rolling advertisement for M.Tech by Research advertisement',
     new: true,
@@ -69,7 +76,7 @@ export const announcements: Announcement[] = [
   {
     link: '/docs/minor-program.pdf',
     text: 'Minor Program',
-    new: true,
+    new: false,
     month: '8',
     year: '2024',
   },
