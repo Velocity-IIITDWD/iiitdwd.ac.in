@@ -750,7 +750,7 @@ let ProfileProps: ProfileProp[] = [
     content: {
       head: {
         name: 'Dr. Ramesh Athe',
-        profile_pdf: 'https://sites.google.com/view/dr-ramesh-athe/',
+        profile_pdf: 'https://sites.google.com/iiitdwd.ac.in/ramesh/home',
       },
       card: {
         photo: '/images/Dr.RameshAthe.jpg',
