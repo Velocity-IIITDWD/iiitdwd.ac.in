@@ -12,7 +12,7 @@ export default function Page() {
           {/* Rolling Advertisement Section */}
           <div className="mt-2 mb-8 bg-white p-6 rounded-md shadow-md">
             <h2 className="text-dwd-primary text-lg md:text-xl font-bold">
-              Rolling Advertisement for Admission to M. Tech. (by Research)
+              Advertisement for Admission to M. Tech. (by Research)
             </h2>
             <p className="mt-4">
               IIIT Dharwad invites applications for admission to its M.Tech by

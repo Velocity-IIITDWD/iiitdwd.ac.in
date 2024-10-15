@@ -18,14 +18,14 @@ export const announcements: Announcement[] = [
   },
   {
     link: '/docs/M.Tech(R)-Admission-Rolling-Advertisement.pdf',
-    text: 'Rolling advertisement for M.Tech by Research advertisement',
+    text: 'Advertisement for Admissions to M.Tech by Research',
     new: true,
     month: '9',
     year: '2024',
   },
   {
     link: '/docs/PhD.Admissions-Rolling-Advertisement.pdf',
-    text: 'Rolling advertisement for Phd by Research advertisement',
+    text: 'Advertisement for Admissions to PhD by Research',
     new: true,
     month: '9',
     year: '2024',
