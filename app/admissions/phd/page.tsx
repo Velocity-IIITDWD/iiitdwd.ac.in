@@ -12,7 +12,7 @@ export default function Page() {
           {/* New Rolling Advertisement for Ph.D. section */}
           <div className="mt-2 mb-8 p-6 bg-white rounded-lg shadow">
             <h2 className="text-2xl font-bold text-dwd-primary mb-4">
-              Rolling Advertisement for Admission to Ph.D.
+              Advertisement for Admission to Ph.D.
             </h2>
             <p>
               IIIT Dharwad invites applications for admission to its Doctor of
