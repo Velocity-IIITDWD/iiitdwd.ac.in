@@ -31,13 +31,6 @@ export const announcements: Announcement[] = [
     year: '2024',
   },
   {
-    link: '#',
-    text: 'Last date for 1st Year Admission and Fee Payment has extended till Thursday, September 5th 2024',
-    new: true,
-    month: '9',
-    year: '2024',
-  },
-  {
     link: '/docs/MOI.pdf',
     text: 'Medium of Instruction certificate',
     new: true,
