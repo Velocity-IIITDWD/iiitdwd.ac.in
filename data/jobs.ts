@@ -10,6 +10,15 @@ export type Jobs = {
 
 export const jobsData: Jobs[] = [
   {
+    "title": "Advertisement for the position of Registrar (On Deputation/ Short term Contract)",
+    "category": "staff",
+    "details": ``,
+    "lastDate": "14.11.2024",
+    "generalInstructions": "/docs/recruitment_of_registrar.pdf",
+    "application": "https://forms.gle/qjYCNrLWkWD4ycJq9",
+    "extraInfo": []
+  },
+  {
     "title": "Advertisement for the Recruitment of Multiple Research Positions",
     "category": "staff",
     "details": ``,

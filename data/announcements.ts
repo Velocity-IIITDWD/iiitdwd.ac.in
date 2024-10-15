@@ -10,6 +10,13 @@ export type Announcement = {
 
 export const announcements: Announcement[] = [
   {
+    link: '/docs/recruitment_of_registrar.pdf',
+    text: 'Advertisement for the position of Registrar (On Deputation/ Short term Contract)',
+    new: true,
+    month: '10',
+    year: '2024',
+  },
+  {
     link: '/docs/Dr.Animesh-Heidelberg-Laureate-Forum.pdf',
     text: 'Congrats, Dr Animesh Chaturvedi for attending Heidelberg Laureate Forum as 200 Young Researcher',
     new: true,
