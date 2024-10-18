@@ -213,9 +213,9 @@ function Header() {
         <Link href="/" className="block h-full">
           {/* Big screen image */}
           <Image
-            src="/brand/logo-full-light.png"
-            width={0}
-            height={0}
+            src="/brand/logo_3.png"
+            width={427}
+            height={95}
             sizes="100%"
             style={{ height: '100%', width: 'auto' }}
             alt="IIIT Dharwad Logo"
