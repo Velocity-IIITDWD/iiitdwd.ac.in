@@ -1329,7 +1329,7 @@ let ProfileProps: ProfileProp[] = [
       },
       card: {
         photo: '/images/RajeshKumar.jpg',
-        PhD:'',
+        PhD:'Ph.D. IIT (ISM) Dhanbad',
         designation: 'Assistant Professor',
         department: 'Electronics and Communication Engineering',
         mail_id: 'rajeshk@iiitdwd.ac.in',
