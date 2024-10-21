@@ -24,6 +24,27 @@ export interface ProfileProp {
 }
 let ProfileProps: ProfileProp[] = [
   {
+    id: 'DrPankajKumar',
+    content: {
+      head: {
+        name: 'Dr. Pankaj Kumar',
+        profile_pdf: '/docs/Dr.Pankaj_Kumar.pdf',
+      },
+      card: {
+        photo: '/images/Pankaj_Kumar.jpg',
+        PhD:'Ph.D. (Indian Institute of Technology (ISM) Dhanbad, India)',
+        designation: 'Assistant Professor',  
+        department: 'Electronics and Communication Engineering',
+        mail_id: 'iitdhn.pankaj@gmail.com',
+        cabin_number: '?',
+      },
+      body: {
+        profile_text: '',
+        interest_areas: [],
+      },
+    },
+  },
+  {
     id: 'ProfVRavishankar',
     content: {
       head: {
@@ -375,7 +396,7 @@ let ProfileProps: ProfileProp[] = [
         department: 'Electronics and Communication Engineering',
         mail_id: 'Jagadeesha@iiitdwd.ac.in',
         cabin_number: '?',
-        position: 'Faculty In Charge - International Relations',
+        position: 'Faculty In Charge - Exams and AIMS',
       },
       body: {
         profile_text: '',
@@ -809,6 +830,7 @@ let ProfileProps: ProfileProp[] = [
         department: 'Data Science and Artificial Intelligence',
         mail_id: 'siddharth_r@iiitdwd.ac.in',
         cabin_number: '?',
+        position: 'Head of the Department [HoD] - Dept. of DSAI',
       },
       body: {
         profile_text: '',
@@ -933,7 +955,7 @@ let ProfileProps: ProfileProp[] = [
         department: 'Data Science and Artificial Intelligence',
         mail_id: 'sunil.saumya@iiitdwd.ac.in',
         cabin_number: '?',
-        position: 'Head of the Department [HoD] - Dept. of DSAI',
+        position: 'Associate Dean, Academics',
       },
       body: {
         profile_text: '',
