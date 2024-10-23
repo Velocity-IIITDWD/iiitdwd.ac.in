@@ -35,7 +35,7 @@ let ProfileProps: ProfileProp[] = [
         PhD:'Ph.D. (Indian Institute of Technology Guwahati,Guwahati, India.)',
         designation: 'Assistant Professor',  
         department: 'Arts, Science and Design',
-        mail_id: 'iitdhn.pankaj@gmail.com',
+        mail_id: 's.phalke2029@gmail.com',
         cabin_number: '?',
       },
       body: {
