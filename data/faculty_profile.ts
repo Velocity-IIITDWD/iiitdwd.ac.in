@@ -66,7 +66,7 @@ let ProfileProps: ProfileProp[] = [
       body: {
         profile_text: '',
         interest_areas: [ 
-          { id: 1, area: 'Co-Semiconductor Device Physics' },
+          { id: 1, area: 'Semiconductor Device Physics' },
           { id: 2, area: 'Emerging FET Devices' },
           { id: 3, area: 'Analog VLSI Circuits' },
           { id: 4, area: 'CMOS for low-power applications' },
