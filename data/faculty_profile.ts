@@ -24,6 +24,31 @@ export interface ProfileProp {
 }
 let ProfileProps: ProfileProp[] = [
   {
+    id: 'DrSandeshSanjeevPhalke',
+    content: {
+      head: {
+        name: 'Dr. Sandesh Sanjeev Phalke',
+        profile_pdf: '/docs/Dr.Sandesh_Sanjeev.pdf',
+      },
+      card: {
+        photo: '/images/Sandesh_Sanjeev_Phalke.jpg',
+        PhD:'Ph.D. (Indian Institute of Technology Guwahati,Guwahati, India.)',
+        designation: 'Assistant Professor',  
+        department: 'Arts, Science and Design',
+        mail_id: 's.phalke2029@gmail.com',
+        cabin_number: '?',
+      },
+      body: {
+        profile_text: '',
+        interest_areas: [
+          { id: 1, area: 'Co-Design' },
+          { id: 2, area: 'Early childhood education and care' },
+          { id: 3, area: 'Child computer interaction' },
+        ],
+      },
+    },
+  },
+  {
     id: 'DrPankajKumar',
     content: {
       head: {
@@ -40,7 +65,14 @@ let ProfileProps: ProfileProp[] = [
       },
       body: {
         profile_text: '',
-        interest_areas: [],
+        interest_areas: [ 
+          { id: 1, area: 'Semiconductor Device Physics' },
+          { id: 2, area: 'Emerging FET Devices' },
+          { id: 3, area: 'Analog VLSI Circuits' },
+          { id: 4, area: 'CMOS for low-power applications' },
+          { id: 5, area: 'Biosensors' },
+          { id: 5, area: 'Modeling and Simulation of FET Devices' },
+        ],
       },
     },
   },
