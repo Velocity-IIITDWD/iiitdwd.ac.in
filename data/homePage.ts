@@ -20,6 +20,16 @@ export interface ProgramsType {
 
 export const images: MainCarouselImage[] = [
   {
+    url: '/images/TRL_Workshop.webp',
+    caption: 'TRL Excellence Series Workshop',
+    link: '#',
+  },
+  {
+    url: '/images/InfosysVisit.webp',
+    caption: 'Infosys Hubli Development Center Visit',
+    link: '#',
+  },
+  {
     url: '/images/Ind_Day-1.webp',
     caption: 'Celebrating 78th Independence Day',
     link: '#',
