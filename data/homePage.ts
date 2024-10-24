@@ -22,12 +22,12 @@ export const images: MainCarouselImage[] = [
   {
     url: '/images/TRL_Workshop.webp',
     caption: 'TRL Excellence Series Workshop',
-    link: '#',
+    link: 'https://www.linkedin.com/posts/indian-institute-of-information-technology-dharwad-karnataka_trlexcellenceseries-striving4excellence-learningsciences-activity-7253729192079421440-CdXS?utm_source=share&utm_medium=member_desktop',
   },
   {
     url: '/images/InfosysVisit.webp',
     caption: 'Infosys Hubli Development Center Visit',
-    link: '#',
+    link: 'https://www.linkedin.com/posts/indian-institute-of-information-technology-dharwad-karnataka_industryvisit-infosyshubli-iiitdharwad-activity-7242756692889808897-4nMc?utm_source=share&utm_medium=member_desktop',
   },
   {
     url: '/images/Ind_Day-1.webp',
