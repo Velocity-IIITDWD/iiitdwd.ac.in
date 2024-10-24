@@ -17,13 +17,6 @@ export const announcements: Announcement[] = [
     year: '2024',
   },
   {
-    link: '/docs/Dr.Animesh-Heidelberg-Laureate-Forum.pdf',
-    text: 'Congrats, Dr Animesh Chaturvedi for attending Heidelberg Laureate Forum as 200 Young Researcher',
-    new: true,
-    month: '10',
-    year: '2024',
-  },
-  {
     link: '/docs/M.Tech(R)-Admission-Rolling-Advertisement.pdf',
     text: 'Advertisement for Admissions to M.Tech by Research',
     new: false,
@@ -35,6 +28,20 @@ export const announcements: Announcement[] = [
     text: 'Advertisement for Admissions to PhD by Research',
     new: false,
     month: '9',
+    year: '2024',
+  },
+  {
+    link: '/docs/IIITDharwad _Research_Internship_Rolling_Advertisement.pdf',
+    text: 'Advertisement for Research Internship',
+    new: false,
+    month: '9',
+    year: '2024',
+  },
+  {
+    link: '/docs/Dr.Animesh-Heidelberg-Laureate-Forum.pdf',
+    text: 'Congrats, Dr Animesh Chaturvedi for attending Heidelberg Laureate Forum as 200 Young Researcher',
+    new: true,
+    month: '10',
     year: '2024',
   },
   {
