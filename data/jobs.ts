@@ -13,7 +13,7 @@ export const jobsData: Jobs[] = [
     "title": "Advertisement for the position of Registrar (On Deputation/ Short term Contract)",
     "category": "staff",
     "details": ``,
-    "lastDate": "14.11.2024",
+    "lastDate": "",
     "generalInstructions": "/docs/recruitment_of_registrar.pdf",
     "application": "https://forms.gle/qjYCNrLWkWD4ycJq9",
     "extraInfo": [
