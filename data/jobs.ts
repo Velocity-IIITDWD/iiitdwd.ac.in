@@ -16,7 +16,12 @@ export const jobsData: Jobs[] = [
     "lastDate": "14.11.2024",
     "generalInstructions": "/docs/recruitment_of_registrar.pdf",
     "application": "https://forms.gle/qjYCNrLWkWD4ycJq9",
-    "extraInfo": []
+    "extraInfo": [
+      [
+        "Recruitment",
+        "/images/Advertisement_for_the_position_of_Registrar.jpeg"
+      ]
+    ]
   },
   {
     "title": "Advertisement for the Recruitment of Multiple Research Positions",
