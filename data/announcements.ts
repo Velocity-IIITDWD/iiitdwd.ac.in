@@ -10,6 +10,13 @@ export type Announcement = {
 
 export const announcements: Announcement[] = [
   {
+    link: 'https://forms.gle/gmzLVv7BCh7TqxAE7',
+    text: 'Expression of Interest - October 2024 (Hostel Accommodation for Boys)',
+    new: true,
+    month: '10',
+    year: '2024',
+  },
+  {
     link: '/docs/recruitment_of_registrar.pdf',
     text: 'Advertisement for the position of Registrar (On Deputation/ Short term Contract)',
     new: true,
