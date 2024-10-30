@@ -35,7 +35,7 @@ export default [
         title: 'Mr. Mahesh Chandra K J',
       },
       {
-        content: ['Senior Audit Officer'],
+        content: ['Audit Consultant/Advisor'],
         imageURL: '/images/n_r_hiremath.jpeg',
         title: 'Mr. N R Hiremath',
       },
