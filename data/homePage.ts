@@ -20,7 +20,7 @@ export interface ProgramsType {
 
 export const images: MainCarouselImage[] = [
   {
-    url: '/images/Final_Web_Banner.webp',
+    url: '/images/Final_Web_Banner.png',
     caption: 'IIIT Dharwad Conclave 2024',
     link: 'https://conclave.iiitdwd.ac.in/',
   },
