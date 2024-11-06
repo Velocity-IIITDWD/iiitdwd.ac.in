@@ -13,7 +13,7 @@ export interface ProfileProp {
       department: string;
       mail_id: string;
       cabin_number: string;
-      position?: string;
+      position?: string | string[];
     };
 
     body: {
@@ -428,7 +428,9 @@ let ProfileProps: ProfileProp[] = [
         department: 'Electronics and Communication Engineering',
         mail_id: 'Jagadeesha@iiitdwd.ac.in',
         cabin_number: '?',
-        position: 'Faculty In Charge - Exams and AIMS',
+        position: [ "Faculty Incharge of International Relations",
+             "Faculty In Charge - Exams and AIMS"
+        ]
       },
       body: {
         profile_text: '',
