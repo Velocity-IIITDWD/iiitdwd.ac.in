@@ -6,9 +6,7 @@ import Link from 'next/link';
 import dynamic from 'next/dynamic';
 import { ProfileProps, ProfileProp } from '@/data/faculty_profile';
 
-
 const Profile = dynamic(() => import('./[id]/page'));
-
 
 interface ListProps {
   ll: ProfileProp[];
@@ -34,10 +32,14 @@ const List = ({ ll }: ListProps) => {
 
       if (DSAI)
         return (
-          a.content.card.department == 'Data Science and Artificial Intelligence'
+          a.content.card.department ==
+          'Data Science and Artificial Intelligence'
         );
 
-      if (DASD) return a.content.card.department == 'Department of Arts, Science, and Design';
+      if (DASD)
+        return (
+          a.content.card.department == 'Department of Arts, Science, and Design'
+        );
       if (ALL) return 1 === 1;
     });
 
@@ -53,7 +55,7 @@ const List = ({ ll }: ListProps) => {
               width={0}
               height={0}
               sizes="100%"
-              loading = "lazy"
+              loading="lazy"
               style={{ height: '250px', width: '250px' }}
               alt={arr?.content?.head?.name}
               className="shrink-0 object-cover mx-auto rounded-lg shadow"
@@ -64,11 +66,18 @@ const List = ({ ll }: ListProps) => {
                   {arr?.content?.head?.name}
                 </h3>
                 <ul className="list-disc text-xs pl-4 text-gray-500 mt-2">
-                  <li>{arr?.content?.card?.designation}</li>
-                 {arr?.content?.card?.PhD !== '' && ( <li>{arr?.content?.card?.PhD}</li>)}
-                  {arr?.content?.card?.position && (
-                    <li>{arr?.content?.card?.position}</li>
+                  {arr?.content?.card?.designation && (
+                    <li>{arr.content.card.designation}</li>
                   )}
+                  {arr?.content?.card?.PhD && <li>{arr.content.card.PhD}</li>}
+                  {Array.isArray(arr?.content?.card?.position) &&
+                  arr.content.card.position.length > 0
+                    ? arr.content.card.position.map((line, index) => (
+                        <li key={index}>{line}</li>
+                      ))
+                    : arr?.content?.card?.position && (
+                        <li>{arr.content.card.position}</li>
+                      )}
                 </ul>
               </div>
               <h6 className="text-sm mt-3">{arr.content.card.department}</h6>
@@ -209,7 +218,7 @@ const List = ({ ll }: ListProps) => {
 };
 
 const Faculty = () => {
-  const profiles = ProfileProps.sort((a,b) => (a.id > b.id) ? 1 : -1);
+  const profiles = ProfileProps.sort((a, b) => (a.id > b.id ? 1 : -1));
   return (
     <>
       <List ll={ProfileProps} />
