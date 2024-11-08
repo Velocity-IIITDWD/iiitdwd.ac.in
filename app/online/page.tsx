@@ -1,31 +1,40 @@
 'use client';
 import React, { useEffect, useRef } from 'react';
-import Image from 'next/image';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import Slider from 'react-slick';
 import './index.css';
 
 const Online = () => {
   const enquireFunction = () => {
     alert('Thank you for your interest! We will get back to you soon.');
   };
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    focusOnSelect: true,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
   const hamburgerRef = useRef<HTMLDivElement | null>(null);
   const navLinksRef = useRef<HTMLUListElement | null>(null);
   useEffect(() => {
-    // JavaScript to toggle the menu when hamburger icon is clicked
-    // const hamburger = document.getElementById('hamburger');
-    // const navLinks = document.querySelector('.nav-links');
-    // hamburger?.addEventListener('click', () => {
-    //   navLinks?.classList.toggle('active');
-    // });
-
     const cb = () => {
-      console.log('bbbbbbb')
       navLinksRef.current?.classList.toggle('active');
     };
 
-    if(hamburgerRef.current && navLinksRef.current) {
+    if (hamburgerRef.current && navLinksRef.current) {
       hamburgerRef.current.addEventListener('click', cb);
-    } else {
-      console.log('a: ', navLinksRef.current, hamburgerRef.current);
     }
 
     return () => hamburgerRef.current?.removeEventListener('click', cb);
@@ -35,7 +44,11 @@ const Online = () => {
       <header>
         <nav className="top-nav">
           <div className="logo">
-            <img src="/images/Logo.png" className='h-full' alt="IIIT Dharwad Logo" />
+            <img
+              src="/images/Logo.png"
+              className="h-full"
+              alt="IIIT Dharwad Logo"
+            />
           </div>
           <ul className="nav-links" ref={navLinksRef}>
             <li>
@@ -213,7 +226,7 @@ const Online = () => {
         <section className="specializations" id="electives">
           <div className="specializations-container">
             <h2 className="section-heading">Specializations Available</h2>
-            <div className="spec-grid my-carousel">
+            <Slider {...settings} className="spec-grid my-carousel">
               <div className="spec-item">
                 <div className="spec-slide-item">
                   <img
@@ -244,17 +257,7 @@ const Online = () => {
                   <h3>Generative AI</h3>
                 </div>
               </div>
-              <div className="spec-item">
-                <div className="spec-slide-item">
-                  <img
-                    className="spec-Image"
-                    src="/images/message.png"
-                    alt="Open publication icon"
-                  />
-                  <h3>NLP and Speech</h3>
-                </div>
-              </div>
-            </div>
+            </Slider>
           </div>
         </section>
         {/* <!-- specializations  --> */}
