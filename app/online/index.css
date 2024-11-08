@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 /* Reset and base styles */
 * {
@@ -9,7 +9,7 @@
 
 body {
   /* font-family: Arial, sans-serif; */
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   line-height: 1.6;
   color: #333;
 }
@@ -342,7 +342,7 @@ header {
 /* Stats Content */
 .stats-content {
   position: relative;
-  background: url("/images/Bg-stats.png") no-repeat center center,
+  background: url('/images/Bg-stats.png') no-repeat center center,
     linear-gradient(90deg, #041e3f 64.02%, #7a8b99 114.9%);
   /* Background image + gradient */
   background-size: cover;
@@ -428,120 +428,122 @@ header {
 
 /* Specializations Section */
 .specializations {
-    padding: 3rem 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
-  
-  .specializations-container {
-    max-width: 1200px;
-    width: 100%;
-  }
-  
+  padding: 3rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.specializations-container {
+  max-width: 1200px;
+  width: 100%;
+}
+
+.section-heading {
+  text-align: center;
+  font-size: 2rem; /* Default font size */
+  margin-bottom: 2rem;
+}
+
+.my-carousel .slick-slide {
+  padding: 0 1rem;
+}
+
+.spec-grid {
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.spec-item {
+  display: flex;
+  flex-direction: column;
+  background-color: #041e3f;
+  color: #cce70b;
+  padding: 2rem;
+  border-radius: 30px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border: 2px solid #cce70b;
+  font-size: 1rem;
+  margin: 0 1rem;
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.spec-item:hover {
+  transform: translateY(-5px) scale(1.05);
+}
+
+.spec-slide-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.spec-img {
+  max-width: 80px; /* Adjust image size */
+  margin-bottom: 1rem;
+}
+
+.spec-item h3 {
+  font-size: 1.2rem; /* Adjust heading font size */
+  margin-top: 1rem;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
   .section-heading {
-    text-align: center;
-    font-size: 2rem; /* Default font size */
-    margin-bottom: 2rem;
+    font-size: 1.5rem; /* Smaller heading size on mobile */
+    margin-bottom: 1.5rem;
   }
-  
+
   .spec-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Dynamic columns for grid */
-    gap: 2rem;
-    margin-top: 2rem;
+    grid-template-columns: 1fr; /* Stack items vertically on mobile */
+    gap: 1.5rem;
   }
-  
+
   .spec-item {
-    display: flex;
-    flex-direction: column;
-    background-color: #041e3f;
-    color: #cce70b;
-    padding: 2rem;
-    border-radius: 30px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    border: 2px solid #cce70b;
-    font-size: 1rem;
-    margin: 0 1rem;
-    transition: transform 0.3s ease;
-    text-align: center;
+    padding: 1.5rem; /* Reduce padding for mobile */
+    margin: 0; /* Remove margins between items */
+    font-size: 0.9rem; /* Adjust font size for smaller screens */
   }
-  
-  .spec-item:hover {
-    transform: translateY(-5px) scale(1.05);
-  }
-  
-  .spec-slide-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  
+
   .spec-img {
-    max-width: 80px; /* Adjust image size */
-    margin-bottom: 1rem;
+    max-width: 60px; /* Adjust image size for smaller screens */
   }
-  
+
   .spec-item h3 {
-    font-size: 1.2rem; /* Adjust heading font size */
-    margin-top: 1rem;
+    font-size: 1rem; /* Adjust heading size */
   }
-  
-  /* Mobile Responsiveness */
-  @media (max-width: 768px) {
-    .section-heading {
-      font-size: 1.5rem; /* Smaller heading size on mobile */
-      margin-bottom: 1.5rem;
-    }
-  
-    .spec-grid {
-      grid-template-columns: 1fr; /* Stack items vertically on mobile */
-      gap: 1.5rem;
-    }
-  
-    .spec-item {
-      padding: 1.5rem; /* Reduce padding for mobile */
-      margin: 0; /* Remove margins between items */
-      font-size: 0.9rem; /* Adjust font size for smaller screens */
-    }
-  
-    .spec-img {
-      max-width: 60px; /* Adjust image size for smaller screens */
-    }
-  
-    .spec-item h3 {
-      font-size: 1rem; /* Adjust heading size */
-    }
-  }
-  
-  /* Carousel Dots - Adjustments */
-  .slick-dots {
-    position: absolute;
-    bottom: -39px !important;
-    z-index: 100;
-  }
-  
+}
+
+/* Carousel Dots - Adjustments */
+.slick-dots {
+  position: absolute;
+  bottom: -39px !important;
+  z-index: 100;
+}
+
+.slick-dots li button::before {
+  font-size: 16px !important; /* Larger dots for desktop */
+}
+
+.slick-dots li.slick-active button:before {
+  font-size: 18px !important; /* Active dot size */
+}
+
+/* Mobile Carousel Dots */
+@media (max-width: 768px) {
   .slick-dots li button::before {
-    font-size: 16px !important; /* Larger dots for desktop */
+    font-size: 12px !important; /* Smaller dots for mobile */
   }
-  
+
   .slick-dots li.slick-active button:before {
-    font-size: 18px !important; /* Active dot size */
+    font-size: 14px !important; /* Active dot size on mobile */
   }
-  
-  /* Mobile Carousel Dots */
-  @media (max-width: 768px) {
-    .slick-dots li button::before {
-      font-size: 12px !important; /* Smaller dots for mobile */
-    }
-  
-    .slick-dots li.slick-active button:before {
-      font-size: 14px !important; /* Active dot size on mobile */
-    }
-  }
-  
+}
+
 /* Key Features Section */
 .key-features {
   padding: 3rem 2rem;
@@ -704,7 +706,7 @@ header {
 
 /* Footer Section */
 .footer {
-  background: url("/images/footer-bg.png"),
+  background: url('/images/footer-bg.png'),
     linear-gradient(90deg, #041e3f 51.65%, #7a8b99 133.09%);
   background-size: cover;
   background-position: center center;
