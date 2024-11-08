@@ -10,8 +10,8 @@ import {
   Twitter,
 } from 'lucide-react';
 import Image from 'next/image';
-import clubs from '../../../data/members';
-import type { ClubName, Club as ClubData } from '../../../data/members';
+import clubs from '@/data/members';
+import type { ClubName, Club as ClubData } from '@/data/members';
 import Link from 'next/link';
 
 const Club: FC = () => {
