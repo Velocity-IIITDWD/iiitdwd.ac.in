@@ -1,8 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
-import LPA from '../../components/lpa';
-import BarGraph from '../../components/bargraph'; // Import the BarGraph component
-import '../globals.css';
+import LPA from '@/components/lpa';
+import BarGraph from '@/components/bargraph'; // Import the BarGraph component
+import '@/app/globals.css';
 // pages/index.tsx
 
 import EmblaCarousel from '@/components/EmblaCarousel';

@@ -1,11 +1,9 @@
 import { GoogleAnalytics } from '@next/third-parties/google';
 
-import './globals.css';
+// import './globals.css';
 import { Metadata } from 'next';
 
 import React from 'react';
-import Header from './Header';
-import Footer from './Footer';
 
 export default function RootLayout({
   children,
@@ -13,9 +11,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body>
-        <Header />
         {children}
-        <Footer />
       </body>
       <GoogleAnalytics gaId="G-1FVFMZZ0KL" />
     </html>

@@ -1,6 +1,6 @@
 import Head from 'next/head';
-import { facilities } from '../../../data/campus/facilities';
-import Card from '../../../components/campus/facilities/Card';
+import { facilities } from '@/data/campus/facilities';
+import Card from '@/components/campus/facilities/Card';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { SquareArrowOutUpRightIcon } from 'lucide-react';
