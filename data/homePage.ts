@@ -20,6 +20,11 @@ export interface ProgramsType {
 
 export const images: MainCarouselImage[] = [
   {
+    url: '/images/bengaluru_tech_summit_linkedin.webp',
+    caption: 'Bengaluru Tech Summit 2024',
+    link: 'https://www.linkedin.com/posts/bengaluru-tech-summit_bts2024-btsunbound-breakingboundaries-activity-7262700203646869506-pwNS?utm_source=share&utm_medium=member_desktop',
+  },
+  {
     url: '/images/IIIT_Dharwad_Conclave24.webp',
     caption: 'IIIT Dharwad Conclave 2024',
     link: 'https://conclave.iiitdwd.ac.in/',
