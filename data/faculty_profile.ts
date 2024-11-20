@@ -685,7 +685,6 @@ let ProfileProps: ProfileProp[] = [
         department: 'Electronics and Communication Engineering',
         mail_id: 'Prakashpawar@iiitdwd.ac.in',
         cabin_number: '?',
-        position: 'Head of the Department [HoD] - Dept. of ECE',
       },
       body: {
         profile_text: '',
@@ -843,6 +842,7 @@ let ProfileProps: ProfileProp[] = [
         department: 'Electronics and Communication Engineering',
         mail_id: 'sibasankar@iiitdwd.ac.in',
         cabin_number: '?',
+        position: 'Head of the Department [HoD] - Dept. of ECE',
       },
       body: {
         profile_text: '',
