@@ -49,6 +49,31 @@ let ProfileProps: ProfileProp[] = [
     },
   },
   {
+    id: 'Dr. A G Ramakrishnan',
+    content: {
+      head: {
+        name: 'Dr. A G Ramakrishnan',
+        profile_pdf: 'https://mile.ee.iisc.ac.in/AGR/index.htm#intro',
+      },
+      card: {
+        photo: '',
+        PhD:'Ph.D. (Indian Institute of Technology Madra, India.)',
+        designation: '',  
+        department: '',
+        mail_id: 'agr@iisc.ac.in',
+        cabin_number: '?',
+      },
+      body: {
+        profile_text: '',
+        interest_areas: [
+          { id: 1, area: 'Co-Design' },
+          { id: 2, area: 'Early childhood education and care' },
+          { id: 3, area: 'Child computer interaction' },
+        ],
+      },
+    },
+  },
+  {
     id: 'DrPankajKumar',
     content: {
       head: {
