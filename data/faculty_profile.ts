@@ -53,7 +53,7 @@ let ProfileProps: ProfileProp[] = [
     content: {
       head: {
         name: 'Dr. A G Ramakrishnan',
-        profile_pdf: 'https://mile.ee.iisc.ac.in/AGR/index.htm#intro',
+        profile_pdf: 'http://mile.ee.iisc.ac.in/AGR/index.htm#intro',
       },
       card: {
         photo: '/images/dragramkrishnanwebp.webp',
