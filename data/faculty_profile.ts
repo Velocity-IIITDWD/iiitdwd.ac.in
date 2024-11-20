@@ -49,14 +49,14 @@ let ProfileProps: ProfileProp[] = [
     },
   },
   {
-    id: 'Dr. A G Ramakrishnan',
+    id: 'DrAGRamakrishnan',
     content: {
       head: {
         name: 'Dr. A G Ramakrishnan',
         profile_pdf: 'https://mile.ee.iisc.ac.in/AGR/index.htm#intro',
       },
       card: {
-        photo: '',
+        photo: '/images/dragramkrishnanwebp.webp',
         PhD:'Ph.D. (Indian Institute of Technology Madra, India.)',
         designation: '',  
         department: '',
