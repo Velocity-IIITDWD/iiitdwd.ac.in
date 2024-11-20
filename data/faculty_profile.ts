@@ -49,6 +49,31 @@ let ProfileProps: ProfileProp[] = [
     },
   },
   {
+    id: 'DrAGRamakrishnan',
+    content: {
+      head: {
+        name: 'Dr. A G Ramakrishnan',
+        profile_pdf: 'http://mile.ee.iisc.ac.in/AGR/index.htm#intro',
+      },
+      card: {
+        photo: '/images/dragramkrishnanwebp.webp',
+        PhD:'Ph.D. (Indian Institute of Technology Madra, India.)',
+        designation: '',  
+        department: '',
+        mail_id: 'agr@iisc.ac.in',
+        cabin_number: '?',
+      },
+      body: {
+        profile_text: '',
+        interest_areas: [
+          { id: 1, area: 'Co-Design' },
+          { id: 2, area: 'Early childhood education and care' },
+          { id: 3, area: 'Child computer interaction' },
+        ],
+      },
+    },
+  },
+  {
     id: 'DrPankajKumar',
     content: {
       head: {
@@ -685,7 +710,6 @@ let ProfileProps: ProfileProp[] = [
         department: 'Electronics and Communication Engineering',
         mail_id: 'Prakashpawar@iiitdwd.ac.in',
         cabin_number: '?',
-        position: 'Head of the Department [HoD] - Dept. of ECE',
       },
       body: {
         profile_text: '',
@@ -843,6 +867,7 @@ let ProfileProps: ProfileProp[] = [
         department: 'Electronics and Communication Engineering',
         mail_id: 'sibasankar@iiitdwd.ac.in',
         cabin_number: '?',
+        position: 'Head of the Department [HoD] - Dept. of ECE',
       },
       body: {
         profile_text: '',
