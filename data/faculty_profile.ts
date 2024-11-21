@@ -34,7 +34,32 @@ let ProfileProps: ProfileProp[] = [
         photo: '/images/Sandesh_Sanjeev_Phalke.jpg',
         PhD:'Ph.D. (Indian Institute of Technology Guwahati,Guwahati, India.)',
         designation: 'Assistant Professor',  
-        department: 'Arts, Science and Design',
+        department: 'Department of Arts, Science, and Design',
+        mail_id: 's.phalke2029@gmail.com',
+        cabin_number: '?',
+      },
+      body: {
+        profile_text: '',
+        interest_areas: [
+          { id: 1, area: 'Co-Design' },
+          { id: 2, area: 'Early childhood education and care' },
+          { id: 3, area: 'Child computer interaction' },
+        ],
+      },
+    },
+  },
+  {
+    id: 'MrMallikarjunKande',
+    content: {
+      head: {
+        name: 'Mr. Mallikarjun Kande',
+        profile_pdf: '/docs/MrMallikarjunKande.pdf',
+      },
+      card: {
+        photo: '/images/MrMallikarjunKande.jfif',
+        PhD:'Masters in Engineering (Power Electronics)',
+        designation: 'Professor in Practice',  
+        department: '',
         mail_id: 's.phalke2029@gmail.com',
         cabin_number: '?',
       },
@@ -58,8 +83,8 @@ let ProfileProps: ProfileProp[] = [
       card: {
         photo: '/images/dragramkrishnanwebp.webp',
         PhD:'Ph.D. (Indian Institute of Technology Madra, India.)',
-        designation: '',  
-        department: '',
+        designation: 'Professor of Practice',  
+        department: 'Department of Arts, Science, and Design',
         mail_id: 'agr@iisc.ac.in',
         cabin_number: '?',
       },

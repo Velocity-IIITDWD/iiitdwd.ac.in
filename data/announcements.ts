@@ -10,6 +10,13 @@ export type Announcement = {
 
 export const announcements: Announcement[] = [
   {
+    link: '/docs/Book-authored-by-DrKrishnendu.pdf',
+    text: 'Book chapter authored by Dr Krishnendu Ghosh titled "Impact of Amyloidosis on Bones and Its Relationship to Dementia" gets published in Book "Diagnosing Musculoskeletal Conditions Using Artificial Intelligence And Machine Learning to Aid Interpretation of Clinical Imaging" - 1st Edition (Paperback ISBN: 9780443328923 & eBook ISBN: 9780443328930) by Springer (Scopus Indexed)',
+    new: true,
+    month: '11',
+    year: '2024',
+  },
+  {
     link: 'https://forms.gle/gmzLVv7BCh7TqxAE7',
     text: 'Expression of Interest - October 2024 (Hostel Accommodation for Boys)',
     new: true,
