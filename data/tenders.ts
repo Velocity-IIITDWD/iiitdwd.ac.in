@@ -5,7 +5,7 @@ export const tenders: Tender[] = [
     documents: [],
     link: '/docs/TENDER-FOR-SELECTION-OF-AGENCY-FOR-PROVIDING-CATERING-SERVICES.pdf',
     publishDate: '2024-11-21',
-    submissionDeadline: '2024-11-30T23:59+05:30',
+    submissionDeadline: '2024-12-22T15:00+05:30',
     title: 'NOTICE INVITING TENDER FOR SELECTION OF AGENCY FOR PROVIDING CATERING SERVICES',
     updatedAt: 53,
   },
