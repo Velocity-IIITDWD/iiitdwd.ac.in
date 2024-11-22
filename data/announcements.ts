@@ -10,6 +10,13 @@ export type Announcement = {
 
 export const announcements: Announcement[] = [
   {
+    link: '',
+    text: 'Research article Title: "Anomaly Detection in Cybersecurity: Evaluating Machine Learning Models on the BETH Dataset" has been accepted for presentation in IEEE 43rd International Conference on Consumer Electronics in Las Vegas, NV, USA. Authors: Ravi Chand(20bds057), Rajendra Hegadi, Vineeth S R (20bcs137) and  B. Roopashri Tantri.',
+    new: true,
+    month: '11',
+    year: '2024',
+  },
+  {
     link: '/docs/Book-authored-by-DrKrishnendu.pdf',
     text: 'Book chapter authored by Dr Krishnendu Ghosh titled "Impact of Amyloidosis on Bones and Its Relationship to Dementia" gets published in Book "Diagnosing Musculoskeletal Conditions Using Artificial Intelligence And Machine Learning to Aid Interpretation of Clinical Imaging" - 1st Edition (Paperback ISBN: 9780443328923 & eBook ISBN: 9780443328930) by Springer (Scopus Indexed)',
     new: true,
