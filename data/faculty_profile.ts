@@ -58,17 +58,17 @@ let ProfileProps: ProfileProp[] = [
       card: {
         photo: '/images/MrMallikarjunKande.jfif',
         PhD:'Masters in Engineering (Power Electronics)',
-        designation: 'Professor in Practice',  
+        designation: 'Professor of Practice',  
         department: '',
-        mail_id: 's.phalke2029@gmail.com',
+        mail_id: 'Mallikarjun.kande@us.abb.com',
         cabin_number: '?',
       },
       body: {
         profile_text: '',
         interest_areas: [
-          { id: 1, area: 'Co-Design' },
-          { id: 2, area: 'Early childhood education and care' },
-          { id: 3, area: 'Child computer interaction' },
+          { id: 1, area: 'IoT & Cloud Technologies' },
+          { id: 2, area: 'Cyber Security Solutions and Deployment' },
+          { id: 3, area: 'Autonomous Systems and Control' },
         ],
       },
     },
