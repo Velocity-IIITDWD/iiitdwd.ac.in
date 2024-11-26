@@ -24,6 +24,29 @@ export interface ProfileProp {
 }
 let ProfileProps: ProfileProp[] = [
   {
+    id: 'MrRamSubramanian',
+    content: {
+      head: {
+        name: 'Mr. Ram Subramanian',
+        profile_pdf: '/docs/RamSubramanian.pdf',
+      },
+      card: {
+        photo: '/images/MrRamSubramanian.jpg',
+        PhD:'Masters Degree (Quantitative Business Economics Daniels School of Business, Purdue University, Indianapolis,USA)',
+        designation: 'Assistant Professor',  
+        department: 'Department of Arts, Science & Design',
+        mail_id: 'ramsubramanian@iiitdwd.ac.in',
+        cabin_number: '?',
+      },
+      body: {
+        profile_text: '',
+        interest_areas: [
+          
+        ],
+      },
+    },
+  },
+  {
     id: 'DrSandeshSanjeevPhalke',
     content: {
       head: {
