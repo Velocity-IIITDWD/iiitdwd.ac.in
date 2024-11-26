@@ -973,32 +973,6 @@ let ProfileProps: ProfileProp[] = [
     },
   },
   {
-    id: 'SadhviManerikar',
-    content: {
-      head: {
-        name: 'Dr. Sadhvi Manerikar',
-        profile_pdf: '/docs/Dr.SadhviManerikar.pdf',
-      },
-      card: {
-        photo: '/images/Dr.SadhviManerikar.jpg',
-        PhD:'Ph.D. (NIT Goa)',
-        designation: 'Assistant  Professor',
-        department: 'Computer Science & Engineering',
-        mail_id: 'Sadhvi@iiitdwd.ac.in',
-        cabin_number: '?',
-      },
-      body: {
-        profile_text: '',
-        interest_areas: [
-          { id: 1, area: 'Metaheuristic Algorithms' },
-          { id: 2, area: 'Wireless Sensor Networks' },
-          { id: 3, area: 'Internet of Things' },
-          { id: 4, area: 'Combinatorial Optimization' },
-        ],
-      },
-    },
-  },
-  {
     id: 'SunilKumarPV',
     content: {
       head: {
