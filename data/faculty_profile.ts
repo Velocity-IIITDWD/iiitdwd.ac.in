@@ -24,6 +24,29 @@ export interface ProfileProp {
 }
 let ProfileProps: ProfileProp[] = [
   {
+    id: 'MrRamSubramanian',
+    content: {
+      head: {
+        name: 'Mr. Ram Subramanian',
+        profile_pdf: '/docs/RamSubramanian.pdf',
+      },
+      card: {
+        photo: '/images/MrRamSubramanian.jpg',
+        PhD:'Masters Degree (Quantitative Business Economics Daniels School of Business, Purdue University, Indianapolis,USA)',
+        designation: 'Assistant Professor',  
+        department: 'Department of Arts, Science & Design',
+        mail_id: 'ramsubramanian@iiitdwd.ac.in',
+        cabin_number: '?',
+      },
+      body: {
+        profile_text: '',
+        interest_areas: [
+          
+        ],
+      },
+    },
+  },
+  {
     id: 'DrSandeshSanjeevPhalke',
     content: {
       head: {
@@ -59,7 +82,7 @@ let ProfileProps: ProfileProp[] = [
         photo: '/images/MrMallikarjunKande.jfif',
         PhD:'Masters in Engineering (Power Electronics)',
         designation: 'Professor of Practice',  
-        department: '',
+        department: 'Electronics and Communication Engineering',
         mail_id: 'Mallikarjun.kande@us.abb.com',
         cabin_number: '?',
       },
@@ -69,31 +92,6 @@ let ProfileProps: ProfileProp[] = [
           { id: 1, area: 'IoT & Cloud Technologies' },
           { id: 2, area: 'Cyber Security Solutions and Deployment' },
           { id: 3, area: 'Autonomous Systems and Control' },
-        ],
-      },
-    },
-  },
-  {
-    id: 'DrAGRamakrishnan',
-    content: {
-      head: {
-        name: 'Dr. A G Ramakrishnan',
-        profile_pdf: 'http://mile.ee.iisc.ac.in/AGR/index.htm#intro',
-      },
-      card: {
-        photo: '/images/dragramkrishnanwebp.webp',
-        PhD:'Ph.D. (Indian Institute of Technology Madra, India.)',
-        designation: 'Professor of Practice',  
-        department: 'Department of Arts, Science, and Design',
-        mail_id: 'agr@iisc.ac.in',
-        cabin_number: '?',
-      },
-      body: {
-        profile_text: '',
-        interest_areas: [
-          { id: 1, area: 'Co-Design' },
-          { id: 2, area: 'Early childhood education and care' },
-          { id: 3, area: 'Child computer interaction' },
         ],
       },
     },
@@ -326,7 +324,7 @@ let ProfileProps: ProfileProp[] = [
         photo: '/images/Milind-Chabbi.png',
         PhD:'Rice Univeristy', 
         designation: 'Professor of Practice',
-        department: '',
+        department: 'Computer Science & Engineering',
         mail_id: 'Chabbi.Milind@Gmail.com',
         cabin_number: '?',
       },
