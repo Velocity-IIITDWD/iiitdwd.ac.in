@@ -1,11 +1,21 @@
 export const tenders: Tender[] = [
   {
     cancelled: false,
-    corrections: [],
-    documents: [],
+    corrections: [
+      {
+        link: '/docs/corrigendum-addendum-Advertisement-TENDER-FOR-SELECTION-OF-AGENCY-FOR-PROVIDING-CATERING-SERVICES.pdf',
+        title: 'Corrigendum/Addendum',
+      },
+    ],
+    documents: [
+      {
+        link: '/images/Advertisement-TENDER-FOR-SELECTION-OF-AGENCY-FOR-PROVIDING-CATERING-SERVICES.jpg',
+        title: 'Advertisement',
+      },
+    ],
     link: '/docs/TENDER-FOR-SELECTION-OF-AGENCY-FOR-PROVIDING-CATERING-SERVICES.pdf',
     publishDate: '2024-11-21',
-    submissionDeadline: '2024-12-22T15:00+05:30',
+    submissionDeadline: '2024-12-17T15:00+05:30',
     title: 'NOTICE INVITING TENDER FOR SELECTION OF AGENCY FOR PROVIDING CATERING SERVICES',
     updatedAt: 53,
   },
