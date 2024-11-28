@@ -32,8 +32,8 @@ let ProfileProps: ProfileProp[] = [
       },
       card: {
         photo: '/images/MrRamSubramanian.jpg',
-        PhD:'Masters Degree (Quantitative Business Economics Daniels School of Business, Purdue University, Indianapolis,USA)',
-        designation: 'Assistant Professor',  
+        PhD:'Master Degree (Quantitative Business Economics, Purdue University)',
+        designation: 'Professor of Practice',  
         department: 'Department of Arts, Science & Design',
         mail_id: 'ramsubramanian@iiitdwd.ac.in',
         cabin_number: '?',
@@ -41,7 +41,9 @@ let ProfileProps: ProfileProp[] = [
       body: {
         profile_text: '',
         interest_areas: [
-          
+          { id: 1, area: 'Entrepreneurship' },
+          { id: 2, area: 'Product Management' },
+          { id: 3, area: 'Venture Funding' },
         ],
       },
     },
