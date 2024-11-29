@@ -1,12 +1,14 @@
 'use client';
-import { FC, useState } from 'react';
+import { useEffect, useState } from 'react';
 import '@/app/globals.css';
 import Image from 'next/image';
 import Link from 'next/link';
-import dynamic from 'next/dynamic';
-import { ProfileProps, ProfileProp } from '@/data/faculty_profile';
+import { ProfileProp } from '@/data/faculty_profile';
+import { client } from '@/lib/sanity/client';
+import { urlFor } from '@/lib/sanity/image';
+import { defineQuery } from 'next-sanity';
 
-const Profile = dynamic(() => import('./[id]/page'));
+const query = defineQuery('*[_type == "faculty"]');
 
 interface ListProps {
   ll: ProfileProp[];
@@ -218,10 +220,34 @@ const List = ({ ll }: ListProps) => {
 };
 
 const Faculty = () => {
-  const profiles = ProfileProps.sort((a, b) => (a.id > b.id ? 1 : -1));
+  const [faculties, setFaculties] = useState<ProfileProp[]>([]);
+
+  useEffect(() => {
+    const fetchFaculties = async () => {
+      const data = (await client.fetch(query)) as any[];
+
+      const mappedFaculties = data.map(({ facultyId, content }) => ({
+        id: facultyId,
+        content: {
+          ...content,
+          card: {
+            ...content.card,
+            photo: urlFor(content.card?.photo).url(),
+          },
+        },
+      })) as ProfileProp[];
+
+      mappedFaculties.sort((a, b) => a.id.localeCompare(b.id));
+
+      setFaculties(mappedFaculties);
+    };
+
+    fetchFaculties();
+  }, []);
+
   return (
     <>
-      <List ll={ProfileProps} />
+      <List ll={faculties} />
     </>
   );
 };
