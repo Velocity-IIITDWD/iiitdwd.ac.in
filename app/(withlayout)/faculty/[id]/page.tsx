@@ -12,12 +12,46 @@ import {
 import { client } from '@/lib/sanity/client';
 import { defineQuery } from 'next-sanity';
 
-const getAllFaculties = defineQuery(`*[_type == "faculty"]`);
 const query = defineQuery(`*[_type == "faculty" && facultyId == $id] {
   "id": facultyId,
   "file": content.head.file.asset->url,
   "photo": content.card.photo.asset->url,
   content
+}`);
+
+async function getProfileData(id: string) {
+  const [data] = (await client.fetch(query, { id })) as any;
+  const {
+    facultyId,
+    file,
+    photo,
+    content: { head, card, body },
+  } = data;
+
+  return {
+    id: facultyId,
+    content: {
+      head: {
+        ...head,
+        profile_pdf: head?.link || file || '',
+      },
+      card: {
+        ...card,
+        photo,
+      },
+      body: {
+        ...body,
+        interest_areas: body.interest_areas.map((area: string, id: number) => ({
+          id,
+          area,
+        })),
+      },
+    },
+  } as ProfileProp;
+}
+
+const getAllFaculties = defineQuery(`*[_type == "faculty"] {
+  "id": facultyId
 }`);
 
 export async function generateStaticParams(): Promise<{ id: string }[]> {
@@ -27,8 +61,8 @@ export async function generateStaticParams(): Promise<{ id: string }[]> {
     console.error('No faculty data found.');
     return [];
   }
-  
-  return data.map((obj: { facultyId: string }) => ({ id: obj.facultyId }));
+
+  return data;
 }
 
 export default async function Profile({
@@ -36,37 +70,7 @@ export default async function Profile({
 }: {
   params: { id: string };
 }) {
-  const [data] = (await client.fetch(query, { id })) as any;
-  const {
-    facultyId,
-    file, photo,
-    content: { head, card, body },
-  } = data || {};
-
-  const profile: ProfileProp = {
-    id: facultyId,
-    content: {
-      head: {
-        ...head,
-        profile_pdf: head?.link || file || '',
-      },
-      card: {
-        ...card,
-        photo
-      },
-      body: {
-        ...body,
-        interest_areas: body.interest_areas.map((area: string, id: number) => ({
-          id,
-          area
-        }))
-      },
-    },
-  };
-
-  if (!profile) {
-    return null;
-  }
+  const profile = (await getProfileData(id)) as ProfileProp;
 
   const areaofinterest_array: JSX.Element[] | undefined =
     profile.content.body.interest_areas.map((arr) => (
@@ -104,6 +108,7 @@ export default async function Profile({
                   src={profile.content.card.photo}
                   width={0}
                   height={0}
+                  priority
                   sizes="100%"
                   style={{ height: '250px', width: '250px' }}
                   alt={profile.content.head.name}
