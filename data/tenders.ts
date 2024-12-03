@@ -1,6 +1,16 @@
 export const tenders: Tender[] = [
   {
     cancelled: false,
+    corrections: [],
+    documents: [],
+    link: '/docs/Notice_Inviting_Tended_24x7_Canteen_Service.pdf',
+    publishDate: '2024-12-03',
+    submissionDeadline: '2024-12-24T15:00+05:30',
+    title: 'Notice Inviting Tender 24x7 Canteen Service',
+    updatedAt: 54,
+  },
+  {
+    cancelled: false,
     corrections: [
       {
         link: '/docs/corrigendum-addendum-Advertisement-TENDER-FOR-SELECTION-OF-AGENCY-FOR-PROVIDING-CATERING-SERVICES.pdf',
