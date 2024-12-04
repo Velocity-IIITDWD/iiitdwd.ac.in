@@ -2,7 +2,12 @@ export const tenders: Tender[] = [
   {
     cancelled: false,
     corrections: [],
-    documents: [],
+    documents: [
+      {
+        link: '/images/12E1B81.jpg',
+        title: 'Advertisement',
+      },
+    ],
     link: '/docs/Notice_Inviting_Tended_24x7_Canteen_Service.pdf',
     publishDate: '2024-12-03',
     submissionDeadline: '2024-12-24T15:00+05:30',
