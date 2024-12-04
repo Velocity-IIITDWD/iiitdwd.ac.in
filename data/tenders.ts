@@ -2,16 +2,6 @@ export const tenders: Tender[] = [
   {
     cancelled: false,
     corrections: [],
-    documents: [],
-    link: '/docs/Pre-Bid queries & answers.pdf',
-    publishDate: '2024-12-04',
-    submissionDeadline: '2024-12-24T15:00+05:30',
-    title: 'Pre-Bid Queries and Answers',
-    updatedAt: 55,
-  },
-  {
-    cancelled: false,
-    corrections: [],
     documents: [
       {
         link: '/images/12E1B81.jpg',
@@ -36,6 +26,10 @@ export const tenders: Tender[] = [
       {
         link: '/images/Advertisement-TENDER-FOR-SELECTION-OF-AGENCY-FOR-PROVIDING-CATERING-SERVICES.jpg',
         title: 'Advertisement',
+      },
+      {
+        link: '/docs/Pre-Bid queries & answers.pdf',
+        title: 'Pre-Bid Queries and Answers',
       },
     ],
     link: '/docs/TENDER-FOR-SELECTION-OF-AGENCY-FOR-PROVIDING-CATERING-SERVICES.pdf',
