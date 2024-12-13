@@ -544,31 +544,6 @@ let ProfileProps: ProfileProp[] = [
       },
     },
   },
-  // {
-  //   id: 'LakshmanMahto',
-  //   content: {
-  //     head: {
-  //       name: 'Dr. Lakshman Mahto',
-  //       profile_pdf: 'https://sites.google.com/view/lakshya',
-  //     },
-  //     card: {
-  //       photo: '/images/Dr.LakshmanMahto.jpeg',
-  //       PhD:'Ph.D. (IIT Mandi)',
-  //       designation: 'Assistant Professor',
-  //       department: 'Department of Arts, Science, and Design',
-  //       mail_id: 'lakshman@iiitdwd.ac.in',
-  //       cabin_number: '?',
-  //     },
-  //     body: {
-  //       profile_text: '',
-  //       interest_areas: [
-  //         { id: 1, area: 'Statistical learning' },
-  //         { id: 2, area: 'Controllability of PDE' },
-  //         { id: 3, area: 'Dynamical systems' },
-  //       ],
-  //     },
-  //   },
-  // },
   {
     id: 'MalayKumar',
     content: {
