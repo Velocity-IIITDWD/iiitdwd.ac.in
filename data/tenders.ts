@@ -21,6 +21,10 @@ export const tenders: Tender[] = [
         link: '/docs/corrigendum-addendum-Advertisement-TENDER-FOR-SELECTION-OF-AGENCY-FOR-PROVIDING-CATERING-SERVICES.pdf',
         title: 'Corrigendum/Addendum',
       },
+      {
+        link: '/docs/TechnicalBidOpening-Notification.pdf',
+        title: 'Technical Bid Opening - Notification',
+      },
     ],
     documents: [
       {
