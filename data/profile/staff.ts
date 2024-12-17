@@ -55,11 +55,6 @@ export default [
         title: 'Ms. Pooja Akki',
       },
       {
-        content: ['Multi Skilled worker'],
-        imageURL: '/images/prakash_y_kamkar.jpg',
-        title: 'Mr. Prakash Y Kamkar.',
-      },
-      {
         content: ['Junior Technical Assistant'],
         imageURL: '/images/prasad_pulakeshi_kalal.jpg',
         title: 'Mr. Prasad Pulakeshi Kalal',

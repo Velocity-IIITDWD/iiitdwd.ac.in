@@ -504,7 +504,7 @@ let ProfileProps: ProfileProp[] = [
       card: {
         photo: '/images/Dr.JagadishDN.jpeg',
         PhD:'Ph.D. (NITK Surathkal)',
-        designation: 'Assistant Professor',
+        designation: 'Associate Dean, Student Welfare',
         department: 'Electronics and Communication Engineering',
         mail_id: 'jagadishdn@iiitdwd.ac.in',
         cabin_number: '?',
