@@ -10,10 +10,19 @@ export type Jobs = {
 
 export const jobsData: Jobs[] = [
   {
+    "title": "Advertisement for the position of Incubation Manager",
+    "category": "staff",
+    "details": ``,
+    "lastDate": "15.01.2025 \n 5:00 PM",
+    "generalInstructions": "/pdfs/IncubationManagerJD.pdf",
+    "application": "/pdfs/TechnicalBidOpening-Notification.pdf",
+    "extraInfo": []
+  },
+  {
     "title": "Advertisement for the position of Registrar (On Deputation/ Short term Contract)",
     "category": "staff",
     "details": ``,
-    "lastDate": " 25.11.2024 \n 5:00 PM",
+    "lastDate": "25.11.2024 \n 5:00 PM",
     "generalInstructions": "/docs/recruitment_of_registrar.pdf",
     "application": "https://forms.gle/qjYCNrLWkWD4ycJq9",
     "extraInfo": [
