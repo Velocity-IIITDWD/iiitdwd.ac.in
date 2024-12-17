@@ -4,21 +4,6 @@ export const tenders: Tender[] = [
     corrections: [],
     documents: [
       {
-        link: '/images/tenderbid.jpg',
-        title: 'Advertisement',
-      },
-    ],
-    link: '/pdfs/TechnicalBidOpening-Notification.pdf',
-    publishDate: '2024-12-19',
-    submissionDeadline: '#',
-    title: 'Technical Bid Opening - Notification',
-    updatedAt: 55,
-  },
-  {
-    cancelled: false,
-    corrections: [],
-    documents: [
-      {
         link: '/images/12E1B81.jpg',
         title: 'Advertisement',
       },
@@ -35,6 +20,10 @@ export const tenders: Tender[] = [
       {
         link: '/docs/corrigendum-addendum-Advertisement-TENDER-FOR-SELECTION-OF-AGENCY-FOR-PROVIDING-CATERING-SERVICES.pdf',
         title: 'Corrigendum/Addendum',
+      },
+      {
+        link: '/docs/TechnicalBidOpening-Notification.pdf',
+        title: 'Technical Bid Opening - Notification',
       },
     ],
     documents: [
