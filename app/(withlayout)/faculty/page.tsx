@@ -1,10 +1,9 @@
 import { client } from '@/lib/sanity/client';
 import { urlFor } from '@/lib/sanity/image';
-import { defineQuery } from 'next-sanity';
 import FacultyList from './FacultyList';
 import { ProfileProp } from '@/data/faculty_profile';
 
-const query = defineQuery('*[_type == "faculty"]');
+const query = '*[_type == "faculty"]';
 
 async function getData() {
   const data = (await client.fetch(query)) as any[];
