@@ -15,7 +15,7 @@ export const jobsData: Jobs[] = [
     'details': '',
     'lastDate': '15.01.2025 \n 5:00 PM',
     'generalInstructions': '/docs/IncubationManagerJD.pdf',
-    'application': '/pdfs/TechnicalBidOpening-Notification.pdf',
+    'application': '',
     'extraInfo': []
   },
   {
