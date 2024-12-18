@@ -10,6 +10,13 @@ export type Announcement = {
 
 export const announcements: Announcement[] = [
   {
+    link: '/docs/ICPR.pdf',
+    text: 'Conference paper by Dr Krishnendu Ghosh titled "Enhancing Bengali Text-to-Speech Synthesis Through Transformer-Driven Text Normalization" gets published in the proceedings of 27th International Conference on Pattern Recognition (ICPR 2024)',
+    new: true,
+    month: '12',
+    year: '2024',
+  },
+  {
     link: '',
     text: 'Research article Title: "Anomaly Detection in Cybersecurity: Evaluating Machine Learning Models on the BETH Dataset" has been accepted for presentation in IEEE 43rd International Conference on Consumer Electronics in Las Vegas, NV, USA. Authors: Ravi Chand(20bds057), Rajendra Hegadi, Vineeth S R (20bcs137) and  B. Roopashri Tantri.',
     new: true,
