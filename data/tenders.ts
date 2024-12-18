@@ -24,6 +24,7 @@ export const tenders: Tender[] = [
       {
         link: '/docs/TechnicalBidOpening-Notification.pdf',
         title: 'Technical Bid Opening - Notification',
+        isNew:true,
       },
     ],
     documents: [
