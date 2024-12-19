@@ -36,7 +36,7 @@ let ProfileProps: ProfileProp[] = [
         designation: 'Professor of Practice',  
         department: 'Department of Arts, Science & Design',
         mail_id: 'ramsubramanian@iiitdwd.ac.in',
-        cabin_number: '?',
+        cabin_number: '?',  
       },
       body: {
         profile_text: '',
@@ -1398,6 +1398,32 @@ let ProfileProps: ProfileProp[] = [
           { id: 3, area: 'MMIC Design' },
           { id: 4, area: 'RF Power Amplifier' },
           { id: 5, area: 'DOHERTY Power Amplifier Design' },
+        ],
+      },
+    },
+  },
+  {
+    id: 'YedukondalaRaoVeeranki',
+    content: {
+      head: {
+        name: 'Dr. Yedukondala Rao Veeranki',
+        profile_pdf: '/docs/Dr_Yedukondala_Rao.pdf',
+      },
+      card: {
+        photo: '/images/Dr.YedukondalaRao.jpeg',
+        PhD: 'Ph.D. (Indian Institute of Technology Madras)',
+        designation: 'Assistant Professor',
+        department: 'Electronics and Communication Engineering',
+        mail_id: 'ykraoveeranki@iiitdwd.ac.in',
+        cabin_number: '?',
+      },
+      body: {
+        profile_text: '',
+        interest_areas: [
+          { id: 1, area: 'Signal Processing and AI for Digital Health' },
+          { id: 2, area: 'FPGA-Based Digital System Design' },
+          { id: 3, area: 'AI and Data Science for Social Innovation' },
+          { id: 4, area: 'Wearable Technology for smart Healthcare' },
         ],
       },
     },
