@@ -2,6 +2,16 @@ export const tenders: Tender[] = [
   {
     cancelled: false,
     corrections: [],
+    documents: [],
+    link: '/docs/Tender_For_Selection_Of_Agency_For_Providing_Catering_Services.pdf',
+    publishDate: '2024-11-19',
+    submissionDeadline: '2024-12-22T15:00+05:30',
+    title: 'Notice Inviting Tender for Selection of Agency for Providing Catering Services',
+    updatedAt: 55,
+  },
+  {
+    cancelled: false,
+    corrections: [],
     documents: [
       {
         link: '/images/12E1B81.jpg',

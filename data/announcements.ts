@@ -10,6 +10,13 @@ export type Announcement = {
 
 export const announcements: Announcement[] = [
   {
+    link: '/docs/Tender_For_Selection_Of_Agency_For_Providing_Catering_Services.pdf',
+    text: 'Notice Inviting Tender for Selection of Agency for Providing Catering Services',
+    new: true,
+    month: '12',
+    year: '2024',
+  },
+  {
     link: '/docs/ICPR.pdf',
     text: 'Conference paper by Dr Krishnendu Ghosh titled "Enhancing Bengali Text-to-Speech Synthesis Through Transformer-Driven Text Normalization" gets published in the proceedings of 27th International Conference on Pattern Recognition (ICPR 2024)',
     new: true,
