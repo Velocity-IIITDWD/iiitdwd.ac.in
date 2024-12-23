@@ -2,6 +2,16 @@ export const tenders: Tender[] = [
   {
     cancelled: false,
     corrections: [],
+    documents: [],
+    link: '/docs/Notice%20Inviting%20Quotation%20-%20Milk%20Parlor%20&%20Fruit%20Juice%20Centre.pdf',
+    publishDate: '2024-12-23',
+    submissionDeadline: '2025-01-02T15:00+05:30',
+    title: 'Notice Inviting Quotations (NIQ) for Renting of Shops at IIIT Dharwad',
+    updatedAt: 54,
+  },
+  {
+    cancelled: false,
+    corrections: [],
     documents: [
       {
         link: '/images/12E1B81.jpg',
