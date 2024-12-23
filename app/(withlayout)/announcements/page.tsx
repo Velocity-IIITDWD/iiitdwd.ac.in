@@ -70,8 +70,8 @@ export default function Page() {
 
           <div className='mt-4'></div>
           {sortedKeys.map(dateKey => (
-            <details key={dateKey} className='group text-dwd-primary shadow group relative bg-[#C7D3DE50] rounded items-center cursor-pointer flex gap-2'>
-              <summary className='flex gap-4 items-center group-open:bg-dwd-primary group-open:text-white hover:bg-dwd-primary hover:text-white rounded-sm py-1 pl-1'>
+            <details key={dateKey} className='group text-dwd-primary shadow group relative bg-[#C7D3DE50] rounded items-center cursor-pointer flexs gap-y-2'>
+              <summary className='w-full flex gap-4 items-center group-open:bg-dwd-primary group-open:text-white hover:bg-dwd-primary hover:text-white rounded-sm py-1 pl-1'>
                 <div><ChevronDown size='1rem' className='translate-x-[2px] -rotate-90 group-open:rotate-0 transition-transform duration-300' /></div>
                 <div>{MonthMap[dateKey.split(' ')[1] as keyof typeof MonthMap]} {dateKey.split(' ')[0]}</div>
               </summary>
