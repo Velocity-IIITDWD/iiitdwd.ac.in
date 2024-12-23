@@ -4,6 +4,7 @@ export type Announcement = {
   link: string,
   text: string,
   new: boolean,
+  date?: string,
   year: `${Digit}${Digit}${Digit}${Digit}`,       // Full year in 4 digits
   month: '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '10' | '11' | '12' ,      // Month number from 1 to 12
 };
@@ -13,6 +14,7 @@ export const announcements: Announcement[] = [
     link: '/docs/Shortlist%20Status%20(Registrar%20Post).pdf',
     text: 'Shortlisted candidates for the post of Registrar',
     new: true,
+    date: 'Mon, 23 Dec 2024 12:46:44 GMT',
     month: '12',
     year: '2024',
   },

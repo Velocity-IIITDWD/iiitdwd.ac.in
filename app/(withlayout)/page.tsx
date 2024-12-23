@@ -21,6 +21,17 @@ const AutoScrollCarousel = dynamic(
   () => import('@/components/HomePage/AutoScrollCarousel')
 );
 
+function renderNew(date: string) {
+  const currTime = new Date();
+  const time : number = currTime.getTime() - (new Date(date)).getTime();
+  if (time < 48 * 3600 * 1000) {
+    return <div className="transition-all animate-pulse absolute top-1 group-hover:bg-red-500 group-hover:text-white right-1 text-xs px-2 py-1 bg-red-300/50 rounded text-red-500">
+        New
+      </div>;
+  }
+  return <></>;
+}
+
 export default function Home() {
   const [program, setProgram] = useState(0);
 
@@ -73,6 +84,7 @@ export default function Home() {
                     />
                   </svg>
                   <div>{item?.text}</div>
+                  {item?.date && renderNew(item.date)}
                 </a>
               ))}
             </div>
