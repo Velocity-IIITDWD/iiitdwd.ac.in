@@ -10,6 +10,13 @@ export type Announcement = {
 
 export const announcements: Announcement[] = [
   {
+    link: '/docs/Shortlist%20Status%20(Registrar%20Post).pdf',
+    text: 'Shortlisted candidates for the post of Registrar',
+    new: true,
+    month: '12',
+    year: '2024',
+  },
+  {
     link: '/docs/Tender_For_Selection_Of_Agency_For_Providing_Catering_Services.pdf',
     text: 'Notice Inviting Tender for Selection of Agency for Providing Catering Services',
     new: true,
@@ -26,28 +33,28 @@ export const announcements: Announcement[] = [
   {
     link: '',
     text: 'Research article Title: "Anomaly Detection in Cybersecurity: Evaluating Machine Learning Models on the BETH Dataset" has been accepted for presentation in IEEE 43rd International Conference on Consumer Electronics in Las Vegas, NV, USA. Authors: Ravi Chand(20bds057), Rajendra Hegadi, Vineeth S R (20bcs137) and  B. Roopashri Tantri.',
-    new: true,
+    new: false,
     month: '11',
     year: '2024',
   },
   {
     link: '/docs/Book-authored-by-DrKrishnendu.pdf',
     text: 'Book chapter authored by Dr Krishnendu Ghosh titled "Impact of Amyloidosis on Bones and Its Relationship to Dementia" gets published in Book "Diagnosing Musculoskeletal Conditions Using Artificial Intelligence And Machine Learning to Aid Interpretation of Clinical Imaging" - 1st Edition (Paperback ISBN: 9780443328923 & eBook ISBN: 9780443328930) by Springer (Scopus Indexed)',
-    new: true,
+    new: false,
     month: '11',
     year: '2024',
   },
   {
     link: 'https://forms.gle/gmzLVv7BCh7TqxAE7',
     text: 'Expression of Interest - October 2024 (Hostel Accommodation for Boys)',
-    new: true,
+    new: false,
     month: '10',
     year: '2024',
   },
   {
     link: '/docs/recruitment_of_registrar.pdf',
     text: 'Advertisement for the position of Registrar (On Deputation/ Short term Contract)',
-    new: true,
+    new: false,
     month: '10',
     year: '2024',
   },
@@ -75,7 +82,7 @@ export const announcements: Announcement[] = [
   {
     link: '/docs/Dr.Animesh-Heidelberg-Laureate-Forum.pdf',
     text: 'Congrats, Dr Animesh Chaturvedi for attending Heidelberg Laureate Forum as 200 Young Researcher',
-    new: true,
+    new: false,
     month: '10',
     year: '2024',
   },
