@@ -3,6 +3,21 @@ export const tenders: Tender[] = [
     cancelled: false,
     corrections: [],
     documents: [],
+    link: '/docs/NIT-Electrical%20Work%20at%20IIIT%20Dharwad.pdf',
+    publishDate: '2024-12-24',
+    submissionDeadline: '2025-01-10T15:00+05:30',
+    title: 'Notice Inviting Tender for electrical works at IIIT Dharwad',
+    updatedAt: 54,
+  },
+  {
+    cancelled: false,
+    corrections: [],
+    documents: [
+      {
+        link: '/images/104E88A.jpg',
+        title: 'Advertisement'
+      }
+    ],
     link: '/docs/Notice%20Inviting%20Quotation%20-%20Milk%20Parlor%20&%20Fruit%20Juice%20Centre.pdf',
     publishDate: '2024-12-23',
     submissionDeadline: '2025-01-02T15:00+05:30',
