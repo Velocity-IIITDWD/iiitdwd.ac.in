@@ -10,6 +10,15 @@ export type Jobs = {
 
 export const jobsData: Jobs[] = [
   {
+    'title': 'Advertisement for the position of Marketing Manager',
+    'category': 'staff',
+    'details': '',
+    'lastDate': '15.01.2025 \n 5:00 PM',
+    'generalInstructions': '/docs/Marketing_Manager_JD.pdf',
+    'application': '',
+    'extraInfo': []
+  },
+  {
     'title': 'Advertisement for the position of Business Manager',
     'category': 'staff',
     'details': '',
