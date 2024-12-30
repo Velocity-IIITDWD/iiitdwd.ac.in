@@ -31,12 +31,18 @@ export const tenders: Tender[] = [
   },
   {
     cancelled: false,
-    corrections: [],
+    corrections: [
+      {
+        link: '/docs/Notification_Technical_Bid_Opening-24x7_Canteen_Service.pdf',
+        title: 'Technical Bid Opening,',
+      }
+    ],
     documents: [
       {
         link: '/images/12E1B81.jpg',
         title: 'Advertisement',
       },
+
     ],
     link: '/docs/Notice_Inviting_Tended_24x7_Canteen_Service.pdf',
     publishDate: '2024-12-03',
@@ -54,7 +60,10 @@ export const tenders: Tender[] = [
       {
         link: '/docs/TechnicalBidOpening-Notification.pdf',
         title: 'Technical Bid Opening - Notification',
-        isNew:true,
+      },
+      {
+        link: '/docs/Notification_Financial_Bid_Opening_Catering Service.pdf',
+        title: 'Financial Bid Opening,',
       },
     ],
     documents: [
