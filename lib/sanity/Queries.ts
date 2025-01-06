@@ -18,7 +18,7 @@ const GetAllVisitors = `*[_type == "visitor"] {
   }
 }`;
 
-const GetAllStaff = `*[_type == "visitor"] {
+const GetAllStaff = `*[_type == "staff"] {
   title,
   profiles[] {
     title,
@@ -27,7 +27,16 @@ const GetAllStaff = `*[_type == "visitor"] {
   }
 }`;
 
-const GetAllSenate = `*[_type == "visitor"] {
+const GetAllSenate = `*[_type == "senate"] {
+  title,
+  profiles[] {
+    title,
+    content,
+    imageURL
+  }
+}`;
+
+const GetFormer = `*[_type == "former"] {
   title,
   profiles[] {
     title,
@@ -38,4 +47,4 @@ const GetAllSenate = `*[_type == "visitor"] {
 
 
 
-export { getAllFaculties, query, GetAllVisitors,GetAllStaff,GetAllSenate };
+export { getAllFaculties, query, GetAllVisitors,GetAllStaff,GetAllSenate,GetFormer };
