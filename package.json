@@ -41,6 +41,7 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
+    "@types/minimatch": "^5.1.2",
     "@types/node": "22.7.6",
     "@types/react": "18.3.11",
     "@types/react-dom": "^18",

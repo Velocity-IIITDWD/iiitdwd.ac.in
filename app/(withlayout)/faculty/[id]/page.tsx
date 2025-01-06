@@ -10,13 +10,8 @@ import {
   Split,
 } from 'lucide-react';
 import { client } from '@/lib/sanity/client';
+import { getAllFaculties, query } from '@/lib/sanity/Queries';
 
-const query = `*[_type == "faculty" && facultyId == $id] {
-  "id": facultyId,
-  "file": content.head.file.asset->url,
-  "photo": content.card.photo.asset->url,
-  content
-}`;
 
 async function getProfileData(id: string) {
   const [data] = (await client.fetch(query, { id })) as any;
@@ -48,10 +43,6 @@ async function getProfileData(id: string) {
     },
   } as ProfileProp;
 }
-
-const getAllFaculties = `*[_type == "faculty"] {
-  "id": facultyId
-}`;
 
 export async function generateStaticParams(): Promise<{ id: string }[]> {
   const data = await client.fetch(getAllFaculties);
