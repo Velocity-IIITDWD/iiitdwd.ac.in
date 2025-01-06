@@ -14,7 +14,7 @@ export const jobsData: Jobs[] = [
     'category': 'staff',
     'details': '',
     'lastDate': '31.01.2025',
-    'generalInstructions': '/docs/IIIT_Dharwad_Research_Park_invites_applications_for_External_Startup_Incubation.pdf.pdf',
+    'generalInstructions': '/docs/IIIT_Dharwad_Research_Park_invites_applications_for_External_Startup_Incubation.pdf',
     'application': 'https://forms.gle/gE25xrgatkahVPCz6',
     'extraInfo': []
   },
