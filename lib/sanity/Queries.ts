@@ -53,6 +53,7 @@ const GetChair = `*[_type == "chairPerson"] {
     imageURL
   }
 }`;
+
 const GetBoard = `*[_type == "boardOfGovernors"] {
   title,
   profiles[] {
@@ -62,6 +63,13 @@ const GetBoard = `*[_type == "boardOfGovernors"] {
   }
 }`;
 
+const GetAnnouncements = `*[_type == "announcement"]{
+  link,
+  month,
+  new,
+  text,
+  year,
+  date,
+}`
 
-
-export { getAllFaculties, query, GetAllVisitors,GetAllStaff,GetAllSenate,GetFormer,GetChair,GetBoard };
+export { getAllFaculties, query, GetAllVisitors,GetAllStaff,GetAllSenate,GetFormer,GetChair,GetBoard,GetAnnouncements };
