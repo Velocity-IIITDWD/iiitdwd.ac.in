@@ -2,14 +2,30 @@ import { Metadata } from 'next';
 import group from '@/data/profile/board_of_governors';
 import { ProfileGroup } from '@/components/profile/ProfileGroup';
 import Link from 'next/link';
+import { client } from '@/lib/sanity/client';
+import { GetBoard } from '@/lib/sanity/Queries';
 
 const title = 'Board of Governors';
 
-export default function BoardOfGovernorsPage() {
+export default async function BoardOfGovernorsPage() {
+  const GetSanityData = async () => {
+    try {
+      const res = await client.fetch(GetBoard);
+      return res;
+    } catch (err) {
+      console.error('Error fetching data:', err);
+      return [];
+    }
+  };
+
+  const data = await GetSanityData();
+  const mergedData = [...group, ...data];
+  
+  
   return (
     <>
       <h1 className="heading-text">{title}</h1>
-      {group.map(({ profiles, title }, index) => (
+      {mergedData.map(({ profiles, title }, index) => (
         <ProfileGroup key={index} profiles={profiles} title={title} />
       ))}
       <Link

@@ -45,6 +45,23 @@ const GetFormer = `*[_type == "former"] {
   }
 }`;
 
+const GetChair = `*[_type == "chairPerson"] {
+  title,
+  profiles[] {
+    title,
+    content,
+    imageURL
+  }
+}`;
+const GetBoard = `*[_type == "boardOfGovernors"] {
+  title,
+  profiles[] {
+    title,
+    content,
+    imageURL
+  }
+}`;
 
 
-export { getAllFaculties, query, GetAllVisitors,GetAllStaff,GetAllSenate,GetFormer };
+
+export { getAllFaculties, query, GetAllVisitors,GetAllStaff,GetAllSenate,GetFormer,GetChair,GetBoard };
