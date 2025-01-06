@@ -9,5 +9,16 @@ const getAllFaculties = `*[_type == "faculty"] {
   "id": facultyId
 }`;
 
-export default query;
-export { getAllFaculties, query };
+const GetAllVisitors = `*[_type == "visitor"] {
+  title,
+  profiles[] {
+    title,
+    content,
+    imageURL
+  }
+}
+`;
+
+
+
+export { getAllFaculties, query, GetAllVisitors };
