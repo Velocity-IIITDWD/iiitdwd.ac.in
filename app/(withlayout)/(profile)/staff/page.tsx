@@ -1,14 +1,30 @@
 import { Metadata } from 'next';
 import group from '@/data/profile/staff';
 import { ProfileGroup } from '@/components/profile/ProfileGroup';
+import { client } from '@/lib/sanity/client';
+import { GetAllStaff } from '@/lib/sanity/Queries';
 
 const title = 'Staff';
 
-export default function StaffPage() {
+export default async function StaffPage() {
+  const GetSanityData = async () => {
+    try {
+      const res = await client.fetch(GetAllStaff);
+      return res; // Return fetched data
+    } catch (err) {
+      console.error('Error fetching data:', err);
+      return [];
+    }
+  };
+
+  const data = await GetSanityData();
+
+  const mergedData = [...group, ...data];
+
   return (
     <>
       <h1 className="heading-text">{title}</h1>
-      {group.map(({ profiles, title }, index) => (
+      {mergedData.map(({ profiles, title }, index) => (
         <ProfileGroup key={index} profiles={profiles} title={title} />
       ))}
     </>

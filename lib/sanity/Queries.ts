@@ -16,9 +16,17 @@ const GetAllVisitors = `*[_type == "visitor"] {
     content,
     imageURL
   }
-}
-`;
+}`;
+
+const GetAllStaff = `*[_type == "visitor"] {
+  title,
+  profiles[] {
+    title,
+    content,
+    imageURL
+  }
+}`;
 
 
 
-export { getAllFaculties, query, GetAllVisitors };
+export { getAllFaculties, query, GetAllVisitors,GetAllStaff };
