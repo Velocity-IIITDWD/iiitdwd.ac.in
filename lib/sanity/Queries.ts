@@ -27,6 +27,15 @@ const GetAllStaff = `*[_type == "visitor"] {
   }
 }`;
 
+const GetAllSenate = `*[_type == "visitor"] {
+  title,
+  profiles[] {
+    title,
+    content,
+    imageURL
+  }
+}`;
 
 
-export { getAllFaculties, query, GetAllVisitors,GetAllStaff };
+
+export { getAllFaculties, query, GetAllVisitors,GetAllStaff,GetAllSenate };
