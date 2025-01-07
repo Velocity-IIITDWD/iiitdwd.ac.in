@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { descriptions, seatMatrix, year, links } from '@/data/admissions';
 import { Fragment } from 'react';
 import { client } from '@/lib/sanity/client';
-import { GetLinks } from '@/lib/sanity/Queries';
+import { GetDescription, GetLinks, GetSeats } from '@/lib/sanity/Queries';
 
 export default async function Page() {
   const GetSanityDataLinks = async () => {
@@ -19,7 +19,33 @@ export default async function Page() {
   const LinkData = await GetSanityDataLinks(); 
   const mergedLinks = [...links, ...LinkData];
 
+  const GetSanityDataDescription = async () => {
+    try {
+      const res = await client.fetch(GetDescription);
+      return res; // Return fetched data
+    } catch (err) {
+      console.error('Error fetching data:', err);
+      return [];
+    }
+  };
 
+  const DescriptionData = await GetSanityDataLinks(); 
+  const mergedDescription = [...descriptions, ...DescriptionData];
+  // console.log(mergedDescription);
+
+
+  const GetSanitySeat = async () => {
+    try {
+      const res = await client.fetch(GetSeats);
+      return res; // Return fetched data
+    } catch (err) {
+      console.error('Error fetching data:', err);
+      return [];
+    }
+  };
+
+  const seatsData = await GetSanitySeat(); 
+  
 
 
   return (
@@ -198,7 +224,7 @@ export default async function Page() {
           ))}
         </Fragment>
       ))}
-      {descriptions.map((obj) => (
+      {mergedDescription.map((obj) => (
         <Fragment key={obj.id}>
           <p className="mt-2 text-lg font-bold text-dwd-primary">
             {obj.heading}
