@@ -93,8 +93,10 @@ const GetDescription = `*[_type == "descriptionStructure"]{
 // }
 
 
-// const GetAbout = `*[_type == "about"]{
-  
-// }`;
+const GetAbout = `*[_type == "about"]{
+  coreValues[] {
+    
+  }
+}`;
 
 export { GetDescription,getAllFaculties, query, GetAllVisitors,GetAllStaff,GetAllSenate,GetFormer,GetChair,GetBoard,GetAnnouncements,GetLinks };
