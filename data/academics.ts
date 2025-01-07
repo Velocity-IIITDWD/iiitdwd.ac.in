@@ -79,6 +79,7 @@ export const DSAIDetails: courseStrcuture[] = [
   },
 ];
 
+
 export const CSEStructure: creditStructure[][] = [
   [
     {

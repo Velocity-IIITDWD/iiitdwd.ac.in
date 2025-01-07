@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { descriptions, seatMatrix, year, links } from '@/data/admissions';
 import { Fragment } from 'react';
 import { client } from '@/lib/sanity/client';
-import { GetDescription, GetLinks, GetSeats } from '@/lib/sanity/Queries';
+import { GetDescription, GetLinks } from '@/lib/sanity/Queries';
 
 export default async function Page() {
   const GetSanityDataLinks = async () => {
@@ -22,7 +22,7 @@ export default async function Page() {
   const GetSanityDataDescription = async () => {
     try {
       const res = await client.fetch(GetDescription);
-      return res; // Return fetched data
+      return res;
     } catch (err) {
       console.error('Error fetching data:', err);
       return [];
@@ -34,18 +34,18 @@ export default async function Page() {
   // console.log(mergedDescription);
 
 
-  const GetSanitySeat = async () => {
-    try {
-      const res = await client.fetch(GetSeats);
-      return res; // Return fetched data
-    } catch (err) {
-      console.error('Error fetching data:', err);
-      return [];
-    }
-  };
+  //Seat Not Implemented
+  // const GetSanitySeat = async () => {
+  //   try {
+  //     const res = await client.fetch(GetSeats);
+  //     return res; // Return fetched data
+  //   } catch (err) {
+  //     console.error('Error fetching data:', err);
+  //     return [];
+  //   }
+  // };
+  // const seatsData = await GetSanitySeat(); 
 
-  const seatsData = await GetSanitySeat(); 
-  
 
 
   return (

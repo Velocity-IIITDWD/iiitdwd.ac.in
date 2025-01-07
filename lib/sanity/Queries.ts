@@ -93,46 +93,8 @@ const GetDescription = `*[_type == "descriptionStructure"]{
 // }
 
 
-const GetAbout = `
-  *[_type == "about"]{
-    _id,
-    _type,
-    aboutText,
-    director->{
-      _id,
-      _type,
-      title,
-      content,
-      imageURL
-    },
-    briefProfile,
-    vision,
-    image_prof->{
-      _id,
-      _type,
-      name,
-      imageURL
-    },
-    mission[]->{
-      _id,
-      _type,
-      missionText
-    },
-    coreValues[]->{
-      _id,
-      _type,
-      text
-    },
-    href,
-    directorMessage[]->{
-      _id,
-      _type,
-      heading,
-      text1,
-      text2,
-      text3
-    }
-  }
-`;
+// const GetAbout = `*[_type == "about"]{
+  
+// }`;
 
 export { GetDescription,getAllFaculties, query, GetAllVisitors,GetAllStaff,GetAllSenate,GetFormer,GetChair,GetBoard,GetAnnouncements,GetLinks };
