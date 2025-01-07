@@ -7,8 +7,6 @@ import { GetAllVisitors } from '@/lib/sanity/Queries';
 const title = 'Visitor';
 
 
-
-
 export default async function VisitorPage() {
   const GetSanityData = async () => {
     try {

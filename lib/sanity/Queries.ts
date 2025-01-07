@@ -82,4 +82,14 @@ const GetLinks = `*[_type == "linksStructure"]{
   }
 }`
 
+// const GetLinks = `*[_type == "linksStructure"]{
+//   id,
+//   type,
+//   links[] {
+//     displayText,
+//     link,
+//     id
+//   }
+// }`
+
 export { getAllFaculties, query, GetAllVisitors,GetAllStaff,GetAllSenate,GetFormer,GetChair,GetBoard,GetAnnouncements,GetLinks };

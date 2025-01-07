@@ -6,7 +6,7 @@ import { client } from '@/lib/sanity/client';
 import { GetLinks } from '@/lib/sanity/Queries';
 
 export default async function Page() {
-  const GetSanityData = async () => {
+  const GetSanityDataLinks = async () => {
     try {
       const res = await client.fetch(GetLinks);
       return res; // Return fetched data
@@ -16,9 +16,10 @@ export default async function Page() {
     }
   };
 
-  const LinkData = await GetSanityData();
-
+  const LinkData = await GetSanityDataLinks(); 
   const mergedLinks = [...links, ...LinkData];
+
+
 
 
   return (
