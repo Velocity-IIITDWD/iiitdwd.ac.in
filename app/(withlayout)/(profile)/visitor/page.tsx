@@ -1,32 +1,18 @@
 import { Metadata } from 'next';
-import group from '@/data/profile/visitor';
 import { ProfileGroup } from '@/components/profile/ProfileGroup';
-import { client } from '@/lib/sanity/client';
+import { client, FetchSanity } from '@/lib/sanity/client';
 import { GetAllVisitors } from '@/lib/sanity/Queries';
+import { ProfileGroup as ProfileGroupType } from '@/types/profile';
 
 const title = 'Visitor';
 
-
 export default async function VisitorPage() {
-  const GetSanityData = async () => {
-    try {
-      const res = await client.fetch(GetAllVisitors);
-      return res; // Return fetched data
-    } catch (err) {
-      console.error('Error fetching data:', err);
-      return [];
-    }
-  };
-
-  const data = await GetSanityData();
-
-
-  const mergedData = [...group, ...data];
+  const data = await FetchSanity(GetAllVisitors) as ProfileGroupType[];
 
   return (
     <>
       <h1 className="heading-text">{title}</h1>
-      {mergedData.map(({ profiles, title }, index) => (
+      {data.map(({ profiles, title }, index) => (
         <ProfileGroup key={index} profiles={profiles} title={title} />
       ))}
     </>

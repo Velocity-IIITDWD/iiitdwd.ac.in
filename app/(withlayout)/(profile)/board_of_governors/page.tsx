@@ -1,31 +1,19 @@
-import { Metadata } from 'next';
-import group from '@/data/profile/board_of_governors';
+import { Metadata } from 'next';;
 import { ProfileGroup } from '@/components/profile/ProfileGroup';
+import { ProfileGroup as ProfileGroupType } from '@/types/profile';
 import Link from 'next/link';
-import { client } from '@/lib/sanity/client';
+import { FetchSanity } from '@/lib/sanity/client';
 import { GetBoard } from '@/lib/sanity/Queries';
 
 const title = 'Board of Governors';
 
 export default async function BoardOfGovernorsPage() {
-  const GetSanityData = async () => {
-    try {
-      const res = await client.fetch(GetBoard);
-      return res;
-    } catch (err) {
-      console.error('Error fetching data:', err);
-      return [];
-    }
-  };
-
-  const data = await GetSanityData();
-  const mergedData = [...group, ...data];
-  
+  const data = await FetchSanity(GetBoard) as ProfileGroupType[];
   
   return (
     <>
       <h1 className="heading-text">{title}</h1>
-      {mergedData.map(({ profiles, title }, index) => (
+      {data.map(({ profiles, title }, index) => (
         <ProfileGroup key={index} profiles={profiles} title={title} />
       ))}
       <Link

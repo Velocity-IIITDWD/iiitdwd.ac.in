@@ -1,31 +1,18 @@
 import { Metadata } from 'next';
-import group from '@/data/profile/senate';
 import { ProfileGroup } from '@/components/profile/ProfileGroup';
-import { client } from '@/lib/sanity/client';
+import { ProfileGroup as ProfileGroupType } from '@/types/profile';
+import { FetchSanity } from '@/lib/sanity/client';
 import { GetAllSenate } from '@/lib/sanity/Queries';
 
 const title = 'Senate';
 
 export default async function SenatePage() {
-  const GetSanityData = async () => {
-    try {
-      const res = await client.fetch(GetAllSenate);
-      return res; // Return fetched data
-    } catch (err) {
-      console.error('Error fetching data:', err);
-      return [];
-    }
-  };
-
-  const data = await GetSanityData();
-
-  const mergedData = [...group, ...data];
-
+  const data = await FetchSanity(GetAllSenate) as ProfileGroupType[];
   
   return (
     <>
       <h1 className="heading-text">{title}</h1>
-      {mergedData.map(({ profiles, title }, index) => (
+      {data.map(({ profiles, title }, index) => (
         <ProfileGroup key={index} profiles={profiles} title={title} />
       ))}
     </>
