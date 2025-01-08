@@ -5,8 +5,7 @@ const Starter: React.FC = () => {
     <>
       <div className="bg-white min-h-screen">
         <nav className="bg-white shadow-md">
-          <div className="max-w-7xl mx-auto px-4 py-4 flex justify-center">
-          </div>
+          <div className="max-w-7xl mx-auto px-4 py-4 flex justify-center"></div>
         </nav>
 
         <div className="bg-gradient-to-r from-blue-900 to-blue-800 text-white py-16">
@@ -23,7 +22,7 @@ const Starter: React.FC = () => {
         <div className="max-w-5xl mx-auto px-6 py-12">
           <div className="prose prose-lg max-w-none">
             <p className="text-xl text-gray-700 mb-6 leading-relaxed">
-              Well, what's so unique about this playbook? After all, like every other successful
+              Well, what&apos;s so unique about this playbook? After all, like every other successful
               company, all we need to do is build a product, create a team, find customers, sell
               our product, generate revenue!
             </p>
@@ -100,13 +99,13 @@ const Starter: React.FC = () => {
                 <li className="flex items-start">
                   <span className="w-2 h-2 bg-white rounded-full mr-2 mt-2"></span>
                   <span>
-                    If you have a strong technology idea in any of the focus areas mentioned above, a well thought out business model, clear vision for growth, then apply.
+                    If you have a strong technology idea in any of the focus areas mentioned above, a well-thought-out business model, and a clear vision for growth, then apply.
                   </span>
                 </li>
                 <li className="flex items-start">
                   <span className="w-2 h-2 bg-white rounded-full mr-2 mt-2"></span>
                   <span>
-                    You could be at any stage – Idea, PoC, MVP, Revenue – does not matter. Apply.
+                    You could be at any stage – Idea, PoC, MVP, Revenue – it does not matter. Apply.
                   </span>
                 </li>
               </ul>
