@@ -76,26 +76,6 @@ export default function Page() {
           </div>
         </div>
 
-        <p>
-          For more information, contact:{' '}
-          <Link
-            className="text-blue-500 underline"
-            href={'mailto:info.idrp@iiitdwd.ac.in'}
-          >
-            info.idrp@iiitdwd.ac.in
-          </Link>
-        </p>
-
-        <div className="w-full flex flex-col items-center">
-          <p>Apply Now</p>
-          <Link
-            className="text-blue-500 underline"
-            href={'https://forms.gle/gE25xrgatkahVPCz6'}
-          >
-            https://forms.gle/gE25xrgatkahVPCz6
-          </Link>
-        </div>
-
         <Image
           className="self-center py-2"
           src="/images/idrp-qr.webp"
@@ -173,12 +153,11 @@ export default function Page() {
           </a>
         </p>
         <p>
-          To apply, please visit{' '}
           <Link
             className="text-blue-500 underline"
             href="https://forms.gle/gE25xrgatkahVPCz6"
           >
-            https://forms.gle/gE25xrgatkahVPCz6
+            Apply here
           </Link>{' '}
           and submit your pitch deck by the deadline.
         </p>
@@ -194,4 +173,4 @@ export default function Page() {
       </div>
     </>
   );
-};
+}
