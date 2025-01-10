@@ -10,15 +10,6 @@ export type Jobs = {
 
 export const jobsData: Jobs[] = [
   {
-    'title': 'IIIT Dharwad Research Park invites applications for External Startup Incubation',
-    'category': 'staff',
-    'details': '',
-    'lastDate': '31.01.2025',
-    'generalInstructions': '/docs/IIIT_Dharwad_Research_Park_invites_applications_for_External_Startup_Incubation.pdf',
-    'application': 'https://forms.gle/gE25xrgatkahVPCz6',
-    'extraInfo': []
-  },
-  {
     'title': 'Advertisement for the position of Marketing Manager',
     'category': 'staff',
     'details': '',
