@@ -14,7 +14,7 @@ export const jobsData: Jobs[] = [
     'category': 'staff',
     'details': '',
     'lastDate': '27.01.2025',
-    'generalInstructions': '/docs/Advertisement_for_the_recruitment_of_research_fellows.pdf',
+    'generalInstructions': '/docs/Advertisment_for_the_recruitment_of_research_fellows.pdf',
     'application': 'https://forms.gle/hbMbhnYxnRWYo7C79',
     'extraInfo': []
   },
