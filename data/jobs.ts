@@ -19,6 +19,15 @@ export const jobsData: Jobs[] = [
     'extraInfo': []
   },
   {
+    'title': 'Advertisement for the recruitment of research fellows',
+    'category': 'staff',
+    'details': '',
+    'lastDate': '27.01.2025',
+    'generalInstructions': '/docs/Advertisement_for_the_recruitment_of_research_fellows.pdf',
+    'application': 'https://forms.gle/hbMbhnYxnRWYo7C79',
+    'extraInfo': []
+  },
+  {
     'title': 'Advertisement for the position of Marketing Manager',
     'category': 'staff',
     'details': '',
