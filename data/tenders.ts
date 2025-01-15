@@ -1,10 +1,72 @@
 export const tenders: Tender[] = [
   {
     cancelled: false,
+    corrections: [],
+    documents: [
+      {
+        link: '/images/1224electrical-works.jpeg',
+        title: 'Advertisement'
+      }
+    ],
+    link: '/docs/NIT-Electrical%20Work%20at%20IIIT%20Dharwad.pdf',
+    publishDate: '2024-12-24',
+    submissionDeadline: '2025-01-10T15:00+05:30',
+    title: 'Notice Inviting Tender for electrical works at IIIT Dharwad',
+    updatedAt: 54,
+  },
+  {
+    cancelled: false,
+    corrections: [],
+    documents: [
+      {
+        link: '/images/104E88A.jpg',
+        title: 'Advertisement'
+      }
+    ],
+    link: '/docs/Notice%20Inviting%20Quotation%20-%20Milk%20Parlor%20&%20Fruit%20Juice%20Centre.pdf',
+    publishDate: '2024-12-23',
+    submissionDeadline: '2025-01-02T15:00+05:30',
+    title: 'Notice Inviting Quotations (NIQ) for Renting of Shops at IIIT Dharwad',
+    updatedAt: 54,
+  },
+  {
+    cancelled: false,
+    corrections: [
+      {
+        link: '/docs/Notification_Technical_Bid_Opening-24x7_Canteen_Service.pdf',
+        title: 'Technical Bid Opening',
+      },
+      {
+        link: '/docs/Notification_Financial_Bid_Opening_24x7_Canteen.pdf',
+        title: 'Financial Bid Opening',
+      }
+    ],
+    documents: [
+      {
+        link: '/images/12E1B81.jpg',
+        title: 'Advertisement',
+      },
+    ],
+    link: '/docs/Notice_Inviting_Tended_24x7_Canteen_Service.pdf',
+    publishDate: '2024-12-03',
+    submissionDeadline: '2024-12-24T15:00+05:30',
+    title: 'Notice Inviting Tender 24x7 Canteen Service',
+    updatedAt: 54,
+  },
+  {
+    cancelled: false,
     corrections: [
       {
         link: '/docs/corrigendum-addendum-Advertisement-TENDER-FOR-SELECTION-OF-AGENCY-FOR-PROVIDING-CATERING-SERVICES.pdf',
         title: 'Corrigendum/Addendum',
+      },
+      {
+        link: '/docs/TechnicalBidOpening-Notification.pdf',
+        title: 'Technical Bid Opening',
+      },
+      {
+        link: '/docs/Notification_Financial_Bid_Opening_Catering Service.pdf',
+        title: 'Financial Bid Opening',
       },
     ],
     documents: [
@@ -12,12 +74,16 @@ export const tenders: Tender[] = [
         link: '/images/Advertisement-TENDER-FOR-SELECTION-OF-AGENCY-FOR-PROVIDING-CATERING-SERVICES.jpg',
         title: 'Advertisement',
       },
+      {
+        link: '/docs/Pre-Bid queries & answers.pdf',
+        title: 'Pre-Bid Queries and Answers',
+      },
     ],
-    link: '/docs/TENDER-FOR-SELECTION-OF-AGENCY-FOR-PROVIDING-CATERING-SERVICES.pdf',
-    publishDate: '2024-11-21',
-    submissionDeadline: '2024-12-17T15:00+05:30',
-    title: 'NOTICE INVITING TENDER FOR SELECTION OF AGENCY FOR PROVIDING CATERING SERVICES',
-    updatedAt: 53,
+    link: '/docs/Tender_For_Selection_Of_Agency_For_Providing_Catering_Services.pdf',
+    publishDate: '2024-11-19',
+    submissionDeadline: '2024-12-22T15:00+05:30',
+    title: 'Notice Inviting Tender for Selection of Agency for Providing Catering Services',
+    updatedAt: 55,
   },
   {
     cancelled: false,

@@ -21,6 +21,17 @@ const AutoScrollCarousel = dynamic(
   () => import('@/components/HomePage/AutoScrollCarousel')
 );
 
+function renderNew(date: string) {
+  const currTime = new Date();
+  const time : number = currTime.getTime() - (new Date(date)).getTime();
+  if (time < 48 * 3600 * 1000) {
+    return <div className="transition-all animate-pulse absolute top-1 group-hover:bg-red-500 group-hover:text-white right-1 text-xs px-2 py-1 bg-red-300/50 rounded text-red-500">
+        New
+      </div>;
+  }
+  return <></>;
+}
+
 export default function Home() {
   const [program, setProgram] = useState(0);
 
@@ -28,7 +39,9 @@ export default function Home() {
     <div className="flex flex-col h-full w-full">
       <MainCarousel />
 
-      <section className=" bg-white border-t border-b border-slate-100 md:py-20 py-10 w-full flex flex-col lg:flex-row-reverse items-center md:px-20 sm:px-10 p-4 gap-6">
+      {
+        announcements.filter((a) => a.new).length > 0 &&
+        <section className=" bg-white border-t border-b border-slate-100 md:py-20 py-10 w-full flex flex-col lg:flex-row-reverse items-center md:px-20 sm:px-10 p-4 gap-6">
         <Image
           alt="main image"
           src={'/images/IIIT_Dharwad.webp'}
@@ -38,7 +51,7 @@ export default function Home() {
           style={{ height: 'auto', width: '100%' }}
           className="w-full rounded shadow-lg lg:basis-1/3 overflow-hidden object-cover object-center"
         />
-        <div className="w-full lg:basis-2/3 flex flex-col h-full">
+        <div className="w-full lg:basis-2/3 2xl:basis-full flex flex-col h-full">
           <div className="w-full items-center p-2 border-b border-b-slate-500 flex justify-between">
             <div className="text-dwd-primary font-semibold text-xl">
               Announcements
@@ -49,9 +62,7 @@ export default function Home() {
           </div>
           <div className="relative">
             <div className="flex flex-col gap-2 p-3 w-full">
-              {(announcements?.length <= 8
-                ? announcements.filter((a) => a.new)
-                : announcements.slice(0, 8)
+              {(announcements.filter((a) => a.new).slice(0, 8)
               ).map((item, index) => (
                 <a
                   href={item?.link}
@@ -73,12 +84,14 @@ export default function Home() {
                     />
                   </svg>
                   <div>{item?.text}</div>
+                  {item?.date && renderNew(item.date)}
                 </a>
               ))}
             </div>
           </div>
         </div>
       </section>
+      }
 
       <section className="w-full h-full bg-fixed relative overflow-hidden before:z-0 before:absolute before:h-full before:w-full before:left-0 before:top-0 before:bg-[#041E3FB3] bg-cover bg-repeat-y bg-[url('/images/IIIT_Dharwad.webp')]">
         <div className="my-16 z-[1] relative w-full flex flex-col items-center md:px-24 sm:px-10 p-4 gap-6">

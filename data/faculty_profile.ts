@@ -36,7 +36,7 @@ let ProfileProps: ProfileProp[] = [
         designation: 'Professor of Practice',  
         department: 'Department of Arts, Science & Design',
         mail_id: 'ramsubramanian@iiitdwd.ac.in',
-        cabin_number: '?',
+        cabin_number: '?',  
       },
       body: {
         profile_text: '',
@@ -508,7 +508,7 @@ let ProfileProps: ProfileProp[] = [
         department: 'Electronics and Communication Engineering',
         mail_id: 'jagadishdn@iiitdwd.ac.in',
         cabin_number: '?',
-        position: 'Faculty-In-Charge - Student Welfare [S.W.]',
+        position: 'Associate Dean - Student Welfare [S.W.]',
       },
       body: {
         profile_text: '',
@@ -540,31 +540,6 @@ let ProfileProps: ProfileProp[] = [
         interest_areas: [
           { id: 1, area: 'Natural Language Processing' },
           { id: 2, area: 'Artificial Intelligence' },
-        ],
-      },
-    },
-  },
-  {
-    id: 'LakshmanMahto',
-    content: {
-      head: {
-        name: 'Dr. Lakshman Mahto',
-        profile_pdf: 'https://sites.google.com/view/lakshya',
-      },
-      card: {
-        photo: '/images/Dr.LakshmanMahto.jpeg',
-        PhD:'Ph.D. (IIT Mandi)',
-        designation: 'Assistant Professor',
-        department: 'Department of Arts, Science, and Design',
-        mail_id: 'lakshman@iiitdwd.ac.in',
-        cabin_number: '?',
-      },
-      body: {
-        profile_text: '',
-        interest_areas: [
-          { id: 1, area: 'Statistical learning' },
-          { id: 2, area: 'Controllability of PDE' },
-          { id: 3, area: 'Dynamical systems' },
         ],
       },
     },
