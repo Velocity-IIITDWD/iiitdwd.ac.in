@@ -130,6 +130,7 @@ const navmenuItems: NavmenuItem[] = [
   { text: 'Placements', href: '/placements' },
   { text: 'Careers', href: '/careers' },
   { text: 'Contact Us', href: '/contact' },
+  { text: 'Online', href: 'https://online.iiitdwd.ac.in' },
 ];
 
 function onNavChange() {
@@ -336,7 +337,7 @@ function Header() {
                       className={navigationMenuTriggerStyle()}
                     >
                       <Link href={item.href!}>
-                        <div className="hover:bg-accent p-2 rounded-md w-full">
+                        <div className="hover:bg-accent p-0 rounded-md w-full">
                           {item.text}
                         </div>
                       </Link>
