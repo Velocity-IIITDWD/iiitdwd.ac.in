@@ -57,7 +57,7 @@ const navmenuItems: NavmenuItem[] = [
         width: 250,
         items: [
           { text: 'Introduction', href: '/about#introduction' },
-          { text: "Director's Message", href: '/about#directors-message' },
+          { text: 'Director\'s Message', href: '/about#directors-message' },
           { text: 'Our Family', href: '/about#family' },
           { text: 'Vision, Missions & Core Values', href: '/about#vision' },
         ],
@@ -127,6 +127,7 @@ const navmenuItems: NavmenuItem[] = [
       },
     ],
   },
+  { text: 'Online', href: 'https://online.iiitdwd.ac.in' },
   { text: 'Placements', href: '/placements' },
   { text: 'Careers', href: '/careers' },
   { text: 'Contact Us', href: '/contact' },
