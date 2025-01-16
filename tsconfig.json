@@ -5,6 +5,7 @@
       "dom.iterable",
       "esnext"
     ],
+    "allowImportingTsExtensions": true,
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -33,7 +34,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
-  ],
+, "migrations/utils/sanity.ts", "migrations/announcements.ts"  ],
   "exclude": [
     "node_modules"
   ]

@@ -73,21 +73,27 @@ function TabsContentContent({ tabsData: tabsData }: TabsContentContentProps) {
                           <span
                             className={cn(
                               'inline-block',
-                              correction.link && 'underline',
                               correction.title.toLowerCase().includes('cancel')
                                 ? 'text-red-500'
-                                : 'text-green-500'
+                                : 'text-green-500',
+
                             )}
                             key={index}
                           >
                             {correction.link ? (
-                              <Link href={correction.link} target="_blank">
+                              <Link className='underline' href={correction.link} target="_blank">
                                 {correction.title}
                               </Link>
                             ) : (
                               correction.title
                             )}
+                            {
+                              correction.isNew && <span className="text-xs ml-2  px-2 py-1 bg-red-300/50 rounded text-red-500 animate-blink ">
+                                New
+                              </span>
+                            }
                           </span>
+
                         ))}
                       </div>
                     </div>

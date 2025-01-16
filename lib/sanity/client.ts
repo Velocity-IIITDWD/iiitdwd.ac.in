@@ -1,4 +1,4 @@
-import { createClient, QueryWithoutParams } from '@sanity/client';
+import { createClient, QueryParams } from '@sanity/client';
 
 export const client = createClient({
   projectId: '3hussc2p',
@@ -9,10 +9,10 @@ export const client = createClient({
 
 export const FetchSanity = async (
   query: string,
-  params?: QueryWithoutParams
+  params?: QueryParams
 ): Promise<any> => {
   try {
-    const res = await client.fetch(query);
+    const res = await client.fetch(query, params ?? {});
     return res;
   } catch (err) {
     console.error('Error fetching data:', err);
