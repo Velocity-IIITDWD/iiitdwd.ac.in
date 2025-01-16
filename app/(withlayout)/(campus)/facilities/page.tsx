@@ -1,11 +1,15 @@
 import Head from 'next/head';
-import { facilities } from '@/data/campus/facilities';
+import { Facility } from '@/data/campus/facilities';
 import Card from '@/components/campus/facilities/Card';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { SquareArrowOutUpRightIcon } from 'lucide-react';
+import { FetchSanity } from '@/lib/sanity/client';
+import { GetFacilities } from '@/lib/sanity/Queries';
 
-const FacilitiesPage: React.FC = () => {
+const FacilitiesPage: React.FC = async() => {
+  const data = await FetchSanity(GetFacilities) as Facility[];
+
   return (
     <div>
       <Head>
@@ -24,7 +28,7 @@ const FacilitiesPage: React.FC = () => {
             View campus gallery <SquareArrowOutUpRightIcon className='inline' size='1rem' />
           </div>
         </Link>
-        {facilities.map((facility, index) => (
+        {data.map((facility, index) => (
           <Card
             key={index}
             blockName={facility.blockName}
