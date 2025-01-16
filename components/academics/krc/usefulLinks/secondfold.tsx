@@ -1,13 +1,17 @@
 import { FC } from 'react';
 import Link from 'next/link';
-import { linkData } from '../../../../data/krc/data';
+import { FetchSanity } from '@/lib/sanity/client';
+import { GetKrcData } from '@/lib/sanity/Queries';
+import { LinkData } from '@/data/krc/dataTel';
 
-const ThirdFold: FC = () => {
+
+const ThirdFold: FC = async () => {
+  const data = await FetchSanity(GetKrcData) as LinkData[];
   return (
     <div className="bg-gray-200 py-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8">
-          {linkData.map((link, index) => (
+          {data.map((link, index) => (
             <a
               key={index}
               href={link.link}

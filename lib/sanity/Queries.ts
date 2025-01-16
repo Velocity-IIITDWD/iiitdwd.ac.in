@@ -62,6 +62,14 @@ const GetBoard = `*[_type == "boardOfGovernors"] {
     imageURL
   }
 }`;
+const GetFormerBoard = `*[_type == "formerBoardOfGovernor"] {
+  title,
+  profiles[] {
+    title,
+    content,
+    imageURL
+  }
+}`;
 
 const GetAnnouncements = `*[_type == "announcement"]{
   link,
@@ -101,4 +109,60 @@ const GetAbout = `*[_type == "about"]{
   
 }`;
 
-export { GetDescription,getAllFaculties, query, GetAllVisitors,GetAllStaff,GetAllSenate,GetFormer,GetChair,GetBoard,GetAnnouncements,GetLinks };
+const GetResearch =  `*[_type == "profiles"] {
+  title,
+  profiles[] {
+    title,
+    content,
+    imageURL
+  }
+}`;
+const GetResearchAdvertisement =  `*[_type == "advertisement"]{
+  time,
+  lastDate,
+  generalInstructions,
+  applicationForm
+}`;
+const GetCampusData =  `*[_type == "campusData"] {
+  title,
+  href,
+  imageUrl
+}
+`;
+const GetFacilities =`*[_type == "facility"] {
+  title,
+  blockName,
+  items,
+  imageUrl
+}`;
+const GetKrcData =`*[_type == "krcData"] {
+  title,
+  description,
+  accessInfo,
+  buttonText,
+  link
+}
+`;
+const GetKrcDataTel =`*[_type == "krcDataTEL"] {
+  title,
+  description,
+  accessInfo,
+  buttonText,
+  link
+}
+`;
+const GetKrcDataTelFull =`*[_type == "krcDataTelFull"] {
+  heading,
+  card[] {
+    title,
+    description,
+    accessInfo,
+    buttonText,
+    link
+  }
+}
+
+`;
+
+
+export { GetDescription,getAllFaculties, query, GetAllVisitors,GetAllStaff,GetAllSenate,GetFormer,GetChair,GetBoard,GetAnnouncements,GetLinks,GetFormerBoard,GetResearch,GetResearchAdvertisement,GetCampusData,GetFacilities,GetKrcData,GetKrcDataTel,GetKrcDataTelFull };

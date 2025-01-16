@@ -1,9 +1,13 @@
 import { FC } from 'react';
 import Link from 'next/link';
-import { linkData } from '../../../data/krc/dataTel';
+import { LinkData } from '../../../data/krc/dataTel';
+import { GetKrcDataTel } from '@/lib/sanity/Queries';
+import { FetchSanity } from '@/lib/sanity/client';
 
-const FourthFold: FC = () => {
+const FourthFold: FC = async() => {
   const maxCards = 3;
+  const data = await FetchSanity(GetKrcDataTel) as LinkData[];
+
 
   return (
     <div className="bg-black py-16">
@@ -13,7 +17,7 @@ const FourthFold: FC = () => {
           Initiatives of MoE:
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8">
-          {linkData.slice(0, maxCards).map((link, index) => (
+          {data.slice(0, maxCards).map((link, index) => (
             <a
               key={index}
               href={link.link}

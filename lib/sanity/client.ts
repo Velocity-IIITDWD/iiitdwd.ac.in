@@ -2,7 +2,7 @@ import { createClient, QueryWithoutParams } from '@sanity/client';
 
 export const client = createClient({
   projectId: '3hussc2p',
-  dataset: 'production',
+  dataset: 'prod',
   apiVersion: '2024-11-28',
   useCdn: false,
 });
