@@ -2,6 +2,7 @@ import chalk from 'chalk';
 import logUpdate from 'log-update';
 import { migrateAnnouncements } from '../announcements.ts';
 import { migrateTenders } from '../tenders.ts';
+import { migrateFaculties } from '../faculty.ts';
 
 async function runAllMigrations() {
   try {
@@ -18,6 +19,11 @@ async function runAllMigrations() {
     logUpdate(chalk.bold.blue('Starting tenders migration...'));
     await migrateTenders();
     logUpdate(chalk.bold.green('Tenders migration completed successfully!\n'));
+
+    // Run faculties migration
+    logUpdate(chalk.bold.blue('Starting faculties migration...'));
+    await migrateFaculties();
+    logUpdate(chalk.bold.green('Faculties migration completed successfully!\n'));
 
     logUpdate(chalk.bold.green('All migrations completed successfully!'));
   } catch (error) {
