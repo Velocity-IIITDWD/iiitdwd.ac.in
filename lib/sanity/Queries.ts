@@ -1,7 +1,6 @@
-const query = `*[_type == "faculty" && facultyId == $id] {
+const GetFacultyDetails = `*[_type == "faculty" && facultyId == $id] {
   "id": facultyId,
-  "file": content.head.file.asset->url,
-  "photo": content.card.photo.asset->url,
+  "photo": content.card.photo,
   content
 }`;
 
@@ -70,7 +69,7 @@ const GetAnnouncements = `*[_type == "announcement"]{
   text,
   year,
   date,
-}`
+}`;
 
 const GetLinks = `*[_type == "linksStructure"]{
   id,
@@ -80,18 +79,17 @@ const GetLinks = `*[_type == "linksStructure"]{
     link,
     id
   }
-}`
+}`;
 
 const GetDescription = `*[_type == "descriptionStructure"]{
   id,
   heading,
   description
-}`
+}`;
 
 // const GetSeats = `*[_type == "seatsStructure"]{
-  
-// }
 
+// }
 
 const GetAbout = `*[_type == "about"]{
   coreValues[] {
@@ -101,4 +99,16 @@ const GetAbout = `*[_type == "about"]{
   
 }`;
 
-export { GetDescription,getAllFaculties, query, GetAllVisitors,GetAllStaff,GetAllSenate,GetFormer,GetChair,GetBoard,GetAnnouncements,GetLinks };
+export {
+  GetDescription,
+  getAllFaculties,
+  GetFacultyDetails,
+  GetAllVisitors,
+  GetAllStaff,
+  GetAllSenate,
+  GetFormer,
+  GetChair,
+  GetBoard,
+  GetAnnouncements,
+  GetLinks,
+};

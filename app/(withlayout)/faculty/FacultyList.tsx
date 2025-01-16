@@ -70,11 +70,11 @@ const List = ({ ll }: ListProps) => {
                   {Array.isArray(arr?.content?.card?.position) &&
                   arr.content.card.position.length > 0
                     ? arr.content.card.position.map((line, index) => (
-                        <li key={index}>{line}</li>
-                      ))
-                    : arr?.content?.card?.position && (
-                        <li>{arr.content.card.position}</li>
-                      )}
+                      <li key={index}>{line}</li>
+                    ))
+                    : arr?.content?.card?.position?.length !== 0 && (
+                      <li>{arr.content.card.position}</li>
+                    )}
                 </ul>
               </div>
               <h6 className="text-sm mt-3">{arr.content.card.department}</h6>
