@@ -11,7 +11,7 @@ export type Announcement = {
 
 export const announcements: Announcement[] = [
   {
-    link: '/docs/PhD%20&%20M.Tech(R)-%20Provisional%20List-15Jan25.pdf',
+    link: '/docs/2PhD&M.Tech(R)-ProvisionalList-15Jan25-Updated-ShaliniK.pdf',
     text: 'PhD and M.Tech by Research - Provisional Admission list',
     new: true,
     month: '1',
