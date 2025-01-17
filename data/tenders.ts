@@ -4,6 +4,21 @@ export const tenders: Tender[] = [
     corrections: [],
     documents: [
       {
+        link: '/images/84733b0a-962e-402e-ba9b-dd29f2c84652.jpg',
+        title: 'Advertisement'
+      }
+    ],
+    link: '/docs/NOTICE_INVITING_TENDER_PHASE_-II_(A)_CONSTRUCTION_OF_IIIT_DHARWAD_CAMPUS.pdf',
+    publishDate: '2025-01-17',
+    submissionDeadline: '2025-02-10T17:00+05:30',
+    title: 'NOTICE INVITING TENDER FOR PHASE-II (A) CONSTRUCTION OF IIIT DHARWAD CAMPUS',
+    updatedAt: 55,
+  },
+  {
+    cancelled: false,
+    corrections: [],
+    documents: [
+      {
         link: '/images/1224electrical-works.jpeg',
         title: 'Advertisement'
       }
