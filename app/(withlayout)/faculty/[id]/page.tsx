@@ -1,5 +1,4 @@
-// 'use client';
-import { ProfileProps } from '@/data/faculty_profile';
+import { ProfileProp } from '@/data/faculty_profile';
 import '@/app/globals.css';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -7,56 +6,61 @@ import {
   CircleUser,
   GraduationCap,
   BriefcaseBusiness,
-  Mail,
   MapPin,
   Split,
 } from 'lucide-react';
+import { client } from '@/lib/sanity/client';
+import { getAllFaculties, query } from '@/lib/sanity/Queries';
 
-export function generateStaticParams(): { id: string }[] {
-  return ProfileProps.map((p) => ({ id: p.id }));
+
+async function getProfileData(id: string) {
+  const [data] = (await client.fetch(query, { id })) as any;
+  const {
+    facultyId,
+    file,
+    photo,
+    content: { head, card, body },
+  } = data;
+
+  return {
+    id: facultyId,
+    content: {
+      head: {
+        ...head,
+        profile_pdf: head?.link || file || '',
+      },
+      card: {
+        ...card,
+        photo,
+      },
+      body: {
+        ...body,
+        interest_areas: body.interest_areas.map((area: string, id: number) => ({
+          id,
+          area,
+        })),
+      },
+    },
+  } as ProfileProp;
 }
 
-type ProfileProp = {
-  id: string;
-  content: {
-    head: {
-      name: string;
-      profile_pdf: string;
-    };
+export async function generateStaticParams(): Promise<{ id: string }[]> {
+  const data = await client.fetch(getAllFaculties);
 
-    card: {
-      photo: string;
-      designation: string;
-      department: string;
-      mail_id: string;
-      cabin_number: string;
-      PhD:string;
-    };
-
-    body: {
-      profile_text: string;
-      interest_areas: { id: number; area: string }[];
-    };
-  };
-};
-
-interface pp {
-  params: { id: string };
-  searchParams: {};
-}
-
-interface ProfileProps {
-  idd: number;
-}
-
-const Profile = (params: pp) => {
-  const profileId = params.params.id;
-  const profile: ProfileProp | undefined = ProfileProps.find(
-    (profileProp) => profileProp.id === profileId
-  );
-  if (!profile) {
-    return <div></div>;
+  if (!data || !Array.isArray(data) || data.length === 0) {
+    console.error('No faculty data found.');
+    return [];
   }
+
+  return data;
+}
+
+export default async function Profile({
+  params: { id },
+}: {
+  params: { id: string };
+}) {
+  const profile = (await getProfileData(id)) as ProfileProp;
 
   const areaofinterest_array: JSX.Element[] | undefined =
     profile.content.body.interest_areas.map((arr) => (
@@ -94,6 +98,7 @@ const Profile = (params: pp) => {
                   src={profile.content.card.photo}
                   width={0}
                   height={0}
+                  priority
                   sizes="100%"
                   style={{ height: '250px', width: '250px' }}
                   alt={profile.content.head.name}
@@ -102,20 +107,24 @@ const Profile = (params: pp) => {
               </div>
               <div>
                 <div className="flex flex-col  space-y-4 pt-12">
-                 {profile.content.card.department? <div className="flex flex-row gap-2  ">
-                    <span className="flex-shrink-0">
-                      <Split />
-                    </span>
+                  {profile.content.card.department ? (
+                    <div className="flex flex-row gap-2  ">
+                      <span className="flex-shrink-0">
+                        <Split />
+                      </span>
 
-                    <span>{profile.content.card.department}</span>
-                  </div>:(<></>)}
+                      <span>{profile.content.card.department}</span>
+                    </div>
+                  ) : (
+                    <></>
+                  )}
                   <div className="flex flex-row gap-2 ">
                     <span className="flex-shrink-0">
                       <BriefcaseBusiness />
                     </span>
                     <span>{profile.content.card.designation}</span>
                   </div>
-                  {profile.content.card.PhD !== '' && (  
+                  {profile.content.card.PhD !== '' && (
                     <div className="flex flex-row gap-2">
                       <span className="flex-shrink-0">
                         <GraduationCap />
@@ -125,7 +134,7 @@ const Profile = (params: pp) => {
                       </span>
                     </div>
                   )}
-                 
+
                   <div className="flex flex-row  gap-2 hidden">
                     <MapPin />
                     <span>{profile.content.card.cabin_number}</span>
@@ -148,7 +157,7 @@ const Profile = (params: pp) => {
               </div>
             </div>
             <div>
-              {areaofinterest_array.length ? (
+              {areaofinterest_array?.length ? (
                 <>
                   <div className="flex flex-col md:pt-20">
                     <div className="flex flex-row  gap-2 font-bold text-xl border-b-2 border-black">
@@ -168,10 +177,10 @@ const Profile = (params: pp) => {
             </div>
             {profile.content.card.mail_id && (
               <div>
-                <span className='font-bold'>Email: </span>
-                <Link 
+                <span className="font-bold">Email: </span>
+                <Link
                   href={`mailto:${profile.content.card.mail_id}`}
-                  className='underline hover:text-blue-400'
+                  className="underline hover:text-blue-400"
                 >
                   {profile.content.card.mail_id}
                 </Link>
@@ -182,6 +191,4 @@ const Profile = (params: pp) => {
       </div>
     </>
   );
-};
-
-export default Profile;
+}

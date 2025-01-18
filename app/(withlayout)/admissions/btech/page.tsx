@@ -1,10 +1,53 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { descriptions, seatMatrix, year, links } from '@/data/admissions';
-import { ExternalLink } from 'lucide-react';
 import { Fragment } from 'react';
+import { client } from '@/lib/sanity/client';
+import { GetDescription, GetLinks } from '@/lib/sanity/Queries';
 
-export default function Page() {
+export default async function Page() {
+  const GetSanityDataLinks = async () => {
+    try {
+      const res = await client.fetch(GetLinks);
+      return res; // Return fetched data
+    } catch (err) {
+      console.error('Error fetching data:', err);
+      return [];
+    }
+  };
+
+  const LinkData = await GetSanityDataLinks(); 
+  const mergedLinks = [...links, ...LinkData];
+
+  const GetSanityDataDescription = async () => {
+    try {
+      const res = await client.fetch(GetDescription);
+      return res;
+    } catch (err) {
+      console.error('Error fetching data:', err);
+      return [];
+    }
+  };
+
+  const DescriptionData = await GetSanityDataLinks(); 
+  const mergedDescription = [...descriptions, ...DescriptionData];
+  // console.log(mergedDescription);
+
+
+  //Seat Not Implemented
+  // const GetSanitySeat = async () => {
+  //   try {
+  //     const res = await client.fetch(GetSeats);
+  //     return res; // Return fetched data
+  //   } catch (err) {
+  //     console.error('Error fetching data:', err);
+  //     return [];
+  //   }
+  // };
+  // const seatsData = await GetSanitySeat(); 
+
+
+
   return (
     <div className="w-fit max-w-5xl p-4 flex flex-col gap-2 pb-12 overflow-auto">
       <p className="text-dwd-primary font-bold text-4xl text-center mb-2">
@@ -167,10 +210,10 @@ export default function Page() {
 
       
 
-      {links.map((obj) => (
+      {mergedLinks.map((obj) => (
         <Fragment key={obj.id}>
           <p className="mt-2 text-lg font-bold text-dwd-primary">{obj.type}</p>
-          {obj.links.map((o) => (
+          {obj.links.map((o : any) => (
             <Link
               className='pl-2 text-dwd-primary w-fit block hover:underline underline-offset-2 after:-translate-y-1/3 after:absolute relative after:content-[url("/icons/linkIcon.svg")]'
               href={o.link}
@@ -181,7 +224,7 @@ export default function Page() {
           ))}
         </Fragment>
       ))}
-      {descriptions.map((obj) => (
+      {mergedDescription.map((obj) => (
         <Fragment key={obj.id}>
           <p className="mt-2 text-lg font-bold text-dwd-primary">
             {obj.heading}

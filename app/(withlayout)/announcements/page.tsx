@@ -1,37 +1,52 @@
 import { ChevronDown } from 'lucide-react';
 import { Metadata } from 'next';
 import { type Announcement, announcements } from '@/data/announcements';
+import { client } from '@/lib/sanity/client';
+import { GetAnnouncements } from '@/lib/sanity/Queries';
+
+export default async function Page() {
+  const GetSanityData = async () => {
+    try {
+      const res = await client.fetch(GetAnnouncements);
+      return res;
+    } catch (err) {
+      console.error('Error fetching data:', err);
+      return [];
+    }
+  };
+  const data = await GetSanityData();
+  const mergedData = [...announcements, ...data];
+
+  const newAnnouncements = mergedData.filter(a => a.new);
+  const oldAnnouncements = mergedData.filter(a => !a.new);
+  const byMonth: Record<string, Announcement[]> = {};
+
+  for (let ann of oldAnnouncements) {
+    let key = ann.year + ' ' + (ann.month.length === 1 ? ('0' + ann.month) : ann.month);
+
+    if (!Object.keys(byMonth).includes(key)) byMonth[key] = [];
+    byMonth[key].push(ann)
+  }
+
+  const sortedKeys = Object.keys(byMonth).sort().reverse();
+
+  const MonthMap = {
+    '01': 'January',
+    '02': 'February',
+    '03': 'March',
+    '04': 'April',
+    '05': 'May',
+    '06': 'June',
+    '07': 'July',
+    '08': 'August',
+    '09': 'September',
+    '10': 'October',
+    '11': 'November',
+    '12': 'December',
+  } as const;
 
 
-const newAnnouncements = announcements.filter(a => a.new);
-const oldAnnouncements = announcements.filter(a => !a.new);
-const byMonth: Record<string, Announcement[]> = {};
 
-for (let ann of oldAnnouncements) {
-  let key = ann.year + ' ' + (ann.month.length === 1 ? ('0' + ann.month) : ann.month);
-
-  if (!Object.keys(byMonth).includes(key)) byMonth[key] = [];
-  byMonth[key].push(ann)
-}
-
-const sortedKeys = Object.keys(byMonth).sort().reverse();
-
-const MonthMap = {
-  '01': 'January',
-  '02': 'February',
-  '03': 'March',
-  '04': 'April',
-  '05': 'May',
-  '06': 'June',
-  '07': 'July',
-  '08': 'August',
-  '09': 'September',
-  '10': 'October',
-  '11': 'November',
-  '12': 'December',
-} as const;
-
-export default function Page() {
   return (
     <div className="flex flex-col h-full w-full">
       <section className="w-full h-[50vh] bg-cover bg-center bg-[url('/images/LandingPage.png')] relative before:z-0 before:absolute before:h-full before:w-full before:left-0 before:top-0 before:bg-[#041E3FB3] flex items-center justify-center">

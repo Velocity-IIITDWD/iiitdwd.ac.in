@@ -1,14 +1,18 @@
 import { Metadata } from 'next';
-import group from '@/data/profile/visitor';
 import { ProfileGroup } from '@/components/profile/ProfileGroup';
+import { client, FetchSanity } from '@/lib/sanity/client';
+import { GetAllVisitors } from '@/lib/sanity/Queries';
+import { ProfileGroup as ProfileGroupType } from '@/types/profile';
 
 const title = 'Visitor';
 
-export default function VisitorPage() {
+export default async function VisitorPage() {
+  const data = await FetchSanity(GetAllVisitors) as ProfileGroupType[];
+
   return (
     <>
       <h1 className="heading-text">{title}</h1>
-      {group.map(({ profiles, title }, index) => (
+      {data.map(({ profiles, title }, index) => (
         <ProfileGroup key={index} profiles={profiles} title={title} />
       ))}
     </>
