@@ -1,7 +1,7 @@
 name: Backup Sanity Data
 
 on:
-    workflow_dispatch: # Allows manual triggering
+  workflow_dispatch: # Allows manual triggering
 #   schedule:
 #     - cron: '0 0 * * *' # Runs daily at midnight UTC
 
@@ -26,7 +26,7 @@ jobs:
         run: npx tsx ./buildScripts/backupSanityData.ts
 
       - name: Upload backup as artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: sanity-backup-${{ github.run_id }} # Unique name for the artifact
           path: backups/ # Directory to upload

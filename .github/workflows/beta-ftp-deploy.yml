@@ -1,4 +1,4 @@
-name: Deploy to cPanel
+name: Beta Deploy to cPanel
 
 on:
   workflow_dispatch:
