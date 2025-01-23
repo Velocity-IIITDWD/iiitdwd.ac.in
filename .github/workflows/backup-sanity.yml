@@ -1,0 +1,33 @@
+name: Backup Sanity Data
+
+on:
+    workflow_dispatch: # Allows manual triggering
+#   schedule:
+#     - cron: '0 0 * * *' # Runs daily at midnight UTC
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          cache: 'npm' # Cache pnpm dependencies
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run backup script
+        run: npx tsx ./buildScripts/backupSanityData.ts
+
+      - name: Upload backup as artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: sanity-backup-${{ github.run_id }} # Unique name for the artifact
+          path: backups/ # Directory to upload
+          retention-days: 30 # Keep artifacts for 30 days
