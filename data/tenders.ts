@@ -10,6 +10,10 @@ export const tenders: Tender[] = [
       {
         link: '/docs/DTS.pdf',
         title: 'KPP Portal Notice Inviting Tender',
+      },
+      {
+        link: 'https://kppp.karnataka.gov.in/',
+        title: 'Please click here to search and submit tender online'
       }
     ],
     link: '/docs/NOTICE_INVITING_TENDER_PHASE_-II_(A)_CONSTRUCTION_OF_IIIT_DHARWAD_CAMPUS.pdf',
