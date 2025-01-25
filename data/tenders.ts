@@ -2,13 +2,18 @@ export const tenders: Tender[] = [
   {
     cancelled: false,
     corrections: [],
-    documents: [
-      {
-        link : "docs/GeM-Bidding-7416026.pdf",
-        title : "Bid Document"
-      }
-    ],
-    link: '/docs/GeM-Bidding-7416026.pdf',
+    documents: [],
+    link: '/docs/ORDX11DM/GeM-Bidding-7416026[1].pdf',
+    publishDate: '2025-01-25',
+    submissionDeadline: '12-02-2025 19:00:00',
+    title: ' Digital Forensic Workstation, Modular Work Stations (V2),Workstation, High End Desktop Computer, High End Laptop Notebook, Wooden Podium, High End Multipara Monitor(V2), High end Office Table / Desk Furniture Set / Suit, MultiStation Gym (V2), HAND EXERCISE TABLE',
+    updatedAt: 57,
+  },
+  {
+    cancelled: false,
+    corrections: [],
+    documents: [],
+    link: '/docsIE/X1CPD693/GeM-Bidding-7432350[1].pdf',
     publishDate: '2025-01-25',
     submissionDeadline: '06-02-2025 17:00',
     title: 'Procurement of RO Water Treatment System 250 LPH Filtration Capacity',
