@@ -4,6 +4,21 @@ export const tenders: Tender[] = [
     corrections: [],
     documents: [
       {
+        link : "docs/GeM-Bidding-7416026.pdf",
+        title : "Bid Document"
+      }
+    ],
+    link: '/docs/GeM-Bidding-7416026.pdf',
+    publishDate: '2025-01-25',
+    submissionDeadline: '06-02-2025 17:00',
+    title: 'Procurement of RO Water Treatment System 250 LPH Filtration Capacity',
+    updatedAt: 56,
+  },
+  {
+    cancelled: false,
+    corrections: [],
+    documents: [
+      {
         link: '/images/84733b0a-962e-402e-ba9b-dd29f2c84652.jpg',
         title: 'Advertisement'
       },
