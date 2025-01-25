@@ -2,6 +2,26 @@ export const tenders: Tender[] = [
   {
     cancelled: false,
     corrections: [],
+    documents: [],
+    link: '/docs/GeM-Bidding-7416026.pdf',
+    publishDate: '2025-01-25',
+    submissionDeadline: '2025-02-12T19:00+05:30',
+    title: 'Procurement of High End Computer Work Station',
+    updatedAt: 57,
+  },
+  {
+    cancelled: false,
+    corrections: [],
+    documents: [],
+    link: '/docs/GeM-Bidding-7432350.pdf',
+    publishDate: '2025-01-25',
+    submissionDeadline: '2025-02-06T17:00+05:30',
+    title: 'Procurement of RO Water Treatment System 250 LPH Filtration Capacity',
+    updatedAt: 56,
+  },
+  {
+    cancelled: false,
+    corrections: [],
     documents: [
       {
         link: '/images/84733b0a-962e-402e-ba9b-dd29f2c84652.jpg',
