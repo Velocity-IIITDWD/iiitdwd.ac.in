@@ -8,8 +8,13 @@ import Image from 'next/image';
 import { GalleryImages } from '@/data/gallery';
 import { events } from '@/data/events';
 import { announcements } from '@/data/announcements';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
+
+
+import { client } from '@/lib/sanity/client';
+const queryevent = '*[_type == "eventInf"]';
+const querygallery = '*[_type == "gallery"]';
 
 const MainCarousel = dynamic(
   () => import('@/components/HomePage/MainCarousel')
@@ -33,6 +38,27 @@ function renderNew(date: string) {
 }
 
 export default function Home() {
+
+
+  const [Fulldata, setFulldata] = useState<any[]>(events);
+  const [galleryData, setFullGallery] = useState<any[]>(GalleryImages);
+ // const [programsData, setProgramsData] = useState<any[]>(Programs); this is hard coded so no need to fetch
+
+  
+    useEffect(() => {
+      const fetchData = async () => {
+        const datagallery = (await client.fetch(querygallery)) as any[];
+        const dataevent = (await client.fetch(queryevent)) as any[];
+        //const newprogramsData = (await client.fetch('*[_type == "programsType"]')) as any[];
+        
+        setFulldata(dataevent.concat(events));
+        setFullGallery(datagallery.concat(GalleryImages));
+        //setProgramsData(newprogramsData.concat(Programs))
+      };
+      fetchData();
+    }, [])
+
+
   const [program, setProgram] = useState(0);
 
   return (
@@ -242,7 +268,7 @@ export default function Home() {
           Event Calendar
         </p>
         <AutoScrollCarousel>
-          {events?.map((item) => (
+          {Fulldata?.map((item) => (
             <Card
               className="w-full relative shadow-md flex-[0_0_100%] lg:flex-[0_0_50%] 2xl:flex-[0_0_33.33%]"
               key={item?.id}
@@ -371,7 +397,7 @@ export default function Home() {
           Gallery
         </p>
         <AutoScrollCarousel>
-          {GalleryImages.map((item, index) => (
+          {galleryData.map((item, index) => (
             <Card
               key={index}
               className="w-full h-full relative flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_25%] overflow-hidden"

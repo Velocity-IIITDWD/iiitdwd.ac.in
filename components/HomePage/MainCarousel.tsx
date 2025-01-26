@@ -1,6 +1,6 @@
 // components/EmblaCarousel.tsx
 'use client';
-import React, { useCallback, useEffect, useRef } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import {
   EmblaCarouselType,
@@ -25,7 +25,22 @@ type PropType = {
   options?: EmblaOptionsType;
 };
 
+import { client } from '@/lib/sanity/client';
+const queryCarousal = '*[_type == "mainCarouselImage"]';
+
 const MainCarousel: React.FC<PropType> = ({ options }) => {
+
+
+  const [Fulldata, setFulldata] = useState<any[]>(images);
+  
+    useEffect(() => {
+      const fetchData = async () => {
+        const data = (await client.fetch(queryCarousal)) as any[];
+        setFulldata(data.concat(images));
+      };
+      fetchData();
+    }, [])
+
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, ...options }, [
     Autoplay({ delay: 4000, stopOnInteraction: false }),
   ]);
@@ -168,7 +183,7 @@ const MainCarousel: React.FC<PropType> = ({ options }) => {
     <section className="embla">
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
-          {images.map((item, index) =>
+          {Fulldata.map((item, index) =>
             item?.link ? (
               <Link key={index} className="embla__slide" href={item?.link}>
                 <Card className="slide_number_main border-none p-0">
