@@ -9,43 +9,24 @@ import {
   MapPin,
   Split,
 } from 'lucide-react';
-import { client } from '@/lib/sanity/client';
-import { getAllFaculties, query } from '@/lib/sanity/Queries';
-
+import { FetchSanity } from '@/lib/sanity/client';
+import { getAllFaculties, GetFacultyDetails } from '@/lib/sanity/Queries';
 
 async function getProfileData(id: string) {
-  const [data] = (await client.fetch(query, { id })) as any;
+  const [data] = await FetchSanity(GetFacultyDetails, { id });
   const {
     facultyId,
-    file,
-    photo,
-    content: { head, card, body },
+    content,
   } = data;
 
   return {
     id: facultyId,
-    content: {
-      head: {
-        ...head,
-        profile_pdf: head?.link || file || '',
-      },
-      card: {
-        ...card,
-        photo,
-      },
-      body: {
-        ...body,
-        interest_areas: body.interest_areas.map((area: string, id: number) => ({
-          id,
-          area,
-        })),
-      },
-    },
+    content,
   } as ProfileProp;
 }
 
 export async function generateStaticParams(): Promise<{ id: string }[]> {
-  const data = await client.fetch(getAllFaculties);
+  const data = await FetchSanity(getAllFaculties);
 
   if (!data || !Array.isArray(data) || data.length === 0) {
     console.error('No faculty data found.');
@@ -135,7 +116,7 @@ export default async function Profile({
                     </div>
                   )}
 
-                  <div className="flex flex-row  gap-2 hidden">
+                  <div className="flex-row gap-2 hidden">
                     <MapPin />
                     <span>{profile.content.card.cabin_number}</span>
                   </div>
@@ -147,7 +128,7 @@ export default async function Profile({
           <div className="basis-1/2 flex flex-col space-y-8">
             <div>
               <div className="flex flex-col">
-                <div className="flex flex-row  gap-2 font-bold text-xl border-b-2 border-black hidden">
+                <div className="flex-row  gap-2 font-bold text-xl border-b-2 border-black hidden">
                   <CircleUser />
                   <span>Profile</span>
                 </div>

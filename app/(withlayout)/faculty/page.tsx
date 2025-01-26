@@ -1,5 +1,4 @@
 import { client } from '@/lib/sanity/client';
-import { urlFor } from '@/lib/sanity/image';
 import FacultyList from './FacultyList';
 import { ProfileProp } from '@/data/faculty_profile';
 
@@ -10,13 +9,7 @@ async function getData() {
 
   const mappedFaculties = data.map(({ facultyId, content }) => ({
     id: facultyId,
-    content: {
-      ...content,
-      card: {
-        ...content.card,
-        photo: urlFor(content.card?.photo).url(),
-      },
-    },
+    content,
   })) as ProfileProp[];
 
   mappedFaculties.sort((a, b) => a.id.localeCompare(b.id));
