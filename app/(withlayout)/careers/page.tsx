@@ -9,9 +9,10 @@ import {
 } from '@/components/ui/select';
 import { FileTextIcon, SearchIcon, SquareArrowOutUpRight } from 'lucide-react';
 
-import { jobsData } from '@/data/jobs';
+import { Jobs, jobsData } from '@/data/jobs';
 import Link from 'next/link';
 import { useCallback, useEffect, useRef, useState } from 'react';
+import { client } from '@/lib/sanity/client';
 
 const currDate = new Date();
 
@@ -37,7 +38,23 @@ const checkValid = (s: string) => {
   return jobDate >= currDate;
 };
 
-const updatedJobsData = jobsData
+
+
+export default function CareersPage() {
+
+ const [Fulldata, setFulldata] = useState<Jobs[]>(jobsData);
+ const [updatedJobsData, setUpdatedJobsData] = useState<Jobs[]>(jobsData);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = (await client.fetch('*[_type == "jobs"]')) as Jobs[];
+      setFulldata(data.concat(jobsData));
+    };
+    fetchData();
+  }, [])
+
+  useEffect(() => {
+    const data = Fulldata
   .map((job) => {
     const isDateValid = checkValid(job.lastDate);
     return {
@@ -51,7 +68,10 @@ const updatedJobsData = jobsData
       new Date(b.actualDate).getTime() - new Date(a.actualDate).getTime()
   );
 
-export default function CareersPage() {
+  setUpdatedJobsData(data);
+
+}, [Fulldata]);
+
   const [category, setCategory] = useState('all');
   const [searchText, setSearchText] = useState('');
   const [filteredJobs, setFilteredJobs] = useState(updatedJobsData);

@@ -162,6 +162,13 @@ const GetKrcDataTelFull = `*[_type == "krcDataTelFull"] {
 
 `;
 
+const GetAnnualReports = `*[_type == "annualReport"] {
+  issueUrl,
+  id,
+  displayText,
+  previewImg
+}`;
+
 export {
   GetDescription,
   getAllFaculties,
@@ -182,4 +189,5 @@ export {
   GetKrcData,
   GetKrcDataTel,
   GetKrcDataTelFull,
+  GetAnnualReports,
 };

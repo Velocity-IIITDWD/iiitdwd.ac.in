@@ -7,10 +7,10 @@
     "build": "next build",
     "serve": "npx serve@latest out",
     "build:serve": "next build && npx serve@latest out",
-    "postbuild": "next-sitemap && node buildScripts/postbuild.js",
+    "postbuild": "next-sitemap && node scripts/postbuild.js",
     "start": "next start",
     "lint": "next lint --fix",
-    "migrate-to-sanity": "node --experimental-strip-types migrations/utils/runAllMigrations.ts"
+    "migrate-to-sanity": "npx tsx migrations/utils/runAllMigrations.ts"
   },
   "dependencies": {
     "@next/third-parties": "^14.2.15",
@@ -20,7 +20,7 @@
     "@radix-ui/react-select": "^2.1.2",
     "@radix-ui/react-slot": "^1.1.0",
     "@radix-ui/react-tabs": "1.1.1",
-    "@sanity/client": "^6.22.5",
+    "@sanity/client": "^6.27.1",
     "@sanity/image-url": "^1.1.0",
     "chart.js": "^4.4.5",
     "class-variance-authority": "^0.7.0",
@@ -57,7 +57,7 @@
     "next-sitemap": "^4.2.3",
     "postcss": "^8",
     "tailwindcss": "^3.4.14",
-    "typescript": "5.6.3"
+    "typescript": "^5.7.3"
   },
   "packageManager": "pnpm@8.15.9+sha512.499434c9d8fdd1a2794ebf4552b3b25c0a633abcee5bb15e7b5de90f32f47b513aca98cd5cfd001c31f0db454bc3804edccd578501e4ca293a6816166bbd9f81"
 }

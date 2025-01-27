@@ -3,34 +3,60 @@ import logUpdate from 'log-update';
 import { migrateAnnouncements } from '../announcements.ts';
 import { migrateTenders } from '../tenders.ts';
 import { migrateFaculties } from '../faculty.ts';
+import { deleteAllDocuments } from './deleteAllDocuments.ts';
+
+function logStep(message: string, color: chalk.Chalk = chalk.blue) {
+  logUpdate(color.bold(message));
+}
 
 async function runAllMigrations() {
   try {
-    logUpdate(chalk.bold.blue('Starting migrations...\n'));
+    logStep('Deleting existing data...');
+    const documentsDeleted = await deleteAllDocuments();
 
-    // Run announcements migration
-    logUpdate(chalk.bold.blue('Starting announcements migration...'));
-    await migrateAnnouncements();
-    logUpdate(
-      chalk.bold.green('Announcements migration completed successfully!\n')
-    );
+    logStep('Starting migrations...');
 
-    // Run tenders migration
-    logUpdate(chalk.bold.blue('Starting tenders migration...'));
-    await migrateTenders();
-    logUpdate(chalk.bold.green('Tenders migration completed successfully!\n'));
+    const migrationTasks = [
+      {
+        name: 'announcements',
+        task: migrateAnnouncements,
+      },
+      {
+        name: 'tenders',
+        task: migrateTenders,
+      },
+      {
+        name: 'faculties',
+        task: migrateFaculties,
+      },
+    ];
 
-    // Run faculties migration
-    logUpdate(chalk.bold.blue('Starting faculties migration...'));
-    await migrateFaculties();
-    logUpdate(chalk.bold.green('Faculties migration completed successfully!\n'));
+    if (documentsDeleted) {
+      for (let i = 0; i < migrationTasks.length; i++) {
+        const { name, task } = migrationTasks[i];
 
-    logUpdate(chalk.bold.green('All migrations completed successfully!'));
+        logStep(
+          `[${i + 1}/${migrationTasks.length}] Starting ${name} migration...`
+        );
+        console.time(`${name} migration`);
+        await task();
+        logUpdate.done();
+        console.timeEnd(`${name} migration`);
+        console.log(
+          chalk.green(
+            `[${i + 1}/${migrationTasks.length}] ${name} migration completed successfully!\n`
+          )
+        );
+      }
+
+      console.log(chalk.green('All migrations completed successfully!'));
+    }
   } catch (error) {
-    logUpdate(chalk.bold.red('Error running migrations:'));
-    console.error(error);
+    console.error(chalk.red('Error running migrations:'));
+    console.error(chalk.red(error instanceof Error ? error.message : error));
+    process.exit(1);
   } finally {
-    logUpdate.done(); // Stop dynamic updates
+    process.exit();
   }
 }
 

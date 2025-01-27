@@ -1,28 +1,20 @@
 import { client } from './sanity.ts';
 
-async function deleteAllDocuments() {
+export async function deleteAllDocuments() {
   try {
     // Fetch all document IDs
-    const query = '*[_id in path("**")]._id';
+    const query = `*[_type != "system.document" && !(_id in path("_.**")) && !(_id in path("drafts.**"))]._id`;
     const documentIds = await client.fetch(query);
+    const transaction = client.transaction();
 
-    if (documentIds.length === 0) {
-      console.log('No documents found to delete.');
-      return;
-    }
-
-    console.log(`Deleting ${documentIds.length} documents...`);
-
-    // Delete documents one by one
     for (const docId of documentIds) {
-      await client.delete(docId);
-      console.log(`Deleted document with ID: ${docId}`);
+      transaction.delete(docId);
     }
-
-    console.log('All documents deleted successfully.');
+    const results = await transaction.commit();
+    console.log(`Deleted ${results.results.length} documents.`);
+    return true;
   } catch (error) {
     console.error('Error deleting documents:', error);
+    return false;
   }
 }
-
-deleteAllDocuments();
