@@ -1,8 +1,8 @@
 import chalk from 'chalk';
 import logUpdate from 'log-update';
-import { migrateAnnouncements } from '../announcements.ts';
-import { migrateTenders } from '../tenders.ts';
-import { migrateFaculties } from '../faculty.ts';
+import { migrateAnnouncements } from '../MigrationFiles/announcements.ts';
+import { migrateTenders } from '../MigrationFiles/tenders.ts';
+import { migrateFaculties } from '../MigrationFiles/faculty_profile.ts';
 import { deleteAllDocuments } from './deleteAllDocuments.ts';
 
 function logStep(message: string, color: chalk.Chalk = chalk.blue) {
