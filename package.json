@@ -7,7 +7,7 @@
     "build": "next build",
     "serve": "npx serve@latest out",
     "build:serve": "next build && npx serve@latest out",
-    "postbuild": "next-sitemap && node buildScripts/postbuild.js",
+    "postbuild": "next-sitemap && node scripts/postbuild.js",
     "start": "next start",
     "lint": "next lint --fix",
     "migrate-to-sanity": "npx tsx migrations/utils/runAllMigrations.ts"

@@ -7,13 +7,12 @@ const BACKUPS_DIR = path.join(process.cwd(), 'backups');
 
 function ensureDirectoryExists(dirPath: string): void {
   if (!fs.existsSync(dirPath)) {
-    console.log('not found')
     fs.mkdirSync(dirPath, { recursive: true });
   }
 }
 
 async function backupData() {
-  const timestamp = new Date().toLocaleTimeString().replace(/[:.]/g, '-');
+  const timestamp = new Date().toUTCString().replace(/[:.]/g, '-');
   const backupFolder = path.join(BACKUPS_DIR, `sanity-backup-${timestamp}`);
   const responseMap: Record<string, any> = {};
 
@@ -37,7 +36,7 @@ async function backupData() {
     try {
       console.log(`Fetching data for query: ${key}`);
       const data = await FetchSanity(query);
-      responseMap[key] = data;
+      responseMap[key] = JSON.parse(data);
 
       const fileName = `${key}-data.json`;
       const filePath = path.join(backupFolder, fileName);
@@ -76,11 +75,11 @@ async function backupData() {
         })
       );
 
-      responseMap[queryKey] = data;
+      responseMap[queryKey] = data.map(objArr => objArr[0]);
 
       const fileName = `${queryKey}-data.json`;
       const filePath = path.join(backupFolder, fileName);
-      fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+      fs.writeFileSync(filePath, JSON.stringify(responseMap[queryKey], null, 2));
       console.log(`Backup saved to ${filePath}`);
     } catch (error) {
       console.error(

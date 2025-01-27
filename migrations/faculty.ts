@@ -11,16 +11,10 @@ export async function migrateFaculties() {
       content: {
         head: {
           name: faculty.content.head.name,
-          profile_pdf:
-            (faculty.content.head.profile_pdf &&
-              `https://iiitdwd.ac.in${faculty.content.head.profile_pdf}`) ||
-            '',
+          profile_pdf: faculty.content.head.profile_pdf,
         },
         card: {
-          photo:
-            (faculty.content.card.photo &&
-              `https://iiitdwd.ac.in${faculty.content.card.photo}`) ||
-            '',
+          photo: faculty.content.card.photo,
           PhD: faculty.content.card.PhD || '',
           designation: faculty.content.card.designation || '',
           department: faculty.content.card.department || '',
