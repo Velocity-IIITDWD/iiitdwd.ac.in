@@ -6,7 +6,7 @@ import {  GetKrcDataTelFull } from '@/lib/sanity/Queries';
 
 const ThirdFold: FC = async () => {
   const data = await FetchSanity(GetKrcDataTelFull) as LinkGroup[];
-  
+
   return (
     <div className="bg-black py-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -16,7 +16,7 @@ const ThirdFold: FC = async () => {
               {group.heading}
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8">
-              {group.links.map((link, index) => (
+              {group.card.map((link, index) => (
                 <a
                   key={index}
                   href={link.link}
