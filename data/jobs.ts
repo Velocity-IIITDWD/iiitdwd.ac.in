@@ -10,6 +10,15 @@ export type Jobs = {
 
 export const jobsData: Jobs[] = [
   {
+    'title': 'Advertisement for the Recruitment of Research Associate and Project Assistant',
+    'category': 'staff',
+    'details': '',
+    'lastDate': '07.02.2025',
+    'generalInstructions': '/docs/Advertisement_TiHAN.pdf',
+    'application': 'https://forms.gle/v1WhifzVYu5YT1cy9',
+    'extraInfo': []
+  },
+  {
     'title': 'Advertisement for the position of Project Associate',
     'category': 'staff',
     'details': '',
