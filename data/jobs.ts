@@ -15,7 +15,7 @@ export const jobsData: Jobs[] = [
     'details': '',
     'lastDate': '07.02.2025',
     'generalInstructions': '/docs/Advertisement_TiHAN.pdf',
-    'application': 'https://forms.gle/v1WhifzVYu5YT1cy9',
+    'application': 'https://forms.gle/qGdVo3UGtDmr4Kmk7',
     'extraInfo': []
   },
   {

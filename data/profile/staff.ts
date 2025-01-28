@@ -5,11 +5,6 @@ export default [
     title: '',
     profiles: [
       {
-        content: ['Professor-In-Charge Overall Examinations and AIMS'],
-        imageURL: '/images/satish_annigeri.jpg',
-        title: 'Prof. Satish Annigeri',
-      },
-      {
         content: ['Professor-In-Charge, Students welfare and administration'],
         imageURL: '/images/Dr._K._Gopinath.jpg',
         title: 'Dr. K. Gopinath',
