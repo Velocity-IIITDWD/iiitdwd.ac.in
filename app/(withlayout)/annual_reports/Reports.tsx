@@ -5,29 +5,17 @@ import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
 import MobileBtn from './MobileButton'
-import { annualReports, annualReportsStructure } from '@/data/annual_reports';
+import { annualReportsStructure } from '@/data/annual_reports';
 import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
 } from '@/components/ui/hover-card'
 
-import { client } from '@/lib/sanity/client';
-
-const query = '*[_type == "annualReport"]';
 
 
-export default function Reports() {
-  const [Fulldata, setFulldata] = useState<annualReportsStructure[]>([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      const data = (await client.fetch(query)) as any[];
-      setFulldata(data.concat(annualReports).sort((a, b) => b.id - a.id));
-    };
-    fetchData();
-  }, [])
-
+export default function Reports({Fulldata}: { Fulldata: annualReportsStructure[] }) {
+  
   const [selectedReport, setIssue] = useState<annualReportsStructure | null>(null);
 
   useEffect(() => {

@@ -7,23 +7,13 @@ import { client } from '@/lib/sanity/client';
 const query = '*[_type == "contactData"]';
 
 async function getData() {
-  const contactData = (await client.fetch(query));
-  console.log(contactData);
-
-  const fullContacts: ContactData = contactData!=null ? {
-    generalQueries: [...contacts.generalQueries, ...contactData.generalQueries],
-    hostelRelatedQueries: [...contacts.hostelRelatedQueries, ...contactData.hostelRelatedQueries],
-    academicQueries: [...contacts.academicQueries, ...contactData.academicQueries],
-    careerGuidanceCell: [...contacts.careerGuidanceCell, ...contactData.careerGuidanceCell],
-    feeRelatedQueries: [...contacts.feeRelatedQueries, ...contactData.feeRelatedQueries],
-    scholarshipLoansQueries: [...contacts.scholarshipLoansQueries, ...contactData.scholarshipLoansQueries]
-  } : contacts;
-  return fullContacts;
+  const contactData = (await client.fetch(query)) as ContactData;
+  return contactData;
 }
 
 const ContactInfo = async () => {
 
- const fullContacts = await getData();
+  const fullContacts = await getData();
   
   return (
     <div className="w-full flex justify-center items-center flex-col p-2">
