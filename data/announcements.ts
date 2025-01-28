@@ -11,7 +11,7 @@ export type Announcement = {
 
 export const announcements: Announcement[] = [
   {
-    link: 'https://drive.google.com/open?id=1U7TdM_dzOYUlfoBkMn6lSiVbAPRlD6M9',
+    link: '/docs/Notice (1) - Shalini K.pdf',
     text: 'NOTICE FOR FEE REFUND',
     new: true,
     month: '1',
