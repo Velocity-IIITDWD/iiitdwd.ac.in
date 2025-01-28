@@ -11,6 +11,13 @@ export type Announcement = {
 
 export const announcements: Announcement[] = [
   {
+    link: '/docs/Notice (1) - Shalini K.pdf',
+    text: 'NOTICE FOR FEE REFUND',
+    new: true,
+    month: '1',
+    year: '2025',
+  },
+  {
     link: '/docs/2PhD&M.Tech(R)-ProvisionalList-15Jan25-Updated-ShaliniK.pdf',
     text: 'PhD and M.Tech by Research - Provisional Admission list',
     new: true,
