@@ -34,7 +34,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
-, "migrations/utils/sanity.ts", "migrations/announcements.ts"  ],
+, "migrations/utils/sanity.ts", "migrations/MigrationFiles/announcements.ts"  ],
   "exclude": [
     "node_modules"
   ]

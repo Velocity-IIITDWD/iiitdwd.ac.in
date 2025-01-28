@@ -5,6 +5,7 @@ import BBlock from '@/assets/gallery/B_Block.webp';
 import Library from '@/assets/gallery/Library.jpg';
 import PiBlock from '@/assets/gallery/PiBlock.webp';
 import HBlock from '@/assets/gallery/H_Block.webp';
+
 import { StaticImageData } from 'next/image';
 
 export interface gallery {

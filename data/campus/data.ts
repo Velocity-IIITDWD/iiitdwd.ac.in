@@ -9,28 +9,28 @@ import magazineImage from '@/assets/campus/magazine.png';
 export interface CardData {
   title: string;
   href: string;
-  image: string | StaticImageData;
+  imageUrl: string|StaticImageData ;
 }
 
 export const cardData: CardData[] = [
   {
     title: 'Facilities',
     href: '/facilities',
-    image: eblockImage,
+    imageUrl: eblockImage,
   },
   { 
     title: 'Events', 
     href: '/events', 
-    image: eventsImage,
+    imageUrl: eventsImage,
   },
   { 
     title: 'Clubs', 
     href: '/clubs', 
-    image: velocityLogo,
+    imageUrl: velocityLogo,
   },
   {
     title: 'Institute Magazine',
     href: '/magazine',
-    image: magazineImage,
+    imageUrl: magazineImage,
   },
 ];

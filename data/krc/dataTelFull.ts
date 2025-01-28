@@ -8,13 +8,13 @@ export interface LinkData {
   
   export interface LinkGroup {
     heading: string;
-    links: LinkData[];
+    card: LinkData[];
   }
   
   export const linkGroups: LinkGroup[] = [
     {
       heading: "Audio-Video e-content",
-      links: [
+      card: [
         {
           title: "SWAYAM",
           description: "Massive Open Online Courses. Earn credit through online courses",
@@ -33,7 +33,7 @@ export interface LinkData {
     },
     {
       heading: "Digital Content: Access e-journals and e-books",
-      links: [
+      card: [
         {
           title: "National Digital Library (NDL)",
           description: "Access e-content on multiple disciplines",
@@ -59,7 +59,7 @@ export interface LinkData {
     },
     {
       heading: "Accelerated hands on learning",
-      links: [
+      card: [
         {
           title: "e-Yantra",
           description: "Engineering for better tomorrow. Get hands on experience on embedded systems.",
@@ -92,7 +92,7 @@ export interface LinkData {
     },
     {
       heading: "Track your progress",
-      links: [
+      card: [
         {
           title: "IRINS",
           description: "Indian Research Information Network System. Web-based Research Information Management (RIM) service.",

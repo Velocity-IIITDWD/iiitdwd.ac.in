@@ -2,6 +2,49 @@ export const tenders: Tender[] = [
   {
     cancelled: false,
     corrections: [],
+    documents: [],
+    link: '/docs/GeM-Bidding-7416026.pdf',
+    publishDate: '2025-01-25',
+    submissionDeadline: '2025-02-12T19:00+05:30',
+    title: 'Procurement of High End Computer Work Station',
+    updatedAt: 57,
+  },
+  {
+    cancelled: false,
+    corrections: [],
+    documents: [],
+    link: '/docs/GeM-Bidding-7432350.pdf',
+    publishDate: '2025-01-25',
+    submissionDeadline: '2025-02-06T17:00+05:30',
+    title: 'Procurement of RO Water Treatment System 250 LPH Filtration Capacity',
+    updatedAt: 56,
+  },
+  {
+    cancelled: false,
+    corrections: [],
+    documents: [
+      {
+        link: '/images/84733b0a-962e-402e-ba9b-dd29f2c84652.jpg',
+        title: 'Advertisement'
+      },
+      {
+        link: '/docs/DTS.pdf',
+        title: 'KPP Portal Notice Inviting Tender',
+      },
+      {
+        link: 'https://kppp.karnataka.gov.in/',
+        title: 'Please click here to search and submit tender online'
+      }
+    ],
+    link: '/docs/NOTICE_INVITING_TENDER_PHASE_-II_(A)_CONSTRUCTION_OF_IIIT_DHARWAD_CAMPUS.pdf',
+    publishDate: '2025-01-17',
+    submissionDeadline: '2025-02-10T17:00+05:30',
+    title: 'NOTICE INVITING TENDER FOR PHASE-II (A) CONSTRUCTION OF IIIT DHARWAD CAMPUS',
+    updatedAt: 55,
+  },
+  {
+    cancelled: false,
+    corrections: [],
     documents: [
       {
         link: '/images/1224electrical-works.jpeg',

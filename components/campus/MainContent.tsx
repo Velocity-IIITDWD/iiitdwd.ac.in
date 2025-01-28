@@ -30,7 +30,7 @@ const MainContent: React.FC = async () => {
             key={card.title}
             title={card.title}
             href={card.href}
-            image={card.image}
+            image={card.imageUrl}
           />
         ))}
       </div>
