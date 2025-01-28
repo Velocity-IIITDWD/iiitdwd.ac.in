@@ -5,10 +5,11 @@ import Reports from './Reports';
 import { client } from '@/lib/sanity/client';
 import { annualReportsStructure } from '@/data/annual_reports';
 
-const query = '*[_type == "annualReport"]';
+const queryReport = '*[_type == "annualReport"]';
 
 async function getData() {
-  const data = (await client.fetch(query)) as annualReportsStructure[];
+  const data = (await client.fetch(queryReport)) as any[];
+  console.log('data:'+data.sort((a, b) => b.id - a.id));
   return data;
 }
 

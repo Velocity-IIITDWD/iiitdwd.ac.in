@@ -7,7 +7,7 @@ const query = '*[_type == "jobs"]';
 
 async function fetchData() {
   const data = (await client.fetch(query) as any[]);
-  // console.log('data'+data);
+  console.log('data'+data);
   return data;
 };
 
