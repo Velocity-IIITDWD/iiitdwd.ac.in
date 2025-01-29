@@ -15,17 +15,17 @@ async function getGalleryData() {
   return data;
 }
 
-async function getMainCourselData() {
+async function getMainCarouselData() {
   const data = (await client.fetch(queryCarousal)) as any[];
   return data;
 }
 
 export default async function Page() {
-  const datagallery = await getGalleryData();
-  const dataevent = await getEventData();
-  const datacoursel = await getMainCourselData();
+  const galleryData = await getGalleryData();
+  const eventData = await getEventData();
+  const carouselData = await getMainCarouselData();
    
   return(
-    <HomeComponent eventData={dataevent} galleryData={datagallery} courselData={datacoursel} />
+    <HomeComponent eventData={eventData} galleryData={galleryData} carouselData={carouselData} />
   );
 }

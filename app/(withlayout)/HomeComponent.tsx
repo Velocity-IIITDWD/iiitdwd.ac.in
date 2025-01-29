@@ -35,17 +35,15 @@ function renderNew(date: string) {
 interface HomeProps {
   eventData: eventInf[];
   galleryData: gallery[]; 
-  courselData: MainCarouselImage[];
+  carouselData: MainCarouselImage[];
 }
 
-export default function Home({ eventData, galleryData, courselData }: HomeProps) {
-
-
+export default function Home({ eventData, galleryData, carouselData }: HomeProps) {
   const [program, setProgram] = useState(0);
 
   return (
     <div className="flex flex-col h-full w-full">
-      <MainCarousel FullData={courselData} />
+      <MainCarousel FullData={carouselData} />
 
       {
         announcements.filter((a) => a.new).length > 0 &&
@@ -392,7 +390,7 @@ export default function Home({ eventData, galleryData, courselData }: HomeProps)
                   height={0}
                   sizes="100%"
                   style={{ height: '100%', width: 'auto' }}
-                  className="h-full w-full object-cover object-center"
+                  className="h-full w-full object-cover object-center select-none"
                 />
                 <div className="absolute group-hover:opacity-100 flex items-end font-semibold opacity-0 transition translate-y-full group-hover:translate-y-0 bg-gradient-to-t from-gray-900/95 to-transparent duration-300 bottom-0 w-full left-0 text-white p-4 h-2/3">
                   {item?.caption}

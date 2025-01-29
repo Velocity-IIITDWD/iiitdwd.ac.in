@@ -1,5 +1,3 @@
-import { announcements } from './announcements';
-
 export type eventInf = {
   id: string;
   href: string;

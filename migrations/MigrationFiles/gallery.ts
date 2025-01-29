@@ -6,7 +6,7 @@ export const migrateGalleryImages = async () => {
 
   for (const image of GalleryImages) {
     transaction.create({
-      _type: 'galleryImage',
+      _type: 'gallery',
       url: image.url,
       caption: image.caption,
     });
