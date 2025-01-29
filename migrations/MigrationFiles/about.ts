@@ -1,7 +1,7 @@
 import { client } from '../utils/sanity';
 import { aboutData } from '../../data/about';
 
-export const migrateAboutData = async () => {
+export const migrateAbout = async () => {
   const transaction = client.transaction();
 
   transaction.create({

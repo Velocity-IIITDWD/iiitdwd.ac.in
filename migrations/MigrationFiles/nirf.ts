@@ -1,7 +1,7 @@
 import { client } from '../utils/sanity';
 import { linksdata as n } from '../../data/nirf';
 
-export const migrateNirft = async () => {
+export const migrateNirf = async () => {
   const transaction = client.transaction();
   for (const nirf of n) {
     transaction.create({

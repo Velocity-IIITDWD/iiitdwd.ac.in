@@ -1,7 +1,6 @@
 import { client } from '../utils/sanity';
 import { links,descriptions,seatMatrix } from '../../data/admissions';
 
-
 export const migrateSeatMatrix = async () => {
   const transaction = client.transaction();
 

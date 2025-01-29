@@ -1,7 +1,7 @@
 import { client } from '../utils/sanity';
 import profileData from '../../data/profile/director/former';
 
-export const migrateProfileData = async () => {
+export const migrateFormer = async () => {
   const transaction = client.transaction();
 
   profileData.forEach((group) => {

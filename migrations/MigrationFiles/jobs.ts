@@ -1,7 +1,7 @@
 import { client } from '../utils/sanity';
 import { jobsData } from '../../data/jobs';
 
-export const migrateJobsData = async () => {
+export const migrateJobs = async () => {
   const transaction = client.transaction();
   
   for (const job of jobsData) {

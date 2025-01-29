@@ -1,7 +1,7 @@
 import { client } from '../utils/sanity';
 import { ECEDetails, CSEDetails, DSAIDetails, CSEStructure, DSAIStrcutre, ECEStructure } from '../../data/academics';
 
-export const migrateCourseDetails = async () => {
+export const migrateAcademics = async () => {
   const transaction = client.transaction();
 
   for (const detail of ECEDetails) {

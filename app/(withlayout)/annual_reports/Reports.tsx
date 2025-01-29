@@ -34,7 +34,7 @@ export default function Reports({Fulldata}: { Fulldata: annualReportsStructure[]
       </div>
       <div className='max-md:hidden flex flex-col gap-4'>
         <div className='flex gap-4 justify-center flex-wrap'>
-          {Fulldata.map((report) => (
+          {Fulldata.sort((a,b) => b.id - a.id).map((report) => (
             <HoverCard key={report.id}>
               <HoverCardTrigger>
                 <button className='bg-dwd-primary px-4 py-2 rounded text-white w-fit self-center text-center' onClick={() => setIssue(report)}>{report.displayText}</button>

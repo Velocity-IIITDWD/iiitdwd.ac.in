@@ -1,7 +1,7 @@
 import { client } from '../utils/sanity';
 import clubs from '@/data/members';
 
-export const migrateNirft = async () => {
+export const migrateClubs = async () => {
   const transaction = client.transaction();
   for (const club of clubs) {
     transaction.create({
@@ -19,5 +19,5 @@ export const migrateNirft = async () => {
   }
 
   const results = await transaction.commit();
-  console.log(`Created ${results.results.length} nirf in a transaction.`);
+  console.log(`Created ${results.results.length} clubs in a transaction.`);
 }

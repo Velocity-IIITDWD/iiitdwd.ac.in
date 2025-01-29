@@ -1,7 +1,7 @@
 import { client } from '../utils/sanity';
 import { images, ProgramCardDetails, Programs } from '../../data/homePage';
 
-export const migrateAllData = async () => {
+export const migrateHomePage = async () => {
   const transaction = client.transaction();
 
   for (const image of images) {
