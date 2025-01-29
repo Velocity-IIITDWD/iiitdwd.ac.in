@@ -4,26 +4,82 @@ import { Metadata } from 'next';
 
 import { client } from '@/lib/sanity/client';
 
-const query = '*[_type == "contactData"]';
+const query = `*[_type == "contactData"][0] {
+  generalQueries[]->{
+      name,
+      designation,
+      contactNumber,
+      category->{
+          id,
+          category
+      }
+  },
+  hostelRelatedQueries[]->{
+      name,
+      designation,
+      contactNumber,
+      category->{
+          id,
+          category
+      }
+  },
+  academicQueries[]->{
+      name,
+      designation,
+      contactNumber,
+      category->{
+          id,
+          category
+      }
+  },
+  careerGuidanceCell[]->{
+      name,
+      designation,
+      contactNumber,
+      category->{
+          id,
+          category
+      }
+  },
+  feeRelatedQueries[]->{
+      name,
+      designation,
+      contactNumber,
+      category->{
+          id,
+          category
+      }
+  },
+  scholarshipLoansQueries[]->{
+      name,
+      designation,
+      contactNumber,
+      category->{
+          id,
+          category
+      }
+  }
+}`;
 
 async function getData() {
-  const contactData = (await client.fetch(query));
-  console.log(contactData);
-
-  const fullContacts: ContactData = contactData!=null ? {
-    generalQueries: [...contacts.generalQueries, ...contactData.generalQueries],
-    hostelRelatedQueries: [...contacts.hostelRelatedQueries, ...contactData.hostelRelatedQueries],
-    academicQueries: [...contacts.academicQueries, ...contactData.academicQueries],
-    careerGuidanceCell: [...contacts.careerGuidanceCell, ...contactData.careerGuidanceCell],
-    feeRelatedQueries: [...contacts.feeRelatedQueries, ...contactData.feeRelatedQueries],
-    scholarshipLoansQueries: [...contacts.scholarshipLoansQueries, ...contactData.scholarshipLoansQueries]
-  } : contacts;
-  return fullContacts;
+  const contactData = (await client.fetch(query)) as ContactData;
+  if (!contactData) {
+    return {
+      generalQueries: [],
+      hostelRelatedQueries: [],
+      academicQueries: [],
+      careerGuidanceCell: [],
+      feeRelatedQueries: [],
+      scholarshipLoansQueries: [],
+    };
+  }
+  // console.log('contactData:'+(contactData));
+  return contactData;
 }
 
 const ContactInfo = async () => {
 
- const fullContacts = await getData();
+  const fullContacts = await getData();
   
   return (
     <div className="w-full flex justify-center items-center flex-col p-2">

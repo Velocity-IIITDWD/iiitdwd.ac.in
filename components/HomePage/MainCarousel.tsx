@@ -9,7 +9,7 @@ import {
 } from 'embla-carousel';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Autoplay from 'embla-carousel-autoplay';
-import { images } from '@/data/homePage';
+import { MainCarouselImage } from '@/data/homePage';
 import Link from 'next/link';
 import { Card, CardContent } from '@/components/ui/card';
 import Image from 'next/image';
@@ -22,24 +22,13 @@ const numberWithinRange = (number: number, min: number, max: number): number =>
 
 type PropType = {
   //   slides: SlideType[];
+  FullData: MainCarouselImage[];
   options?: EmblaOptionsType;
 };
 
-import { client } from '@/lib/sanity/client';
-const queryCarousal = '*[_type == "mainCarouselImage"]';
 
-const MainCarousel: React.FC<PropType> = ({ options }) => {
+const MainCarousel: React.FC<PropType> = ({ FullData, options }) => {
 
-
-  const [Fulldata, setFulldata] = useState<any[]>(images);
-  
-    useEffect(() => {
-      const fetchData = async () => {
-        const data = (await client.fetch(queryCarousal)) as any[];
-        setFulldata(data.concat(images));
-      };
-      fetchData();
-    }, [])
 
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, ...options }, [
     Autoplay({ delay: 4000, stopOnInteraction: false }),
@@ -183,7 +172,7 @@ const MainCarousel: React.FC<PropType> = ({ options }) => {
     <section className="embla">
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
-          {Fulldata.map((item, index) =>
+          {FullData.map((item, index) =>
             item?.link ? (
               <Link key={index} className="embla__slide" href={item?.link}>
                 <Card className="slide_number_main border-none p-0">

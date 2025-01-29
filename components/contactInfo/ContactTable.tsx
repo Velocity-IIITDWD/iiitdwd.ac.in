@@ -24,6 +24,10 @@ const ContactTable = ({
   const [contacts, setContacts] = useState<Contact[]>(
     Object.entries(contactInfo)[0][1]
   );
+  // console.log('contacts:', contacts);
+  if(contactInfo === undefined) {
+    return <div></div>
+  }
 
   return (
     <>
