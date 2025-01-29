@@ -1,68 +1,12 @@
 import ContactTable from '@/components/contactInfo/ContactTable';
-import { contactCategories, ContactData, Contact , contacts } from '@/data/contactInfo';
+import { contactCategories, ContactData } from '@/data/contactInfo';
 import { Metadata } from 'next';
 
-import { client } from '@/lib/sanity/client';
-
-const query = `*[_type == "contactData"][0] {
-  generalQueries[]->{
-      name,
-      designation,
-      contactNumber,
-      category->{
-          id,
-          category
-      }
-  },
-  hostelRelatedQueries[]->{
-      name,
-      designation,
-      contactNumber,
-      category->{
-          id,
-          category
-      }
-  },
-  academicQueries[]->{
-      name,
-      designation,
-      contactNumber,
-      category->{
-          id,
-          category
-      }
-  },
-  careerGuidanceCell[]->{
-      name,
-      designation,
-      contactNumber,
-      category->{
-          id,
-          category
-      }
-  },
-  feeRelatedQueries[]->{
-      name,
-      designation,
-      contactNumber,
-      category->{
-          id,
-          category
-      }
-  },
-  scholarshipLoansQueries[]->{
-      name,
-      designation,
-      contactNumber,
-      category->{
-          id,
-          category
-      }
-  }
-}`;
+import { FetchSanity } from '@/lib/sanity/client';
+import { GetContactInfo } from '@/lib/sanity/Queries';
 
 async function getData() {
-  const contactData = (await client.fetch(query)) as ContactData;
+  const contactData: ContactData = await FetchSanity(GetContactInfo);
   if (!contactData) {
     return {
       generalQueries: [],
@@ -73,7 +17,6 @@ async function getData() {
       scholarshipLoansQueries: [],
     };
   }
-  // console.log('contactData:'+(contactData));
   return contactData;
 }
 

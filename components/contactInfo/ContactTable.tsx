@@ -7,7 +7,7 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import GetContactRows from '@/components/contactInfo/GetContactRows';
 import CreateTabs from '@/components/contactInfo/CreateTabs';
 
@@ -22,11 +22,10 @@ const ContactTable = ({
 }: ContactTableProps) => {
   const [contactTab, setContactTab] = useState('General Queries');
   const [contacts, setContacts] = useState<Contact[]>(
-    Object.entries(contactInfo)[0][1]
+    contactInfo.generalQueries
   );
-  // console.log('contacts:', contacts);
   if(contactInfo === undefined) {
-    return <div></div>
+    return null
   }
 
   return (

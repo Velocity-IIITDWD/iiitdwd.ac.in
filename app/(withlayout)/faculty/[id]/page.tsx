@@ -10,7 +10,7 @@ import {
   Split,
 } from 'lucide-react';
 import { FetchSanity } from '@/lib/sanity/client';
-import { getAllFaculties, GetFacultyDetails } from '@/lib/sanity/Queries';
+import { GetAllFaculties, GetFacultyDetails } from '@/lib/sanity/Queries';
 
 async function getProfileData(id: string) {
   const [data] = await FetchSanity(GetFacultyDetails, { id });
@@ -26,7 +26,7 @@ async function getProfileData(id: string) {
 }
 
 export async function generateStaticParams(): Promise<{ id: string }[]> {
-  const data = await FetchSanity(getAllFaculties);
+  const data = await FetchSanity(GetAllFaculties);
 
   if (!data || !Array.isArray(data) || data.length === 0) {
     console.error('No faculty data found.');

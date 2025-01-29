@@ -1,14 +1,14 @@
-const GetFacultyDetails = `*[_type == "faculty" && facultyId == $id] {
+export const GetFacultyDetails = `*[_type == "faculty" && facultyId == $id] {
   "id": facultyId,
   "photo": content.card.photo,
   content
 }`;
 
-const getAllFaculties = `*[_type == "faculty"] {
+export const GetAllFaculties = `*[_type == "faculty"] {
   "id": facultyId
 }`;
 
-const GetAllVisitors = `*[_type == "visitor"] {
+export const GetAllVisitors = `*[_type == "visitor"] {
   title,
   profiles[] {
     title,
@@ -17,7 +17,7 @@ const GetAllVisitors = `*[_type == "visitor"] {
   }
 }`;
 
-const GetAllStaff = `*[_type == "staff"] {
+export const GetAllStaff = `*[_type == "staff"] {
   title,
   profiles[] {
     title,
@@ -26,7 +26,7 @@ const GetAllStaff = `*[_type == "staff"] {
   }
 }`;
 
-const GetAllSenate = `*[_type == "senate"] {
+export const GetAllSenate = `*[_type == "senate"] {
   title,
   profiles[] {
     title,
@@ -35,7 +35,7 @@ const GetAllSenate = `*[_type == "senate"] {
   }
 }`;
 
-const GetFormer = `*[_type == "former"] {
+export const GetFormer = `*[_type == "former"] {
   title,
   profiles[] {
     title,
@@ -44,7 +44,7 @@ const GetFormer = `*[_type == "former"] {
   }
 }`;
 
-const GetChair = `*[_type == "chairPerson"] {
+export const GetChair = `*[_type == "chairPerson"] {
   title,
   profiles[] {
     title,
@@ -53,15 +53,7 @@ const GetChair = `*[_type == "chairPerson"] {
   }
 }`;
 
-const GetBoard = `*[_type == "boardOfGovernors"] {
-  title,
-  profiles[] {
-    title,
-    content,
-    imageURL
-  }
-}`;
-const GetFormerBoard = `*[_type == "formerBoardOfGovernor"] {
+export const GetBoard = `*[_type == "boardOfGovernors"] {
   title,
   profiles[] {
     title,
@@ -70,7 +62,16 @@ const GetFormerBoard = `*[_type == "formerBoardOfGovernor"] {
   }
 }`;
 
-const GetAnnouncements = `*[_type == "announcement"]{
+export const GetFormerBoard = `*[_type == "formerBoardOfGovernor"] {
+  title,
+  profiles[] {
+    title,
+    content,
+    imageURL
+  }
+}`;
+
+export const GetAnnouncements = `*[_type == "announcement"]{
   link,
   month,
   new,
@@ -79,7 +80,7 @@ const GetAnnouncements = `*[_type == "announcement"]{
   date,
 }`;
 
-const GetLinks = `*[_type == "linksStructure"]{
+export const GetLinks = `*[_type == "linksStructure"]{
   id,
   type,
   links[] {
@@ -89,25 +90,20 @@ const GetLinks = `*[_type == "linksStructure"]{
   }
 }`;
 
-const GetDescription = `*[_type == "descriptionStructure"]{
+export const GetDescription = `*[_type == "descriptionStructure"]{
   id,
   heading,
   description
 }`;
 
-// const GetSeats = `*[_type == "seatsStructure"]{
-
-// }
-
-const GetAbout = `*[_type == "about"]{
+export const GetAbout = `*[_type == "about"]{
   coreValues[] {
     id,
     text,
   },
-  
 }`;
 
-const GetResearch = `*[_type == "profiles"] {
+export const GetResearch = `*[_type == "profiles"] {
   title,
   profiles[] {
     title,
@@ -115,25 +111,29 @@ const GetResearch = `*[_type == "profiles"] {
     imageURL
   }
 }`;
-const GetResearchAdvertisement = `*[_type == "advertisement"]{
+
+export const GetResearchAdvertisement = `*[_type == "advertisement"]{
   time,
   lastDate,
   generalInstructions,
   applicationForm
 }`;
-const GetCampusData = `*[_type == "campusData"] {
+
+export const GetCampusData = `*[_type == "campusData"] {
   title,
   href,
   imageUrl
 }
 `;
-const GetFacilities = `*[_type == "facility"] {
+
+export const GetFacilities = `*[_type == "facility"] {
   title,
   blockName,
   items,
   imageUrl
 }`;
-const GetKrcData = `*[_type == "krcData"] {
+
+export const GetKrcData = `*[_type == "krcData"] {
   title,
   description,
   accessInfo,
@@ -141,7 +141,8 @@ const GetKrcData = `*[_type == "krcData"] {
   link
 }
 `;
-const GetKrcDataTel = `*[_type == "krcDataTEL"] {
+
+export const GetKrcDataTel = `*[_type == "krcDataTEL"] {
   title,
   description,
   accessInfo,
@@ -149,7 +150,8 @@ const GetKrcDataTel = `*[_type == "krcDataTEL"] {
   link
 }
 `;
-const GetKrcDataTelFull = `*[_type == "krcDataTelFull"] {
+
+export const GetKrcDataTelFull = `*[_type == "krcDataTelFull"] {
   heading,
   card[] {
     title,
@@ -162,32 +164,60 @@ const GetKrcDataTelFull = `*[_type == "krcDataTelFull"] {
 
 `;
 
-const GetAnnualReports = `*[_type == "annualReport"] {
+export const GetAnnualReports = `*[_type == "annualReport"] {
   issueUrl,
   id,
   displayText,
   previewImg
 }`;
 
-export {
-  GetDescription,
-  getAllFaculties,
-  GetFacultyDetails,
-  GetAllVisitors,
-  GetAllStaff,
-  GetAllSenate,
-  GetFormer,
-  GetChair,
-  GetBoard,
-  GetAnnouncements,
-  GetLinks,
-  GetFormerBoard,
-  GetResearch,
-  GetResearchAdvertisement,
-  GetCampusData,
-  GetFacilities,
-  GetKrcData,
-  GetKrcDataTel,
-  GetKrcDataTelFull,
-  GetAnnualReports,
-};
+export const GetContactInfo = `*[_type == "contactData"][0] {
+  generalQueries[]->{
+      name,
+      designation,
+      contactNumber,
+      category->{
+          category
+      }
+  },
+  hostelRelatedQueries[]->{
+      name,
+      designation,
+      contactNumber,
+      category->{
+          category
+      }
+  },
+  academicQueries[]->{
+      name,
+      designation,
+      contactNumber,
+      category->{
+          category
+      }
+  },
+  careerGuidanceCell[]->{
+      name,
+      designation,
+      contactNumber,
+      category->{
+          category
+      }
+  },
+  feeRelatedQueries[]->{
+      name,
+      designation,
+      contactNumber,
+      category->{
+          category
+      }
+  },
+  scholarshipLoansQueries[]->{
+      name,
+      designation,
+      contactNumber,
+      category->{
+          category
+      }
+  }
+}`;

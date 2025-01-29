@@ -1,20 +1,18 @@
 import chalk from 'chalk';
-import logUpdate from 'log-update';
 import { migrateAnnouncements } from '../MigrationFiles/announcements.ts';
 import { migrateTenders } from '../MigrationFiles/tenders.ts';
 import { migrateFaculties } from '../MigrationFiles/faculty_profile.ts';
 import { deleteAllDocuments } from './deleteAllDocuments.ts';
+import { migrateContactData } from '../MigrationFiles/contact_info.ts';
 
-function logStep(message: string, color: chalk.Chalk = chalk.blue) {
-  logUpdate(color.bold(message));
+function log(message: string, color: chalk.Chalk = chalk.blue) {
+  console.log(color.bold(message));
 }
 
 async function runAllMigrations() {
   try {
-    logStep('Deleting existing data...');
+    log('Deleting existing data...');
     const documentsDeleted = await deleteAllDocuments();
-
-    logStep('Starting migrations...');
 
     const migrationTasks = [
       {
@@ -29,20 +27,25 @@ async function runAllMigrations() {
         name: 'faculties',
         task: migrateFaculties,
       },
+      {
+        name: 'contact_info',
+        task: migrateContactData,
+      },
     ];
-
+    
     if (documentsDeleted) {
+      log('\nStarting migrations...');
       for (let i = 0; i < migrationTasks.length; i++) {
         const { name, task } = migrationTasks[i];
 
-        logStep(
+        log(
           `[${i + 1}/${migrationTasks.length}] Starting ${name} migration...`
         );
         console.time(`${name} migration`);
         await task();
-        logUpdate.done();
+        // logUpdate.done();
         console.timeEnd(`${name} migration`);
-        console.log(
+        log(
           chalk.green(
             `[${i + 1}/${migrationTasks.length}] ${name} migration completed successfully!\n`
           )
