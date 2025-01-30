@@ -5,9 +5,9 @@ export default [
     title: 'Chairman Senate',
     profiles: [
       {
-        content: ['Director, Chairman, IIIT Dharwad'],
-        imageURL: '/images/s_r_mahadeva_prasanna.jpg',
-        title: 'Prof. S. R. Mahadeva Prasanna',
+        content: ['Chairman, IIIT Dharwad'],
+        imageURL: '/images/Sridhar Vembu.jpg',
+        title: 'Sridhar Vembu',
       },
     ],
   },
