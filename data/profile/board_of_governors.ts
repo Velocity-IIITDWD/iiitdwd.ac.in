@@ -2,12 +2,12 @@ import { ProfileGroup } from '@/types/profile';
 
 export default [
   {
-    title: 'Officiating Chairperson',
+    title: 'Chairperson',
     profiles: [
       {
-        content: ['Officiating Chairperson & Director, IIIT Dharwad'],
-        imageURL: '/images/s_r_mahadeva_prasanna.jpg',
-        title: 'Prof. S. R. Mahadeva Prasanna',
+        content: ['Chairperson, IIIT Dharwad'],
+        imageURL: '/images/Sridhar Vembu.jpg',
+        title: 'Dr. Sridhar Vembu',
       },
     ],
   },
@@ -33,7 +33,7 @@ export default [
           'Department of Science & Technology & Managing Director, KSTePS Government of Karnataka',
         ],
         imageURL: '/images/pavan_kumar_malapati.jpg',
-        title: 'Shri. Pavan Kumar Malapati, IAS',
+        title: 'Shri Pavan Kumar Malapati, IAS',
       },
       {
         content: ['Former Director, IIT Hyderabad'],
@@ -50,14 +50,14 @@ export default [
           'President, IESA & Former Additional Chief Secretary to Government of Karnataka',
         ],
         imageURL: '/images/m_n_vidyashankar.jpg',
-        title: 'Sri. M. N. Vidyashankar, IAS',
+        title: 'Shri M. N. Vidyashankar, IAS',
       },
       {
         content: [
           'Vice Chairman, Karnataka State Higher Education Council, Former Chief Secretary, Government of Karnataka',
         ],
         imageURL: '/images/s_v_ranganath.jpg',
-        title: 'Sri. S. V. Ranganath, IAS',
+        title: 'Shri S. V. Ranganath, IAS',
       },
       {
         content: ['Former Director, IISc Bengaluru'],
