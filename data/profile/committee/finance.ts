@@ -6,7 +6,7 @@ export default [
     profiles: [
       {
         content: ['Chairperson, IIIT Dharwad'],
-        imageURL: '/images/Sridhar Vembu.jpg',
+        imageURL: '/images/Sridhar Vembu.webp',
         title: 'Dr. Sridhar Vembu',
       },
     ],
