@@ -2,12 +2,12 @@ import { ProfileGroup } from '@/types/profile';
 
 export default [
   {
-    title: 'Chairperson',
+    title: 'Officiating Chairperson',
     profiles: [
       {
-        content: ['Chairperson, IIIT Dharwad'],
-        imageURL: '/images/Sridhar Vembu.jpg',
-        title: 'Sridhar Vembu',
+        content: ['Officiating Chairperson & Director, IIIT Dharwad'],
+        imageURL: '/images/s_r_mahadeva_prasanna.jpg',
+        title: 'Prof. S. R. Mahadeva Prasanna',
       },
     ],
   },
