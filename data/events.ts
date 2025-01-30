@@ -422,7 +422,7 @@ let events: eventInf[] = [
       contact: '',
     },
     aboutEvent:
-      'Shri. N R Narayana Murthy, Founder Infosys India Pvt Ltd visited IIIT Dharwad at 11:00 AM, 3rd February 2019. He had discussions with faculty, staff and students. He shared his experience during his Infosys day’s and also gave suggestion on career.',
+      'Shri N R Narayana Murthy, Founder Infosys India Pvt Ltd visited IIIT Dharwad at 11:00 AM, 3rd February 2019. He had discussions with faculty, staff and students. He shared his experience during his Infosys day’s and also gave suggestion on career.',
   },
 ];
 
