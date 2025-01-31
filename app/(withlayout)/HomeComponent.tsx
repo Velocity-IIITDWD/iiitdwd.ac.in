@@ -1,14 +1,14 @@
 'use client';
-import Link from 'next/link';
+import { useState } from 'react';
 import { ExternalLink } from 'lucide-react';
-import { MainCarouselImage, Programs } from '@/data/homePage';
-
+import Link from 'next/link';
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
-import { gallery } from '@/data/gallery';
-import { eventInf } from '@/data/events';
-import { announcements } from '@/data/announcements';
-import { useState } from 'react';
+
+import { type ProgramType, type MainCarouselImage } from '@/data/homePage';
+import { type gallery } from '@/data/gallery';
+import { type eventInf } from '@/data/events';
+import { type Announcement } from '@/data/announcements';
 import { Card, CardContent } from '@/components/ui/card';
 
 const MainCarousel = dynamic(
@@ -36,9 +36,11 @@ interface HomeProps {
   eventData: eventInf[];
   galleryData: gallery[]; 
   carouselData: MainCarouselImage[];
+  announcements: Announcement[]
+  programs: ProgramType[]
 }
 
-export default function Home({ eventData, galleryData, carouselData }: HomeProps) {
+export default function Home({ eventData, galleryData, carouselData, announcements, programs }: HomeProps) {
   const [program, setProgram] = useState(0);
 
   return (
@@ -157,7 +159,7 @@ export default function Home({ eventData, galleryData, carouselData }: HomeProps
 
       <section
         style={{
-          backgroundImage: `url(${Programs[program]?.image})`,
+          backgroundImage: `url(${programs[program]?.image})`,
         }}
         className="my-16 bg-fixed w-full p-4 bg-cover relative bg-center before:z-0 before:absolute before:h-full before:w-full before:left-0 before:top-0 before:bg-[#041E3FB3]"
       >
@@ -197,8 +199,8 @@ export default function Home({ eventData, galleryData, carouselData }: HomeProps
             </div>
           </div>
           <div className="w-full flex-1 gap-4 h-full text-white flex flex-col md:pl-10">
-            <p className="text-2xl font-semibold">{Programs[program]?.title}</p>
-            <p className="text-base">{Programs[program]?.description}</p>
+            <p className="text-2xl font-semibold">{programs[program]?.title}</p>
+            <p className="text-base">{programs[program]?.description}</p>
           </div>
         </div>
       </section>

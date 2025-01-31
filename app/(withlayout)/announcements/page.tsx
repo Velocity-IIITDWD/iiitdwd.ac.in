@@ -1,24 +1,14 @@
 import { ChevronDown } from 'lucide-react';
 import { Metadata } from 'next';
-import { type Announcement, announcements } from '@/data/announcements';
-import { client } from '@/lib/sanity/client';
+import { type Announcement } from '@/data/announcements';
+import { FetchSanity } from '@/lib/sanity/client';
 import { GetAnnouncements } from '@/lib/sanity/Queries';
 
 export default async function Page() {
-  const GetSanityData = async () => {
-    try {
-      const res = await client.fetch(GetAnnouncements);
-      return res;
-    } catch (err) {
-      console.error('Error fetching data:', err);
-      return [];
-    }
-  };
-  const data = await GetSanityData();
-  const mergedData = [...announcements, ...data];
+  const data = await FetchSanity(GetAnnouncements) as Announcement[];
 
-  const newAnnouncements = mergedData.filter(a => a.new);
-  const oldAnnouncements = mergedData.filter(a => !a.new);
+  const newAnnouncements = data.filter(a => a.new);
+  const oldAnnouncements = data.filter(a => !a.new);
   const byMonth: Record<string, Announcement[]> = {};
 
   for (let ann of oldAnnouncements) {

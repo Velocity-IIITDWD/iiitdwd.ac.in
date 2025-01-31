@@ -227,3 +227,4 @@ export const queryEvents = '*[_type == "event"]';
 export const queryEventIds = '*[_type == "event"] {"eventId": id}';
 export const queryEventById = `*[_type == "event" && id == $id][0]`;
 export const queryGallery = '*[_type == "gallery"]';
+export const queryPrograms = '*[_type == "program"]';

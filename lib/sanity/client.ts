@@ -1,8 +1,8 @@
 import { createClient, type QueryParams } from '@sanity/client';
 
 export const client = createClient({
-  projectId: '3hussc2p',
-  dataset: 'prod',
+  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
+  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET,
   apiVersion: '2024-11-28',
   useCdn: false,
 });

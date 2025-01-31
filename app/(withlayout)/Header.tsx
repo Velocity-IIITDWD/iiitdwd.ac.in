@@ -1,6 +1,5 @@
 'use client';
 
-import React from 'react';
 import { ChevronDownIcon, MenuIcon } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -19,8 +18,6 @@ import {
   NavigationMenuContent,
   navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu';
-
-import { announcements } from '@/data/announcements';
 
 type NavmenuItem = {
   text: string;
@@ -157,10 +154,6 @@ function onNavChange() {
 }
 
 function Header() {
-  const latestAnnouncement = announcements.length
-    ? announcements[0]
-    : undefined;
-
   return (
     <header className="flex flex-col w-full h-fit">
       {/* <div className=" hidden md:flex flex-col lg:flex-row items-center justify-center bg-dwd-secondary1 px-2  lg:gap-4">
