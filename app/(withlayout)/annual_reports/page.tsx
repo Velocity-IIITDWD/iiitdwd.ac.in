@@ -1,8 +1,7 @@
 import { Metadata } from 'next';
 import Reports from './Reports';
 import { client } from '@/lib/sanity/client';
-
-const queryReport = '*[_type == "annualReport"]';
+import { queryReport } from '@/lib/sanity/Queries';
 
 async function getData() {
   const data = (await client.fetch(queryReport)) as any[];
