@@ -11,6 +11,13 @@ export type Announcement = {
 
 export const announcements: Announcement[] = [
   {
+    link: '/docs/s40593-025-00459-9.pdf',
+    text: 'Journal article titled "Recommending Personalized Video Lecture Augmentations with Tagged Community Question Answers" authored by Dr Krishnendu Ghosh is published in International Journal of Artificial Intelligence in Education, Elsevier, Q1, IF - 4.7, DOI: https://doi.org/10.1007/s40593-025-00459-9.',
+    new: true,
+    month: '1',
+    year: '2025',
+  },
+  {
     link: '/docs/Notice (1) - Shalini K.pdf',
     text: 'NOTICE FOR FEE REFUND',
     new: true,
