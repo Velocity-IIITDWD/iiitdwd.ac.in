@@ -20,6 +20,11 @@ export interface ProgramsType {
 
 export const images: MainCarouselImage[] = [
   {
+    url: '/images/Priyanka kharge  lkdn_page.webp',
+    caption: 'Shri Priyank Kharge, Hon\'ble Minister of ITBT, GoK, to address IIIT Dharwad on 1st Feb 2025',
+    link: 'https://www.linkedin.com/posts/indian-institute-of-information-technology-dharwad-karnataka_iiitdharwad-leadership-innovation-activity-7291038458532270080-8XkQ?utm_medium=ios_app&utm_source=social_share_sheet&utm_campaign=copy_link',
+  },
+  {
     url: '/images/new_chairperson.png',
     caption: 'Welcoming our new chairperson, Dr. Sridhar Vembu',
     link: '#',
