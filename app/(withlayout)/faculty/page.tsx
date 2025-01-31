@@ -1,11 +1,10 @@
 import { client } from '@/lib/sanity/client';
 import FacultyList from './FacultyList';
 import { ProfileProp } from '@/data/faculty_profile';
-
-const query = '*[_type == "faculty"]';
+import { queryFaculty } from '@/lib/sanity/Queries';
 
 async function getData() {
-  const data = (await client.fetch(query)) as any[];
+  const data = (await client.fetch(queryFaculty)) as any[];
 
   const mappedFaculties = data.map(({ facultyId, content }) => ({
     id: facultyId,

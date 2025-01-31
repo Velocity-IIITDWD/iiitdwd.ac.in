@@ -1,10 +1,9 @@
 import { client } from '@/lib/sanity/client';
 import CareersPage from './CareersPage';
-
-const query = '*[_type == "jobs"]';
+import { queryJobs } from '@/lib/sanity/Queries';
 
 async function fetchData() {
-  const data = (await client.fetch(query) as any[]);
+  const data = (await client.fetch(queryJobs) as any[]);
   return data;
 };
 

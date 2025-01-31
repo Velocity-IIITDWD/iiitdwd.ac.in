@@ -1,5 +1,6 @@
 import { client } from '../utils/sanity';
 import { contacts, contactCategories } from '../../data/contactInfo';
+import { GetContactCategory, GetAllContacts } from '@/lib/sanity/Queries';
 
 type Contact = {
   name: string;
@@ -26,9 +27,7 @@ export const migrateContactData = async (): Promise<void> => {
     await transaction.commit();
     console.log(`Created ${contactCategories.length} Contact Categories`);
 
-    const categories = await client.fetch(
-      `*[_type == "contactCategory"]{ _id, category }`
-    );
+    const categories = await client.fetch(GetContactCategory);
 
     categories.forEach((cat: { _id: string; category: string }) => {
       categoryRefs[cat.category] = cat._id;
@@ -76,9 +75,7 @@ export const migrateContactData = async (): Promise<void> => {
     console.log('All Contacts Created');
 
     // Fetch all created contacts
-    const allContacts = await client.fetch(
-      `*[_type == "contact"]{ _id, "category": category->{category}.category }`
-    );
+    const allContacts = await client.fetch(GetAllContacts);
 
     // Group Contact References by Category for contactData schema
     allContacts.forEach((contact: { _id: string; category: string }) => {
