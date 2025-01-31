@@ -42,7 +42,7 @@ public/sitemap*.xml
 
 # we have the docs/images on server. to save space on github, we ignore them
 public/docs/*
-public/images/*
+# public/images/*
 
 # for use with github artifacts
 backups/
