@@ -30,6 +30,11 @@ export const images: MainCarouselImage[] = [
     link: '#',
   },
   {
+    url: '/images/DSC_0237.webp',
+    caption: 'Celebrating 76th Republic Day',
+    link: '/events/republic-day-2025',
+  },
+  {
     url: '/images/bengaluru_tech_summit_linkedin.webp',
     caption: 'Bengaluru Tech Summit 2024',
     link: 'https://www.linkedin.com/posts/bengaluru-tech-summit_bts2024-btsunbound-breakingboundaries-activity-7262700203646869506-pwNS?utm_source=share&utm_medium=member_desktop',
