@@ -222,14 +222,14 @@ export const GetContactInfo = `*[_type == "contactData"][0] {
   }
 }`;
 
-export const GetContactCategory = `*[_type == "contactCategory"] { _id, category}`;
-export const GetAllContacts = `*[_type == "contact"]{ _id, "category": category->{category}.category }`;
-export const GetAllDocumentIds = `*[_type != "system.document" && !(_id in path("_.**")) && !(_id in path("drafts.**"))]._id`;
+export const GetContactCategory = '*[_type == "contactCategory"] { _id, category}';
+export const GetAllContacts = '*[_type == "contact"]{ _id, "category": category->{category}.category }';
+export const GetAllDocumentIds = '*[_type != "system.document" && !(_id in path("_.**")) && !(_id in path("drafts.**"))]._id';
 
 export const queryCarousel = '*[_type == "mainCarouselImage"]';
 export const queryEvents = '*[_type == "event"]';
 export const queryEventIds = '*[_type == "event"] {"eventId": id}';
-export const queryEventById = `*[_type == "event" && id == $id][0]`;
+export const queryEventById = '*[_type == "event" && id == $id][0]';
 export const queryGallery = '*[_type == "gallery"]';
 export const queryPrograms = '*[_type == "program"]';
 export const queryReport = '*[_type == "annualReport"]';
