@@ -20,6 +20,11 @@ export interface ProgramsType {
 
 export const images: MainCarouselImage[] = [
   {
+    url: '/images/new_chairperson.png',
+    caption: 'Welcoming our new chairperson, Dr. Sridhar Vembu',
+    link: '#',
+  },
+  {
     url: '/images/bengaluru_tech_summit_linkedin.webp',
     caption: 'Bengaluru Tech Summit 2024',
     link: 'https://www.linkedin.com/posts/bengaluru-tech-summit_bts2024-btsunbound-breakingboundaries-activity-7262700203646869506-pwNS?utm_source=share&utm_medium=member_desktop',
