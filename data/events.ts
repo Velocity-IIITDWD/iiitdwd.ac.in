@@ -1,3 +1,6 @@
+import { FetchSanity } from '@/lib/sanity/client';
+import { queryEvents } from '@/lib/sanity/Queries';
+
 export type eventInf = {
   id: string;
   href: string;

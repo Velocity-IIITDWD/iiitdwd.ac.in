@@ -250,37 +250,9 @@ export default function Home({ eventData, galleryData, carouselData }: HomeProps
         <AutoScrollCarousel>
           {eventData?.map((item) => (
             <Card
-              className="w-full relative shadow-md flex-[0_0_100%] lg:flex-[0_0_50%] 2xl:flex-[0_0_33.33%]"
+              className="w-full relative shadow-md flex-[0_0_100%] sm:flex-[0_0_75%] lg:flex-[0_0_50%] 2xl:flex-[0_0_33.33%]"
               key={item?.id}
             >
-              {/* <CardContent className="flex justify-center h-full flex-row items-center gap-6 p-4 lg:p-6 max-lg:flex-col">
-                <div className="flex text-justify flex-1 flex-col h-full justify-between text-dwd-primary gap-6">
-                  <div className="flex flex-col gap-2">
-                    <p className="text-xl font-semibold mb-4">{item?.text}</p>
-                    <p>{item?.aboutEvent}</p>
-                    <p className="font-semibold mb-4">Date: {item.timestamp}</p>
-                  </div>
-
-                  <Link
-                    href={`/events/${item?.id}`}
-                    className="flex w-fit rounded hover:bg-dwd-primary hover:text-white transition duration-300 border border-dwd-primary py-2 px-4 gap-2"
-                  >
-                    Read More
-                    <ExternalLink />
-                  </Link>
-                </div>
-                <div className="flex-none aspect-square overflow-hidden w-1/2 lg:w-1/3 bg-gray-30 rounded-lg shadow-lg border max-lg:-order-1">
-                  <Image
-                    alt="main image"
-                    src={item?.href}
-                    width={0}
-                    height={0}
-                    sizes="100%"
-                    style={{ height: '100%', width: '100%' }}
-                    className="aspect-[4/3] overflow-hidden object-cover object-center"
-                  />
-                </div>
-              </CardContent> */}
               <CardContent
                 // style={{ background: `url('${item?.href}')` }}
                 // className="flex bg-cover h-full w-full text-white relative bg-bottom before:absolute before:top-0 before:h-full before:w-full before:left-0 z-0 before:bg-[#041e3fd7] justify-between flex-col p-5 overflow-hidden rounded"
@@ -292,7 +264,7 @@ export default function Home({ eventData, galleryData, carouselData }: HomeProps
                       {item?.text}
                     </p>
                     <p className="text-xs">{item?.organiser?.name}</p>
-                    <div className="text-sm py-4">{item?.aboutEvent}</div>
+                    <div className="text-sm py-4 max-h-40 truncate text-wrap">{item?.aboutEvent}</div>
                   </div>
                   <Link
                     href={`/events/${item?.id}`}

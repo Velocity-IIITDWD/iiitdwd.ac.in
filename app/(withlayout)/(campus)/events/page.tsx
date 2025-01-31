@@ -1,9 +1,14 @@
-import { events } from '@/data/events';
+import { eventInf } from '@/data/events';
+import { FetchSanity } from '@/lib/sanity/client';
+import { queryEvents } from '@/lib/sanity/Queries';
 import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-// import { handleClientScriptLoad } from "next/script";
-export default function Home() {
+
+export default async function Home() {
+  const events = (await FetchSanity(queryEvents)) as eventInf[];
+  if (!Array.isArray(events)) return null;
+
   return (
     <div>
       <br></br>
@@ -14,7 +19,7 @@ export default function Home() {
       <div className="container mx-auto p-4">
         <div className="mx-6 grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-12">
           {events.map((_, index) => (
-            <ComponentEvent key={index} index={index} />
+            <ComponentEvent key={index} index={index} events={events} />
           ))}
         </div>
       </div>
@@ -23,9 +28,10 @@ export default function Home() {
 }
 interface ComponentEventProps {
   index: number;
+  events: eventInf[];
 }
 
-function ComponentEvent({ index }: ComponentEventProps) {
+function ComponentEvent({ index, events }: ComponentEventProps) {
   const eventImageSrc = events[index].href;
   const link: string = '/events/' + events[index].id;
   return (
