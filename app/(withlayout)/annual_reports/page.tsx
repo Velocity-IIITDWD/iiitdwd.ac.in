@@ -1,16 +1,10 @@
 import { Metadata } from 'next';
 import Reports from './Reports';
-import { client } from '@/lib/sanity/client';
+import { FetchSanity } from '@/lib/sanity/client';
 import { queryReport } from '@/lib/sanity/Queries';
 
-async function getData() {
-  const data = (await client.fetch(queryReport)) as any[];
-  return data;
-}
-
-export default async function Page() {
-
-  const data = await getData();
+export default async function Page() {  
+  const data = (await FetchSanity(queryReport)) as any[];
 
   return (
     <div className="w-full flex justify-center">

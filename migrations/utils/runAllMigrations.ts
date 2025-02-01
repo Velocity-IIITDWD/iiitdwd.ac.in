@@ -15,6 +15,8 @@ import { migrateJobs } from '../MigrationFiles/jobs.ts';
 import { migrateMagazines } from '../MigrationFiles/magazines.ts';
 import { migrateClubs } from '../MigrationFiles/clubs.ts';
 import { migrateNirf } from '../MigrationFiles/nirf.ts';
+import { migrateCampus } from '../MigrationFiles/campus.ts';
+import { migrateAllProfiles } from '../MigrationFiles/profiles.ts';
 
 function log(message: string, color: chalk.Chalk = chalk.blue) {
   console.log(color.bold(message));
@@ -47,6 +49,10 @@ async function runAllMigrations() {
         task: migrateAnnualReports,
       },
       {
+        name: 'campus',
+        task: migrateCampus,
+      },
+      {
         name: 'clubs',
         task: migrateClubs,
       },
@@ -77,6 +83,10 @@ async function runAllMigrations() {
       {
         name: 'nirf',
         task: migrateNirf,
+      },
+      {
+        name: 'profiles',
+        task: migrateAllProfiles,
       },
       {
         name: 'tenders',

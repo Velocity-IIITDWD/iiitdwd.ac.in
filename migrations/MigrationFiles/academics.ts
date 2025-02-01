@@ -1,5 +1,6 @@
 import { client } from '../utils/sanity';
 import { ECEDetails, CSEDetails, DSAIDetails, CSEStructure, DSAIStrcutre, ECEStructure } from '../../data/academics';
+import { advertisements } from '@/data/academics/research';
 
 export const migrateAcademics = async () => {
   const transaction = client.transaction();
@@ -61,6 +62,16 @@ export const migrateAcademics = async () => {
         credit: course.credit,
         preReq: course.preReq,
       });
+    });
+  }
+
+  for (const advertisement of advertisements) {
+    transaction.create({
+      _type: 'research_advertisement',
+      time: advertisement.time,
+      lastDate: advertisement.lastDate,
+      generalInstructions: advertisement.generalInstructions,
+      applicationForm: advertisement.applicationForm,
     });
   }
 

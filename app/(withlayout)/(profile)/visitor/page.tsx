@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import { ProfileGroup } from '@/components/profile/ProfileGroup';
-import { client, FetchSanity } from '@/lib/sanity/client';
+import { FetchSanity } from '@/lib/sanity/client';
 import { GetAllVisitors } from '@/lib/sanity/Queries';
 import { ProfileGroup as ProfileGroupType } from '@/types/profile';
 

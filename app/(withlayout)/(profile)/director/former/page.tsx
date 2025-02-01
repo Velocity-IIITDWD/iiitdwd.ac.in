@@ -1,13 +1,13 @@
 import { Metadata } from 'next';
 import { ProfileGroup } from '@/components/profile/ProfileGroup';
 import { ProfileGroup as ProfileGroupType } from '@/types/profile';
-import { GetFormer } from '@/lib/sanity/Queries';
+import { GetFormerDirector } from '@/lib/sanity/Queries';
 import { FetchSanity } from '@/lib/sanity/client';
 
 const title = 'Former Directors';
 
 export default async function FormerDirectorsPage() {
-  const data = await FetchSanity(GetFormer) as ProfileGroupType[];
+  const data = await FetchSanity(GetFormerDirector) as ProfileGroupType[];
 
   return (
     <>

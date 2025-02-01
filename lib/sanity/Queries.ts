@@ -8,6 +8,8 @@ export const GetAllFaculties = `*[_type == "faculty"] {
   "id": facultyId
 }`;
 
+export const queryFaculty = '*[_type == "faculty"]';
+
 export const GetAllVisitors = `*[_type == "visitor"] {
   title,
   profiles[] {
@@ -35,7 +37,7 @@ export const GetAllSenate = `*[_type == "senate"] {
   }
 }`;
 
-export const GetFormer = `*[_type == "former"] {
+export const GetFormerDirector = `*[_type == "formerDirector"] {
   title,
   profiles[] {
     title,
@@ -44,7 +46,7 @@ export const GetFormer = `*[_type == "former"] {
   }
 }`;
 
-export const GetChair = `*[_type == "chairPerson"] {
+export const GetChairperson = `*[_type == "chairPerson"] {
   title,
   profiles[] {
     title,
@@ -96,14 +98,14 @@ export const GetDescription = `*[_type == "descriptionStructure"]{
   description
 }`;
 
-export const GetAbout = `*[_type == "about"]{
+const GetAbout = `*[_type == "about"]{
   coreValues[] {
     id,
     text,
   },
 }`;
 
-export const GetResearch = `*[_type == "profiles"] {
+export const GetResearch = `*[_type == "researchProfiles"] {
   title,
   profiles[] {
     title,
@@ -112,7 +114,7 @@ export const GetResearch = `*[_type == "profiles"] {
   }
 }`;
 
-export const GetResearchAdvertisement = `*[_type == "advertisement"]{
+export const GetResearchAdvertisement = `*[_type == "research_advertisement"]{
   time,
   lastDate,
   generalInstructions,
@@ -160,15 +162,6 @@ export const GetKrcDataTelFull = `*[_type == "krcDataTelFull"] {
     buttonText,
     link
   }
-}
-
-`;
-
-export const GetAnnualReports = `*[_type == "annualReport"] {
-  issueUrl,
-  id,
-  displayText,
-  previewImg
 }`;
 
 export const GetContactInfo = `*[_type == "contactData"][0] {
@@ -222,10 +215,6 @@ export const GetContactInfo = `*[_type == "contactData"][0] {
   }
 }`;
 
-export const GetContactCategory = '*[_type == "contactCategory"] { _id, category}';
-export const GetAllContacts = '*[_type == "contact"]{ _id, "category": category->{category}.category }';
-export const GetAllDocumentIds = '*[_type != "system.document" && !(_id in path("_.**")) && !(_id in path("drafts.**"))]._id';
-
 export const queryCarousel = '*[_type == "mainCarouselImage"]';
 export const queryEvents = '*[_type == "event"]';
 export const queryEventIds = '*[_type == "event"] {"eventId": id}';
@@ -234,4 +223,8 @@ export const queryGallery = '*[_type == "gallery"]';
 export const queryPrograms = '*[_type == "program"]';
 export const queryReport = '*[_type == "annualReport"]';
 export const queryJobs = '*[_type == "jobs"]';
-export const queryFaculty = '*[_type == "faculty"]';
+
+// for migrations
+export const GetContactCategory = '*[_type == "contactCategory"] { _id, category}';
+export const GetAllContacts = '*[_type == "contact"]{ _id, "category": category->{category}.category }';
+export const GetAllDocumentIds = '*[_type != "system.document" && !(_id in path("_.**")) && !(_id in path("drafts.**"))]._id';

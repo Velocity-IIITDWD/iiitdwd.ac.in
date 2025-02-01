@@ -1,5 +1,4 @@
 import { Metadata } from 'next';
-import group from '@/data/profile/board_of_governors/former';
 import { ProfileGroup as ProfileGroupType } from '@/types/profile';
 
 import { ProfileGroup } from '@/components/profile/ProfileGroup';

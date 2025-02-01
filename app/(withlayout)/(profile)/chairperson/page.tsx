@@ -2,12 +2,12 @@ import { Metadata } from 'next';
 import { ProfileGroup } from '@/components/profile/ProfileGroup';
 import { ProfileGroup as ProfileGroupType } from '@/types/profile';
 import { FetchSanity } from '@/lib/sanity/client';
-import { GetChair } from '@/lib/sanity/Queries';
+import { GetChairperson } from '@/lib/sanity/Queries';
 
 const title = 'Chairperson';
 
 export default async function ChairpersonPage() {
-  const data = await FetchSanity(GetChair) as ProfileGroupType[];
+  const data = await FetchSanity(GetChairperson) as ProfileGroupType[];
 
   return (
     <>

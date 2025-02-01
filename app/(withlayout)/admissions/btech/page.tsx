@@ -1,38 +1,13 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { descriptions, seatMatrix, year, links } from '@/data/admissions';
+import { seatMatrix, year, type linksStructure, type descriptionStructure } from '@/data/admissions';
 import { Fragment } from 'react';
-import { client } from '@/lib/sanity/client';
+import { FetchSanity } from '@/lib/sanity/client';
 import { GetDescription, GetLinks } from '@/lib/sanity/Queries';
 
 export default async function Page() {
-  const GetSanityDataLinks = async () => {
-    try {
-      const res = await client.fetch(GetLinks);
-      return res; // Return fetched data
-    } catch (err) {
-      console.error('Error fetching data:', err);
-      return [];
-    }
-  };
-
-  const LinkData = await GetSanityDataLinks(); 
-  const mergedLinks = [...links, ...LinkData];
-
-  const GetSanityDataDescription = async () => {
-    try {
-      const res = await client.fetch(GetDescription);
-      return res;
-    } catch (err) {
-      console.error('Error fetching data:', err);
-      return [];
-    }
-  };
-
-  const DescriptionData = await GetSanityDataLinks(); 
-  const mergedDescription = [...descriptions, ...DescriptionData];
-  // console.log(mergedDescription);
-
+  const LinkData = await FetchSanity(GetLinks) as linksStructure[];
+  const DescriptionData = await FetchSanity(GetDescription) as descriptionStructure[]; 
 
   //Seat Not Implemented
   // const GetSanitySeat = async () => {
@@ -45,8 +20,6 @@ export default async function Page() {
   //   }
   // };
   // const seatsData = await GetSanitySeat(); 
-
-
 
   return (
     <div className="w-fit max-w-5xl p-4 flex flex-col gap-2 pb-12 overflow-auto">
@@ -210,7 +183,7 @@ export default async function Page() {
 
       
 
-      {mergedLinks.map((obj) => (
+      {LinkData.map((obj) => (
         <Fragment key={obj.id}>
           <p className="mt-2 text-lg font-bold text-dwd-primary">{obj.type}</p>
           {obj.links.map((o : any) => (
@@ -224,7 +197,7 @@ export default async function Page() {
           ))}
         </Fragment>
       ))}
-      {mergedDescription.map((obj) => (
+      {DescriptionData.map((obj) => (
         <Fragment key={obj.id}>
           <p className="mt-2 text-lg font-bold text-dwd-primary">
             {obj.heading}
