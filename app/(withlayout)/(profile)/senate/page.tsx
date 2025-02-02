@@ -1,14 +1,18 @@
 import { Metadata } from 'next';
-import group from '@/data/profile/senate';
 import { ProfileGroup } from '@/components/profile/ProfileGroup';
+import { ProfileGroup as ProfileGroupType } from '@/types/profile';
+import { FetchSanity } from '@/lib/sanity/client';
+import { GetAllSenate } from '@/lib/sanity/Queries';
 
 const title = 'Senate';
 
-export default function SenatePage() {
+export default async function SenatePage() {
+  const data = await FetchSanity(GetAllSenate) as ProfileGroupType[];
+  
   return (
     <>
       <h1 className="heading-text">{title}</h1>
-      {group.map(({ profiles, title }, index) => (
+      {data.map(({ profiles, title }, index) => (
         <ProfileGroup key={index} profiles={profiles} title={title} />
       ))}
     </>

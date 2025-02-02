@@ -1,4 +1,4 @@
-name: Deploy to cPanel
+name: Beta Deploy to cPanel
 
 on:
   workflow_dispatch:
@@ -33,4 +33,4 @@ jobs:
           user: ${{ secrets.BETA_FTP_USERNAME }}
           password: ${{ secrets.BETA_FTP_PASSWORD }}
           localDir: ./out/
-          options: "--parallel=10 --exclude-glob=**/docs/**"
+          options: "--parallel=10 --exclude-glob=**/{docs,images}/**"

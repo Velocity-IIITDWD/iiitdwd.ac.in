@@ -5,9 +5,12 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "postbuild": "next-sitemap && node buildScripts/postbuild.js",
+    "serve": "npx serve@latest out",
+    "build:serve": "next build && npx serve@latest out",
+    "postbuild": "next-sitemap && node scripts/postbuild.js",
     "start": "next start",
-    "lint": "next lint --fix"
+    "lint": "next lint --fix",
+    "migrate-to-sanity": "npx tsx migrations/utils/runAllMigrations.ts"
   },
   "dependencies": {
     "@next/third-parties": "^14.2.15",
@@ -17,6 +20,8 @@
     "@radix-ui/react-select": "^2.1.2",
     "@radix-ui/react-slot": "^1.1.0",
     "@radix-ui/react-tabs": "1.1.1",
+    "@sanity/client": "^6.27.1",
+    "@sanity/image-url": "^1.1.0",
     "chart.js": "^4.4.5",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
@@ -27,6 +32,7 @@
     "framer-motion": "^11.11.9",
     "lucide-react": "^0.453.0",
     "next": "^14.2.15",
+    "next-sanity": "^9.8.18",
     "react": "^18.3.1",
     "react-animations": "^1.0.0",
     "react-chartjs-2": "^5.2.0",
@@ -39,16 +45,18 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
+    "@types/minimatch": "^5.1.2",
     "@types/node": "22.7.6",
     "@types/react": "18.3.11",
     "@types/react-dom": "^18",
     "@types/react-slick": "^0.23.13",
+    "dotenv": "^16.4.7",
     "eslint": "^8.0.0",
     "eslint-config-next": "14.2.15",
     "next-sitemap": "^4.2.3",
     "postcss": "^8",
     "tailwindcss": "^3.4.14",
-    "typescript": "5.6.3"
+    "typescript": "^5.7.3"
   },
-  "packageManager": "pnpm@9.15.4+sha512.b2dc20e2fc72b3e18848459b37359a32064663e5627a51e4c74b2c29dd8e8e0491483c3abb40789cfd578bf362fb6ba8261b05f0387d76792ed6e23ea3b1b6a0"
+  "packageManager": "pnpm@8.15.9+sha512.499434c9d8fdd1a2794ebf4552b3b25c0a633abcee5bb15e7b5de90f32f47b513aca98cd5cfd001c31f0db454bc3804edccd578501e4ca293a6816166bbd9f81"
 }

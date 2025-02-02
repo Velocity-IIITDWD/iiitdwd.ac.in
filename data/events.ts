@@ -1,5 +1,3 @@
-import { announcements } from './announcements';
-
 export type eventInf = {
   id: string;
   href: string;
@@ -24,7 +22,7 @@ export type eventInf = {
   aboutEvent: string;
 };
 
-let events: eventInf[] = [
+const events: eventInf[] = [
   {
     id: 'independence-day-2024',
     href: '/images/independence_day_78_6.webp',

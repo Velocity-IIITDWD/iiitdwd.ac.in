@@ -5,7 +5,7 @@ interface GetContactRowsProps {
   contactInfo: Contact[];
 }
 const GetContactRows = ({ contactInfo }: GetContactRowsProps) => {
-  return contactInfo.map((contact) => (
+  return contactInfo?.map((contact) => (
     <TableRow key={contact.name}>
       <TableCell>{contact.name}</TableCell>
       <TableCell>{contact.designation}</TableCell>

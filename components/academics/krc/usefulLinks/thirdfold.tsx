@@ -1,18 +1,22 @@
 import { FC } from 'react';
 import Link from 'next/link';
-import { linkGroups } from '../../../../data/krc/dataTelFull';
+import { LinkGroup} from '@/data/krc/dataTelFull';
+import { FetchSanity } from '@/lib/sanity/client';
+import {  GetKrcDataTelFull } from '@/lib/sanity/Queries';
 
-const ThirdFold: FC = () => {
+const ThirdFold: FC = async () => {
+  const data = await FetchSanity(GetKrcDataTelFull) as LinkGroup[];
+
   return (
     <div className="bg-black py-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        {linkGroups.map((group, groupIndex) => (
+        {data.map((group, groupIndex) => (
           <div key={groupIndex} className="mb-24">
             <h2 className="text-4xl font-bold mb-6 text-white">
               {group.heading}
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8">
-              {group.links.map((link, index) => (
+              {group.card.map((link, index) => (
                 <a
                   key={index}
                   href={link.link}

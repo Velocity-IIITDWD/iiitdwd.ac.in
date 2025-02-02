@@ -1,10 +1,14 @@
 import React from 'react';
 import Card from './Card';
-import { cardData } from '../../data/campus/data';
+import { CardData } from '../../data/campus/data';
 import Image from 'next/image';
 import MainBlock from '@/assets/academics/MBlock.jpg';
+import { FetchSanity } from '@/lib/sanity/client';
+import { GetCampusData } from '@/lib/sanity/Queries';
 
-const MainContent: React.FC = () => {
+const MainContent: React.FC = async () => {
+  const data = await FetchSanity(GetCampusData) as CardData[];
+
   return (
     <main className="flex flex-col items-center">
       <div className="relative w-full h-[60vw] sm:h-[530px] overflow-hidden">
@@ -21,12 +25,12 @@ const MainContent: React.FC = () => {
         </div>
       </div>
       <div className="flex flex-wrap justify-center p-4 w-full gap-4">
-        {cardData.map((card) => (
+        {data.map((card) => (
           <Card
             key={card.title}
             title={card.title}
             href={card.href}
-            image={card.image}
+            image={card.imageUrl}
           />
         ))}
       </div>
