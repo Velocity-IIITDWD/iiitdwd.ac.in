@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import group from '@/data/profile/cgc/student_coordinators';
-import {  } from '@/components/profile/';
+import { ProfileGroup } from '@/components/profile/ProfileGroup';
 
 const title = 'Student Coordinators Team';
 
@@ -9,12 +9,11 @@ export default function StudentsCoordinatorsTeamPage() {
     <>
       <h1 className="heading-text">{title}</h1>
       {group.map(({ profiles, title }, index) => (
-        < key={index} profiles={profiles} title={title} />
+        <ProfileGroup key={index} profiles={profiles} title={title} />
       ))}
     </>
   );
 }
-
 export const metadata: Metadata = {
   title,
 };
