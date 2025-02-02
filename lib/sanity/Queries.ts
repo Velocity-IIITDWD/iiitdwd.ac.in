@@ -227,4 +227,4 @@ export const queryJobs = '*[_type == "jobs"]';
 // for migrations
 export const GetContactCategory = '*[_type == "contactCategory"] { _id, category}';
 export const GetAllContacts = '*[_type == "contact"]{ _id, "category": category->{category}.category }';
-export const GetAllDocumentIds = '*[_type != "system.document" && !(_id in path("_.**")) && !(_id in path("drafts.**"))]._id';
+export const GetAllDocumentIds = '*[_type != "system.document" && !(_id in path("_.**"))]._id';

@@ -24,11 +24,13 @@ export const migrateAbout = async () => {
     vision: aboutData.vision,
     missions: aboutData.missions.map((mission) => ({
       _type: 'mission',
+      _key: crypto.randomUUID(),
       id: mission.id,
       text: mission.text,
     })),
     coreValues: aboutData.coreValues.map((value) => ({
       _type: 'coreValue',
+      _key: crypto.randomUUID(),
       id: value.id,
       text: value.text,
     })),

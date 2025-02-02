@@ -10,6 +10,7 @@ export const migrateKrcDataTelFull = async () => {
       heading: group.heading,
       card: group.card.map(card => ({
         _type: 'object',
+        _key: crypto.randomUUID(),
         title: card.title,
         description: card.description,
         accessInfo: card.accessInfo,

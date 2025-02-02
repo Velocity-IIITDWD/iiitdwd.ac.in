@@ -11,12 +11,14 @@ export async function migrateTenders() {
       cancelled: tender.cancelled || false,
       corrections: tender.corrections?.map(
         (correction: { title: string; link: string }) => ({
+          _key: crypto.randomUUID(),
           title: correction.title,
           link: correction.link,
         })
       ),
       documents: tender.documents?.map(
         (document: { title: string; link: string }) => ({
+          _key: crypto.randomUUID(),
           title: document.title,
           link: document.link,
         })
@@ -29,7 +31,5 @@ export async function migrateTenders() {
   }
 
   const results = await transaction.commit();
-  console.log(
-    `Created ${results.results.length} tenders in a transaction.`
-  );
+  console.log(`Created ${results.results.length} tenders in a transaction.`);
 }

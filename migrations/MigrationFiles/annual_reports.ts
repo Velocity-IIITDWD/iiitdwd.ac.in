@@ -8,7 +8,6 @@ export const migrateAnnualReports = async () => {
     transaction.create({
       _type: 'annualReport',
       issueUrl: report.issueUrl,
-      id: report.id,
       displayText: report.displayText,
       previewImg: report.previewImg,
     });

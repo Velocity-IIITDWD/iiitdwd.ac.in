@@ -18,6 +18,7 @@ const migrateProfileGroup = async (type: string, data: ProfileGroup[]) => {
       _type: type,
       title: staff.title,
       profiles: staff.profiles.map((profile) => ({
+        _key: crypto.randomUUID(),
         title: profile.title,
         content: profile.content,
         imageURL: profile.imageURL,

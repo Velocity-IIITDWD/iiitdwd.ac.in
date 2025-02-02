@@ -1,4 +1,4 @@
-import chalk from 'chalk';
+import * as chalk from 'chalk';
 import { migrateAnnouncements } from '../MigrationFiles/announcements.ts';
 import { migrateTenders } from '../MigrationFiles/tenders.ts';
 import { migrateFaculties } from '../MigrationFiles/faculty_profile.ts';
@@ -17,12 +17,11 @@ import { migrateClubs } from '../MigrationFiles/clubs.ts';
 import { migrateNirf } from '../MigrationFiles/nirf.ts';
 import { migrateCampus } from '../MigrationFiles/campus.ts';
 import { migrateAllProfiles } from '../MigrationFiles/profiles.ts';
-import { migrateReserch } from '../MigrationFiles/research.ts';
 import { migrateKrcData } from '../MigrationFiles/krc_data.ts';
 import { migrateKrcTel } from '../MigrationFiles/krc_tel.ts';
 import { migrateKrcDataTelFull } from '../MigrationFiles/krc_dataTelFull.ts';
 
-function log(message: string, color: chalk.Chalk = chalk.blue) {
+function log(message: string, color: typeof chalk.default.blue = chalk.default.blue) {
   console.log(color.bold(message));
 }
 
@@ -97,10 +96,6 @@ async function runAllMigrations() {
         task: migrateTenders,
       },
       {
-        name: 'research',
-        task: migrateReserch,
-      },
-      {
         name: 'krcData',
         task: migrateKrcData,
       },
@@ -117,6 +112,7 @@ async function runAllMigrations() {
     
     if (documentsDeleted) {
       log('\nStarting migrations...');
+      console.time('Migration time')
       for (let i = 0; i < migrationTasks.length; i++) {
         const { name, task } = migrationTasks[i];
 
@@ -127,17 +123,18 @@ async function runAllMigrations() {
         await task();
         console.timeEnd(`${name} migration`);
         log(
-          chalk.green(
+          chalk.default.green(
             `[${i + 1}/${migrationTasks.length}] ${name} migration completed successfully!\n`
           )
         );
       }
 
-      console.log(chalk.green('All migrations completed successfully!'));
+      console.timeEnd('Migration time')
+      console.log(chalk.default.green('All migrations completed successfully!'));
     }
   } catch (error) {
-    console.error(chalk.red('Error running migrations:'));
-    console.error(chalk.red(error instanceof Error ? error.message : error));
+    console.error(chalk.default.red('Error running migrations:'));
+    console.error(chalk.default.red(error instanceof Error ? error.message : error));
     process.exit(1);
   } finally {
     process.exit();

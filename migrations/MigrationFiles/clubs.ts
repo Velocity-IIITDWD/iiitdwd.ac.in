@@ -8,7 +8,10 @@ export const migrateClubs = async () => {
       _type: 'club',
       name: club.name,
       aboutText: club.aboutText,
-      members: club.members,
+      members: club.members.map(member => ({
+        _key: crypto.randomUUID(),
+        ...member
+      })),
       imagePath: club.imagePath,
       isTechnical: club.isTechnical,
       github: club.github,

@@ -10,13 +10,16 @@ export const migrateSeatMatrix = async () => {
     instituteName: seatMatrix.instituteName,
     programs: seatMatrix.programs.map(program => ({
       _type: 'program',
+      _key: crypto.randomUUID(),
       code: program.code,
       name: program.name,
       seatPoolQuota: program.seatPoolQuota.map(quota => ({
         _type: 'seatPoolQuota',
+        _key: crypto.randomUUID(),
         name: quota.name,
         seatPoolGender: quota.seatPoolGender.map(gender => ({
           _type: 'seatPoolGender',
+          _key: crypto.randomUUID(),
           name: gender.name,
           open: gender.open,
           open_pwd: gender.open_pwd,
@@ -36,6 +39,7 @@ export const migrateSeatMatrix = async () => {
     })),
     total: seatMatrix.total.map(total => ({
       _type: 'total',
+      _key: crypto.randomUUID(),
       id: total.id,
       qty: total.qty,
     })),
@@ -47,6 +51,7 @@ export const migrateSeatMatrix = async () => {
       type: linkCategory.type,
       links: linkCategory.links.map(link => ({
         _type: 'link',
+        _key: crypto.randomUUID(),
         link: link.link,
         displayText: link.displayText,
       })),

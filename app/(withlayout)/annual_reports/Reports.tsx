@@ -12,8 +12,6 @@ import {
   HoverCardTrigger,
 } from '@/components/ui/hover-card'
 
-
-
 export default function Reports({Fulldata}: { Fulldata: annualReportsStructure[] }) {
   
   const [selectedReport, setIssue] = useState<annualReportsStructure | null>(null);
@@ -27,14 +25,14 @@ export default function Reports({Fulldata}: { Fulldata: annualReportsStructure[]
     <>
       <div className='md:hidden flex flex-wrap gap-4 self-center justify-center'>
         {
-          Fulldata.map((report: annualReportsStructure, index: number) => (
-            <MobileBtn key={report.id} {...report} />
+          Fulldata?.map((report: annualReportsStructure, index: number) => (
+            <MobileBtn key={index} {...report} />
           ))
         }
       </div>
       <div className='max-md:hidden flex flex-col gap-4'>
         <div className='flex gap-4 justify-center flex-wrap'>
-          {Fulldata.sort((a,b) => b.id - a.id).map((report) => (
+          {Fulldata?.map((report) => (
             <HoverCard key={report.id}>
               <HoverCardTrigger>
                 <button className='bg-dwd-primary px-4 py-2 rounded text-white w-fit self-center text-center' onClick={() => setIssue(report)}>{report.displayText}</button>

@@ -24,7 +24,7 @@ export async function migrateFaculties() {
         },
         body: {
           profile_text: faculty.content.body.profile_text || '',
-          interest_areas: faculty.content.body.interest_areas,
+          interest_areas: faculty.content.body.interest_areas.map(obj => obj.area),
         },
       },
     });
