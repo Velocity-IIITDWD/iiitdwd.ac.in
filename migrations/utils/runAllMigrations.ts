@@ -17,6 +17,10 @@ import { migrateClubs } from '../MigrationFiles/clubs.ts';
 import { migrateNirf } from '../MigrationFiles/nirf.ts';
 import { migrateCampus } from '../MigrationFiles/campus.ts';
 import { migrateAllProfiles } from '../MigrationFiles/profiles.ts';
+import { migrateReserch } from '../MigrationFiles/research.ts';
+import { migrateKrcData } from '../MigrationFiles/krc_data.ts';
+import { migrateKrcTel } from '../MigrationFiles/krc_tel.ts';
+import { migrateKrcDataTelFull } from '../MigrationFiles/krc_dataTelFull.ts';
 
 function log(message: string, color: chalk.Chalk = chalk.blue) {
   console.log(color.bold(message));
@@ -92,6 +96,23 @@ async function runAllMigrations() {
         name: 'tenders',
         task: migrateTenders,
       },
+      {
+        name: 'research',
+        task: migrateReserch,
+      },
+      {
+        name: 'krcData',
+        task: migrateKrcData,
+      },
+      {
+        name: 'krcDataTel',
+        task: migrateKrcTel,
+      },
+      {
+        name: 'krcDataTelFull',
+        task: migrateKrcDataTelFull,
+      }
+
     ];
     
     if (documentsDeleted) {
