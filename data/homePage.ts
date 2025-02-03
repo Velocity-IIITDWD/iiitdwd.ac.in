@@ -20,7 +20,7 @@ export interface ProgramsType {
 
 export const images: MainCarouselImage[] = [
   {
-    url: '/images/84bfb0ea-50f7-4ad9-ab51-f3a2343cc350.png',
+    url: '/images/84bfb0ea-50f7-4ad9-ab51-f3a2343cc350.webp',
     caption: 'IIIT Dharwad welcomes Shri Priyank M Kharge for an inspiring discussion on innovation and growth',
     link: 'https://www.linkedin.com/posts/indian-institute-of-information-technology-dharwad-karnataka_iiitdharwad-leadership-innovation-activity-7291480836464394241-GdrJ?utm_source=social_share_send&utm_medium=member_desktop_web',
   },
