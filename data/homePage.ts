@@ -20,6 +20,11 @@ export interface ProgramsType {
 
 export const images: MainCarouselImage[] = [
   {
+    url: '/images/TRL_excellence_series.webp',
+    caption: 'Half-Day Workshop on Teaching & Research Evolution in Engineering – TRL Excellence Series #10.',
+    link: 'https://www.linkedin.com/posts/indian-institute-of-information-technology-dharwad-karnataka_teaching-research-and-leadership-excellence-activity-7292560518827888642-UDlm/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAA59NwYB4HruLv8St2Qeo6MmQtXM-nm3Uo8',
+  },
+  {
     url: '/images/84bfb0ea-50f7-4ad9-ab51-f3a2343cc350.webp',
     caption: 'IIIT Dharwad welcomes Shri Priyank M Kharge for an inspiring discussion on innovation and growth',
     link: 'https://www.linkedin.com/posts/indian-institute-of-information-technology-dharwad-karnataka_iiitdharwad-leadership-innovation-activity-7291480836464394241-GdrJ?utm_source=social_share_send&utm_medium=member_desktop_web',
