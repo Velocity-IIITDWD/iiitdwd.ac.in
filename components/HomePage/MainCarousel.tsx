@@ -1,6 +1,6 @@
 // components/EmblaCarousel.tsx
 'use client';
-import React, { useCallback, useEffect, useRef } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import {
   EmblaCarouselType,
@@ -9,7 +9,7 @@ import {
 } from 'embla-carousel';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Autoplay from 'embla-carousel-autoplay';
-import { images } from '@/data/homePage';
+import { MainCarouselImage } from '@/data/homePage';
 import Link from 'next/link';
 import { Card, CardContent } from '@/components/ui/card';
 import Image from 'next/image';
@@ -22,10 +22,14 @@ const numberWithinRange = (number: number, min: number, max: number): number =>
 
 type PropType = {
   //   slides: SlideType[];
+  FullData: MainCarouselImage[];
   options?: EmblaOptionsType;
 };
 
-const MainCarousel: React.FC<PropType> = ({ options }) => {
+
+const MainCarousel: React.FC<PropType> = ({ FullData, options }) => {
+
+
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, ...options }, [
     Autoplay({ delay: 4000, stopOnInteraction: false }),
   ]);
@@ -168,7 +172,7 @@ const MainCarousel: React.FC<PropType> = ({ options }) => {
     <section className="embla">
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
-          {images.map((item, index) =>
+          {FullData.map((item, index) =>
             item?.link ? (
               <Link key={index} className="embla__slide" href={item?.link}>
                 <Card className="slide_number_main border-none p-0">

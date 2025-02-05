@@ -1,44 +1,35 @@
-import MBlock from '@/assets/gallery/M_Block.webp';
-import EBlock from '@/assets/gallery/E_Block.webp';
-import GBlock from '@/assets/gallery/G_Block.webp';
-import BBlock from '@/assets/gallery/B_Block.webp';
-import Library from '@/assets/gallery/Library.jpg';
-import PiBlock from '@/assets/gallery/PiBlock.webp';
-import HBlock from '@/assets/gallery/H_Block.webp';
-import { StaticImageData } from 'next/image';
-
 export interface gallery {
-  url: StaticImageData;
+  url: string;
   caption: string;
 }
 
 export const GalleryImages: gallery[] = [
   {
-    url: MBlock,
+    url: '/images/M_Block.webp',
     caption: 'M Block',
   },
   {
-    url: PiBlock,
+    url: '/images/PiBlock.webp',
     caption: 'Pi Block',
   },
   {
-    url: EBlock,
+    url: '/images/E_Block.webp',
     caption: 'E Block',
   },
   {
-    url: Library,
+    url: '/images/Library.jpg',
     caption: 'Library',
   },
   {
-    url: BBlock,
+    url: '/images/B_Block.webp',
     caption: 'B Block',
   },
   {
-    url: GBlock,
+    url: '/images/G_Block.webp',
     caption: 'G Block',
   },
   {
-    url: HBlock,
+    url: '/images/H_Block.webp',
     caption: 'H Block',
   },
 ];

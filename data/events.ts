@@ -1,5 +1,3 @@
-import { announcements } from './announcements';
-
 export type eventInf = {
   id: string;
   href: string;
@@ -24,7 +22,7 @@ export type eventInf = {
   aboutEvent: string;
 };
 
-let events: eventInf[] = [
+export const events: eventInf[] = [
   {
     id: 'republic-day-2025',
     href: '/images/DSC_0237.webp',
@@ -456,5 +454,3 @@ let events: eventInf[] = [
       'Shri N R Narayana Murthy, Founder Infosys India Pvt Ltd visited IIIT Dharwad at 11:00 AM, 3rd February 2019. He had discussions with faculty, staff and students. He shared his experience during his Infosys day’s and also gave suggestion on career.',
   },
 ];
-
-export { events };

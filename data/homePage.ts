@@ -11,7 +11,7 @@ export interface ProgramCards {
   Header2: string;
 }
 
-export interface ProgramsType {
+export interface ProgramType {
   image: string;
   title: string;
   description: string;
@@ -73,13 +73,11 @@ export const images: MainCarouselImage[] = [
     url: '/images/Ind_Day-2.webp',
     caption: 'Celebrating 78th Independence Day',
     link: '#',
-    
   },
   {
     url: '/images/Ind_Day-3.webp',
     caption: 'Celebrating 78th Independence Day',
     link: '#',
-
   },
   {
     url: '/images/Sign-MoU.webp',
@@ -126,7 +124,7 @@ export const ProgramCardDetails: ProgramCards[] = [
   },
 ];
 
-export const Programs: ProgramsType[] = [
+export const Programs: ProgramType[] = [
   {
     image: '/images/cse_program.webp',
     title: 'Computer Science and Engineering (B. Tech.)',

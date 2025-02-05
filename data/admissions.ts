@@ -131,7 +131,7 @@ export const links: linksStructure[] = [
       {
         id: 7,
         link: '/faq',
-        displayText: "FAQ's",
+        displayText: 'FAQ\'s',
       },
     ],
   },
