@@ -24,6 +24,37 @@ export type eventInf = {
 
 export const events: eventInf[] = [
   {
+    id: 'republic-day-2025',
+    href: '/images/DSC_0237.webp',
+    text: 'Celebrating 76th Republic Day',
+    timestamp: '15-08-2024',
+    allImage: [
+      '/images/IMG_4670.webp',
+      '/images/DSC_0223.webp',
+      '/images/DSC_0237.webp',
+      '/images/IMG_4737.webp',
+      '/images/IMG_4812.webp',
+      '/images/_MG_0983.webp',
+      '/images/DSC_0126.webp',
+    ],
+    details: {
+      startDate: 'Start date : 26-01-2025',
+      endDate: 'End date : 26-01-2025',
+      ticketPrice: '',
+    },
+    venue: {
+      place: 'IIIT Dharwad',
+      street: '',
+      city: 'Dharwad',
+    },
+    organiser: {
+      name: 'IIIT Dharwad',
+      designation: '',
+      contact: '',
+    },
+    aboutEvent: 'Celebration of 76th Republic day',
+  },
+  {
     id: 'independence-day-2024',
     href: '/images/independence_day_78_6.webp',
     text: 'Celebrating 78th Independence Day',
@@ -420,6 +451,6 @@ export const events: eventInf[] = [
       contact: '',
     },
     aboutEvent:
-      'Shri. N R Narayana Murthy, Founder Infosys India Pvt Ltd visited IIIT Dharwad at 11:00 AM, 3rd February 2019. He had discussions with faculty, staff and students. He shared his experience during his Infosys day’s and also gave suggestion on career.',
+      'Shri N R Narayana Murthy, Founder Infosys India Pvt Ltd visited IIIT Dharwad at 11:00 AM, 3rd February 2019. He had discussions with faculty, staff and students. He shared his experience during his Infosys day’s and also gave suggestion on career.',
   },
 ];

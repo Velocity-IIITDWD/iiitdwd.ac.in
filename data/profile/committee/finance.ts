@@ -2,12 +2,12 @@ import { ProfileGroup } from '@/types/profile';
 
 export default [
   {
-    title: 'Officiating Chairperson',
+    title: 'Chairperson',
     profiles: [
       {
-        content: ['Officiating Chairperson & Director, IIIT Dharwad'],
-        imageURL: '/images/s_r_mahadeva_prasanna.jpg',
-        title: 'Prof. S. R. Mahadeva Prasanna',
+        content: ['Chairperson, IIIT Dharwad'],
+        imageURL: '/images/Sridhar Vembu.webp',
+        title: 'Dr. Sridhar Vembu',
       },
     ],
   },
@@ -17,7 +17,7 @@ export default [
       {
         content: ['Director - Finance, Department of Higher Education, MoE, GoI'],
         imageURL: '',
-        title: ' Shri. Mukesh Kumar'
+        title: ' Shri Mukesh Kumar'
       },
       {
         content: ['Director, Department of ITBT & ST, GOK'],
@@ -29,7 +29,7 @@ export default [
           'Department of Science & Technology & Managing Director, KSTePS Government of Karnataka',
         ],
         imageURL: '/images/pavan_kumar_malapati.jpg',
-        title: 'Shri. Pavan Kumar Malapati, IAS',
+        title: 'Shri Pavan Kumar Malapati, IAS',
       },
     ],
   },

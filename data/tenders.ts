@@ -21,7 +21,12 @@ export const tenders: Tender[] = [
   },
   {
     cancelled: false,
-    corrections: [],
+    corrections: [
+      {
+        link: '/docs/Corrigendum%2001.pdf',
+        title: 'Corrigendum - 01',
+      },
+    ],
     documents: [
       {
         link: '/images/84733b0a-962e-402e-ba9b-dd29f2c84652.jpg',

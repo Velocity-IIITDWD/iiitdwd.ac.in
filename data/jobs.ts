@@ -10,6 +10,24 @@ export type Jobs = {
 
 export const jobsData: Jobs[] = [
   {
+    'title': 'Recruitment Advertisement for Junior Research Fellow Positions',
+    'category': 'staff',
+    'details': '',
+    'lastDate': '17.02.2025',
+    'generalInstructions': '/docs/Advt_JRF_DOM.pdf',
+    'application': 'https://forms.gle/cTF8vvccH95bpUCw8',
+    'extraInfo': []
+  },
+  {
+    'title': 'Advertisement for the Recruitment of Research Associate and Project Assistant',
+    'category': 'staff',
+    'details': '',
+    'lastDate': '07.02.2025',
+    'generalInstructions': '/docs/Advertisement_TiHAN.pdf',
+    'application': 'https://forms.gle/qGdVo3UGtDmr4Kmk7',
+    'extraInfo': []
+  },
+  {
     'title': 'Advertisement for the position of Project Associate',
     'category': 'staff',
     'details': '',
