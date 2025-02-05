@@ -55,7 +55,7 @@ export const GetChairperson = `*[_type == "chairPerson"] {
   }
 }`;
 
-export const GetBoard = `*[_type == "boardOfGovernors"] {
+export const GetBoard = `*[_type == "boardOfGovernor"] {
   title,
   profiles[] {
     title,
@@ -82,21 +82,9 @@ export const GetAnnouncements = `*[_type == "announcement"]{
   date,
 }`;
 
-export const GetLinks = `*[_type == "linksStructure"]{
-  id,
-  type,
-  links[] {
-    displayText,
-    link,
-    id
-  }
-}`;
+export const GetLinks = `*[_type == "linksStructure"]`;
 
-export const GetDescription = `*[_type == "descriptionStructure"]{
-  id,
-  heading,
-  description
-}`;
+export const GetDescription = `*[_type == "descriptionStructure"]`;
 
 const GetAbout = `*[_type == "about"]{
   coreValues[] {
@@ -222,7 +210,7 @@ export const queryEventById = '*[_type == "event" && id == $id][0]';
 export const queryGallery = '*[_type == "gallery"]';
 export const queryPrograms = '*[_type == "program"]';
 export const queryReport = '*[_type == "annualReport"]';
-export const queryJobs = '*[_type == "jobs"]';
+export const queryJobs = '*[_type == "job"]';
 
 // for migrations
 export const GetContactCategory = '*[_type == "contactCategory"] { _id, category}';

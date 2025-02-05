@@ -20,6 +20,7 @@ import { migrateAllProfiles } from '../MigrationFiles/profiles.ts';
 import { migrateKrcData } from '../MigrationFiles/krc_data.ts';
 import { migrateKrcTel } from '../MigrationFiles/krc_tel.ts';
 import { migrateKrcDataTelFull } from '../MigrationFiles/krc_dataTelFull.ts';
+import { migrateEvents } from '../MigrationFiles/events.ts';
 
 function log(message: string, color: typeof chalk.default.blue = chalk.default.blue) {
   console.log(color.bold(message));
@@ -64,6 +65,10 @@ async function runAllMigrations() {
         task: migrateContactData,
       },
       {
+        name: 'events',
+        task: migrateEvents,
+      },
+      {
         name: 'faculties',
         task: migrateFaculties,
       },
@@ -72,12 +77,28 @@ async function runAllMigrations() {
         task: migrateFormer,
       },
       {
+        name: 'gallery',
+        task: migrateGalleryImages,
+      },
+      {
         name: 'homepage',
         task: migrateHomePage,
       },
       {
         name: 'jobs',
         task: migrateJobs,
+      },
+      {
+        name: 'krcData',
+        task: migrateKrcData,
+      },
+      {
+        name: 'krcDataTel',
+        task: migrateKrcTel,
+      },
+      {
+        name: 'krcDataTelFull',
+        task: migrateKrcDataTelFull,
       },
       {
         name: 'magazines',
@@ -95,19 +116,6 @@ async function runAllMigrations() {
         name: 'tenders',
         task: migrateTenders,
       },
-      {
-        name: 'krcData',
-        task: migrateKrcData,
-      },
-      {
-        name: 'krcDataTel',
-        task: migrateKrcTel,
-      },
-      {
-        name: 'krcDataTelFull',
-        task: migrateKrcDataTelFull,
-      }
-
     ];
     
     if (documentsDeleted) {

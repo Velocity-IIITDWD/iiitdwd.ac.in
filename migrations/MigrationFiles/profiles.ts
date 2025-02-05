@@ -34,7 +34,7 @@ const migrateProfileGroup = async (type: string, data: ProfileGroup[]) => {
 
 export const migrateAllProfiles = async () => {
   const profileGroups = [
-    { type: 'boardOfGovernors', data: board_of_governors },
+    { type: 'boardOfGovernor', data: board_of_governors },
     { type: 'chairPerson', data: chairperson },
     { type: 'student_coordinators', data: student_coordinators },
     { type: 'formerBoardOfGovernor', data: former_bog },

@@ -47,10 +47,9 @@ export const migrateSeatMatrix = async () => {
 
   for (const linkCategory of links) {
     transaction.create({
-      _type: 'links',
+      _type: 'linksStructure',
       type: linkCategory.type,
       links: linkCategory.links.map(link => ({
-        _type: 'link',
         _key: crypto.randomUUID(),
         link: link.link,
         displayText: link.displayText,
@@ -60,7 +59,7 @@ export const migrateSeatMatrix = async () => {
 
   for (const description of descriptions) {
     transaction.create({
-      _type: 'description',
+      _type: 'descriptionStructure',
       heading: description.heading,
       description: description.description,
     });

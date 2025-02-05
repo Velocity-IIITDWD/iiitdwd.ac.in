@@ -41,11 +41,11 @@ export default async function Profile({
 }: {
   params: { id: string };
 }) {
-  const profile = (await getProfileData(id)) as ProfileProp;
+  const profile = (await getProfileData(id)) as any;
 
   const areaofinterest_array: JSX.Element[] | undefined =
-    profile.content.body.interest_areas.map((arr) => (
-      <li key={arr.id}>{arr.area}</li>
+    (profile.content.body.interest_areas as string[]).map((arr, index) => (
+      <li key={index}>{arr}</li>
     ));
 
   return (
