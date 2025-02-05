@@ -36,4 +36,4 @@ jobs:
           user: ${{ secrets.BETA_FTP_USERNAME }}
           password: ${{ secrets.BETA_FTP_PASSWORD }}
           localDir: ./out/
-          options: "--parallel=10 --exclude-glob=**/{docs,images}/**"
+          options: "--parallel=10 --exclude-glob=**/docs/** --exclude-glob=**/images/**"
