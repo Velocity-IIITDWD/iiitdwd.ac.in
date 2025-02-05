@@ -8,7 +8,7 @@ const ShortCampusVideo = () => {
         width="560" 
         height="315" 
         className="rounded-md w-auto min-h-80  xl:w-3/5 sm:col-span-2 text-left shadow hover:shadow-2xl"
-        src="https://www.youtube.com/embed/_QLrIgjopCg?si=GrjaKptEy4LEp2uW&autoplay=1"
+        src="https://www.youtube.com/embed/_QLrIgjopCg?si=GrjaKptEy4LEp2uW&autoplay=0"
         title="YouTube video player"
         //frameBorder="1"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

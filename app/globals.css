@@ -422,3 +422,6 @@
     transform: translateX(-50%);
   }
 }
+img {
+  user-select: none !important;
+}

@@ -1,26 +1,36 @@
+import { eventInf } from '@/data/events';
+import { FetchSanity } from '@/lib/sanity/client';
+import { queryEventById, queryEventIds } from '@/lib/sanity/Queries';
 import { Metadata } from 'next';
 import dynamic from 'next/dynamic';
-import { events } from '@/data/events';
+import { notFound } from 'next/navigation';
 
-export function generateStaticParams(): { eventId: string }[] {
-  return events.map(e => ({ eventId: e.id }));
+export async function generateStaticParams(): Promise<{ eventId: string }[]> {
+  const data = await FetchSanity(queryEventIds);
+
+  if (!data || !Array.isArray(data) || data.length === 0) {
+    console.error('No event data found.');
+    return [];
+  }
+
+  return data;
 }
 
-const DynamicComponentWithNoSSR = dynamic(() => import('@/components/event'), {
+const EventComponent = dynamic(() => import('@/components/event'), {
   ssr: false,
 });
 
-export default function EventDetails({
+export default async function EventDetails({
   params,
 }: {
   params: { eventId: string };
 }) {
-  // let eveId: Number = params.eventId;
+  const event = await FetchSanity(queryEventById, {id: params.eventId}) as eventInf;
+
+  if (!event) notFound();
 
   return (
-    <div >
-      <DynamicComponentWithNoSSR eventId={params.eventId} />
-    </div>
+    <EventComponent event={event} />
   );
 }
 

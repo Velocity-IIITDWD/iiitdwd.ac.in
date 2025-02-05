@@ -1,4 +1,4 @@
-name: Deploy to cPanel
+name: Main Deploy to cPanel
 
 on:
   workflow_dispatch:
@@ -20,6 +20,9 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Set Environment Variables
+        run: echo -e "${{ secrets.SANITY_ENV }}" >> $GITHUB_ENV
+
       - name: ⬇️ Install dependencies
         run: npm ci
 
@@ -33,4 +36,4 @@ jobs:
           user: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           localDir: ./out/
-          options: "--parallel=10 --exclude-glob=**/docs/**"
+          options: "--parallel=10 --exclude-glob=docs/** --exclude-glob=images/** --verbose"

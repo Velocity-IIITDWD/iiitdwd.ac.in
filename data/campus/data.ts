@@ -1,36 +1,28 @@
-// Import StaticImageData type
-import { StaticImageData } from 'next/image';
-
-import eblockImage from '@/assets/campus/eblock.jpg';
-import eventsImage from '@/assets/campus/events.png';
-import velocityLogo from '@/assets/campus/velocitylogo.png';
-import magazineImage from '@/assets/campus/magazine.png';
-
 export interface CardData {
   title: string;
   href: string;
-  image: string | StaticImageData;
+  imageUrl: string;
 }
 
 export const cardData: CardData[] = [
   {
     title: 'Facilities',
     href: '/facilities',
-    image: eblockImage,
+    imageUrl: '/images/eblock.jpg',
   },
   { 
     title: 'Events', 
     href: '/events', 
-    image: eventsImage,
+    imageUrl: '/images/events.png',
   },
   { 
     title: 'Clubs', 
     href: '/clubs', 
-    image: velocityLogo,
+    imageUrl: '/images/velocitylogo.png',
   },
   {
     title: 'Institute Magazine',
     href: '/magazine',
-    image: magazineImage,
+    imageUrl: '/images/magazine.png',
   },
 ];

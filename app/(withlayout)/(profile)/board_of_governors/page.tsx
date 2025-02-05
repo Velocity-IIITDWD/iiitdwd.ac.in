@@ -1,15 +1,19 @@
-import { Metadata } from 'next';
-import group from '@/data/profile/board_of_governors';
+import { Metadata } from 'next';;
 import { ProfileGroup } from '@/components/profile/ProfileGroup';
+import { ProfileGroup as ProfileGroupType } from '@/types/profile';
 import Link from 'next/link';
+import { FetchSanity } from '@/lib/sanity/client';
+import { GetBoard } from '@/lib/sanity/Queries';
 
 const title = 'Board of Governors';
 
-export default function BoardOfGovernorsPage() {
+export default async function BoardOfGovernorsPage() {
+  const data = await FetchSanity(GetBoard) as ProfileGroupType[];
+  
   return (
     <>
       <h1 className="heading-text">{title}</h1>
-      {group.map(({ profiles, title }, index) => (
+      {data.map(({ profiles, title }, index) => (
         <ProfileGroup key={index} profiles={profiles} title={title} />
       ))}
       <Link

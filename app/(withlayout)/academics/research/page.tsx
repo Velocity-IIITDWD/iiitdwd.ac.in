@@ -1,12 +1,17 @@
 import { Metadata } from 'next';
 import { ProfileGroup } from '@/components/profile/ProfileGroup';
-import group from '@/data/academics/research';
-import { advertisements } from '@/data/academics/research';
 import Link from 'next/link';
+import { FetchSanity } from '@/lib/sanity/client';
+
+import { GetResearch, GetResearchAdvertisement } from '@/lib/sanity/Queries';
+import { ProfileGroup as ProfileGroupType } from '@/types/profile';
 
 const title = 'Research';
 
-export default function ResearchPage() {
+export default async function ResearchPage() {
+  
+  const data = await FetchSanity(GetResearch) as ProfileGroupType[];
+  const advertisements = await FetchSanity(GetResearchAdvertisement)
   return (
     <>
       <h1 className="heading-text">{title}</h1>
@@ -32,14 +37,14 @@ export default function ResearchPage() {
           <li>Algorithms, Computational Geometry</li>
         </ul>
       </section>
-      {group.map(({ profiles, title }, index) => (
+      {data.map(({ profiles, title }, index) => (
         <ProfileGroup key={index} profiles={profiles} title={title} />
       ))}
       <section className="px-14 pb-10">
         <h2 className="text-dwd-primary font-bold text-2xl">
           PhD Advertisement
         </h2>
-        {advertisements.map((ad, index) => (
+        {advertisements.map((ad:any, index:any) => (
           <div key={index} className="p-2 mt-4 flex flex-col gap-2">
             <h3 className="text-dwd-primary text-lg font-bold">{ad.time}</h3>
             <div className="border-l-2 border-dwd-primary mx-4 p-4 flex flex-col gap-2">
