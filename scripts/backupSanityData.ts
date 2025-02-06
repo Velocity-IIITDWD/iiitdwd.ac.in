@@ -36,11 +36,14 @@ async function backupData() {
     try {
       console.log(`Fetching data for query: ${key}`);
       const data = await FetchSanity(query);
-      responseMap[key] = JSON.parse(data);
+
+      // Ensure the response is a valid JSON object or array
+      const parsedData = typeof data === 'string' ? JSON.parse(data) : data;
+      responseMap[key] = parsedData;
 
       const fileName = `${key}-data.json`;
       const filePath = path.join(backupFolder, fileName);
-      fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+      fs.writeFileSync(filePath, JSON.stringify(parsedData, null, 2));
       console.log(`Backup saved to ${filePath}`);
     } catch (error) {
       console.error(`Error fetching data for query "${key}":`, error);
@@ -57,11 +60,7 @@ async function backupData() {
       console.log(`Processing parameterized query: ${queryKey}`);
 
       const parameters = responseMap[parameterSourceKey];
-      if (
-        !parameters ||
-        !Array.isArray(parameters) ||
-        parameters.length === 0
-      ) {
+      if (!parameters || !Array.isArray(parameters) || parameters.length === 0) {
         console.warn(`No parameters found for query: ${queryKey}`);
         continue;
       }
@@ -75,17 +74,15 @@ async function backupData() {
         })
       );
 
-      responseMap[queryKey] = data.map(objArr => objArr[0]);
+      // Map and store the results
+      responseMap[queryKey] = data.map((objArr) => objArr[0]);
 
       const fileName = `${queryKey}-data.json`;
       const filePath = path.join(backupFolder, fileName);
       fs.writeFileSync(filePath, JSON.stringify(responseMap[queryKey], null, 2));
       console.log(`Backup saved to ${filePath}`);
     } catch (error) {
-      console.error(
-        `Error processing parameterized query "${queryKey}":`,
-        error
-      );
+      console.error(`Error processing parameterized query "${queryKey}":`, error);
     }
   }
 
