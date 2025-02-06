@@ -1,4 +1,7 @@
 import { createClient, type QueryParams } from '@sanity/client';
+import { configDotenv } from 'dotenv';
+
+configDotenv({path: '.env.local'})
 
 export const client = createClient({
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,

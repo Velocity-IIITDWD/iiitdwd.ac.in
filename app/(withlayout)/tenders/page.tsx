@@ -1,11 +1,13 @@
 import { Metadata } from 'next';
 import Tenders from './Tenders';
-import { tenders } from '@/data/tenders';
+import { FetchSanity } from '@/lib/sanity/client';
+import { queryTenders } from '@/lib/sanity/Queries';
 
-export default function TendersPage() {
+export default async function TendersPage() {
   const now = Date.now();
   const active: Tender[] = [];
   const archive: Tender[] = [];
+  const tenders = await FetchSanity(queryTenders);
 
   for (const tender of tenders) {
     const newTender = {
