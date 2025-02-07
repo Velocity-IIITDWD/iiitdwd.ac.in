@@ -18,6 +18,9 @@ jobs:
         with:
           node-version: 20
           cache: 'npm' # Cache pnpm dependencies
+          
+      - name: Set Environment Variables
+        run: echo -e secrets.SANITY_ENV >> $GITHUB_ENV
 
       - name: Install dependencies
         run: npm ci
