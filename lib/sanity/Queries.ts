@@ -211,6 +211,7 @@ export const queryGallery = '*[_type == "gallery"]';
 export const queryPrograms = '*[_type == "program"]';
 export const queryReport = '*[_type == "annualReport"]';
 export const queryJobs = '*[_type == "job"]';
+export const queryTenders = '*[_type == "tender"]'
 
 // for migrations
 export const GetContactCategory = '*[_type == "contactCategory"] { _id, category}';
