@@ -2,8 +2,8 @@ name: Backup Sanity Data
 
 on:
   workflow_dispatch: # Allows manual triggering
-#   schedule:
-#     - cron: '0 0 * * *' # Runs daily at midnight UTC
+  schedule:
+    - cron: '0 */3 * * *'  # Runs every 3 hours
 
 jobs:
   backup:

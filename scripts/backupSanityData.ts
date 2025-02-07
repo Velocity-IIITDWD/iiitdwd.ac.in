@@ -3,6 +3,7 @@ import path from 'path';
 import { FetchSanity } from '../lib/sanity/client';
 import * as sanityScripts from '../lib/sanity/Queries';
 
+
 const BACKUPS_DIR = path.join(process.cwd(), 'backups');
 
 function ensureDirectoryExists(dirPath: string): void {
@@ -22,9 +23,15 @@ async function backupData() {
   const parameterizedQueries = [
     {
       queryKey: 'GetFacultyDetails',
-      parameterSourceKey: 'getAllFaculties',
+      parameterSourceKey: 'GetAllFaculties',
       parameterKey: 'id',
     },
+    {
+      queryKey: 'queryEventById',
+      parameterSourceKey: 'queryEventIds',
+      parameterKey: 'eventId',
+    },
+ 
   ];
 
   const parameterizedQueryKeys = parameterizedQueries.map((pq) => pq.queryKey);
@@ -36,7 +43,8 @@ async function backupData() {
     try {
       console.log(`Fetching data for query: ${key}`);
       const data = await FetchSanity(query);
-      responseMap[key] = JSON.parse(data);
+      // console.log(data);
+      responseMap[key] = data;
 
       const fileName = `${key}-data.json`;
       const filePath = path.join(backupFolder, fileName);
@@ -55,7 +63,6 @@ async function backupData() {
   } of parameterizedQueries) {
     try {
       console.log(`Processing parameterized query: ${queryKey}`);
-
       const parameters = responseMap[parameterSourceKey];
       if (
         !parameters ||
@@ -66,16 +73,18 @@ async function backupData() {
         continue;
       }
 
+
       const data = await Promise.all(
+
         parameters.map(async (param: any) => {
           const query = sanityScripts[queryKey as keyof typeof sanityScripts];
           return await FetchSanity(query, {
             [parameterKey]: param[parameterKey],
           });
         })
-      );
 
-      responseMap[queryKey] = data.map(objArr => objArr[0]);
+      );
+      responseMap[queryKey] = data.flat();
 
       const fileName = `${queryKey}-data.json`;
       const filePath = path.join(backupFolder, fileName);
