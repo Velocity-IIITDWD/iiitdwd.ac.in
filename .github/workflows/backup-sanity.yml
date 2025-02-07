@@ -20,13 +20,13 @@ jobs:
           cache: 'npm' # Cache pnpm dependencies
           
       - name: Set Environment Variables
-        run: echo -e secrets.SANITY_ENV >> $GITHUB_ENV
+        run: echo -e "${{ secrets.SANITY_ENV }}" >> $GITHUB_ENV
 
       - name: Install dependencies
         run: npm ci
 
       - name: Run backup script
-        run: npx tsx ./scripts/backupSanityData.ts
+        run: npx bun run ./scripts/backupSanityData.ts
 
       - name: Upload backup as artifact
         uses: actions/upload-artifact@v4
