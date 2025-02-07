@@ -60,7 +60,7 @@ function TabsContentContent({ tabsData: tabsData }: TabsContentContentProps) {
                     <div className="flex flex-col gap-2">
                       <span>{tender.title}</span>
                       <div className="flex gap-x-3 gap-y-2 font-normal flex-wrap">
-                        {tender.documents.map((doc, index) => (
+                        {tender.documents?.map((doc, index) => (
                           <span className="inline-block underline" key={index}>
                             <Link href={doc.link} target="_blank">
                               {doc.title}
@@ -69,7 +69,7 @@ function TabsContentContent({ tabsData: tabsData }: TabsContentContentProps) {
                         ))}
                       </div>
                       <div className="flex gap-3">
-                        {tender.corrections.map((correction, index) => (
+                        {tender.corrections?.map((correction, index) => (
                           <span
                             className={cn(
                               'inline-block',
