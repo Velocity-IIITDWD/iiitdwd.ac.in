@@ -124,7 +124,6 @@ const navmenuItems: NavmenuItem[] = [
       },
     ],
   },
-  { text: 'Online', href: 'https://online.iiitdwd.ac.in' },
   { text: 'Placements', href: '/placements' },
   { text: 'Careers', href: '/careers' },
   { text: 'Contact Us', href: '/contact' },
@@ -237,7 +236,7 @@ function Header() {
               <MenuIcon size="2rem" />
             </div>
           </SheetTrigger>
-          <SheetContent side="left">
+          <SheetContent side="left" className='overflow-auto'>
             <div className="flex flex-col gap-2 mt-4 -mr-2 ">
               {navmenuItems.map((item) => {
                 const dropdownTrigger = item.href ? (

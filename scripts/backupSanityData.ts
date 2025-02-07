@@ -15,6 +15,7 @@ async function backupData() {
   const timestamp = new Date().toUTCString().replace(/[:.]/g, '-');
   const backupFolder = path.join(BACKUPS_DIR, `sanity-backup-${timestamp}`);
   const responseMap: Record<string, any> = {};
+  console.log(`Saving backup data to ${backupFolder}`)
 
   ensureDirectoryExists(backupFolder);
 
@@ -22,8 +23,13 @@ async function backupData() {
   const parameterizedQueries = [
     {
       queryKey: 'GetFacultyDetails',
-      parameterSourceKey: 'getAllFaculties',
+      parameterSourceKey: 'GetAllFaculties',
       parameterKey: 'id',
+    },
+    {
+      queryKey: 'queryEventById',
+      parameterSourceKey: 'queryEventIds',
+      parameterKey: 'eventId',
     },
   ];
 
@@ -36,15 +42,11 @@ async function backupData() {
     try {
       console.log(`Fetching data for query: ${key}`);
       const data = await FetchSanity(query);
-
-      // Ensure the response is a valid JSON object or array
-      const parsedData = typeof data === 'string' ? JSON.parse(data) : data;
-      responseMap[key] = parsedData;
+      responseMap[key] = data;
 
       const fileName = `${key}-data.json`;
       const filePath = path.join(backupFolder, fileName);
-      fs.writeFileSync(filePath, JSON.stringify(parsedData, null, 2));
-      console.log(`Backup saved to ${filePath}`);
+      fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
     } catch (error) {
       console.error(`Error fetching data for query "${key}":`, error);
     }
@@ -58,31 +60,36 @@ async function backupData() {
   } of parameterizedQueries) {
     try {
       console.log(`Processing parameterized query: ${queryKey}`);
-
       const parameters = responseMap[parameterSourceKey];
-      if (!parameters || !Array.isArray(parameters) || parameters.length === 0) {
+      if (
+        !parameters ||
+        !Array.isArray(parameters) ||
+        parameters.length === 0
+      ) {
         console.warn(`No parameters found for query: ${queryKey}`);
         continue;
       }
 
       const data = await Promise.all(
+
         parameters.map(async (param: any) => {
           const query = sanityScripts[queryKey as keyof typeof sanityScripts];
           return await FetchSanity(query, {
             [parameterKey]: param[parameterKey],
           });
         })
-      );
 
-      // Map and store the results
-      responseMap[queryKey] = data.map((objArr) => objArr[0]);
+      );
+      responseMap[queryKey] = data.flat();
 
       const fileName = `${queryKey}-data.json`;
       const filePath = path.join(backupFolder, fileName);
       fs.writeFileSync(filePath, JSON.stringify(responseMap[queryKey], null, 2));
-      console.log(`Backup saved to ${filePath}`);
     } catch (error) {
-      console.error(`Error processing parameterized query "${queryKey}":`, error);
+      console.error(
+        `Error processing parameterized query "${queryKey}":`,
+        error
+      );
     }
   }
 
