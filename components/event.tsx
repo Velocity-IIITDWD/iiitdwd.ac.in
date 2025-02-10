@@ -68,9 +68,13 @@ export default function EventPage({ event }: { event: eventInf }) {
           <div className="bg-gray-200 p-4 rounded-lg shadow-md">
             <h2 className="text-xl font-semibold mb-2">Details</h2>
 
-            <p> {event.details.startDate}</p>
-            <p>{event.details.endDate}</p>
-            <p> {event.details.ticketPrice} </p>
+            <p>Start Date: {event.details.startDate}</p>
+            <p>End Date: {event.details.endDate}</p>
+            {event.details.ticketPrice ? (
+              <p>Ticket Price {event.details.ticketPrice}</p>
+            ) : (
+              ''
+            )}
           </div>
           <div className="bg-gray-200 p-4 rounded-lg shadow-md">
             <h2 className="text-xl font-semibold mb-2">Organiser</h2>

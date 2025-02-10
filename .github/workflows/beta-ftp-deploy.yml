@@ -9,11 +9,19 @@ on:
 jobs:
   deploy:
     name: Build & FTP Sync
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+
+      - name: Cache Next.js Build
+        uses: actions/cache@v3
+        with:
+          path: .next
+          key: next-build-${{ github.sha }}
+          restore-keys: |
+            next-build-
 
       - name: Set up Node.js
         uses: actions/setup-node@v4.0.2
@@ -28,12 +36,15 @@ jobs:
 
       - name: 🛠️ Build Next.js application
         run: npm run build
-
-      - name: 📂 Sync files
-        uses: sebastianpopp/ftp-action@releases/v2
-        with:
-          host: ${{ secrets.BETA_FTP_SERVER }}
-          user: ${{ secrets.BETA_FTP_USERNAME }}
-          password: ${{ secrets.BETA_FTP_PASSWORD }}
-          localDir: ./out/
-          options: "--parallel=10 --exclude-glob=docs/** --exclude-glob=images/** --verbose"
+      
+      - name: 📂 Incremental FTP Sync (Only Changed Files)
+        run: |
+          sudo apt-get update && sudo apt-get install -y lftp
+          lftp -e "
+            set ftp:ssl-allow no;
+            open ${{ secrets.BETA_FTP_SERVER }};
+            user ${{ secrets.BETA_FTP_USERNAME }} ${{ secrets.BETA_FTP_PASSWORD }};
+            mirror -R --verbose --parallel=10 --use-cache --ignore-time --exclude-glob=docs/** --exclude-glob=images/** ./out/ .
+            bye
+          "
+        

@@ -13,8 +13,8 @@ export const migrateEvents = async () => {
       timestamp: event.timestamp,
       allImage: event.allImage,
       details: {
-        startDate: event.details.startDate,
-        endDate: event.details.endDate,
+        startDate: event.details.startDate.split(' ').at(-1),
+        endDate: event.details.endDate.split(' ').at(-1),
         ticketPrice: event.details.ticketPrice,
       },
       venue: {

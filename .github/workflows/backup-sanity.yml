@@ -1,9 +1,9 @@
 name: Backup Sanity Data
 
 on:
-  workflow_dispatch: # Allows manual triggering
+  workflow_dispatch:
   schedule:
-    - cron: '0 */3 * * *'  # Runs every 3 hours
+    - cron: '0 0 * * *'  # Runs at 00:00 (midnight) every day
 
 jobs:
   backup:
@@ -17,11 +17,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 20
-          cache: 'npm' # Cache pnpm dependencies
+          cache: 'npm'
           
-      - name: Set Environment Variables
-        run: echo -e "${{ secrets.SANITY_ENV }}" >> $GITHUB_ENV
-
       - name: Set Environment Variables
         run: echo -e "${{ secrets.SANITY_ENV }}" >> $GITHUB_ENV
 
@@ -34,6 +31,6 @@ jobs:
       - name: Upload backup as artifact
         uses: actions/upload-artifact@v4
         with:
-          name: sanity-backup-${{ github.run_id }} # Unique name for the artifact
-          path: backups/ # Directory to upload
-          retention-days: 30 # Keep artifacts for 30 days
+          name: sanity-backup-${{ github.run_id }}
+          path: backups/
+          retention-days: 30
