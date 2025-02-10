@@ -15,14 +15,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Cache Next.js Build
-        uses: actions/cache@v3
-        with:
-          path: .next
-          key: next-build-${{ github.sha }}
-          restore-keys: |
-            next-build-
-
       - name: Set up Node.js
         uses: actions/setup-node@v4.0.2
         with:
