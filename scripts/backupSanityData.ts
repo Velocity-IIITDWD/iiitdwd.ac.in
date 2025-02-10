@@ -25,11 +25,13 @@ async function backupData() {
       queryKey: 'GetFacultyDetails',
       parameterSourceKey: 'GetAllFaculties',
       parameterKey: 'id',
+      fetchKey: 'id'
     },
     {
       queryKey: 'queryEventById',
       parameterSourceKey: 'queryEventIds',
       parameterKey: 'eventId',
+      fetchKey: 'id'
     },
   ];
 
@@ -57,6 +59,7 @@ async function backupData() {
     queryKey,
     parameterSourceKey,
     parameterKey,
+    fetchKey
   } of parameterizedQueries) {
     try {
       console.log(`Processing parameterized query: ${queryKey}`);
@@ -75,7 +78,7 @@ async function backupData() {
         parameters.map(async (param: any) => {
           const query = sanityScripts[queryKey as keyof typeof sanityScripts];
           return await FetchSanity(query, {
-            [parameterKey]: param[parameterKey],
+            [fetchKey]: param[parameterKey],
           });
         })
 

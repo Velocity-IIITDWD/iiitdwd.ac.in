@@ -9,7 +9,7 @@ on:
 jobs:
   deploy:
     name: Build & FTP Sync
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
 
     steps:
       - name: Checkout repository
@@ -19,7 +19,7 @@ jobs:
         uses: actions/setup-node@v4.0.2
         with:
           node-version: '20'
-
+          
       - name: Set Environment Variables
         run: echo -e "${{ secrets.SANITY_ENV }}" >> $GITHUB_ENV
 
@@ -28,12 +28,14 @@ jobs:
 
       - name: 🛠️ Build Next.js application
         run: npm run build
-
-      - name: 📂 Sync files
-        uses: sebastianpopp/ftp-action@releases/v2
-        with:
-          host: ${{ secrets.FTP_SERVER }}
-          user: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          localDir: ./out/
-          options: "--parallel=10 --exclude-glob=docs/** --exclude-glob=images/** --verbose"
+      
+      - name: 📂 Incremental FTP Sync (Only Changed Files)
+        run: |
+          sudo apt-get update && sudo apt-get install -y lftp
+          lftp -e "
+            set ftp:ssl-allow no;
+            open ${{ secrets.FTP_SERVER }};
+            user ${{ secrets.FTP_USERNAME }} ${{ secrets.FTP_PASSWORD }};
+            mirror -R --verbose --parallel=10 --use-cache --ignore-time --exclude-glob=docs/** --exclude-glob=images/** ./out/ .
+            bye
+          "
