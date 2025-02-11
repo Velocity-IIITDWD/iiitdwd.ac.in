@@ -40,46 +40,45 @@ const List = ({ ll }: ListProps) => {
       if (ALL) return 1 === 1;
     });
 
-    const f_array = final.map((arr: ProfileProp) => (
-      <li
-        key={arr?.id}
-        className="bg-gray-100 hover:bg-gray-50 shadow-lg flex flex-none justify-center text-background p-8 rounded-lg mb-4 "
-      >
-        <Link href={`/faculty/${arr?.id}`}>
-          <div className="flex flex-col gap-4 h-full">
-            <Image
-              src={arr?.content?.card?.photo}
-              width={0}
-              height={0}
-              sizes="100%"
-              loading="lazy"
-              style={{ height: '250px', width: '250px' }}
-              alt={arr?.content?.head?.name}
-              className="shrink-0 object-cover mx-auto rounded-lg shadow"
-            />
-            <div className="h-full flex flex-col justify-between text-dwd-primary">
-              <div className="flex flex-col">
-                <h3 className="text-dwd-primary font-bold">
-                  {arr?.content?.head?.name}
-                </h3>
-                <ul className="list-disc text-xs pl-4 text-gray-500 mt-2">
-                  {arr?.content?.card?.designation && (
-                    <li>{arr.content.card.designation}</li>
-                  )}
-                  {arr?.content?.card?.PhD && <li>{arr.content.card.PhD}</li>}
-                  {Array.isArray(arr?.content?.card?.position) &&
-                  arr.content.card.position.length > 0
-                    ? arr.content.card.position.map((line, index) => (
-                      <li key={index}>{line}</li>
-                    ))
-                    : arr?.content?.card?.position?.length !== 0 && (
-                      <li>{arr.content.card.position}</li>
+    const f_array = final.map((arr: ProfileProp) => {
+      const position = arr?.content?.card?.position;
+      return (
+        <li
+          key={arr?.id}
+          className="bg-gray-100 hover:bg-gray-50 shadow-lg flex flex-none justify-center text-background p-8 rounded-lg mb-4 "
+        >
+          <Link href={`/faculty/${arr?.id}`}>
+            <div className="flex flex-col gap-4 h-full">
+              <Image
+                src={arr?.content?.card?.photo}
+                width={0}
+                height={0}
+                sizes="100%"
+                loading="lazy"
+                style={{ height: '250px', width: '250px' }}
+                alt={arr?.content?.head?.name}
+                className="shrink-0 object-cover mx-auto rounded-lg shadow"
+              />
+              <div className="h-full flex flex-col justify-between text-dwd-primary">
+                <div className="flex flex-col">
+                  <h3 className="text-dwd-primary font-bold">
+                    {arr?.content?.head?.name}
+                  </h3>
+                  <ul className="list-disc text-xs pl-4 text-gray-500 mt-2">
+                    {arr?.content?.card?.designation && (
+                      <li>{arr.content.card.designation}</li>
                     )}
-                </ul>
-              </div>
-              <h6 className="text-sm mt-3">{arr.content.card.department}</h6>
+                    {arr?.content?.card?.PhD && <li>{arr.content.card.PhD}</li>}
+                    {Array.isArray(position) && position.length > 0 ? (
+                      position.map((line, index) => <li key={index}>{line}</li>)
+                    ) : typeof position === 'string' && position.length > 0 ? (
+                      <li>{position}</li>
+                    ) : null}
+                  </ul>
+                </div>
+                <h6 className="text-sm mt-3">{arr.content.card.department}</h6>
 
-              {/* <div className="mt-4 flex flex-col gap-2">
+                {/* <div className="mt-4 flex flex-col gap-2">
                 <h6 className="text-xs">{arr.content.card.designation}</h6>
                 <h6 className="text-xs">{arr.content.card.department}</h6>
                 {arr.content.card.position && (
@@ -88,11 +87,12 @@ const List = ({ ll }: ListProps) => {
                   </h6>
                 )}
               </div> */}
+              </div>
             </div>
-          </div>
-        </Link>
-      </li>
-    ));
+          </Link>
+        </li>
+      );
+    });
     return f_array;
   }
   f_array = qwe();
