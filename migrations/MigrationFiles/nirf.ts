@@ -1,20 +1,18 @@
 import { client } from '../utils/sanity';
-import { linksdata as n } from '../../data/nirf';
+import { nirfReports } from '../../data/nirf';
 
 export const migrateNirf = async () => {
   const transaction = client.transaction();
-  for (const nirf of n) {
+
+  for (const nirf of nirfReports) {
     transaction.create({
       _type: 'nirf',
-      curr_year: nirf.curr_year,
-      Overall_Report_curr: nirf.Overall_Report_curr,
-      Engineering_Report_curr: nirf.Engineering_Report_curr,
-      prev_year: nirf.prev_year,
-      Overall_Report_prev: nirf.Overall_Report_prev,
-      Engineering_Report_prev: nirf.Engineering_Report_prev
+      year: nirf.year,
+      overallReport: nirf.overallReport,
+      engineeringReport: nirf.engineeringReport,
     });
   }
 
   const results = await transaction.commit();
-  console.log(`Created ${results.results.length} nirf in a transaction.`);
-}
+  console.log(`Created ${results.results.length} NIRF entries in a transaction.`);
+};

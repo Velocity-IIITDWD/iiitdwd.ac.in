@@ -212,6 +212,7 @@ export const queryPrograms = '*[_type == "program"]';
 export const queryReport = '*[_type == "annualReport"]';
 export const queryJobs = '*[_type == "job"]';
 export const queryTenders = '*[_type == "tender"]'
+export const queryNirfReports = '*[_type == "nirf"]';
 
 // for migrations
 export const GetContactCategory = '*[_type == "contactCategory"] { _id, category}';
