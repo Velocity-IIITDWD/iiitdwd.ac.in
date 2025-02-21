@@ -1,5 +1,9 @@
 'use client';
 
+import Link from 'next/link';
+import { useCallback, useEffect, useRef, useState } from 'react';
+import { FileTextIcon, SearchIcon, SquareArrowOutUpRight } from 'lucide-react';
+
 import {
   Select,
   SelectContent,
@@ -7,84 +11,36 @@ import {
   SelectValue,
   SelectTrigger,
 } from '@/components/ui/select';
-import { FileTextIcon, SearchIcon, SquareArrowOutUpRight } from 'lucide-react';
+import { type Jobs } from '@/data/jobs';
 
-import { Jobs } from '@/data/jobs';
-import Link from 'next/link';
-import { useCallback, useEffect, useRef, useState } from 'react';
-
-const currDate = new Date();
-
-const checkValid = (s: string) => {
-  let jobDateString = s.trim();
-
-  if (jobDateString.length <= 12) jobDateString += ' 11:59 PM';
-
-  const sanitizedString = jobDateString.replace(/'/g, '');
-  const [datePart, timePart] = sanitizedString.split(/\s*[\n\s]+\s*/);
-
-  const dateSeparator = datePart.includes('/') ? '/' : '.';
-  const [day, month, year] = datePart.split(dateSeparator).map(Number);
-
-  const [time, modifier] = timePart.split(' ');
-  const [hour, minute] = time.split(':').map(Number);
-
-  const adjustedHour = modifier === 'PM' && hour !== 12 ? hour + 12 : hour;
-  const finalHour = modifier === 'AM' && hour === 12 ? 0 : adjustedHour;
-
-  const jobDate = new Date(year, month - 1, day, finalHour, minute);
-
-  return jobDate >= currDate;
-};
-
-export default function CareersPage({Fulldata}: { Fulldata: Jobs[] }) {
-
-  const [updatedJobsData, setUpdatedJobsData] = useState<Jobs[]>(Fulldata);
-  
-  useEffect(() => {
-    const data = Fulldata
-      .map((job) => {
-        const isDateValid = checkValid(job.lastDate);
-        return {
-          ...job,
-          application: isDateValid ? job.application : '#',
-          actualDate: job.lastDate,
-        };
-      })
-      .sort(
-        (a, b) =>
-          new Date(b.actualDate).getTime() - new Date(a.actualDate).getTime()
-      );
-  
-    setUpdatedJobsData(data);
-  
-  }, [Fulldata]);
-  
+export default function CareersPage({ data }: { data: Jobs[] }) {
+  const [updatedJobsData, _] = useState<Jobs[]>(data);
   const [category, setCategory] = useState('all');
   const [searchText, setSearchText] = useState('');
-  const [filteredJobs, setFilteredJobs] = useState(updatedJobsData);
+  const [filteredJobs, setFilteredJobs] = useState<Jobs[]>(data);
+
   useEffect(() => {
     setFilteredJobs(
-      updatedJobsData
-        .filter((job) => category === 'all' || job.category === category)
-        .filter(
-          (job) =>
-            !searchText ||
-              job.title.toLowerCase().includes(searchText.toLowerCase()) ||
-              job.details.toLowerCase().includes(searchText.toLowerCase())
-        )
+      updatedJobsData.filter(
+        (job) =>
+          category === 'all' ||
+          job.category === category ||
+          !searchText ||
+          job.title.toLowerCase().includes(searchText.toLowerCase()) ||
+          job.details.toLowerCase().includes(searchText.toLowerCase())
+      )
     );
-  }, [category, searchText]);
-  
+  }, [category, searchText, updatedJobsData]);
+
   const searchInputRef = useRef<HTMLInputElement>(null);
   const updateSearch = useCallback(() => {
     searchInputRef.current && setSearchText(searchInputRef.current.value);
   }, []);
-  
+
   return (
     <div className="flex flex-col w-full h-fit items-center mb-8">
       <h1 className="heading-text font-bold p-8 my-8">Careers</h1>
-  
+
       {/* Filters */}
       <div className="w-full flex flex-col px-4 gap-4">
         <div className="flex flex-col-reverse justify-center items-center lg:flex-row gap-4">
@@ -99,7 +55,7 @@ export default function CareersPage({Fulldata}: { Fulldata: Jobs[] }) {
               <SelectItem value="others">Others</SelectItem>
             </SelectContent>
           </Select>
-  
+
           <search className="rounded-sm overflow-clip flex w-full lg:max-w-md h-10">
             <input
               onKeyDown={(e) => e.key === 'Enter' && updateSearch()}
@@ -116,7 +72,7 @@ export default function CareersPage({Fulldata}: { Fulldata: Jobs[] }) {
             </div>
           </search>
         </div>
-  
+
         {/* Actual data */}
         <div>
           {/* Large screen table */}
@@ -135,30 +91,35 @@ export default function CareersPage({Fulldata}: { Fulldata: Jobs[] }) {
                 <div className="flex flex-col w-[calc(100%-27rem)]">
                   <h3 className="text-lg font-bold">{job.title}</h3>
                   {job.details && <div className="pr-4">{job.details}</div>}
-  
+
                   <div className="flex gap-2">
-                    {job.extraInfo && job.extraInfo.map(([title, link]) => (
-                      <Link
-                        key={link}
-                        className="mt-8 px-4 py-2 border border-dwd-primary rounded-sm hover:bg-gray-100"
-                        target="_blank"
-                        href={link}
-                      >
-                        {title}
-                      </Link>
-                    ))}
+                    {job.extraInfo &&
+                      job.extraInfo.map(([title, link]) => (
+                        <Link
+                          key={link}
+                          className="mt-8 px-4 py-2 border border-dwd-primary rounded-sm hover:bg-gray-100"
+                          target="_blank"
+                          href={link}
+                        >
+                          {title}
+                        </Link>
+                      ))}
                   </div>
                 </div>
                 <div className="w-36 text-center font-bold">{job.lastDate}</div>
                 <div className="w-36 flex items-center justify-center">
-                  <Link target="_blank" href={job.generalInstructions}>
+                  <Link
+                    target="_blank"
+                    href={job.generalInstructions}
+                    hidden={!job.generalInstructions}
+                  >
                     <FileTextIcon size="2rem" />
                   </Link>
                 </div>
                 <div className="w-36 text-center">
                   <Link
                     className="bg-gray-200 px-4 py-4 rounded-sm hover:bg-gray-300"
-                    target="_blank"
+                    target={job.application != '#' ? '_blank' : '_self'}
                     href={job.application}
                   >
                     {job.application != '#' ? 'Apply Now' : '  Closed  '}
@@ -168,7 +129,7 @@ export default function CareersPage({Fulldata}: { Fulldata: Jobs[] }) {
               </div>
             ))}
           </div>
-  
+
           {/* Small and medium screen cards */}
           <div className="w-full flex lg:hidden flex-col gap-4">
             {filteredJobs.map((job, i) => (
@@ -176,36 +137,38 @@ export default function CareersPage({Fulldata}: { Fulldata: Jobs[] }) {
                 <div className="flex flex-col w-full gap-2">
                   <h3 className="text-lg font-bold">{job.title}</h3>
                   {job.details && <div>{job.details}</div>}
-  
+
                   <div className="mt-8">
-                      Deadline: <span className="font-bold">{job.lastDate}</span>
+                    Deadline: <span className="font-bold">{job.lastDate}</span>
                   </div>
-  
+
                   <div className="flex gap-2">
-                    {job.extraInfo && job.extraInfo.map(([title, link]) => (
-                      <Link
-                        key={link}
-                        className="mt-8 px-4 py-2 border border-dwd-primary rounded-sm hover:bg-gray-100"
-                        target="_blank"
-                        href={link}
-                      >
-                        {title}
-                      </Link>
-                    ))}
+                    {job.extraInfo &&
+                      job.extraInfo.map(([title, link]) => (
+                        <Link
+                          key={link}
+                          className="mt-8 px-4 py-2 border border-dwd-primary rounded-sm hover:bg-gray-100"
+                          target="_blank"
+                          href={link}
+                        >
+                          {title}
+                        </Link>
+                      ))}
                   </div>
-  
+
                   <div className="flex gap-4 mt-8">
                     <Link
                       className="w-1/2 border border-gray-200 px-4 py-3 rounded-sm hover:bg-gray-100"
                       target="_blank"
                       href={job.generalInstructions}
+                      hidden={!job.generalInstructions}
                     >
-                        General Instructions{' '}
+                      General Instructions{' '}
                       <SquareArrowOutUpRight size="1rem" className="inline" />
                     </Link>
                     <Link
                       className="w-1/2 bg-gray-200 px-4 py-3 rounded-sm hover:bg-gray-300"
-                      target="_blank"
+                      target={job.application != '#' ? '_blank' : '_self'}
                       href={job.application}
                     >
                       {job.application != '#' ? 'Apply Now' : '  Closed  '}
@@ -220,4 +183,3 @@ export default function CareersPage({Fulldata}: { Fulldata: Jobs[] }) {
     </div>
   );
 }
-  
