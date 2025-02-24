@@ -5,10 +5,10 @@ export type Jobs = {
   lastDate: string;
   generalInstructions: string;
   application: string;
-  extraInfo: [text: string, link: string][]
+  extraInfo: { text: string, link: string }[]
 };
 
-export const jobsData: Jobs[] = [
+export const jobsData = [
   {
     'title': 'Recruitment Advertisement for Junior Research Fellow Positions',
     'category': 'staff',

@@ -21,21 +21,43 @@ export default function CareersPage({ data }: { data: Jobs[] }) {
 
   useEffect(() => {
     setFilteredJobs(
-      updatedJobsData.filter(
-        (job) =>
+      updatedJobsData.filter(job =>
+        (
           category === 'all' ||
-          job.category === category ||
-          !searchText ||
-          job.title.toLowerCase().includes(searchText.toLowerCase()) ||
-          job.details.toLowerCase().includes(searchText.toLowerCase())
+          job.category === category
+        ) && (
+          job.title?.toLowerCase().includes(searchText.toLowerCase()) ||
+          job.details?.toLowerCase().includes(searchText.toLowerCase())
+        )
       )
-    );
+    )
   }, [category, searchText, updatedJobsData]);
 
   const searchInputRef = useRef<HTMLInputElement>(null);
   const updateSearch = useCallback(() => {
     searchInputRef.current && setSearchText(searchInputRef.current.value);
   }, []);
+
+  const renderDate = (dateString: string) => {
+    const date = new Date(dateString)
+    const year = date.getFullYear();
+    const month = (date.getMonth() + 1).toString().padStart(2, '0');
+    const day = date.getDate().toString().padStart(2, '0');
+    const hours = date.getHours();
+    const minutes = date.getMinutes();
+
+    let hours12 = hours % 12;
+    if (hours12 === 0) hours12 = 12;
+    const ampm = hours < 12 ? 'am' : 'pm';
+
+    const timeString = `${hours12.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')} ${ampm}`;
+
+    if (hours === 23 && minutes === 59) {
+      return `${day}.${month}.${year}`;
+    } else {
+      return `${day}.${month}.${year} ${timeString}`;
+    }
+  }
 
   return (
     <div className="flex flex-col w-full h-fit items-center mb-8">
@@ -58,7 +80,7 @@ export default function CareersPage({ data }: { data: Jobs[] }) {
 
           <search className="rounded-sm overflow-clip flex w-full lg:max-w-md h-10">
             <input
-              onKeyDown={(e) => e.key === 'Enter' && updateSearch()}
+              onChange={updateSearch}
               ref={searchInputRef}
               className="w-full focus:outline-none pl-2 border border-r-0 border-gray-200 rounded-sm"
               type="text"
@@ -73,111 +95,106 @@ export default function CareersPage({ data }: { data: Jobs[] }) {
           </search>
         </div>
 
-        {/* Actual data */}
-        <div>
-          {/* Large screen table */}
-          <div className="hidden lg:flex flex-col border border-dwd-primary rounded-md">
-            <div className="flex items-center bg-dwd-primary w-full text-white font-bold px-4">
-              <div className="w-[calc(100%-27rem)]">Title and Description</div>
-              <div className="w-36 text-center">Deadline</div>
-              <div className="w-36 text-center">General Instructions</div>
-              <div className="w-36 text-center">Application Form</div>
-            </div>
-            {filteredJobs.map((job, i) => (
-              <div
-                key={i}
-                className="flex items-center px-4 py-4 border-b last:border-0 border-dwd-primary"
-              >
-                <div className="flex flex-col w-[calc(100%-27rem)]">
-                  <h3 className="text-lg font-bold">{job.title}</h3>
-                  {job.details && <div className="pr-4">{job.details}</div>}
+        <div className="hidden lg:flex flex-col border border-dwd-primary rounded-md overflow-clip">
+          <div className="flex items-center bg-dwd-primary w-full text-white font-bold px-4 py-2">
+            <div className="w-[calc(100%-27rem)]">Title and Description</div>
+            <div className="w-36 text-center">Deadline</div>
+            <div className="w-36 text-center">General Instructions</div>
+            <div className="w-36 text-center">Application Form</div>
+          </div>
+          {filteredJobs.map((job, i) => (
+            <div
+              key={i}
+              className="flex items-center px-4 py-4 border-b last:border-0 border-dwd-primary"
+            >
+              <div className="flex flex-col w-[calc(100%-27rem)]">
+                <h3 className="text-lg font-bold">{job.title}</h3>
+                {job.details && <div className="pr-4">{job.details}</div>}
 
-                  <div className="flex gap-2">
-                    {job.extraInfo &&
-                      job.extraInfo.map(([title, link]) => (
-                        <Link
-                          key={link}
-                          className="mt-8 px-4 py-2 border border-dwd-primary rounded-sm hover:bg-gray-100"
-                          target="_blank"
-                          href={link}
-                        >
-                          {title}
-                        </Link>
-                      ))}
-                  </div>
+                <div className="flex gap-2">
+                  {job.extraInfo &&
+                    job.extraInfo.map(({ text, link }) => (
+                      <Link
+                        key={link}
+                        className="mt-8 px-4 py-2 border border-dwd-primary rounded-sm hover:bg-gray-100"
+                        target="_blank"
+                        href={link}
+                      >
+                        {text}
+                      </Link>
+                    ))}
                 </div>
-                <div className="w-36 text-center font-bold">{job.lastDate}</div>
-                <div className="w-36 flex items-center justify-center">
+              </div>
+              <div className="w-36 text-center font-bold text-nowrap">{renderDate(job.lastDate)}</div>
+              <div className="w-36 flex items-center justify-center">
+                <Link
+                  target="_blank"
+                  href={job.generalInstructions}
+                  hidden={!job.generalInstructions}
+                >
+                  <FileTextIcon size="2rem" />
+                </Link>
+              </div>
+              <div className="w-36 text-center">
+                <Link
+                  className="bg-gray-200 px-4 py-4 rounded-sm hover:bg-gray-300"
+                  target={job.application != '#' ? '_blank' : '_self'}
+                  href={job.application}
+                >
+                  {job.application != '#' ? 'Apply Now' : '  Closed  '}
+                  {/* Apply Now */}
+                </Link>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="w-full flex lg:hidden flex-col gap-4">
+          {filteredJobs.map((job, i) => (
+            <div key={i} className="border border-dwd-primary p-4 rounded-sm">
+              <div className="flex flex-col w-full gap-2">
+                <h3 className="text-lg font-bold">{job.title}</h3>
+                {job.details && <div>{job.details}</div>}
+
+                <div className="mt-8">
+                  Deadline: <span className="font-bold">{renderDate(job.lastDate)}</span>
+                </div>
+
+                <div className="flex gap-2">
+                  {job.extraInfo &&
+                    job.extraInfo.map(({ text, link }) => (
+                      <Link
+                        key={link}
+                        className="mt-8 px-4 py-2 border border-dwd-primary rounded-sm hover:bg-gray-100"
+                        target="_blank"
+                        href={link}
+                      >
+                        {text}
+                      </Link>
+                    ))}
+                </div>
+
+                <div className="flex gap-4 mt-8">
                   <Link
+                    className="w-1/2 border border-gray-200 px-4 py-3 rounded-sm hover:bg-gray-100"
                     target="_blank"
                     href={job.generalInstructions}
                     hidden={!job.generalInstructions}
                   >
-                    <FileTextIcon size="2rem" />
+                    General Instructions{' '}
+                    <SquareArrowOutUpRight size="1rem" className="inline" />
                   </Link>
-                </div>
-                <div className="w-36 text-center">
                   <Link
-                    className="bg-gray-200 px-4 py-4 rounded-sm hover:bg-gray-300"
+                    className="w-1/2 bg-gray-200 px-4 py-3 rounded-sm hover:bg-gray-300"
                     target={job.application != '#' ? '_blank' : '_self'}
                     href={job.application}
                   >
                     {job.application != '#' ? 'Apply Now' : '  Closed  '}
-                    {/* Apply Now */}
                   </Link>
                 </div>
               </div>
-            ))}
-          </div>
-
-          {/* Small and medium screen cards */}
-          <div className="w-full flex lg:hidden flex-col gap-4">
-            {filteredJobs.map((job, i) => (
-              <div key={i} className="border border-dwd-primary p-4 rounded-sm">
-                <div className="flex flex-col w-full gap-2">
-                  <h3 className="text-lg font-bold">{job.title}</h3>
-                  {job.details && <div>{job.details}</div>}
-
-                  <div className="mt-8">
-                    Deadline: <span className="font-bold">{job.lastDate}</span>
-                  </div>
-
-                  <div className="flex gap-2">
-                    {job.extraInfo &&
-                      job.extraInfo.map(([title, link]) => (
-                        <Link
-                          key={link}
-                          className="mt-8 px-4 py-2 border border-dwd-primary rounded-sm hover:bg-gray-100"
-                          target="_blank"
-                          href={link}
-                        >
-                          {title}
-                        </Link>
-                      ))}
-                  </div>
-
-                  <div className="flex gap-4 mt-8">
-                    <Link
-                      className="w-1/2 border border-gray-200 px-4 py-3 rounded-sm hover:bg-gray-100"
-                      target="_blank"
-                      href={job.generalInstructions}
-                      hidden={!job.generalInstructions}
-                    >
-                      General Instructions{' '}
-                      <SquareArrowOutUpRight size="1rem" className="inline" />
-                    </Link>
-                    <Link
-                      className="w-1/2 bg-gray-200 px-4 py-3 rounded-sm hover:bg-gray-300"
-                      target={job.application != '#' ? '_blank' : '_self'}
-                      href={job.application}
-                    >
-                      {job.application != '#' ? 'Apply Now' : '  Closed  '}
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>

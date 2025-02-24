@@ -1,8 +1,6 @@
 import {
-  CopyrightIcon,
   FacebookIcon,
   HomeIcon,
-  Link as LinkIcon,
   LinkedinIcon,
   MailIcon,
   PhoneIcon,
@@ -118,11 +116,10 @@ function Footer() {
       </div>
 
       <div className='flex justify-between lg:justify-center w-full max-w-7xl'>
-        <div>Copyright &copy; IIIT Dharwad 2024, All Rights Reserved | <Link href="/clubs#Velocity" className='hover:underline underline-offset-2'>Designed & Developed by Velocity IIIT Dharwad</Link></div>
+        <div>Copyright &copy; IIIT Dharwad {(new Date()).getFullYear()}, All Rights Reserved | <Link href="/clubs#Velocity" className='hover:underline underline-offset-2'>Designed & Developed by Velocity IIIT Dharwad</Link></div>
       </div>
     </footer>
   );
 }
 
-// export default () => <>{Footer()}<div className='w-full h-1 bg-black'>.</div>{Footer2()}</>;
 export default Footer;
