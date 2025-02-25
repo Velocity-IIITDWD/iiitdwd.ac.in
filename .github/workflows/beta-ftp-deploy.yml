@@ -19,24 +19,24 @@ jobs:
         uses: actions/setup-node@v4.0.2
         with:
           node-version: '20'
-          
-      - name: Set Environment Variables
-        run: echo -e "${{ secrets.SANITY_ENV }}" >> $GITHUB_ENV
 
       - name: ⬇️ Install dependencies
         run: npm ci
 
       - name: 🛠️ Build Next.js application
+        env:
+          NEXT_PUBLIC_SANITY_DATASET: ${{ secrets.NEXT_PUBLIC_SANITY_DATASET }}
+          NEXT_PUBLIC_SANITY_PROJECT_ID: ${{ secrets.NEXT_PUBLIC_SANITY_PROJECT_ID }}
         run: npm run build
       
-      - name: 📂 Incremental FTP Sync (Only Changed Files)
+      - name: 📂 FTP Sync
         run: |
           sudo apt-get update && sudo apt-get install -y lftp
           lftp -e "
             set ftp:ssl-allow no;
             open ${{ secrets.BETA_FTP_SERVER }};
             user ${{ secrets.BETA_FTP_USERNAME }} ${{ secrets.BETA_FTP_PASSWORD }};
-            mirror -R --verbose --parallel=10 --use-cache --ignore-time --exclude-glob=docs/** --exclude-glob=images/** ./out/ .
+            mirror -R --verbose --parallel=10 --use-cache --exclude-glob=docs/** --exclude-glob=images/** ./out/ .
             bye
           "
         
