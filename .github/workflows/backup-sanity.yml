@@ -18,14 +18,14 @@ jobs:
         with:
           node-version: 20
           cache: 'npm'
-          
-      - name: Set Environment Variables
-        run: echo -e "${{ secrets.SANITY_ENV }}" >> $GITHUB_ENV
 
       - name: Install dependencies
         run: npm ci
 
       - name: Run backup script
+        env:
+          NEXT_PUBLIC_SANITY_DATASET: ${{ secrets.NEXT_PUBLIC_SANITY_DATASET }}
+          NEXT_PUBLIC_SANITY_PROJECT_ID: ${{ secrets.NEXT_PUBLIC_SANITY_PROJECT_ID }}
         run: npx bun run ./scripts/backupSanityData.ts
 
       - name: Upload backup as artifact
