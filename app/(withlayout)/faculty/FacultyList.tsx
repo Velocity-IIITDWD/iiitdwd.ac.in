@@ -15,29 +15,29 @@ const List = ({ ll }: ListProps) => {
   const [DSAI, setshowDSAI] = useState(false);
   const [DASD, setshowDASD] = useState(false);
   const [ALL, setshowALL] = useState(true);
-  let f_array: JSX.Element[];
+  const [search, setSearch] = useState('');
+  
   function qwe() {
     const final = ll.filter((a) => {
-      if (CSE)
-        return a.content.card.department == 'Computer Science & Engineering';
+      let departmentMatches = true;
+      
+      if (CSE) {
+        departmentMatches = a.content.card.department == 'Computer Science & Engineering';
+      } 
+      else if (ECE) {
+        departmentMatches = a.content.card.department == 'Electronics and Communication Engineering';
+      } 
+      else if (DSAI) {
+        departmentMatches = a.content.card.department == 'Data Science and Artificial Intelligence';
+      } 
+      else if (DASD) {
+        departmentMatches = a.content.card.department == 'Department of Arts, Science, and Design';
+      }
 
-      if (ECE)
-        return (
-          a.content.card.department ==
-          'Electronics and Communication Engineering'
-        );
-
-      if (DSAI)
-        return (
-          a.content.card.department ==
-          'Data Science and Artificial Intelligence'
-        );
-
-      if (DASD)
-        return (
-          a.content.card.department == 'Department of Arts, Science, and Design'
-        );
-      if (ALL) return 1 === 1;
+      const nameMatches = search === '' || 
+        a.content.head.name.toLowerCase().includes(search.toLowerCase());
+      
+      return departmentMatches && nameMatches;
     });
 
     const f_array = final.map((arr: ProfileProp) => {
@@ -77,16 +77,6 @@ const List = ({ ll }: ListProps) => {
                   </ul>
                 </div>
                 <h6 className="text-sm mt-3">{arr.content.card.department}</h6>
-
-                {/* <div className="mt-4 flex flex-col gap-2">
-                <h6 className="text-xs">{arr.content.card.designation}</h6>
-                <h6 className="text-xs">{arr.content.card.department}</h6>
-                {arr.content.card.position && (
-                  <h6 className="text-sm 0 rounded font-medium w-full">
-                    {arr.content.card.position}
-                  </h6>
-                )}
-              </div> */}
               </div>
             </div>
           </Link>
@@ -95,119 +85,153 @@ const List = ({ ll }: ListProps) => {
     });
     return f_array;
   }
-  f_array = qwe();
+  const f_array = qwe();
+  
+  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearch(e.target.value);
+  };
+
   return (
     <>
       <div className="flex flex-col justify-center py-0 gap-4">
         <section className="w-full h-[50vh] bg-cover bg-center bg-[url('/images/main_building.webp')] relative before:z-0 before:absolute before:h-full before:w-full before:left-0 before:top-0 before:bg-[#041E3FB3] flex items-center justify-center">
           <p className="text-white z-[1] text-3xl font-bold">Faculty</p>
         </section>
-        <div className="bg-gray-200 shadow-inner flex flex-wrap justify-left gap-6 py-2 mx-2 px-6 rounded ">
-          <div
-            className={`bg-background rounded-2xl font-bold px-4 py-1 ${
-              ALL
-                ? 'bg-dwd-primary text-background'
-                : 'bg-background text-dwd-primary'
-            }`}
-          >
-            <button
-              onClick={() => {
-                setshowCSE(false);
-                setshowECE(false);
-                setshowDSAI(false);
-                setshowDASD(false);
-                setshowALL(true);
-                f_array = qwe();
-              }}
+        
+        <div className="bg-gray-200 shadow-inner flex flex-col sm:flex-row justify-between items-center gap-4 py-4 mx-2 px-6 rounded">
+          {/* Department filters - Left side */}
+          <div className="flex flex-wrap justify-left gap-2 sm:gap-3">
+            <div
+              className={`bg-background rounded-2xl font-bold px-4 py-1 ${
+                ALL
+                  ? 'bg-dwd-primary text-background'
+                  : 'bg-background text-dwd-primary'
+              }`}
             >
-              ALL
-            </button>
+              <button
+                onClick={() => {
+                  setshowCSE(false);
+                  setshowECE(false);
+                  setshowDSAI(false);
+                  setshowDASD(false);
+                  setshowALL(true);
+                }}
+              >
+                ALL
+              </button>
+            </div>
+            <div
+              className={`bg-background rounded-2xl font-bold px-4 py-1 ${
+                CSE
+                  ? 'bg-dwd-primary text-background'
+                  : 'bg-background text-dwd-primary'
+              }`}
+            >
+              <button
+                onClick={() => {
+                  setshowCSE(true);
+                  setshowECE(false);
+                  setshowDSAI(false);
+                  setshowDASD(false);
+                  setshowALL(false);
+                }}
+              >
+                CSE
+              </button>
+            </div>
+            <div
+              className={`bg-background rounded-2xl font-bold px-4 py-1 ${
+                ECE
+                  ? 'bg-dwd-primary text-background'
+                  : 'bg-background text-dwd-primary'
+              }`}
+            >
+              <button
+                onClick={() => {
+                  setshowCSE(false);
+                  setshowECE(true);
+                  setshowDSAI(false);
+                  setshowDASD(false);
+                  setshowALL(false);
+                }}
+              >
+                ECE
+              </button>
+            </div>
+            <div
+              className={`bg-background rounded-2xl font-bold px-4 py-1 ${
+                DSAI
+                  ? 'bg-dwd-primary text-background'
+                  : 'bg-background text-dwd-primary'
+              }`}
+            >
+              <button
+                onClick={() => {
+                  setshowCSE(false);
+                  setshowECE(false);
+                  setshowDSAI(true);
+                  setshowDASD(false);
+                  setshowALL(false);
+                }}
+              >
+                DSAI
+              </button>
+            </div>
+            <div
+              className={`bg-background rounded-2xl font-bold px-4 py-1 ${
+                DASD
+                  ? 'bg-dwd-primary text-background'
+                  : 'bg-background text-dwd-primary'
+              }`}
+            >
+              <button
+                onClick={() => {
+                  setshowCSE(false);
+                  setshowECE(false);
+                  setshowDSAI(false);
+                  setshowDASD(true);
+                  setshowALL(false);
+                }}
+              >
+                DASD
+              </button>
+            </div>
           </div>
-          <div
-            className={`bg-background rounded-2xl font-bold px-4 py-1 ${
-              CSE
-                ? 'bg-dwd-primary text-background'
-                : 'bg-background text-dwd-primary'
-            }`}
-          >
-            <button
-              onClick={() => {
-                setshowCSE(true);
-                setshowECE(false);
-                setshowDSAI(false);
-                setshowDASD(false);
-                setshowALL(false);
-                f_array = qwe();
-              }}
-            >
-              CSE
-            </button>
-          </div>
-          <div
-            className={`bg-background rounded-2xl font-bold px-4 py-1 ${
-              ECE
-                ? 'bg-dwd-primary text-background'
-                : 'bg-background text-dwd-primary'
-            }`}
-          >
-            <button
-              onClick={() => {
-                setshowCSE(false);
-                setshowECE(true);
-                setshowDSAI(false);
-                setshowDASD(false);
-                setshowALL(false);
-                f_array = qwe();
-              }}
-            >
-              ECE
-            </button>
-          </div>
-          <div
-            className={`bg-background rounded-2xl font-bold px-4 py-1 ${
-              DSAI
-                ? 'bg-dwd-primary text-background'
-                : 'bg-background text-dwd-primary'
-            }`}
-          >
-            <button
-              onClick={() => {
-                setshowCSE(false);
-                setshowECE(false);
-                setshowDSAI(true);
-                setshowDASD(false);
-                setshowALL(false);
-                f_array = qwe();
-              }}
-            >
-              DSAI
-            </button>
-          </div>
-          <div
-            className={`bg-background rounded-2xl font-bold px-4 py-1 ${
-              DASD
-                ? 'bg-dwd-primary text-background'
-                : 'bg-background text-dwd-primary'
-            }`}
-          >
-            <button
-              onClick={() => {
-                setshowCSE(false);
-                setshowECE(false);
-                setshowDSAI(false);
-                setshowDASD(true);
-                setshowALL(false);
-                f_array = qwe();
-              }}
-            >
-              DASD
-            </button>
+          
+          <div className="w-full sm:w-auto">
+            <div className="relative flex">
+              <input
+                type="text"
+                placeholder="Search faculty by name..."
+                value={search}
+                onChange={handleSearchChange}
+                className="w-full sm:w-56 md:w-64 px-4 py-2 rounded-l-2xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-dwd-primary"
+              />
+              <button className="bg-dwd-primary text-white px-4 py-2 rounded-r-2xl hover:bg-blue-700 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
+        
+        <div className="mx-12 mt-4">
+          <p className="text-sm text-gray-600">
+            {f_array.length} {f_array.length === 1 ? 'faculty' : 'faculties'} found
+          </p>
+        </div>
+        
         <div className="flex">
-          <ul className="bg-background grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 mx-12 my-6 gap-8 content-start ">
-            {f_array}
-          </ul>
+          {f_array.length > 0 ? (
+            <ul className="bg-background grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 mx-12 my-6 gap-8 content-start">
+              {f_array}
+            </ul>
+          ) : (
+            <div className="w-full flex justify-center my-12">
+              <p className="text-gray-500">No faculty members match your search criteria.</p>
+            </div>
+          )}
         </div>
       </div>
     </>

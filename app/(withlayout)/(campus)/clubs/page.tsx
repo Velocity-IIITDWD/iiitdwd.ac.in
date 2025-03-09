@@ -8,6 +8,7 @@ import {
   ExternalLink,
   QrCode,
   Twitter,
+  Search
 } from 'lucide-react';
 import Image from 'next/image';
 import clubs from '@/data/members';
@@ -16,6 +17,7 @@ import Link from 'next/link';
 
 const Club: FC = () => {
   const [selectedClub, setSelectedClub] = useState<string>('');
+  const [searchTerm, setSearchTerm] = useState<string>('');
 
   function extractHash(url: string): string {
     const hashIndex = url.indexOf('#');
@@ -43,6 +45,12 @@ const Club: FC = () => {
     isTechnical === (showTechnicalClubs === 'yes') ||
     showTechnicalClubs === 'all';
 
+    const filteredClubs = clubs.filter(
+      (club: ClubData) =>
+        checkTechnical(club.isTechnical) &&
+        club.name.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+
   return (
     <div className="container mx-auto py-8 px-4">
       <h1 className="text-3xl font-bold text-center mb-8 text-dwd-primary">
@@ -50,7 +58,8 @@ const Club: FC = () => {
       </h1>
 
       <div className="bg-gray-200 p-8 rounded-lg mb-16 relative">
-        <div className="top-4 left-4">
+      <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-6">
+      <div className="md:mr-6 mb-4 md:mb-0">
           <button
             className={`px-4 py-2 rounded-lg mr-4 ${
               showTechnicalClubs === 'all'
@@ -83,49 +92,49 @@ const Club: FC = () => {
           </button>
         </div>
 
+        <div className="flex items-center relative w-full md:w-64">
+          <input
+            type="text"
+            placeholder="Search clubs..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            className="w-full sm:w-56 md:w-64 px-4 py-2 rounded-l-2xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-dwd-primary"
+          />
+          <button className="bg-dwd-primary text-white px-4 py-2 rounded-r-2xl hover:bg-blue-700 transition-colors flex items-center justify-center">
+            <Search className="w-5 h-6" />
+          </button>
+      </div>
+
+        </div>
+
         <div className="mt-4">
-          {showTechnicalClubs ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {clubs
-                .filter((club: ClubData) => checkTechnical(club.isTechnical))
-                .map((club: ClubData) => (
-                  <Link
-                    key={club.name}
-                    className="bg-dwd-primary text-white p-4 cursor-pointer hover:text-sky-600 rounded-lg shadow-md text-center"
-                    href={`#${club.name}`}
-                    onClick={() => setSelectedClub(club?.name)}
-                  >
-                    {club.name}
-                  </Link>
-                ))}
-            </div>
-          ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {clubs
-                .filter((club: ClubData) => checkTechnical(club.isTechnical))
-                .map((club: ClubData) => (
-                  <Link
-                    key={club.name}
-                    className="bg-dwd-primary text-white p-4 cursor-pointer hover:text-sky-600 rounded-lg shadow-md text-center"
-                    href={`#${club.name}`}
-                    onClick={() => setSelectedClub(club?.name)}
-                  >
-                    {club.name}
-                  </Link>
-                ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {filteredClubs.map((club: ClubData) => (
+              <Link
+                key={club.name}
+                className="bg-dwd-primary text-white p-4 cursor-pointer hover:text-sky-600 rounded-lg shadow-md text-center"
+                href={`#${club.name}`}
+                onClick={() => setSelectedClub(club?.name)}
+              >
+                {club.name}
+              </Link>
+            ))}
+          </div>
+          
+          {filteredClubs.length === 0 && (
+            <div className="text-center mt-6 text-gray-600">
+              No clubs found matching your search criteria.
             </div>
           )}
         </div>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 gap-y-16">
-        {clubs
-          .filter((club) => checkTechnical(club.isTechnical))
-          .map((club: ClubData) => (
-            <div key={club.name} id={club.name} className="scroll-m-12">
-              <ClubCard {...club} highlighted={selectedClub === club.name} />
-            </div>
-          ))}
+        {filteredClubs.map((club: ClubData) => (
+          <div key={club.name} id={club.name} className="scroll-m-12">
+            <ClubCard {...club} highlighted={selectedClub === club.name} />
+          </div>
+        ))}
       </div>
     </div>
   );
