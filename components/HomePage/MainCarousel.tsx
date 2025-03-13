@@ -7,7 +7,6 @@ import {
   EmblaEventType,
   EmblaOptionsType,
 } from 'embla-carousel';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Autoplay from 'embla-carousel-autoplay';
 import { MainCarouselImage } from '@/data/homePage';
 import Link from 'next/link';
@@ -21,17 +20,13 @@ const numberWithinRange = (number: number, min: number, max: number): number =>
   Math.min(Math.max(number, min), max);
 
 type PropType = {
-  //   slides: SlideType[];
   FullData: MainCarouselImage[];
   options?: EmblaOptionsType;
 };
 
-
 const MainCarousel: React.FC<PropType> = ({ FullData, options }) => {
-
-
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, ...options }, [
-    Autoplay({ delay: 4000, stopOnInteraction: false }),
+    Autoplay({ delay: 5000, stopOnInteraction: false }),
   ]);
   const [selectedIndex, setSelectedIndex] = React.useState(0);
   const tweenFactor = useRef(0);
@@ -168,44 +163,76 @@ const MainCarousel: React.FC<PropType> = ({ FullData, options }) => {
   const onDotButtonClick = (index: number) =>
     emblaApi && emblaApi.scrollTo(index);
 
+
   return (
-    <section className="embla">
-      <div className="embla__viewport" ref={emblaRef}>
-        <div className="embla__container">
+<section className="embla h-[400px] sm:h-[500px] lg:h-[calc(100vh-64px)]">
+      <div className="embla__viewport h-full" ref={emblaRef}>
+        <div className="embla__container h-full">
           {FullData.map((item, index) =>
             item?.link ? (
-              <Link key={index} className="embla__slide" href={item?.link}>
-                <Card className="slide_number_main border-none p-0">
-                  <CardContent className="flex border rounded-lg overflow-hidden p-0 relative shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px] bg-gray-50 h-[30vh] md:h-[60vh] items-center justify-center">
+              <Link key={index} className="embla__slide h-full" href={item?.link}>
+                <Card className="slide_number_main border-none p-0 h-full carousel-card">
+                  <CardContent className="flex border rounded-none overflow-hidden p-0 relative shadow-none bg-gray-50 h-full items-center justify-center">
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/70 z-10"></div>
+                    <div 
+                      className="absolute inset-0 w-full h-full bg-cover bg-center blur-md opacity-40 scale-105" 
+                      style={{ 
+                        backgroundImage: `url(${item?.url})`,
+                      }}
+                    />
+                    
                     <Image
-                      alt="main image"
+                      alt={item?.caption || "College image"}
                       src={item?.url}
                       width={0}
                       height={0}
                       sizes="100%"
-                      className="w-full h-auto md:h-full relative object-contain"
+                      priority={index === 0}
+                      className="w-full h-full relative object-contain z-5 carousel-image"
                     />
 
-                    <div className="absolute text-xs md:text-base bottom-4 left-1/2 w-fit max-w-full -translate-x-1/2 bg-slate-900/40 backdrop-blur p-2 rounded text-white text-center">
-                      {item?.caption}
+                    <div className="absolute z-20 bottom-0 left-0 w-full carousel-caption">
+                      <div className="p-8 md:p-10 flex items-center justify-between">
+                        <h2 className="text-white text-xl md:text-4xl font-bold transition-transform duration-300 carousel-title">
+                          {item?.caption}
+                        </h2>
+                        <div className="ml-4 whitespace-nowrap">
+                          <span className="py-2 px-8 bg-white text-dwd-primary font-semibold rounded-md hover:bg-blue-50 transition-colors inline-block carousel-button">
+                            Learn More
+                          </span>
+                        </div>
+                      </div>
                     </div>
                   </CardContent>
                 </Card>
               </Link>
             ) : (
-              <Card key={index} className="embla__slide border-none p-0">
-                <CardContent className="flex p-0 border rounded-lg overflow-hidden shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px] slide_number_main relative bg-gray-50 h-[30vh] md:h-[60vh] items-center justify-center">
+              <Card key={index} className="embla__slide border-none p-0 h-full">
+                <CardContent className="flex p-0 border rounded-none overflow-hidden shadow-none slide_number_main relative bg-gray-50 h-full items-center justify-center carousel-card">
+                  <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/70 z-10"></div>
+                  <div 
+                    className="absolute inset-0 w-full h-full bg-cover bg-center blur-md opacity-40 scale-105" 
+                    style={{ 
+                      backgroundImage: `url(${item?.url})`,
+                    }}
+                  />
+                  
                   <Image
-                    alt="main image"
+                    alt={item?.caption || "College image"}
                     src={item?.url}
                     width={0}
                     height={0}
                     sizes="100%"
-                    className="w-full h-[80%] md:h-full relative object-cover object-top"
+                    priority={index === 0}
+                    className="w-full h-full relative object-contain z-5 carousel-image"
                   />
 
-                  <div className="absolute text-xs md:text-base bottom-4 left-1/2 w-fit max-w-full -translate-x-1/2 bg-slate-900/40 backdrop-blur p-2 rounded text-white text-center">
-                    {item?.caption}
+                  <div className="absolute z-20 bottom-0 left-0 w-full carousel-caption">
+                    <div className="p-8 md:p-10">
+                      <h2 className="text-white text-xl md:text-4xl font-bold transition-transform duration-300 carousel-title">
+                        {item?.caption}
+                      </h2>
+                    </div>
                   </div>
                 </CardContent>
               </Card>
@@ -214,48 +241,32 @@ const MainCarousel: React.FC<PropType> = ({ FullData, options }) => {
         </div>
       </div>
 
+
       <button
-        className="hidden md:flex md:absolute bg-slate-900/20 rounded md:top-1/2 md:-translate-y-1/2 md:cursor-pointer md:p-1 md:rounded md:left-2"
+        className="embla-arrow embla-arrow-prev"
         onClick={onPrevButtonClick}
-        disabled={emblaApi?.canScrollPrev() === false}
+        aria-label="Previous slide"
       >
-        <ChevronLeft size={32} />
+        <div className="embla-arrow-icon"></div>
       </button>
+      
       <button
-        className="hidden md:flex md:absolute bg-slate-900/20 rounded md:top-1/2 md:-translate-y-1/2 md:cursor-pointer md:p-1 md:rounded md:right-2"
+        className="embla-arrow embla-arrow-next"
         onClick={onNextButtonClick}
-        disabled={emblaApi?.canScrollNext() === false}
+        aria-label="Next slide"
       >
-        <ChevronRight size={32} />
+        <div className="embla-arrow-icon"></div>
       </button>
 
-      <div className="flex items-center gap-3 px-4 justify-between md:justify-center mt-3">
-        <div className="flex md:hidden gap-4">
-          <button
-            className="p-1 rounded-full border-2 hover:bg-dwd-primary transition duration-300 hover:text-white border-dwd-primary"
-            onClick={onPrevButtonClick}
-            disabled={emblaApi?.canScrollPrev() === false}
-          >
-            <ChevronLeft size={24} />
-          </button>
-          <button
-            className="p-1 rounded-full border-2 hover:bg-dwd-primary transition duration-300 hover:text-white border-dwd-primary"
-            onClick={onNextButtonClick}
-            disabled={emblaApi?.canScrollNext() === false}
-          >
-            <ChevronRight size={24} />
-          </button>
-        </div>
-        <div className="flex gap-2">
+
+      <div className="embla-dots-container">
+        <div className="embla-dots">
           {scrollSnaps.map((_, index) => (
             <button
               key={index}
-              className={`aspect-square rounded-full border-2 cursor-pointer h-[10px]  ${
-                index === selectedIndex
-                  ? 'border-dwd-primary bg-dwd-primary/60'
-                  : 'border-gray-400'
-              }`}
+              className={`embla-dot ${index === selectedIndex ? 'embla-dot-selected' : ''}`}
               onClick={() => onDotButtonClick(index)}
+              aria-label={`Go to slide ${index + 1}`}
             />
           ))}
         </div>
