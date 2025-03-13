@@ -1,6 +1,6 @@
 'use client';
 
-import { ChevronDownIcon, MenuIcon } from 'lucide-react';
+import { ChevronDownIcon, MenuIcon, Search } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import {
@@ -205,33 +205,34 @@ function Header() {
         </div>
         <div className="hidden lg:block w-1/5"></div>
       </div> */}
-      <div className="flex flex-row lg:flex-row items-center justify-start border-b border-dwd-secondary1 relative h-16 lg:h-24 shadow-sm">
-        <Link href="/" className="block h-full">
-          {/* Big screen image */}
-          <Image
-            src="/brand/logo_3.png"
-            width={427}
-            height={95}
-            sizes="100%"
-            style={{ height: '100%', width: 'auto' }}
-            alt="IIIT Dharwad Logo"
-            className="block lg:hidden xl:block mr-auto"
-            priority
-          />
-          {/* Medium screen logo */}
-          <Image
-            src="/brand/logo-square-light.png"
-            width={0}
-            height={0}
-            sizes="100%"
-            style={{ height: '100%', width: 'auto' }}
-            alt="IIIT Dharwad Logo"
-            className="hidden lg:block xl:hidden mr-auto"
-            priority
-          />
-        </Link>
+      <div className="flex max-md:flex-wrap items-center justify-start border-b border-dwd-secondary2/40 min-h-16 lg:min-h-24 py-2 lg:py-0 px-4">
+        <div className="flex flex-row lg:flex-row items-center justify-start relative h-16 lg:h-24">
+          <Link href="/" className="block h-full">
+            {/* Big screen image */}
+            <Image
+              src="/brand/logo-long-light.png"
+              width={427}
+              height={95}
+              sizes="100%"
+              style={{ height: '100%', width: 'auto' }}
+              alt="IIIT Dharwad Logo"
+              className="mr-auto"
+              priority
+            />
+            {/* Medium screen logo */}
+            <Image
+              src="/brand/logo-square-light.png"
+              width={0}
+              height={0}
+              sizes="100%"
+              style={{ height: '100%', width: 'auto' }}
+              alt="IIIT Dharwad Logo"
+              className="hidden mr-auto"
+              priority
+            />
+          </Link>
         </div>
-        <div className="flex flex-wrap items-center gap-2 text-xs text-gray-800 ml-auto mr-auto w-full sm:w-auto max-w-[60%] md:max-w-[70%]">
+        <div className="flex flex-wrap items-center gap-2 text-xs text-gray-800 ml-auto mb-auto mt-4 max-md:mr-auto md:max-w-[70%]">
           <Link href="/pdfs/iiit_ppp_2017.pdf" className="hover:underline">IIIT PPP Act</Link>
           <span className="text-gray-300">|</span>
           <Link href="/pdfs/ARIIA.pdf" className="hover:bg-accent hover:underline">ARIIA</Link>
@@ -245,16 +246,17 @@ function Header() {
           <Link href="/tenders" className="hover:underline">Tenders</Link>
           <span className="text-gray-300">|</span>
           <Link href="https://www.onlinesbi.sbi/sbicollect/icollecthome.htm?corpID=873279" className="hover:underline">Students Fee Portal</Link>
-        
-        </div>
-        </div>
 
-        {/* Mobile navbar */}
-        <div className={"sticky top-0  left-0 w-full z-50 flex flex-row items-center justify-start border-b border-gray-200 h-16 lg:h-24 bg-white px-2"}>
+        </div>
+      </div>
+
+      {/* Mobile navbar */}
+      <div className={"sticky top-0  left-0 w-full z-50 flex flex-row items-center justify-start border-b border-gray-200 h-16 lg:h-16 bg-white px-2"}>
         <Sheet>
           <SheetTrigger asChild>
-            <div className="ml-auto mr-4 lg:hidden">
-              <MenuIcon size="2rem" />
+            <div className="mr-4 lg:hidden flex justify-between w-full text-dwd-primary">
+              <MenuIcon size="2rem" className='bg-dwd-secondary2 p-1 rounded' />
+              <Search size={"1.5rem"} className='my-auto' />
             </div>
           </SheetTrigger>
           <SheetContent side="left" className='overflow-auto'>
@@ -337,93 +339,96 @@ function Header() {
         </Sheet>
 
         {/* Desktop navbar */}
-        <NavigationMenu
-          onValueChange={onNavChange}
-          className="hidden lg:flex items-center ml-4 gap-8"
-        >
-          <NavigationMenuList>
-            {navmenuItems.map((item) => {
-              if (!item?.subGroups?.length)
-                return (
-                  <NavigationMenuItem key={item.text}>
-                    <NavigationMenuLink
-                      asChild
-                      className={navigationMenuTriggerStyle()}
-                    >
-                      <Link href={item.href!}>
-                        <div className="hover:bg-accent p-0 rounded-md w-full">
-                          {item.text}
-                        </div>
-                      </Link>
-                    </NavigationMenuLink>
-                  </NavigationMenuItem>
-                );
-
-              let groupWidthSum = 0;
-              for (let i = 0; i < item.subGroups.length; i++) {
-                groupWidthSum += item.subGroups[i].width || 150;
-              }
-
-              return (
-                <NavigationMenuItem key={item.text}>
-                  <NavigationMenuTrigger className="submenu-trigger">
-                    {!item.href ? (
-                      item.text
-                    ) : (
-                      <NavigationMenuLink asChild>
+        <div className='hidden lg:flex w-full justify-between item-center'>
+          <NavigationMenu
+            onValueChange={onNavChange}
+            className="lg:flex items-center gap-8"
+          >
+            <NavigationMenuList>
+              {navmenuItems.map((item) => {
+                if (!item?.subGroups?.length)
+                  return (
+                    <NavigationMenuItem key={item.text}>
+                      <NavigationMenuLink
+                        asChild
+                        className={navigationMenuTriggerStyle()}
+                      >
                         <Link href={item.href!}>
-                          <div>{item.text}</div>
+                          <div className="hover:bg-accent p-0 rounded-md w-full">
+                            {item.text}
+                          </div>
                         </Link>
                       </NavigationMenuLink>
-                    )}
-                  </NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <ul
-                      className="flex gap-4 p-4 text-sm"
-                      style={{ width: `${groupWidthSum}px` }}
-                    >
-                      {item.subGroups.map((group, i) => (
-                        <div
-                          key={i}
-                          className="flex flex-col"
-                          style={{ width: `${group.width || 150}px` }}
-                        >
-                          {group.title !== undefined && (
-                            <h3
-                              className={
-                                'font-bold underline p-2 text-sm ' +
-                                (group.title ? '' : 'invisible')
-                              }
-                            >
-                              {group.title || '_'}
-                            </h3>
-                          )}
-                          {group.items
-                            .filter((gItem) => !gItem.hideOnDesktop)
-                            .map((gItem) => (
-                              <NavigationMenuLink
-                                key={gItem.text}
-                                href={gItem.href}
+                    </NavigationMenuItem>
+                  );
+
+                let groupWidthSum = 0;
+                for (let i = 0; i < item.subGroups.length; i++) {
+                  groupWidthSum += item.subGroups[i].width || 150;
+                }
+
+                return (
+                  <NavigationMenuItem key={item.text}>
+                    <NavigationMenuTrigger className="submenu-trigger">
+                      {!item.href ? (
+                        item.text
+                      ) : (
+                        <NavigationMenuLink asChild>
+                          <Link href={item.href!}>
+                            <div>{item.text}</div>
+                          </Link>
+                        </NavigationMenuLink>
+                      )}
+                    </NavigationMenuTrigger>
+                    <NavigationMenuContent>
+                      <ul
+                        className="flex gap-4 p-4 text-sm"
+                        style={{ width: `${groupWidthSum}px` }}
+                      >
+                        {item.subGroups.map((group, i) => (
+                          <div
+                            key={i}
+                            className="flex flex-col"
+                            style={{ width: `${group.width || 150}px` }}
+                          >
+                            {group.title !== undefined && (
+                              <h3
+                                className={
+                                  'font-bold underline p-2 text-sm ' +
+                                  (group.title ? '' : 'invisible')
+                                }
                               >
-                                <div className="flex flex-col hover:bg-accent p-2 rounded-md w-full">
-                                  {gItem.text}
-                                  {gItem.subText && (
-                                    <div className="text-dwd-secondary2 text-xs">
-                                      {gItem.subText}
-                                    </div>
-                                  )}
-                                </div>
-                              </NavigationMenuLink>
-                            ))}
-                        </div>
-                      ))}
-                    </ul>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
-              );
-            })}
-          </NavigationMenuList>
-        </NavigationMenu>
+                                {group.title || '_'}
+                              </h3>
+                            )}
+                            {group.items
+                              .filter((gItem) => !gItem.hideOnDesktop)
+                              .map((gItem) => (
+                                <NavigationMenuLink
+                                  key={gItem.text}
+                                  href={gItem.href}
+                                >
+                                  <div className="flex flex-col hover:bg-accent p-2 rounded-md w-full">
+                                    {gItem.text}
+                                    {gItem.subText && (
+                                      <div className="text-dwd-secondary2 text-xs">
+                                        {gItem.subText}
+                                      </div>
+                                    )}
+                                  </div>
+                                </NavigationMenuLink>
+                              ))}
+                          </div>
+                        ))}
+                      </ul>
+                    </NavigationMenuContent>
+                  </NavigationMenuItem>
+                );
+              })}
+            </NavigationMenuList>
+          </NavigationMenu>
+          <Search size={"1.2rem"} className='my-auto mx-2' />
+        </div>
       </div>
     </header>
   );
