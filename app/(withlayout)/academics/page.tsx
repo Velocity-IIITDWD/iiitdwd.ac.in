@@ -17,7 +17,8 @@ export default function page() {
             href="/docs/Academic_Calendar_year_1_2024-25.pdf"
             className="rounded bg-dwd-primary md:basis-1/4 basis-full flex items-center justify-center p-3 text-white text-center"
           >
-            Academic Calendar <br/>(1st year)
+            Academic Calendar <br />
+            (1st year)
           </Link>
           <Link
             target="_blank"
@@ -138,13 +139,13 @@ export default function page() {
               >
                 Electronics & Communications Engineering (ECE)
               </Link>
+              <Link
+                href={'/docs/minor-program.pdf'}
+                className="w-full rounded cursor-pointer shadow p-3 mt-1 md:max-w-[400px] bg-slate-200 hover:bg-dwd-primary hover:text-white text-dwd-primary"
+              >
+                Minor Programs
+              </Link>
             </div>
-            <Link
-              href={'/docs/minor-program.pdf'}
-              className="w-full rounded cursor-pointer shadow p-3 mt-1 md:max-w-[400px] bg-slate-200 hover:bg-dwd-primary hover:text-white text-dwd-primary"
-            >
-              Minor Programs
-            </Link>
           </div>
         </div>
       </div>
