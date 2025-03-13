@@ -203,6 +203,21 @@
   }
 }
 
+@media (max-width: 640px) {
+  .embla {
+    --slide-height: 400px;
+    margin-bottom: 20px;
+  }
+  
+  .carousel-caption {
+    padding-bottom: 10px;
+  }
+  
+  .embla-dots-container {
+    bottom: 10px;
+  }
+}
+
 .embla__controls {
   display: grid;
   grid-template-columns: auto 1fr;

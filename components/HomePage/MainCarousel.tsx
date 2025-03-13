@@ -163,8 +163,9 @@ const MainCarousel: React.FC<PropType> = ({ FullData, options }) => {
   const onDotButtonClick = (index: number) =>
     emblaApi && emblaApi.scrollTo(index);
 
+
   return (
-    <section className="embla h-[calc(100vh-64px)]">
+<section className="embla h-[400px] sm:h-[500px] lg:h-[calc(100vh-64px)]">
       <div className="embla__viewport h-full" ref={emblaRef}>
         <div className="embla__container h-full">
           {FullData.map((item, index) =>
