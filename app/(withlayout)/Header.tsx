@@ -203,8 +203,9 @@ function Header() {
         </div>
         <div className="hidden lg:block w-1/5"></div>
       </div> */}
-      <div className="flex flex-row lg:flex-row items-center justify-start border-b border-dwd-secondary1 relative h-16 lg:h-24">
-        <Link href="/" className="block h-full">
+      <div className="flex flex-row lg:flex-row items-center justify-start border-b border-dwd-secondary1 h-16 lg:h-24 py-2 lg:py-0 px-4">
+      <div className="flex items-center mb-1">
+        <Link href="/" className="block h-16 lg:h-24">
           {/* Big screen image */}
           <Image
             src="/brand/logo_3.png"
@@ -228,8 +229,27 @@ function Header() {
             priority
           />
         </Link>
+        </div>
+        <div className="flex flex-wrap items-center gap-2 text-xs text-gray-800 ml-auto mr-auto w-full sm:w-auto max-w-[60%] md:max-w-[70%]">
+          <Link href="/pdfs/iiit_ppp_2017.pdf" className="hover:underline">IIIT PPP Act</Link>
+          <span className="text-gray-300">|</span>
+          <Link href="/pdfs/ARIIA.pdf" className="hover:bg-accent hover:underline">ARIIA</Link>
+          <span className="text-gray-300">|</span>
+          <Link href="/pdfs/RTI.pdf" className="hover:underline">RTI</Link>
+          <span className="text-gray-300">|</span>
+          <Link href="/tenders" className="hover:underline">Tenders</Link>
+          <span className="text-gray-300">|</span>
+          <Link href="/nirf" className="hover:underline">NIRF</Link>
+          <span className="text-gray-300">|</span>
+          <Link href="/tenders" className="hover:underline">Tenders</Link>
+          <span className="text-gray-300">|</span>
+          <Link href="https://www.onlinesbi.sbi/sbicollect/icollecthome.htm?corpID=873279" className="hover:underline">Students Fee Portal</Link>
+        
+        </div>
+        </div>
 
         {/* Mobile navbar */}
+        <div className={"sticky top-0  left-0 w-full z-50 flex flex-row items-center justify-start border-b border-gray-200 h-16 lg:h-24 bg-white px-2"}>
         <Sheet>
           <SheetTrigger asChild>
             <div className="ml-auto mr-4 lg:hidden">
@@ -318,7 +338,7 @@ function Header() {
         {/* Desktop navbar */}
         <NavigationMenu
           onValueChange={onNavChange}
-          className="ml-auto hidden lg:flex items-center justify-center mr-4 gap-8"
+          className="hidden lg:flex items-center ml-4 gap-8"
         >
           <NavigationMenuList>
             {navmenuItems.map((item) => {
