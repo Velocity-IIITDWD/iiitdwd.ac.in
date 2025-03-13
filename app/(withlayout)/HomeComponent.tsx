@@ -69,10 +69,10 @@ export default function Home({
           />
           <div className="w-full lg:basis-2/3 2xl:basis-full flex flex-col h-full">
             <div className="w-full items-center p-2 border-b border-b-slate-500 flex justify-between">
-              <div className="flex gap-4">
+              <div className="flex gap-4 flex-wrap w-full">
                 <button
                   onClick={() => setAcheivementsSelected(false)}
-                  className={`bg-dwd-primary px-4 py-2 rounded border-2 border-dwd-primary transition-colors duration-150 hover:bg-slate-700 hover:text-white ${
+                  className={`bg-dwd-primary px-4 py-2 rounded border-2 border-dwd-primary transition-colors duration-150 hover:bg-slate-700 hover:text-white w-40 sm:w-auto ${
                     acheivementsSelected === false
                       ? 'bg-dwd-primary text-white'
                       : 'bg-white text-dwd-primary'
@@ -82,7 +82,7 @@ export default function Home({
                 </button>
                 <button
                   onClick={() => setAcheivementsSelected(true)}
-                  className={`bg-dwd-primary px-4 py-2 rounded border-2 border-dwd-primary transition-colors duration-150 hover:bg-slate-700 hover:text-white ${
+                  className={`bg-dwd-primary px-4 py-2 rounded border-2 border-dwd-primary transition-colors duration-150 hover:bg-slate-700 hover:text-white w-40 sm:w-auto ${
                     acheivementsSelected === true
                       ? 'bg-dwd-primary text-white'
                       : 'bg-white text-dwd-primary'
@@ -91,7 +91,10 @@ export default function Home({
                   Achievements
                 </button>
               </div>
-              <Link href={'/announcements'} className="text-red-500">
+              <Link
+                href={'/announcements'}
+                className="pl-4 whitespace-nowrap text-red-500"
+              >
                 View all
               </Link>
             </div>
