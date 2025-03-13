@@ -23,32 +23,40 @@ const AutoScrollCarousel = dynamic(
 
 function renderNew(date: string) {
   const currTime = new Date();
-  const time : number = currTime.getTime() - (new Date(date)).getTime();
+  const time: number = currTime.getTime() - new Date(date).getTime();
   if (time < 48 * 3600 * 1000) {
-    return <div className="transition-all animate-pulse absolute top-1 group-hover:bg-red-500 group-hover:text-white right-1 text-xs px-2 py-1 bg-red-300/50 rounded text-red-500">
+    return (
+      <div className="transition-all animate-pulse absolute top-1 group-hover:bg-red-500 group-hover:text-white right-1 text-xs px-2 py-1 bg-red-300/50 rounded text-red-500">
         New
-    </div>;
+      </div>
+    );
   }
   return <></>;
 }
 
 interface HomeProps {
   eventData: eventInf[];
-  galleryData: gallery[]; 
+  galleryData: gallery[];
   carouselData: MainCarouselImage[];
-  announcements: Announcement[]
-  programs: ProgramType[]
+  announcements: Announcement[];
+  programs: ProgramType[];
 }
 
-export default function Home({ eventData, galleryData, carouselData, announcements, programs }: HomeProps) {
+export default function Home({
+  eventData,
+  galleryData,
+  carouselData,
+  announcements,
+  programs,
+}: HomeProps) {
   const [program, setProgram] = useState(0);
+  const [acheivementsSelected, setAcheivementsSelected] = useState(0);
 
   return (
     <div className="flex flex-col h-full w-full">
       <MainCarousel FullData={carouselData} />
 
-      {
-        announcements.filter((a) => a.new).length > 0 &&
+      {announcements.filter((a) => a.new).length > 0 && (
         <section className=" bg-white border-t border-b border-slate-100 md:py-20 py-10 w-full flex flex-col lg:flex-row-reverse items-center md:px-20 sm:px-10 p-4 gap-6">
           <Image
             alt="main image"
@@ -61,45 +69,66 @@ export default function Home({ eventData, galleryData, carouselData, announcemen
           />
           <div className="w-full lg:basis-2/3 2xl:basis-full flex flex-col h-full">
             <div className="w-full items-center p-2 border-b border-b-slate-500 flex justify-between">
-              <div className="text-dwd-primary font-semibold text-xl">
-              Announcements
+              <div className="flex gap-4">
+                <button
+                  onClick={() => setAcheivementsSelected(0)}
+                  className={`bg-dwd-primary px-4 py-2 rounded ${
+                    acheivementsSelected === 0
+                      ? 'bg-dwd-primary text-white'
+                      : 'bg-white text-dwd-primary border-2 border-dwd-primary'
+                  }`}
+                >
+                  Announcements
+                </button>
+                <button
+                  onClick={() => setAcheivementsSelected(1)}
+                  className={`bg-dwd-primary px-4 py-2 rounded ${
+                    acheivementsSelected === 1
+                      ? 'bg-dwd-primary text-white'
+                      : 'bg-white text-dwd-primary border-2 border-dwd-primary'
+                  }`}
+                >
+                  Achievements
+                </button>
               </div>
               <Link href={'/announcements'} className="text-red-500">
-              View all
+                View all
               </Link>
             </div>
             <div className="relative">
               <div className="flex flex-col gap-2 p-3 w-full">
-                {(announcements.filter((a) => a.new).slice(0, 8)
-                ).map((item, index) => (
-                  <a
-                    href={item?.link}
-                    target="_blank"
-                    key={index}
-                    className="text-dwd-primary shadow group relative hover:bg-dwd-primary hover:text-white bg-[#C7D3DE50] rounded items-center cursor-pointer p-1 pr-12 flex gap-2"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      viewBox="0 0 16 16"
-                      className="w-5 flex-none"
+                {announcements
+                  .filter((a) => a.new)
+                  .slice(0, 8)
+                  .map((item, index) => (
+                    <a
+                      href={item?.link}
+                      target="_blank"
+                      key={index}
+                      className="text-dwd-primary shadow group relative hover:bg-dwd-primary hover:text-white bg-[#C7D3DE50] rounded items-center cursor-pointer p-1 pr-12 flex gap-2"
                     >
-                      <path
-                        fillRule="evenodd"
-                        d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"
-                      />
-                    </svg>
-                    <div>{item?.text}</div>
-                    {item?.date && renderNew(item.date)}
-                  </a>
-                ))}
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        viewBox="0 0 16 16"
+                        className="w-5 flex-none"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"
+                        />
+                      </svg>
+                      <div>{item?.text}</div>
+                      {item?.date && renderNew(item.date)}
+                    </a>
+                  ))}
               </div>
             </div>
           </div>
         </section>
-      }
+      )}
 
       <section className="w-full h-full bg-fixed relative overflow-hidden before:z-0 before:absolute before:h-full before:w-full before:left-0 before:top-0 before:bg-[#041E3FB3] bg-cover bg-repeat-y bg-[url('/images/IIIT_Dharwad.webp')]">
         <div className="my-16 z-[1] relative w-full flex flex-col items-center md:px-24 sm:px-10 p-4 gap-6">
@@ -266,7 +295,9 @@ export default function Home({ eventData, galleryData, carouselData, announcemen
                       {item?.text}
                     </p>
                     <p className="text-xs">{item?.organiser?.name}</p>
-                    <div className="text-sm py-4 max-h-40 truncate text-wrap">{item?.aboutEvent}</div>
+                    <div className="text-sm py-4 max-h-40 truncate text-wrap">
+                      {item?.aboutEvent}
+                    </div>
                   </div>
                   <Link
                     href={`/events/${item?.id}`}
