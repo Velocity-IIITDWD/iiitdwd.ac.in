@@ -152,8 +152,10 @@ function onNavChange() {
   }, 0);
 }
 
+
 function Header() {
   return (
+    // <header className="flex flex-col w-full h-fit fixed top-0 left-0 right-0 z-50 bg-white">
     <header className="flex flex-col w-full h-fit">
       {/* <div className=" hidden md:flex flex-col lg:flex-row items-center justify-center bg-dwd-secondary1 px-2  lg:gap-4">
         Pushes announcement to center
@@ -203,7 +205,7 @@ function Header() {
         </div>
         <div className="hidden lg:block w-1/5"></div>
       </div> */}
-      <div className="flex flex-row lg:flex-row items-center justify-start border-b border-dwd-secondary1 relative h-16 lg:h-24">
+      <div className="flex flex-row lg:flex-row items-center justify-start border-b border-dwd-secondary1 relative h-16 lg:h-24 shadow-sm">
         <Link href="/" className="block h-full">
           {/* Big screen image */}
           <Image
