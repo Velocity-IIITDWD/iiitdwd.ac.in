@@ -20,6 +20,7 @@ export type eventInf = {
     contact: string;
   };
   aboutEvent: string;
+  typeEvent?: 'club' | 'institute';
 };
 
 export const events: eventInf[] = [
