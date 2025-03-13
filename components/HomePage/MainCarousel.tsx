@@ -165,7 +165,7 @@ const MainCarousel: React.FC<PropType> = ({ FullData, options }) => {
 
 
   return (
-<section className="embla h-[400px] sm:h-[500px] lg:h-[calc(100vh-64px)]">
+    <section className="embla h-[400px] sm:h-[500px] lg:h-[calc(100vh-64px)] max-h-[500px]">
       <div className="embla__viewport h-full" ref={emblaRef}>
         <div className="embla__container h-full">
           {FullData.map((item, index) =>
@@ -174,13 +174,13 @@ const MainCarousel: React.FC<PropType> = ({ FullData, options }) => {
                 <Card className="slide_number_main border-none p-0 h-full carousel-card">
                   <CardContent className="flex border rounded-none overflow-hidden p-0 relative shadow-none bg-gray-50 h-full items-center justify-center">
                     <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/70 z-10"></div>
-                    <div 
-                      className="absolute inset-0 w-full h-full bg-cover bg-center blur-md opacity-40 scale-105" 
-                      style={{ 
+                    <div
+                      className="absolute inset-0 w-full h-full bg-cover bg-center blur-md opacity-40 scale-105"
+                      style={{
                         backgroundImage: `url(${item?.url})`,
                       }}
                     />
-                    
+
                     <Image
                       alt={item?.caption || "College image"}
                       src={item?.url}
@@ -210,13 +210,13 @@ const MainCarousel: React.FC<PropType> = ({ FullData, options }) => {
               <Card key={index} className="embla__slide border-none p-0 h-full">
                 <CardContent className="flex p-0 border rounded-none overflow-hidden shadow-none slide_number_main relative bg-gray-50 h-full items-center justify-center carousel-card">
                   <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/70 z-10"></div>
-                  <div 
-                    className="absolute inset-0 w-full h-full bg-cover bg-center blur-md opacity-40 scale-105" 
-                    style={{ 
+                  <div
+                    className="absolute inset-0 w-full h-full bg-cover bg-center blur-md opacity-40 scale-105"
+                    style={{
                       backgroundImage: `url(${item?.url})`,
                     }}
                   />
-                  
+
                   <Image
                     alt={item?.caption || "College image"}
                     src={item?.url}
@@ -249,7 +249,7 @@ const MainCarousel: React.FC<PropType> = ({ FullData, options }) => {
       >
         <div className="embla-arrow-icon"></div>
       </button>
-      
+
       <button
         className="embla-arrow embla-arrow-next"
         onClick={onNextButtonClick}

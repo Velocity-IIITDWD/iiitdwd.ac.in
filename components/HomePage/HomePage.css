@@ -45,7 +45,7 @@
 
 .carousel-caption {
   background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3), transparent);
-  backdrop-filter: blur(3px);
+  backdrop-filter: blur(0px);
   transform: translateY(0);
   transition: all 0.5s ease;
 }
