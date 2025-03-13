@@ -50,7 +50,7 @@ export default function Home({
   programs,
 }: HomeProps) {
   const [program, setProgram] = useState(0);
-  const [acheivementsSelected, setAcheivementsSelected] = useState(0);
+  const [acheivementsSelected, setAcheivementsSelected] = useState(false);
 
   return (
     <div className="flex flex-col h-full w-full">
@@ -71,9 +71,9 @@ export default function Home({
             <div className="w-full items-center p-2 border-b border-b-slate-500 flex justify-between">
               <div className="flex gap-4">
                 <button
-                  onClick={() => setAcheivementsSelected(0)}
+                  onClick={() => setAcheivementsSelected(false)}
                   className={`bg-dwd-primary px-4 py-2 rounded border-2 border-dwd-primary transition-colors duration-150 hover:bg-slate-700 hover:text-white ${
-                    acheivementsSelected === 0
+                    acheivementsSelected === false
                       ? 'bg-dwd-primary text-white'
                       : 'bg-white text-dwd-primary'
                   }`}
@@ -81,9 +81,9 @@ export default function Home({
                   Announcements
                 </button>
                 <button
-                  onClick={() => setAcheivementsSelected(1)}
+                  onClick={() => setAcheivementsSelected(true)}
                   className={`bg-dwd-primary px-4 py-2 rounded border-2 border-dwd-primary transition-colors duration-150 hover:bg-slate-700 hover:text-white ${
-                    acheivementsSelected === 1
+                    acheivementsSelected === true
                       ? 'bg-dwd-primary text-white'
                       : 'bg-white text-dwd-primary'
                   }`}
@@ -98,7 +98,9 @@ export default function Home({
             <div className="relative">
               <div className="flex flex-col gap-2 p-3 w-full">
                 {announcements
-                  .filter((a) => a.new)
+                  .filter(
+                    (a) => a.new && a.isAcheivement == acheivementsSelected
+                  )
                   .slice(0, 8)
                   .map((item, index) => (
                     <a
