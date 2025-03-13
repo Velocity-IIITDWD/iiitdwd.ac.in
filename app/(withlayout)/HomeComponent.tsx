@@ -72,20 +72,20 @@ export default function Home({
               <div className="flex gap-4">
                 <button
                   onClick={() => setAcheivementsSelected(0)}
-                  className={`bg-dwd-primary px-4 py-2 rounded ${
+                  className={`bg-dwd-primary px-4 py-2 rounded border-2 border-dwd-primary transition-colors duration-150 hover:bg-slate-700 hover:text-white ${
                     acheivementsSelected === 0
                       ? 'bg-dwd-primary text-white'
-                      : 'bg-white text-dwd-primary border-2 border-dwd-primary'
+                      : 'bg-white text-dwd-primary'
                   }`}
                 >
                   Announcements
                 </button>
                 <button
                   onClick={() => setAcheivementsSelected(1)}
-                  className={`bg-dwd-primary px-4 py-2 rounded ${
+                  className={`bg-dwd-primary px-4 py-2 rounded border-2 border-dwd-primary transition-colors duration-150 hover:bg-slate-700 hover:text-white ${
                     acheivementsSelected === 1
                       ? 'bg-dwd-primary text-white'
-                      : 'bg-white text-dwd-primary border-2 border-dwd-primary'
+                      : 'bg-white text-dwd-primary'
                   }`}
                 >
                   Achievements
