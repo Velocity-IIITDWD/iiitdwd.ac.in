@@ -21,11 +21,10 @@ async function getData() {
 }
 
 const ContactInfo = async () => {
-
   const fullContacts = await getData();
-  
+
   return (
-    <div className="w-full flex justify-center items-center flex-col p-2">
+    <div className="w-full flex justify-center items-center flex-col p-10">
       <span className="text-dwd-primary text-4xl font-bold mb-4">
         Contact Information
       </span>
