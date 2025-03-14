@@ -1,12 +1,25 @@
 type Digit = '0' | '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9';
 
 export type Announcement = {
-  link: string,
-  text: string,
-  new: boolean,
-  date?: string,
-  year: `${Digit}${Digit}${Digit}${Digit}`,       // Full year in 4 digits
-  month: '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '10' | '11' | '12' ,      // Month number from 1 to 12
+  link: string;
+  text: string;
+  new: boolean;
+  date?: string;
+  year: `${Digit}${Digit}${Digit}${Digit}`; // Full year in 4 digits
+  month:
+    | '1'
+    | '2'
+    | '3'
+    | '4'
+    | '5'
+    | '6'
+    | '7'
+    | '8'
+    | '9'
+    | '10'
+    | '11'
+    | '12'; // Month number from 1 to 12
+  isAcheivement: boolean;
 };
 
 export const announcements: Announcement[] = [
@@ -16,6 +29,7 @@ export const announcements: Announcement[] = [
     new: true,
     month: '1',
     year: '2025',
+    isAcheivement: true,
   },
   {
     link: '/docs/Notice (1) - Shalini K.pdf',
@@ -23,6 +37,7 @@ export const announcements: Announcement[] = [
     new: true,
     month: '1',
     year: '2025',
+    isAcheivement: false,
   },
   {
     link: '/docs/2PhD&M.Tech(R)-ProvisionalList-15Jan25-Updated-ShaliniK.pdf',
@@ -30,6 +45,7 @@ export const announcements: Announcement[] = [
     new: true,
     month: '1',
     year: '2025',
+    isAcheivement: false,
   },
   {
     link: '/docs/Shortlist%20Status%20(Registrar%20Post).pdf',
@@ -38,6 +54,7 @@ export const announcements: Announcement[] = [
     date: 'Mon, 23 Dec 2024 12:46:44 GMT',
     month: '12',
     year: '2024',
+    isAcheivement: false,
   },
   {
     link: '/docs/Tender_For_Selection_Of_Agency_For_Providing_Catering_Services.pdf',
@@ -45,6 +62,7 @@ export const announcements: Announcement[] = [
     new: true,
     month: '12',
     year: '2024',
+    isAcheivement: false,
   },
   {
     link: '/docs/ICPR.pdf',
@@ -52,6 +70,7 @@ export const announcements: Announcement[] = [
     new: true,
     month: '12',
     year: '2024',
+    isAcheivement: true,
   },
   {
     link: '',
@@ -59,6 +78,7 @@ export const announcements: Announcement[] = [
     new: false,
     month: '11',
     year: '2024',
+    isAcheivement: true,
   },
   {
     link: '/docs/Book-authored-by-DrKrishnendu.pdf',
@@ -66,6 +86,7 @@ export const announcements: Announcement[] = [
     new: false,
     month: '11',
     year: '2024',
+    isAcheivement: true,
   },
   {
     link: 'https://forms.gle/gmzLVv7BCh7TqxAE7',
@@ -73,6 +94,7 @@ export const announcements: Announcement[] = [
     new: false,
     month: '10',
     year: '2024',
+    isAcheivement: false,
   },
   {
     link: '/docs/recruitment_of_registrar.pdf',
@@ -80,6 +102,7 @@ export const announcements: Announcement[] = [
     new: false,
     month: '10',
     year: '2024',
+    isAcheivement: false,
   },
   {
     link: '/docs/M.Tech(R)-Admission-Rolling-Advertisement.pdf',
@@ -87,6 +110,7 @@ export const announcements: Announcement[] = [
     new: false,
     month: '9',
     year: '2024',
+    isAcheivement: false,
   },
   {
     link: '/docs/PhD.Admissions-Rolling-Advertisement.pdf',
@@ -94,6 +118,7 @@ export const announcements: Announcement[] = [
     new: false,
     month: '9',
     year: '2024',
+    isAcheivement: false,
   },
   {
     link: '/docs/IIITDharwad _Research_Internship_Rolling_Advertisement.pdf',
@@ -101,6 +126,7 @@ export const announcements: Announcement[] = [
     new: false,
     month: '9',
     year: '2024',
+    isAcheivement: false,
   },
   {
     link: '/docs/Dr.Animesh-Heidelberg-Laureate-Forum.pdf',
@@ -108,6 +134,7 @@ export const announcements: Announcement[] = [
     new: false,
     month: '10',
     year: '2024',
+    isAcheivement: true,
   },
   {
     link: '/docs/MOI.pdf',
@@ -115,6 +142,7 @@ export const announcements: Announcement[] = [
     new: false,
     month: '9',
     year: '2024',
+    isAcheivement: false,
   },
   {
     link: '/docs/fpubh-12-1364226.pdf',
@@ -122,6 +150,7 @@ export const announcements: Announcement[] = [
     new: false,
     month: '8',
     year: '2024',
+    isAcheivement: true,
   },
   {
     link: '/docs/Book-chapter.pdf',
@@ -129,6 +158,7 @@ export const announcements: Announcement[] = [
     new: false,
     month: '8',
     year: '2024',
+    isAcheivement: true,
   },
   {
     link: '/docs/Journal-article.pdf',
@@ -136,6 +166,7 @@ export const announcements: Announcement[] = [
     new: false,
     month: '8',
     year: '2024',
+    isAcheivement: true,
   },
   {
     link: '/docs/project-fellows.pdf',
@@ -143,14 +174,16 @@ export const announcements: Announcement[] = [
     new: false,
     month: '8',
     year: '2024',
+    isAcheivement: false,
   },
-  
+
   {
     link: '/docs/minor-program.pdf',
     text: 'Minor Program',
     new: false,
     month: '8',
     year: '2024',
+    isAcheivement: false,
   },
   {
     link: '/docs/Supervisor Allocation.pdf',
@@ -158,6 +191,7 @@ export const announcements: Announcement[] = [
     new: false,
     month: '8',
     year: '2024',
+    isAcheivement: false,
   },
   {
     link: '/docs/Tender for Classroom cum Lab Furniture.pdf',
@@ -165,6 +199,7 @@ export const announcements: Announcement[] = [
     new: false,
     month: '8',
     year: '2024',
+    isAcheivement: false,
   },
   {
     link: '/docs/Tender for providing Security and House Keeping Services.pdf',
@@ -172,6 +207,7 @@ export const announcements: Announcement[] = [
     new: false,
     month: '8',
     year: '2024',
+    isAcheivement: false,
   },
   {
     link: '/docs/Advertisement for the Recruitment of Multiple Research Positions.pdf',
@@ -179,6 +215,7 @@ export const announcements: Announcement[] = [
     new: false,
     month: '8',
     year: '2024',
+    isAcheivement: false,
   },
   {
     link: '/docs/implicit_self-supervised_language_representation.pdf',
@@ -186,6 +223,7 @@ export const announcements: Announcement[] = [
     new: false,
     month: '8',
     year: '2024',
+    isAcheivement: true,
   },
   {
     link: '/docs/Guidelines for admission 2024-25.pdf',
@@ -193,6 +231,7 @@ export const announcements: Announcement[] = [
     new: false,
     month: '7',
     year: '2024',
+    isAcheivement: false,
   },
   {
     link: '/docs/Sana_hostel_info.pdf',
@@ -200,6 +239,7 @@ export const announcements: Announcement[] = [
     new: false,
     month: '7',
     year: '2024',
+    isAcheivement: false,
   },
   {
     link: '/docs/Important_Notice_For_Prospective_Students_22-07-24.pdf',
@@ -207,6 +247,7 @@ export const announcements: Announcement[] = [
     new: false,
     month: '7',
     year: '2024',
+    isAcheivement: false,
   },
   {
     link: '/docs/ResearchFelloship.pdf',
@@ -214,6 +255,7 @@ export const announcements: Announcement[] = [
     new: false,
     year: '2024',
     month: '7',
+    isAcheivement: false,
   },
   {
     link: '/docs/ApplicationforSERBprojectSRG.docx.pdf',
@@ -221,6 +263,7 @@ export const announcements: Announcement[] = [
     new: false,
     year: '2024',
     month: '7',
+    isAcheivement: false,
   },
   {
     link: '/docs/GeM-Bidding-6649263.pdf',
@@ -228,6 +271,7 @@ export const announcements: Announcement[] = [
     new: false,
     year: '2024',
     month: '7',
+    isAcheivement: false,
   },
   {
     link: '/docs/PhD_MTech(R)_Jul2024_List - Shalini K.pdf',
@@ -235,6 +279,7 @@ export const announcements: Announcement[] = [
     new: false,
     year: '2024',
     month: '7',
+    isAcheivement: false,
   },
   {
     link: 'https://www.youtube.com/watch?v=Sh5VyQxKQvk',
@@ -242,6 +287,7 @@ export const announcements: Announcement[] = [
     new: false,
     year: '2024',
     month: '7',
+    isAcheivement: false,
   },
   {
     link: '/docs/educators_students_enabling_workshop_qc.pdf',
@@ -249,6 +295,7 @@ export const announcements: Announcement[] = [
     new: false,
     year: '2024',
     month: '7',
+    isAcheivement: false,
   },
   {
     link: '/docs/peer_to_peer_energy_trading_in_dairy_farms_using_multi_agent_systems.pdf',
@@ -256,6 +303,7 @@ export const announcements: Announcement[] = [
     new: false,
     year: '2024',
     month: '7',
+    isAcheivement: true,
   },
   {
     link: '/docs/A_reinforcement_learning_approach_to_dairy_farm_battery_management_using_Q_learning.pdf',
@@ -263,6 +311,7 @@ export const announcements: Announcement[] = [
     new: false,
     year: '2024',
     month: '6',
+    isAcheivement: true,
   },
   {
     link: '/docs/Ph.D_and_M.Tech-Research_Aug24_Admission_Notification-Extended.pdf',
@@ -270,6 +319,7 @@ export const announcements: Announcement[] = [
     new: false,
     year: '2024',
     month: '6',
+    isAcheivement: false,
   },
   {
     link: '/docs/Prof_Lakshmivarahan.pdf',
@@ -277,6 +327,7 @@ export const announcements: Announcement[] = [
     new: false,
     year: '2024',
     month: '6',
+    isAcheivement: false,
   },
   {
     link: '/docs/SLD-SRMP.pdf',
@@ -284,6 +335,7 @@ export const announcements: Announcement[] = [
     new: false,
     year: '2024',
     month: '6',
+    isAcheivement: true,
   },
   {
     link: '/docs/MoU-Director_Office.docx',
@@ -291,6 +343,7 @@ export const announcements: Announcement[] = [
     new: false,
     year: '2024',
     month: '6',
+    isAcheivement: false,
   },
   {
     link: '/tenders',
@@ -298,6 +351,7 @@ export const announcements: Announcement[] = [
     new: false,
     year: '2024',
     month: '6',
+    isAcheivement: false,
   },
   {
     link: '/docs/Cancellation_of_Advt_for_ the_post_of_Registrar-reg.pdf',
@@ -305,6 +359,7 @@ export const announcements: Announcement[] = [
     new: false,
     year: '2024',
     month: '6',
+    isAcheivement: false,
   },
   {
     link: '/docs/M.TechbyResearch.pdf',
@@ -312,6 +367,7 @@ export const announcements: Announcement[] = [
     new: false,
     year: '2024',
     month: '6',
+    isAcheivement: false,
   },
   {
     link: '/docs/Ph.D_and_M.Tech-Research_Aug24_Admission_Notification.pdf',
@@ -319,6 +375,7 @@ export const announcements: Announcement[] = [
     new: false,
     year: '2024',
     month: '6',
+    isAcheivement: false,
   },
   {
     link: '/docs/AICTE_PROGRAM.pdf',
@@ -326,6 +383,7 @@ export const announcements: Announcement[] = [
     new: false,
     year: '2024',
     month: '6',
+    isAcheivement: false,
   },
   {
     link: '/tenders',
@@ -333,6 +391,7 @@ export const announcements: Announcement[] = [
     new: false,
     year: '2024',
     month: '6',
+    isAcheivement: false,
   },
   {
     link: '/docs/Brochure.pdf',
@@ -340,6 +399,7 @@ export const announcements: Announcement[] = [
     new: false,
     year: '2024',
     month: '6',
+    isAcheivement: false,
   },
   {
     link: '/docs/IIITDharwad_Research_Internship_Rolling_Advertisement.pdf',
@@ -347,6 +407,7 @@ export const announcements: Announcement[] = [
     new: false,
     year: '2024',
     month: '6',
+    isAcheivement: false,
   },
   {
     link: '/docs/AICTE_PROGRAM.pdf',
@@ -354,6 +415,7 @@ export const announcements: Announcement[] = [
     new: false,
     year: '2024',
     month: '6',
+    isAcheivement: false,
   },
   {
     link: '/docs/Cancellation_Wall_Partition.pdf',
@@ -361,6 +423,7 @@ export const announcements: Announcement[] = [
     new: false,
     year: '2024',
     month: '6',
+    isAcheivement: false,
   },
   {
     link: '/tenders',
@@ -368,6 +431,7 @@ export const announcements: Announcement[] = [
     new: false,
     year: '2024',
     month: '6',
+    isAcheivement: false,
   },
   {
     link: '/tenders',
@@ -375,6 +439,7 @@ export const announcements: Announcement[] = [
     new: false,
     year: '2024',
     month: '6',
+    isAcheivement: false,
   },
   {
     link: '/docs/SRMP-ACMTMM-Jnl.pdf',
@@ -382,5 +447,6 @@ export const announcements: Announcement[] = [
     new: false,
     year: '2024',
     month: '6',
+    isAcheivement: true,
   },
 ];
