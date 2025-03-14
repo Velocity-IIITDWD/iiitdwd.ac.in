@@ -1,7 +1,25 @@
 export const GetFacultyDetails = `*[_type == "faculty" && facultyId == $id] {
-  "id": facultyId,
-  "photo": content.card.photo,
-  content
+  "id": coalesce(facultyId, "UnknownID"),
+  "photo": coalesce(content.card.photo, "/images/default.jpg"),
+  "content": {
+    "body": {
+      "profile_text": coalesce(content.body.profile_text, ""),
+      "interest_areas": coalesce(content.body.interest_areas, [])
+    },
+    "card": {
+      "position": coalesce(content.card.position, []),
+      "cabin_number": coalesce(content.card.cabin_number, "?"),
+      "department": coalesce(content.card.department, ""),
+      "PhD": coalesce(content.card.PhD, ""),
+      "mail_id": coalesce(content.card.mail_id, ""),
+      "photo": coalesce(content.card.photo, "/images/default.jpg"),
+      "designation": coalesce(content.card.designation, "")
+    },
+    "head": {
+      "profile_pdf": coalesce(content.head.profile_pdf, ""),
+      "name": coalesce(content.head.name, "")
+    }
+  }
 }`;
 
 export const GetAllFaculties = `*[_type == "faculty"] {
