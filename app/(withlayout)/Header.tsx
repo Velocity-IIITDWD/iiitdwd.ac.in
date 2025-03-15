@@ -1,6 +1,8 @@
 'use client';
 
-import { ChevronDownIcon, MenuIcon, Search } from 'lucide-react';
+import { ChevronDownIcon, MenuIcon, Search, X } from 'lucide-react';
+import { useEffect, useState } from "react";
+import Script from "next/script";
 import Link from 'next/link';
 import Image from 'next/image';
 import {
@@ -154,6 +156,17 @@ function onNavChange() {
 
 
 function Header() {
+
+  const [showSearch, setShowSearch] = useState(false);
+  useEffect(() => {
+    if (showSearch) {
+      const script = document.createElement("script");
+      script.async = true;
+      script.src = "https://cse.google.com/cse.js?cx=55bda0afb24434b3f";
+      document.body.appendChild(script);
+    }
+  }, [showSearch]);
+  
   return (
     // <header className="flex flex-col w-full h-fit fixed top-0 left-0 right-0 z-50 bg-white">
     <header className="flex flex-col w-full h-fit">
@@ -256,7 +269,11 @@ function Header() {
           <SheetTrigger asChild>
             <div className="mr-4 lg:hidden flex justify-between w-full text-dwd-primary">
               <MenuIcon size="2rem" className='bg-dwd-secondary2 p-1 rounded' />
-              <Search size={"1.5rem"} className='my-auto' />
+              <Search
+                size="1.5rem"
+                className="my-auto cursor-pointer mx-2"
+                onClick={() => setShowSearch(!showSearch)}
+              />
             </div>
           </SheetTrigger>
           <SheetContent side="left" className='overflow-auto'>
@@ -334,6 +351,21 @@ function Header() {
                   </details>
                 );
               })}
+              {showSearch && (
+                <div className="w-full bg-white z-50 p-4 shadow-md">
+                  <div className="flex justify-between items-center mb-2">
+                    <h3 className="font-medium">Search</h3>
+                    <X
+                      size="1.25rem"
+                      className="cursor-pointer hover:text-gray-600"
+                      onClick={() => setShowSearch(false)}
+                    />
+                  </div>
+
+                  <Script async src="https://cse.google.com/cse.js?cx=55bda0afb24434b3f" strategy="afterInteractive" />
+                  <div className="gcse-search"></div>
+                </div>
+              )}
             </div>
           </SheetContent>
         </Sheet>
@@ -427,7 +459,28 @@ function Header() {
               })}
             </NavigationMenuList>
           </NavigationMenu>
-          <Search size={"1.2rem"} className='my-auto mx-2' />
+          <Search 
+            size="1.5rem" 
+            className="my-auto cursor-pointer mx-2" 
+            onClick={() => setShowSearch(!showSearch)} 
+          />
+
+          {showSearch && (
+            <div className="w-full bg-white z-50 p-4 shadow-md relative">
+              <div className="flex justify-between items-center mb-2">
+                <h3 className="font-medium">Search</h3>
+                <X 
+                  size="1.25rem" 
+                  className="cursor-pointer hover:text-gray-600" 
+                  onClick={() => setShowSearch(false)} 
+                />
+              </div >
+              
+              
+              <Script async src="https://cse.google.com/cse.js?cx=55bda0afb24434b3f" strategy="afterInteractive" />
+              <div className="gcse-search"></div>
+            </div>
+          )}
         </div>
       </div>
     </header>
