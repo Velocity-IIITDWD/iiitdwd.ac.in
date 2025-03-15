@@ -50,8 +50,8 @@ export default function Home({
   programs,
 }: HomeProps) {
   const [program, setProgram] = useState(0);
-  const [acheivementsSelected, setAcheivementsSelected] = useState(false);
-
+  const [achievementsSelected, setAchievementsSelected] = useState(false);
+  console.log(announcements.filter((a) => a.new).length);
   return (
     <div className="flex flex-col h-full w-full">
       <MainCarousel FullData={carouselData} />
@@ -71,9 +71,9 @@ export default function Home({
             <div className="w-full items-center p-2 border-b border-b-slate-500 flex justify-between">
               <div className="flex gap-4 flex-wrap w-full">
                 <button
-                  onClick={() => setAcheivementsSelected(false)}
+                  onClick={() => setAchievementsSelected(false)}
                   className={`bg-dwd-primary px-4 py-2 rounded border-2 border-dwd-primary transition-colors duration-150 hover:bg-slate-700 hover:text-white w-40 sm:w-auto ${
-                    acheivementsSelected === false
+                    achievementsSelected === false
                       ? 'bg-dwd-primary text-white'
                       : 'bg-white text-dwd-primary'
                   }`}
@@ -81,9 +81,9 @@ export default function Home({
                   Announcements
                 </button>
                 <button
-                  onClick={() => setAcheivementsSelected(true)}
+                  onClick={() => setAchievementsSelected(true)}
                   className={`bg-dwd-primary px-4 py-2 rounded border-2 border-dwd-primary transition-colors duration-150 hover:bg-slate-700 hover:text-white w-40 sm:w-auto ${
-                    acheivementsSelected === true
+                    achievementsSelected === true
                       ? 'bg-dwd-primary text-white'
                       : 'bg-white text-dwd-primary'
                   }`}
@@ -101,9 +101,7 @@ export default function Home({
             <div className="relative">
               <div className="flex flex-col gap-2 p-3 w-full">
                 {announcements
-                  .filter(
-                    (a) => a.new && a.isAcheivement == acheivementsSelected
-                  )
+                  .filter((a) => a.isAchievement === achievementsSelected)
                   .slice(0, 8)
                   .map((item, index) => (
                     <a
