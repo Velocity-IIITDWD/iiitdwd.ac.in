@@ -4,7 +4,7 @@ export default function faq() {
   return (
     <div>
       <br />
-      <h1 className="text-dwd-primary text-3xl text-bold text-center  font-roboto">
+      <h1 className="text-dwd-primary text-3xl text-bold text-center  font-roboto m-2">
         Frequently Asked Questions
       </h1>
 

@@ -7,11 +7,11 @@ export default function Page() {
         <p className="text-white z-[1] text-3xl font-bold">M.Tech. Research</p>
       </section>
 
-      <div className="flex justify-center md:my-10">
-        <div className="flex flex-col w-full md:w-11/12 bg-slate-200 rounded-md py-5 px-6 md:py-8 md:pl-9 md:pr-4">
-          {/* Rolling Advertisement Section */}
-          <div className="mt-2 mb-8 bg-white p-6 rounded-md shadow-md">
-            <h2 className="text-dwd-primary text-lg md:text-xl font-bold">
+      <div className="flex justify-center my-6 md:my-10">
+        <div className="flex flex-col w-full md:w-11/12 bg-slate-200 rounded-md p-6 md:p-8">
+          {/* Rolling Advertisement section*/}
+          <div className="m-4 p-4 bg-white rounded-lg shadow">
+            <h2 className="text-2xl font-bold text-dwd-primary mb-3">
               Advertisement for Admission to M. Tech. (by Research)
             </h2>
             <p className="mt-4">
