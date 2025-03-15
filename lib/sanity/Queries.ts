@@ -98,11 +98,12 @@ export const GetAnnouncements = `*[_type == "announcement"]{
   text,
   year,
   date,
+  isAchievement,
 }`;
 
-export const GetLinks = `*[_type == "linksStructure"]`;
+export const GetLinks = '*[_type == "linksStructure"]';
 
-export const GetDescription = `*[_type == "descriptionStructure"]`;
+export const GetDescription = '*[_type == "descriptionStructure"]';
 
 const GetAbout = `*[_type == "about"]{
   coreValues[] {
@@ -229,10 +230,13 @@ export const queryGallery = '*[_type == "gallery"]';
 export const queryPrograms = '*[_type == "program"]';
 export const queryReport = '*[_type == "annualReport"]';
 export const queryJobs = '*[_type == "job"]';
-export const queryTenders = '*[_type == "tender"]'
+export const queryTenders = '*[_type == "tender"]';
 export const queryNirfReports = '*[_type == "nirf"]';
 
 // for migrations
-export const GetContactCategory = '*[_type == "contactCategory"] { _id, category}';
-export const GetAllContacts = '*[_type == "contact"]{ _id, "category": category->{category}.category }';
-export const GetAllDocumentIds = '*[_type != "system.document" && !(_id in path("_.**"))]._id';
+export const GetContactCategory =
+  '*[_type == "contactCategory"] { _id, category}';
+export const GetAllContacts =
+  '*[_type == "contact"]{ _id, "category": category->{category}.category }';
+export const GetAllDocumentIds =
+  '*[_type != "system.document" && !(_id in path("_.**"))]._id';
