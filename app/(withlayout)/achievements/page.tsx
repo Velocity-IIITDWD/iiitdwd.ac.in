@@ -7,8 +7,8 @@ import { GetAnnouncements } from '@/lib/sanity/Queries';
 export default async function Page() {
   const data = (await FetchSanity(GetAnnouncements)) as Announcement[];
 
-  const newAnnouncements = data.filter((a) => a.new && !a.isAchievement);
-  const oldAnnouncements = data.filter((a) => !a.new && !a.isAchievement);
+  const newAnnouncements = data.filter((a) => a.new && a.isAchievement);
+  const oldAnnouncements = data.filter((a) => !a.new && a.isAchievement);
   const byMonth: Record<string, Announcement[]> = {};
 
   for (let ann of oldAnnouncements) {
@@ -39,7 +39,7 @@ export default async function Page() {
   return (
     <div className="flex flex-col h-full w-full">
       <section className="w-full h-[50vh] bg-cover bg-center bg-[url('/images/LandingPage.png')] relative before:z-0 before:absolute before:h-full before:w-full before:left-0 before:top-0 before:bg-[#041E3FB3] flex items-center justify-center">
-        <p className="text-white z-[1] text-3xl font-bold">Announcements</p>
+        <p className="text-white z-[1] text-3xl font-bold">Achievements</p>
       </section>
       <div className="my-10 w-full flex flex-col items-center md:px-24 sm:px-10 p-4 gap-6">
         <div className="flex flex-col gap-2 p-2 w-full">
@@ -130,5 +130,5 @@ export default async function Page() {
 }
 
 export const metadata: Metadata = {
-  title: 'Announcements',
+  title: 'Achievements',
 };
