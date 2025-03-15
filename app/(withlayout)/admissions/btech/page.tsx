@@ -1,13 +1,20 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { seatMatrix, year, type linksStructure, type descriptionStructure } from '@/data/admissions';
+import {
+  seatMatrix,
+  year,
+  type linksStructure,
+  type descriptionStructure,
+} from '@/data/admissions';
 import { Fragment } from 'react';
 import { FetchSanity } from '@/lib/sanity/client';
 import { GetDescription, GetLinks } from '@/lib/sanity/Queries';
 
 export default async function Page() {
-  const LinkData = await FetchSanity(GetLinks) as linksStructure[];
-  const DescriptionData = await FetchSanity(GetDescription) as descriptionStructure[]; 
+  const LinkData = (await FetchSanity(GetLinks)) as linksStructure[];
+  const DescriptionData = (await FetchSanity(
+    GetDescription
+  )) as descriptionStructure[];
 
   //Seat Not Implemented
   // const GetSanitySeat = async () => {
@@ -19,11 +26,11 @@ export default async function Page() {
   //     return [];
   //   }
   // };
-  // const seatsData = await GetSanitySeat(); 
+  // const seatsData = await GetSanitySeat();
 
   return (
     <div className="w-fit max-w-5xl p-4 flex flex-col gap-2 pb-12 overflow-auto">
-      <p className="text-dwd-primary font-bold text-4xl text-center mb-2">
+      <p className="text-dwd-primary font-bold text-4xl text-center m-2">
         B.Tech. Admissions {year}
       </p>
 
@@ -181,12 +188,10 @@ export default async function Page() {
         </div>
       </div>
 
-      
-
       {LinkData.map((obj) => (
         <Fragment key={obj.id}>
           <p className="mt-2 text-lg font-bold text-dwd-primary">{obj.type}</p>
-          {obj.links.map((o : any) => (
+          {obj.links.map((o: any) => (
             <Link
               className='pl-2 text-dwd-primary w-fit block hover:underline underline-offset-2 after:-translate-y-1/3 after:absolute relative after:content-[url("/icons/linkIcon.svg")]'
               href={o.link}

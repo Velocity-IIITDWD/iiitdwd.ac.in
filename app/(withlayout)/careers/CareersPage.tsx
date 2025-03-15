@@ -21,16 +21,13 @@ export default function CareersPage({ data }: { data: Jobs[] }) {
 
   useEffect(() => {
     setFilteredJobs(
-      updatedJobsData.filter(job =>
-        (
-          category === 'all' ||
-          job.category === category
-        ) && (
-          job.title?.toLowerCase().includes(searchText.toLowerCase()) ||
-          job.details?.toLowerCase().includes(searchText.toLowerCase())
-        )
+      updatedJobsData.filter(
+        (job) =>
+          (category === 'all' || job.category === category) &&
+          (job.title?.toLowerCase().includes(searchText.toLowerCase()) ||
+            job.details?.toLowerCase().includes(searchText.toLowerCase()))
       )
-    )
+    );
   }, [category, searchText, updatedJobsData]);
 
   const searchInputRef = useRef<HTMLInputElement>(null);
@@ -39,7 +36,7 @@ export default function CareersPage({ data }: { data: Jobs[] }) {
   }, []);
 
   const renderDate = (dateString: string) => {
-    const date = new Date(dateString)
+    const date = new Date(dateString);
     const year = date.getFullYear();
     const month = (date.getMonth() + 1).toString().padStart(2, '0');
     const day = date.getDate().toString().padStart(2, '0');
@@ -57,7 +54,7 @@ export default function CareersPage({ data }: { data: Jobs[] }) {
     } else {
       return `${day}.${month}.${year} ${timeString}`;
     }
-  }
+  };
 
   return (
     <div className="flex flex-col w-full h-fit items-center mb-8">
@@ -95,7 +92,7 @@ export default function CareersPage({ data }: { data: Jobs[] }) {
           </search>
         </div>
 
-        <div className="hidden lg:flex flex-col border border-dwd-primary rounded-md overflow-clip">
+        <div className="hidden lg:flex flex-col border border-dwd-primary rounded-md overflow-clip m-5">
           <div className="flex items-center bg-dwd-primary w-full text-white font-bold px-4 py-2">
             <div className="w-[calc(100%-27rem)]">Title and Description</div>
             <div className="w-36 text-center">Deadline</div>
@@ -125,7 +122,9 @@ export default function CareersPage({ data }: { data: Jobs[] }) {
                     ))}
                 </div>
               </div>
-              <div className="w-36 text-center font-bold text-nowrap">{renderDate(job.lastDate)}</div>
+              <div className="w-36 text-center font-bold text-nowrap">
+                {renderDate(job.lastDate)}
+              </div>
               <div className="w-36 flex items-center justify-center">
                 <Link
                   target="_blank"
@@ -157,7 +156,8 @@ export default function CareersPage({ data }: { data: Jobs[] }) {
                 {job.details && <div>{job.details}</div>}
 
                 <div className="mt-8">
-                  Deadline: <span className="font-bold">{renderDate(job.lastDate)}</span>
+                  Deadline:{' '}
+                  <span className="font-bold">{renderDate(job.lastDate)}</span>
                 </div>
 
                 <div className="flex gap-2">
