@@ -86,7 +86,7 @@ export default function Events({ events }: EventFilterProps) {
             className="px-4 py-2 border border-gray-300 rounded-lg w-full md:w-1/3"
           />
         </div>
-        <div className="mx-6 grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-12">
+        <div className="mx-6 grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-12 pb-5">
           {filteredEvents.length > 0 ? (
             filteredEvents.map((_, index) => (
               <ComponentEvent

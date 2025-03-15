@@ -209,7 +209,7 @@ const ContactPage: React.FC = () => {
           </ul>
         </div>
 
-        <div className="mt-4 p-4 bg-indigo-100 rounded-lg shadow-md transition-transform transform animate-on-scroll slide-in-left-animate">
+        <div className="mt-4 mb-4 p-4 bg-indigo-100 rounded-lg shadow-md transition-transform transform animate-on-scroll slide-in-left-animate">
           <div className="flex items-center mb-4">
             <FaTrain className="text-2xl mr-2" />
             <h2 className="text-xl font-bold">

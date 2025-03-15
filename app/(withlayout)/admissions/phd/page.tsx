@@ -7,11 +7,11 @@ export default function Page() {
         <p className="text-white z-[1] text-3xl font-bold">Ph.D.</p>
       </section>
 
-      <div className="flex justify-center md:my-10  ">
-        <div className="flex flex-col w-full md:w-11/12 bg-slate-200  rounded-md py-5 px-6 md:py-8 md:pl-9 md:pr-4">
-          {/* New Rolling Advertisement for Ph.D. section */}
-          <div className="mt-2 mb-8 p-6 bg-white rounded-lg shadow">
-            <h2 className="text-2xl font-bold text-dwd-primary mb-4">
+      <div className="flex justify-center my-6 md:my-10">
+        <div className="flex flex-col w-full md:w-11/12 bg-slate-200 rounded-md p-6 md:p-8">
+          {/* New Rolling Advertisement section for p-hd section*/}
+          <div className="m-4 p-4 bg-white rounded-lg shadow">
+            <h2 className="text-2xl font-bold text-dwd-primary mb-3">
               Advertisement for Admission to Ph.D.
             </h2>
             <p>
@@ -36,7 +36,10 @@ export default function Page() {
               the availability of funds/grants. The final decision regarding
               admitting a candidate will be taken by the competent authority.
               For more information,{' '}
-              <Link href="/docs/PhD.Admissions-Rolling-Advertisement.pdf" className='text-blue-500'>
+              <Link
+                href="/docs/PhD.Admissions-Rolling-Advertisement.pdf"
+                className="text-blue-500"
+              >
                 please click here
               </Link>
               .
