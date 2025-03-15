@@ -55,52 +55,61 @@ export default function Home({
     <div className="flex flex-col h-full w-full">
       <MainCarousel FullData={carouselData} />
 
-      {announcements.filter((a) => a.new).length > 0 && (
-        <section className=" bg-white border-t border-b border-slate-100 md:py-20 py-10 w-full flex flex-col lg:flex-row-reverse items-center md:px-20 sm:px-10 p-4 gap-6">
-          <Image
-            alt="main image"
-            src={'/images/IIIT_Dharwad.webp'}
-            width={0}
-            height={0}
-            sizes="100%"
-            style={{ height: 'auto', width: '100%' }}
-            className="w-full rounded shadow-lg lg:basis-1/3 overflow-hidden object-cover object-center"
-          />
-          <div className="w-full lg:basis-2/3 2xl:basis-full flex flex-col h-full">
-            <div className="w-full items-center p-2 border-b border-b-slate-500 flex justify-between">
-              <div className="flex gap-4 flex-wrap w-full">
-                <button
-                  onClick={() => setAchievementsSelected(false)}
-                  className={`bg-dwd-primary px-4 py-2 rounded border-2 border-dwd-primary transition-colors duration-150 hover:bg-slate-700 hover:text-white w-40 sm:w-auto ${
-                    achievementsSelected === false
-                      ? 'bg-dwd-primary text-white'
-                      : 'bg-white text-dwd-primary'
-                  }`}
-                >
-                  Announcements
-                </button>
-                <button
-                  onClick={() => setAchievementsSelected(true)}
-                  className={`bg-dwd-primary px-4 py-2 rounded border-2 border-dwd-primary transition-colors duration-150 hover:bg-slate-700 hover:text-white w-40 sm:w-auto ${
-                    achievementsSelected === true
-                      ? 'bg-dwd-primary text-white'
-                      : 'bg-white text-dwd-primary'
-                  }`}
-                >
-                  Achievements
-                </button>
-              </div>
-              <Link
-                href={achievementsSelected ? '/achievements' : '/announcements'}
-                className="pl-4 whitespace-nowrap text-red-500"
+      <section className=" bg-white border-t border-b border-slate-100 md:py-20 py-10 w-full flex flex-col lg:flex-row-reverse items-center md:px-20 sm:px-10 p-4 gap-6">
+        <Image
+          alt="main image"
+          src={'/images/IIIT_Dharwad.webp'}
+          width={0}
+          height={0}
+          sizes="100%"
+          style={{ height: 'auto', width: '100%' }}
+          className="w-full rounded shadow-lg lg:basis-1/3 overflow-hidden object-cover object-center"
+        />
+        <div className="w-full lg:basis-2/3 2xl:basis-full flex flex-col h-full">
+          <div className="w-full items-center p-2 border-b border-b-slate-500 flex justify-between">
+            <div className="flex gap-4 flex-wrap w-full">
+              <button
+                onClick={() => setAchievementsSelected(false)}
+                className={`bg-dwd-primary px-4 py-2 rounded border-2 border-dwd-primary transition-colors duration-150 hover:bg-slate-700 hover:text-white w-40 sm:w-auto ${
+                  achievementsSelected === false
+                    ? 'bg-dwd-primary text-white'
+                    : 'bg-white text-dwd-primary'
+                }`}
               >
-                View all
-              </Link>
+                Announcements
+              </button>
+              <button
+                onClick={() => setAchievementsSelected(true)}
+                className={`bg-dwd-primary px-4 py-2 rounded border-2 border-dwd-primary transition-colors duration-150 hover:bg-slate-700 hover:text-white w-40 sm:w-auto ${
+                  achievementsSelected === true
+                    ? 'bg-dwd-primary text-white'
+                    : 'bg-white text-dwd-primary'
+                }`}
+              >
+                Achievements
+              </button>
             </div>
+            <Link
+              href={achievementsSelected ? '/achievements' : '/announcements'}
+              className="pl-4 whitespace-nowrap text-red-500"
+            >
+              View all
+            </Link>
+          </div>
+          {(
+            achievementsSelected
+              ? announcements.filter((a) => a.new && a.isAchievement).length > 0
+              : announcements.filter((a) => a.new && !a.isAchievement).length >
+                0
+          ) ? (
             <div className="relative">
               <div className="flex flex-col gap-2 p-3 w-full">
                 {announcements
-                  .filter((a) => a.isAchievement === achievementsSelected)
+                  .filter((a) =>
+                    achievementsSelected
+                      ? a.isAchievement && a.new
+                      : !a.isAchievement && a.new
+                  )
                   .slice(0, 8)
                   .map((item, index) => (
                     <a
@@ -128,9 +137,13 @@ export default function Home({
                   ))}
               </div>
             </div>
-          </div>
-        </section>
-      )}
+          ) : (
+            <div className="self-center ">
+              {achievementsSelected ? 'No Data Found' : 'No new announcements'}
+            </div>
+          )}
+        </div>
+      </section>
 
       <section className="w-full h-full bg-fixed relative overflow-hidden before:z-0 before:absolute before:h-full before:w-full before:left-0 before:top-0 before:bg-[#041E3FB3] bg-cover bg-repeat-y bg-[url('/images/IIIT_Dharwad.webp')]">
         <div className="my-16 z-[1] relative w-full flex flex-col items-center md:px-24 sm:px-10 p-4 gap-6">
