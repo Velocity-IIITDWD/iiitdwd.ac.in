@@ -54,8 +54,7 @@ export default function Home({
   return (
     <div className="flex flex-col h-full w-full">
       <MainCarousel FullData={carouselData} />
-
-      <section className=" bg-white border-t border-b border-slate-100 md:py-15 py-10 w-full flex flex-col lg:flex-row-reverse lg:p-1 items-centre md:px-20 sm:px-10 p-4 gap-6">
+      <section className=" bg-white border-t border-b border-slate-100 md:py-15 py-10 w-full flex flex-col lg:flex-row-reverse items-centre md:px-20 sm:px-10 p-4 gap-6">
         <Image
           alt="main image"
           src={'/images/IIIT_Dharwad.webp'}
@@ -138,7 +137,7 @@ export default function Home({
               </div>
             </div>
           ) : (
-            <div className="self-center ">
+            <div className="self-center py-16">
               {achievementsSelected ? 'No Data Found' : 'No new announcements'}
             </div>
           )}
