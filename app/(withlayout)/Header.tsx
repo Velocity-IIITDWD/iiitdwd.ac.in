@@ -1,7 +1,7 @@
 'use client';
 
 import { ChevronDownIcon, MenuIcon, Search, X } from 'lucide-react';
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import {
@@ -19,6 +19,7 @@ import {
   NavigationMenuContent,
   navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu';
+import Script from 'next/script';
 
 type NavmenuItem = {
   text: string;
@@ -55,7 +56,7 @@ const navmenuItems: NavmenuItem[] = [
         width: 250,
         items: [
           { text: 'Introduction', href: '/about#introduction' },
-          { text: 'Director\'s Message', href: '/about#directors-message' },
+          { text: "Director's Message", href: '/about#directors-message' },
           { text: 'Our Family', href: '/about#family' },
           { text: 'Vision, Missions & Core Values', href: '/about#vision' },
         ],
@@ -153,19 +154,17 @@ function onNavChange() {
   }, 0);
 }
 
-
 function Header() {
-
   const [showSearch, setShowSearch] = useState(false);
   useEffect(() => {
     if (showSearch) {
-      const script = document.createElement("script");
+      const script = document.createElement('script');
       script.async = true;
-      script.src = "https://cse.google.com/cse.js?cx=55bda0afb24434b3f";
+      script.src = 'https://cse.google.com/cse.js?cx=55bda0afb24434b3f';
       document.body.appendChild(script);
     }
   }, [showSearch]);
-  
+
   return (
     // <header className="flex flex-col w-full h-fit fixed top-0 left-0 right-0 z-50 bg-white">
     <header className="flex flex-col w-full h-fit">
@@ -245,29 +244,52 @@ function Header() {
           </Link>
         </div>
         <div className="flex flex-wrap items-center gap-2 text-xs text-gray-800 ml-auto mb-auto mt-4 max-md:mr-auto md:max-w-[70%]">
-          <Link href="/pdfs/iiit_ppp_2017.pdf" className="hover:underline">IIIT PPP Act</Link>
+          <Link href="/pdfs/iiit_ppp_2017.pdf" className="hover:underline">
+            IIIT PPP Act
+          </Link>
           <span className="text-gray-300">|</span>
-          <Link href="/pdfs/ARIIA.pdf" className="hover:bg-accent hover:underline">ARIIA</Link>
+          <Link
+            href="/pdfs/ARIIA.pdf"
+            className="hover:bg-accent hover:underline"
+          >
+            ARIIA
+          </Link>
           <span className="text-gray-300">|</span>
-          <Link href="/pdfs/RTI.pdf" className="hover:underline">RTI</Link>
+          <Link href="/pdfs/RTI.pdf" className="hover:underline">
+            RTI
+          </Link>
           <span className="text-gray-300">|</span>
-          <Link href="/tenders" className="hover:underline">Tenders</Link>
+          <Link href="/tenders" className="hover:underline">
+            Tenders
+          </Link>
           <span className="text-gray-300">|</span>
-          <Link href="/nirf" className="hover:underline">NIRF</Link>
+          <Link href="/nirf" className="hover:underline">
+            NIRF
+          </Link>
           <span className="text-gray-300">|</span>
-          <Link href="/tenders" className="hover:underline">Tenders</Link>
+          <Link href="/tenders" className="hover:underline">
+            Tenders
+          </Link>
           <span className="text-gray-300">|</span>
-          <Link href="https://www.onlinesbi.sbi/sbicollect/icollecthome.htm?corpID=873279" className="hover:underline">Students Fee Portal</Link>
-
+          <Link
+            href="https://www.onlinesbi.sbi/sbicollect/icollecthome.htm?corpID=873279"
+            className="hover:underline"
+          >
+            Students Fee Portal
+          </Link>
         </div>
       </div>
 
       {/* Mobile navbar */}
-      <div className={"sticky top-0  left-0 w-full z-50 flex flex-row items-center justify-start border-b border-gray-200 h-16 lg:h-16 bg-white px-2"}>
+      <div
+        className={
+          'sticky top-0  left-0 w-full z-50 flex flex-row items-center justify-start border-b border-gray-200 h-16 lg:h-16 bg-white px-2'
+        }
+      >
         <Sheet>
           <SheetTrigger asChild>
             <div className="mr-4 lg:hidden flex justify-between w-full text-dwd-primary">
-              <MenuIcon size="2rem" className='bg-dwd-secondary2 p-1 rounded' />
+              <MenuIcon size="2rem" className="bg-dwd-secondary2 p-1 rounded" />
               <Search
                 size="1.5rem"
                 className="my-auto cursor-pointer mx-2"
@@ -275,7 +297,7 @@ function Header() {
               />
             </div>
           </SheetTrigger>
-          <SheetContent side="left" className='overflow-auto'>
+          <SheetContent side="left" className="overflow-auto">
             <div className="flex flex-col gap-2 mt-4 -mr-2 ">
               {navmenuItems.map((item) => {
                 const dropdownTrigger = item.href ? (
@@ -361,7 +383,11 @@ function Header() {
                     />
                   </div>
 
-                  <Script async src="https://cse.google.com/cse.js?cx=55bda0afb24434b3f" strategy="afterInteractive" />
+                  <Script
+                    async
+                    src="https://cse.google.com/cse.js?cx=55bda0afb24434b3f"
+                    strategy="afterInteractive"
+                  />
                   <div className="gcse-search"></div>
                 </div>
               )}
@@ -370,7 +396,7 @@ function Header() {
         </Sheet>
 
         {/* Desktop navbar */}
-        <div className='hidden lg:flex w-full justify-between item-center'>
+        <div className="hidden lg:flex w-full justify-between item-center">
           <NavigationMenu
             onValueChange={onNavChange}
             className="lg:flex items-center gap-8"
@@ -458,22 +484,26 @@ function Header() {
               })}
             </NavigationMenuList>
           </NavigationMenu>
-          <Search 
-            size="1.5rem" 
-            className="my-auto cursor-pointer mx-2" 
-            onClick={() => setShowSearch(!showSearch)} 
+          <Search
+            size="1.5rem"
+            className="my-auto cursor-pointer mx-2"
+            onClick={() => setShowSearch(!showSearch)}
           />
           {showSearch && (
             <div className="w-full bg-white z-50 p-4 shadow-md relative">
               <div className="flex justify-between items-center mb-2">
                 <h3 className="font-medium">Search</h3>
-                <X 
-                  size="1.25rem" 
-                  className="cursor-pointer hover:text-gray-600" 
-                  onClick={() => setShowSearch(false)} 
+                <X
+                  size="1.25rem"
+                  className="cursor-pointer hover:text-gray-600"
+                  onClick={() => setShowSearch(false)}
                 />
-              </div >
-              <Script async src="https://cse.google.com/cse.js?cx=55bda0afb24434b3f" strategy="afterInteractive" />
+              </div>
+              <Script
+                async
+                src="https://cse.google.com/cse.js?cx=55bda0afb24434b3f"
+                strategy="afterInteractive"
+              />
               <div className="gcse-search"></div>
             </div>
           )}

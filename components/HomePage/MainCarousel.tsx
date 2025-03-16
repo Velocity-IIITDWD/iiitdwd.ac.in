@@ -163,14 +163,17 @@ const MainCarousel: React.FC<PropType> = ({ FullData, options }) => {
   const onDotButtonClick = (index: number) =>
     emblaApi && emblaApi.scrollTo(index);
 
-
   return (
     <section className="embla h-[400px] sm:h-[500px] lg:h-[calc(100vh-64px)] max-h-[500px]">
       <div className="embla__viewport h-full" ref={emblaRef}>
         <div className="embla__container h-full">
           {FullData.map((item, index) =>
             item?.link ? (
-              <Link key={index} className="embla__slide h-full" href={item?.link}>
+              <Link
+                key={index}
+                className="embla__slide h-full"
+                href={item?.link}
+              >
                 <Card className="slide_number_main border-none p-0 h-full carousel-card">
                   <CardContent className="flex border rounded-none overflow-hidden p-0 relative shadow-none bg-gray-50 h-full items-center justify-center">
                     <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/70 z-10"></div>
@@ -182,7 +185,7 @@ const MainCarousel: React.FC<PropType> = ({ FullData, options }) => {
                     />
 
                     <Image
-                      alt={item?.caption || "College image"}
+                      alt={item?.caption || 'College image'}
                       src={item?.url}
                       width={0}
                       height={0}
@@ -218,7 +221,7 @@ const MainCarousel: React.FC<PropType> = ({ FullData, options }) => {
                   />
 
                   <Image
-                    alt={item?.caption || "College image"}
+                    alt={item?.caption || 'College image'}
                     src={item?.url}
                     width={0}
                     height={0}
@@ -241,7 +244,6 @@ const MainCarousel: React.FC<PropType> = ({ FullData, options }) => {
         </div>
       </div>
 
-
       <button
         className="embla-arrow embla-arrow-prev"
         onClick={onPrevButtonClick}
@@ -257,7 +259,6 @@ const MainCarousel: React.FC<PropType> = ({ FullData, options }) => {
       >
         <div className="embla-arrow-icon"></div>
       </button>
-
 
       <div className="embla-dots-container">
         <div className="embla-dots">
