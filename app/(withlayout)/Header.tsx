@@ -2,7 +2,6 @@
 
 import { ChevronDownIcon, MenuIcon, Search, X } from 'lucide-react';
 import { useEffect, useState } from "react";
-import Script from "next/script";
 import Link from 'next/link';
 import Image from 'next/image';
 import {
@@ -464,7 +463,6 @@ function Header() {
             className="my-auto cursor-pointer mx-2" 
             onClick={() => setShowSearch(!showSearch)} 
           />
-
           {showSearch && (
             <div className="w-full bg-white z-50 p-4 shadow-md relative">
               <div className="flex justify-between items-center mb-2">
@@ -475,8 +473,6 @@ function Header() {
                   onClick={() => setShowSearch(false)} 
                 />
               </div >
-              
-              
               <Script async src="https://cse.google.com/cse.js?cx=55bda0afb24434b3f" strategy="afterInteractive" />
               <div className="gcse-search"></div>
             </div>
